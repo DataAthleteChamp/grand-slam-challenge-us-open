@@ -1,0 +1,419 @@
+"""Pre-submission validation.
+
+Once a market locks, a submission is final.  The failure that costs points is
+not a crash — it is a number that is wrong but plausible, submitted, locked, and
+indistinguishable from a right one in the logs.  Everything here exists to catch
+silent wrongness, and the checks are deliberately biased toward catching a
+systematic error across many questions rather than an unusual single number.
+
+The design borrows the pre-trade risk stack used for automated order entry: a
+sanity band around a reference price, a limit on how far any one value may sit
+from that reference, batch-level fat-finger checks, and a hard block on anything
+outside the venue's accepted range.  The reference price here is the measured
+base rate.
+
+Checks are either **BLOCK** — refuse to submit, because the number is impossible
+or the batch shows a systematic fault — or **WARN**, meaning surface it for
+review but let it through.  Blocking on anything merely unusual would be worse
+than useless: it would train us to override the checks.
+"""
+
+from __future__ import annotations
+
+from collections import Counter
+from dataclasses import dataclass, field
+from enum import StrEnum
+
+from .markets.taxonomy import COMPARISON, Family
+from .pricer import PricedQuestion
+
+
+class Severity(StrEnum):
+    BLOCK = "block"
+    WARN = "warn"
+
+
+@dataclass(frozen=True)
+class Finding:
+    """One validation result."""
+
+    check: str
+    severity: Severity
+    message: str
+    market_ids: tuple[str, ...] = field(default_factory=tuple)
+
+    def __str__(self) -> str:
+        marker = "BLOCK" if self.severity is Severity.BLOCK else "warn "
+        return f"[{marker}] {self.check}: {self.message}"
+
+
+@dataclass
+class ValidationReport:
+    """The outcome of validating a batch."""
+
+    findings: list[Finding] = field(default_factory=list)
+    n_questions: int = 0
+
+    @property
+    def blocked(self) -> bool:
+        return any(f.severity is Severity.BLOCK for f in self.findings)
+
+    @property
+    def blocks(self) -> list[Finding]:
+        return [f for f in self.findings if f.severity is Severity.BLOCK]
+
+    @property
+    def warnings(self) -> list[Finding]:
+        return [f for f in self.findings if f.severity is Severity.WARN]
+
+    def summary(self) -> str:
+        if not self.findings:
+            return f"{self.n_questions} questions validated, no findings"
+        return (
+            f"{self.n_questions} questions validated: "
+            f"{len(self.blocks)} blocking, {len(self.warnings)} warnings"
+        )
+
+
+# --------------------------------------------------------------------- limits
+
+#: The API rejects 0 and 100 outright.
+API_MIN, API_MAX = 1, 99
+
+#: How far a submission may sit from its base rate before it is worth a look.
+#: A genuine edge of 30 points is possible; it should just never be silent.
+BASE_RATE_COLLAR = 0.30
+
+#: Batch-level fat-finger thresholds.
+MAX_SHARE_AT_EXTREMES = 0.15
+MAX_SHARE_ROUND_NUMBERS = 0.45
+MIN_DISTINCT_SHARE = 0.10
+MAX_SHARE_IDENTICAL = 0.30
+
+#: Round numbers the crowd clusters on and we should not.
+ROUND_NUMBERS = frozenset({5, 10, 20, 25, 30, 40, 50, 60, 70, 75, 80, 90, 95})
+
+
+def validate_batch(
+    priced: list[PricedQuestion],
+    *,
+    previous: dict[str, int] | None = None,
+) -> ValidationReport:
+    """Run every check over a batch of priced questions."""
+    report = ValidationReport(n_questions=len(priced))
+    if not priced:
+        report.findings.append(Finding("empty_batch", Severity.BLOCK, "nothing to submit"))
+        return report
+
+    for check in (
+        _check_api_range,
+        _check_probability_sanity,
+        _check_base_rate_collar,
+        _check_extreme_share,
+        _check_round_number_clustering,
+        _check_output_diversity,
+        _check_confidence_floor,
+        _check_unparsed_share,
+    ):
+        report.findings.extend(check(priced))
+
+    if previous is not None:
+        report.findings.extend(_check_drift(priced, previous))
+
+    return report
+
+
+# --------------------------------------------------------------------- checks
+
+
+def _check_api_range(priced: list[PricedQuestion]) -> list[Finding]:
+    """Submissions must be integers the venue will accept."""
+    bad = [
+        q.market_id
+        for q in priced
+        if not isinstance(q.submission, int) or not API_MIN <= q.submission <= API_MAX
+    ]
+    if bad:
+        return [
+            Finding(
+                "api_range",
+                Severity.BLOCK,
+                f"{len(bad)} submissions outside the accepted range {API_MIN}-{API_MAX}",
+                tuple(bad[:10]),
+            )
+        ]
+    return []
+
+
+def _check_probability_sanity(priced: list[PricedQuestion]) -> list[Finding]:
+    """Probabilities must be finite and inside the unit interval.
+
+    A NaN reaching this point means an upstream division produced one and it was
+    averaged onward silently, which is the exact class of fault this module is
+    for.
+    """
+    bad = [
+        q.market_id
+        for q in priced
+        if not (0.0 <= q.probability <= 1.0) or q.probability != q.probability
+    ]
+    if bad:
+        return [
+            Finding(
+                "probability_sanity",
+                Severity.BLOCK,
+                f"{len(bad)} probabilities are NaN or outside [0, 1]",
+                tuple(bad[:10]),
+            )
+        ]
+    return []
+
+
+def _check_base_rate_collar(priced: list[PricedQuestion]) -> list[Finding]:
+    """Flag submissions far from their base rate.
+
+    This is the price collar from pre-trade risk: not a claim that the number is
+    wrong, but a requirement that a large deviation be deliberate. A sign
+    inversion or a bad join usually shows up here first.
+    """
+    far = [q for q in priced if abs(q.probability - q.base_rate) > BASE_RATE_COLLAR]
+    if not far:
+        return []
+    worst = max(far, key=lambda q: abs(q.probability - q.base_rate))
+    return [
+        Finding(
+            "base_rate_collar",
+            Severity.WARN,
+            f"{len(far)} submissions more than {BASE_RATE_COLLAR:.0%} from their base rate "
+            f"(worst: {worst.family.value} at {worst.probability:.2f} against "
+            f"base {worst.base_rate:.2f})",
+            tuple(q.market_id for q in far[:10]),
+        )
+    ]
+
+
+def _check_extreme_share(priced: list[PricedQuestion]) -> list[Finding]:
+    """Too many confident calls is a symptom, not a strength.
+
+    Brier punishes confident error quadratically, so a batch that is mostly
+    extreme is far more likely to be a broken model than an unusually knowable
+    day.
+    """
+    extreme = [q for q in priced if q.submission <= 10 or q.submission >= 90]
+    share = len(extreme) / len(priced)
+    if share > MAX_SHARE_AT_EXTREMES:
+        return [
+            Finding(
+                "extreme_share",
+                Severity.WARN,
+                f"{share:.1%} of submissions are below 10 or above 90 "
+                f"(threshold {MAX_SHARE_AT_EXTREMES:.0%})",
+                tuple(q.market_id for q in extreme[:10]),
+            )
+        ]
+    return []
+
+
+def _check_round_number_clustering(priced: list[PricedQuestion]) -> list[Finding]:
+    """We must not cluster where the crowd clusters.
+
+    Submitting 73 rather than 70 is free differentiation repeated across every
+    question. Heavy clustering on multiples of five means something upstream is
+    rounding, and the edge is being given away.
+    """
+    rounds = [q for q in priced if q.submission in ROUND_NUMBERS]
+    share = len(rounds) / len(priced)
+    if share > MAX_SHARE_ROUND_NUMBERS:
+        return [
+            Finding(
+                "round_number_clustering",
+                Severity.WARN,
+                f"{share:.1%} of submissions land on round numbers "
+                f"(threshold {MAX_SHARE_ROUND_NUMBERS:.0%}); "
+                "check for rounding upstream",
+            )
+        ]
+    return []
+
+
+def _check_output_diversity(priced: list[PricedQuestion]) -> list[Finding]:
+    """Detect a model that has silently collapsed to a constant.
+
+    The classic silent failure: a lookup starts returning None, everything falls
+    back to one default, and the batch is uniform. It looks entirely normal one
+    row at a time.
+    """
+    findings = []
+    counts = Counter(q.submission for q in priced)
+    distinct_share = len(counts) / len(priced)
+    if len(priced) >= 20 and distinct_share < MIN_DISTINCT_SHARE:
+        findings.append(
+            Finding(
+                "output_diversity",
+                Severity.BLOCK,
+                f"only {len(counts)} distinct values across {len(priced)} submissions; "
+                "the model may have collapsed to a constant",
+            )
+        )
+
+    value, count = counts.most_common(1)[0]
+    if len(priced) >= 20 and count / len(priced) > MAX_SHARE_IDENTICAL:
+        findings.append(
+            Finding(
+                "repeated_value",
+                Severity.WARN,
+                f"{count / len(priced):.1%} of submissions are exactly {value}",
+            )
+        )
+    return findings
+
+
+def _check_confidence_floor(priced: list[PricedQuestion]) -> list[Finding]:
+    """A batch priced almost entirely at low confidence is not worth submitting blind."""
+    low = [q for q in priced if q.confidence < 0.35]
+    share = len(low) / len(priced)
+    if share > 0.5:
+        return [
+            Finding(
+                "low_confidence_batch",
+                Severity.WARN,
+                f"{share:.1%} of questions were priced at low confidence; "
+                "check that player ratings and market data loaded",
+            )
+        ]
+    return []
+
+
+def _check_unparsed_share(priced: list[PricedQuestion]) -> list[Finding]:
+    """Too many unrecognised questions means the parser needs a rule, not a fallback.
+
+    Falling back to the base rate is safe for one stray question and a silent
+    surrender of edge across a whole round.
+    """
+    unparsed = [q for q in priced if q.family is Family.OTHER]
+    share = len(unparsed) / len(priced)
+    if share > 0.2:
+        return [
+            Finding(
+                "unparsed_share",
+                Severity.BLOCK,
+                f"{share:.1%} of questions were not understood; add parser rules before submitting",
+                tuple(q.market_id for q in unparsed[:10]),
+            )
+        ]
+    if unparsed:
+        return [
+            Finding(
+                "unparsed_questions",
+                Severity.WARN,
+                f"{len(unparsed)} questions were not understood and defaulted to the base rate",
+                tuple(q.market_id for q in unparsed[:10]),
+            )
+        ]
+    return []
+
+
+def _check_drift(priced: list[PricedQuestion], previous: dict[str, int]) -> list[Finding]:
+    """Compare against the previous run for the same markets.
+
+    Large unexplained moves between runs on unchanged inputs indicate
+    nondeterminism or a data problem rather than new information.
+    """
+    moves = [
+        (q.market_id, abs(q.submission - previous[q.market_id]))
+        for q in priced
+        if q.market_id in previous
+    ]
+    if not moves:
+        return []
+    big = [m for m in moves if m[1] > 20]
+    if len(big) / len(moves) > 0.25:
+        return [
+            Finding(
+                "run_to_run_drift",
+                Severity.WARN,
+                f"{len(big)} of {len(moves)} submissions moved more than 20 points "
+                "since the last run",
+                tuple(m[0] for m in big[:10]),
+            )
+        ]
+    return []
+
+
+# ------------------------------------------------------------------ coherence
+
+
+def check_match_coherence(priced: list[PricedQuestion]) -> list[Finding]:
+    """Check questions about the same match for logical consistency.
+
+    Coherence is checked rather than enforced. When every structural answer comes
+    from one simulation these hold by construction, so a violation means
+    something bypassed the simulation — a market read, a fallback, or a bug. That
+    makes the check a tripwire on the pipeline rather than a correction to the
+    numbers.
+    """
+    findings = []
+    by_family = {q.family: q for q in priced}
+
+    straight = by_family.get(Family.DECIDING_SET)
+    lopsided = by_family.get(Family.LOPSIDED_SET)
+    tiebreak = by_family.get(Family.TIEBREAK)
+    long_set = by_family.get(Family.SET_GAMES)
+
+    # A deciding set and a lopsided set are negatively related but not exclusive;
+    # both being near-certain is not impossible, only suspicious.
+    if straight and lopsided and straight.probability > 0.8 and lopsided.probability > 0.9:
+        findings.append(
+            Finding(
+                "coherence_decider_lopsided",
+                Severity.WARN,
+                f"deciding set at {straight.probability:.2f} with lopsided set at "
+                f"{lopsided.probability:.2f}; these are negatively correlated in the data",
+            )
+        )
+
+    # A long first set makes a first-set tiebreak more likely, so a near-certain
+    # tiebreak with a very short expected first set is contradictory.
+    if tiebreak and long_set and tiebreak.probability > 0.8 and long_set.probability < 0.2:
+        findings.append(
+            Finding(
+                "coherence_tiebreak_set_length",
+                Severity.WARN,
+                f"tiebreak at {tiebreak.probability:.2f} but a long first set at only "
+                f"{long_set.probability:.2f}; a tiebreak requires a set to reach 6-6",
+            )
+        )
+
+    return findings
+
+
+def check_comparison_complement(
+    priced_a: PricedQuestion, priced_b: PricedQuestion
+) -> Finding | None:
+    """Two comparisons on the same statistic, oriented oppositely, must be complements.
+
+    ``P(A > B) + P(B > A) + P(tie) = 1``, so the two submissions should sum to
+    roughly one minus the tie probability. A sum near 1.0 means the tie mass was
+    dropped; a sum near 2.0 or 0.0 means one of them is inverted — the most
+    expensive single error available on the highest-edge family.
+    """
+    if priced_a.family is not priced_b.family or priced_a.family not in COMPARISON:
+        return None
+    total = priced_a.probability + priced_b.probability
+    if total > 1.05:
+        return Finding(
+            "comparison_orientation",
+            Severity.BLOCK,
+            f"complementary {priced_a.family.value} questions sum to {total:.2f}; "
+            "at least one is inverted",
+            (priced_a.market_id, priced_b.market_id),
+        )
+    if total < 0.55:
+        return Finding(
+            "comparison_orientation",
+            Severity.BLOCK,
+            f"complementary {priced_a.family.value} questions sum to only {total:.2f}; "
+            "both appear to be answering the same side",
+            (priced_a.market_id, priced_b.market_id),
+        )
+    return None
