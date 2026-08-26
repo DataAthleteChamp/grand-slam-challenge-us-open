@@ -26,6 +26,9 @@ One row per player, hard court, 2021–2026.
 | `spw`, `rpw` | raw service / return points won |
 | `serve_skill`, `return_skill` | **opponent-adjusted** deviations from the tour baseline |
 | `spw_adjusted` | baseline + `serve_skill`; expected spw against an average returner |
+| `charted_matches` | Match Charting sample size — check before trusting the two below |
+| `winner_rate`, `unforced_rate` | per point played, from the Match Charting Project |
+| `pace_minutes` | duration residual: minutes above/below what the scoreline implies |
 
 ### Why both raw and adjusted
 
@@ -65,3 +68,45 @@ times and any real signal is already in the ratings.
 | **WTA heights** | Present for only **36.6%** of players. Zheng, for example, has no height in *any* of her 213 rows. This is a source gap, not a join bug. `height_prior_ace_rate` falls back to the tour baseline, which is the honest answer — but it means the ace prior is weaker for unseeded women. ATP coverage is 98%. |
 | **Serve stats end 2026-05-25** | The source repositories went down in May. Tolerable: ace rate is the most repeatable statistic in tennis (year-over-year r ≈ 0.80–0.90). Results-only data runs to 2026-08-09 for recency and fatigue features. |
 | **Qualifiers** | Many US Open qualifiers will have few or no rows here. That is what `ace_rate_shrunk` is for: a player with 8 matches keeps roughly 15% of their own rate and takes 85% from the prior. |
+
+
+## Pace of play
+
+`pace_minutes` is the part of match duration that the scoreline does *not*
+explain. Total games already accounts for about 84% of the variance in minutes
+(r = 0.91 ATP, 0.92 WTA), and this column captures the rest.
+
+It is a strongly repeatable trait, not noise: between-player variance in the
+residual is roughly **14× what label-shuffling produces (p = 0.0005)** over
+14,325 ATP hard-court player-matches, with a **40-minute spread** end to end.
+
+| Slowest | | Fastest | |
+|---|---|---|---|
+| Andy Murray | +17.8 | Mpetshi Perricard | −15.5 |
+| Rafael Nadal | +14.9 | Nick Kyrgios | −12.8 |
+| Etcheverry | +11.9 | Reilly Opelka | −12.2 |
+| Schwartzman | +10.5 | Sam Querrey | −11.4 |
+
+The data independently recovers Nadal's and Murray's well-known between-point
+routines, and the fastest players are all big servers — aces end points
+instantly. On the women's side the slowest are Sorribes Tormo and Siegemund,
+both grinders.
+
+This is the same permutation test with leave-one-out player controls that showed
+**umpire identity (p = 0.16) and court assignment (p = 0.21) were noise**. The
+method discriminates; pace is real and large, those were not.
+
+## Winners and unforced errors
+
+From the Match Charting Project — the only public source. Face validity holds:
+most aggressive are Opelka, Karlović, Kyrgios, Raonić; most error-prone are
+Paire, Ruusuvuori, Davidovich Fokina, Shapovalov.
+
+Treat `unforced_rate` with suspicion. The forced/unforced boundary is a human
+judgement call, and shown ten identical points three separate coaching
+conferences agreed only three or four times out of ten. Counts are internally
+consistent within a match but not comparable across matches, courts or charters.
+This is why `DEFER_TO_BASE_RATE` pins that question family near its base rate
+instead of modelling it.
+
+Coverage: 378 ATP and 377 WTA players matched to the main table.
