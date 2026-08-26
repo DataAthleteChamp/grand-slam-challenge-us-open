@@ -69,15 +69,41 @@ TIEBREAK_BY_SET = {
     ("WTA", 3): {1: 0.082, 2: 0.071, 3: 0.080},
 }
 
-#: Per-match count statistics and their measured tie rates, from 7,545 charted
-#: men's matches.  ``even_p_a_greater`` is the fair price for "A records strictly
-#: more than B" between two identical players — emphatically not 50.
+#: Per-match count statistics and their measured tie rates, **split by tour**.
+#: ``even_p_a_greater`` is the fair price for "A records strictly more than B"
+#: between two identical players — emphatically not 50.
+#:
+#: Splitting matters more than it looks.  Women hit less than half as many aces
+#: per match as men (2.9 against 7.0), so ace ties are nearly twice as common:
+#: P(tie) 0.145 against 0.080, moving an even matchup from 0.460 to 0.427.
+#: Applying the men's constant to the women's draw would have mispriced every ace
+#: comparison in half the event by more than three points, invisibly.
+#:
+#: Measured over 7,545 charted men's and 4,070 charted women's matches.
 COUNT_STATS = {
-    "aces": {"mean_per_player": 7.0, "p_tie": 0.080, "even_p_a_greater": 0.460},
-    "double_faults": {"mean_per_player": 2.9, "p_tie": 0.158, "even_p_a_greater": 0.421},
-    "winners": {"mean_per_player": 29.1, "p_tie": 0.029, "even_p_a_greater": 0.485},
-    "unforced_errors": {"mean_per_player": 29.0, "p_tie": 0.030, "even_p_a_greater": 0.485},
+    "ATP": {
+        "aces": {"mean_per_player": 7.0, "p_tie": 0.080, "even_p_a_greater": 0.460},
+        "double_faults": {"mean_per_player": 2.9, "p_tie": 0.158, "even_p_a_greater": 0.421},
+        "winners": {"mean_per_player": 29.1, "p_tie": 0.029, "even_p_a_greater": 0.485},
+        "unforced_errors": {"mean_per_player": 29.0, "p_tie": 0.030, "even_p_a_greater": 0.485},
+    },
+    "WTA": {
+        "aces": {"mean_per_player": 2.9, "p_tie": 0.145, "even_p_a_greater": 0.427},
+        "double_faults": {"mean_per_player": 3.4, "p_tie": 0.134, "even_p_a_greater": 0.433},
+        "winners": {"mean_per_player": 20.7, "p_tie": 0.031, "even_p_a_greater": 0.484},
+        "unforced_errors": {"mean_per_player": 27.3, "p_tie": 0.036, "even_p_a_greater": 0.482},
+    },
 }
+
+
+def count_stats(stat: str, tour: str = "ATP") -> dict[str, float]:
+    """Measured count statistics for one statistic on one tour.
+
+    Always pass the tour.  The men's and women's constants differ enough on aces
+    to flip a submission by three points.
+    """
+    return COUNT_STATS[tour.upper()][stat]
+
 
 #: Within-match serve decay, measured within-player (so player quality is removed).
 #: First-serve effectiveness falls about one point across a five-setter; ace rate is

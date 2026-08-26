@@ -339,3 +339,19 @@ def test_validation_can_report_without_dropping():
     kept, violations = validate(frame, drop=False)
     assert len(kept) == 1
     assert violations
+
+
+def test_qualifying_rounds_sort_before_the_main_draw():
+    """Regression: unmapped qualifying rounds corrupted the fatigue features.
+
+    Q1/Q2/Q3 were absent from the round ordering, so they became NaN. Pandas
+    sorts NaN last, which placed a player's qualifying match *after* the final
+    and made ``prev_minutes`` compare Q1 against the trophy match. It affected
+    1,055 of 8,283 rows once qualifying data was ingested.
+    """
+    from bot.data.players import _ROUND_ORDER
+
+    for qualifying in ("Q1", "Q2", "Q3"):
+        assert qualifying in _ROUND_ORDER, qualifying
+        assert _ROUND_ORDER[qualifying] < _ROUND_ORDER["R128"]
+    assert _ROUND_ORDER["Q1"] < _ROUND_ORDER["Q2"] < _ROUND_ORDER["Q3"]

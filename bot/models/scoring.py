@@ -60,14 +60,26 @@ def relative_brier_points(
     return ((c - y) ** 2 - (p - y) ** 2) * 100.0 * float(multiplier)
 
 
-def expected_rbp(crowd: float, truth: float) -> float:
-    """Expected RBP from submitting the true probability against a biased crowd.
+def expected_rbp(crowd: float, truth: float, submission: float | None = None) -> float:
+    """Expected RBP from a submission against a crowd estimate.
 
-    ``E[RBP] = (c - mu)^2 * 100``.  The gain scales with the *square* of the
-    crowd's error, which means effort belongs where the crowd is most wrong — not
-    where you are most confident.  Those are different question sets.
+    ``E[RBP] = (c - mu)^2 - (p - mu)^2``, in points.
+
+    Passing only ``crowd`` and ``truth`` assumes a perfect submission and returns
+    ``(c - mu)^2``, which is always non-negative.  That is the right formula for
+    an upper bound but the wrong one for allocating effort: it cannot see our own
+    model error, so it rates a question as valuable purely because the crowd is
+    wrong, even where our model is worse than the crowd and the true expected
+    value is negative.
+
+    Pass ``submission`` to get the honest figure.  Effort belongs where the crowd
+    is wrong *and* we are right, which is a strictly smaller set of questions.
     """
-    return (float(crowd) - float(truth)) ** 2 * 100.0
+    crowd_term = (float(crowd) - float(truth)) ** 2
+    if submission is None:
+        return crowd_term * 100.0
+    own_term = (float(submission) - float(truth)) ** 2
+    return (crowd_term - own_term) * 100.0
 
 
 def murphy_decomposition(

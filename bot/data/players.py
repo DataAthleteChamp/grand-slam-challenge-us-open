@@ -27,7 +27,15 @@ _SERVE_COLUMNS = (
     "bpFaced",
 )
 
+#: Qualifying rounds sort *before* the main draw. Leaving them unmapped made
+#: them NaN, and pandas sorts NaN last, so a player's Q1 match was compared
+#: against the final when computing rest and previous-match load. That silently
+#: corrupted the fatigue features for 1,055 of 8,283 rows once qualifying data
+#: was ingested.
 _ROUND_ORDER = {
+    "Q1": -3,
+    "Q2": -2,
+    "Q3": -1,
     "R128": 1,
     "R64": 2,
     "R32": 3,
@@ -168,6 +176,9 @@ def with_recency(long: pd.DataFrame) -> pd.DataFrame:
     raw win-rate gap is far larger but mostly confounded — weaker players both
     play long matches and lose the next one.
     """
+    # Drop rows whose round we cannot order rather than letting them sort last;
+    # an unorderable round produces a meaningless "previous match".
+    long = long.dropna(subset=["round_order"])
     long = long.sort_values(["tourney_id", "player", "round_order"]).copy()
     grouped = long.groupby(["tourney_id", "player"], sort=False)
     long["prev_minutes"] = grouped["minutes"].shift(1)

@@ -270,9 +270,44 @@ def test_matchup_classifier():
 
 
 def test_count_stat_table_is_self_consistent():
-    for stat, values in COUNT_STATS.items():
-        expected = (1.0 - values["p_tie"]) / 2.0
-        assert values["even_p_a_greater"] == pytest.approx(expected, abs=0.01), stat
+    for tour, stats in COUNT_STATS.items():
+        for stat, values in stats.items():
+            expected = (1.0 - values["p_tie"]) / 2.0
+            assert values["even_p_a_greater"] == pytest.approx(expected, abs=0.01), f"{tour} {stat}"
+
+
+def test_count_stats_differ_between_tours():
+    """Regression: the tie constants were measured on men and applied to both.
+
+    Women hit less than half as many aces per match, so ace ties are nearly twice
+    as common (0.145 against 0.080) and an even matchup prices at 0.427 rather
+    than 0.460. Using one constant for both draws mispriced every ace comparison
+    on the women's side by more than three points, invisibly.
+    """
+    from bot.data.baserates import count_stats
+
+    men = count_stats("aces", "ATP")
+    women = count_stats("aces", "WTA")
+    assert women["p_tie"] > men["p_tie"] * 1.5
+    assert women["mean_per_player"] < men["mean_per_player"] / 2
+    assert women["even_p_a_greater"] < men["even_p_a_greater"] - 0.02
+
+
+def test_expected_rbp_can_be_negative_when_our_model_is_worse():
+    """Effort belongs where the crowd is wrong AND we are right.
+
+    The one-argument form assumes a perfect submission and so is always
+    non-negative, which makes it useless for allocating effort: it rates a
+    question as valuable purely because the crowd is wrong.
+    """
+    from bot.models.scoring import expected_rbp
+
+    # Crowd is off by 0.10; we are off by 0.25. The question is a net loss.
+    assert expected_rbp(0.60, 0.50, submission=0.25) < 0
+    # Same crowd error, but we are accurate: a gain.
+    assert expected_rbp(0.60, 0.50, submission=0.50) > 0
+    # Without a submission it reports the upper bound.
+    assert expected_rbp(0.60, 0.50) == pytest.approx(1.0)
 
 
 # ------------------------------------------------- beta comparison (regression)
