@@ -273,3 +273,41 @@ def test_count_stat_table_is_self_consistent():
     for stat, values in COUNT_STATS.items():
         expected = (1.0 - values["p_tie"]) / 2.0
         assert values["even_p_a_greater"] == pytest.approx(expected, abs=0.01), stat
+
+
+# ------------------------------------------------- beta comparison (regression)
+
+
+def test_beta_comparison_is_symmetric_under_identical_evidence():
+    from bot.models.counts import beta_comparison
+
+    assert beta_comparison(30, 100, 30, 100) == pytest.approx(0.5, abs=0.01)
+
+
+def test_beta_comparison_favours_the_better_rate():
+    from bot.models.counts import beta_comparison
+
+    assert beta_comparison(45, 100, 30, 100) > 0.9
+
+
+def test_beta_comparison_handles_asymmetric_priors():
+    """Regression: both posteriors must take the prior's success parameter.
+
+    Using the failure parameter for B's successes is invisible under the default
+    symmetric prior (1, 1) and silently wrong for any other, so a symmetric-only
+    test suite passes while the function is broken.
+    """
+    from bot.models.counts import beta_comparison
+
+    # Identical evidence must stay a coin flip whatever the prior, as long as
+    # the same prior is applied to both players.
+    for prior in [(1.0, 1.0), (5.0, 1.0), (1.0, 8.0), (0.5, 2.0)]:
+        assert beta_comparison(20, 60, 20, 60, prior=prior) == pytest.approx(0.5, abs=0.02), prior
+
+
+def test_beta_comparison_prior_shifts_thin_samples_more_than_thick_ones():
+    from bot.models.counts import beta_comparison
+
+    thin = beta_comparison(3, 5, 2, 5, prior=(1.0, 1.0))
+    thick = beta_comparison(300, 500, 200, 500, prior=(1.0, 1.0))
+    assert thick > thin, "a large sample should express the difference more strongly"

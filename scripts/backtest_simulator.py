@@ -37,9 +37,13 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from bot.models.point import clip  # noqa: E402
 from bot.models.scoring import brier_score, murphy_decomposition  # noqa: E402
-from bot.models.simulate import SimulationConfig, simulate_match  # noqa: E402
+from bot.models.simulate import (  # noqa: E402
+    SKILL_SCALE,
+    SimulationConfig,
+    matchup_probabilities,  # noqa: E402
+    simulate_match,
+)
 
 _SET_TOKEN = re.compile(r"^(\d+)-(\d+)(?:\(\d+\))?$")
 
@@ -86,18 +90,30 @@ def load_matches(tour: str, limit: int) -> pd.DataFrame:
     return raw.tail(limit)
 
 
-def match_probabilities(row, ratings: pd.DataFrame, base: float) -> tuple[float, float] | None:
-    """Serve probabilities for the two players who actually played."""
+def match_probabilities(
+    row, ratings: dict, base: float, skill_scale: float
+) -> tuple[float, float] | None:
+    """Serve probabilities for the two players who actually played.
+
+    Delegates to the same helper the live pricer uses. Reimplementing it here
+    meant the backtest silently exercised a different code path from the one
+    that ships, so measured bias did not describe shipped behaviour.
+    """
     winner = ratings.get(row.winner_name)
     loser = ratings.get(row.loser_name)
     if winner is None or loser is None:
         return None
-    pa = clip(base + winner["serve"] - loser["ret"])
-    pb = clip(base + loser["serve"] - winner["ret"])
-    return pa, pb
+    return matchup_probabilities(
+        base,
+        winner["serve"],
+        winner["ret"],
+        loser["serve"],
+        loser["ret"],
+        skill_scale=skill_scale,
+    )
 
 
-def run(tour: str, limit: int, sigmas, rhos, n_sims: int) -> None:
+def run(tour: str, limit: int, sigmas, rhos, n_sims: int, skill_scale: float) -> None:
     players = pd.read_csv(ROOT / "data" / "players" / f"{tour}_players.csv")
     players = players.dropna(subset=["serve_skill", "return_skill"])
     ratings = {
@@ -109,7 +125,7 @@ def run(tour: str, limit: int, sigmas, rhos, n_sims: int) -> None:
     matches = load_matches(tour, limit)
     usable = []
     for row in matches.itertuples():
-        probabilities = match_probabilities(row, ratings, base)
+        probabilities = match_probabilities(row, ratings, base, skill_scale)
         if probabilities is None:
             continue
         usable.append((row, probabilities))
@@ -181,6 +197,12 @@ def main() -> int:
     parser.add_argument("--n", type=int, default=250, help="matches to backtest")
     parser.add_argument("--n-sims", type=int, default=600)
     parser.add_argument("--fine", action="store_true")
+    parser.add_argument(
+        "--skill-scale",
+        type=float,
+        default=SKILL_SCALE,
+        help="undo ridge compression of the rating spread",
+    )
     args = parser.parse_args()
 
     if args.fine:
@@ -190,7 +212,7 @@ def main() -> int:
         sigmas = np.array([0.0, 0.025, 0.05])
         rhos = np.array([-0.6, 0.0])
 
-    run(args.tour, args.n, sigmas, rhos, args.n_sims)
+    run(args.tour, args.n, sigmas, rhos, args.n_sims, args.skill_scale)
     return 0
 
 

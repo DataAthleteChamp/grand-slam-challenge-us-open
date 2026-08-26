@@ -148,7 +148,10 @@ def beta_comparison(
     """
     a0, b0 = prior
     post_a = (wins_a + a0, trials_a - wins_a + b0)
-    post_b = (wins_b + b0, trials_b - wins_b + b0)
+    # Both posteriors take a0 on successes and b0 on failures. Using b0 for B's
+    # successes is invisible under the default symmetric prior and silently wrong
+    # for any other, which is why the asymmetric-prior test exists.
+    post_b = (wins_b + a0, trials_b - wins_b + b0)
     grid = np.linspace(1e-6, 1 - 1e-6, 2000)
     pdf_a = stats.beta.pdf(grid, *post_a)
     cdf_b = stats.beta.cdf(grid, *post_b)

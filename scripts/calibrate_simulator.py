@@ -1,4 +1,15 @@
-"""Fit the simulator's form-variation parameters to measured base rates.
+"""EXPLORATORY ONLY — superseded by ``scripts/backtest_simulator.py``.
+
+Fit the simulator's form-variation parameters to measured base rates.
+
+.. warning::
+
+   Do not fit shipped parameters here. This searches against four stylised
+   scenarios, and an "evenly matched" bucket is a *mixture* of matchups with
+   different skill gaps, so no single gap reproduces it and any parameter
+   fitted this way absorbs the mismatch. Kept because sweeping a scenario is
+   a fast way to see which direction a parameter moves the output; the
+   numbers that ship come from the real-match backtest.
 
 The constant-``p`` model produces the wrong shape: too few lopsided sets, too
 many deciding sets.  Rather than tune the outputs, this fits the two parameters
