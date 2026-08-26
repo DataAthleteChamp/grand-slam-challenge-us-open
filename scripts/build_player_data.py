@@ -15,6 +15,7 @@ at a glance and to diff in review.
 from __future__ import annotations
 
 import argparse
+import re
 import sys
 from pathlib import Path
 
@@ -23,6 +24,7 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
+from bot.data.charting import load_overview, summarise_charting  # noqa: E402
 from bot.data.ingest import load_matches, load_players  # noqa: E402
 from bot.data.players import (  # noqa: E402
     build_player_matches,
@@ -30,11 +32,33 @@ from bot.data.players import (  # noqa: E402
     summarise_players,
     with_recency,
 )
+from bot.models.duration import player_pace  # noqa: E402
 from bot.models.ratings import fit_serve_return  # noqa: E402
 from bot.models.shrink import CREDIBILITY_K, height_prior_ace_rate, shrink  # noqa: E402
 
 OUT_DIR = ROOT / "data" / "players"
 DEFAULT_YEARS = [2021, 2022, 2023, 2024, 2025, 2026]
+
+
+_SET_TOKEN = re.compile(r"^(\d+)-(\d+)(?:\(\d+\))?$")
+
+
+def _total_games(score: object) -> float | None:
+    """Total games in a match from its score string.
+
+    Accepts both ``7-6(6)`` and bare ``7-6`` notation. Older source files carry
+    the tiebreak points and newer ones do not, and a parser handling only one
+    silently drops every tiebreak match from half the sample.
+    """
+    if not isinstance(score, str) or re.search(r"RET|W/O|DEF|ABN", score, re.I):
+        return None
+    total = 0
+    for token in score.split():
+        match = _SET_TOKEN.match(token)
+        if not match:
+            return None
+        total += int(match.group(1)) + int(match.group(2))
+    return total or None
 
 
 def _fill_player_attributes(long: pd.DataFrame) -> pd.DataFrame:
@@ -56,13 +80,9 @@ def _fill_player_attributes(long: pd.DataFrame) -> pd.DataFrame:
             continue
         # Bind the loop variable explicitly; a bare closure would capture the
         # final value and apply the wrong aggregator to the first attribute.
-        aggregator = (
-            (lambda s: s.median()) if attribute == "ht" else (lambda s: s.mode().iat[0])
-        )
+        aggregator = (lambda s: s.median()) if attribute == "ht" else (lambda s: s.mode().iat[0])
         lookup = pooled.groupby("name")["value"].agg(aggregator)
-        long[f"player_{attribute}"] = long[f"player_{attribute}"].fillna(
-            long["player"].map(lookup)
-        )
+        long[f"player_{attribute}"] = long[f"player_{attribute}"].fillna(long["player"].map(lookup))
         long[f"opponent_{attribute}"] = long[f"opponent_{attribute}"].fillna(
             long["opponent"].map(lookup)
         )
@@ -117,6 +137,38 @@ def build_tour(tour: str, years: list[int], *, refresh: bool, surface: str) -> d
     rating_frame = ratings.as_frame().drop(columns=["matches"])
     summary = summary.merge(rating_frame, on="player", how="left")
 
+    # Winners and unforced errors come only from the Match Charting Project.
+    # Without them two of the ten question families have no player data at all.
+    print("  loading Match Charting winners / unforced errors...")
+    charting = summarise_charting(load_overview(tour, refresh=refresh), surface=surface)
+    if not charting.empty:
+        summary = summary.merge(
+            charting[
+                [
+                    "player",
+                    "charted_matches",
+                    "winner_rate",
+                    "unforced_rate",
+                    "winner_per_match",
+                    "unforced_per_match",
+                ]
+            ],
+            on="player",
+            how="left",
+        )
+        covered = summary["charted_matches"].notna().sum()
+        print(f"    {len(charting):,} charted players, {covered:,} matched to the main table")
+    else:
+        print("    unavailable — winners/unforced columns will be empty")
+
+    # Pace of play: a strongly repeatable player trait worth up to 20 minutes a
+    # match, and the only part of match duration that games do not already explain.
+    pace_long = long.copy()
+    pace_long["total_games"] = pace_long["score"].map(_total_games)
+    pace = player_pace(pace_long[pace_long["surface"] == surface])
+    summary["pace_minutes"] = summary["player"].map(pace)
+    print(f"  pace estimated for {summary['pace_minutes'].notna().sum():,} players")
+
     # Opponent-adjusted expected service points won, and the shrunk ace rate that
     # the count models actually consume.
     summary["spw_adjusted"] = ratings.base + summary["serve_skill"].fillna(0.0)
@@ -132,10 +184,33 @@ def build_tour(tour: str, years: list[int], *, refresh: bool, surface: str) -> d
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     columns = [
-        "player", "tour", "matches", "svpt", "rank", "height", "hand",
-        "ace_rate", "ace_rate_prior", "ace_rate_shrunk", "df_rate",
-        "first_in_rate", "first_won_rate", "second_won_rate", "spw", "rpw",
-        "serve_skill", "return_skill", "spw_adjusted", "win_rate", "last_played",
+        "player",
+        "tour",
+        "matches",
+        "svpt",
+        "rank",
+        "height",
+        "hand",
+        "ace_rate",
+        "ace_rate_prior",
+        "ace_rate_shrunk",
+        "df_rate",
+        "first_in_rate",
+        "first_won_rate",
+        "second_won_rate",
+        "spw",
+        "rpw",
+        "serve_skill",
+        "return_skill",
+        "spw_adjusted",
+        "win_rate",
+        "charted_matches",
+        "winner_rate",
+        "unforced_rate",
+        "winner_per_match",
+        "unforced_per_match",
+        "pace_minutes",
+        "last_played",
     ]
     summary = summary[[c for c in columns if c in summary.columns]].round(5)
     summary.to_csv(OUT_DIR / f"{tour}_players.csv", index=False)
@@ -158,9 +233,7 @@ def main() -> int:
     tours = ["atp", "wta"] if args.tour == "both" else [args.tour]
     totals = {}
     for tour in tours:
-        totals[tour] = build_tour(
-            tour, args.years, refresh=args.refresh, surface=args.surface
-        )
+        totals[tour] = build_tour(tour, args.years, refresh=args.refresh, surface=args.surface)
 
     print("\n=== summary ===")
     for tour, stats in totals.items():
