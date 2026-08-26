@@ -86,9 +86,7 @@ def fit_serve_return(
     returners = frame["opponent"].to_numpy()
     observed = frame["spw"].to_numpy(dtype=float)
     weights = (
-        frame["svpt"].fillna(0).to_numpy(dtype=float)
-        if weight_by_points
-        else np.ones(len(frame))
+        frame["svpt"].fillna(0).to_numpy(dtype=float) if weight_by_points else np.ones(len(frame))
     )
     weights = np.where(weights > 0, weights, 1.0)
 
