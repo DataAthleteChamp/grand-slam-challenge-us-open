@@ -63,10 +63,22 @@ _NUMBER = r"(\d+(?:\.\d+)?)"
 # Ordered most-specific first; the first match wins.
 _RULES: list[tuple[Family, re.Pattern[str], float]] = [
     (Family.TIEBREAK, re.compile(r"\btie[\s-]?break", re.I), 0.95),
-    (Family.DECIDING_SET, re.compile(r"\bdeciding set\b|\bgo the distance\b|\bfinal set\b", re.I), 0.9),
-    (Family.LOPSIDED_SET, re.compile(r"\blopsided\b|6-?0|6-?1|6-?2|\bbagel\b|\bbreadstick\b", re.I), 0.9),
+    (
+        Family.DECIDING_SET,
+        re.compile(r"\bdeciding set\b|\bgo the distance\b|\bfinal set\b", re.I),
+        0.9,
+    ),
+    (
+        Family.LOPSIDED_SET,
+        re.compile(r"\blopsided\b|6-?0|6-?1|6-?2|\bbagel\b|\bbreadstick\b", re.I),
+        0.9,
+    ),
     (Family.SET_GAMES, re.compile(r"\bset\b.*\bgames?\b|\bgames?\b.*\bset\b", re.I), 0.8),
-    (Family.MATCH_DURATION, re.compile(r"\bminutes?\b|\bhours?\b|\blast longer\b|\bduration\b", re.I), 0.9),
+    (
+        Family.MATCH_DURATION,
+        re.compile(r"\bminutes?\b|\bhours?\b|\blast longer\b|\bduration\b", re.I),
+        0.9,
+    ),
     (Family.ACES_COMPARISON, re.compile(r"\baces?\b", re.I), 0.9),
     (Family.DOUBLE_FAULTS_COMPARISON, re.compile(r"\bdouble[\s-]?faults?\b", re.I), 0.95),
     (Family.WINNERS_COMPARISON, re.compile(r"\bwinners?\b", re.I), 0.75),
@@ -76,8 +88,16 @@ _RULES: list[tuple[Family, re.Pattern[str], float]] = [
 
 _SET_ORDINAL = re.compile(r"\b(first|second|third|fourth|fifth|1st|2nd|3rd|4th|5th)\s+set\b", re.I)
 _ORDINALS = {
-    "first": 1, "1st": 1, "second": 2, "2nd": 2, "third": 3, "3rd": 3,
-    "fourth": 4, "4th": 4, "fifth": 5, "5th": 5,
+    "first": 1,
+    "1st": 1,
+    "second": 2,
+    "2nd": 2,
+    "third": 3,
+    "3rd": 3,
+    "fourth": 4,
+    "4th": 4,
+    "fifth": 5,
+    "5th": 5,
 }
 
 _THRESHOLD_PATTERNS = [

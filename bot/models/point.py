@@ -17,7 +17,7 @@ that the iid model remains the right backbone.
 from __future__ import annotations
 
 from dataclasses import dataclass
-from functools import lru_cache
+from functools import cache
 
 #: Tour-average share of service points won on hard court.
 TOUR_SPW = {"ATP": 0.645, "WTA": 0.585}
@@ -78,7 +78,7 @@ def tiebreak_prob(pa: float, pb: float, target: int = 7) -> float:
     """
     pa, pb = clip(pa), clip(pb)
 
-    @lru_cache(maxsize=None)
+    @cache
     def rec(a: int, b: int) -> float:
         if a >= target and a - b >= 2:
             return 1.0
@@ -226,8 +226,15 @@ def match_shape(
     p_first_10plus = sum(p for (ga, gb, _), p in first.items() if ga + gb >= 10)
     p_first_tb = sum(p for (_, _, tb), p in first.items() if tb)
 
-    totals = {"win": 0.0, "tb": 0.0, "dec": 0.0, "lop": 0.0, "straight": 0.0,
-              "games": 0.0, "sets": 0.0}
+    totals = {
+        "win": 0.0,
+        "tb": 0.0,
+        "dec": 0.0,
+        "lop": 0.0,
+        "straight": 0.0,
+        "games": 0.0,
+        "sets": 0.0,
+    }
 
     def walk(
         sets_a: int,

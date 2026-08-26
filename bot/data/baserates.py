@@ -96,9 +96,9 @@ SERVE_DECAY_BO5 = {
 #: four-hour match loses roughly 0.8 points of ace rate relative to one who came
 #: through in 90 minutes (p = 0.011).
 FATIGUE_ACE_DELTA = {
-    "short": +0.0055,   # previous match ~107 minutes
+    "short": +0.0055,  # previous match ~107 minutes
     "medium": +0.0009,  # ~143 minutes
-    "long": -0.0043,    # ~180 minutes
+    "long": -0.0043,  # ~180 minutes
     "very_long": -0.0022,  # ~232 minutes
 }
 

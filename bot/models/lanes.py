@@ -26,7 +26,7 @@ secondary bot, never on the main entry.
 
 from __future__ import annotations
 
-from .. data.baserates import DEFER_TO_BASE_RATE
+from ..data.baserates import DEFER_TO_BASE_RATE
 from ..markets.taxonomy import Family
 
 #: Lane name -> temperature.

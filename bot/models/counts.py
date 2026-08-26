@@ -132,7 +132,12 @@ def threshold_probability(
 
 
 def beta_comparison(
-    wins_a: int, trials_a: int, wins_b: int, trials_b: int, *, prior: tuple[float, float] = (1.0, 1.0)
+    wins_a: int,
+    trials_a: int,
+    wins_b: int,
+    trials_b: int,
+    *,
+    prior: tuple[float, float] = (1.0, 1.0),
 ) -> float:
     """``P(theta_A > theta_B)`` for two independent Beta posteriors.
 

@@ -47,9 +47,7 @@ def test_double_fault_beats_the_generic_fault_rule():
 
 
 def test_unforced_errors_beat_the_generic_winners_rule():
-    spec = parse_question(
-        "Will Swiatek hit more unforced errors than winners?", players=PLAYERS
-    )
+    spec = parse_question("Will Swiatek hit more unforced errors than winners?", players=PLAYERS)
     assert spec.family is Family.UNFORCED_ERRORS
 
 

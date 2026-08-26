@@ -234,9 +234,7 @@ class SportsPredictClient:
         state back and diff it.
         """
         actual = {
-            str(p["market_id"]): p
-            for p in self.list_predictions(lobby_id)
-            if p.get("market_id")
+            str(p["market_id"]): p for p in self.list_predictions(lobby_id) if p.get("market_id")
         }
         missing = sorted(set(desired) - set(actual))
         mismatched = {

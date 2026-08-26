@@ -18,10 +18,10 @@ Families are grouped into three structurally different sets:
 
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 
-class Family(str, Enum):
+class Family(StrEnum):
     """Market families, matching the ten published question archetypes."""
 
     TIEBREAK = "tiebreak"
@@ -68,10 +68,22 @@ COMPARISON_STAT = {
 
 #: Round multipliers published in the scoring rules.
 ROUND_MULTIPLIER = {
-    "R128": 1, "R64": 1, "R32": 2, "R16": 2, "QF": 3, "SF": 3, "F": 3,
+    "R128": 1,
+    "R64": 1,
+    "R32": 2,
+    "R16": 2,
+    "QF": 3,
+    "SF": 3,
+    "F": 3,
 }
 
 #: Questions per match by round, used to sanity-check that we saw them all.
 QUESTIONS_PER_MATCH = {
-    "R128": 5, "R64": 5, "R32": 10, "R16": 10, "QF": 10, "SF": 10, "F": 20,
+    "R128": 5,
+    "R64": 5,
+    "R32": 10,
+    "R16": 10,
+    "QF": 10,
+    "SF": 10,
+    "F": 20,
 }

@@ -23,7 +23,6 @@ from bot.models.scoring import (
 )
 from bot.models.shrink import credibility_weight, height_prior_ace_rate, shrink_stat
 
-
 # --------------------------------------------------------------------- counts
 
 

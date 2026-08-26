@@ -109,7 +109,9 @@ def height_prior_ace_rate(height_cm: float | None, tour: str = "ATP") -> float:
     return float(min(max(estimate, floor), ceiling))
 
 
-def estimate_k_split_half(first_half: np.ndarray, second_half: np.ndarray, n_per_half: float) -> float:
+def estimate_k_split_half(
+    first_half: np.ndarray, second_half: np.ndarray, n_per_half: float
+) -> float:
     """Estimate a credibility constant empirically from split-half reliability.
 
     With reliability ``r`` measured on samples of size ``n``, the sample size at
