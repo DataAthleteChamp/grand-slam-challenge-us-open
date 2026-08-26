@@ -98,8 +98,16 @@ def validate_batch(
     priced: list[PricedQuestion],
     *,
     previous: dict[str, int] | None = None,
+    questions_by_match: dict[str, list[PricedQuestion]] | None = None,
+    rounds_by_match: dict[str, str] | None = None,
 ) -> ValidationReport:
-    """Run every check over a batch of priced questions."""
+    """Run every check over a batch of priced questions.
+
+    This is the only entry point the submission path calls, so every check must
+    be wired in here.  A check that exists but is never invoked is worse than no
+    check at all: it produces the appearance of coverage while catching nothing,
+    and its passing tests reinforce the illusion.
+    """
     report = ValidationReport(n_questions=len(priced))
     if not priced:
         report.findings.append(Finding("empty_batch", Severity.BLOCK, "nothing to submit"))
@@ -114,13 +122,41 @@ def validate_batch(
         _check_output_diversity,
         _check_confidence_floor,
         _check_unparsed_share,
+        check_baseline_tripwire,
     ):
         report.findings.extend(check(priced))
 
     if previous is not None:
         report.findings.extend(_check_drift(priced, previous))
 
+    # Per-match checks: coherence between related questions, complementary
+    # comparison pairs, and whether every question the round should carry
+    # actually arrived.
+    if questions_by_match:
+        for match_questions in questions_by_match.values():
+            report.findings.extend(check_match_coherence(match_questions))
+            report.findings.extend(_check_comparison_pairs(match_questions))
+        if rounds_by_match:
+            report.findings.extend(check_question_coverage(questions_by_match, rounds_by_match))
+
     return report
+
+
+def _check_comparison_pairs(priced: list[PricedQuestion]) -> list[Finding]:
+    """Check every pair of same-family comparisons within one match."""
+    findings = []
+    by_family: dict[Family, list[PricedQuestion]] = {}
+    for question in priced:
+        if question.family in COMPARISON:
+            by_family.setdefault(question.family, []).append(question)
+
+    for questions in by_family.values():
+        for i in range(len(questions)):
+            for j in range(i + 1, len(questions)):
+                finding = check_comparison_complement(questions[i], questions[j])
+                if finding is not None:
+                    findings.append(finding)
+    return findings
 
 
 # --------------------------------------------------------------------- checks

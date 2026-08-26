@@ -42,8 +42,40 @@ from .models.lanes import apply_lane
 from .models.shrink import CREDIBILITY_K, height_prior_ace_rate, shrink
 from .models.simulate import SimulationConfig, matchup_probabilities, simulate_match
 
-#: Tour-average service points won on hard court, the baseline the ratings sit on.
-TOUR_BASE = {"ATP": 0.645, "WTA": 0.585}
+#: Baseline service points won that the opponent-adjusted ratings deviate from.
+#: These must be the *fitted* baselines from the ratings run, not the literature
+#: values: serve_skill and return_skill are deviations from whatever base the fit
+#: produced, so pairing them with a different number shifts every matchup.
+#: Fitted 2026-08-27: ATP 0.6321, WTA 0.5691.
+TOUR_BASE = {"ATP": 0.6321, "WTA": 0.5691}
+
+
+#: Comparators that ask about the *lower* side of a threshold.  The models all
+#: compute "greater than", so these require the complement.
+_BELOW_COMPARATORS = frozenset({"lt", "lte"})
+
+#: Families whose answer is a threshold on a quantity, and therefore sensitive to
+#: which side of the threshold the question asks about.
+_THRESHOLD_SENSITIVE = frozenset({Family.MATCH_DURATION, Family.SET_GAMES, Family.UNFORCED_ERRORS})
+
+
+def apply_comparator(probability: float, spec: MarketSpec) -> tuple[float, bool]:
+    """Orient a "greater than" probability to the direction the question asks.
+
+    Every threshold model here computes ``P(X > threshold)``.  A question phrased
+    "will the match finish in under 150 minutes" wants the complement, and
+    submitting the uncomplemented number turns a correct 27 into a 73.  That is
+    the single most expensive routing error available: it is a full inversion, it
+    looks entirely plausible, and nothing downstream can detect it.
+
+    Returns the oriented probability and whether it was flipped.
+    """
+    if spec.family not in _THRESHOLD_SENSITIVE:
+        return probability, False
+    if spec.comparator in _BELOW_COMPARATORS:
+        return 1.0 - probability, True
+    return probability, False
+
 
 #: Market weight by how much we trust the market for that family.  Structural
 #: questions have a liquid market and a documented history of market consensus
@@ -403,7 +435,22 @@ class Pricer:
         context,
         confidence: float = 0.3,
     ) -> PricedQuestion:
-        """Apply the confidence pull and the lane, and produce the integer."""
+        """Apply the comparator, the confidence pull and the lane, then round.
+
+        Comparator orientation happens here, at the single point every route
+        passes through, so no future branch can forget it.
+        """
+        probability, flipped = apply_comparator(probability, spec)
+        if flipped:
+            # Complement the reference values too, or the collar check and the
+            # recorded provenance would describe the opposite question.
+            base = 1.0 - base
+            if model is not None:
+                model = 1.0 - model
+            if market is not None:
+                market = 1.0 - market
+            notes.append(f"complemented for comparator {spec.comparator!r}")
+
         # Low confidence pulls the answer toward the base rate. The system should
         # get less opinionated as it gets less informed.
         pull = 1.0 - min(max(confidence, 0.0), 1.0)

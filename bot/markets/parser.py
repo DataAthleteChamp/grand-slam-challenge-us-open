@@ -61,7 +61,18 @@ class MarketSpec:
 _NUMBER = r"(\d+(?:\.\d+)?)"
 
 # Ordered most-specific first; the first match wins.
+#
+# Duration is tested before the score families on purpose, and the score pattern
+# now requires a hyphen with digit boundaries. The earlier ``6-?0|6-?1|6-?2``
+# made the hyphen optional, so "60" inside "160 minutes" matched and every
+# duration question with a 6 in the tens place was silently routed to the
+# lopsided-set family and priced by the wrong model.
 _RULES: list[tuple[Family, re.Pattern[str], float]] = [
+    (
+        Family.MATCH_DURATION,
+        re.compile(r"\bminutes?\b|\bhours?\b|\blast longer\b|\bduration\b", re.I),
+        0.9,
+    ),
     (Family.TIEBREAK, re.compile(r"\btie[\s-]?break", re.I), 0.95),
     (
         Family.DECIDING_SET,
@@ -70,15 +81,10 @@ _RULES: list[tuple[Family, re.Pattern[str], float]] = [
     ),
     (
         Family.LOPSIDED_SET,
-        re.compile(r"\blopsided\b|6-?0|6-?1|6-?2|\bbagel\b|\bbreadstick\b", re.I),
+        re.compile(r"\blopsided\b|\bbagel\b|\bbreadstick\b|(?<!\d)6-[012](?!\d)", re.I),
         0.9,
     ),
     (Family.SET_GAMES, re.compile(r"\bset\b.*\bgames?\b|\bgames?\b.*\bset\b", re.I), 0.8),
-    (
-        Family.MATCH_DURATION,
-        re.compile(r"\bminutes?\b|\bhours?\b|\blast longer\b|\bduration\b", re.I),
-        0.9,
-    ),
     (Family.ACES_COMPARISON, re.compile(r"\baces?\b", re.I), 0.9),
     (Family.DOUBLE_FAULTS_COMPARISON, re.compile(r"\bdouble[\s-]?faults?\b", re.I), 0.95),
     (Family.WINNERS_COMPARISON, re.compile(r"\bwinners?\b", re.I), 0.75),

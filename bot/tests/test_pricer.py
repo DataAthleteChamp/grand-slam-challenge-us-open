@@ -364,3 +364,75 @@ def test_baseline_tripwire_quiet_on_a_healthy_batch():
 
     batch = [_q(f"m{i}", 50 + (15 if i % 2 else -15), base=0.50) for i in range(40)]
     assert check_baseline_tripwire(batch) == []
+
+
+# ------------------------------------------------- regressions from review
+
+
+def test_duration_questions_are_not_parsed_as_lopsided_sets():
+    """Regression: ``6-?0`` made the hyphen optional, so "60" inside "160
+    minutes" matched and every duration question with a 6 in the tens place was
+    silently routed to the lopsided-set family and priced by the wrong model."""
+    for minutes in (60, 160, 260, 161, 162):
+        spec = parse_question(f"Will the match last more than {minutes} minutes?")
+        assert spec.family is Family.MATCH_DURATION, minutes
+
+
+def test_real_score_patterns_still_parse_as_lopsided():
+    for text in ("Will a set end 6-0, 6-1 or 6-2?", "Will a set end in a lopsided score?"):
+        assert parse_question(text).family is Family.LOPSIDED_SET
+
+
+def test_over_and_under_are_complements():
+    """Regression: the comparator was parsed but never applied, so "more than
+    150 minutes" and "under 150 minutes" both returned 73. A full inversion that
+    looks entirely plausible and that nothing downstream can detect."""
+    over = _price("Will the match last more than 150 minutes?")
+    under = _price("Will the match finish in under 150 minutes?")
+    assert over.submission + under.submission == pytest.approx(100, abs=2)
+    assert over.submission != under.submission
+
+
+def test_set_games_comparator_is_applied():
+    more = _price("Will the first set contain 10 or more games?")
+    fewer = _price("Will the first set contain fewer than 10 games?")
+    assert more.submission + fewer.submission == pytest.approx(100, abs=2)
+
+
+def test_complemented_question_records_the_flip():
+    under = _price("Will the match finish in under 150 minutes?")
+    assert any("complemented" in note for note in under.notes)
+
+
+def test_tour_baselines_match_the_fitted_ratings():
+    """The ratings are deviations from the fitted baseline, so pairing them with
+    the literature value shifts every matchup."""
+    from bot.pricer import TOUR_BASE
+
+    assert TOUR_BASE["ATP"] == pytest.approx(0.6321, abs=0.001)
+    assert TOUR_BASE["WTA"] == pytest.approx(0.5691, abs=0.001)
+
+
+def test_validate_batch_runs_the_per_match_checks():
+    """Regression: coherence, coverage and complement checks existed but were
+    called only by tests. A check that is never invoked is worse than none -
+    it creates the appearance of coverage while catching nothing."""
+    inverted = [
+        _q("m1", 90, family=Family.ACES_COMPARISON),
+        _q("m2", 90, family=Family.ACES_COMPARISON),
+    ]
+    padding = [_q(f"p{i}", 40 + (i * 7) % 40) for i in range(30)]
+    report = validate_batch(padding + inverted, questions_by_match={"match1": inverted})
+    assert report.blocked
+    assert any(f.check == "comparison_orientation" for f in report.blocks)
+
+
+def test_validate_batch_runs_coverage_when_rounds_are_supplied():
+    short = [_q(f"m{i}", 45 + i) for i in range(6)]
+    padding = [_q(f"p{i}", 40 + (i * 7) % 40) for i in range(30)]
+    report = validate_batch(
+        padding + short,
+        questions_by_match={"match1": short},
+        rounds_by_match={"match1": "R32"},
+    )
+    assert any(f.check == "question_coverage" for f in report.blocks)

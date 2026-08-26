@@ -45,12 +45,15 @@ def main() -> int:
     print(_row("WTA lopsided set", wta.p_any_lopsided_set, measured.lopsided_set))
     print(_row("WTA set1 >=10 games", wta.p_first_set_10plus_games, measured.first_set_10plus))
 
-    print("\nCount comparisons, identical players (strict '>')")
-    for stat, values in COUNT_STATS.items():
-        mu = values["mean_per_player"]
-        comparison = skellam_comparison(mu, mu)
-        print(_row(f"{stat} P(A>B)", comparison.resolve("no"), values["even_p_a_greater"]))
-        print(_row(f"{stat} P(tie)", comparison.p_tie, values["p_tie"]))
+    print("\nCount comparisons, identical players (strict '>'), by tour")
+    for tour, stats in COUNT_STATS.items():
+        for stat, values in stats.items():
+            mu = values["mean_per_player"]
+            comparison = skellam_comparison(mu, mu)
+            print(
+                _row(f"{tour} {stat} P(A>B)", comparison.resolve("no"), values["even_p_a_greater"])
+            )
+            print(_row(f"{tour} {stat} P(tie)", comparison.p_tie, values["p_tie"]))
 
     print(
         "\nKnown bias: the iid model under-produces lopsided sets and over-produces\n"
