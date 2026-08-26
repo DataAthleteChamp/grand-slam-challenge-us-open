@@ -30,6 +30,7 @@ from bot.data.players import (  # noqa: E402
     build_player_matches,
     opponent_graph,
     summarise_players,
+    validate,
     with_recency,
 )
 from bot.models.duration import player_pace  # noqa: E402
@@ -92,14 +93,18 @@ def _fill_player_attributes(long: pd.DataFrame) -> pd.DataFrame:
 def build_tour(tour: str, years: list[int], *, refresh: bool, surface: str) -> dict[str, int]:
     """Build every artefact for one tour and return a small summary."""
     print(f"\n=== {tour.upper()} — downloading {len(years)} years ===")
-    matches = load_matches(tour, years, refresh=refresh)
+    matches = load_matches(tour, years, refresh=refresh, levels=("tour", "challenger", "quali"))
     if matches.empty:
         print(f"  no data available for {tour}")
         return {}
-    print(f"  {len(matches):,} matches")
+    latest = int(matches["tourney_date"].max())
+    print(f"  {len(matches):,} matches, latest {latest}")
 
     long = with_recency(build_player_matches(matches))
-    print(f"  {len(long):,} player-match rows")
+    long, violations = validate(long)
+    print(f"  {len(long):,} player-match rows after validation")
+    if violations:
+        print(f"    dropped rows failing arithmetic checks: {violations}")
 
     # Reference data: height and handedness matter far more than they look.
     # Height explains about 83% of the variance in men's ace rate, and it is

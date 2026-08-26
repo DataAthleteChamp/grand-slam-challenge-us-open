@@ -40,10 +40,24 @@ def _match(winner, loser, *, w_ace=8, l_ace=4, w_svpt=80, l_svpt=80, date=202601
         "loser_ht": 185,
         "loser_age": 27.0,
         "loser_rank": 50,
-        "w_ace": w_ace, "w_df": 3, "w_svpt": w_svpt, "w_1stIn": 50, "w_1stWon": 38,
-        "w_2ndWon": 15, "w_SvGms": 12, "w_bpSaved": 3, "w_bpFaced": 5,
-        "l_ace": l_ace, "l_df": 4, "l_svpt": l_svpt, "l_1stIn": 48, "l_1stWon": 33,
-        "l_2ndWon": 12, "l_SvGms": 12, "l_bpSaved": 2, "l_bpFaced": 6,
+        "w_ace": w_ace,
+        "w_df": 3,
+        "w_svpt": w_svpt,
+        "w_1stIn": 50,
+        "w_1stWon": 38,
+        "w_2ndWon": 15,
+        "w_SvGms": 12,
+        "w_bpSaved": 3,
+        "w_bpFaced": 5,
+        "l_ace": l_ace,
+        "l_df": 4,
+        "l_svpt": l_svpt,
+        "l_1stIn": 48,
+        "l_1stWon": 33,
+        "l_2ndWon": 12,
+        "l_SvGms": 12,
+        "l_bpSaved": 2,
+        "l_bpFaced": 6,
     }
 
 
@@ -189,9 +203,7 @@ def test_fit_converges_and_reports_residual():
 def test_sparse_players_are_shrunk_toward_the_baseline():
     """A player with one match must not be rated as confidently as a regular."""
     frame = _synthetic_tour(n_players=8, n_matches=400)
-    extra = pd.DataFrame(
-        [{"player": "NEWCOMER", "opponent": "P00", "spw": 0.95, "svpt": 80}]
-    )
+    extra = pd.DataFrame([{"player": "NEWCOMER", "opponent": "P00", "spw": 0.95, "svpt": 80}])
     ratings = fit_serve_return(pd.concat([frame, extra], ignore_index=True))
     regular = max(abs(v) for k, v in ratings.serve.items() if k != "NEWCOMER")
     assert abs(ratings.serve["NEWCOMER"]) < regular * 1.5
@@ -219,3 +231,111 @@ def test_as_frame_is_sorted_by_serve_skill():
     ratings = fit_serve_return(_synthetic_tour())
     frame = ratings.as_frame()
     assert list(frame["serve_skill"]) == sorted(frame["serve_skill"], reverse=True)
+
+
+# ------------------------------------------------------- source level handling
+
+
+def test_challenger_and_quali_files_are_men_only():
+    """Regression: the Challenger and qualifying files contain men's matches only.
+
+    Requesting them for the WTA previously returned the ATP file, which put
+    Cressy, Halys and Eubanks at the top of the women's serve ratings. Silent
+    cross-tour contamination is exactly the failure that face-validity checks
+    exist to catch.
+    """
+    from bot.data.ingest import _tml_stem
+
+    assert _tml_stem("atp", 2026, level="challenger") == "2026_challenger"
+    assert _tml_stem("atp", 2026, level="quali") == "atp_quali/2026_atp_quali"
+    assert _tml_stem("wta", 2026, level="challenger") is None
+    assert _tml_stem("wta", 2026, level="quali") is None
+
+
+def test_tour_level_stems_differ_by_tour():
+    from bot.data.ingest import _tml_stem
+
+    assert _tml_stem("atp", 2026) == "2026"
+    assert _tml_stem("wta", 2026) == "2026_wta"
+
+
+def test_unknown_level_is_rejected():
+    from bot.data.ingest import _tml_stem
+
+    with pytest.raises(ValueError):
+        _tml_stem("atp", 2026, level="nonsense")
+
+
+# ------------------------------------------------------------------ validation
+
+
+def test_validation_drops_arithmetically_impossible_rows():
+    """Rules encode facts about tennis, not guesses about the data."""
+    from bot.data.players import validate
+
+    frame = pd.DataFrame(
+        [
+            {
+                "svpt": 80,
+                "1stIn": 50,
+                "1stWon": 40,
+                "2ndWon": 20,
+                "ace": 8,
+                "df": 3,
+                "bpSaved": 3,
+                "bpFaced": 5,
+                "SvGms": 12,
+            },
+            # First serves in exceed total service points: impossible.
+            {
+                "svpt": 60,
+                "1stIn": 70,
+                "1stWon": 40,
+                "2ndWon": 10,
+                "ace": 5,
+                "df": 2,
+                "bpSaved": 1,
+                "bpFaced": 3,
+                "SvGms": 10,
+            },
+            # More break points saved than faced: impossible.
+            {
+                "svpt": 70,
+                "1stIn": 45,
+                "1stWon": 35,
+                "2ndWon": 15,
+                "ace": 6,
+                "df": 2,
+                "bpSaved": 9,
+                "bpFaced": 4,
+                "SvGms": 11,
+            },
+        ]
+    )
+    kept, violations = validate(frame)
+    assert len(kept) == 1
+    assert "first_serves_exceed_service_points" in violations
+    assert "break_points_saved_exceed_faced" in violations
+
+
+def test_validation_can_report_without_dropping():
+    from bot.data.players import validate
+
+    frame = pd.DataFrame(
+        [
+            {
+                "svpt": 60,
+                "1stIn": 70,
+                "1stWon": 40,
+                "2ndWon": 10,
+                "ace": 5,
+                "df": 2,
+                "bpSaved": 1,
+                "bpFaced": 3,
+                "SvGms": 10,
+            }
+        ]
+    )
+    kept, violations = validate(frame, drop=False)
+    assert len(kept) == 1
+    assert violations

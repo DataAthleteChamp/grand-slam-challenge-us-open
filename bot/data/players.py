@@ -16,11 +16,27 @@ import pandas as pd
 
 #: Serve columns in the source schema, prefixed ``w_``/``l_`` for winner/loser.
 _SERVE_COLUMNS = (
-    "ace", "df", "svpt", "1stIn", "1stWon", "2ndWon", "SvGms", "bpSaved", "bpFaced",
+    "ace",
+    "df",
+    "svpt",
+    "1stIn",
+    "1stWon",
+    "2ndWon",
+    "SvGms",
+    "bpSaved",
+    "bpFaced",
 )
 
 _ROUND_ORDER = {
-    "R128": 1, "R64": 2, "R32": 3, "R16": 4, "QF": 5, "SF": 6, "F": 7, "RR": 3, "BR": 6,
+    "R128": 1,
+    "R64": 2,
+    "R32": 3,
+    "R16": 4,
+    "QF": 5,
+    "SF": 6,
+    "F": 7,
+    "RR": 3,
+    "BR": 6,
 }
 
 
@@ -66,14 +82,27 @@ def build_player_matches(matches: pd.DataFrame) -> pd.DataFrame:
         frames.append(frame)
 
     long = pd.concat(frames, ignore_index=True)
-    long["date"] = pd.to_datetime(long["tourney_date"].astype("Int64").astype(str),
-                                  format="%Y%m%d", errors="coerce")
+    long["date"] = pd.to_datetime(
+        long["tourney_date"].astype("Int64").astype(str), format="%Y%m%d", errors="coerce"
+    )
     long["round_order"] = long["round"].map(_ROUND_ORDER)
     return _add_rates(long)
 
 
 def _add_rates(long: pd.DataFrame) -> pd.DataFrame:
-    """Attach per-point rates.  Rates, not counts — counts scale with match length."""
+    """Attach per-point rates.  Rates, not counts — counts scale with match length.
+
+    Numeric columns are coerced explicitly.  Combining several sources means some
+    arrive with stray strings or empty fields in otherwise numeric columns, and
+    an uncoerced column propagates a type error deep into the pipeline where it
+    is hard to attribute.
+    """
+    numeric_columns = list(_SERVE_COLUMNS) + [f"opp_{c}" for c in _SERVE_COLUMNS]
+    numeric_columns += ["minutes", "player_ht", "opponent_ht", "player_rank", "opponent_rank"]
+    for column in numeric_columns:
+        if column in long.columns:
+            long[column] = pd.to_numeric(long[column], errors="coerce")
+
     svpt = long["svpt"].replace(0, np.nan)
     long["ace_rate"] = long["ace"] / svpt
     long["df_rate"] = long["df"] / svpt
@@ -87,6 +116,47 @@ def _add_rates(long: pd.DataFrame) -> pd.DataFrame:
     long["rpw"] = 1.0 - (long["opp_1stWon"] + long["opp_2ndWon"]) / opp_svpt
     long["opp_ace_rate"] = long["opp_ace"] / opp_svpt
     return long
+
+
+#: Rows failing these are impossible, not merely unusual, and are dropped.
+_VALIDATION_RULES = {
+    "first_serves_exceed_service_points": lambda d: d["1stIn"] > d["svpt"],
+    "first_serve_wins_exceed_first_serves": lambda d: d["1stWon"] > d["1stIn"],
+    "second_serve_wins_exceed_attempts": lambda d: d["2ndWon"] > (d["svpt"] - d["1stIn"]),
+    "aces_exceed_service_points": lambda d: d["ace"] > d["svpt"],
+    "double_faults_exceed_second_serves": lambda d: d["df"] > (d["svpt"] - d["1stIn"]),
+    "break_points_saved_exceed_faced": lambda d: d["bpSaved"] > d["bpFaced"],
+    "implausible_ace_rate": lambda d: (d["ace"] / d["svpt"].replace(0, np.nan)) > 0.40,
+    "negative_counts": lambda d: (d[list(_SERVE_COLUMNS)] < 0).any(axis=1),
+}
+
+
+def validate(long: pd.DataFrame, *, drop: bool = True) -> tuple[pd.DataFrame, dict[str, int]]:
+    """Check rows against arithmetic identities that cannot legitimately fail.
+
+    Every rule encodes a fact about tennis rather than a guess about the data: a
+    player cannot land more first serves than they hit service points, nor save
+    more break points than they faced.  A row breaking one is corrupt, and
+    keeping it silently poisons the rate it feeds.
+
+    Returns the (optionally filtered) frame and a count of violations per rule so
+    that a source degrading over time is visible rather than absorbed.
+    """
+    scored = long[long["svpt"].notna() & (long["svpt"] > 0)]
+    violations: dict[str, int] = {}
+    bad = pd.Series(False, index=long.index)
+
+    for name, rule in _VALIDATION_RULES.items():
+        try:
+            failed = rule(scored).fillna(False)
+        except (KeyError, TypeError):
+            continue
+        count = int(failed.sum())
+        if count:
+            violations[name] = count
+        bad.loc[failed[failed].index] = True
+
+    return (long[~bad] if drop else long), violations
 
 
 def with_recency(long: pd.DataFrame) -> pd.DataFrame:
@@ -155,8 +225,9 @@ def summarise_players(
 
     # Return points won has to be computed from the opponent side of each row.
     returns = frame.groupby("player").apply(
-        lambda g: 1.0
-        - (g["opp_1stWon"].sum() + g["opp_2ndWon"].sum()) / max(g["opp_svpt"].sum(), 1),
+        lambda g: (
+            1.0 - (g["opp_1stWon"].sum() + g["opp_2ndWon"].sum()) / max(g["opp_svpt"].sum(), 1)
+        ),
         include_groups=False,
     )
     summary["rpw"] = summary["player"].map(returns)
