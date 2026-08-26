@@ -1,173 +1,230 @@
-"""Tests for the market question parser and the API client contract."""
+"""Tests for market quotes and derived probabilities."""
 
 from __future__ import annotations
 
 import pytest
 
-from bot.markets.parser import MarketSpec, parse_question, reset_unparsed, unparsed_report
-from bot.markets.taxonomy import Family
-from bot.sportspredict.api import _validate_probability
-from bot.sportspredict.config import Config, ConfigError, RateLimiter, retry_delay
-
-PLAYERS = ("A. Sabalenka", "I. Swiatek")
-
-
-@pytest.fixture(autouse=True)
-def _clear_unparsed():
-    reset_unparsed()
-    yield
-    reset_unparsed()
-
-
-@pytest.mark.parametrize(
-    ("text", "family"),
-    [
-        ("Will the match include a tiebreak?", Family.TIEBREAK),
-        ("Will the match need a deciding set?", Family.DECIDING_SET),
-        ("Will the match go the distance?", Family.DECIDING_SET),
-        ("Will a set end in a lopsided score?", Family.LOPSIDED_SET),
-        ("Will any set finish 6-0, 6-1 or 6-2?", Family.LOPSIDED_SET),
-        ("Will the first set contain 10 or more games?", Family.SET_GAMES),
-        ("Will the match last more than 150 minutes?", Family.MATCH_DURATION),
-        ("Will one player serve more aces than the other?", Family.ACES_COMPARISON),
-        ("Will one player double fault more than the other?", Family.DOUBLE_FAULTS_COMPARISON),
-        ("Will one player out-hit the other in winners?", Family.WINNERS_COMPARISON),
-        ("Will one player dominate points on first serve?", Family.FIRST_SERVE_COMPARISON),
-        ("Will a player rack up excessive unforced errors?", Family.UNFORCED_ERRORS),
-    ],
+from bot.data.markets import (
+    DEBIAS_EXPONENT,
+    MIN_TRUSTWORTHY_PRICE,
+    Quote,
+    debias,
+    kalshi_quote,
 )
-def test_published_question_archetypes_are_classified(text, family):
-    """Every archetype published before the event must parse."""
-    assert parse_question(text, players=PLAYERS).family is family
-
-
-def test_double_fault_beats_the_generic_fault_rule():
-    spec = parse_question("Will Sabalenka hit more double faults than Swiatek?", players=PLAYERS)
-    assert spec.family is Family.DOUBLE_FAULTS_COMPARISON
-
-
-def test_unforced_errors_beat_the_generic_winners_rule():
-    spec = parse_question("Will Swiatek hit more unforced errors than winners?", players=PLAYERS)
-    assert spec.family is Family.UNFORCED_ERRORS
-
-
-def test_parser_never_raises_on_garbage():
-    for text in ("", "   ", "???", "Will the sky be blue?", None):
-        spec = parse_question(text)  # type: ignore[arg-type]
-        assert isinstance(spec, MarketSpec)
-
-
-def test_unknown_question_degrades_to_other_and_is_recorded():
-    spec = parse_question("Will the roof be closed for this match?")
-    assert spec.family is Family.OTHER
-    assert spec.confidence == 0.0
-    assert not spec.is_understood
-    assert "Will the roof be closed for this match?" in unparsed_report()
-
-
-def test_unparsed_report_deduplicates():
-    parse_question("Totally novel question type")
-    parse_question("Totally novel question type")
-    assert unparsed_report().count("Totally novel question type") == 1
-
-
-@pytest.mark.parametrize(
-    ("text", "threshold", "comparator"),
-    [
-        ("Will the first set contain 10 or more games?", 10.0, "gte"),
-        ("Will the match last more than 150 minutes?", 150.0, "gt"),
-        ("Will there be at least 22 games?", 22.0, "gte"),
-        ("Will the match finish in under 90 minutes?", 90.0, "lt"),
-        ("Will a player hit exactly 30 unforced errors?", 30.0, "eq"),
-    ],
+from bot.models.derive import (
+    StrikeLadder,
+    blend,
+    deciding_set_probability,
+    duration_probability,
+    enforce_monotone,
+    long_set_probability,
+    parse_ladders,
+    tiebreak_probability,
 )
-def test_threshold_extraction(text, threshold, comparator):
-    spec = parse_question(text)
-    assert spec.threshold == threshold
-    assert spec.comparator == comparator
 
 
-def test_set_number_extraction():
-    assert parse_question("Will the first set contain 10 or more games?").set_number == 1
-    assert parse_question("Will the third set go to a tiebreak?").set_number == 3
-    assert parse_question("Will the match include a tiebreak?").set_number is None
+def _quote(**overrides) -> Quote:
+    base = {
+        "venue": "polymarket",
+        "market_id": "m1",
+        "question": "Will the match go to a deciding set?",
+        "best_bid": 0.40,
+        "best_ask": 0.42,
+        "last_trade": 0.41,
+        "volume": 50_000.0,
+        "accepting_orders": True,
+        "closed": False,
+    }
+    base.update(overrides)
+    return Quote(**base)
 
 
-def test_subject_is_the_player_named_first():
-    spec = parse_question("Will Swiatek serve more aces than Sabalenka?", players=PLAYERS)
-    assert spec.subject == "I. Swiatek"
-    assert spec.opponent == "A. Sabalenka"
+# --------------------------------------------------------------------- quotes
 
 
-def test_comparison_without_identifiable_subject_loses_confidence():
-    spec = parse_question("Will one player serve more aces than the other?", players=PLAYERS)
-    assert spec.subject is None
-    assert spec.confidence <= 0.4
-    assert any("subject" in note for note in spec.notes)
+def test_mid_price_is_the_average_of_the_book():
+    assert _quote().mid == pytest.approx(0.41)
 
 
-def test_missing_threshold_is_flagged_not_guessed():
-    spec = parse_question("Will a player rack up excessive unforced errors?")
-    assert spec.family is Family.UNFORCED_ERRORS
-    assert any("threshold" in note for note in spec.notes)
+def test_one_sided_book_falls_back_to_the_available_side():
+    assert _quote(best_bid=None).mid == pytest.approx(0.42)
 
 
-def test_spec_serialises_for_the_ledger():
-    payload = parse_question("Will the match include a tiebreak?").as_dict()
-    assert payload["family"] == "tiebreak"
-    assert "raw" in payload
+def test_healthy_quote_is_trustworthy():
+    assert _quote().is_trustworthy
 
 
-# ------------------------------------------------------------------- API layer
+def test_settled_market_with_stale_last_trade_is_rejected():
+    """The load-bearing case.
+
+    An eliminated player's market kept a last trade of 0.73 while the best ask
+    had fallen to 0.001. Anything keying off last-trade would have priced him a
+    co-favourite.
+    """
+    stale = _quote(
+        best_bid=None,
+        best_ask=0.001,
+        last_trade=0.730,
+        accepting_orders=False,
+        closed=True,
+    )
+    assert stale.is_stale
+    assert not stale.is_trustworthy
 
 
-@pytest.mark.parametrize("value", [1, 50, 99])
-def test_valid_probabilities_accepted(value):
-    _validate_probability(value)
+def test_crossed_book_is_detected():
+    assert _quote(best_bid=0.60, best_ask=0.55).is_crossed
 
 
-@pytest.mark.parametrize("value", [0, 100, -1, 3.5, "70", True, None])
-def test_invalid_probabilities_rejected(value):
-    """The API rejects 0 and 100; booleans and floats must not slip through."""
-    with pytest.raises(ValueError):
-        _validate_probability(value)
+def test_last_trade_far_from_mid_is_stale():
+    assert _quote(best_bid=0.40, best_ask=0.42, last_trade=0.90).is_stale
 
 
-def test_config_requires_a_key():
-    with pytest.raises(ConfigError):
-        Config.from_env(env_file="/nonexistent/.env", require_api_key=True)
+def test_extreme_prices_are_not_trusted():
+    """A one-cent spread on a two-cent mid means the fair value is anywhere
+    between one and three cents."""
+    assert not _quote(best_bid=0.01, best_ask=0.02, last_trade=0.015).is_trustworthy
+    assert MIN_TRUSTWORTHY_PRICE > 0.0
 
 
-def test_config_can_be_built_without_a_key_for_dry_runs():
-    config = Config.from_env(env_file="/nonexistent/.env", require_api_key=False)
-    assert config.api_key == ""
-    assert config.base_url.endswith("/api/v1")
+def test_debias_pushes_away_from_the_centre():
+    """Markets overprice longshots and slightly underprice heavy favourites."""
+    assert debias(0.10) < 0.10
+    assert debias(0.90) > 0.90
+    assert debias(0.50) == pytest.approx(0.50)
+    assert DEBIAS_EXPONENT > 1.0
 
 
-def test_lane_selects_a_distinct_key_variable(monkeypatch):
-    monkeypatch.setenv("SPORTSPREDICT_API_KEY", "sp_live_honest")
-    monkeypatch.setenv("SPORTSPREDICT_API_KEY_SCENARIO", "sp_live_scenario")
-    honest = Config.from_env(env_file="/nonexistent/.env", lane="honest")
-    scenario = Config.from_env(env_file="/nonexistent/.env", lane="scenario")
-    assert honest.api_key != scenario.api_key
-    assert scenario.lane == "scenario"
+def test_kalshi_prices_are_converted_from_cents():
+    quote = kalshi_quote(
+        {
+            "ticker": "KXATP-26USO-ALC",
+            "title": "Alcaraz",
+            "yes_bid": 26,
+            "yes_ask": 28,
+            "last_price": 27,
+            "volume": 1000,
+            "status": "active",
+        }
+    )
+    assert quote.mid == pytest.approx(0.27)
+    assert quote.venue == "kalshi"
+    assert not quote.closed
 
 
-def test_retry_delay_honours_retry_after_header():
-    assert retry_delay(0, retry_after="7") == 7.0
+def test_settled_kalshi_market_is_marked_closed():
+    quote = kalshi_quote({"ticker": "X", "status": "settled", "yes_bid": 0, "yes_ask": 1})
+    assert quote.closed
+    assert quote.is_stale
 
 
-def test_retry_delay_is_jittered_within_bounds():
-    delays = {retry_delay(3) for _ in range(50)}
-    assert all(0.0 <= d <= 8.0 for d in delays)
-    assert len(delays) > 1, "jitter must vary between calls"
+# -------------------------------------------------------------------- ladders
 
 
-def test_rate_limiter_paces_requests():
-    import time
+def test_parse_ladders_groups_by_quantity():
+    ladders = parse_ladders(
+        {
+            "Alcaraz vs Sinner: Set 1 Games O/U 8.5": 0.62,
+            "Alcaraz vs Sinner: Set 1 Games O/U 9.5": 0.45,
+            "Alcaraz vs Sinner: Set 1 Games O/U 10.5": 0.30,
+            "Alcaraz vs Sinner: Match O/U 21.5": 0.70,
+            "Alcaraz vs Sinner: Match O/U 22.5": 0.58,
+            "Alcaraz vs Sinner: Total Sets O/U 2.5": 0.48,
+        }
+    )
+    assert set(ladders) == {"set_1_games", "match_games", "total_sets"}
+    assert ladders["set_1_games"].strikes == (8.5, 9.5, 10.5)
 
-    limiter = RateLimiter(min_interval_seconds=0.05)
-    start = time.monotonic()
-    for _ in range(3):
-        limiter.wait()
-    assert time.monotonic() - start >= 0.09
+
+def test_survival_must_decrease_with_strike():
+    """A rising survival curve implies negative probability mass — an arbitrage."""
+    assert enforce_monotone((0.6, 0.7, 0.3)) == pytest.approx((0.65, 0.65, 0.3))
+
+
+def test_monotone_repair_leaves_valid_ladders_untouched():
+    assert enforce_monotone((0.7, 0.5, 0.3)) == (0.7, 0.5, 0.3)
+
+
+def test_mass_between_strikes_is_a_first_difference():
+    """Digital quotes are already the first derivative of a call, so one
+    differencing gives the density — not the Breeden-Litzenberger second."""
+    ladder = StrikeLadder("set_1_games", (8.5, 9.5, 10.5), (0.62, 0.45, 0.30))
+    mass = ladder.mass_between()
+    assert mass[(8.5, 9.5)] == pytest.approx(0.17)
+    assert mass[(9.5, 10.5)] == pytest.approx(0.15)
+
+
+def test_expected_value_sits_inside_the_strike_range():
+    ladder = StrikeLadder("match_games", (21.5, 22.5, 23.5), (0.70, 0.58, 0.44))
+    assert 19.0 < ladder.expected_value() < 28.0
+
+
+# ------------------------------------------------------------------ derivation
+
+
+def test_deciding_set_is_a_direct_read_in_best_of_three():
+    ladders = {"total_sets": StrikeLadder("total_sets", (2.5,), (0.48,))}
+    assert deciding_set_probability(ladders, best_of=3) == pytest.approx(0.48)
+
+
+def test_deciding_set_uses_a_different_strike_in_best_of_five():
+    ladders = {"total_sets": StrikeLadder("total_sets", (2.5, 4.5), (0.90, 0.22))}
+    assert deciding_set_probability(ladders, best_of=5) == pytest.approx(0.22)
+
+
+def test_long_set_is_a_direct_read_of_the_nine_and_a_half_strike():
+    """'Will the set contain 10 or more games' is literally the Over 9.5 price."""
+    ladders = {"set_1_games": StrikeLadder("set_1_games", (8.5, 9.5, 10.5), (0.62, 0.45, 0.30))}
+    assert long_set_probability(ladders) == pytest.approx(0.45)
+
+
+def test_missing_market_returns_none_rather_than_a_guess():
+    assert long_set_probability({}) is None
+    assert deciding_set_probability({}) is None
+    assert tiebreak_probability({}, base_rate=0.5) is None
+
+
+def test_tiebreak_rises_with_expected_match_length():
+    short = {"match_games": StrikeLadder("match_games", (21.5, 22.5), (0.30, 0.18))}
+    long_match = {"match_games": StrikeLadder("match_games", (21.5, 22.5), (0.85, 0.75))}
+    p_short = tiebreak_probability(short, base_rate=0.27, best_of=3)
+    p_long = tiebreak_probability(long_match, base_rate=0.27, best_of=3)
+    assert p_long > p_short
+
+
+def test_tiebreak_stays_within_sane_bounds():
+    extreme = {"match_games": StrikeLadder("match_games", (21.5, 22.5), (0.99, 0.99))}
+    assert 0.0 < tiebreak_probability(extreme, base_rate=0.27) <= 0.95
+
+
+def test_duration_derived_from_the_games_market():
+    ladders = {"match_games": StrikeLadder("match_games", (21.5, 22.5, 23.5), (0.7, 0.58, 0.44))}
+    low = duration_probability(ladders, 80, tour="ATP", best_of=3)
+    high = duration_probability(ladders, 200, tour="ATP", best_of=3)
+    assert low is not None and high is not None
+    assert low > high
+
+
+def test_slow_players_raise_the_duration_probability():
+    ladders = {"match_games": StrikeLadder("match_games", (21.5, 22.5), (0.7, 0.58))}
+    neutral = duration_probability(ladders, 120, pace_a=0, pace_b=0)
+    slow = duration_probability(ladders, 120, pace_a=18, pace_b=15)
+    assert slow > neutral
+
+
+# ----------------------------------------------------------------------- blend
+
+
+def test_blend_defaults_toward_the_market():
+    """Two top-three finishers in the predecessor event independently found the
+    market consensus carried the score and the alpha layer cost points."""
+    assert blend(0.30, 0.70) > 0.5
+
+
+def test_blend_returns_the_model_when_no_market_exists():
+    assert blend(0.42, None) == pytest.approx(0.42)
+
+
+def test_blend_respects_the_weight():
+    assert blend(0.30, 0.70, market_weight=0.0) == pytest.approx(0.30, abs=1e-6)
+    assert blend(0.30, 0.70, market_weight=1.0) == pytest.approx(0.70, abs=1e-6)
