@@ -24,7 +24,7 @@ from collections import Counter
 from dataclasses import dataclass, field
 from enum import StrEnum
 
-from .markets.taxonomy import COMPARISON, Family
+from .markets.taxonomy import COMPARISON, QUESTIONS_PER_MATCH, Family
 from .pricer import PricedQuestion
 
 
@@ -384,6 +384,115 @@ def check_match_coherence(priced: list[PricedQuestion]) -> list[Finding]:
             )
         )
 
+    return findings
+
+
+def check_question_coverage(
+    questions_by_match: dict[str, list[PricedQuestion]],
+    rounds_by_match: dict[str, str],
+) -> list[Finding]:
+    """Verify every match produced the number of questions its round should carry.
+
+    A question that is silently dropped during parsing is never submitted, and an
+    unanswered question is the worst possible outcome — strictly worse than a
+    mediocre guess, because there is no crowd comparison to earn from.  The
+    expected counts already exist in the taxonomy; nothing was checking against
+    them.
+    """
+    findings = []
+    for match_id, priced in questions_by_match.items():
+        round_code = rounds_by_match.get(match_id, "R128")
+        expected = QUESTIONS_PER_MATCH.get(round_code, 5)
+        if len(priced) < expected:
+            findings.append(
+                Finding(
+                    "question_coverage",
+                    Severity.BLOCK,
+                    f"match {match_id} ({round_code}) produced {len(priced)} questions, "
+                    f"expected {expected}; some were dropped before pricing",
+                    (match_id,),
+                )
+            )
+    return findings
+
+
+def check_orientation_consistency(
+    priced: PricedQuestion,
+    subject_rate: float | None,
+    opponent_rate: float | None,
+    *,
+    higher_is_yes: bool = True,
+) -> Finding | None:
+    """Verify a comparison points the same way as the underlying rates.
+
+    ``_orient`` returns ``(None, None)`` on a clean miss, which the pricer
+    handles.  The dangerous case is a *near* match on the wrong name, which
+    silently assigns the opponent's rates to the subject slot and inverts the
+    answer while looking entirely normal.
+
+    This compares the direction of the submission against the direction of the
+    inputs that produced it.  It warns rather than blocks, because a genuinely
+    close matchup can sit either side of even.
+    """
+    if priced.family not in COMPARISON:
+        return None
+    if subject_rate is None or opponent_rate is None:
+        return None
+    if abs(subject_rate - opponent_rate) < 1e-9:
+        return None
+
+    subject_favoured = (subject_rate > opponent_rate) == higher_is_yes
+    submission_favours_subject = priced.probability > 0.5
+    if subject_favoured != submission_favours_subject and abs(priced.probability - 0.5) > 0.05:
+        return Finding(
+            "orientation_consistency",
+            Severity.WARN,
+            f"{priced.family.value} priced at {priced.probability:.2f} but the subject's rate "
+            f"({subject_rate:.4f}) points the other way against {opponent_rate:.4f}; "
+            "check the player join",
+            (priced.market_id,),
+        )
+    return None
+
+
+def check_baseline_tripwire(priced: list[PricedQuestion]) -> list[Finding]:
+    """Compare the batch against the zero-skill baseline of always answering the base rate.
+
+    Standard forecast-evaluation practice is to run a trivial benchmark alongside
+    any real model, because a model that cannot beat the base rate has negative
+    expected value under Brier scoring and there is otherwise nothing to notice.
+
+    Two failure shapes are visible here: a batch that never moves from its base
+    rates is adding no information, and a batch that moves systematically in one
+    direction across every family suggests a sign error rather than an insight.
+    """
+    findings = []
+    deviations = [q.probability - q.base_rate for q in priced]
+    if not deviations:
+        return findings
+
+    mean_abs = sum(abs(d) for d in deviations) / len(deviations)
+    if len(priced) >= 20 and mean_abs < 0.02:
+        findings.append(
+            Finding(
+                "baseline_tripwire",
+                Severity.WARN,
+                f"submissions sit on average only {mean_abs * 100:.1f} points from their base "
+                "rates; the model may not be adding information",
+            )
+        )
+
+    mean_signed = sum(deviations) / len(deviations)
+    if len(priced) >= 30 and abs(mean_signed) > 0.12:
+        findings.append(
+            Finding(
+                "baseline_directional_bias",
+                Severity.WARN,
+                f"submissions average {mean_signed * 100:+.1f} points from base rate across "
+                "the whole batch; a one-directional shift suggests a systematic error "
+                "rather than an edge",
+            )
+        )
     return findings
 
 

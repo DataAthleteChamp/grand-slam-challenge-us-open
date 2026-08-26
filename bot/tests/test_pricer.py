@@ -287,3 +287,80 @@ def test_coherence_passes_on_a_consistent_match():
         _q("m4", 60, family=Family.LOPSIDED_SET),
     ]
     assert check_match_coherence(batch) == []
+
+
+# ------------------------------------------------- coverage / tripwire checks
+
+
+def test_missing_questions_block():
+    """A dropped question is never submitted, and an unanswered question is the
+    worst outcome available: there is no crowd comparison to earn from."""
+    from bot.validate import check_question_coverage
+
+    findings = check_question_coverage(
+        {"match1": [_q(f"m{i}", 50 + i) for i in range(7)]},
+        {"match1": "R32"},  # R32 carries 10 questions
+    )
+    assert findings and findings[0].severity is Severity.BLOCK
+    assert "7" in findings[0].message and "10" in findings[0].message
+
+
+def test_full_question_coverage_passes():
+    from bot.validate import check_question_coverage
+
+    findings = check_question_coverage(
+        {"match1": [_q(f"m{i}", 50 + i) for i in range(5)]},
+        {"match1": "R128"},  # R128 carries 5
+    )
+    assert findings == []
+
+
+def test_orientation_cross_check_flags_a_reversed_answer():
+    """_orient returning (None, None) is handled; a near-match on the wrong name
+    silently assigns the opponent's rates and inverts the answer."""
+    from bot.validate import check_orientation_consistency
+
+    priced = _q("m1", 25, family=Family.ACES_COMPARISON)
+    # Subject aces far more often, yet the submission says they are unlikely to.
+    finding = check_orientation_consistency(priced, subject_rate=0.14, opponent_rate=0.05)
+    assert finding is not None
+    assert finding.severity is Severity.WARN
+
+
+def test_orientation_cross_check_passes_when_consistent():
+    from bot.validate import check_orientation_consistency
+
+    priced = _q("m1", 72, family=Family.ACES_COMPARISON)
+    assert check_orientation_consistency(priced, subject_rate=0.14, opponent_rate=0.05) is None
+
+
+def test_orientation_cross_check_tolerates_close_matchups():
+    from bot.validate import check_orientation_consistency
+
+    priced = _q("m1", 51, family=Family.ACES_COMPARISON)
+    assert check_orientation_consistency(priced, subject_rate=0.05, opponent_rate=0.06) is None
+
+
+def test_baseline_tripwire_flags_a_model_adding_nothing():
+    """A model that cannot beat the base rate has negative expected value, and
+    nothing else in the pipeline would notice."""
+    from bot.validate import check_baseline_tripwire
+
+    batch = [_q(f"m{i}", 50, base=0.50) for i in range(30)]
+    findings = check_baseline_tripwire(batch)
+    assert any(f.check == "baseline_tripwire" for f in findings)
+
+
+def test_baseline_tripwire_flags_one_directional_bias():
+    from bot.validate import check_baseline_tripwire
+
+    batch = [_q(f"m{i}", 85, base=0.50) for i in range(40)]
+    findings = check_baseline_tripwire(batch)
+    assert any(f.check == "baseline_directional_bias" for f in findings)
+
+
+def test_baseline_tripwire_quiet_on_a_healthy_batch():
+    from bot.validate import check_baseline_tripwire
+
+    batch = [_q(f"m{i}", 50 + (15 if i % 2 else -15), base=0.50) for i in range(40)]
+    assert check_baseline_tripwire(batch) == []
