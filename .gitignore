@@ -1,0 +1,26 @@
+# secrets
+.env
+bot/.env
+*.key
+
+# python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# data (large, re-downloadable, and third-party — never redistributed)
+data/raw/
+data/processed/
+*.parquet
+*.sqlite
+*.db
+
+# local artefacts
+predictions/
+analysis/
+.DS_Store
