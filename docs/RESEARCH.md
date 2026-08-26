@@ -180,3 +180,76 @@ alone would have scored higher than their full system**, with the alpha layer co
 points net. The lesson generalises: market backbone first, alpha only where a market does
 not exist. In tennis that means Family A from Polymarket, and model effort concentrated on
 Family B where no sharp market exists at all.
+
+---
+
+## 9. Point-by-point data (the best source found)
+
+`Aneeshers/tennis-sackmann-archive/slam_pointbypoint` mirrors the deleted
+`tennis_slam_pointbypoint` repository: **every Grand Slam 2011–2024**, singles,
+doubles and mixed. Verified 233,737 points over 1,262 US Open matches for
+2019–2024 alone.
+
+65 columns, including `ElapsedTime`, `Speed_KMH`, `ServeWidth`, `ServeDepth`,
+`RallyCount`, `DistanceRun`, and per-point `Ace` / `DoubleFault` / `Winner` /
+`UnfErr` flags.
+
+**Why it matters more than anything else found:**
+
+1. **It is the settlement basis.** Winners and unforced errors come from the
+   tournament's own scorers — the feed the competition resolves against — not
+   volunteer charting. The measurement basis matches the market.
+2. **It carries timing**, so pace of play is measured directly rather than
+   inferred from a duration residual.
+3. **It carries serve speed and placement**, which nothing else free provides.
+   Measured mean first-serve speed 169.6 km/h; fastest recorded 247 km/h.
+
+### measured — seconds per point barely varies with rally length
+
+| Rally length | n | Seconds/point |
+|---|---|---|
+| 1 shot (ace/return error) | 3,039 | 42.3 |
+| 2–4 shots | 19,016 | 43.6 |
+| 5–9 shots | 10,413 | 44.4 |
+| 10+ shots | 3,579 | 44.3 |
+
+A ten-shot rally costs about **two seconds** more than an ace. **Time between
+points dominates, not rally time** — consistent with the published finding that
+under 20% of a tennis match is ball-in-play. This is why the duration model keys
+off games played rather than rally length, and why the pace residual is a
+between-point trait.
+
+US Open overall: 43.2 s/point, mean rally 3.26 shots.
+
+## 10. Match duration
+
+**measured** — total games explains ~84% of the variance in match minutes:
+
+```
+ATP Bo3   minutes = 4.93 x games -  8.8    residual sd 13.5    r = 0.909
+ATP Bo5   minutes = 4.89 x games - 12.7    residual sd 19.3    r = 0.923
+WTA Bo3   minutes = 5.30 x games - 11.5    residual sd 13.3    r = 0.918
+```
+
+**measured** — the residual is a strongly repeatable player trait. Between-player
+variance is roughly **14x the label-shuffled null (p = 0.0005)** over 14,325 ATP
+hard-court player-matches, spanning **40 minutes** end to end. Slowest: Murray
+(+17.8), Nadal (+14.9). Fastest: Mpetshi Perricard (−15.5), Kyrgios (−12.8),
+Opelka (−12.2). WTA slowest: Sorribes Tormo, Siegemund.
+
+This is the same permutation test with leave-one-out player controls that found
+umpire identity (p = 0.16) and court assignment (p = 0.21) to be noise. The
+method discriminates — pace is real and large; those were not.
+
+## 11. Sources evaluated and rejected
+
+| Source | Verdict | Why |
+|---|---|---|
+| Hawk-Eye / Tennis IQ / Tennis Data Innovations | ❌ | Licensed only, no public access |
+| IBM SlamTracker | ❌ | Same data as the official feed, no public endpoint |
+| Commercial injury APIs | ❌ | Paid; a fatigue proxy from existing results is as good |
+| Historical prop odds (aces, total games) | ❌ | No free archive exists |
+| Serve speed scrapers | ⚠️ Redundant | Now available free in the point-by-point data |
+| MCP `ShotDirection`, `NetPoints`, `SnV` | ⚠️ Skip | No outcome data / marginal / extinct tactic |
+| Betfair historical | ⚠️ Marginal | Match-winner only, no props |
+| Kalshi | ⚠️ Marginal | Free API, match winner only, no props |
