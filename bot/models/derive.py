@@ -126,17 +126,41 @@ def enforce_monotone(survival: tuple[float, ...]) -> tuple[float, ...]:
     strikes.  It happens when one strike is stale.  Repair by pooling adjacent
     violators — isotonic regression under the order constraint — rather than
     discarding, which would throw away a usable strike.
+
+    This is the pool-adjacent-violators algorithm proper: blocks carry a weight,
+    a merge produces the weight-weighted mean, and the merge cascades backwards
+    until the order holds.  It terminates in a single pass because every merge
+    reduces the block count by one.
+
+    The earlier version repeatedly averaged *pairs* until nothing changed, which
+    was wrong twice over.  It could not terminate: setting two neighbours equal
+    lets a later pass break the equality again, so the differences shrink
+    geometrically but never reach exactly zero, and the loop spins forever.  It
+    was found burning a core for eighteen hours on a six-element ladder.  And it
+    was not isotonic regression even when it did halt, because averaging pairs
+    without weights does not converge on the least-squares monotone fit.
+
+    That matters beyond tidiness: this runs on live market quotes inside the
+    submission path, so a single stale strike could hang the bot with the
+    markets open.
     """
-    values = list(survival)
-    changed = True
-    while changed:
-        changed = False
-        for i in range(len(values) - 1):
-            if values[i] < values[i + 1]:
-                pooled = (values[i] + values[i + 1]) / 2.0
-                values[i] = values[i + 1] = pooled
-                changed = True
-    return tuple(min(max(v, 0.0), 1.0) for v in values)
+    means: list[float] = []
+    weights: list[int] = []
+    for value in survival:
+        means.append(float(value))
+        weights.append(1)
+        # A new block may violate the order against the one before it, and
+        # merging can in turn violate against the one before that.
+        while len(means) > 1 and means[-2] < means[-1]:
+            total = weights[-2] + weights[-1]
+            pooled = (means[-2] * weights[-2] + means[-1] * weights[-1]) / total
+            means[-2:] = [pooled]
+            weights[-2:] = [total]
+
+    out: list[float] = []
+    for mean, weight in zip(means, weights, strict=True):
+        out.extend([mean] * weight)
+    return tuple(min(max(v, 0.0), 1.0) for v in out)
 
 
 def deciding_set_probability(ladders: dict[str, StrikeLadder], best_of: int = 3) -> float | None:

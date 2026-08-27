@@ -228,3 +228,75 @@ def test_blend_returns_the_model_when_no_market_exists():
 def test_blend_respects_the_weight():
     assert blend(0.30, 0.70, market_weight=0.0) == pytest.approx(0.30, abs=1e-6)
     assert blend(0.30, 0.70, market_weight=1.0) == pytest.approx(0.70, abs=1e-6)
+
+
+# ------------------------------------------- isotonic repair (PAVA) regressions
+
+
+def test_enforce_monotone_terminates_on_the_input_that_hung():
+    """Regression: this six-element ladder spun a core for eighteen hours.
+
+    The old implementation averaged *pairs* until nothing changed. Setting two
+    neighbours equal lets a later pass break the equality again, so differences
+    shrink geometrically and never reach exactly zero. Because this runs on live
+    market quotes inside the submission path, one stale strike could hang the
+    bot with the markets open.
+    """
+    out = enforce_monotone((0.27, 0.041, 0.017, 0.813, 0.913, 0.607))
+    assert len(out) == 6
+    assert _is_non_increasing(out)
+
+
+@pytest.mark.parametrize(
+    "ladder",
+    [
+        (0.9, 0.1, 0.8, 0.2, 0.7),
+        (0.1, 0.2, 0.3, 0.4, 0.5),
+        (0.5, 0.9, 0.1, 0.9, 0.1, 0.9),
+        (0.017, 0.813, 0.913, 0.607),
+        (0.3, 0.3, 0.9),
+        (0.0, 1.0),
+        (1.0, 0.0),
+    ],
+)
+def test_enforce_monotone_always_returns_a_non_increasing_ladder(ladder):
+    out = enforce_monotone(ladder)
+    assert len(out) == len(ladder)
+    assert _is_non_increasing(out)
+
+
+def test_enforce_monotone_preserves_total_mass():
+    """A defining property of isotonic regression: pooling moves mass between
+    strikes but never creates or destroys it. Unweighted pair averaging broke
+    this, which is how the old version could be wrong even when it terminated.
+    """
+    for ladder in [(0.6, 0.7, 0.3), (0.9, 0.1, 0.8, 0.2), (0.27, 0.041, 0.017, 0.813)]:
+        assert sum(enforce_monotone(ladder)) == pytest.approx(sum(ladder), abs=1e-9)
+
+
+def test_enforce_monotone_uses_weighted_pooling():
+    """Three violators must pool to their common mean, not to a pairwise cascade.
+
+    (0.1, 0.2, 0.9) has mean 0.4. Averaging pairs left-to-right gives 0.15 then
+    0.525, which is neither monotone nor mass-preserving.
+    """
+    assert enforce_monotone((0.1, 0.2, 0.9)) == pytest.approx((0.4, 0.4, 0.4))
+
+
+def test_enforce_monotone_leaves_valid_ladders_untouched():
+    ladder = (0.95, 0.7, 0.42, 0.11)
+    assert enforce_monotone(ladder) == pytest.approx(ladder)
+
+
+def test_enforce_monotone_clamps_to_probabilities():
+    out = enforce_monotone((1.4, -0.3))
+    assert all(0.0 <= v <= 1.0 for v in out)
+
+
+def test_enforce_monotone_handles_degenerate_input():
+    assert enforce_monotone(()) == ()
+    assert enforce_monotone((0.5,)) == (0.5,)
+
+
+def _is_non_increasing(values):
+    return all(values[i] >= values[i + 1] for i in range(len(values) - 1))
