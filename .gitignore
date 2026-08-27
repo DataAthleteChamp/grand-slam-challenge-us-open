@@ -28,3 +28,6 @@ analysis/
 
 # Live corpus archives contain the sponsor's market payloads.
 data/corpus/
+
+# Odds API quota tracking is machine-local state.
+data/odds_budget.json
