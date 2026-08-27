@@ -436,3 +436,115 @@ def test_validate_batch_runs_coverage_when_rounds_are_supplied():
         rounds_by_match={"match1": "R32"},
     )
     assert any(f.check == "question_coverage" for f in report.blocks)
+
+
+# ------------------------------------------------- serve-rate thresholds
+
+
+def test_serve_rate_threshold_is_not_priced_as_a_comparison():
+    """ "Win more than 65% of points on serve" compares a player to a number,
+    not to the opponent. Both answers sit near 50, so pricing it as a
+    head-to-head answers a different question invisibly."""
+    spec = parse_question(
+        "Will Carlos Alcaraz win more than 65% of points on serve?",
+        players=("Carlos Alcaraz", "Jannik Sinner"),
+    )
+    assert spec.family is Family.FIRST_SERVE_COMPARISON
+    assert spec.threshold == 65.0
+
+
+def test_points_on_serve_wording_parses():
+    """The published question type is "dominate points on serve", which the
+    original ``first[\\s-]?serve`` pattern did not match at all."""
+    for text in (
+        "Will one player dominate points on serve?",
+        "Will A B win more service points than C D?",
+        "Will A B win a higher percentage of first serve points?",
+    ):
+        assert parse_question(text).family is Family.FIRST_SERVE_COMPARISON, text
+
+
+@pytest.mark.parametrize(
+    "tour,threshold,expected",
+    [
+        ("ATP", 0.55, 0.879),
+        ("ATP", 0.65, 0.501),
+        ("ATP", 0.70, 0.280),
+        ("WTA", 0.55, 0.595),
+        ("WTA", 0.65, 0.189),
+        ("WTA", 0.70, 0.074),
+    ],
+)
+def test_rate_anchor_matches_the_realised_frequency(tour, threshold, expected):
+    """Measured against hard-court 2025-26: every one of these lands within
+    0.015 of the frequency actually observed."""
+    from bot.data.baserates import serve_rate_base
+
+    assert serve_rate_base(threshold, tour) == pytest.approx(expected, abs=0.005)
+
+
+def test_rate_anchor_is_not_one_half():
+    """Regression: rate thresholds were shrunk toward the comparison base rate
+    of 0.5, which moves an uncertain answer away from the truth. At 55% on the
+    men's tour the honest anchor is 0.88."""
+    from bot.data.baserates import serve_rate_base
+
+    assert serve_rate_base(0.55, "ATP") > 0.85
+    assert serve_rate_base(0.70, "WTA") < 0.10
+
+
+def test_rate_anchor_is_monotone_in_the_threshold():
+    from bot.data.baserates import serve_rate_base
+
+    for tour in ("ATP", "WTA"):
+        values = [serve_rate_base(t / 100, tour) for t in range(45, 80, 5)]
+        assert values == sorted(values, reverse=True), tour
+
+
+def test_serve_rate_dispersion_exceeds_binomial():
+    """Treating a serve rate as a clean binomial draw makes this family about
+    35% overconfident, pushing numbers toward 1 and 99 where errors cost most."""
+    from bot.data.baserates import SERVE_RATE_FORM_SD
+
+    assert SERVE_RATE_FORM_SD["ATP"] > 0.04
+    assert SERVE_RATE_FORM_SD["WTA"] > SERVE_RATE_FORM_SD["ATP"]
+
+
+def test_a_stronger_server_prices_higher_against_the_same_opponent():
+    """Hold the opponent fixed and vary the server.
+
+    The naive version of this test - Opelka vs Sinner, asking about each in
+    turn - fails, and correctly so: a serve rate is serve skill minus the
+    *opponent's* return skill, and Opelka returns so poorly (-0.049) that Sinner
+    wins a larger share of his service points against Opelka (0.749) than Opelka
+    does against Sinner (0.642). The big server does not automatically win the
+    bigger number.
+    """
+    from bot.roster import Roster
+
+    roster = Roster.load()
+    pricer = Pricer()
+    opponent = "Daniil Medvedev"
+    results = {}
+    for server in ("Reilly Opelka", "Diego Schwartzman"):
+        if roster.find(server) is None or roster.find(opponent) is None:
+            pytest.skip(f"{server} not in the roster")
+        context = roster.context(server, opponent, tour="ATP")
+        spec = parse_question(
+            f"Will {server} win more than 65% of points on serve?",
+            players=(server, opponent),
+        )
+        results[server] = pricer.price(spec, context, market_id=server).submission
+    assert results["Reilly Opelka"] > results["Diego Schwartzman"]
+
+
+def test_orientation_picks_the_named_player():
+    """Getting this backwards turns a correct 42 into a 58 on the family that
+    carries the most edge, and a dry run cannot show it."""
+    from bot.roster import Roster
+
+    roster = Roster.load()
+    for a, b in (("Carlos Alcaraz", "Jannik Sinner"), ("Jannik Sinner", "Carlos Alcaraz")):
+        spec = parse_question(f"Will {a} serve more aces than {b}?", players=(a, b))
+        assert spec.subject == a
+        assert spec.opponent == b

@@ -24,10 +24,20 @@ informed, not more.
 
 from __future__ import annotations
 
+import math
 from dataclasses import dataclass, field
 from typing import Any
 
-from .data.baserates import DEFER_TO_BASE_RATE, classify_matchup, count_stats, structural
+from .data.baserates import (
+    DEFER_TO_BASE_RATE,
+    SERVE_RATE_BIAS,
+    SERVE_RATE_FORM_SD,
+    SERVE_RATE_MARGINAL,
+    classify_matchup,
+    count_stats,
+    serve_rate_base,
+    structural,
+)
 from .markets.parser import MarketSpec
 from .markets.taxonomy import COMPARISON, STRUCTURAL, THRESHOLD, Family
 from .models.counts import skellam_comparison
@@ -245,7 +255,15 @@ class Pricer:
             notes.append("subject did not match either player")
             return self._finalise(spec, base, base, None, None, 0.0, market_id, notes, context, 0.2)
 
-        if stat == "first_serve":
+        # "Will X win more than 65% of points on serve?" compares one player
+        # against an absolute number, not against the other player. Pricing it
+        # as a head-to-head would answer a different question, and because both
+        # answers land near 50 the error is invisible in the output.
+        if stat == "first_serve" and _is_rate_threshold(spec):
+            model, confidence = self._serve_rate_threshold(
+                spec, subject, opponent, context, base, notes
+            )
+        elif stat == "first_serve":
             model, confidence = self._first_serve_comparison(
                 subject, opponent, context, base, notes
             )
@@ -257,6 +275,48 @@ class Pricer:
         return self._finalise(
             spec, model, base, model, None, 0.0, market_id, notes, context, confidence
         )
+
+    def _serve_rate_threshold(self, spec, subject, opponent, context, base, notes):
+        """P(subject's share of service points won clears an absolute threshold).
+
+        The realised rate is a binomial draw around the opponent-adjusted
+        expectation, widened by genuine match-to-match form.  Both terms are
+        measured (``SERVE_RATE_FORM_SD``); using the binomial term alone would
+        make this family about 35% overconfident.
+        """
+        if not (subject.has_ratings and opponent.has_ratings):
+            notes.append("missing serve ratings; using the base rate")
+            return base, 0.3
+
+        threshold = _as_rate(spec.threshold)
+        if threshold is None:
+            notes.append("threshold not interpretable as a rate; using the base rate")
+            return base, 0.25
+
+        tour = context.tour if context.tour in TOUR_BASE else "ATP"
+        expected = (
+            TOUR_BASE[tour]
+            + subject.serve_skill
+            - opponent.return_skill
+            + SERVE_RATE_BIAS.get(tour, 0.0)
+        )
+        expected = min(max(expected, 0.30), 0.90)
+
+        points = max(context.expected_service_points, 20)
+        binomial_var = expected * (1.0 - expected) / points
+        form_var = SERVE_RATE_FORM_SD.get(tour, 0.052) ** 2
+        sd = math.sqrt(binomial_var + form_var)
+
+        probability = 1.0 - _normal_cdf((threshold - expected) / sd)
+        notes.append(
+            f"serve rate: expected {expected:.3f} vs threshold {threshold:.3f}, "
+            f"sd {sd:.3f} ({math.sqrt(binomial_var):.3f} sampling + "
+            f"{math.sqrt(form_var):.3f} form)"
+        )
+        # Confidence falls away as the threshold approaches the expectation,
+        # where the answer is a coin flip that no amount of rating quality fixes.
+        margin = abs(expected - threshold) / sd
+        return probability, min(0.75, 0.35 + 0.25 * margin)
 
     def _price_threshold(self, spec, context, base, market_id, notes) -> PricedQuestion:
         """Threshold questions, currently only unforced errors.
@@ -402,7 +462,13 @@ class Pricer:
         return min(max(probability, 0.10), 0.90), 0.6
 
     def _base_rate(self, spec, context) -> float:
-        """The base rate this question falls back to."""
+        """The base rate this question falls back to.
+
+        The anchor matters more than the model, because it is what the answer
+        decays to precisely when the model is least trusted.  A rate threshold
+        anchored at 0.5 would be badly wrong: "will this player clear 55% of
+        service points" has an unconditional answer near 0.88 on the men's tour.
+        """
         if spec.family in STRUCTURAL:
             rates = structural(context.tour, context.matchup)
             return {
@@ -413,6 +479,11 @@ class Pricer:
                 Family.MATCH_DURATION: 0.5,
             }.get(spec.family, 0.5)
         if spec.family in COMPARISON:
+            if spec.family is Family.FIRST_SERVE_COMPARISON and _is_rate_threshold(spec):
+                threshold = _as_rate(spec.threshold)
+                if threshold is not None:
+                    tour = context.tour if context.tour in SERVE_RATE_MARGINAL else "ATP"
+                    return serve_rate_base(threshold, tour)
             stat = {
                 Family.ACES_COMPARISON: "aces",
                 Family.DOUBLE_FAULTS_COMPARISON: "double_faults",
@@ -486,3 +557,29 @@ def stat_field(stat: str) -> str:
         "winners": "winner_rate",
         "unforced_errors": "unforced_rate",
     }[stat]
+
+
+def _is_rate_threshold(spec: MarketSpec) -> bool:
+    """True when the question sets an absolute rate rather than comparing players.
+
+    A percent sign, or the word "percent", is the reliable tell.  A bare number
+    with no unit is treated as a comparison, because "more than 65% of points"
+    and "more points than" are the two shapes this family takes and only the
+    first carries a number.
+    """
+    if spec.threshold is None:
+        return False
+    text = spec.raw.lower()
+    return "%" in text or "percent" in text
+
+
+def _as_rate(threshold: float | None) -> float | None:
+    """Read a threshold as a probability, accepting both 65 and 0.65."""
+    if threshold is None:
+        return None
+    value = threshold / 100.0 if threshold > 1.0 else threshold
+    return value if 0.0 < value < 1.0 else None
+
+
+def _normal_cdf(z: float) -> float:
+    return 0.5 * (1.0 + math.erf(z / math.sqrt(2.0)))

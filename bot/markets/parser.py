@@ -88,7 +88,15 @@ _RULES: list[tuple[Family, re.Pattern[str], float]] = [
     (Family.ACES_COMPARISON, re.compile(r"\baces?\b", re.I), 0.9),
     (Family.DOUBLE_FAULTS_COMPARISON, re.compile(r"\bdouble[\s-]?faults?\b", re.I), 0.95),
     (Family.WINNERS_COMPARISON, re.compile(r"\bwinners?\b", re.I), 0.75),
-    (Family.FIRST_SERVE_COMPARISON, re.compile(r"first[\s-]?serve", re.I), 0.85),
+    (
+        Family.FIRST_SERVE_COMPARISON,
+        re.compile(
+            r"first[\s-]?serve|points?\s+on\s+(?:their\s+)?serve|"
+            r"service points?|serve points?|points? behind (?:their|the) serve",
+            re.I,
+        ),
+        0.85,
+    ),
     (Family.UNFORCED_ERRORS, re.compile(r"\bunforced\b|\berrors?\b", re.I), 0.9),
 ]
 

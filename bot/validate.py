@@ -74,6 +74,14 @@ class ValidationReport:
             f"{len(self.blocks)} blocking, {len(self.warnings)} warnings"
         )
 
+    def render(self) -> str:
+        """The full report, blocks first, for a terminal."""
+        lines = [self.summary()]
+        for finding in self.blocks + self.warnings:
+            marker = "BLOCK" if finding.severity is Severity.BLOCK else " WARN"
+            lines.append(f"  {marker}  {finding.check}: {finding.message}")
+        return "\n".join(lines)
+
 
 # --------------------------------------------------------------------- limits
 

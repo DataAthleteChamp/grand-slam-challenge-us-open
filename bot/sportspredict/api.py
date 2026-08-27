@@ -68,16 +68,26 @@ class SportsPredictClient:
         return self._request("GET", "/events", params={"limit": 100})
 
     def find_probability_event(self) -> dict[str, Any]:
-        """Find the configured event, falling back to the first probability event."""
+        """Find the configured event by title.
+
+        There is deliberately no fallback to "the first probability event".  A
+        fallback here fails open: if the Grand Slam event is absent or renamed,
+        the bot would submit a full slate of tennis forecasts into whatever
+        unrelated event happened to be listed first, and every downstream check
+        would pass because the numbers themselves are fine.  Better to stop.
+        """
         events = self.list_events()
         match_text = self.config.event_match.lower()
         for event in events:
             if match_text and match_text in str(event.get("title", "")).lower():
                 return event
-        for event in events:
-            if event.get("type") == "probability":
-                return event
-        raise SportsPredictError(404, "No probability event found in /events response.")
+        titles = ", ".join(repr(str(e.get("title", ""))) for e in events[:10]) or "none"
+        raise SportsPredictError(
+            404,
+            f"No event title contains {self.config.event_match!r}. Available: {titles}. "
+            "Set SPORTSPREDICT_EVENT_MATCH to the correct event rather than "
+            "guessing, submissions are not reversible.",
+        )
 
     def list_lobbies(self, event_id: str) -> list[dict[str, Any]]:
         """Return lobbies for an event."""

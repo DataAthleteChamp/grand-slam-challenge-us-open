@@ -155,3 +155,54 @@ def classify_matchup(rank_a: float | None, rank_b: float | None) -> str:
     if low <= 15:
         return "even"
     return "all"
+
+
+# --------------------------------------------------- serve-rate dispersion
+
+#: Extra match-to-match dispersion in a player's share of service points won,
+#: beyond what binomial sampling over the match's service points explains.
+#:
+#: Measured on hard-court matches 2023-2026 (ATP n=11,960, WTA n=11,597) after
+#: subtracting the opponent-adjusted prediction, so this is the residual a model
+#: that already knows both players cannot remove.  Total residual sd came to
+#: 1.35x (ATP) and 1.37x (WTA) the binomial-only sd, and the two tours agreeing
+#: to within 0.02 on an independently computed quantity is the reason these are
+#: used rather than a round number.
+#:
+#: Ignoring this term would treat a serve rate as if it were a clean binomial
+#: draw and make every rate threshold roughly 35% more confident than the data
+#: supports - which pushes numbers toward 1 and 99 exactly where being wrong
+#: costs the most.
+SERVE_RATE_FORM_SD = {"ATP": 0.0515, "WTA": 0.0575}
+
+#: The opponent-adjusted prediction runs 0.7pp low on ATP hard courts and is
+#: unbiased on WTA.  Small, but free to correct.
+SERVE_RATE_BIAS = {"ATP": 0.0070, "WTA": 0.0004}
+
+#: Correlation between the opponent-adjusted prediction and the realised match
+#: serve rate, which is what justifies pricing this family off the model at all.
+SERVE_RATE_SKILL_CORRELATION = {"ATP": 0.481, "WTA": 0.461}
+
+
+#: Unconditional distribution of a player's share of service points won in a
+#: hard-court match (2025-2026, ATP n=5,290, WTA n=5,165).
+#:
+#: This is the shrinkage target for absolute rate thresholds.  It is emphatically
+#: not 0.5: "will this player clear 55% of service points" has an unconditional
+#: answer near 0.88 on the men's tour, and pulling an uncertain estimate toward
+#: 0.5 moves it away from the truth rather than toward it.  Getting the anchor
+#: wrong costs more than getting the model wrong, because the anchor is what the
+#: answer decays to exactly when the model is least trusted.
+SERVE_RATE_MARGINAL = {
+    "ATP": {"mean": 0.6502, "sd": 0.0855},
+    "WTA": {"mean": 0.5715, "sd": 0.0890},
+}
+
+
+def serve_rate_base(threshold: float, tour: str) -> float:
+    """Unconditional P(a player's service-point win rate exceeds ``threshold``)."""
+    import math
+
+    marginal = SERVE_RATE_MARGINAL.get(tour, SERVE_RATE_MARGINAL["ATP"])
+    z = (threshold - marginal["mean"]) / marginal["sd"]
+    return 0.5 * math.erfc(z / math.sqrt(2.0))
