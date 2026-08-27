@@ -540,11 +540,39 @@ def test_a_stronger_server_prices_higher_against_the_same_opponent():
 
 def test_orientation_picks_the_named_player():
     """Getting this backwards turns a correct 42 into a 58 on the family that
-    carries the most edge, and a dry run cannot show it."""
+    carries the most edge, and a dry run cannot show it.
+
+    This checks the pricer's own lookup, not just the parser's, because the
+    parser naming the right player is worth nothing if ``_orient`` then maps it
+    onto the wrong profile.
+    """
     from bot.roster import Roster
 
     roster = Roster.load()
+    pricer = Pricer()
     for a, b in (("Carlos Alcaraz", "Jannik Sinner"), ("Jannik Sinner", "Carlos Alcaraz")):
         spec = parse_question(f"Will {a} serve more aces than {b}?", players=(a, b))
         assert spec.subject == a
         assert spec.opponent == b
+
+        context = roster.context(a, b, tour="ATP")
+        subject, opponent = pricer._orient(spec, context)
+        assert subject is not None and subject.name == a
+        assert opponent is not None and opponent.name == b
+
+
+def test_orientation_survives_surname_only_wording():
+    """The API labels matches "A. Sabalenka vs I. Swiatek", so the question text
+    may carry only a surname."""
+    from bot.roster import Roster
+
+    roster = Roster.load()
+    pricer = Pricer()
+    context = roster.context("Aryna Sabalenka", "Iga Swiatek", tour="WTA")
+    spec = parse_question(
+        "Will Sabalenka hit more double faults than Swiatek?",
+        players=("Aryna Sabalenka", "Iga Swiatek"),
+    )
+    subject, opponent = pricer._orient(spec, context)
+    assert subject is not None and subject.name == "Aryna Sabalenka"
+    assert opponent is not None and opponent.name == "Iga Swiatek"
