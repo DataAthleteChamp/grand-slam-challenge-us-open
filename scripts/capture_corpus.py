@@ -116,6 +116,14 @@ def analyse(corpus: dict[str, Any]) -> str:
     lines.append(f"markets  {total}")
     lines.append("")
 
+    if not total:
+        lines.append("!!! NO MARKETS RETURNED — nothing to analyse")
+        lines.append(f"    event status: {corpus['event'].get('status')!r}")
+        lines.append(f"    draw starts:  {corpus['event'].get('displayed_start_time')}")
+        lines.append("    Questions are seeded per round, so an 'upcoming' event")
+        lines.append("    with no matches is expected until the draw is published.")
+        return "\n".join(lines)
+
     lines.append(
         "markets per match: " + ", ".join(f"{k}x{v}" for k, v in sorted(per_match.items()))
     )
@@ -149,7 +157,7 @@ def analyse(corpus: dict[str, Any]) -> str:
         for text in sorted(set(unparsed))[:25]:
             lines.append(f"      {text}")
     else:
-        lines.append("all questions parsed")
+        lines.append(f"all {total} questions parsed")
     return "\n".join(lines)
 
 
