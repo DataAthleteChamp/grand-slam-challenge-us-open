@@ -25,3 +25,6 @@ predictions/
 analysis/
 .DS_Store
 .venv/
+
+# Live corpus archives contain the sponsor's market payloads.
+data/corpus/
