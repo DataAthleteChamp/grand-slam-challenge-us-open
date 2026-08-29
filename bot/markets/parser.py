@@ -73,6 +73,11 @@ _RULES: list[tuple[Family, re.Pattern[str], float]] = [
         re.compile(r"\bminutes?\b|\bhours?\b|\blast longer\b|\bduration\b", re.I),
         0.9,
     ),
+    (
+        Family.MATCH_WINNER,
+        re.compile(r"\bwin\s+the\s+match\b|\bwin\?|\bto\s+win\b|\bwins\s+the\s+match\b", re.I),
+        0.95,
+    ),
     (Family.TIEBREAK, re.compile(r"\btie[\s-]?break", re.I), 0.95),
     (
         Family.DECIDING_SET,

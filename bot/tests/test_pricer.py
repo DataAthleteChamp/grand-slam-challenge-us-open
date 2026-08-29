@@ -576,3 +576,118 @@ def test_orientation_survives_surname_only_wording():
     subject, opponent = pricer._orient(spec, context)
     assert subject is not None and subject.name == "Aryna Sabalenka"
     assert opponent is not None and opponent.name == "Iga Swiatek"
+
+
+# ------------------------------------------ live families (from the corpus)
+
+
+def _ctx(a, b, tour="ATP"):
+    from bot.roster import Roster
+
+    return Roster.load().context(a, b, tour=tour)
+
+
+def test_match_winner_parses_and_is_not_the_base_rate():
+    """20% of every round asks this and it did not parse at all, so 64 markets
+    would have shipped 50 from the base rate."""
+    spec = parse_question("Will I. Buse win?", players=("M. Giron", "I. Buse"))
+    assert spec.family is Family.MATCH_WINNER
+    assert spec.subject == "I. Buse"
+
+
+def test_match_winner_complements_across_the_two_players():
+    pricer = Pricer()
+    a, b = "T. Fritz", "D. Blanch"
+    first = pricer.price(
+        parse_question(f"Will {a} win?", players=(a, b)), _ctx(a, b), market_id="1"
+    )
+    second = pricer.price(
+        parse_question(f"Will {b} win?", players=(b, a)), _ctx(b, a), market_id="2"
+    )
+    assert first.submission + second.submission == pytest.approx(100, abs=2)
+    assert first.submission > second.submission
+
+
+def test_match_winner_respects_the_named_subject():
+    """The simulator only reports p_a_wins_match, so asking about the second
+    player means mirroring the match. The live questions name the second player
+    more often than the first, so this is the common path."""
+    pricer = Pricer()
+    favourite = pricer.price(
+        parse_question("Will I. Swiatek win?", players=("I. Swiatek", "X. Wang")),
+        _ctx("I. Swiatek", "X. Wang", "WTA"),
+        market_id="1",
+    )
+    underdog = pricer.price(
+        parse_question("Will X. Wang win?", players=("X. Wang", "I. Swiatek")),
+        _ctx("X. Wang", "I. Swiatek", "WTA"),
+        market_id="2",
+    )
+    assert favourite.submission > 60
+    assert underdog.submission < 40
+
+
+@pytest.mark.parametrize(
+    "tour,players", [("ATP", ("C. Alcaraz", "J. Sinner")), ("WTA", ("I. Swiatek", "X. Wang"))]
+)
+def test_tiebreak_count_falls_as_the_count_rises(tour, players):
+    """'At least 1' and 'at least 2' are different questions and 23 of 64 Round
+    1 markets asked for two. Two tiebreaks are 3.7x rarer than one on the men's
+    side and eleven times rarer on the women's."""
+    pricer = Pricer()
+    context = _ctx(*players, tour=tour)
+    values = [
+        pricer.price(
+            parse_question(f"Will the match feature at least {k} tiebreak(s)?"),
+            context,
+            market_id=str(k),
+        ).submission
+        for k in (1, 2, 3)
+    ]
+    assert values == sorted(values, reverse=True), values
+    assert values[0] > values[1]
+
+
+def test_tiebreak_base_rate_distinguishes_the_count():
+    from bot.data.baserates import tiebreak_count_base
+
+    assert tiebreak_count_base(1, "ATP") == pytest.approx(0.492, abs=0.005)
+    assert tiebreak_count_base(2, "ATP") == pytest.approx(0.134, abs=0.005)
+    assert tiebreak_count_base(1, "WTA") == pytest.approx(0.220, abs=0.005)
+    assert tiebreak_count_base(2, "WTA") == pytest.approx(0.020, abs=0.005)
+    for tour in ("ATP", "WTA"):
+        assert tiebreak_count_base(2, tour) < tiebreak_count_base(1, tour)
+        assert tiebreak_count_base(0, tour) == 1.0
+
+
+@pytest.mark.parametrize(
+    "tour,players", [("ATP", ("C. Alcaraz", "R. Opelka")), ("WTA", ("I. Swiatek", "X. Wang"))]
+)
+def test_duration_falls_as_the_threshold_rises(tour, players):
+    """The live thresholds run 70 to 170 minutes and are tailored per match, so
+    the whole ladder has to behave, not one fixed value."""
+    pricer = Pricer()
+    context = _ctx(*players, tour=tour)
+    values = [
+        pricer.price(
+            parse_question(f"Will the match last longer than {n} minutes?"),
+            context,
+            market_id=str(n),
+        ).submission
+        for n in (70, 90, 110, 130, 150, 170, 190)
+    ]
+    assert values == sorted(values, reverse=True), values
+
+
+def test_every_live_question_shape_parses():
+    """The five shapes actually seen in the Round 1 corpus."""
+    players = ("M. Giron", "I. Buse")
+    expected = {
+        "Will the match last longer than 145 minutes?": Family.MATCH_DURATION,
+        "Will I. Buse record more aces than M. Giron?": Family.ACES_COMPARISON,
+        "Will I. Buse record more double faults than M. Giron?": Family.DOUBLE_FAULTS_COMPARISON,
+        "Will I. Buse win?": Family.MATCH_WINNER,
+        "Will the match feature at least 2 tiebreak(s)?": Family.TIEBREAK,
+    }
+    for text, family in expected.items():
+        assert parse_question(text, players=players).family is family, text

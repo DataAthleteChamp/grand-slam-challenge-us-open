@@ -14,6 +14,9 @@ Families are grouped into three structurally different sets:
     "Does A record more X than B" — small integer counts where ties matter.
 ``THRESHOLD``
     "Does a player exceed N of X" — a tail probability on one count.
+``OUTCOME``
+    "Does A win the match" — the one question bookmakers price directly and
+    efficiently, so it is read from the market rather than argued with.
 """
 
 from __future__ import annotations
@@ -24,6 +27,7 @@ from enum import StrEnum
 class Family(StrEnum):
     """Market families, matching the ten published question archetypes."""
 
+    MATCH_WINNER = "match_winner"
     TIEBREAK = "tiebreak"
     DECIDING_SET = "deciding_set"
     LOPSIDED_SET = "lopsided_set"
@@ -57,6 +61,12 @@ COMPARISON = frozenset(
 )
 
 THRESHOLD = frozenset({Family.UNFORCED_ERRORS})
+
+#: The match-winner question. Every bookmaker on earth prices this one, the
+#: closing line has a Brier of about 0.203, and the predecessor event showed a
+#: de-vigged consensus beating the entrant's own model by 566 relative points.
+#: Treat the market as the answer and require evidence to depart from it.
+OUTCOME = frozenset({Family.MATCH_WINNER})
 
 #: Maps a comparison family to the count statistic it compares.
 COMPARISON_STAT = {

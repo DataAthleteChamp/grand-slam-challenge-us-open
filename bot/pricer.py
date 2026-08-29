@@ -25,7 +25,7 @@ informed, not more.
 from __future__ import annotations
 
 import math
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, replace
 from typing import Any
 
 from .data.baserates import (
@@ -37,9 +37,10 @@ from .data.baserates import (
     count_stats,
     serve_rate_base,
     structural,
+    tiebreak_count_base,
 )
 from .markets.parser import MarketSpec
-from .markets.taxonomy import COMPARISON, STRUCTURAL, THRESHOLD, Family
+from .markets.taxonomy import COMPARISON, OUTCOME, STRUCTURAL, THRESHOLD, Family
 from .models.counts import skellam_comparison
 from .models.derive import (
     blend,
@@ -50,7 +51,12 @@ from .models.derive import (
 )
 from .models.lanes import apply_lane
 from .models.shrink import CREDIBILITY_K, height_prior_ace_rate, shrink
-from .models.simulate import SimulationConfig, matchup_probabilities, simulate_match
+from .models.simulate import (
+    SimulationConfig,
+    matchup_probabilities,
+    simulate_match,
+    tiebreak_at_least,
+)
 
 #: Baseline service points won that the opponent-adjusted ratings deviate from.
 #: These must be the *fitted* baselines from the ratings run, not the literature
@@ -91,6 +97,7 @@ def apply_comparator(probability: float, spec: MarketSpec) -> tuple[float, bool]
 #: questions have a liquid market and a documented history of market consensus
 #: outscoring model alpha; the statistic families have no market at all.
 MARKET_WEIGHT = {
+    Family.MATCH_WINNER: 0.85,
     Family.DECIDING_SET: 0.85,
     Family.SET_GAMES: 0.85,
     Family.TIEBREAK: 0.55,
@@ -203,6 +210,8 @@ class Pricer:
             notes.append("question not understood; answering from the base rate")
             return self._finalise(spec, base, base, None, 0.0, 0.0, market_id, notes, context)
 
+        if spec.family in OUTCOME:
+            return self._price_outcome(spec, context, base, ladders, market_id, notes)
         if spec.family in STRUCTURAL:
             return self._price_structural(spec, context, base, ladders, market_id, notes)
         if spec.family in COMPARISON:
@@ -214,6 +223,67 @@ class Pricer:
         return self._finalise(spec, base, base, None, 0.0, 0.0, market_id, notes, context)
 
     # ------------------------------------------------------------------ routes
+
+    def _price_outcome(self, spec, context, base, ladders, market_id, notes) -> PricedQuestion:
+        """Who wins the match - the one question the market already answers.
+
+        Every bookmaker on earth prices this, the closing line has a Brier of
+        about 0.203, and in the predecessor event a de-vigged consensus would
+        have beaten the entrant's own model by 566 relative points.  So the
+        market is the answer when we have one, and the simulation is a fallback
+        rather than a rival.  Departing from a liquid consensus on the most
+        efficiently priced market in tennis needs evidence we do not have.
+        """
+        if spec.subject is None:
+            notes.append("no identifiable subject; cannot tell which player is meant")
+            return self._finalise(spec, base, base, None, None, 0.0, market_id, notes, context, 0.2)
+
+        subject, opponent = self._orient(spec, context)
+        if subject is None or opponent is None:
+            notes.append("subject did not match either player")
+            return self._finalise(spec, base, base, None, None, 0.0, market_id, notes, context, 0.2)
+
+        model, confidence = base, 0.3
+        if subject.has_ratings and opponent.has_ratings:
+            oriented = context if subject is context.player_a else _swap(context)
+            simulation = self._simulate(oriented)
+            model = simulation.p_a_wins_match
+            confidence = 0.7
+            notes.append(f"simulated win probability {model:.3f}")
+        else:
+            notes.append("one or both players unrated; using an even prior")
+
+        market = None
+        if ladders:
+            quoted = ladders.get("match_winner")
+            if isinstance(quoted, dict):
+                market = quoted.get(subject.name)
+        weight = self.market_weights.get(spec.family, 0.85) if market is not None else 0.0
+        if market is not None:
+            notes.append(f"market consensus {market:.3f}, weight {weight:.2f}")
+            confidence = max(confidence, 0.85)
+        else:
+            notes.append("no market quote; this is the family that most needs one")
+
+        probability = blend(model, market, weight)
+        return self._finalise(
+            spec, probability, base, model, market, weight, market_id, notes, context, confidence
+        )
+
+    def _tiebreak_base(self, spec, context, rates) -> float:
+        """Anchor a tiebreak question on the count it actually asks about.
+
+        Two tiebreaks are about 3.7 times rarer than one on the men's side and
+        eleven times rarer on the women's.  Anchoring both on the any-tiebreak
+        rate would drag the two-tiebreak answer far too high, and the anchor is
+        what the number decays to exactly when the model is least trusted.
+        """
+        wanted = int(spec.threshold) if spec.threshold else 1
+        if wanted <= 1:
+            return rates.tiebreak
+        tour = context.tour if context.tour in {"ATP", "WTA"} else "ATP"
+        scale = rates.tiebreak / max(tiebreak_count_base(1, tour), 1e-9)
+        return min(max(tiebreak_count_base(wanted, tour) * scale, 0.005), 0.995)
 
     def _price_structural(self, spec, context, base, ladders, market_id, notes) -> PricedQuestion:
         """Match-shape questions: simulate, then blend toward the market."""
@@ -358,7 +428,10 @@ class Pricer:
     def _read_simulation(self, spec, simulation, base, notes, context) -> float:
         """Read one question off a simulated match."""
         if spec.family is Family.TIEBREAK:
-            return simulation.p_any_tiebreak
+            # The question carries a count: 'at least 1' and 'at least 2' are
+            # different questions and a third of them asked for two.
+            wanted = int(spec.threshold) if spec.threshold else 1
+            return tiebreak_at_least(simulation, wanted)
         if spec.family is Family.DECIDING_SET:
             return simulation.p_deciding_set
         if spec.family is Family.LOPSIDED_SET:
@@ -472,7 +545,7 @@ class Pricer:
         if spec.family in STRUCTURAL:
             rates = structural(context.tour, context.matchup)
             return {
-                Family.TIEBREAK: rates.tiebreak,
+                Family.TIEBREAK: self._tiebreak_base(spec, context, rates),
                 Family.DECIDING_SET: rates.deciding_set,
                 Family.LOPSIDED_SET: rates.lopsided_set,
                 Family.SET_GAMES: rates.first_set_10plus,
@@ -583,3 +656,20 @@ def _as_rate(threshold: float | None) -> float | None:
 
 def _normal_cdf(z: float) -> float:
     return 0.5 * (1.0 + math.erf(z / math.sqrt(2.0)))
+
+
+def _swap(context: MatchContext) -> MatchContext:
+    """Return the same match with the players exchanged.
+
+    The simulator always reports ``p_a_wins_match``, so asking about the
+    second-named player means simulating the mirrored match. The live questions
+    name the second player 37 times out of 63, so this is the common case, not
+    an edge case.
+    """
+    return replace(
+        context,
+        player_a=context.player_b,
+        player_b=context.player_a,
+        rank_a=context.rank_b,
+        rank_b=context.rank_a,
+    )

@@ -71,6 +71,7 @@ class SimulatedMatch:
     n_sims: int
     p_a_wins_match: float
     p_any_tiebreak: float
+    p_two_plus_tiebreaks: float
     p_deciding_set: float
     p_any_lopsided_set: float
     p_first_set_10plus_games: float
@@ -80,6 +81,7 @@ class SimulatedMatch:
     sd_total_games: float
     mean_sets: float
     total_games: np.ndarray
+    tiebreaks: np.ndarray
 
     def as_dict(self) -> dict[str, float]:
         return {
@@ -166,7 +168,7 @@ def simulate_match(
     uniforms = rng.random((cfg.n_sims, best_of))
 
     wins = np.zeros(cfg.n_sims, dtype=bool)
-    tiebreak = np.zeros(cfg.n_sims, dtype=bool)
+    tiebreaks = np.zeros(cfg.n_sims, dtype=int)
     decider = np.zeros(cfg.n_sims, dtype=bool)
     lopsided = np.zeros(cfg.n_sims, dtype=bool)
     first_long = np.zeros(cfg.n_sims, dtype=bool)
@@ -196,7 +198,7 @@ def simulate_match(
                 first_long[i] = (ga + gb) >= 10
                 first_tb[i] = went_tb
             if went_tb:
-                tiebreak[i] = True
+                tiebreaks[i] += 1
             if min(ga, gb) in LOPSIDED_LOSER_GAMES and max(ga, gb) == 6:
                 lopsided[i] = True
 
@@ -215,7 +217,9 @@ def simulate_match(
     return SimulatedMatch(
         n_sims=cfg.n_sims,
         p_a_wins_match=float(wins.mean()),
-        p_any_tiebreak=float(tiebreak.mean()),
+        p_any_tiebreak=float((tiebreaks >= 1).mean()),
+        p_two_plus_tiebreaks=float((tiebreaks >= 2).mean()),
+        tiebreaks=tiebreaks,
         p_deciding_set=float(decider.mean()),
         p_any_lopsided_set=float(lopsided.mean()),
         p_first_set_10plus_games=float(first_long.mean()),
@@ -278,3 +282,16 @@ def monte_carlo_error(probability: float, n_sims: int) -> float:
     """
     p = min(max(float(probability), 0.0), 1.0)
     return float(np.sqrt(p * (1.0 - p) / max(n_sims, 1)))
+
+
+def tiebreak_at_least(match: SimulatedMatch, count: int) -> float:
+    """``P(the match contains at least `count` tiebreaks)``.
+
+    The live questions ask for one *or two*, and 23 of the 64 Round 1 markets
+    asked for two.  Answering both with the any-tiebreak rate would have been
+    badly wrong on a third of them, so the count is read from the simulation
+    rather than assumed.
+    """
+    if count <= 0:
+        return 1.0
+    return float((match.tiebreaks >= count).mean())

@@ -206,3 +206,38 @@ def serve_rate_base(threshold: float, tour: str) -> float:
     marginal = SERVE_RATE_MARGINAL.get(tour, SERVE_RATE_MARGINAL["ATP"])
     z = (threshold - marginal["mean"]) / marginal["sd"]
     return 0.5 * math.erfc(z / math.sqrt(2.0))
+
+
+# ------------------------------------------------------- tiebreak counts
+
+#: ``P(a match contains at least K tiebreaks)`` on hard-court slams,
+#: 2015-2026 (ATP n=2,779 best-of-five, WTA n=2,883 best-of-three).
+#:
+#: The live questions ask for at least one *or at least two*, and 23 of the 64
+#: Round 1 markets asked for two.  Two tiebreaks are roughly 3.7 times rarer
+#: than one on the men's side and eleven times rarer on the women's, so
+#: answering both from the any-tiebreak rate would have been badly wrong on a
+#: third of the tiebreak markets.
+#:
+#: Retirements and walkovers are excluded: a match that stops early has no
+#: honest tiebreak count.  Both score spellings are handled - pre-2024 files
+#: write ``7-6(6)`` and 2024+ write a bare ``7-6``, and a parser that handles
+#: only one silently drops every tiebreak match.
+TIEBREAK_COUNTS = {
+    "ATP": {1: 0.492, 2: 0.134, 3: 0.025},
+    "WTA": {1: 0.220, 2: 0.020, 3: 0.001},
+}
+
+
+def tiebreak_count_base(count: int, tour: str) -> float:
+    """Unconditional ``P(at least `count` tiebreaks)`` for a tour."""
+    table = TIEBREAK_COUNTS.get(tour, TIEBREAK_COUNTS["ATP"])
+    if count <= 0:
+        return 1.0
+    if count in table:
+        return table[count]
+    # Beyond the measured range each extra tiebreak is roughly five times
+    # rarer; the questions only ask for one or two, so this is a guard rather
+    # than a model.
+    deepest = max(table)
+    return table[deepest] / (5.0 ** (count - deepest))
