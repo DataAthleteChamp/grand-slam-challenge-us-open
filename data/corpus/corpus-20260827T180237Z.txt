@@ -1,0 +1,18 @@
+event    Grand Slam Challenge
+captured 2026-08-27T18:02:37.804975+00:00
+matches  0
+markets  0
+
+markets per match: 
+
+--- families ---
+
+--- wording flags (each changes the correct answer) ---
+  none detected
+
+--- distinct wordings per family ---
+
+--- market payload fields ---
+  
+
+all questions parsed

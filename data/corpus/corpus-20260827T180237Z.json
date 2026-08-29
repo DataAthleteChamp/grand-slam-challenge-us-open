@@ -1,0 +1,19 @@
+{
+  "captured_at": "2026-08-27T18:02:37.804975+00:00",
+  "event": {
+    "displayed_start_time": "2026-08-30T11:00:00.000Z",
+    "end_date": "2026-09-14T04:59:00.000Z",
+    "id": "0cf0efd1-7e12-4ca9-8068-89eb48466a37",
+    "status": "upcoming",
+    "title": "Grand Slam Challenge",
+    "type": "b2c3d4e5-f6a7-8901-bcde-f12345678901"
+  },
+  "lobby": {
+    "id": "b1419bb4-6dff-4172-9a42-a206b0a24ad9",
+    "is_private": false,
+    "joined": true,
+    "name": "Classic Lobby",
+    "type": "classic"
+  },
+  "matches": []
+}

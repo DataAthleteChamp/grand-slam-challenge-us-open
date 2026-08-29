@@ -26,8 +26,8 @@ analysis/
 .DS_Store
 .venv/
 
-# Live corpus archives contain the sponsor's market payloads.
-data/corpus/
+# Corpus archives ARE committed: the wording is the specification this bot
+# is written against, and a later round changing it must be diffable.
 
 # Odds API quota tracking is machine-local state.
 data/odds_budget.json

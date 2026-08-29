@@ -1,0 +1,74 @@
+event    Grand Slam Challenge
+captured 2026-08-29T15:50:09.662505+00:00
+matches  64
+markets  320
+
+markets per match: 5x64
+
+--- families ---
+  match_duration                  64   20.0%
+  aces_comparison                 64   20.0%
+  double_faults_comparison        64   20.0%
+  other                           64   20.0%
+  tiebreak                        64   20.0%
+
+--- wording flags (each changes the correct answer) ---
+  inclusive_threshold       64
+
+--- distinct wordings per family ---
+  aces_comparison (5 distinct)
+      Will M. Cilic record more aces than {B}?
+      Will {A} record more aces than {B}?
+      Will {B} record more aces than I. Jovic?
+      Will {B} record more aces than K. {A}?
+      Will {B} record more aces than {A}?
+  double_faults_comparison (5 distinct)
+      Will M. Cilic record more double faults than {B}?
+      Will {A} record more double faults than {B}?
+      Will {B} record more double faults than I. Jovic?
+      Will {B} record more double faults than K. {A}?
+      Will {B} record more double faults than {A}?
+  match_duration (20 distinct)
+      Will the match last longer than 100 minutes?
+      Will the match last longer than 105 minutes?
+      Will the match last longer than 110 minutes?
+      Will the match last longer than 115 minutes?
+      Will the match last longer than 120 minutes?
+      Will the match last longer than 125 minutes?
+  other (3 distinct)
+      Will M. Cilic win?
+      Will {A} win?
+      Will {B} win?
+  tiebreak (2 distinct)
+      Will the match feature at least 1 tiebreak(s)?
+      Will the match feature at least 2 tiebreak(s)?
+
+--- market payload fields ---
+  event_type, id, lobby_id, match, question, status
+
+!!! 64 UNPARSED — each is a silent forfeit of edge
+      Will A. Anisimova win?
+      Will A. Blinkova win?
+      Will A. Bublik win?
+      Will A. De Minaur win?
+      Will A. Eala win?
+      Will A. Fery win?
+      Will A. Fils win?
+      Will A. Kovacevic win?
+      Will A. Li win?
+      Will A. Potapova win?
+      Will A. Rinderknech win?
+      Will B. Bencic win?
+      Will B. Krejcikova win?
+      Will C. Alcaraz win?
+      Will C. Gauff win?
+      Will C. Norrie win?
+      Will C. Osorio win?
+      Will D. Blanch win?
+      Will D. Shnaider win?
+      Will E. Alexandrova win?
+      Will E. Mertens win?
+      Will F. Auger-Aliassime win?
+      Will F. Cerundolo win?
+      Will F. Cobolli win?
+      Will H. Gaston win?
