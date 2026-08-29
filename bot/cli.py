@@ -25,11 +25,12 @@ import json
 import sys
 import time
 from collections.abc import Sequence
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 
+from bot.ledger import Entry, Ledger, MatchRecord
 from bot.markets.parser import Family, parse_question, reset_unparsed, unparsed_report
 from bot.pricer import MatchContext, PricedQuestion, Pricer
 from bot.roster import Roster, players_from_match
@@ -52,6 +53,8 @@ class RunResult:
     contexts: dict[str, MatchContext]
     unparsed: list[str]
     roster_misses: list[tuple[str, int]]
+    raw_matches: dict[str, dict[str, Any]] = field(default_factory=dict)
+    questions: dict[str, str] = field(default_factory=dict)
     submitted: dict[str, Any] | None = None
 
     @property
@@ -86,6 +89,8 @@ def collect(
 
     priced: list[PricedQuestion] = []
     by_match: dict[str, list[PricedQuestion]] = {}
+    raw_matches: dict[str, dict[str, Any]] = {}
+    question_text: dict[str, str] = {}
     rounds: dict[str, str] = {}
     contexts: dict[str, MatchContext] = {}
 
@@ -102,6 +107,7 @@ def collect(
         )
         contexts[match_id] = context
         rounds[match_id] = context.round_code
+        raw_matches[match_id] = match
 
         try:
             markets = client.list_markets(lobby_id, match_id=match_id)
@@ -115,7 +121,9 @@ def collect(
             if not question:
                 continue
             spec = parse_question(question, players=(context.player_a.name, context.player_b.name))
-            result = pricer.price(spec, context, market_id=str(market.get("id") or ""))
+            market_id = str(market.get("id") or "")
+            result = pricer.price(spec, context, market_id=market_id)
+            question_text[market_id] = question
             match_priced.append(result)
 
         by_match[match_id] = match_priced
@@ -130,7 +138,55 @@ def collect(
         contexts=contexts,
         unparsed=unparsed_report(),
         roster_misses=roster.miss_report,
+        raw_matches=raw_matches,
+        questions=question_text,
     )
+
+
+def record_to_ledger(result: RunResult, ledger: Ledger) -> int:
+    """Write every priced question to the ledger before anything is sent.
+
+    Predictions have to be recorded before outcomes are known, or the ledger
+    records what we wish we had thought. Writing happens even on a dry run,
+    because a forecast we chose not to submit is still evidence about the model.
+    """
+    written = 0
+    for match_id, questions in result.by_match.items():
+        if not questions:
+            continue
+        context = result.contexts.get(match_id)
+        record = ledger.load(match_id) or MatchRecord(match_id=match_id)
+        raw = result.raw_matches.get(match_id, {})
+        record.match_name = str(raw.get("name") or record.match_name)
+        record.multiplier = int(raw.get("multiplier") or record.multiplier or 1)
+        record.opening_time = str(raw.get("opening_time") or record.opening_time)
+        record.closing_time = str(raw.get("closing_time") or record.closing_time)
+        record.round_code = result.rounds.get(match_id, record.round_code)
+        if context is not None:
+            record.player_a = context.player_a.name
+            record.player_b = context.player_b.name
+            record.draw = {"ATP": "mens", "WTA": "womens"}.get(context.tour, "")
+        entries = [
+            Entry(
+                market_id=q.market_id,
+                question=result.questions.get(q.market_id, ""),
+                family=q.family.value,
+                submission=q.submission,
+                probability=q.probability,
+                base_rate=q.base_rate,
+                model=q.model_probability,
+                market=q.market_probability,
+                market_weight=q.market_weight,
+                confidence=q.confidence,
+                lane=q.lane,
+                notes=list(q.notes),
+            )
+            for q in questions
+            if q.market_id
+        ]
+        ledger.save(ledger.record_predictions(record, entries))
+        written += len(entries)
+    return written
 
 
 def _question_text(market: dict[str, Any]) -> str:
@@ -228,7 +284,9 @@ def run(argv: Sequence[str] | None = None) -> int:
         return 2
 
     path = archive(result, Path(args.out))
+    written = record_to_ledger(result, Ledger())
     print(summarise(result))
+    print(f"ledger   {written} predictions recorded before submission")
     print(f"archived {path}")
     print(f"elapsed  {time.monotonic() - started:.1f}s")
 
