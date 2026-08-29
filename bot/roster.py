@@ -12,15 +12,17 @@ So misses are counted and reported rather than swallowed.
 
 from __future__ import annotations
 
+import configparser
 import csv
 from collections import Counter
 from dataclasses import dataclass, field
 from pathlib import Path
 
-from bot.data.names import build_crosswalk, resolve
+from bot.data.names import ambiguous_keys, build_crosswalk, candidate_keys, disambiguate, resolve
 from bot.pricer import MatchContext, PlayerProfile
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data" / "players"
+OVERRIDES_FILE = DATA_DIR / "name_overrides.ini"
 
 # Best-of by tour.  Grand slam men's singles is best-of-five, women's
 # best-of-three; nothing else appears in this competition.
@@ -80,6 +82,9 @@ class Roster:
     ranks: dict[str, float] = field(default_factory=dict)
     crosswalk: dict[str, str] = field(default_factory=dict)
     misses: Counter = field(default_factory=Counter)
+    resolved_by_dominance: dict[str, str] = field(default_factory=dict)
+    overrides: dict[str, str] = field(default_factory=dict)
+    _ambiguous: dict[str, list[str]] = field(default_factory=dict)
 
     @classmethod
     def load(cls, data_dir: Path | str = DATA_DIR) -> Roster:
@@ -92,8 +97,31 @@ class Roster:
             with path.open(newline="", encoding="utf-8") as handle:
                 for row in csv.DictReader(handle):
                     roster._add(row)
-        roster.crosswalk = build_crosswalk(list(roster.profiles))
+        names = list(roster.profiles)
+        roster.crosswalk = build_crosswalk(names)
+        roster._ambiguous = ambiguous_keys(names)
+        roster.overrides = load_overrides(directory / OVERRIDES_FILE.name)
         return roster
+
+    def _resolve_ambiguous(self, name: str) -> str | None:
+        """Break a genuine collision by career record.
+
+        ``B. Nakashima`` is Brandon or Bryce and no amount of string handling can
+        tell them apart, but a main-draw player at a slam has a tour record and
+        an obscure namesake does not.  Resolve only when one candidate dominates
+        tenfold; otherwise leave it unresolved so the pricer falls back to a tour
+        average rather than confidently using the wrong player's ratings.
+        """
+        weights = {n: p.matches for n, p in self.profiles.items()}
+        for key in candidate_keys(name):
+            candidates = self._ambiguous.get(key)
+            if not candidates:
+                continue
+            chosen = disambiguate(key, list(candidates), weights)
+            if chosen is not None:
+                self.resolved_by_dominance[name] = chosen
+                return chosen
+        return None
 
     def _add(self, row: dict[str, str]) -> None:
         name = (row.get("player") or "").strip()
@@ -127,12 +155,21 @@ class Roster:
         """Resolve a name to a profile, exactly or through the crosswalk."""
         if not name:
             return None
-        direct = self.profiles.get(name.strip())
+        cleaned = name.strip()
+        if cleaned in self.overrides:
+            # A hand-verified mapping outranks every automatic rule: it exists
+            # precisely because the automatic rules were wrong or refused.
+            canonical = self.overrides[cleaned]
+            return self.profiles.get(canonical) if canonical else None
+        direct = self.profiles.get(cleaned)
         if direct is not None:
             return direct
         resolved = resolve(name, self.crosswalk)
         if resolved is not None:
             return self.profiles.get(resolved)
+        dominant = self._resolve_ambiguous(name)
+        if dominant is not None:
+            return self.profiles.get(dominant)
         self.misses[name] += 1
         return None
 
@@ -238,3 +275,24 @@ def _optional(value: str | None) -> float | None:
     except (TypeError, ValueError):
         return None
     return None if result != result else result
+
+
+def load_overrides(path: Path = OVERRIDES_FILE) -> dict[str, str]:
+    """Read hand-verified name mappings for genuine collisions.
+
+    An empty value means "verified absent from our data", which is different
+    from "not looked at yet" and must not be retried by the automatic rules.
+    """
+    if not path.exists():
+        return {}
+    parser = configparser.ConfigParser(allow_no_value=True)
+    parser.optionxform = str
+    try:
+        parser.read(path, encoding="utf-8")
+    except configparser.Error:
+        return {}
+    out: dict[str, str] = {}
+    for section in parser.sections():
+        for key, value in parser.items(section):
+            out[key.strip()] = (value or "").strip()
+    return out

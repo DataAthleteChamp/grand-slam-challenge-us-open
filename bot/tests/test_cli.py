@@ -247,3 +247,41 @@ def test_player_data_is_present():
     directory = Path("data/players")
     assert (directory / "atp_players.csv").exists()
     assert (directory / "wta_players.csv").exists()
+
+
+# ------------------------------------------------- draw roster and overrides
+
+
+def test_verified_overrides_beat_the_automatic_rules(roster):
+    """'X. Wang' is Xiyu, not the better-attested Xinyu. A hand-verified mapping
+    has to outrank career record, or the automatic rule silently wins."""
+    if not roster.overrides:
+        pytest.skip("no overrides file")
+    assert roster.find("X. Wang").name == "Xiyu Wang"
+    assert roster.find("D. Blanch").name == "Darwin Blanch"
+
+
+def test_an_override_with_an_empty_value_means_verified_absent(roster):
+    """Different from 'not looked at yet': it must not be retried by the
+    automatic rules and must not resolve to a wrong player."""
+    if "T. Frodin" not in roster.overrides:
+        pytest.skip("no Frodin override")
+    assert roster.find("T. Frodin") is None
+
+
+def test_the_whole_draw_resolves_except_verified_absences(roster):
+    import glob
+    import json
+
+    files = sorted(glob.glob("data/corpus/corpus-*.json"))
+    if not files:
+        pytest.skip("no corpus captured")
+    corpus = json.loads(open(files[-1]).read())
+    names = set()
+    for record in corpus["matches"]:
+        left, _, right = record["match"]["name"].partition(" vs ")
+        names.update({left.strip(), right.strip()})
+    if not names:
+        pytest.skip("corpus has no matches yet")
+    unresolved = {n for n in names if roster.find(n) is None}
+    assert unresolved <= {k for k, v in roster.overrides.items() if not v}, unresolved

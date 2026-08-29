@@ -205,3 +205,74 @@ def test_market_calibration_reports_brier_against_a_known_outcome():
 
 def test_market_calibration_missing_book_returns_empty():
     assert market_calibration(pd.DataFrame({"p_pinnacle": [0.5]}), "nonexistent") == {}
+
+
+# ------------------------------------------- canonicalisation and collisions
+
+
+def test_identity_key_folds_case_and_accents_only():
+    from bot.data.names import identity_key
+
+    assert identity_key("Alex de Minaur") == identity_key("Alex De Minaur")
+    assert identity_key("McCartney Kessler") == identity_key("Mccartney Kessler")
+    assert identity_key("Julio Cesar Porras") == identity_key("Julio César Porras")
+    # Different given names are different people and must never fold together.
+    assert identity_key("Brandon Nakashima") != identity_key("Bryce Nakashima")
+    assert identity_key("Xinyu Wang") != identity_key("Xiyu Wang")
+
+
+def test_canonical_spellings_prefers_the_best_attested_form():
+    from bot.data.names import canonical_spellings
+
+    mapping = canonical_spellings(
+        ["Alex de Minaur", "Alex De Minaur"], weights={"Alex de Minaur": 249}
+    )
+    assert mapping["Alex De Minaur"] == "Alex de Minaur"
+    assert mapping["Alex de Minaur"] == "Alex de Minaur"
+
+
+def test_canonical_spellings_is_order_independent():
+    from bot.data.names import canonical_spellings
+
+    forward = canonical_spellings(["A B", "a b", "A  B"])
+    backward = canonical_spellings(["A  B", "a b", "A B"])
+    assert set(forward.values()) == set(backward.values())
+
+
+def test_canonical_spellings_keeps_different_players_apart():
+    from bot.data.names import canonical_spellings
+
+    mapping = canonical_spellings(["Brandon Nakashima", "Bryce Nakashima"])
+    assert mapping["Brandon Nakashima"] != mapping["Bryce Nakashima"]
+
+
+def test_disambiguate_resolves_an_overwhelming_favourite():
+    from bot.data.names import disambiguate
+
+    chosen = disambiguate(
+        "nakashima|b",
+        ["Brandon Nakashima", "Bryce Nakashima"],
+        {"Brandon Nakashima": 180, "Bryce Nakashima": 2},
+    )
+    assert chosen == "Brandon Nakashima"
+
+
+def test_disambiguate_refuses_a_close_call():
+    """The case that justifies the threshold.
+
+    'X. Wang' in the 2026 draw is Xiyu Wang (98 matches), not Xinyu Wang (157).
+    A ratio of 1.6 is not evidence, and a lower threshold would have supplied a
+    real but wrong player's ratings with every downstream check passing.
+    """
+    from bot.data.names import disambiguate
+
+    assert (
+        disambiguate("wang|x", ["Xinyu Wang", "Xiyu Wang"], {"Xinyu Wang": 157, "Xiyu Wang": 98})
+        is None
+    )
+
+
+def test_disambiguate_refuses_when_nobody_has_a_record():
+    from bot.data.names import disambiguate
+
+    assert disambiguate("x|y", ["A", "B"], {"A": 0, "B": 0}) is None

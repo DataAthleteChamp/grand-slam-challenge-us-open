@@ -26,6 +26,7 @@ sys.path.insert(0, str(ROOT))
 
 from bot.data.charting import load_overview, summarise_charting  # noqa: E402
 from bot.data.ingest import load_matches, load_players  # noqa: E402
+from bot.data.names import canonical_spellings  # noqa: E402
 from bot.data.players import (  # noqa: E402
     build_player_matches,
     opponent_graph,
@@ -60,6 +61,29 @@ def _total_games(score: object) -> float | None:
             return None
         total += int(match.group(1)) + int(match.group(2))
     return total or None
+
+
+def _canonicalise_names(long: pd.DataFrame) -> pd.DataFrame:
+    """Collapse spellings of one player before anything is fitted.
+
+    A player appearing under two spellings has their match history split, so
+    each half is rated on fewer matches and shrunk harder toward the tour mean.
+    Nothing downstream reports this: both halves look like ordinary players with
+    a shortish record. McCartney Kessler was rated on 41 matches instead of 70.
+
+    This has to happen before the ratings fit, and on the opponent column too,
+    or the two-way rating graph would still treat one player as two nodes.
+    """
+    counts = long["player"].value_counts().to_dict()
+    mapping = canonical_spellings(
+        set(long["player"]) | set(long["opponent"].dropna()), weights=counts
+    )
+    merged = sum(1 for k, v in mapping.items() if k != v)
+    if merged:
+        print(f"  merged {merged} duplicate spellings into canonical names")
+    long["player"] = long["player"].map(lambda n: mapping.get(n, n))
+    long["opponent"] = long["opponent"].map(lambda n: mapping.get(n, n) if pd.notna(n) else n)
+    return long
 
 
 def _fill_player_attributes(long: pd.DataFrame) -> pd.DataFrame:
@@ -101,6 +125,7 @@ def build_tour(tour: str, years: list[int], *, refresh: bool, surface: str) -> d
     print(f"  {len(matches):,} matches, latest {latest}")
 
     long = with_recency(build_player_matches(matches))
+    long = _canonicalise_names(long)
     long, violations = validate(long)
     print(f"  {len(long):,} player-match rows after validation")
     if violations:

@@ -1,71 +1,71 @@
 player,opponent,meetings,wins,last,losses
 Daniil Medvedev,Jannik Sinner,14,5,2026-03-15,9
 Jannik Sinner,Daniil Medvedev,14,9,2026-03-15,5
-Alexander Zverev,Daniil Medvedev,11,3,2025-10-27,8
 Jannik Sinner,Alex de Minaur,11,10,2025-11-10,1
+Alexander Zverev,Daniil Medvedev,11,3,2025-10-27,8
 Daniil Medvedev,Alexander Zverev,11,8,2025-10-27,3
 Alex de Minaur,Jannik Sinner,11,1,2025-11-10,10
-Carlos Alcaraz,Jannik Sinner,10,7,2025-11-10,3
 Jannik Sinner,Carlos Alcaraz,10,3,2025-11-10,7
-Taylor Fritz,Cameron Norrie,9,6,2024-01-01,3
-Carlos Alcaraz,Alexander Zverev,9,4,2026-01-30,5
-Jannik Sinner,Alexander Zverev,9,7,2026-03-28,2
-Alexander Zverev,Tallon Griekspoor,9,6,2026-08-06,3
-Alexander Zverev,Carlos Alcaraz,9,5,2026-01-30,4
+Carlos Alcaraz,Jannik Sinner,10,7,2025-11-10,3
 Alexander Zverev,Jannik Sinner,9,2,2026-03-28,7
 Tallon Griekspoor,Alexander Zverev,9,3,2026-08-06,6
+Taylor Fritz,Cameron Norrie,9,6,2024-01-01,3
+Alexander Zverev,Tallon Griekspoor,9,6,2026-08-06,3
+Jannik Sinner,Alexander Zverev,9,7,2026-03-28,2
+Alexander Zverev,Carlos Alcaraz,9,5,2026-01-30,4
+Carlos Alcaraz,Alexander Zverev,9,4,2026-01-30,5
 Cameron Norrie,Taylor Fritz,9,3,2024-01-01,6
-Grigor Dimitrov,Daniil Medvedev,8,2,2025-10-27,6
-Daniil Medvedev,Grigor Dimitrov,8,6,2025-10-27,2
+Taylor Fritz,Denis Shapovalov,8,5,2025-03-17,3
 Jannik Sinner,Ben Shelton,8,7,2026-01-28,1
 Novak Djokovic,Taylor Fritz,8,8,2025-08-24,0
-Taylor Fritz,Denis Shapovalov,8,5,2025-03-17,3
-Alex de Minaur,Stefanos Tsitsipas,8,2,2026-07-30,6
+Grigor Dimitrov,Daniil Medvedev,8,2,2025-10-27,6
+Daniil Medvedev,Grigor Dimitrov,8,6,2025-10-27,2
 Taylor Fritz,Novak Djokovic,8,0,2025-08-24,8
 Felix Auger-Aliassime,Daniil Medvedev,8,1,2026-02-27,7
+Stefanos Tsitsipas,Alex de Minaur,8,6,2026-07-30,2
+Novak Djokovic,Daniil Medvedev,8,6,2023-08-28,2
 Ben Shelton,Jannik Sinner,8,1,2026-01-28,7
 Daniil Medvedev,Felix Auger-Aliassime,8,7,2026-02-27,1
-Novak Djokovic,Daniil Medvedev,8,6,2023-08-28,2
 Daniil Medvedev,Novak Djokovic,8,2,2023-08-28,6
 Denis Shapovalov,Taylor Fritz,8,3,2025-03-17,5
-Stefanos Tsitsipas,Alex de Minaur,8,6,2026-07-30,2
-J.J. Wolf,Stefan Kozlov,7,3,2025-01-27,4
-Daniil Medvedev,Alex de Minaur,7,5,2025-10-01,2
-Alexander Zverev,Novak Djokovic,7,3,2025-01-13,4
-Tung-Lin Wu,Rio Noguchi,7,4,2026-03-30,3
+Alex de Minaur,Stefanos Tsitsipas,8,2,2026-07-30,6
+Tristan Schoolkate,Adam Walton,7,4,2025-10-13,3
+Stefan Kozlov,J.J. Wolf,7,4,2025-01-27,3
 Frances Tiafoe,Brandon Nakashima,7,6,2026-08-23,1
-Adam Walton,Tristan Schoolkate,7,3,2025-10-13,4
+James Duckworth,Li Tu,7,3,2025-08-07,4
 Stefanos Tsitsipas,Daniil Medvedev,7,3,2026-02-18,4
 Alex de Minaur,Taylor Fritz,7,3,2025-11-10,4
-Alex de Minaur,Daniil Medvedev,7,2,2025-10-01,5
+Li Tu,James Duckworth,7,4,2025-08-07,3
 Brandon Nakashima,Frances Tiafoe,7,1,2026-08-23,6
-Daniil Medvedev,Stefanos Tsitsipas,7,4,2026-02-18,3
+J.J. Wolf,Stefan Kozlov,7,3,2025-01-27,4
+Alex de Minaur,Daniil Medvedev,7,2,2025-10-01,5
+Daniil Medvedev,Alex de Minaur,7,5,2025-10-01,2
 Alexander Zverev,Taylor Fritz,7,1,2025-09-19,6
-Tristan Schoolkate,Adam Walton,7,4,2025-10-13,3
+Tung-Lin Wu,Rio Noguchi,7,4,2026-03-30,3
 Taylor Fritz,Alexander Zverev,7,6,2025-09-19,1
-James Duckworth,Li Tu,7,3,2025-08-07,4
 Taylor Fritz,Alex de Minaur,7,4,2025-11-10,3
+Alexander Zverev,Novak Djokovic,7,3,2025-01-13,4
 Novak Djokovic,Alexander Zverev,7,4,2025-01-13,3
 Rio Noguchi,Tung-Lin Wu,7,3,2026-03-30,4
-Stefan Kozlov,J.J. Wolf,7,4,2025-01-27,3
-Li Tu,James Duckworth,7,4,2025-08-07,3
-Carlos Alcaraz,Casper Ruud,6,5,2026-03-12,1
-Daniil Medvedev,Carlos Alcaraz,6,2,2026-03-15,4
-Felix Auger-Aliassime,Stefanos Tsitsipas,6,2,2026-08-16,4
-Novak Djokovic,Jannik Sinner,6,2,2026-01-30,4
+Daniil Medvedev,Stefanos Tsitsipas,7,4,2026-02-18,3
+Adam Walton,Tristan Schoolkate,7,3,2025-10-13,4
 Christopher Eubanks,Aleksandar Vukic,6,1,2023-07-24,5
-Alejandro Davidovich Fokina,Daniil Medvedev,6,1,2025-10-01,5
-Daniil Medvedev,Andrey Rublev,6,4,2023-11-13,2
-Andrey Rublev,Taylor Fritz,6,1,2025-07-27,5
 Andrey Rublev,Daniil Medvedev,6,2,2023-11-13,4
-Christopher O'Connell,Yosuke Watanuki,6,4,2025-02-17,2
+Novak Djokovic,Jannik Sinner,6,2,2026-01-30,4
+Daniil Medvedev,Andrey Rublev,6,4,2023-11-13,2
+Daniel Evans,Frances Tiafoe,6,1,2024-10-14,5
+Alejandro Davidovich Fokina,Daniil Medvedev,6,1,2025-10-01,5
+Daniil Medvedev,Carlos Alcaraz,6,2,2026-03-15,4
 Carlos Alcaraz,Daniil Medvedev,6,4,2026-03-15,2
 Carlos Alcaraz,Felix Auger-Aliassime,6,3,2025-11-10,3
+Felix Auger-Aliassime,Stefanos Tsitsipas,6,2,2026-08-16,4
 Daniil Medvedev,Alejandro Davidovich Fokina,6,5,2025-10-01,1
+Christopher O'Connell,Yosuke Watanuki,6,4,2025-02-17,2
+Andrey Rublev,Taylor Fritz,6,1,2025-07-27,5
 David Goffin,Alex de Minaur,6,0,2025-03-03,6
 Jannik Sinner,Tallon Griekspoor,6,5,2025-10-01,1
-Yuta Shimizu,Sho Shimabukuro,6,4,2026-04-27,2
-Aleksandar Vukic,Christopher Eubanks,6,5,2023-07-24,1
+Carlos Alcaraz,Casper Ruud,6,5,2026-03-12,1
+Stefanos Tsitsipas,Felix Auger-Aliassime,6,4,2026-08-16,2
 Hubert Hurkacz,Alexander Bublik,6,5,2026-02-11,1
 Stefanos Tsitsipas,Karen Khachanov,6,5,2025-02-24,1
 Karen Khachanov,Stefanos Tsitsipas,6,1,2025-02-24,5
@@ -76,34 +76,34 @@ Yosuke Watanuki,Christopher O'Connell,6,2,2025-02-17,4
 Frances Tiafoe,Daniel Evans,6,5,2024-10-14,1
 Alexander Bublik,Hubert Hurkacz,6,1,2026-02-11,5
 Felix Auger-Aliassime,Carlos Alcaraz,6,3,2025-11-10,3
-Daniel Evans,Frances Tiafoe,6,1,2024-10-14,5
+Yuta Shimizu,Sho Shimabukuro,6,4,2026-04-27,2
 Holger Rune,Ugo Humbert,6,5,2025-10-13,1
+Aleksandar Vukic,Christopher Eubanks,6,5,2023-07-24,1
 Casper Ruud,Carlos Alcaraz,6,1,2026-03-12,5
-Stefanos Tsitsipas,Felix Auger-Aliassime,6,4,2026-08-16,2
-Ugo Humbert,Holger Rune,6,1,2025-10-13,5
 Quentin Halys,Gregoire Barrere,6,3,2024-11-03,3
+Taylor Fritz,Andrey Rublev,6,5,2025-07-27,1
 Gregoire Barrere,Quentin Halys,6,3,2024-11-03,3
 Taylor Fritz,Tommy Paul,6,3,2026-02-21,3
 Jannik Sinner,Novak Djokovic,6,4,2026-01-30,2
-Taylor Fritz,Andrey Rublev,6,5,2025-07-27,1
 Tommy Paul,Taylor Fritz,6,3,2026-02-21,3
+Ugo Humbert,Holger Rune,6,1,2025-10-13,5
+Taylor Fritz,Frances Tiafoe,5,5,2024-08-26,0
 Taylor Fritz,Sebastian Baez,5,4,2026-01-03,1
 Max Purcell,Yu Hsiou Hsu,5,3,2023-10-02,2
-Taylor Fritz,Frances Tiafoe,5,5,2024-08-26,0
+Francisco Cerundolo,Karen Khachanov,5,0,2024-09-26,5
 Felix Auger-Aliassime,Alexander Zverev,5,3,2025-11-10,2
 Yasutaka Uchiyama,Tung-Lin Wu,5,2,2024-11-17,3
 Yuta Shimizu,Marc Polmans,5,3,2024-10-27,2
-Marton Fucsovics,Andrey Rublev,5,0,2022-02-07,5
 Andrey Rublev,Hubert Hurkacz,5,2,2025-02-03,3
 Felix Auger-Aliassime,Andrey Rublev,5,2,2025-08-24,3
-Miomir Kecmanovic,Tommy Paul,5,3,2026-02-13,2
+Marton Fucsovics,Andrey Rublev,5,0,2022-02-07,5
 Ben Shelton,Adrian Mannarino,5,2,2026-02-13,3
 Andrey Rublev,Cameron Norrie,5,2,2025-10-20,3
+Miomir Kecmanovic,Tommy Paul,5,3,2026-02-13,2
 Alexander Bublik,Felix Auger-Aliassime,5,1,2026-02-15,4
 Edas Butvilas,Antoine Escoffier,5,1,2025-07-21,4
-Andrey Rublev,Felix Auger-Aliassime,5,3,2025-08-24,2
 Yoshihito Nishioka,Frances Tiafoe,5,2,2025-08-24,3
-Francisco Cerundolo,Karen Khachanov,5,0,2024-09-26,5
+Andrey Rublev,Felix Auger-Aliassime,5,3,2025-08-24,2
 Thanasi Kokkinakis,Sebastian Korda,5,1,2026-01-12,4
 Harold Mayot,Lucas Pouille,5,1,2024-09-30,4
 Grigor Dimitrov,Alexander Zverev,5,1,2024-03-18,4
@@ -159,8 +159,8 @@ Kaichi Uchida,Sho Shimabukuro,5,4,2025-11-10,1
 Mackenzie McDonald,Yoshihito Nishioka,5,2,2024-07-22,3
 Frances Tiafoe,Lorenzo Sonego,5,2,2026-08-17,3
 Sebastian Korda,Hubert Hurkacz,5,1,2024-03-18,4
-Jordan Thompson,Brandon Nakashima,5,1,2025-09-24,4
 Botic van de Zandschulp,Adrian Mannarino,5,4,2024-02-26,1
+Jordan Thompson,Brandon Nakashima,5,1,2025-09-24,4
 Hubert Hurkacz,Sebastian Korda,5,4,2024-03-18,1
 Alexander Zverev,Andrey Rublev,5,3,2024-11-11,2
 Daniil Medvedev,Botic van de Zandschulp,5,4,2026-08-06,1
@@ -297,13 +297,13 @@ Aslan Karatsev,Grigor Dimitrov,4,1,2023-02-13,3
 Matteo Arnaldi,Andrey Rublev,4,1,2026-01-19,3
 Casper Ruud,Jordan Thompson,4,1,2024-10-28,3
 Botic van de Zandschulp,Carlos Alcaraz,4,1,2025-02-03,3
-Alex de Minaur,Alexander Zverev,4,2,2025-09-19,2
 Ugo Humbert,Stefanos Tsitsipas,4,3,2026-02-24,1
 Francisco Cerundolo,Jannik Sinner,4,1,2025-10-27,3
+Alex de Minaur,Alexander Zverev,4,2,2025-09-19,2
+Flavio Cobolli,Ben Shelton,4,1,2025-10-27,3
 Alex de Minaur,Alexander Bublik,4,3,2026-01-25,1
 Hubert Hurkacz,Carlos Alcaraz,4,0,2025-02-03,4
 Ethan Quinn,Zachary Svajda,4,0,2025-02-10,4
-Flavio Cobolli,Ben Shelton,4,1,2025-10-27,3
 Marcos Giron,Norbert Gombos,4,3,2021-11-01,1
 Karen Khachanov,Sebastian Korda,4,2,2023-09-20,2
 Sebastian Korda,Miomir Kecmanovic,4,3,2025-11-03,1
@@ -561,10 +561,10 @@ Jiri Lehecka,Andrey Rublev,4,2,2024-08-26,2
 David Goffin,Benjamin Bonzi,4,3,2025-01-13,1
 Rinky Hijikata,Yuta Shimizu,4,3,2024-10-28,1
 Patrick Kypson,Alexis Galarneau,4,1,2025-07-21,3
-Aleksandar Kovacevic,Miomir Kecmanovic,4,1,2025-10-27,3
 Zhizhen Zhang,Andrey Rublev,4,0,2025-02-03,4
 Hubert Hurkacz,Stefanos Tsitsipas,4,2,2023-08-14,2
 Hubert Hurkacz,Tallon Griekspoor,4,3,2026-01-07,1
+Aleksandar Kovacevic,Miomir Kecmanovic,4,1,2025-10-27,3
 Hubert Hurkacz,Thanasi Kokkinakis,4,4,2024-08-06,0
 Aleksandar Vukic,Max Purcell,4,2,2024-08-26,2
 Grigor Dimitrov,Hubert Hurkacz,4,4,2024-03-18,0
@@ -599,7 +599,7 @@ Jiri Lehecka,Brandon Nakashima,4,2,2024-03-04,2
 Marton Fucsovics,Roberto Bautista Agut,4,3,2025-08-18,1
 Andrey Rublev,Nuno Borges,4,3,2026-08-18,1
 Hubert Hurkacz,Ugo Humbert,4,2,2024-02-26,2
-Hubert Hurkacz,Zhizhen Zhang,4,2,2025-02-10,2
+Arthur Fils,Ugo Humbert,4,1,2025-01-13,3
 Antoine Escoffier,Ryan Peniston,4,2,2025-10-06,2
 Tommy Paul,Cameron Norrie,4,2,2025-03-03,2
 Mackenzie McDonald,Alejandro Davidovich Fokina,4,1,2025-03-03,3
@@ -607,11 +607,11 @@ Tommy Paul,Casper Ruud,4,1,2024-03-04,3
 Kamil Majchrzak,Miomir Kecmanovic,4,1,2026-03-20,3
 Christopher Eubanks,Roman Safiullin,4,1,2025-03-11,3
 Borna Coric,Stefanos Tsitsipas,4,2,2023-07-31,2
-Mackenzie McDonald,Brandon Nakashima,4,4,2024-07-22,0
-Arthur Fils,Ugo Humbert,4,1,2025-01-13,3
-Sebastian Korda,Andrey Rublev,4,0,2024-02-26,4
-Tommy Paul,Ben Shelton,4,2,2024-02-05,2
 Jiri Lehecka,Grigor Dimitrov,4,3,2025-02-17,1
+Mackenzie McDonald,Brandon Nakashima,4,4,2024-07-22,0
+Hubert Hurkacz,Zhizhen Zhang,4,2,2025-02-10,2
+Tommy Paul,Ben Shelton,4,2,2024-02-05,2
+Sebastian Korda,Andrey Rublev,4,0,2024-02-26,4
 Tomas Machac,Soonwoo Kwon,4,3,2025-01-31,1
 Carlos Alcaraz,Tallon Griekspoor,4,3,2024-11-19,1
 Quentin Halys,Arthur Fils,4,1,2026-02-18,3
@@ -622,12 +622,12 @@ Cameron Norrie,Jiri Lehecka,4,3,2025-03-03,1
 Yosuke Watanuki,Yun seong Chung,4,4,2022-11-27,0
 Enzo Couacaud,Emilio Gomez,4,2,2023-01-07,2
 Zhizhen Zhang,Hubert Hurkacz,4,2,2025-02-10,2
-Andrey Rublev,Casper Ruud,4,1,2024-11-11,3
+Learner Tien,Cameron Norrie,4,3,2025-11-03,1
 Tung-Lin Wu,Paul Jubb,4,1,2026-03-30,3
 Daniel Altmaier,Arthur Fils,4,2,2025-02-03,2
 Sebastian Korda,Alexei Popyrin,4,3,2025-11-03,1
 Casper Ruud,Francisco Cerundolo,4,1,2025-03-17,3
-Learner Tien,Cameron Norrie,4,3,2025-11-03,1
+Andrey Rublev,Casper Ruud,4,1,2024-11-11,3
 Omar Jasika,James McCabe,4,1,2025-04-28,3
 Alexander Bublik,Daniil Medvedev,3,0,2023-02-27,3
 Daniel Altmaier,Aleksandar Kovacevic,3,1,2025-03-11,2
@@ -774,7 +774,7 @@ Diego Schwartzman,Arthur Rinderknech,3,1,2024-03-20,2
 Lorenzo Sonego,Aslan Karatsev,3,1,2022-09-19,2
 Marton Fucsovics,Alex de Minaur,3,1,2023-03-06,2
 Alex de Minaur,Carlos Alcaraz,3,0,2026-01-27,3
-Reilly Opelka,Cameron Norrie,3,1,2025-02-03,2
+Constant Lestienne,Liam Broady,3,3,2024-02-26,0
 Taylor Fritz,Jenson Brooksby,3,2,2025-09-24,1
 Lorenzo Musetti,Roman Safiullin,3,2,2025-03-03,1
 Daniel Altmaier,Jannik Sinner,3,0,2025-10-20,3
@@ -788,18 +788,18 @@ Bernabe Zapata Miralles,Brandon Nakashima,3,0,2023-10-02,3
 Alex de Minaur,Brandon Nakashima,3,1,2026-07-31,2
 Alex de Minaur,Matteo Berrettini,3,2,2025-10-20,1
 Enzo Couacaud,Gabriel Diallo,3,0,2023-08-19,3
-Yasutaka Uchiyama,Yuta Shimizu,3,1,2026-04-20,2
+James Duckworth,Marc Polmans,3,1,2023-05-07,2
 Taylor Fritz,Hubert Hurkacz,3,2,2026-01-10,1
 Taylor Fritz,Holger Rune,3,2,2024-10-02,1
 Alex de Minaur,Andy Murray,3,3,2023-10-30,0
-James Duckworth,Marc Polmans,3,1,2023-05-07,2
+Yasutaka Uchiyama,Yuta Shimizu,3,1,2026-04-20,2
 Jurij Rodionov,Zdenek Kolar,3,2,2024-02-25,1
 Maxime Janvier,Gregoire Barrere,3,0,2022-07-24,3
+Lorenzo Sonego,Jannik Sinner,3,0,2023-10-23,3
 Alex Michelsen,Taylor Fritz,3,1,2026-08-16,2
 Bernard Tomic,Nicolas Mejia,3,2,2026-02-23,1
-Reilly Opelka,Botic van de Zandschulp,3,2,2025-10-20,1
 Lorenzo Sonego,Juncheng Shang,3,2,2026-08-15,1
-Constant Lestienne,Liam Broady,3,3,2024-02-26,0
+Reilly Opelka,Cameron Norrie,3,1,2025-02-03,2
 Lorenzo Sonego,Lorenzo Musetti,3,1,2026-01-22,2
 Lorenzo Musetti,Reilly Opelka,3,1,2024-08-26,2
 Alex de Minaur,Marin Cilic,3,1,2025-02-24,2
@@ -815,8 +815,8 @@ Alex Michelsen,Jannik Sinner,3,0,2026-03-24,3
 Gijs Brouwer,Mathias Bourgue,3,2,2024-01-28,1
 Reilly Opelka,Casper Ruud,3,0,2025-09-19,3
 Benoit Paire,Thanasi Kokkinakis,3,1,2023-03-22,2
-Bernard Tomic,Tristan Schoolkate,3,3,2025-09-17,0
 Alex Michelsen,Karen Khachanov,3,1,2026-01-20,2
+Bernard Tomic,Tristan Schoolkate,3,3,2025-09-17,0
 Bernard Tomic,Tristan Boyer,3,0,2026-07-27,3
 Taylor Fritz,Lorenzo Musetti,3,2,2026-01-26,1
 James McCabe,Alex Bolt,3,1,2026-07-27,2
@@ -825,7 +825,7 @@ Rio Noguchi,James Duckworth,3,1,2025-11-24,2
 James Duckworth,Kaichi Uchida,3,3,2025-11-03,0
 Alex de Minaur,Grigor Dimitrov,3,2,2024-02-12,1
 Alex de Minaur,Frances Tiafoe,3,2,2026-01-23,1
-Lorenzo Sonego,Jannik Sinner,3,0,2023-10-23,3
+Reilly Opelka,Botic van de Zandschulp,3,2,2025-10-20,1
 Nikoloz Basilashvili,Constant Lestienne,3,1,2024-11-24,2
 James Duckworth,Yasutaka Uchiyama,3,1,2024-10-13,2
 Lorenzo Sonego,Alexander Zverev,3,0,2025-09-24,3
@@ -841,8 +841,8 @@ Mitchell Krueger,Govind Nanda,3,2,2022-09-19,1
 Jurij Rodionov,Rei Sakamoto,3,1,2026-08-17,2
 Daniel Rincon,Viktor Durasovic,3,2,2026-03-02,1
 Lorenzo Sonego,Casper Ruud,3,0,2024-10-14,3
-Taylor Fritz,Alexander Bublik,3,1,2025-10-27,2
 Yasutaka Uchiyama,James Duckworth,3,2,2024-10-13,1
+Taylor Fritz,Alexander Bublik,3,1,2025-10-27,2
 Lorenzo Sonego,Cameron Norrie,3,0,2025-11-03,3
 Taylor Fritz,Alex Michelsen,3,2,2026-08-16,1
 Taylor Fritz,Aleksandar Vukic,3,3,2025-10-27,0
@@ -875,8 +875,8 @@ James Duckworth,Mikhail Kukushkin,3,2,2025-10-13,1
 Maxime Janvier,Elias Ymer,3,2,2025-11-03,1
 Nikoloz Basilashvili,Cameron Norrie,3,0,2022-03-07,3
 Taro Daniel,Yasutaka Uchiyama,3,3,2025-10-27,0
-Gijs Brouwer,Ugo Blanchet,3,2,2024-09-22,1
 Yasutaka Uchiyama,Emilio Gomez,3,2,2023-07-16,1
+Gijs Brouwer,Ugo Blanchet,3,2,2024-09-22,1
 Jurij Rodionov,Shintaro Mochizuki,3,1,2026-02-06,2
 Yasutaka Uchiyama,Evgeny Donskoy,3,1,2023-10-04,2
 Alex de Minaur,Marton Fucsovics,3,2,2023-03-06,1
@@ -947,8 +947,8 @@ Lorenzo Musetti,Grigor Dimitrov,3,1,2023-10-30,2
 Constant Lestienne,Nikoloz Basilashvili,3,2,2024-11-24,1
 Lorenzo Sonego,Tallon Griekspoor,3,2,2026-08-05,1
 Lorenzo Musetti,Jack Draper,3,0,2024-10-21,3
-Yi Zhou,Jie Cui,3,2,2026-01-26,1
 Mitchell Krueger,Denis Kudla,3,1,2023-11-19,2
+Yi Zhou,Jie Cui,3,2,2026-01-26,1
 Alex de Minaur,Sebastian Korda,3,3,2026-03-08,0
 Alex Michelsen,Cameron Norrie,3,2,2026-03-22,1
 Taylor Fritz,Steve Johnson,3,3,2023-08-28,0
@@ -2003,349 +2003,349 @@ Mikhail Kukushkin,Mark Lajal,3,1,2026-05-04,2
 Miomir Kecmanovic,Marcos Giron,3,2,2025-02-10,1
 Tomas Martin Etcheverry,Jason Kubler,3,1,2023-01-09,2
 Aleksandar Kovacevic,Alibek Kachmazov,3,2,2025-01-21,1
-Borna Gojo,Henri Laaksonen,3,1,2022-08-14,2
-Nishesh Basavareddy,Stefan Kozlov,3,3,2025-02-24,0
-Denis Shapovalov,Botic van de Zandschulp,3,1,2026-03-19,2
-Borna Coric,Sebastian Baez,3,1,2024-08-18,2
-Cem Ilkel,Jenson Brooksby,3,1,2021-10-04,2
 Maximilian Marterer,Lukas Klein,3,1,2024-09-10,2
-Ryan Seggerman,Brandon Holt,3,0,2025-02-03,3
-Aleksandar Kovacevic,Cameron Norrie,3,2,2026-07-28,1
-Ethan Quinn,Alexis Galarneau,3,1,2024-10-28,2
-Yosuke Watanuki,Juncheng Shang,3,2,2023-10-02,1
-Miomir Kecmanovic,Pablo Carreno Busta,3,2,2026-02-03,1
-Denis Shapovalov,Jiri Lehecka,3,1,2025-10-01,2
-Borna Gojo,James Duckworth,3,1,2022-09-11,2
-Aleksandar Kovacevic,Taro Daniel,3,1,2024-09-25,2
-Miomir Kecmanovic,Pavel Kotov,3,2,2024-10-28,1
-Denis Shapovalov,Marcos Giron,3,2,2025-10-20,1
-Miomir Kecmanovic,Tomas Martin Etcheverry,3,0,2026-01-18,3
-Yosuke Watanuki,Yu Hsiou Hsu,3,1,2024-09-08,2
-Aleksandar Kovacevic,Brandon Holt,3,1,2024-02-19,2
-Denis Shapovalov,Marton Fucsovics,3,3,2025-08-24,0
-Denis Shapovalov,Pablo Carreno Busta,3,1,2026-02-24,2
-Miomir Kecmanovic,Taylor Fritz,3,1,2023-02-13,2
-Ilia Simakin,Sho Shimabukuro,3,1,2026-04-13,2
-Nishesh Basavareddy,Eliot Spizzirri,3,3,2024-11-17,0
-Aleksandar Vukic,Damir Dzumhur,3,2,2025-10-20,1
-Aleksandar Vukic,Alexander Bublik,3,1,2025-09-17,2
-Masamichi Imamura,Yuta Shimizu,3,0,2025-10-27,3
-Dane Sweeny,Taro Daniel,3,2,2026-02-09,1
-Denis Shapovalov,Lloyd Harris,3,0,2022-03-21,3
-Lloyd Harris,Denis Shapovalov,3,3,2022-03-21,0
-Corentin Moutet,Jan-Lennard Struff,3,3,2025-10-13,0
-Aleksandar Kovacevic,Matteo Arnaldi,3,0,2025-10-20,3
-Aleksandar Kovacevic,Coleman Wong,3,1,2025-08-24,2
-Aleksandar Kovacevic,Hamad Medjedovic,3,0,2026-01-13,3
-Borna Coric,Thanasi Kokkinakis,3,3,2023-02-27,0
-Borna Gojo,Kimmer Coppejans,3,1,2023-01-22,2
-Kamil Majchrzak,Quentin Halys,3,1,2026-03-24,2
 Denis Shapovalov,Daniel Evans,3,2,2024-09-15,1
 Nishesh Basavareddy,Zachary Svajda,3,0,2025-07-28,3
-Aleksandar Kovacevic,Daniel Altmaier,3,2,2025-03-11,1
-Denis Shapovalov,Daniil Medvedev,3,0,2022-10-24,3
 Aleksandar Vukic,David Goffin,3,2,2025-09-17,1
-Denis Shapovalov,Hugo Gaston,3,2,2024-02-12,1
-Denis Shapovalov,Hubert Hurkacz,3,1,2023-01-16,2
 Corentin Moutet,Holger Rune,3,2,2025-03-03,1
-Aleksandar Vukic,Daniel Altmaier,3,1,2026-08-04,2
 Aleksandar Kovacevic,Christopher Eubanks,3,1,2024-12-30,2
 Ethan Quinn,Marcos Giron,3,1,2026-03-09,2
+Aleksandar Vukic,Alexander Bublik,3,1,2025-09-17,2
+Nishesh Basavareddy,Eliot Spizzirri,3,3,2024-11-17,0
+Nishesh Basavareddy,Stefan Kozlov,3,3,2025-02-24,0
+Denis Shapovalov,Botic van de Zandschulp,3,1,2026-03-19,2
+Cem Ilkel,Jenson Brooksby,3,1,2021-10-04,2
+Ryan Seggerman,Brandon Holt,3,0,2025-02-03,3
 Aleksandar Kovacevic,Ben Shelton,3,1,2022-11-20,2
-Aleksandar Kovacevic,Steve Johnson,3,3,2024-02-19,0
-Sho Shimabukuro,Ilia Simakin,3,2,2026-04-13,1
-Aleksandar Vukic,Adam Walton,3,1,2025-10-27,2
-Marton Fucsovics,Sebastian Korda,3,2,2025-08-18,1
-Aleksandar Kovacevic,Zachary Svajda,3,2,2026-02-18,1
-Renta Tokuda,Elias Ymer,3,0,2025-11-10,3
-Aleksandar Kovacevic,Beibit Zhukayev,3,3,2025-01-13,0
-Denis Shapovalov,Miomir Kecmanovic,3,3,2025-02-03,0
-Borna Coric,Emil Ruusuvuori,3,2,2025-03-03,1
-Denis Shapovalov,Tommy Paul,3,2,2025-02-03,1
+Aleksandar Kovacevic,Cameron Norrie,3,2,2026-07-28,1
+Miomir Kecmanovic,Pavel Kotov,3,2,2024-10-28,1
+Miomir Kecmanovic,Pablo Carreno Busta,3,2,2026-02-03,1
+Borna Gojo,Henri Laaksonen,3,1,2022-08-14,2
+Denis Shapovalov,Jiri Lehecka,3,1,2025-10-01,2
+Denis Shapovalov,Marcos Giron,3,2,2025-10-20,1
+Miomir Kecmanovic,Tomas Martin Etcheverry,3,0,2026-01-18,3
+Denis Shapovalov,Marton Fucsovics,3,3,2025-08-24,0
+Aleksandar Kovacevic,Brandon Holt,3,1,2024-02-19,2
+Denis Shapovalov,Pablo Carreno Busta,3,1,2026-02-24,2
+Miomir Kecmanovic,Taylor Fritz,3,1,2023-02-13,2
+Borna Coric,Thanasi Kokkinakis,3,3,2023-02-27,0
+Aleksandar Kovacevic,Hamad Medjedovic,3,0,2026-01-13,3
+Aleksandar Kovacevic,Coleman Wong,3,1,2025-08-24,2
+Lloyd Harris,Denis Shapovalov,3,3,2022-03-21,0
 Denis Shapovalov,Roberto Bautista Agut,3,3,2025-01-13,0
+Marton Fucsovics,Sebastian Korda,3,2,2025-08-18,1
+Borna Coric,Emil Ruusuvuori,3,2,2025-03-03,1
 Denis Shapovalov,Ben Shelton,3,0,2026-02-15,3
+Borna Gojo,James Duckworth,3,1,2022-09-11,2
+Yosuke Watanuki,Yu Hsiou Hsu,3,1,2024-09-08,2
+Aleksandar Kovacevic,Steve Johnson,3,3,2024-02-19,0
+Aleksandar Kovacevic,Taro Daniel,3,1,2024-09-25,2
+Yosuke Watanuki,Juncheng Shang,3,2,2023-10-02,1
+Ethan Quinn,Alexis Galarneau,3,1,2024-10-28,2
+Borna Coric,Sebastian Baez,3,1,2024-08-18,2
+Aleksandar Vukic,Damir Dzumhur,3,2,2025-10-20,1
+Masamichi Imamura,Yuta Shimizu,3,0,2025-10-27,3
+Aleksandar Vukic,Daniel Altmaier,3,1,2026-08-04,2
+Denis Shapovalov,Hubert Hurkacz,3,1,2023-01-16,2
+Denis Shapovalov,Hugo Gaston,3,2,2024-02-12,1
+Denis Shapovalov,Daniil Medvedev,3,0,2022-10-24,3
+Aleksandar Kovacevic,Daniel Altmaier,3,2,2025-03-11,1
+Kamil Majchrzak,Quentin Halys,3,1,2026-03-24,2
+Aleksandar Kovacevic,Matteo Arnaldi,3,0,2025-10-20,3
+Corentin Moutet,Jan-Lennard Struff,3,3,2025-10-13,0
+Denis Shapovalov,Lloyd Harris,3,0,2022-03-21,3
+Dane Sweeny,Taro Daniel,3,2,2026-02-09,1
+Ilia Simakin,Sho Shimabukuro,3,1,2026-04-13,2
+Borna Gojo,Kimmer Coppejans,3,1,2023-01-22,2
+Aleksandar Kovacevic,Zachary Svajda,3,2,2026-02-18,1
+Aleksandar Kovacevic,Beibit Zhukayev,3,3,2025-01-13,0
+Aleksandar Vukic,Adam Walton,3,1,2025-10-27,2
+Denis Shapovalov,Tommy Paul,3,2,2025-02-03,1
+Denis Shapovalov,Miomir Kecmanovic,3,3,2025-02-03,0
 Corentin Moutet,Daniil Medvedev,3,2,2025-10-20,1
+Renta Tokuda,Elias Ymer,3,0,2025-11-10,3
 Denis Shapovalov,Jannik Sinner,3,1,2026-03-09,2
-Marcos Giron,Daniel Altmaier,2,0,2025-10-27,2
-Gilles Arnaud Bailly,Daniel Altmaier,2,1,2025-10-13,1
-Skander Mansouri,Maks Kasnikowski,2,1,2022-11-20,1
-Matteo Arnaldi,Jesper de Jong,2,2,2025-10-20,0
-Dominic Stricker,Tim van Rijthoven,2,2,2022-10-31,0
-Mikael Ymer,Roman Safiullin,2,1,2023-02-13,1
-Jay Clarke,Adrian Andreev,2,1,2022-11-20,1
-Arthur Rinderknech,Antoine Hoang,2,2,2021-09-27,0
-Timofey Skatov,Billy Harris,2,1,2025-02-03,1
-Dominic Stricker,Tobias Kamke,2,2,2021-09-26,0
-Tallon Griekspoor,Jacob Fearnley,2,1,2025-10-13,1
-Cameron Norrie,Benjamin Bonzi,2,1,2026-01-18,1
-Murphy Cassone,Rio Noguchi,2,1,2025-01-13,1
-Dominic Stricker,Ugo Humbert,2,0,2024-12-29,2
-Christopher Eubanks,Maximilian Marterer,2,1,2023-03-08,1
-Arthur Rinderknech,Borna Coric,2,0,2023-02-06,2
-Arthur Rinderknech,Botic van de Zandschulp,2,0,2023-10-23,2
-Arthur Rinderknech,Brandon Nakashima,2,1,2026-08-09,1
-Matteo Arnaldi,Mackenzie McDonald,2,1,2026-03-06,1
+Sho Shimabukuro,Ilia Simakin,3,2,2026-04-13,1
+Javier Barranco Cosano,Pol Martin Tiffon,2,0,2025-02-03,2
+Cameron Norrie,Arthur Rinderknech,2,2,2025-02-10,0
+Arthur Rinderknech,Casper Ruud,2,1,2025-08-07,1
+Hugo Grenier,Antoine Escoffier,2,1,2024-01-29,1
+Arthur Rinderknech,Corentin Moutet,2,1,2023-11-12,1
+Arthur Rinderknech,Damir Dzumhur,2,1,2024-01-06,1
+Seongchan Hong,Mark Lajal,2,2,2024-04-14,0
+Cameron Norrie,Arthur Cazaux,2,2,2025-11-03,0
+Mikhail Kukushkin,Luca Van Assche,2,1,2026-02-16,1
+J.J. Wolf,Andrey Rublev,2,0,2023-03-20,2
+Marco Trungelliti,Zhizhen Zhang,2,1,2023-02-06,1
+Matteo Arnaldi,Lukas Klein,2,1,2024-01-01,1
+Blake Ellis,Antoine Escoffier,2,2,2025-01-12,0
+Tallon Griekspoor,Grigor Dimitrov,2,0,2024-10-14,2
+Murphy Cassone,Rafael Jodar,2,0,2026-02-09,2
+Arthur Rinderknech,Felix Auger-Aliassime,2,1,2025-10-01,1
+Mikhail Kukushkin,Martin Damm,2,1,2024-01-29,1
+Murphy Cassone,Philip Sekulic,2,2,2026-07-13,0
+Cameron Norrie,Matteo Berrettini,2,0,2025-10-20,2
+Matteo Arnaldi,Tristan Schoolkate,2,2,2025-10-20,0
+Marcos Giron,Alex Michelsen,2,2,2026-01-14,0
+Marcos Giron,Alejandro Davidovich Fokina,2,0,2025-10-13,2
 Arthur Rinderknech,Cameron Norrie,2,0,2025-02-10,2
+Seongchan Hong,Mattia Bellucci,2,1,2024-08-17,1
+Daniel Masur,Elias Ymer,2,2,2022-08-29,0
+Marton Fucsovics,Daniil Medvedev,2,0,2026-01-05,2
+Arthur Rinderknech,Denis Shapovalov,2,1,2022-02-14,1
+Stefan Kozlov,Keegan Smith,2,1,2026-02-02,1
+Arthur Rinderknech,Daniil Medvedev,2,1,2025-10-01,1
+Cameron Norrie,Aslan Karatsev,2,1,2023-09-20,1
+Arthur Fils,Otto Virtanen,2,2,2025-01-13,0
+Matteo Arnaldi,Mackenzie McDonald,2,1,2026-03-06,1
+Jay Clarke,Andrew Harris,2,2,2022-02-13,0
+Tallon Griekspoor,Giovanni Mpetshi Perricard,2,2,2026-02-10,0
+Arthur Rinderknech,Alexander Bublik,2,2,2022-02-14,0
+J.J. Wolf,Alex de Minaur,2,0,2023-08-14,2
+Stefan Kozlov,Cannon Kingsley,2,2,2022-10-30,0
+Titouan Droguet,Valentin Royer,2,1,2025-10-01,1
+Stefan Kozlov,Cedrik-Marcel Stebe,2,2,2026-02-02,0
+Seongchan Hong,Maks Kasnikowski,2,1,2024-09-13,1
+Christopher Eubanks,Michael Mmoh,2,1,2022-11-13,1
+Denis Shapovalov,Novak Djokovic,2,0,2023-01-02,2
+Cameron Norrie,Botic van de Zandschulp,2,1,2022-09-16,1
+Arthur Rinderknech,Alex Molcan,2,2,2026-02-06,0
+Stefan Kozlov,Christopher Eubanks,2,1,2021-10-07,1
+Sho Shimabukuro,Daniel Cukierman,2,1,2023-09-16,1
+Stefan Kozlov,Jason Kubler,2,2,2021-11-07,0
+J.J. Wolf,Alexander Bublik,2,2,2023-03-20,0
+Dominic Stricker,Ugo Humbert,2,0,2024-12-29,2
+Arthur Rinderknech,Frances Tiafoe,2,1,2026-08-07,1
+Nam Hoang Ly,Steven Diez,2,0,2023-10-15,2
+Arthur Rinderknech,Brandon Nakashima,2,1,2026-08-09,1
+Arthur Rinderknech,Botic van de Zandschulp,2,0,2023-10-23,2
+Arthur Rinderknech,Borna Coric,2,0,2023-02-06,2
+Christopher Eubanks,Maximilian Marterer,2,1,2023-03-08,1
+Murphy Cassone,Rio Noguchi,2,1,2025-01-13,1
+Cameron Norrie,Benjamin Bonzi,2,1,2026-01-18,1
+Arthur Rinderknech,Antoine Hoang,2,2,2021-09-27,0
+Cem Ilkel,Liam Broady,2,1,2021-11-07,1
+Jay Clarke,Adrian Andreev,2,1,2022-11-20,1
+Mikael Ymer,Roman Safiullin,2,1,2023-02-13,1
+Dominic Stricker,Tim van Rijthoven,2,2,2022-10-31,0
+Dominic Stricker,Tobias Kamke,2,2,2021-09-26,0
+Daniel Masur,Evgeny Donskoy,2,1,2023-05-07,1
+Skander Mansouri,Maks Kasnikowski,2,1,2022-11-20,1
+Arthur Rinderknech,Flavio Cobolli,2,2,2026-01-06,0
+Arthur Rinderknech,Francisco Cerundolo,2,2,2023-01-02,0
+Timofey Skatov,Ryan Peniston,2,2,2025-03-10,0
+Seongchan Hong,Mukund Sasikumar,2,1,2022-11-13,1
+Matteo Arnaldi,Jesper de Jong,2,2,2025-10-20,0
+Stefan Kozlov,Bjorn Fratangelo,2,2,2022-02-14,0
+Tallon Griekspoor,Jacob Fearnley,2,1,2025-10-13,1
 Christopher Eubanks,Lloyd Harris,2,1,2023-05-07,1
 Calvin Hemery,Patrick Kypson,2,0,2025-11-03,2
-Cameron Norrie,Aslan Karatsev,2,1,2023-09-20,1
 Arthur Rinderknech,Lucas Pouille,2,2,2024-02-26,0
 Stefan Kozlov,Murphy Cassone,2,1,2025-11-10,1
-Cem Ilkel,Liam Broady,2,1,2021-11-07,1
-Arthur Rinderknech,Juan Manuel Cerundolo,2,1,2026-08-16,1
-Christopher Eubanks,Michael Mmoh,2,1,2022-11-13,1
-Arthur Rinderknech,Alejandro Davidovich Fokina,2,2,2025-08-24,0
-Arthur Rinderknech,Alex Michelsen,2,2,2025-10-01,0
-Timofey Skatov,Ryan Peniston,2,2,2025-03-10,0
-Jay Clarke,Antoine Bellier,2,2,2023-04-23,0
+Mikhail Kukushkin,Mattia Bellucci,2,1,2024-08-17,1
+Arthur Fils,Flavio Cobolli,2,2,2026-08-22,0
+Dominic Stricker,Otto Virtanen,2,0,2023-03-12,2
+Radu Albot,Maxime Janvier,2,2,2022-02-27,0
+Calvin Hemery,Pierre-Hugues Herbert,2,0,2025-02-10,2
+Jaume Munar,Taylor Fritz,2,0,2026-01-05,2
+Mika Brunold,Justin Engel,2,2,2025-10-06,0
+Arthur Fils,Frances Tiafoe,2,2,2026-08-24,0
+Gilles Arnaud Bailly,Daniel Altmaier,2,1,2025-10-13,1
+Marcos Giron,Daniel Altmaier,2,0,2025-10-27,2
+Timofey Skatov,Billy Harris,2,1,2025-02-03,1
 Roberto Bautista Agut,Jenson Brooksby,2,1,2022-08-08,1
-Marcos Giron,David Goffin,2,1,2024-10-02,1
-Mikhail Kukushkin,Marc-Andrea Huesler,2,2,2022-02-14,0
-Dominic Stricker,Yoshihito Nishioka,2,1,2022-01-31,1
-J.J. Wolf,Alexander Bublik,2,2,2023-03-20,0
-Arthur Rinderknech,Miomir Kecmanovic,2,2,2026-08-05,0
-Sumit Nagal,Geoffrey Blancaneaux,2,2,2024-02-18,0
-Borna Coric,Raphael Collignon,2,1,2025-02-24,1
-Stefan Kozlov,Prajnesh Gunneswaran,2,1,2022-11-20,1
 Roberto Bautista Agut,Jannik Sinner,2,0,2021-03-22,2
-Murphy Cassone,Stefan Kozlov,2,1,2025-11-10,1
+Stefan Kozlov,Prajnesh Gunneswaran,2,1,2022-11-20,1
+Borna Coric,Raphael Collignon,2,1,2025-02-24,1
+Arthur Fils,Felix Auger-Aliassime,2,1,2026-03-10,1
+Arthur Rinderknech,Miomir Kecmanovic,2,2,2026-08-05,0
+Marcos Giron,David Goffin,2,1,2024-10-02,1
 Miomir Kecmanovic,Ugo Humbert,2,1,2023-03-20,1
-Stefan Kozlov,Jason Kubler,2,2,2021-11-07,0
-Sho Shimabukuro,Daniel Cukierman,2,1,2023-09-16,1
+Mikhail Kukushkin,Maxime Janvier,2,2,2024-01-29,0
 Arthur Rinderknech,Maxime Janvier,2,1,2021-03-29,1
-Arthur Rinderknech,Alex Molcan,2,2,2026-02-06,0
 Blaise Bicknell,Rinky Hijikata,2,0,2025-11-17,2
-Cameron Norrie,Botic van de Zandschulp,2,1,2022-09-16,1
 Daniil Medvedev,Jaume Munar,2,1,2025-10-27,1
-Seongchan Hong,Maks Kasnikowski,2,1,2024-09-13,1
-Jay Clarke,Andrew Harris,2,2,2022-02-13,0
 Sumit Nagal,Felix Gill,2,1,2026-02-23,1
 Jaume Munar,Rinky Hijikata,2,2,2026-08-02,0
 Borna Coric,Pedro Martinez,2,2,2024-08-06,0
-Mikhail Kukushkin,Maxime Janvier,2,2,2024-01-29,0
-J.J. Wolf,Alex de Minaur,2,0,2023-08-14,2
-Arthur Rinderknech,Alexander Bublik,2,2,2022-02-14,0
-Seongchan Hong,Mark Lajal,2,2,2024-04-14,0
-Tallon Griekspoor,Giovanni Mpetshi Perricard,2,2,2026-02-10,0
-Cameron Norrie,Arthur Rinderknech,2,2,2025-02-10,0
-Arthur Rinderknech,Casper Ruud,2,1,2025-08-07,1
-Radu Albot,Mark Lajal,2,2,2024-02-26,0
-Marton Fucsovics,Carlos Alcaraz,2,0,2022-03-21,2
-Arthur Rinderknech,Hamad Medjedovic,2,1,2025-10-01,1
-Stefan Kozlov,Lucas Gerch,2,0,2023-10-30,2
-Marcos Giron,Alexander Zverev,2,0,2024-10-21,2
-Marcos Giron,Alexandre Muller,2,2,2026-01-13,0
-Matteo Arnaldi,Lorenzo Musetti,2,0,2026-07-27,2
-Arthur Rinderknech,Hugo Gaston,2,0,2023-10-16,2
-Marton Fucsovics,Christopher O'Connell,2,2,2026-03-20,0
-J.J. Wolf,Brandon Holt,2,2,2023-02-06,0
-Casper Ruud,Hubert Hurkacz,2,1,2024-12-29,1
-Radu Albot,Marcos Giron,2,1,2023-08-07,1
-Murphy Cassone,Nicolas Mejia,2,1,2025-11-03,1
-David Goffin,Christopher Eubanks,2,2,2023-01-09,0
-Arthur Rinderknech,Jack Draper,2,1,2026-02-26,1
-Arthur Rinderknech,Jakub Mensik,2,0,2024-09-26,2
-Arthur Rinderknech,Grigor Dimitrov,2,0,2024-10-28,2
-Seongchan Hong,Nam Hoang Ly,2,2,2023-07-31,0
-David Goffin,Chun-Hsin Tseng,2,1,2026-03-04,1
-Cem Ilkel,Laurent Lokoli,2,2,2023-02-12,0
-Daniil Medvedev,Jenson Brooksby,2,2,2026-02-26,0
-Ilya Ivashka,Andrey Rublev,2,0,2022-10-10,2
-Arthur Rinderknech,Jannik Sinner,2,0,2022-01-03,2
-Arthur Rinderknech,Jurij Rodionov,2,1,2023-02-13,1
-Dominic Stricker,Pierre-Hugues Herbert,2,1,2023-01-29,1
-Arthur Rinderknech,Jaume Munar,2,1,2025-03-17,1
-Marcos Giron,Ben Shelton,2,1,2023-10-16,1
-J.J. Wolf,Colton Smith,2,1,2026-07-20,1
-Marcos Giron,Botic van de Zandschulp,2,2,2024-10-14,0
-Jaume Munar,Yoshihito Nishioka,2,1,2025-10-01,1
-Arthur Rinderknech,Jozef Kovalik,2,2,2021-11-08,0
 Arthur Rinderknech,Leandro Riedi,2,1,2024-02-26,1
-Seongchan Hong,Mukund Sasikumar,2,1,2022-11-13,1
-Javier Barranco Cosano,Pol Martin Tiffon,2,0,2025-02-03,2
-Marton Fucsovics,Daniil Medvedev,2,0,2026-01-05,2
-Jaume Munar,Yosuke Watanuki,2,1,2022-09-26,1
-Matteo Arnaldi,Lukas Klein,2,1,2024-01-01,1
-Arthur Rinderknech,Corentin Moutet,2,1,2023-11-12,1
-Arthur Rinderknech,Damir Dzumhur,2,1,2024-01-06,1
-Cameron Norrie,Arthur Cazaux,2,2,2025-11-03,0
-J.J. Wolf,Andrey Rublev,2,0,2023-03-20,2
-Marco Trungelliti,Zhizhen Zhang,2,1,2023-02-06,1
-Hugo Grenier,Antoine Escoffier,2,1,2024-01-29,1
-Tallon Griekspoor,Grigor Dimitrov,2,0,2024-10-14,2
-Blake Ellis,Antoine Escoffier,2,2,2025-01-12,0
-Arthur Rinderknech,Daniil Medvedev,2,1,2025-10-01,1
-Stefan Kozlov,Keegan Smith,2,1,2026-02-02,1
-Mikhail Kukushkin,Mattia Bellucci,2,1,2024-08-17,1
-Arthur Rinderknech,Denis Shapovalov,2,1,2022-02-14,1
-Seongchan Hong,Mattia Bellucci,2,1,2024-08-17,1
-Mika Brunold,Justin Engel,2,2,2025-10-06,0
-Dominic Stricker,Otto Virtanen,2,0,2023-03-12,2
-Marcos Giron,Alejandro Davidovich Fokina,2,0,2025-10-13,2
-Radu Albot,Maxime Janvier,2,2,2022-02-27,0
-Murphy Cassone,Rafael Jodar,2,0,2026-02-09,2
-Calvin Hemery,Pierre-Hugues Herbert,2,0,2025-02-10,2
-Marcos Giron,Alex Michelsen,2,2,2026-01-14,0
-Jaume Munar,Taylor Fritz,2,0,2026-01-05,2
-Christopher Eubanks,Naoki Nakagawa,2,1,2024-09-22,1
-Murphy Cassone,Philip Sekulic,2,2,2026-07-13,0
-Mikhail Kukushkin,Martin Damm,2,1,2024-01-29,1
-Arthur Rinderknech,Felix Auger-Aliassime,2,1,2025-10-01,1
-Arthur Rinderknech,Flavio Cobolli,2,2,2026-01-06,0
-Arthur Rinderknech,Frances Tiafoe,2,1,2026-08-07,1
-Arthur Rinderknech,Francisco Cerundolo,2,2,2023-01-02,0
-Radu Albot,Joris De Loore,2,1,2024-02-26,1
-Christopher Eubanks,Nicolas Mejia,2,2,2021-05-31,0
-Radu Albot,John-Patrick Smith,2,2,2022-01-03,0
-Arthur Fils,Robin Haase,2,1,2022-03-28,1
-Christopher Eubanks,Sho Shimabukuro,2,2,2023-07-31,0
-Arthur Fils,Richard Gasquet,2,2,2024-01-08,0
-Titouan Droguet,Matteo Martineau,2,2,2025-09-08,0
-Arthur Fils,Rafael Jodar,2,0,2026-08-11,2
-Sho Shimabukuro,Kyrian Jacquet,2,0,2025-10-13,2
-Jay Clarke,Ramkumar Ramanathan,2,1,2025-02-03,1
-Radu Albot,Egor Gerasimov,2,0,2022-01-03,2
-Garrett Johns,Michael Zheng,2,0,2025-09-15,2
-Arthur Fils,Otto Virtanen,2,2,2025-01-13,0
-Blake Ellis,Liam Broady,2,0,2026-03-30,2
-Rio Noguchi,Alexis Galarneau,2,0,2026-04-20,2
-Jay Clarke,Ryan Peniston,2,0,2023-01-22,2
-Matteo Arnaldi,Taylor Fritz,2,1,2025-07-21,1
-Arthur Fils,Matteo Arnaldi,2,0,2024-03-18,2
-Arthur Fils,Marton Fucsovics,2,1,2026-03-09,1
-Max Purcell,Adrian Mannarino,2,0,2023-09-14,2
-Arthur Fils,Roman Safiullin,2,2,2023-02-20,0
-Dominic Thiem,Ugo Humbert,2,0,2023-11-06,2
-David Goffin,Alex Molcan,2,1,2023-10-30,1
-Blake Ellis,James McCabe,2,2,2026-02-02,0
-Jakub Mensik,Miomir Kecmanovic,2,2,2025-09-24,0
-Cameron Norrie,Hugo Gaston,2,2,2026-01-12,0
-Radu Albot,Federico Coria,2,1,2021-10-25,1
-Arthur Fils,Tommy Paul,2,1,2026-03-26,1
-Titouan Droguet,Lucas Poullain,2,1,2026-02-23,1
-Daniel Masur,Francesco Maestrelli,2,1,2022-08-29,1
-Jakub Mensik,Mikhail Kukushkin,2,1,2024-12-29,1
-Titouan Droguet,Manuel Guinard,2,1,2024-02-26,1
-Rinky Hijikata,Masamichi Imamura,2,2,2024-10-28,0
-Seongchan Hong,Jason Jung,2,1,2023-05-14,1
-Arthur Fils,Tallon Griekspoor,2,1,2024-01-15,1
-Mikael Ymer,Soonwoo Kwon,2,1,2023-01-09,1
-Stefan Kozlov,Donald Young,2,1,2021-07-25,1
-Roberto Bautista Agut,Marcos Giron,2,2,2022-08-15,0
-Jay Clarke,Shintaro Mochizuki,2,1,2026-03-18,1
-Titouan Droguet,Pierre-Hugues Herbert,2,0,2026-02-23,2
-Casper Ruud,Fabian Marozsan,2,0,2026-01-14,2
-Stefan Kozlov,Christopher Eubanks,2,1,2021-10-07,1
-Stefan Kozlov,Cedrik-Marcel Stebe,2,2,2026-02-02,0
-Titouan Droguet,Valentin Royer,2,1,2025-10-01,1
-Stefan Kozlov,Cannon Kingsley,2,2,2022-10-30,0
-Daniel Masur,Evgeny Donskoy,2,1,2023-05-07,1
-Nam Hoang Ly,Steven Diez,2,0,2023-10-15,2
-Mikhail Kukushkin,Luca Van Assche,2,1,2026-02-16,1
-Daniel Masur,Elias Ymer,2,2,2022-08-29,0
-Matteo Arnaldi,Tristan Schoolkate,2,2,2025-10-20,0
-Cameron Norrie,Matteo Berrettini,2,0,2025-10-20,2
+Marton Fucsovics,Carlos Alcaraz,2,0,2022-03-21,2
+Casper Ruud,Hubert Hurkacz,2,1,2024-12-29,1
+Arthur Rinderknech,Hugo Gaston,2,0,2023-10-16,2
+Radu Albot,Mark Lajal,2,2,2024-02-26,0
+Arthur Rinderknech,Jack Draper,2,1,2026-02-26,1
+David Goffin,Christopher Eubanks,2,2,2023-01-09,0
+Radu Albot,Marcos Giron,2,1,2023-08-07,1
+J.J. Wolf,Brandon Holt,2,2,2023-02-06,0
+Marton Fucsovics,Christopher O'Connell,2,2,2026-03-20,0
+Matteo Arnaldi,Lorenzo Musetti,2,0,2026-07-27,2
+Seongchan Hong,Nam Hoang Ly,2,2,2023-07-31,0
+Marcos Giron,Alexandre Muller,2,2,2026-01-13,0
+Marcos Giron,Alexander Zverev,2,0,2024-10-21,2
+Stefan Kozlov,Lucas Gerch,2,0,2023-10-30,2
+Arthur Rinderknech,Hamad Medjedovic,2,1,2025-10-01,1
 Borna Coric,Jiri Lehecka,2,0,2025-08-24,2
+Arthur Rinderknech,Grigor Dimitrov,2,0,2024-10-28,2
+Arthur Rinderknech,Jakub Mensik,2,0,2024-09-26,2
+David Goffin,Chun-Hsin Tseng,2,1,2026-03-04,1
+Murphy Cassone,Nicolas Mejia,2,1,2025-11-03,1
 Cameron Norrie,Miomir Kecmanovic,2,1,2024-10-14,1
-Arthur Fils,Frances Tiafoe,2,2,2026-08-24,0
-Arthur Fils,Flavio Cobolli,2,2,2026-08-22,0
-Stefan Kozlov,Bjorn Fratangelo,2,2,2022-02-14,0
-Arthur Fils,Felix Auger-Aliassime,2,1,2026-03-10,1
-Denis Shapovalov,Novak Djokovic,2,0,2023-01-02,2
-Arthur Fils,Jannik Sinner,2,1,2023-02-20,1
-Cameron Norrie,John Isner,2,1,2022-02-21,1
-Radu Albot,Daniel Altmaier,2,0,2022-03-20,2
-Christopher Eubanks,Stefan Kozlov,2,1,2021-10-07,1
-Titouan Droguet,Raul Brancaccio,2,2,2024-01-06,0
-Titouan Droguet,Ricardas Berankis,2,1,2024-02-18,1
-Nam Hoang Ly,Nick Chappell,2,2,2023-09-10,0
-Jay Clarke,Tung-Lin Wu,2,1,2022-03-12,1
-Arthur Fils,Learner Tien,2,1,2024-12-18,1
-David Goffin,Aleksandar Kovacevic,2,1,2025-01-27,1
-Christopher Eubanks,Steve Johnson,2,2,2024-02-05,0
-Rigele Te,Terence Atmane,2,0,2025-04-28,2
-Cameron Norrie,Kei Nishikori,2,0,2024-12-29,2
-Jay Clarke,Ulises Blanch,2,0,2022-03-12,2
-Nam Hoang Ly,Seongchan Hong,2,0,2023-07-31,2
-Marco Trungelliti,Billy Harris,2,0,2026-02-16,2
-Marco Trungelliti,Aziz Dougaz,2,1,2024-02-17,1
-Blake Ellis,Luke Saville,2,1,2023-10-30,1
-Cameron Norrie,Grigor Dimitrov,2,2,2021-10-04,0
-Radu Albot,Feliciano Lopez,2,2,2022-08-01,0
-Dominic Thiem,Andrey Rublev,2,0,2023-01-16,2
-Denis Shapovalov,Lorenzo Sonego,2,1,2024-10-02,1
-Marco Trungelliti,Lukas Klein,2,1,2024-02-17,1
-David Goffin,Ben Shelton,2,2,2025-10-01,0
-Radu Albot,Jack Draper,2,0,2023-09-25,2
-Titouan Droguet,Clement Chidekh,2,1,2024-02-25,1
-Dominic Thiem,Francisco Cerundolo,2,2,2022-10-17,0
-Tallon Griekspoor,Frances Tiafoe,2,1,2023-09-14,1
-Radu Albot,J.J. Wolf,2,0,2023-07-31,2
-Cameron Norrie,Dominik Koepfer,2,1,2021-09-27,1
-Hugo Grenier,Alibek Kachmazov,2,1,2025-01-27,1
-J.J. Wolf,Adrian Mannarino,2,1,2023-02-13,1
-Arthur Gea,Michael Zheng,2,2,2026-07-30,0
-Dominic Thiem,Grigor Dimitrov,2,1,2022-08-22,1
-Stefan Kozlov,Harry Wendelken,2,0,2026-08-10,2
-Arthur Gea,Liam Draxl,2,2,2026-07-13,0
-Gilles Simon,Matteo Arnaldi,2,1,2022-10-30,1
-Gastao Elias,Cem Ilkel,2,2,2024-02-17,0
-Jay Clarke,Dimitar Kuzmanov,2,1,2023-02-19,1
-Matteo Arnaldi,Nicolas Jarry,2,0,2024-01-08,2
-Titouan Droguet,August Holmgren,2,2,2025-10-13,0
-Christopher Eubanks,Nicolas Alvarez Varona,2,2,2022-11-13,0
-Cameron Norrie,Corentin Moutet,2,1,2024-11-03,1
-Matteo Arnaldi,Max Purcell,2,0,2024-02-19,2
-Titouan Droguet,Aleksandar Kovacevic,2,2,2026-02-05,0
-Denis Shapovalov,Lorenzo Musetti,2,0,2025-01-13,2
-Jay Clarke,Borna Gojo,2,1,2026-01-19,1
-Dominic Thiem,Ben Shelton,2,0,2024-08-26,2
-Jay Clarke,Chun-Hsin Tseng,2,0,2022-02-13,2
-Cameron Norrie,Daniel Evans,2,2,2021-09-27,0
-Jakub Mensik,Nuno Borges,2,0,2025-01-06,2
-Cameron Norrie,Denis Shapovalov,2,1,2026-08-01,1
-Grigor Dimitrov,Holger Rune,2,2,2024-01-01,0
-Matteo Arnaldi,Jan-Lennard Struff,2,1,2023-10-02,1
-Daniel Masur,Hugo Grenier,2,1,2022-07-24,1
-Murphy Cassone,Tristan Schoolkate,2,1,2026-07-13,1
-Jay Clarke,Gregoire Barrere,2,2,2022-08-29,0
-David Goffin,Arthur Fery,2,0,2023-10-29,2
-Stefan Kozlov,Emilio Gomez,2,2,2022-02-14,0
-Titouan Droguet,Jan Choinski,2,2,2026-02-03,0
-Dominic Thiem,Marcos Giron,2,2,2023-09-25,0
-Titouan Droguet,Jesper de Jong,2,0,2024-11-03,2
-Blake Ellis,Fajing Sun,2,2,2026-02-09,0
-Christopher Eubanks,Reilly Opelka,2,0,2025-03-17,2
-Matteo Arnaldi,Roman Safiullin,2,1,2024-08-26,1
-Cameron Norrie,Gael Monfils,2,0,2024-03-04,2
+Cem Ilkel,Laurent Lokoli,2,2,2023-02-12,0
+Arthur Rinderknech,Jurij Rodionov,2,1,2023-02-13,1
+Jaume Munar,Yoshihito Nishioka,2,1,2025-10-01,1
+Arthur Rinderknech,Juan Manuel Cerundolo,2,1,2026-08-16,1
+Jaume Munar,Yosuke Watanuki,2,1,2022-09-26,1
+Arthur Rinderknech,Jozef Kovalik,2,2,2021-11-08,0
+Marcos Giron,Botic van de Zandschulp,2,2,2024-10-14,0
+Daniil Medvedev,Jenson Brooksby,2,2,2026-02-26,0
+J.J. Wolf,Colton Smith,2,1,2026-07-20,1
+Marcos Giron,Ben Shelton,2,1,2023-10-16,1
+Arthur Rinderknech,Jaume Munar,2,1,2025-03-17,1
+Dominic Stricker,Pierre-Hugues Herbert,2,1,2023-01-29,1
+Arthur Rinderknech,Jannik Sinner,2,0,2022-01-03,2
+Ilya Ivashka,Andrey Rublev,2,0,2022-10-10,2
+Arthur Rinderknech,Alex Michelsen,2,2,2025-10-01,0
+Dominic Stricker,Yoshihito Nishioka,2,1,2022-01-31,1
+Jay Clarke,Antoine Bellier,2,2,2023-04-23,0
+Jay Clarke,Masamichi Imamura,2,1,2026-02-23,1
 Christopher Eubanks,Rinky Hijikata,2,0,2025-09-17,2
 Titouan Droguet,Joris De Loore,2,1,2024-02-26,1
 Arthur Fils,Zizou Bergs,2,1,2024-12-29,1
+Cameron Norrie,John Isner,2,1,2022-02-21,1
 Arthur Fils,Zhizhen Zhang,2,2,2023-08-13,0
-Jay Clarke,Masamichi Imamura,2,1,2026-02-23,1
+Titouan Droguet,Pierre-Hugues Herbert,2,0,2026-02-23,2
+Dominic Thiem,Ugo Humbert,2,0,2023-11-06,2
+Matteo Arnaldi,Roman Safiullin,2,1,2024-08-26,1
 Marton Fucsovics,Egor Gerasimov,2,0,2022-01-03,2
 Hugo Grenier,Alastair Gray,2,2,2025-09-01,0
 Nam Hoang Ly,Federico Gaio,2,1,2022-08-28,1
 Garrett Johns,Sho Shimabukuro,2,0,2025-11-03,2
-Arthur Gea,Billy Harris,2,0,2025-09-08,2
+Stefan Kozlov,Emilio Gomez,2,2,2022-02-14,0
+Radu Albot,Feliciano Lopez,2,2,2022-08-01,0
+Cameron Norrie,Gael Monfils,2,0,2024-03-04,2
+Christopher Eubanks,Reilly Opelka,2,0,2025-03-17,2
+Nam Hoang Ly,Nick Chappell,2,2,2023-09-10,0
 Hugo Grenier,Alejandro Moro Canas,2,2,2023-07-23,0
-Dominic Thiem,Hubert Hurkacz,2,1,2022-10-17,1
-Matteo Arnaldi,Rinky Hijikata,2,0,2026-01-04,2
-Jakub Mensik,Nikoloz Basilashvili,2,2,2025-01-13,0
-Matteo Arnaldi,Oleksii Krutykh,2,1,2023-02-20,1
-Grigor Dimitrov,Ilya Ivashka,2,0,2022-09-26,2
-Hugo Grenier,Alexandre Muller,2,1,2024-03-04,1
-Casper Ruud,Gael Monfils,2,2,2024-08-26,0
-David Goffin,Andy Murray,2,0,2024-03-04,2
-Hugo Grenier,Alex Molcan,2,2,2024-03-06,0
-Radu Albot,Gijs Brouwer,2,2,2024-02-26,0
-Seongchan Hong,Kaichi Uchida,2,0,2022-10-31,2
-Radu Albot,Geoffrey Blancaneaux,2,1,2023-01-29,1
 Roberto Bautista Agut,Mackenzie McDonald,2,1,2022-10-17,1
 Titouan Droguet,Hugo Gaston,2,0,2024-11-03,2
 Jay Clarke,Kamil Majchrzak,2,0,2022-10-16,2
 Arthur Gea,Dimitar Kuzmanov,2,0,2025-03-10,2
 Dominic Thiem,Lorenzo Sonego,2,1,2023-10-30,1
+Matteo Arnaldi,Rinky Hijikata,2,0,2026-01-04,2
+Titouan Droguet,Ricardas Berankis,2,1,2024-02-18,1
+Christopher Eubanks,Stefan Kozlov,2,1,2021-10-07,1
+Titouan Droguet,Jan Choinski,2,2,2026-02-03,0
+Arthur Gea,Billy Harris,2,0,2025-09-08,2
+Titouan Droguet,Raul Brancaccio,2,2,2024-01-06,0
+Dominic Thiem,Marcos Giron,2,2,2023-09-25,0
+Titouan Droguet,Jesper de Jong,2,0,2024-11-03,2
+Blake Ellis,Fajing Sun,2,2,2026-02-09,0
+Casper Ruud,Fabian Marozsan,2,0,2026-01-14,2
+Cameron Norrie,Grigor Dimitrov,2,2,2021-10-04,0
+Blake Ellis,James McCabe,2,2,2026-02-02,0
+Rio Noguchi,Alexis Galarneau,2,0,2026-04-20,2
+David Goffin,Alex Molcan,2,1,2023-10-30,1
+Arthur Fils,Roman Safiullin,2,2,2023-02-20,0
+Arthur Fils,Robin Haase,2,1,2022-03-28,1
+Max Purcell,Adrian Mannarino,2,0,2023-09-14,2
+Christopher Eubanks,Sho Shimabukuro,2,2,2023-07-31,0
+Jay Clarke,Ryan Peniston,2,0,2023-01-22,2
+Arthur Fils,Richard Gasquet,2,2,2024-01-08,0
+Jakub Mensik,Miomir Kecmanovic,2,2,2025-09-24,0
+Titouan Droguet,Matteo Martineau,2,2,2025-09-08,0
+Blake Ellis,Liam Broady,2,0,2026-03-30,2
+Arthur Fils,Rafael Jodar,2,0,2026-08-11,2
+Sho Shimabukuro,Kyrian Jacquet,2,0,2025-10-13,2
+Jay Clarke,Ramkumar Ramanathan,2,1,2025-02-03,1
+Radu Albot,Egor Gerasimov,2,0,2022-01-03,2
+Roberto Bautista Agut,Marcos Giron,2,2,2022-08-15,0
+Matteo Arnaldi,Taylor Fritz,2,1,2025-07-21,1
+Arthur Fils,Matteo Arnaldi,2,0,2024-03-18,2
+Stefan Kozlov,Donald Young,2,1,2021-07-25,1
+Arthur Fils,Marton Fucsovics,2,1,2026-03-09,1
+Mikael Ymer,Soonwoo Kwon,2,1,2023-01-09,1
+Arthur Fils,Tallon Griekspoor,2,1,2024-01-15,1
+Seongchan Hong,Jason Jung,2,1,2023-05-14,1
+Rinky Hijikata,Masamichi Imamura,2,2,2024-10-28,0
+Titouan Droguet,Manuel Guinard,2,1,2024-02-26,1
+Jakub Mensik,Mikhail Kukushkin,2,1,2024-12-29,1
+Daniel Masur,Francesco Maestrelli,2,1,2022-08-29,1
+Titouan Droguet,Lucas Poullain,2,1,2026-02-23,1
+Arthur Fils,Tommy Paul,2,1,2026-03-26,1
+Radu Albot,Federico Coria,2,1,2021-10-25,1
+Cameron Norrie,Hugo Gaston,2,2,2026-01-12,0
+Jay Clarke,Shintaro Mochizuki,2,1,2026-03-18,1
+Radu Albot,Geoffrey Blancaneaux,2,1,2023-01-29,1
+Seongchan Hong,Kaichi Uchida,2,0,2022-10-31,2
+Mikhail Kukushkin,Marc-Andrea Huesler,2,2,2022-02-14,0
+Cameron Norrie,Denis Shapovalov,2,1,2026-08-01,1
+Dominic Thiem,Ben Shelton,2,0,2024-08-26,2
+Marco Trungelliti,Billy Harris,2,0,2026-02-16,2
+Nam Hoang Ly,Seongchan Hong,2,0,2023-07-31,2
+Jay Clarke,Chun-Hsin Tseng,2,0,2022-02-13,2
+Cameron Norrie,Daniel Evans,2,2,2021-09-27,0
+Jakub Mensik,Nuno Borges,2,0,2025-01-06,2
+Grigor Dimitrov,Holger Rune,2,2,2024-01-01,0
+Denis Shapovalov,Lorenzo Musetti,2,0,2025-01-13,2
+Christopher Eubanks,Nicolas Mejia,2,2,2021-05-31,0
+Matteo Arnaldi,Jan-Lennard Struff,2,1,2023-10-02,1
+Daniel Masur,Hugo Grenier,2,1,2022-07-24,1
+Jay Clarke,Ulises Blanch,2,0,2022-03-12,2
+Cameron Norrie,Kei Nishikori,2,0,2024-12-29,2
+Murphy Cassone,Tristan Schoolkate,2,1,2026-07-13,1
+Jay Clarke,Borna Gojo,2,1,2026-01-19,1
+Titouan Droguet,Aleksandar Kovacevic,2,2,2026-02-05,0
+Jay Clarke,Tung-Lin Wu,2,1,2022-03-12,1
+Murphy Cassone,Stefan Kozlov,2,1,2025-11-10,1
+Arthur Rinderknech,Alejandro Davidovich Fokina,2,2,2025-08-24,0
+Garrett Johns,Michael Zheng,2,0,2025-09-15,2
+Arthur Fils,Jannik Sinner,2,1,2023-02-20,1
+Sumit Nagal,Geoffrey Blancaneaux,2,2,2024-02-18,0
+Radu Albot,Daniel Altmaier,2,0,2022-03-20,2
+Blake Ellis,Luke Saville,2,1,2023-10-30,1
+Radu Albot,Joris De Loore,2,1,2024-02-26,1
+Matteo Arnaldi,Max Purcell,2,0,2024-02-19,2
+Christopher Eubanks,Naoki Nakagawa,2,1,2024-09-22,1
+Radu Albot,John-Patrick Smith,2,2,2022-01-03,0
+Dominic Thiem,Andrey Rublev,2,0,2023-01-16,2
+Marco Trungelliti,Aziz Dougaz,2,1,2024-02-17,1
+Christopher Eubanks,Nicolas Alvarez Varona,2,2,2022-11-13,0
+Cameron Norrie,Corentin Moutet,2,1,2024-11-03,1
+Titouan Droguet,August Holmgren,2,2,2025-10-13,0
+Jay Clarke,Dimitar Kuzmanov,2,1,2023-02-19,1
+Denis Shapovalov,Lorenzo Sonego,2,1,2024-10-02,1
+Grigor Dimitrov,Ilya Ivashka,2,0,2022-09-26,2
+Matteo Arnaldi,Nicolas Jarry,2,0,2024-01-08,2
+David Goffin,Arthur Fery,2,0,2023-10-29,2
+Dominic Thiem,Hubert Hurkacz,2,1,2022-10-17,1
+Christopher Eubanks,Steve Johnson,2,2,2024-02-05,0
+Jakub Mensik,Nikoloz Basilashvili,2,2,2025-01-13,0
+Matteo Arnaldi,Oleksii Krutykh,2,1,2023-02-20,1
+Hugo Grenier,Alexandre Muller,2,1,2024-03-04,1
+Gastao Elias,Cem Ilkel,2,2,2024-02-17,0
+Casper Ruud,Gael Monfils,2,2,2024-08-26,0
+David Goffin,Andy Murray,2,0,2024-03-04,2
+Hugo Grenier,Alex Molcan,2,2,2024-03-06,0
+David Goffin,Aleksandar Kovacevic,2,1,2025-01-27,1
+Arthur Fils,Learner Tien,2,1,2024-12-18,1
+Radu Albot,Gijs Brouwer,2,2,2024-02-26,0
+Jay Clarke,Gregoire Barrere,2,2,2022-08-29,0
+Gilles Simon,Matteo Arnaldi,2,1,2022-10-30,1
+Arthur Gea,Liam Draxl,2,2,2026-07-13,0
+Stefan Kozlov,Harry Wendelken,2,0,2026-08-10,2
+Rigele Te,Terence Atmane,2,0,2025-04-28,2
+Dominic Thiem,Grigor Dimitrov,2,1,2022-08-22,1
+Arthur Gea,Michael Zheng,2,2,2026-07-30,0
+J.J. Wolf,Adrian Mannarino,2,1,2023-02-13,1
+Hugo Grenier,Alibek Kachmazov,2,1,2025-01-27,1
+Cameron Norrie,Dominik Koepfer,2,1,2021-09-27,1
+Radu Albot,J.J. Wolf,2,0,2023-07-31,2
+Tallon Griekspoor,Frances Tiafoe,2,1,2023-09-14,1
+Dominic Thiem,Francisco Cerundolo,2,2,2022-10-17,0
+Titouan Droguet,Clement Chidekh,2,1,2024-02-25,1
+Radu Albot,Jack Draper,2,0,2023-09-25,2
+David Goffin,Ben Shelton,2,2,2025-10-01,0
+Marco Trungelliti,Lukas Klein,2,1,2024-02-17,1
 Arthur Rinderknech,Nuno Borges,2,1,2025-08-07,1
 Arthur Rinderknech,Roberto Bautista Agut,2,0,2024-09-26,2
 Marcos Giron,Diego Schwartzman,2,1,2023-08-13,1
@@ -3441,9 +3441,9 @@ Taro Daniel,Lorenzo Sonego,2,1,2024-09-18,1
 Hynek Barton,Shintaro Mochizuki,2,0,2025-02-24,2
 Mattia Bellucci,Alex Michelsen,2,0,2026-03-20,2
 Giovanni Mpetshi Perricard,Matteo Martineau,2,1,2024-02-11,1
-Borna Gojo,Jay Clarke,2,1,2026-01-19,1
-Shintaro Mochizuki,Naoki Nakagawa,2,1,2023-11-12,1
 Billy Harris,Coleman Wong,2,0,2025-08-24,2
+Shintaro Mochizuki,Naoki Nakagawa,2,1,2023-11-12,1
+Borna Gojo,Jay Clarke,2,1,2026-01-19,1
 Tennys Sandgren,Mikhail Kukushkin,2,0,2023-07-09,2
 James McCabe,Mikalai Haliak,2,1,2024-01-08,1
 Miomir Kecmanovic,Corentin Moutet,2,2,2023-09-20,0
@@ -3467,7 +3467,7 @@ Moerani Bouzige,Hugo Grenier,2,1,2025-04-28,1
 Benjamin Bonzi,Maxime Cressy,2,1,2023-09-17,1
 Mitchell Krueger,Cedrik-Marcel Stebe,2,2,2026-01-26,0
 Shintaro Mochizuki,Frederico Ferreira Silva,2,1,2022-11-27,1
-Denis Shapovalov,Cameron Norrie,2,1,2026-08-01,1
+James Duckworth,Dominik Koepfer,2,1,2023-07-31,1
 Gianluca Mager,Egor Gerasimov,2,1,2022-01-10,1
 Taro Daniel,Jannik Sinner,2,0,2024-10-02,2
 Benjamin Bonzi,Reilly Opelka,2,2,2025-10-13,0
@@ -3481,7 +3481,7 @@ Miomir Kecmanovic,Alejandro Davidovich Fokina,2,2,2025-02-10,0
 Mark Lajal,Justin Engel,2,0,2025-11-17,2
 James Trotter,Tristan Boyer,2,1,2025-10-01,1
 Miomir Kecmanovic,Adrian Mannarino,2,0,2021-03-22,2
-James Duckworth,Dominik Koepfer,2,1,2023-07-31,1
+Denis Shapovalov,Cameron Norrie,2,1,2026-08-01,1
 Brandon Holt,Aleksandar Vukic,2,1,2023-05-14,1
 Shintaro Mochizuki,Giovanni Mpetshi Perricard,2,0,2026-02-23,2
 Terence Atmane,Tung-Lin Wu,2,2,2025-05-05,0
@@ -3607,7 +3607,7 @@ Jack Pinnington Jones,Coleman Wong,2,0,2026-03-18,2
 Rio Noguchi,Kaichi Uchida,2,0,2025-10-13,2
 Tennys Sandgren,Arthur Cazaux,2,0,2023-01-07,2
 Gilbert Klier Junior,Tomas Barrios Vera,2,1,2024-11-25,1
-Jacob Fearnley,Kamil Majchrzak,2,1,2026-01-19,1
+Bernard Tomic,Stefan Dostanic,2,1,2025-08-04,1
 Denis Kudla,Richard Gasquet,2,1,2024-08-26,1
 Miomir Kecmanovic,Jannik Sinner,2,0,2022-08-15,2
 Ricardas Berankis,Dan Added,2,1,2023-03-26,1
@@ -3620,7 +3620,7 @@ Borna Gojo,Tomas Machac,2,1,2023-08-28,1
 Steven Diez,Nam Hoang Ly,2,2,2023-10-15,0
 Taylor Fritz,Andy Murray,2,2,2023-07-31,0
 Jacob Fearnley,Kei Nishikori,2,1,2025-01-31,1
-Strong Kirchheimer,Patrick Brady,2,0,2024-11-24,2
+Mitchell Krueger,Ernesto Escobedo,2,1,2024-07-07,1
 Bernabe Zapata Miralles,Ugo Humbert,2,0,2023-03-06,2
 James Duckworth,Taro Daniel,2,1,2025-11-03,1
 Steven Diez,Mitchell Krueger,2,0,2023-02-26,2
@@ -3628,15 +3628,15 @@ Bernard Tomic,Alex Michelsen,2,0,2023-11-19,2
 Bernard Tomic,Andre Ilagan,2,1,2026-08-10,1
 Bernabe Zapata Miralles,Flavio Cobolli,2,1,2023-10-15,1
 Taylor Fritz,Adrian Mannarino,2,2,2023-02-13,0
-Bernard Tomic,Dane Sweeny,2,1,2025-11-10,1
-Jacob Fearnley,Adrian Mannarino,2,2,2026-08-04,0
+James Duckworth,Karen Khachanov,2,0,2021-10-18,2
 Bernard Tomic,Dalibor Svrcina,2,1,2025-10-06,1
+Jacob Fearnley,Adrian Mannarino,2,2,2026-08-04,0
 Illya Marchenko,Andreas Seppi,2,1,2021-09-27,1
 Gijs Brouwer,Ryan Peniston,2,0,2024-01-06,2
 Mitchell Krueger,Holger Rune,2,0,2022-03-10,2
 Matthias Bachinger,Altug Celikbilek,2,2,2021-10-31,0
 Taylor Fritz,Albert Ramos-Vinolas,2,1,2021-08-16,1
-Bernard Tomic,Stefan Dostanic,2,1,2025-08-04,1
+Jacob Fearnley,Kamil Majchrzak,2,1,2026-01-19,1
 Denis Kudla,Roman Safiullin,2,2,2024-03-17,0
 Martin Damm,Rafael Jodar,2,0,2025-10-27,2
 Taylor Fritz,Alejandro Tabilo,2,2,2025-03-03,0
@@ -3664,9 +3664,9 @@ Botic van de Zandschulp,Arthur Rinderknech,2,2,2023-10-23,0
 Martin Damm,Maxime Cressy,2,1,2024-02-05,1
 Taylor Fritz,Fabian Marozsan,2,2,2025-10-01,0
 Denis Kudla,Michael Mmoh,2,2,2022-08-01,0
+Strong Kirchheimer,Patrick Brady,2,0,2024-11-24,2
 Mitchell Krueger,Jack Sock,2,1,2021-05-31,1
 Taylor Fritz,David Goffin,2,2,2024-10-02,0
-Mitchell Krueger,Ernesto Escobedo,2,1,2024-07-07,1
 Taylor Fritz,Daniil Medvedev,2,1,2024-11-11,1
 Miomir Kecmanovic,Hubert Hurkacz,2,1,2025-01-13,1
 Bernabe Zapata Miralles,Sergiy Stakhovsky,2,1,2021-02-22,1
@@ -3683,17 +3683,17 @@ Bernabe Zapata Miralles,Oscar Otte,2,0,2022-10-31,2
 Mitchell Krueger,Jack Pinnington Jones,2,1,2025-10-13,1
 Taylor Fritz,Daniel Evans,2,0,2022-08-08,2
 Dennis Novak,Marek Gengel,2,2,2023-01-07,0
+Bernard Tomic,Dane Sweeny,2,1,2025-11-10,1
 Martin Damm,Saba Purtseladze,2,0,2025-05-19,2
 James Duckworth,Roberto Bautista Agut,2,1,2026-03-19,1
-James Duckworth,Karen Khachanov,2,0,2021-10-18,2
 Denis Kudla,Ulises Blanch,2,2,2022-10-31,0
 Ricardas Berankis,Altug Celikbilek,2,2,2023-02-12,0
 Reilly Opelka,Arthur Rinderknech,2,1,2025-03-11,1
-Taro Daniel,Tallon Griekspoor,2,1,2025-09-17,1
 James Duckworth,Lukas Klein,2,1,2024-11-03,1
+Taro Daniel,Tallon Griekspoor,2,1,2025-09-17,1
 Gregoire Barrere,David Goffin,2,1,2024-02-12,1
-Reilly Opelka,Alexei Popyrin,2,1,2026-01-12,1
 Martin Krumich,Tom Gentzsch,2,0,2026-02-02,2
+Reilly Opelka,Alexei Popyrin,2,1,2026-01-12,1
 Gregoire Barrere,Dennis Novak,2,1,2022-01-30,1
 Taro Daniel,Rinky Hijikata,2,1,2024-08-06,1
 James Duckworth,Lorenzo Musetti,2,1,2025-07-27,1
@@ -3704,8 +3704,8 @@ Taro Daniel,Tommy Paul,2,0,2024-02-05,2
 Taro Daniel,Tristan Schoolkate,2,0,2025-01-13,2
 Borna Gojo,Nuno Borges,2,0,2023-03-22,2
 James Duckworth,Max Purcell,2,0,2023-02-26,2
-Bernard Tomic,Micah Braswell,2,1,2024-09-15,1
 Denis Kudla,Zachary Svajda,2,2,2022-09-18,0
+Bernard Tomic,Micah Braswell,2,1,2024-09-15,1
 Reilly Opelka,Benjamin Bonzi,2,0,2025-10-13,2
 James Duckworth,Makoto Ochi,2,2,2023-01-30,0
 Giovanni Mpetshi Perricard,Aidan Mayo,2,1,2024-04-14,1
@@ -3716,15 +3716,15 @@ Bernard Tomic,Patrick Kypson,2,1,2025-08-24,1
 Dennis Novak,Arthur Cazaux,2,0,2023-10-29,2
 James Duckworth,Marcos Giron,2,1,2024-08-06,1
 Bernard Tomic,Nishesh Basavareddy,2,0,2024-09-30,2
+Dennis Novak,Antoine Escoffier,2,1,2023-01-07,1
 Bernard Tomic,Nikoloz Basilashvili,2,0,2025-10-01,2
-Denis Shapovalov,Alex de Minaur,2,0,2022-10-17,2
 Denis Shapovalov,Adrian Mannarino,2,2,2026-08-14,0
 Dennis Novak,Bernabe Zapata Miralles,2,1,2025-10-13,1
-Dennis Novak,Antoine Escoffier,2,1,2023-01-07,1
+Denis Shapovalov,Alex de Minaur,2,0,2022-10-17,2
 Denis Shapovalov,Adam Walton,2,2,2025-07-14,0
 Taro Daniel,Tung-Lin Wu,2,1,2026-04-13,1
 Taro Daniel,Tyler Zink,2,1,2025-07-21,1
-Giovanni Mpetshi Perricard,Botic van de Zandschulp,2,0,2026-08-05,2
+Bernard Tomic,Shintaro Mochizuki,2,1,2025-10-06,1
 Bernard Tomic,Eliot Spizzirri,2,2,2025-07-28,0
 Bernard Tomic,Gijs Brouwer,2,1,2026-02-16,1
 Rei Sakamoto,Vit Kopriva,2,0,2026-03-04,2
@@ -3737,11 +3737,11 @@ Ricardas Berankis,Aleksandre Bakshi,2,1,2025-04-14,1
 Miomir Kecmanovic,Lorenzo Sonego,2,1,2024-03-04,1
 Martin Damm,Stefano Travaglia,2,1,2025-08-24,1
 Dennis Novak,Illya Marchenko,2,0,2023-10-22,2
-Bernard Tomic,Shintaro Mochizuki,2,1,2025-10-06,1
 Cem Ilkel,Fabian Marozsan,2,1,2023-01-29,1
 Denis Kudla,Tallon Griekspoor,2,0,2021-03-15,2
 Borna Gojo,Sebastian Gorzny,2,1,2026-08-03,1
 Bernard Tomic,Denis Kudla,2,2,2024-09-29,0
+Giovanni Mpetshi Perricard,Botic van de Zandschulp,2,0,2026-08-05,2
 Dennis Novak,Gregoire Barrere,2,1,2022-01-30,1
 Mitchell Krueger,Gabriel Diallo,2,0,2024-07-28,2
 Jacob Fearnley,Christopher Eubanks,2,2,2024-12-30,0
@@ -3757,8 +3757,8 @@ James Duckworth,Mitchell Krueger,2,2,2023-07-24,0
 Reilly Opelka,Alejandro Davidovich Fokina,2,0,2026-01-21,2
 Dennis Novak,Evgeny Donskoy,2,1,2024-01-06,1
 Reilly Opelka,Adrian Mannarino,2,2,2022-02-14,0
-Miomir Kecmanovic,Liam Broady,2,2,2022-03-07,0
 Bernard Tomic,Hugo Grenier,2,0,2025-03-24,2
+Miomir Kecmanovic,Liam Broady,2,2,2022-03-07,0
 James Duckworth,Omar Jasika,2,2,2025-11-10,0
 Bernard Tomic,Hayato Matsuoka,2,0,2026-06-01,2
 Denis Kudla,Michael Geerts,2,1,2023-09-24,1
@@ -3806,7 +3806,7 @@ Ricardas Berankis,Jan-Lennard Struff,2,1,2022-02-21,1
 Steve Johnson,Michael Mmoh,2,1,2023-10-30,1
 Rei Sakamoto,Federico Cina,2,2,2026-02-16,0
 Taym Al Azmeh,Andres Martin,2,2,2025-11-10,0
-Denis Yevseyev,Yanki Erel,2,1,2026-08-03,1
+Denis Shapovalov,Arthur Rinderknech,2,1,2022-02-14,1
 Steve Johnson,Kevin Anderson,2,1,2022-02-14,1
 Reilly Opelka,Denis Shapovalov,2,1,2022-03-07,1
 Taym Al Azmeh,Kenta Miyoshi,2,0,2025-11-10,2
@@ -3821,7 +3821,7 @@ Tennys Sandgren,Alex Michelsen,2,0,2024-02-05,2
 Mitchell Krueger,Max Purcell,2,1,2024-02-05,1
 Cem Ilkel,Alexander Shevchenko,2,2,2023-01-29,0
 Charles Broom,Sho Shimabukuro,2,1,2024-07-28,1
-Denis Shapovalov,Arthur Rinderknech,2,1,2022-02-14,1
+Denis Yevseyev,Yanki Erel,2,1,2026-08-03,1
 Gijs Brouwer,Leandro Riedi,2,0,2024-07-29,2
 Botic van de Zandschulp,Matteo Arnaldi,2,2,2025-08-18,0
 Mikael Ymer,Ilya Ivashka,2,0,2022-09-26,2
@@ -3844,9 +3844,9 @@ Taro Daniel,Matteo Berrettini,2,1,2023-03-06,1
 Taylor Fritz,Nuno Borges,2,2,2025-09-24,0
 Taro Daniel,Max Purcell,2,2,2024-01-08,0
 Denis Kudla,Mackenzie McDonald,2,0,2022-07-25,2
-Cem Ilkel,Gastao Elias,2,0,2024-02-17,2
-James Duckworth,Zachary Svajda,2,1,2024-02-26,1
 Bernard Tomic,Zachary Svajda,2,0,2025-07-28,2
+James Duckworth,Zachary Svajda,2,1,2024-02-26,1
+Cem Ilkel,Gastao Elias,2,0,2024-02-17,2
 Taylor Fritz,James Duckworth,2,1,2022-10-03,1
 Illya Marchenko,Alex Bolt,2,1,2024-04-29,1
 Dennis Novak,Nuno Borges,2,0,2023-09-15,2
@@ -3869,8 +3869,8 @@ Giovanni Mpetshi Perricard,Frances Tiafoe,2,2,2024-12-29,0
 Jack Sock,Prajnesh Gunneswaran,2,2,2021-11-14,0
 Miomir Kecmanovic,Frances Tiafoe,2,0,2024-01-01,2
 Botic van de Zandschulp,Cameron Norrie,2,1,2022-09-16,1
-Shintaro Mochizuki,Thanasi Kokkinakis,2,0,2024-02-12,2
 Ricardas Berankis,Evan Furness,2,2,2023-03-26,0
+Shintaro Mochizuki,Thanasi Kokkinakis,2,0,2024-02-12,2
 Daniel Rincon,Nicolas Alvarez Varona,2,1,2025-02-10,1
 Botic van de Zandschulp,Casper Ruud,2,2,2023-03-20,0
 Taro Daniel,Pedro Martinez,2,2,2022-10-24,0
@@ -4236,24 +4236,24 @@ Matteo Martineau,Lucas Poullain,2,0,2025-08-18,2
 Jan-Lennard Struff,Matteo Arnaldi,2,1,2023-10-02,1
 Mikael Torpegaard,Filip Horansky,2,0,2022-01-17,2
 Mattia Bellucci,Rinky Hijikata,2,2,2026-02-25,0
-Jan-Lennard Struff,Alex de Minaur,2,0,2024-10-21,2
+Raphael Collignon,Daniel Elahi Galan,2,1,2025-08-24,1
+Marius Copil,Pierre-Hugues Herbert,2,0,2023-03-12,2
 Benjamin Bonzi,Alexandre Muller,2,1,2024-01-08,1
 Benjamin Bonzi,Alexander Shevchenko,2,0,2024-02-05,2
 Sho Shimabukuro,Zdenek Kolar,2,2,2023-01-07,0
 Jan-Lennard Struff,Alejandro Davidovich Fokina,2,1,2025-03-17,1
 Stefanos Tsitsipas,Francisco Cerundolo,2,2,2024-10-28,0
 Mattia Bellucci,Louis Wessels,2,2,2023-07-23,0
-Raphael Collignon,Daniel Elahi Galan,2,1,2025-08-24,1
-Cedrik-Marcel Stebe,Jurij Rodionov,2,2,2022-03-28,0
+Jan-Lennard Struff,Alex de Minaur,2,0,2024-10-21,2
 Benjamin Bonzi,Antoine Escoffier,2,1,2024-08-26,1
+Cedrik-Marcel Stebe,Jurij Rodionov,2,2,2022-03-28,0
 Cedrik-Marcel Stebe,Jay Friend,2,2,2025-11-10,0
 Illya Marchenko,James Duckworth,2,0,2024-04-14,2
-Taro Daniel,Edward Winter,2,2,2023-01-01,0
 Jan-Lennard Struff,Alexander Shevchenko,2,2,2024-11-04,0
 Thanasi Kokkinakis,Aleksandar Vukic,2,2,2024-07-29,0
 Jan-Lennard Struff,Alexandre Muller,2,1,2025-11-03,1
 Stefanos Tsitsipas,Emil Ruusuvuori,2,2,2023-02-13,0
-Marius Copil,Pierre-Hugues Herbert,2,0,2023-03-12,2
+Taro Daniel,Edward Winter,2,2,2023-01-01,0
 Reilly Opelka,Jenson Brooksby,2,1,2022-02-07,1
 Moez Echargui,Luca Van Assche,2,0,2026-01-18,2
 Benjamin Bonzi,Botic van de Zandschulp,2,1,2023-01-02,1
@@ -5055,17 +5055,17 @@ Yasutaka Uchiyama,Alex Bolt,2,1,2026-02-02,1
 Alex de Minaur,Arthur Fils,2,1,2026-08-20,1
 Lorenzo Sonego,Jason Kubler,2,0,2023-03-06,2
 Alex de Minaur,Alex Michelsen,2,1,2025-01-13,1
+Jurij Rodionov,Jakub Paul,2,2,2025-03-10,0
 Alex de Minaur,Alejandro Davidovich Fokina,2,2,2025-07-21,0
 Alex de Minaur,Adrian Mannarino,2,2,2023-01-16,0
-Jurij Rodionov,Jakub Paul,2,2,2025-03-10,0
-Alex Rybakov,Yibing Wu,2,0,2025-06-02,2
-Nikoloz Basilashvili,Adrian Mannarino,2,0,2024-09-15,2
 Flavio Cobolli,Arthur Rinderknech,2,0,2026-01-06,2
+Nikoloz Basilashvili,Adrian Mannarino,2,0,2024-09-15,2
+Alex Rybakov,Yibing Wu,2,0,2025-06-02,2
 Flavio Cobolli,Arthur Fils,2,0,2026-08-22,2
 Lorenzo Sonego,Hugo Gaston,2,2,2022-01-10,0
+Lorenzo Sonego,Hubert Hurkacz,2,1,2023-01-16,1
 Alex Rybakov,Thai-Son Kwiatkowski,2,2,2025-09-08,0
 Alex Rybakov,Taro Daniel,2,0,2025-02-24,2
-Lorenzo Sonego,Hubert Hurkacz,2,1,2023-01-16,1
 Constant Lestienne,Evgeny Donskoy,2,1,2022-06-27,1
 Hiroki Moriya,Jason Kubler,2,0,2025-01-27,2
 Hamad Medjedovic,Daniel Rincon,2,2,2025-01-06,0
@@ -5177,12 +5177,12 @@ Louis Wessels,Mattia Bellucci,2,0,2023-07-23,2
 Yasutaka Uchiyama,Hyeon Chung,2,2,2024-05-18,0
 Salvatore Caruso,Miomir Kecmanovic,2,0,2022-01-17,2
 Alex Bolt,Rio Noguchi,2,2,2026-04-13,0
-Alex Molcan,Zdenek Kolar,2,2,2021-11-07,0
-Alex Michelsen,Alex de Minaur,2,1,2025-01-13,1
+Constant Lestienne,Harold Mayot,2,1,2024-01-06,1
 Lorenzo Musetti,Jan-Lennard Struff,2,1,2024-10-28,1
+Alex Michelsen,Alex de Minaur,2,1,2025-01-13,1
 Lorenzo Musetti,James Duckworth,2,1,2025-07-27,1
-Alex Michelsen,Aleksandar Vukic,2,2,2025-10-13,0
 Enzo Couacaud,Roberto Quiroz,2,2,2022-10-16,0
+Alex Michelsen,Aleksandar Vukic,2,2,2025-10-13,0
 Maxime Janvier,Lucas Pouille,2,0,2022-01-30,2
 Nikoloz Basilashvili,Marc-Andrea Huesler,2,1,2025-08-24,1
 Lorenzo Musetti,Hugo Gaston,2,1,2021-11-08,1
@@ -5196,32 +5196,32 @@ Salvatore Caruso,Abdullah Shelbayh,2,0,2023-02-19,2
 Maxime Janvier,Mark Lajal,2,0,2025-09-01,2
 Lorenzo Musetti,Gael Monfils,2,1,2024-10-21,1
 Lorenzo Musetti,Gabriel Diallo,2,1,2024-12-29,1
-Alex Martinez,Cedrik-Marcel Stebe,2,0,2025-11-10,2
 Enzo Couacaud,Zachary Svajda,2,0,2025-01-12,2
+Alex Martinez,Cedrik-Marcel Stebe,2,0,2025-11-10,2
 Alex Martinez,Adam Jilly,2,2,2025-11-10,0
 Robin Bertrand,Jie Cui,2,1,2025-07-21,1
 Yi Zhou,Yoshihito Nishioka,2,1,2025-10-20,1
 Lorenzo Musetti,Jannik Sinner,2,0,2025-08-24,2
 Lorenzo Musetti,Jaume Munar,2,1,2025-08-24,1
-Lorenzo Musetti,Jiri Lehecka,2,0,2023-03-20,2
+Alex Michelsen,Arthur Rinderknech,2,0,2025-10-01,2
 Patrick Zahraj,Raphael Collignon,2,0,2026-02-09,2
 Lorenzo Musetti,Marin Cilic,2,1,2022-10-31,1
 Maxime Janvier,Jurij Rodionov,2,0,2026-03-09,2
-Alex Michelsen,Francisco Cerundolo,2,1,2026-08-06,1
 Nikoloz Basilashvili,Jakub Mensik,2,0,2025-01-13,2
+Alex Michelsen,Francisco Cerundolo,2,1,2026-08-06,1
 Hiroki Moriya,Dane Sweeny,2,2,2026-02-09,0
 Nikoloz Basilashvili,Jenson Brooksby,2,1,2022-03-21,1
 Justin Boulais,Yu Hsiou Hsu,2,0,2026-03-23,2
 Enzo Couacaud,Mikhail Kukushkin,2,2,2025-09-08,0
 Filip Peliwo,Marc Polmans,2,1,2023-10-29,1
 Daniel Altmaier,Jack Sock,2,1,2022-02-14,1
-Alex Michelsen,Daniel Merida,2,1,2026-08-07,1
-Alex Michelsen,Arthur Rinderknech,2,0,2025-10-01,2
 Hiroki Moriya,Constant Lestienne,2,0,2024-01-06,2
-Alex Michelsen,Corentin Moutet,2,1,2025-10-13,1
+Lorenzo Musetti,Jiri Lehecka,2,0,2023-03-20,2
+Alex Michelsen,Daniel Merida,2,1,2026-08-07,1
 Michael Mmoh,Maks Kasnikowski,2,1,2025-11-10,1
-Alex Michelsen,Christopher O'Connell,2,2,2024-12-29,0
+Alex Michelsen,Corentin Moutet,2,1,2025-10-13,1
 Constant Lestienne,Michael Mmoh,2,2,2023-09-24,0
+Alex Michelsen,Christopher O'Connell,2,2,2024-12-29,0
 Nikoloz Basilashvili,Lorenzo Musetti,2,0,2025-09-17,2
 Nikoloz Basilashvili,Lorenzo Sonego,2,1,2021-09-27,1
 Alex Michelsen,Bernard Tomic,2,2,2023-11-19,0
@@ -5232,8 +5232,8 @@ Yi Zhou,Yu Hsiou Hsu,2,1,2026-01-26,1
 Daniel Altmaier,Hamad Medjedovic,2,1,2025-08-24,1
 Constant Lestienne,Steven Diez,2,2,2022-06-27,0
 Maxime Janvier,Nicolas Mejia,2,0,2024-04-20,2
-Alex Hernandez,Alan Magadan,2,1,2026-08-17,1
 Nikoloz Basilashvili,Roberto Bautista Agut,2,1,2022-02-14,1
+Alex Hernandez,Alan Magadan,2,1,2026-08-17,1
 Hamad Medjedovic,Holger Rune,2,1,2025-09-24,1
 Ergi Kirkin,Illya Marchenko,2,1,2024-03-17,1
 Daniel Altmaier,Gael Monfils,2,0,2025-01-13,2
@@ -5264,8 +5264,8 @@ Yibing Wu,Aleksandar Kovacevic,2,1,2023-01-30,1
 Yibing Wu,Alex Rybakov,2,2,2025-06-02,0
 Nikoloz Basilashvili,Mikael Ymer,2,0,2023-01-09,2
 Maxime Janvier,Maximilian Marterer,2,1,2023-10-15,1
-Alex Hernandez,Taro Daniel,2,1,2025-07-14,1
 Yibing Wu,Alexei Popyrin,2,1,2025-07-21,1
+Alex Hernandez,Taro Daniel,2,1,2025-07-14,1
 Kacper Zuk,Antoine Escoffier,2,1,2022-03-27,1
 Patrick Zahraj,Arthur Fery,2,2,2025-03-10,0
 Filip Misolic,Kimmer Coppejans,2,1,2023-08-28,1
@@ -5282,34 +5282,34 @@ Daniel Altmaier,Gilles Arnaud Bailly,2,1,2025-10-13,1
 Constant Lestienne,Mattia Bellucci,2,1,2025-01-21,1
 Justin Boulais,Philip Sekulic,2,1,2026-04-13,1
 Lorenzo Musetti,Matteo Arnaldi,2,2,2026-07-27,0
-Alex Molcan,Diego Schwartzman,2,0,2022-08-15,2
+Jurij Rodionov,Sho Shimabukuro,2,2,2024-11-17,0
 Yasutaka Uchiyama,Michael Mmoh,2,0,2022-09-18,2
 Lorenzo Sonego,Andrey Rublev,2,0,2025-07-27,2
-Alex Molcan,Hugo Grenier,2,0,2024-03-06,2
 Yasutaka Uchiyama,Mitchell Krueger,2,1,2025-01-12,1
+Alex Molcan,Hugo Grenier,2,0,2024-03-06,2
 Yasutaka Uchiyama,Mukund Sasikumar,2,1,2024-05-18,1
 Jurij Rodionov,Robin Bertrand,2,2,2025-09-01,0
 Alex Molcan,Gijs Brouwer,2,2,2024-01-14,0
 Jurij Rodionov,Sebastian Ofner,2,0,2026-03-02,2
 Lorenzo Sonego,Alex Michelsen,2,1,2025-01-06,1
 Alex Molcan,Emil Ruusuvuori,2,0,2023-11-12,2
-Jurij Rodionov,Sho Shimabukuro,2,2,2024-11-17,0
+Alex Molcan,Diego Schwartzman,2,0,2022-08-15,2
 Lorenzo Sonego,Andy Murray,2,0,2023-08-07,2
 Yasutaka Uchiyama,Quentin Halys,2,0,2025-02-24,2
-Alex Molcan,David Goffin,2,1,2023-10-30,1
 Yasutaka Uchiyama,Ramkumar Ramanathan,2,2,2022-07-24,0
+Alex Molcan,David Goffin,2,1,2023-10-30,1
 Nikoloz Basilashvili,Bernard Tomic,2,2,2025-10-01,0
 Lorenzo Sonego,Alejandro Tabilo,2,1,2024-08-06,1
 Yasutaka Uchiyama,Rinky Hijikata,2,1,2023-10-29,1
 Lorenzo Sonego,Adrian Mannarino,2,0,2024-09-26,2
 Yasutaka Uchiyama,Sebastian Fanselow,2,2,2022-05-30,0
 Jurij Rodionov,Tomas Machac,2,1,2023-10-23,1
-Alex Molcan,Arthur Rinderknech,2,0,2026-02-06,2
+Yasutaka Uchiyama,Soonwoo Kwon,2,1,2025-04-14,1
 Yasutaka Uchiyama,Maximus Jones,2,2,2026-03-23,0
 Jurij Rodionov,Pierre-Hugues Herbert,2,0,2025-10-13,2
 Enzo Couacaud,Dalibor Svrcina,2,1,2025-01-13,1
 Lorenzo Sonego,Botic van de Zandschulp,2,2,2025-02-10,0
-Constant Lestienne,Harold Mayot,2,1,2024-01-06,1
+Alex Molcan,Zdenek Kolar,2,2,2021-11-07,0
 Alex Molcan,Tim van Rijthoven,2,1,2023-02-04,1
 Lorenzo Sonego,Carlos Alcaraz,2,1,2024-01-15,1
 Jurij Rodionov,Mattia Bellucci,2,1,2024-11-17,1
@@ -5319,24 +5319,24 @@ Yasutaka Uchiyama,Kacper Zuk,2,1,2023-01-07,1
 Daniel Altmaier,Lorenzo Musetti,2,0,2026-08-16,2
 Yasutaka Uchiyama,Li Tu,2,2,2023-11-26,0
 Jurij Rodionov,Mikhail Kukushkin,2,1,2022-11-27,1
-Alex Molcan,Nicolas Mejia,2,2,2025-09-12,0
-Nikoloz Basilashvili,Andy Murray,2,0,2022-01-17,2
 Robin Bertrand,Constant Lestienne,2,0,2024-09-22,2
+Alex Molcan,Luca Van Assche,2,0,2026-01-26,2
+Alex Molcan,Nicolas Mejia,2,2,2025-09-12,0
 Enzo Couacaud,Benjamin Bonzi,2,0,2024-02-26,2
 Constant Lestienne,Hugo Grenier,2,0,2022-07-31,2
 Alex Molcan,Mattia Bellucci,2,2,2023-11-12,0
 Lorenzo Sonego,Benjamin Bonzi,2,1,2023-02-06,1
 Jurij Rodionov,Oscar Otte,2,0,2022-01-03,2
 Yasutaka Uchiyama,Mark Lajal,2,0,2025-01-21,2
-Alex Molcan,Mackenzie McDonald,2,2,2022-10-24,0
 Lorenzo Sonego,Ben Shelton,2,0,2025-01-13,2
-Alex Molcan,Luca Van Assche,2,0,2026-01-26,2
-Yasutaka Uchiyama,Soonwoo Kwon,2,1,2025-04-14,1
+Alex Molcan,Mackenzie McDonald,2,2,2022-10-24,0
+Nikoloz Basilashvili,Andy Murray,2,0,2022-01-17,2
+Alex Molcan,Arthur Rinderknech,2,0,2026-02-06,2
 Yasutaka Uchiyama,Steve Johnson,2,0,2023-07-09,2
 Constant Lestienne,Matteo Martineau,2,1,2024-10-13,1
-Alex Michelsen,Juncheng Shang,2,2,2024-12-18,0
-Alex Michelsen,Mattia Bellucci,2,2,2026-03-20,0
+Alex Michelsen,Kei Nishikori,2,1,2024-08-06,1
 Justin Boulais,Blaise Bicknell,2,1,2026-02-09,1
+Alex Michelsen,Mattia Bellucci,2,2,2026-03-20,0
 Alex Michelsen,Marcos Giron,2,0,2026-01-14,2
 Alex Michelsen,Mackenzie McDonald,2,2,2026-07-28,0
 Alex Michelsen,Luca Van Assche,2,1,2024-12-18,1
@@ -5344,15 +5344,15 @@ Alex Michelsen,Lorenzo Sonego,2,1,2025-01-06,1
 Enzo Couacaud,Jan-Lennard Struff,2,1,2023-01-07,1
 Lorenzo Musetti,Rafael Jodar,2,0,2026-08-07,2
 Hamad Medjedovic,Felix Auger-Aliassime,2,0,2026-02-13,2
-Alex Michelsen,Kei Nishikori,2,1,2024-08-06,1
 Enzo Couacaud,Jiri Vesely,2,1,2023-08-28,1
+Alex Michelsen,Juncheng Shang,2,2,2024-12-18,0
 Constant Lestienne,Laslo Djere,2,2,2024-06-16,0
-Alex Michelsen,Jordan Thompson,2,0,2024-12-29,2
 Constant Lestienne,Luca Van Assche,2,1,2024-03-17,1
+Alex Michelsen,Jordan Thompson,2,0,2024-12-29,2
 Justin Boulais,JJ Tracy,2,1,2023-09-24,1
 Enzo Couacaud,Jurij Rodionov,2,1,2024-12-30,1
-Alex Michelsen,James McCabe,2,2,2025-01-13,0
 Lorenzo Musetti,Nikoloz Basilashvili,2,2,2025-09-17,0
+Alex Michelsen,James McCabe,2,2,2025-01-13,0
 Constant Lestienne,Lucas Pouille,2,1,2024-09-15,1
 Hiroki Moriya,Denis Yevseyev,2,2,2025-08-25,0
 Nikoloz Basilashvili,Gregoire Barrere,2,0,2023-02-06,2
@@ -5363,12 +5363,12 @@ Constant Lestienne,Jesper de Jong,2,2,2023-09-25,0
 Nikoloz Basilashvili,Corentin Moutet,2,0,2026-03-09,2
 Paul Jubb,Clement Chidekh,2,0,2026-01-05,2
 Nikoloz Basilashvili,Christopher O'Connell,2,0,2026-03-04,2
-Alex Michelsen,Zachary Svajda,2,0,2023-08-13,2
 Yasutaka Uchiyama,Tim van Rijthoven,2,0,2022-01-09,2
+Alex Michelsen,Zachary Svajda,2,0,2023-08-13,2
 Enzo Couacaud,Ernesto Escobedo,2,0,2023-09-25,2
 Salvatore Caruso,Juan Pablo Ficovich,2,2,2022-01-17,0
-Alex Michelsen,Ugo Humbert,2,1,2026-03-08,1
 Yasutaka Uchiyama,Tsung-Hao Huang,2,2,2025-11-17,0
+Alex Michelsen,Ugo Humbert,2,1,2026-03-08,1
 Alex Michelsen,Tommy Paul,2,0,2024-03-04,2
 Robin Bertrand,Edas Butvilas,2,1,2025-09-01,1
 Alex Michelsen,Thai-Son Kwiatkowski,2,1,2023-10-15,1
@@ -5376,8 +5376,8 @@ Maxime Janvier,Hugo Grenier,2,0,2024-09-29,2
 Alex Michelsen,Tennys Sandgren,2,2,2024-02-05,0
 Alex Michelsen,Tallon Griekspoor,2,1,2024-08-12,1
 Jurij Rodionov,Yuta Shimizu,2,2,2025-10-27,0
-Alex Michelsen,Stefanos Tsitsipas,2,2,2025-01-13,0
 Yasutaka Uchiyama,Yunchaokete Bu,2,0,2024-08-26,2
+Alex Michelsen,Stefanos Tsitsipas,2,2,2025-01-13,0
 Alex Michelsen,Sebastian Korda,2,1,2026-02-19,1
 Lorenzo Musetti,Tomas Martin Etcheverry,2,2,2026-01-07,0
 Lorenzo Musetti,Tomas Machac,2,1,2026-01-24,1
@@ -7105,10 +7105,10 @@ Roberto Carballes Baena,Ben Shelton,2,0,2024-10-02,2
 Frances Tiafoe,Giovanni Mpetshi Perricard,2,0,2024-12-29,2
 Emile Hudd,Matthew Dellavedova,2,2,2025-11-10,0
 Frances Tiafoe,Gael Monfils,2,1,2023-10-23,1
-Tommy Paul,Alex Michelsen,2,2,2024-03-04,0
 Vit Kopriva,Constant Lestienne,2,1,2025-01-12,1
 Alexander Shevchenko,Marton Fucsovics,2,2,2026-01-14,0
 Emile Hudd,Rinky Hijikata,2,0,2024-10-28,2
+Tommy Paul,Alex Michelsen,2,2,2024-03-04,0
 Luca Van Assche,Dusan Lajovic,2,2,2026-08-13,0
 Christopher O'Connell,Roberto Carballes Baena,2,1,2025-03-17,1
 Manuel Guinard,Roman Safiullin,2,1,2025-01-06,1
@@ -14408,9 +14408,9 @@ Mathias Bourgue,Yannick Hanfmann,1,1,2021-02-14,0
 Mathis Debru,Ethan Quinn,1,0,2022-11-20,1
 Mathys Erhard,Andrew Paulson,1,0,2022-11-27,1
 Mathys Erhard,Colin Sinclair,1,1,2023-11-26,0
-Matheus Pucinelli de Almeida,Gabriel Diallo,1,0,2026-02-06,1
 Matheus Pucinelli De Almeida,Terence Atmane,1,0,2022-09-11,1
 Matheus Pucinelli De Almeida,Santiago Rodriguez Taverna,1,0,2023-11-27,1
+Matheus Pucinelli De Almeida,Peter Makk,1,1,2026-08-17,0
 Matej Dodig,Nikoloz Basilashvili,1,0,2024-11-24,1
 Matej Dodig,Dominic Stricker,1,1,2025-10-06,0
 Matej Dodig,Duje Ajdukovic,1,1,2024-09-08,0
@@ -14447,7 +14447,7 @@ Mate Valkusz,Tung-Lin Wu,1,1,2024-01-14,0
 Mate Valkusz,Yu Hsiou Hsu,1,0,2024-01-06,1
 Matej Dodig,Nikolas Sanchez Izquierdo,1,0,2025-08-25,1
 Matej Dodig,Norbert Gombos,1,0,2025-01-31,1
-Matheus Pucinelli De Almeida,Peter Makk,1,1,2026-08-17,0
+Matheus Pucinelli De Almeida,Oliver Tarvet,1,0,2026-08-17,1
 Matej Dodig,Robin Bertrand,1,0,2026-01-19,1
 Mateus Alves,Matias Franco Descotte,1,1,2021-12-19,0
 Mateus Alves,Nicolas Kicker,1,0,2021-12-19,1
@@ -14459,11 +14459,11 @@ Matheus Pucinelli De Almeida,Benoit Paire,1,0,2023-01-16,1
 Matheus Pucinelli De Almeida,Bruno Kuzuhara,1,1,2023-11-27,0
 Matheus Pucinelli De Almeida,Daniel Masur,1,1,2022-08-29,0
 Matheus Pucinelli De Almeida,Enzo Couacaud,1,0,2022-08-29,1
+Matheus Pucinelli De Almeida,Gabriel Diallo,1,0,2026-02-06,1
 Matheus Pucinelli De Almeida,Giovanni Mpetshi Perricard,1,0,2025-01-31,1
 Matheus Pucinelli De Almeida,Gonzalo Villanueva,1,0,2025-11-24,1
 Matheus Pucinelli De Almeida,Mikhail Kukushkin,1,0,2022-08-29,1
 Matheus Pucinelli De Almeida,Nicolas Moreno De Alboran,1,0,2023-11-26,1
-Matheus Pucinelli De Almeida,Oliver Tarvet,1,0,2026-08-17,1
 Mateus Alves,Juan Pablo Ficovich,1,0,2026-03-23,1
 Mateus Alves,Inaki Montes-De La Torre,1,0,2025-07-21,1
 Mateus Alves,Giovanni Mpetshi Perricard,1,0,2023-07-30,1
@@ -26732,7 +26732,7 @@ Borna Gojo,Sebastian Baez,1,1,2022-09-17,0
 Borna Gojo,Sebastian Ofner,1,1,2021-02-08,0
 Borna Gojo,Zizou Bergs,1,1,2023-01-29,0
 Borna Gojo,Zsombor Piros,1,0,2022-01-09,1
-Botic Van De Zandschulp,Aleksandr Shevchenko,1,1,2026-08-14,0
+Botic van de Zandschulp,Abdullah Shelbayh,1,1,2025-02-17,0
 Botic van de Zandschulp,Evgeny Donskoy,1,1,2021-10-25,0
 Botic van de Zandschulp,Diego Schwartzman,1,1,2021-08-30,0
 Botic van de Zandschulp,Duje Ajdukovic,1,1,2023-09-17,0
@@ -26752,10 +26752,10 @@ Botic van de Zandschulp,Hubert Hurkacz,1,1,2026-08-08,0
 Botic van de Zandschulp,Jack Draper,1,0,2024-08-26,1
 Botic van de Zandschulp,David Goffin,1,1,2024-10-21,0
 Botic van de Zandschulp,Daniel Altmaier,1,1,2024-11-22,0
-Botic van de Zandschulp,Abdullah Shelbayh,1,1,2025-02-17,0
-Botic van de Zandschulp,Beibit Zhukayev,1,1,2022-10-03,0
 Botic van de Zandschulp,Adam Walton,1,1,2025-08-18,0
+Botic van de Zandschulp,Beibit Zhukayev,1,1,2022-10-03,0
 Botic van de Zandschulp,Alejandro Tabilo,1,0,2024-01-08,1
+Botic van de Zandschulp,Aleksandr Shevchenko,1,1,2026-08-14,0
 Botic van de Zandschulp,Alessandro Bega,1,1,2021-03-15,0
 Botic van de Zandschulp,Alexander Shevchenko,1,0,2023-09-25,1
 Botic van de Zandschulp,Alexandre Muller,1,0,2023-02-20,1
@@ -30343,8 +30343,7 @@ Daniel Masur,Pierre-Hugues Herbert,1,0,2021-09-27,1
 Bernard Tomic,Liam Draxl,1,0,2024-10-20,1
 Bernard Tomic,Li Tu,1,1,2025-11-10,0
 Bernard Tomic,Krish Arora,1,1,2026-02-09,0
-Alex de Minaur,Aleksandar Vukic,1,1,2021-10-04,0
-Alex Rybakov,Maxim Mrva,1,0,2026-02-23,1
+Alex de Minaur,Alexander Ritschard,1,1,2023-02-20,0
 Alex Rybakov,Moerani Bouzige,1,1,2025-09-15,0
 Alex Rybakov,Murphy Cassone,1,0,2026-02-09,1
 Alex Rybakov,Nicolas Mejia,1,1,2025-06-02,0
@@ -30361,30 +30360,31 @@ Alex Rybakov,Trevor Svajda,1,0,2025-09-08,1
 Alex Rybakov,Tyler Cox,1,1,2025-09-22,0
 Alex Rybakov,Yasutaka Uchiyama,1,1,2022-07-31,0
 Alex Rybakov,Zachary Svajda,1,0,2025-07-28,1
+Alex de Minaur,Adrian Andreev,1,1,2021-01-05,0
+Alex Rybakov,Maxim Mrva,1,0,2026-02-23,1
 Alex Rybakov,Marcos Giron,1,0,2023-02-06,1
 Alex Rybakov,Lukas Neumayer,1,0,2026-03-02,1
-Alex Rybakov,Learner Tien,1,0,2024-09-15,1
-Alex Rybakov,Gage Brymer,1,1,2021-07-19,0
-Alex Rybakov,Chris Rodesch,1,1,2023-11-19,0
+Alex Rybakov,Genaro Alberto Olivieri,1,0,2022-07-31,1
 Alex Rybakov,Christian Langmo,1,0,2026-02-02,1
 Alex Rybakov,Dhakshineswar Suresh,1,0,2025-10-13,1
 Alex Rybakov,Elmar Ejupovic,1,1,2023-02-06,0
 Alex Rybakov,Ernesto Escobedo,1,0,2021-07-19,1
 Alex Rybakov,Ezekiel Clark,1,1,2024-11-17,0
 Alex Rybakov,Fares Zakaria,1,1,2026-08-17,0
-Alex Rybakov,Genaro Alberto Olivieri,1,0,2022-07-31,1
-Alex Rybakov,Keegan Rice,1,0,2025-11-10,1
+Alex Rybakov,Gage Brymer,1,1,2021-07-19,0
 Alex Rybakov,Govind Nanda,1,1,2025-06-02,0
+Alex Rybakov,Learner Tien,1,0,2024-09-15,1
 Alex Rybakov,Gustavo Heide,1,0,2023-06-18,1
 Alex Rybakov,Ioannis Xilas,1,1,2026-03-09,0
 Alex Rybakov,Jacopo Berrettini,1,1,2026-03-02,0
 Alex Rybakov,James Trotter,1,1,2025-09-22,0
 Alex Rybakov,Johannus Monday,1,0,2025-09-29,1
 Alex Rybakov,Jonas Forejtek,1,1,2023-02-06,0
-Alex de Minaur,Adrian Andreev,1,1,2021-01-05,0
-Alex de Minaur,Alexander Ritschard,1,1,2023-02-20,0
-Alex Michelsen,Tung-Lin Wu,1,1,2025-01-31,0
+Alex Rybakov,Keegan Rice,1,0,2025-11-10,1
+Alex de Minaur,Aleksandar Vukic,1,1,2021-10-04,0
 Alex de Minaur,Alexei Popyrin,1,0,2021-11-01,1
+Alex Michelsen,Valentin Vacherot,1,1,2026-02-16,0
+Alex de Minaur,Arthur Fery,1,1,2026-08-18,0
 Alex de Minaur,Jeremy Chardy,1,0,2021-03-15,1
 Alex de Minaur,Joao Fonseca,1,1,2025-03-17,0
 Alex de Minaur,Jurij Rodionov,1,1,2025-10-20,0
@@ -30422,11 +30422,10 @@ Alex de Minaur,Filip Misolic,1,1,2025-10-20,0
 Alex de Minaur,Francisco Comesana,1,1,2025-07-27,0
 Alex de Minaur,Hamad Medjedovic,1,1,2026-01-21,0
 Alex de Minaur,Henri Laaksonen,1,1,2022-08-15,0
+Alex Rybakov,Chris Rodesch,1,1,2023-11-19,0
 Alex Rybakov,Charles Broom,1,0,2026-08-17,1
 Alex Rybakov,Cedrik-Marcel Stebe,1,0,2025-11-03,1
 Alex Rybakov,Brandon Holt,1,0,2024-10-28,1
-Alex Rybakov,Braden Shick,1,1,2022-09-18,0
-Alex Molcan,Dan Added,1,1,2026-01-26,0
 Alex Molcan,Daniil Medvedev,1,0,2023-03-20,1
 Alex Molcan,Denis Shapovalov,1,0,2022-02-14,1
 Alex Molcan,Denis Yevseyev,1,0,2024-01-06,1
@@ -30443,66 +30442,67 @@ Alex Molcan,Hubert Hurkacz,1,0,2022-02-21,1
 Alex Molcan,Ivan Nedelko,1,1,2025-09-01,0
 Alex Molcan,J.J. Wolf,1,0,2022-10-17,1
 Alex Molcan,Joao Sousa,1,1,2021-11-21,0
+Alex Molcan,John Millman,1,1,2024-01-14,0
+Alex Molcan,Dan Added,1,1,2026-01-26,0
 Alex Molcan,Damir Dzumhur,1,0,2022-01-31,1
 Alex Molcan,Cristian Garin,1,0,2021-09-17,1
-Alex Molcan,Christopher O'Connell,1,1,2022-02-14,0
-Alex Molcan,Alexandros Skorilas,1,1,2023-09-16,0
-Alex Michelsen,Yasutaka Uchiyama,1,1,2024-09-25,0
+Alex Molcan,Andreas Seppi,1,1,2022-01-03,0
 Alex Michelsen,Yuta Shimizu,1,1,2023-07-16,0
 Alex Molcan,Abdullah Shelbayh,1,1,2025-09-01,0
 Alex Molcan,Albert Ramos-Vinolas,1,1,2023-03-06,0
 Alex Molcan,Alexander Blockx,1,0,2026-01-18,1
 Alex Molcan,Alexander Shevchenko,1,1,2021-11-21,0
 Alex Molcan,Alexandre Muller,1,1,2026-02-06,0
-Alex Molcan,Andreas Seppi,1,1,2022-01-03,0
-Alex Molcan,Cem Ilkel,1,1,2021-08-30,0
+Alex Molcan,Alexandros Skorilas,1,1,2023-09-16,0
 Alex Molcan,Andrey Golubev,1,1,2021-01-07,0
+Alex Molcan,Christopher O'Connell,1,1,2022-02-14,0
 Alex Molcan,Antoine Hoang,1,1,2021-03-08,0
 Alex Molcan,Benoit Paire,1,1,2024-03-06,0
 Alex Molcan,Blaz Kavcic,1,1,2021-01-07,0
 Alex Molcan,Borna Coric,1,1,2023-03-06,0
 Alex Molcan,Brandon Nakashima,1,1,2021-08-30,0
 Alex Molcan,Casper Ruud,1,0,2022-08-08,1
-Alex Molcan,John Millman,1,1,2024-01-14,0
+Alex Molcan,Cem Ilkel,1,1,2021-08-30,0
 Alex Molcan,Jordan Thompson,1,1,2023-03-20,0
 Alex Molcan,Joris De Loore,1,0,2023-06-18,1
-Alex Molcan,Thiago Monteiro,1,0,2022-08-29,1
-Alex Molcan,Shintaro Mochizuki,1,1,2021-11-21,0
+Alex Molcan,Kimmer Coppejans,1,1,2021-08-30,0
+Alex Molcan,Yannick Hanfmann,1,0,2025-11-02,1
 Alex Molcan,Sho Shimabukuro,1,1,2026-01-18,0
 Alex Molcan,Stan Wawrinka,1,1,2023-01-16,0
 Alex Molcan,Stefanos Sakellaridis,1,1,2025-09-01,0
 Alex Molcan,Stefanos Tsitsipas,1,1,2023-09-16,0
 Alex Molcan,Sumit Nagal,1,0,2024-01-14,1
 Alex Molcan,Taro Daniel,1,0,2022-02-21,1
-Alex Molcan,Yannick Hanfmann,1,0,2025-11-02,1
-Alex Molcan,Richard Gasquet,1,0,2022-10-31,1
+Alex Molcan,Thiago Monteiro,1,0,2022-08-29,1
 Alex Molcan,Yoshihito Nishioka,1,1,2023-03-20,0
+Alex Molcan,Roman Safiullin,1,1,2022-01-17,0
 Alex Rybakov,Abdullah Shelbayh,1,0,2025-09-22,1
 Alex Rybakov,Aleksandar Kovacevic,1,0,2023-01-30,1
 Alex Rybakov,Aleksandar Vukic,1,0,2023-02-13,1
 Alex Rybakov,Alex Hernandez,1,0,2021-11-28,1
 Alex Rybakov,Alexis Galarneau,1,1,2022-07-24,0
 Alex Rybakov,Blaise Bicknell,1,0,2026-01-26,1
-Alex Molcan,Roman Safiullin,1,1,2022-01-17,0
-Alex Molcan,Quentin Halys,1,0,2023-01-09,1
-Alex Molcan,Kimmer Coppejans,1,1,2021-08-30,0
-Alex Molcan,Marton Fucsovics,1,0,2023-03-06,1
+Alex Rybakov,Braden Shick,1,1,2022-09-18,0
+Alex Molcan,Shintaro Mochizuki,1,1,2021-11-21,0
+Alex Molcan,Richard Gasquet,1,0,2022-10-31,1
 Alex Molcan,Laslo Djere,1,0,2023-01-02,1
+Alex Molcan,Matteo Berrettini,1,0,2023-02-27,1
 Alex Molcan,Lloyd Harris,1,1,2022-02-21,0
 Alex Molcan,Lucas Pouille,1,0,2021-03-08,1
 Alex Molcan,Lukas Rosol,1,0,2021-02-14,1
 Alex Molcan,Marius Copil,1,1,2023-10-22,0
 Alex Molcan,Mark Lajal,1,0,2025-09-15,1
 Alex Molcan,Martin Landaluce,1,1,2025-09-01,0
-Alex Molcan,Matteo Berrettini,1,0,2023-02-27,1
-Alex Molcan,Pablo Andujar,1,0,2022-01-17,1
+Alex Molcan,Marton Fucsovics,1,0,2023-03-06,1
 Alex Molcan,Matteo Gigante,1,1,2023-10-30,0
+Alex Molcan,Quentin Halys,1,0,2023-01-09,1
 Alex Molcan,Michael Geerts,1,1,2025-09-15,0
 Alex Molcan,Mohamed Safwat,1,1,2022-02-21,0
 Alex Molcan,Nerman Fatic,1,1,2021-11-07,0
 Alex Molcan,Nicolai Budkov Kjaer,1,0,2026-03-02,1
 Alex Molcan,Nino Serdarusic,1,1,2021-11-07,0
 Alex Molcan,Oscar Otte,1,1,2021-11-21,0
+Alex Molcan,Pablo Andujar,1,0,2022-01-17,1
 Alex de Minaur,Nuno Borges,1,1,2025-10-01,0
 Alex de Minaur,Otto Virtanen,1,1,2024-08-26,0
 Alex de Minaur,Pablo Andujar,1,1,2022-01-17,0
@@ -30665,8 +30665,8 @@ Alexander Binda,Denis Yevseyev,1,1,2026-02-16,0
 Alexander Binda,Dimitar Kuzmanov,1,0,2026-07-27,1
 Alexander Binda,Duje Ajdukovic,1,0,2026-02-09,1
 Alexander Binda,Jay Clarke,1,0,2026-02-16,1
-Alex Michelsen,Valentin Vacherot,1,1,2026-02-16,0
-Alex Michelsen,Tomas Machac,1,0,2024-09-25,1
+Alex Michelsen,Yasutaka Uchiyama,1,1,2024-09-25,0
+Alex Michelsen,Tung-Lin Wu,1,1,2025-01-31,0
 Bernard Tomic,Kaylan Bigun,1,0,2025-06-30,1
 Alex Bolt,Daniel Evans,1,0,2024-10-02,1
 Alex Bolt,Alejandro Davidovich Fokina,1,0,2022-01-17,1
@@ -30708,7 +30708,7 @@ Alex Bogdanovic,Kevin Anderson,1,0,2007-12-31,1
 Alex Bogdanovic,Thomas Oger,1,1,2007-12-31,0
 Alex Bolt,Damir Dzumhur,1,1,2024-08-26,0
 Alex Bolt,Darwin Blanch,1,1,2026-02-09,0
-Alex Michelsen,Tomas Barrios Vera,1,1,2025-07-27,0
+Alex Michelsen,Tomas Machac,1,0,2024-09-25,1
 Alex Bolt,Diego Schwartzman,1,1,2023-09-20,0
 Alex Bolt,Kokoro Isomura,1,1,2026-02-09,0
 Alex Bolt,Lorenzo Giustino,1,1,2023-09-20,0
@@ -30755,7 +30755,7 @@ Aleksandr Nedovyesov,Daniel Elahi Galan,1,1,2022-10-03,0
 Aleksandr Nedovyesov,Vladyslav Manafov,1,0,2021-02-28,1
 Aleksandr Nedovyesov,Zhizhen Zhang,1,0,2022-10-03,1
 Aleksandr Shevchenko,Alejandro Tabilo,1,0,2023-03-22,1
-Aleksandr Shevchenko,Botic Van De Zandschulp,1,0,2026-08-14,1
+Aleksandr Shevchenko,Botic van de Zandschulp,1,0,2026-08-14,1
 Aleksandr Shevchenko,Christopher O'Connell,1,0,2026-08-13,1
 Aleksandr Shevchenko,Daniel Elahi Galan,1,0,2025-08-07,1
 Aleksandr Shevchenko,Filip Cristian Jianu,1,1,2022-10-17,0
@@ -30831,8 +30831,7 @@ Aleksandre Bakshi,Yuki Mochizuki,1,0,2024-10-28,1
 Alex Bolt,Pablo Llamas Ruiz,1,0,2026-08-24,1
 Alex Bolt,Pavle Marinkov,1,1,2025-11-24,0
 Alex Bolt,Philip Sekulic,1,1,2025-11-17,0
-Alex Michelsen,Adrian Mannarino,1,1,2026-07-30,0
-Alex Michelsen,Denis Kudla,1,1,2023-11-12,0
+Alex Michelsen,Aidan Mayo,1,1,2026-07-20,0
 Alex Michelsen,Denis Shapovalov,1,0,2025-02-24,1
 Alex Michelsen,Denis Yevseyev,1,1,2023-05-29,0
 Alex Michelsen,Dhakshineswar Suresh,1,1,2026-07-20,0
@@ -30849,71 +30848,71 @@ Alex Michelsen,Guido Andreozzi,1,1,2023-08-13,0
 Alex Michelsen,Hamad Medjedovic,1,0,2023-11-27,1
 Alex Michelsen,Harold Mayot,1,1,2024-11-03,0
 Alex Michelsen,Holger Rune,1,0,2025-08-07,1
+Alex Michelsen,Hubert Hurkacz,1,1,2024-10-28,0
+Alex Michelsen,Denis Kudla,1,1,2023-11-12,0
 Alex Michelsen,Daniel Evans,1,0,2025-07-21,1
 Alex Michelsen,Constant Lestienne,1,1,2024-02-19,0
-Alex Michelsen,Colton Smith,1,1,2025-03-03,0
-Alex Michelsen,Alexandre Muller,1,0,2023-02-27,1
-Alex Michelsen,Albert Ramos-Vinolas,1,1,2023-08-28,0
+Alex Michelsen,Alexis Galarneau,1,0,2023-05-29,1
 Alex Michelsen,Alejandro Davidovich Fokina,1,0,2026-02-12,1
 Alex Michelsen,Alejandro Tabilo,1,1,2026-03-24,0
 Alex Michelsen,Aleksandar Kovacevic,1,1,2023-07-16,0
 Alex Michelsen,Alessandro Giannessi,1,1,2023-12-31,0
 Alex Michelsen,Alex Bolt,1,1,2023-02-27,0
 Alex Michelsen,Alexander Zverev,1,0,2024-01-15,1
-Alex Michelsen,Alexis Galarneau,1,0,2023-05-29,1
-Alex Michelsen,Christopher Eubanks,1,1,2024-08-18,0
+Alex Michelsen,Alexandre Muller,1,0,2023-02-27,1
 Alex Michelsen,Aziz Dougaz,1,1,2023-10-15,0
+Alex Michelsen,Colton Smith,1,1,2025-03-03,0
 Alex Michelsen,Beibit Zhukayev,1,1,2025-10-13,0
 Alex Michelsen,Benjamin Bonzi,1,0,2024-11-03,1
 Alex Michelsen,Borna Coric,1,1,2024-09-25,0
 Alex Michelsen,Brayden Schnur,1,1,2023-10-08,0
 Alex Michelsen,Camilo Ugo Carabelli,1,0,2025-03-17,1
 Alex Michelsen,Cannon Kingsley,1,0,2023-10-30,1
-Alex Michelsen,Hubert Hurkacz,1,1,2024-10-28,0
+Alex Michelsen,Christopher Eubanks,1,1,2024-08-18,0
 Alex Michelsen,Jack Loutit,1,1,2024-01-08,0
 Alex Michelsen,Jack Sock,1,1,2023-01-30,0
-Alex Michelsen,Richard Gasquet,1,1,2024-11-03,0
-Alex Michelsen,Michael Mmoh,1,1,2025-02-10,0
+Alex Michelsen,Jacob Fearnley,1,1,2026-07-20,0
+Alex Michelsen,Sebastian Fanselow,1,1,2023-11-19,0
 Alex Michelsen,Miomir Kecmanovic,1,0,2025-02-10,1
 Alex Michelsen,Nicolas Jarry,1,0,2023-08-28,1
 Alex Michelsen,Novak Djokovic,1,0,2024-10-02,1
 Alex Michelsen,Nuno Borges,1,0,2024-01-08,1
 Alex Michelsen,Pablo Carreno Busta,1,1,2024-08-18,0
 Alex Michelsen,Patrick Kypson,1,0,2023-11-19,1
-Alex Michelsen,Sebastian Fanselow,1,1,2023-11-19,0
-Alex Michelsen,Maxime Janvier,1,1,2023-08-13,0
+Alex Michelsen,Richard Gasquet,1,1,2024-11-03,0
 Alex Michelsen,Sebastian Ofner,1,1,2023-08-21,0
+Alex Michelsen,Maximilian Marterer,1,1,2023-02-27,0
 Alex Michelsen,Seongchan Hong,1,1,2024-07-29,0
 Alex Michelsen,Shintaro Mochizuki,1,1,2025-10-13,0
 Alex Michelsen,Strong Kirchheimer,1,1,2023-08-13,0
 Alex Michelsen,Sumit Nagal,1,1,2025-01-06,0
 Alex Michelsen,Thanasi Kokkinakis,1,1,2024-02-12,0
 Alex Michelsen,Titouan Droguet,1,1,2023-11-19,0
-Alex Michelsen,Maximilian Marterer,1,1,2023-02-27,0
-Alex Michelsen,Maxime Cressy,1,0,2023-07-24,1
-Alex Michelsen,Jacob Fearnley,1,1,2026-07-20,0
-Alex Michelsen,Laslo Djere,1,0,2023-08-21,1
+Alex Michelsen,Tomas Barrios Vera,1,1,2025-07-27,0
+Alex Michelsen,Michael Mmoh,1,1,2025-02-10,0
+Alex Michelsen,Maxime Janvier,1,1,2023-08-13,0
 Alex Michelsen,Jakub Mensik,1,0,2025-09-19,1
+Alex Michelsen,Leandro Riedi,1,0,2023-03-08,1
 Alex Michelsen,James Duckworth,1,1,2026-01-05,0
 Alex Michelsen,Jan-Lennard Struff,1,1,2026-08-04,0
 Alex Michelsen,Jaume Munar,1,1,2024-03-04,0
-Alex Michelsen,Jesper De Jong,1,1,2026-08-14,0
+Alex Michelsen,Jesper de Jong,1,1,2026-08-14,0
 Alex Michelsen,Jiri Lehecka,1,1,2024-01-15,0
 Alex Michelsen,Juan Pablo Varillas,1,1,2023-08-21,0
-Alex Michelsen,Leandro Riedi,1,0,2023-03-08,1
-Alex Michelsen,Marton Fucsovics,1,1,2024-08-18,0
+Alex Michelsen,Laslo Djere,1,0,2023-08-21,1
 Alex Michelsen,Li Tu,1,1,2023-07-16,0
+Alex Michelsen,Maxime Cressy,1,0,2023-07-24,1
 Alex Michelsen,Lloyd Harris,1,1,2026-07-20,0
 Alex Michelsen,Lorenzo Musetti,1,1,2025-07-27,0
 Alex Michelsen,Lukas Klein,1,1,2024-03-18,0
 Alex Michelsen,Mariano Navone,1,1,2026-01-13,0
 Alex Michelsen,Mark Lajal,1,1,2026-07-20,0
 Alex Michelsen,Martin Damm,1,1,2023-11-19,0
-Alex Michelsen,Aidan Mayo,1,1,2026-07-20,0
-Alex Michelsen,Abdullah Shelbayh,1,0,2023-11-27,1
+Alex Michelsen,Marton Fucsovics,1,1,2024-08-18,0
+Alex Michelsen,Albert Ramos-Vinolas,1,1,2023-08-28,0
+Alex Michelsen,Adrian Mannarino,1,1,2026-07-30,0
 Alex Bolt,Philipp Kohlschreiber,1,0,2022-03-10,1
-Alex Martinez,Saba Purtseladze,1,1,2025-11-10,0
-Alex Hernandez,Alex Rybakov,1,1,2021-11-28,0
+Alex Michelsen,Abdullah Shelbayh,1,0,2023-11-27,1
 Alex Hernandez,Andrey Rublev,1,0,2025-07-14,1
 Alex Hernandez,Andy Andrade,1,0,2026-03-23,1
 Alex Hernandez,Bernard Tomic,1,0,2026-07-28,1
@@ -30930,8 +30929,9 @@ Alex Hernandez,Hugo Grenier,1,0,2025-09-01,1
 Alex Hernandez,Ilya Ivashka,1,0,2026-05-18,1
 Alex Hernandez,James Duckworth,1,0,2025-03-24,1
 Alex Hernandez,Juan Pablo Ficovich,1,1,2025-03-24,0
+Alex Hernandez,Keegan Smith,1,0,2022-04-25,1
+Alex Hernandez,Alex Rybakov,1,1,2021-11-28,0
 Alex Finkelstein,Tristan Boyer,1,0,2026-02-09,1
-Alex De Minaur,Arthur Fery,1,1,2026-08-18,0
 Alex Bolt,Zhizhen Zhang,1,0,2026-02-09,1
 Alex Bolt,Thanasi Kokkinakis,1,1,2021-02-01,0
 Alex Bolt,Renzo Olivo,1,1,2023-01-16,0
@@ -30950,46 +30950,46 @@ Alex Bolt,Tsung-Hao Huang,1,1,2025-08-04,0
 Alex Bolt,Yannick Hanfmann,1,1,2024-10-02,0
 Alex Bolt,Yoshihito Nishioka,1,0,2024-12-29,1
 Alex Bolt,Yu Hsiou Hsu,1,0,2024-04-21,1
-Alex Hernandez,Keegan Smith,1,0,2022-04-25,1
 Alex Hernandez,Liam Draxl,1,0,2024-11-24,1
 Alex Hernandez,Lorenzo Musetti,1,0,2021-03-15,1
-Alex Martinez,Henry Searle,1,1,2024-07-29,0
-Alex Marti Pujolras,Oliver Crawford,1,0,2026-07-20,1
+Alex Hernandez,Marc-Andrea Huesler,1,0,2026-03-16,1
+Alex Martinez,Ivan Marrero Curbelo,1,1,2024-07-28,0
 Alex Martinez,Amit Vales,1,0,2026-08-03,1
 Alex Martinez,Andres Martin,1,0,2024-10-20,1
 Alex Martinez,Antoine Escoffier,1,0,2024-07-28,1
 Alex Martinez,Darwin Blanch,1,0,2025-07-14,1
 Alex Martinez,Filippo Romano,1,0,2026-02-02,1
 Alex Martinez,Henrique Rocha,1,1,2024-07-29,0
-Alex Martinez,Ivan Marrero Curbelo,1,1,2024-07-28,0
-Alex Marti Pujolras,Filip Cristian Jianu,1,1,2024-10-14,0
+Alex Martinez,Henry Searle,1,1,2024-07-29,0
 Alex Martinez,Jay Friend,1,0,2026-06-29,1
+Alex Marti Pujolras,Luca Van Assche,1,0,2024-10-14,1
 Alex Martinez,John Echeverria,1,1,2024-07-28,0
 Alex Martinez,Mario Gonzalez Fernandez,1,1,2024-07-28,0
 Alex Martinez,Mikhail Kukushkin,1,0,2024-07-29,1
 Alex Martinez,Mitchell Krueger,1,0,2026-07-13,1
 Alex Martinez,Nicolas Alvarez Varona,1,1,2024-07-28,0
 Alex Martinez,Rio Noguchi,1,1,2026-06-29,0
-Alex Marti Pujolras,Luca Van Assche,1,0,2024-10-14,1
-Alex Lawson,Shintaro Mochizuki,1,0,2022-08-01,1
-Alex Hernandez,Marc-Andrea Huesler,1,0,2026-03-16,1
-Alex Hernandez,Yuichi Sugita,1,1,2022-04-25,0
+Alex Martinez,Saba Purtseladze,1,1,2025-11-10,0
+Alex Marti Pujolras,Oliver Crawford,1,0,2026-07-20,1
+Alex Marti Pujolras,Filip Cristian Jianu,1,1,2024-10-14,0
 Alex Hernandez,Michael Geerts,1,0,2024-11-25,1
+Alex Hernandez,Yuta Kawahashi,1,0,2026-05-11,1
 Alex Hernandez,Naoya Honda,1,1,2026-05-18,0
 Alex Hernandez,Nicolas Barrientos,1,1,2022-08-01,0
 Alex Hernandez,Pablo Andujar,1,0,2022-02-21,1
 Alex Hernandez,Saba Purtseladze,1,1,2024-11-24,0
 Alex Hernandez,Tatsuma Ito,1,0,2021-11-28,1
 Alex Hernandez,Tibo Colson,1,1,2026-03-16,0
-Alex Hernandez,Yuta Kawahashi,1,0,2026-05-11,1
-Alex Lawson,Matteo Viola,1,0,2021-02-22,1
+Alex Hernandez,Yuichi Sugita,1,1,2022-04-25,0
 Alex Knaff,Jurij Rodionov,1,0,2026-03-09,1
+Alex Lawson,Shintaro Mochizuki,1,0,2022-08-01,1
 Alex Knaff,Kiranpal Pannu,1,1,2024-09-14,0
 Alex Knaff,Mika Brunold,1,0,2026-02-23,1
 Alex Knaff,Niels Visker,1,1,2026-03-09,0
 Alex Knaff,Rubin Statham,1,1,2024-09-14,0
 Alex Knaff,Vilius Gaubas,1,1,2025-02-01,0
 Alex Knaff,Vladyslav Orlov,1,1,2026-02-06,0
+Alex Lawson,Matteo Viola,1,0,2021-02-22,1
 Alexander Bublik,Dominik Koepfer,1,1,2025-01-27,0
 Alexander Bublik,Dusan Lajovic,1,0,2021-02-08,1
 Alexander Bublik,Elmer Moller,1,0,2024-09-14,1
@@ -33419,7 +33419,7 @@ Arthur De Greef,Mohamed Safwat,1,0,2021-02-08,1
 Arthur Fery,Bernard Tomic,1,1,2026-01-18,0
 Arthur Fery,Alberto Barroso Campos,1,1,2025-11-24,0
 Arthur Fery,Alex Bolt,1,1,2025-07-21,0
-Arthur Fery,Alex De Minaur,1,0,2026-08-18,1
+Arthur Fery,Alex de Minaur,1,0,2026-08-18,1
 Arthur Fery,Alexander Blockx,1,1,2025-07-21,0
 Arthur Fery,Antoine Escoffier,1,1,2023-10-08,0
 Arthur Fery,Aristotelis Thanos,1,1,2025-11-24,0
@@ -35015,7 +35015,7 @@ Antoine Escoffier,Joris De Loore,1,0,2022-09-26,1
 Antoine Escoffier,Jules Marie,1,0,2024-02-18,1
 Antoine Escoffier,Julian Lenz,1,1,2022-02-28,0
 Antoine Escoffier,Julian Ocleppo,1,1,2022-11-20,0
-Antoine Escoffier,Julio César Porras,1,1,2022-07-31,0
+Antoine Escoffier,Julio Cesar Porras,1,1,2022-07-31,0
 Antoine Escoffier,Justin Boulais,1,1,2022-11-13,0
 Antoine Escoffier,Kaichi Uchida,1,1,2022-08-14,0
 Antoine Escoffier,Li Tu,1,1,2024-10-28,0
@@ -36360,9 +36360,9 @@ Jerzy Janowicz,Luca Nardi,1,0,2022-08-29,1
 Jerzy Janowicz,Ryan Peniston,1,1,2022-08-29,0
 Jerzy Janowicz,Sebastian Ofner,1,1,2022-08-29,0
 Jerzy Janowicz,Thiago Seyboth Wild,1,1,2022-08-21,0
-Jesper De Jong,Alex Michelsen,1,0,2026-08-14,1
 Jesper de Jong,Adrian Mannarino,1,0,2025-09-25,1
 Jesper de Jong,Akira Santillan,1,1,2022-01-17,0
+Jesper de Jong,Alex Michelsen,1,0,2026-08-14,1
 Jesper de Jong,Andre Ilagan,1,0,2024-12-30,1
 Jesper de Jong,Andrey Rublev,1,0,2026-02-18,1
 Jesper de Jong,Antoine Escoffier,1,1,2022-08-29,0
@@ -40366,7 +40366,7 @@ Jules Marie,Henri Squire,1,1,2024-01-29,0
 Julian Lenz,Cedrik-Marcel Stebe,1,0,2022-01-09,1
 Julian Lenz,Cem Ilkel,1,1,2021-10-31,0
 Julian Lenz,Damir Dzumhur,1,0,2021-02-08,1
-Julio Cesar Porras,Feliciano Lopez,1,0,2021-07-26,1
+Julio Cesar Porras,Antoine Escoffier,1,0,2022-07-31,1
 Julian Ocleppo,Denis Yevseyev,1,0,2023-02-12,1
 Julian Ocleppo,Gabriel Diallo,1,0,2022-11-13,1
 Julian Ocleppo,Kasidit Samrej,1,0,2024-10-28,1
@@ -40374,9 +40374,9 @@ Julian Ocleppo,Tsung-Hao Huang,1,0,2024-05-18,1
 Julien Cagnina,Arthur Cazaux,1,0,2021-11-14,1
 Julien Cagnina,Holger Rune,1,0,2021-11-21,1
 Julien Cagnina,Khololwam Montsi,1,1,2021-02-14,0
-Julio Cesar Porras,Hiroki Moriya,1,1,2021-07-26,0
+Julio Cesar Porras,Feliciano Lopez,1,0,2021-07-26,1
 Julian Lenz,Yu Hsiou Hsu,1,1,2022-01-09,0
-Julio César Porras,Antoine Escoffier,1,0,2022-07-31,1
+Julio Cesar Porras,Hiroki Moriya,1,1,2021-07-26,0
 Jumpei Yamasaki,Yuki Mochizuki,1,0,2025-11-17,1
 Juncheng Shang,Adrian Mannarino,1,0,2023-03-20,1
 Juncheng Shang,Aidan Mayo,1,1,2022-08-28,0
@@ -44939,7 +44939,7 @@ Gabriel Diallo,Leandro Riedi,1,1,2022-10-16,0
 Gabriel Diallo,Li Tu,1,0,2022-07-31,1
 Gabriel Diallo,Liam Broady,1,0,2023-03-26,1
 Gabriel Diallo,Luca Nardi,1,1,2025-01-13,0
-Gabriel Diallo,Matheus Pucinelli de Almeida,1,1,2026-02-06,0
+Gabriel Diallo,Matheus Pucinelli De Almeida,1,1,2026-02-06,0
 Gabriel Diallo,Luca Van Assche,1,1,2024-08-17,0
 Gabriel Diallo,Luciano Darderi,1,0,2026-08-05,1
 Gabriel Diallo,Lukas Klein,1,1,2023-06-18,0

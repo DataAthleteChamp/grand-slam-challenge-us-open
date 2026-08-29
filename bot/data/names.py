@@ -26,6 +26,7 @@ from __future__ import annotations
 import re
 import unicodedata
 from collections import defaultdict
+from collections.abc import Iterable
 
 #: Particles that belong to the surname rather than being given names.
 _SURNAME_PARTICLES = {
@@ -195,3 +196,69 @@ def join_report(source_names: list[str], crosswalk: dict[str, str]) -> dict[str,
         "match_rate": (total - len(unmatched)) / total if total else 0.0,
         "unmatched": unmatched,
     }
+
+
+def identity_key(name: str) -> str:
+    """Fold a name to the form that decides whether two spellings are one player.
+
+    Accents, case and internal spacing only: ``Alex de Minaur`` and ``Alex De
+    Minaur`` are one person, ``Brandon Nakashima`` and ``Bryce Nakashima`` are
+    not.  Deliberately conservative - it never merges two different given names.
+    """
+    return re.sub(r"[^a-z]", "", strip_accents(name).lower())
+
+
+def canonical_spellings(
+    names: Iterable[str], weights: dict[str, int] | None = None
+) -> dict[str, str]:
+    """Map every spelling of a player onto one canonical spelling.
+
+    The winner is the best-attested spelling, falling back to the longest and
+    then alphabetical order so the result never depends on input ordering.
+
+    This matters more than a tidy join.  When one player appears under two
+    spellings their match history is *split*, so each half is rated on fewer
+    matches and shrunk harder toward the tour mean.  McCartney Kessler was rated
+    on 41 matches instead of 70 for exactly this reason, and nothing downstream
+    reported a problem - both spellings looked like perfectly ordinary players
+    with a shortish record.
+    """
+    grouped: dict[str, list[str]] = defaultdict(list)
+    for name in names:
+        key = identity_key(name)
+        if key:
+            grouped[key].append(name)
+
+    weights = weights or {}
+    mapping: dict[str, str] = {}
+    for spellings in grouped.values():
+        unique = sorted(set(spellings))
+        best = max(unique, key=lambda n: (weights.get(n, 0), len(n), n))
+        for spelling in unique:
+            mapping[spelling] = best
+    return mapping
+
+
+def disambiguate(
+    key: str, candidates: list[str], weights: dict[str, int], *, dominance: int = 10
+) -> str | None:
+    """Pick between genuinely different players sharing an initial and surname.
+
+    ``B. Nakashima`` is Brandon or Bryce; spelling cannot tell them apart, but a
+    main-draw player at a slam has a tour record and an obscure namesake does
+    not.  Resolve only when one candidate's record dominates the rest by
+    ``dominance``-fold, and return ``None`` otherwise so the caller falls back to
+    a tour average rather than silently picking the wrong player.
+    """
+    if not candidates:
+        return None
+    if len(candidates) == 1:
+        return candidates[0]
+    ranked = sorted(candidates, key=lambda n: weights.get(n, 0), reverse=True)
+    best, runner_up = ranked[0], ranked[1]
+    best_weight, runner_weight = weights.get(best, 0), weights.get(runner_up, 0)
+    if best_weight == 0:
+        return None
+    if runner_weight == 0 or best_weight >= dominance * runner_weight:
+        return best
+    return None
