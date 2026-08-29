@@ -30,11 +30,13 @@ from typing import Any
 
 from .data.baserates import (
     DEFER_TO_BASE_RATE,
+    DURATION_SURVIVAL,
     SERVE_RATE_BIAS,
     SERVE_RATE_FORM_SD,
     SERVE_RATE_MARGINAL,
     classify_matchup,
     count_stats,
+    duration_base,
     serve_rate_base,
     structural,
     tiebreak_count_base,
@@ -269,6 +271,20 @@ class Pricer:
         return self._finalise(
             spec, probability, base, model, market, weight, market_id, notes, context, confidence
         )
+
+    def _duration_base(self, spec, context) -> float:
+        """Anchor a duration question on its own threshold and draw.
+
+        A hardcoded 0.5 was wrong in both directions at once: "longer than 150
+        minutes" is 0.514 for a men's best-of-five and 0.083 for a women's
+        best-of-three. Anchoring the women's question at 0.5 would drag an
+        uncertain answer six times too high, and the anchor is what the number
+        decays to precisely when the model is least trusted.
+        """
+        if spec.threshold is None:
+            return 0.5
+        tour = context.tour if context.tour in DURATION_SURVIVAL else "ATP"
+        return duration_base(float(spec.threshold), tour)
 
     def _tiebreak_base(self, spec, context, rates) -> float:
         """Anchor a tiebreak question on the count it actually asks about.
@@ -549,7 +565,7 @@ class Pricer:
                 Family.DECIDING_SET: rates.deciding_set,
                 Family.LOPSIDED_SET: rates.lopsided_set,
                 Family.SET_GAMES: rates.first_set_10plus,
-                Family.MATCH_DURATION: 0.5,
+                Family.MATCH_DURATION: self._duration_base(spec, context),
             }.get(spec.family, 0.5)
         if spec.family in COMPARISON:
             if spec.family is Family.FIRST_SERVE_COMPARISON and _is_rate_threshold(spec):

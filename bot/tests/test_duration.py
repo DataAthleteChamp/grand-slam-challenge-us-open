@@ -199,3 +199,58 @@ def test_surface_filter_applies(charted):
 
 def test_empty_input_returns_empty_frame():
     assert summarise_charting(pd.DataFrame()).empty
+
+
+# --------------------------------------------- duration anchoring (live)
+
+
+def test_duration_base_rate_differs_hugely_by_tour():
+    """Regression: the pricer anchored every duration question at 0.5.
+
+    'Longer than 150 minutes' is 0.514 for a men's best-of-five and 0.083 for a
+    women's best-of-three. Anchoring the women's question at 0.5 drags an
+    uncertain answer six times too high, and the anchor is what the number
+    decays to exactly when the model is least trusted.
+    """
+    from bot.data.baserates import duration_base
+
+    assert duration_base(150, "ATP") == pytest.approx(0.514, abs=0.01)
+    assert duration_base(150, "WTA") == pytest.approx(0.083, abs=0.01)
+    assert duration_base(70, "ATP") > 0.98
+    assert duration_base(70, "WTA") < 0.81
+
+
+def test_duration_base_rate_is_monotone_and_bounded():
+    from bot.data.baserates import duration_base
+
+    for tour in ("ATP", "WTA"):
+        values = [duration_base(n, tour) for n in range(50, 265, 5)]
+        assert values == sorted(values, reverse=True), tour
+        assert all(0.0 <= v <= 1.0 for v in values)
+        # Outside the grid it must clamp, not extrapolate to nonsense.
+        assert duration_base(1, tour) == pytest.approx(values[0])
+        assert duration_base(9999, tour) == pytest.approx(values[-1])
+
+
+def test_duration_base_rate_interpolates_between_grid_points():
+    from bot.data.baserates import duration_base
+
+    low, high = duration_base(145, "ATP"), duration_base(150, "ATP")
+    middle = duration_base(147.5, "ATP")
+    assert high < middle < low
+    assert middle == pytest.approx((low + high) / 2, abs=0.001)
+
+
+def test_slam_duration_slope_is_used():
+    """Slam matches run slightly faster per game than the tour average, and at a
+    typical 37 games the all-surface slope overstates by about five minutes -
+    one whole step on the grid the competition sets thresholds on."""
+    from bot.models.duration import DURATION_FIT
+
+    slope, intercept, sd = DURATION_FIT[("ATP", 5)]
+    assert slope == pytest.approx(4.69, abs=0.01)
+    predicted = slope * 36.7 + intercept
+    assert predicted == pytest.approx(161.4, abs=2.0)
+
+    slope, intercept, _ = DURATION_FIT[("WTA", 3)]
+    assert slope * 21.6 + intercept == pytest.approx(98.9, abs=2.0)

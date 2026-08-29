@@ -241,3 +241,135 @@ def tiebreak_count_base(count: int, tour: str) -> float:
     # than a model.
     deepest = max(table)
     return table[deepest] / (5.0 ** (count - deepest))
+
+
+# ----------------------------------------------------------- match duration
+
+#: ``P(match lasts longer than N minutes)`` on hard-court slams, 2015-2026
+#: (ATP n=2,910 best-of-five, WTA n=2,649 best-of-three).
+#:
+#: The live questions set a per-match line anywhere from 70 to 170 minutes, and
+#: the correct answer at a given line differs enormously by draw: "longer than
+#: 150 minutes" is 0.514 on the men's side and 0.083 on the women's.  The pricer
+#: previously anchored every duration question at 0.5 regardless of tour or
+#: threshold, which is the same class of error as anchoring a rate threshold at
+#: 0.5 - and the anchor is what the answer decays to exactly when the model is
+#: least trusted.
+#:
+#: Stored empirically rather than as a fitted lognormal.  The lognormal tracks
+#: the men's curve to within 0.01 but misses the women's by up to 0.043 around
+#: the median, which is precisely where the questions are set.
+DURATION_SURVIVAL = {
+    "ATP": {
+        50: 0.9948,
+        55: 0.9931,
+        60: 0.9918,
+        65: 0.99,
+        70: 0.9883,
+        75: 0.9845,
+        80: 0.9787,
+        85: 0.968,
+        90: 0.9546,
+        95: 0.9347,
+        100: 0.912,
+        105: 0.8787,
+        110: 0.8471,
+        115: 0.8089,
+        120: 0.7643,
+        125: 0.7179,
+        130: 0.6715,
+        135: 0.6333,
+        140: 0.5904,
+        145: 0.5519,
+        150: 0.5144,
+        155: 0.4821,
+        160: 0.446,
+        165: 0.4141,
+        170: 0.3808,
+        175: 0.3502,
+        180: 0.3162,
+        185: 0.2883,
+        190: 0.2636,
+        195: 0.2371,
+        200: 0.2113,
+        205: 0.1835,
+        210: 0.1577,
+        215: 0.1371,
+        220: 0.1196,
+        225: 0.1034,
+        230: 0.0873,
+        235: 0.0766,
+        240: 0.0622,
+        245: 0.0502,
+        250: 0.0399,
+        255: 0.0337,
+        260: 0.0268,
+    },
+    "WTA": {
+        50: 0.9864,
+        55: 0.9641,
+        60: 0.923,
+        65: 0.8637,
+        70: 0.7946,
+        75: 0.7157,
+        80: 0.6368,
+        85: 0.5685,
+        90: 0.5055,
+        95: 0.4504,
+        100: 0.3994,
+        105: 0.3511,
+        110: 0.3194,
+        115: 0.2839,
+        120: 0.2529,
+        125: 0.2193,
+        130: 0.185,
+        135: 0.157,
+        140: 0.1284,
+        145: 0.1038,
+        150: 0.0827,
+        155: 0.0634,
+        160: 0.0487,
+        165: 0.0362,
+        170: 0.0283,
+        175: 0.0185,
+        180: 0.0155,
+        185: 0.0102,
+        190: 0.0079,
+        195: 0.0053,
+        200: 0.003,
+        205: 0.003,
+        210: 0.0026,
+        215: 0.0019,
+        220: 0.0008,
+        225: 0.0004,
+        230: 0.0004,
+        235: 0.0004,
+        240: 0.0004,
+        245: 0.0004,
+        250: 0.0004,
+        255: 0.0004,
+        260: 0.0004,
+    },
+}
+
+
+def duration_base(minutes: float, tour: str) -> float:
+    """Unconditional ``P(match runs longer than `minutes`)``, interpolated.
+
+    Linear interpolation between five-minute grid points, clamped at both ends.
+    The questions are set on the same five-minute grid, so interpolation is
+    usually exact rather than approximate.
+    """
+    table = DURATION_SURVIVAL.get(tour, DURATION_SURVIVAL["ATP"])
+    keys = sorted(table)
+    if minutes <= keys[0]:
+        return table[keys[0]]
+    if minutes >= keys[-1]:
+        return table[keys[-1]]
+    for low, high in zip(keys, keys[1:], strict=False):
+        if low <= minutes <= high:
+            if high == low:
+                return table[low]
+            weight = (minutes - low) / (high - low)
+            return table[low] + weight * (table[high] - table[low])
+    return 0.5

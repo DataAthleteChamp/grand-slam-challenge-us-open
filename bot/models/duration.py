@@ -18,8 +18,15 @@ Fitted on ATP/WTA hard court 2021-2026, excluding retirements and matches under
 20 or over 400 minutes::
 
     ATP Bo3   minutes = 4.93 * games -  8.8   residual sd 13.5
-    ATP Bo5   minutes = 4.89 * games - 12.7   residual sd 19.3
-    WTA Bo3   minutes = 5.30 * games - 11.5   residual sd 13.3
+    ATP Bo5   minutes = 4.69 * games - 10.6   residual sd 19.4   (slams only)
+    WTA Bo3   minutes = 5.16 * games - 12.2   residual sd 13.4   (slams only)
+
+The best-of-five and women's best-of-three rows are fitted on hard-court *slam*
+matches specifically (ATP n=2,777, WTA n=2,624, r=0.911 both), not on all hard
+courts.  Slam matches run slightly faster per game than the tour average, and
+the difference is not cosmetic: at a typical 37 games the all-surface slope
+overstates the match by about five minutes, which is one whole step on the
+five-minute grid the competition sets its thresholds on.
 """
 
 from __future__ import annotations
@@ -32,8 +39,8 @@ from scipy import stats
 #: ``(tour, best_of) -> (slope, intercept, residual_sd)`` for minutes on games.
 DURATION_FIT = {
     ("ATP", 3): (4.93, -8.8, 13.5),
-    ("ATP", 5): (4.89, -12.7, 19.3),
-    ("WTA", 3): (5.30, -11.5, 13.3),
+    ("ATP", 5): (4.69, -10.6, 19.4),
+    ("WTA", 3): (5.16, -12.2, 13.4),
 }
 
 #: Cap on the per-player pace adjustment, in minutes per match.  The measured
