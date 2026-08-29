@@ -41,6 +41,7 @@ from .data.baserates import (
     structural,
     tiebreak_count_base,
 )
+from .data.names import strip_accents
 from .markets.parser import MarketSpec
 from .markets.taxonomy import COMPARISON, OUTCOME, STRUCTURAL, THRESHOLD, Family
 from .models.counts import skellam_comparison
@@ -499,12 +500,17 @@ class Pricer:
         backwards turns a correct 42 into a 58 on the family that carries the
         most edge, and the mistake is invisible in a dry run.
         """
-        subject_name = (spec.subject or "").lower()
+        # Accents differ between fields of the same record: the API names a
+        # match "M. Čilić vs A. Rublev" and then asks its own questions about
+        # "M. Cilic". Comparing raw strings silently fails to orient, and an
+        # unoriented comparison falls back to the base rate - which looks like a
+        # deliberate answer and is a forfeit.
+        subject_name = strip_accents(spec.subject or "").lower()
         for candidate, other in (
             (context.player_a, context.player_b),
             (context.player_b, context.player_a),
         ):
-            surname = candidate.name.split()[-1].lower() if candidate.name else ""
+            surname = strip_accents(candidate.name.split()[-1]).lower() if candidate.name else ""
             if surname and surname in subject_name:
                 return candidate, other
         return None, None
@@ -560,13 +566,22 @@ class Pricer:
         """
         if spec.family in STRUCTURAL:
             rates = structural(context.tour, context.matchup)
-            return {
-                Family.TIEBREAK: self._tiebreak_base(spec, context, rates),
-                Family.DECIDING_SET: rates.deciding_set,
-                Family.LOPSIDED_SET: rates.lopsided_set,
-                Family.SET_GAMES: rates.first_set_10plus,
-                Family.MATCH_DURATION: self._duration_base(spec, context),
-            }.get(spec.family, 0.5)
+            # Dispatched with if/elif rather than a dict literal on purpose. A
+            # dict evaluates every value eagerly, so a duration question asking
+            # about 99999 minutes also ran _tiebreak_base with 99999 as a
+            # tiebreak count, and 5.0 ** 99997 raised OverflowError. The
+            # question that crashed was not even the question being priced.
+            if spec.family is Family.TIEBREAK:
+                return self._tiebreak_base(spec, context, rates)
+            if spec.family is Family.MATCH_DURATION:
+                return self._duration_base(spec, context)
+            if spec.family is Family.DECIDING_SET:
+                return rates.deciding_set
+            if spec.family is Family.LOPSIDED_SET:
+                return rates.lopsided_set
+            if spec.family is Family.SET_GAMES:
+                return rates.first_set_10plus
+            return 0.5
         if spec.family in COMPARISON:
             if spec.family is Family.FIRST_SERVE_COMPARISON and _is_rate_threshold(spec):
                 threshold = _as_rate(spec.threshold)

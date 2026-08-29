@@ -240,7 +240,11 @@ def tiebreak_count_base(count: int, tour: str) -> float:
     # rarer; the questions only ask for one or two, so this is a guard rather
     # than a model.
     deepest = max(table)
-    return table[deepest] / (5.0 ** (count - deepest))
+    # Clamped because the exponent is attacker-controlled in practice: a
+    # threshold from another family can arrive here, and 5.0 ** 99997 raises
+    # OverflowError rather than returning a small number.
+    steps = min(count - deepest, 40)
+    return table[deepest] / (5.0**steps)
 
 
 # ----------------------------------------------------------- match duration

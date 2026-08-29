@@ -271,3 +271,61 @@ def test_bootstrap_interval_brackets_the_point_estimate():
 def test_scoring_an_empty_batch_does_not_explode():
     card = score(np.array([]), np.array([]))
     assert card.n == 0 and card.skill == 0.0
+
+
+# ------------------------------------------------------------ settlement
+
+
+def test_settlement_reads_every_plausible_payload_shape():
+    """No results existed when this was written, so field names are probed
+    rather than assumed. Guessing one shape and being wrong would mean the
+    ledger never settles and we never learn which families work."""
+    from scripts.settle import (
+        _CROWD_KEYS,
+        _MARKET_KEYS,
+        _OUTCOME_KEYS,
+        _as_outcome,
+        _as_probability,
+        _first,
+    )
+
+    cases = [
+        ({"market_id": "m1", "outcome": 1, "crowd_probability": 0.42}, "m1", 1, 0.42),
+        ({"marketId": "m2", "result": "yes", "crowd": 58}, "m2", 1, 0.58),
+        ({"id": "m4", "answer": "no", "average_probability": 0.33}, "m4", 0, 0.33),
+    ]
+    for payload, market_id, outcome, crowd in cases:
+        assert _first(payload, _MARKET_KEYS) == market_id
+        assert _as_outcome(_first(payload, _OUTCOME_KEYS)) == outcome
+        assert _as_probability(_first(payload, _CROWD_KEYS)) == pytest.approx(crowd)
+
+
+def test_settlement_refuses_to_invent_an_outcome():
+    """An unrecognised payload must report itself, not settle as 0."""
+    from scripts.settle import _as_outcome
+
+    for value in (None, "", "pending", "void", 0.5, 7, [], {}):
+        assert _as_outcome(value) is None
+    assert _as_outcome(0) == 0
+    assert _as_outcome(1) == 1
+    assert _as_outcome(True) == 1
+
+
+def test_crowd_probability_accepts_percent_or_fraction():
+    from scripts.settle import _as_probability
+
+    assert _as_probability(58) == pytest.approx(0.58)
+    assert _as_probability(0.58) == pytest.approx(0.58)
+    assert _as_probability(1) == pytest.approx(1.0)
+    assert _as_probability(-3) is None
+    assert _as_probability("nonsense") is None
+
+
+def test_lessons_are_cautious_about_small_samples():
+    """One round is a handful of questions per family. Reacting to that is how
+    you tune against noise."""
+    from scripts.settle import _verdict
+
+    assert "too few" in _verdict({"n": 8, "beat_crowd": 1.0, "total_rbp": 90.0})
+    assert "edge" in _verdict({"n": 60, "beat_crowd": 0.7, "total_rbp": 300.0})
+    assert "toward the crowd" in _verdict({"n": 60, "beat_crowd": 0.3, "total_rbp": -200.0})

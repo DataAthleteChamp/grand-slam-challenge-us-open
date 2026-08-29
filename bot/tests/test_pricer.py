@@ -691,3 +691,89 @@ def test_every_live_question_shape_parses():
     }
     for text, family in expected.items():
         assert parse_question(text, players=players).family is family, text
+
+
+# --------------------------------------- adversarial input (found in probe)
+
+
+@pytest.mark.parametrize(
+    "question",
+    [
+        "Will the match last longer than 99999 minutes?",
+        "Will the match feature at least 99 tiebreak(s)?",
+        "Will the match last longer than -5 minutes?",
+        "Will the match feature at least 0 tiebreak(s)?",
+        "",
+        "?",
+        "Will  win?",
+        "Will the match",
+    ],
+)
+def test_adversarial_questions_never_crash_and_stay_in_range(question):
+    """Regression: 'longer than 99999 minutes' raised OverflowError.
+
+    _base_rate dispatched through a dict literal, which evaluates every value
+    eagerly, so a duration question also ran the tiebreak anchor with 99999 as a
+    tiebreak count and 5.0 ** 99997 overflowed. The question that crashed was
+    not even the question being priced. Dispatch is now lazy.
+    """
+    from bot.roster import Roster
+
+    context = Roster.load().context("C. Alcaraz", "J. Sinner", tour="ATP")
+    result = Pricer().price(parse_question(question), context, market_id="x")
+    assert 1 <= result.submission <= 99
+
+
+def test_tiebreak_base_rate_survives_an_absurd_count():
+    from bot.data.baserates import tiebreak_count_base
+
+    for count in (5, 40, 99, 100000):
+        value = tiebreak_count_base(count, "ATP")
+        assert 0.0 <= value <= 1.0
+
+
+def test_orientation_folds_accents():
+    """Regression: the API names a match 'M. Čilić vs A. Rublev' and then asks
+    its own questions about 'M. Cilic'. Raw string comparison failed to orient,
+    and an unoriented question falls back to the base rate - which looks like a
+    deliberate answer and is a forfeit."""
+    from bot.roster import Roster
+
+    roster = Roster.load()
+    pricer = Pricer()
+    for a, b in (("I. Jović", "M. Frech"), ("M. Čilić", "A. Rublev")):
+        spec = parse_question(f"Will {a} win?", players=(a, b))
+        subject, opponent = pricer._orient(spec, roster.context(a, b))
+        assert subject is not None, a
+        assert opponent is not None, b
+
+
+def test_accented_names_still_complement():
+    from bot.roster import Roster
+
+    roster, pricer = Roster.load(), Pricer()
+    a, b = "I. Jović", "M. Frech"
+    first = pricer.price(
+        parse_question(f"Will {a} win?", players=(a, b)), roster.context(a, b), market_id="1"
+    )
+    second = pricer.price(
+        parse_question(f"Will {b} win?", players=(b, a)), roster.context(b, a), market_id="2"
+    )
+    assert first.submission + second.submission == pytest.approx(100, abs=3)
+
+
+def test_unrated_players_degrade_to_the_base_rate():
+    """Missing data must reduce confidence, not produce a confident number."""
+    from bot.roster import Roster
+
+    context = Roster.load().context("A. Nobody", "B. Nobody", tour="ATP")
+    for question in (
+        "Will A. Nobody win?",
+        "Will A. Nobody record more aces than B. Nobody?",
+        "Will the match last longer than 150 minutes?",
+    ):
+        result = Pricer().price(
+            parse_question(question, players=("A. Nobody", "B. Nobody")), context, market_id="x"
+        )
+        assert abs(result.submission - result.base_rate * 100) < 20
+        assert result.confidence <= 0.5
