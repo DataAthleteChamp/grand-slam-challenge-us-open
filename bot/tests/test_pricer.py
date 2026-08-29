@@ -777,3 +777,148 @@ def test_unrated_players_degrade_to_the_base_rate():
         )
         assert abs(result.submission - result.base_rate * 100) < 20
         assert result.confidence <= 0.5
+
+
+# ------------------------------------------- findings from the code review
+
+
+def test_comparator_applies_to_tiebreak_questions():
+    """Latent inversion: 'fewer than 2 tiebreaks' returned 6 where 94 is right.
+
+    An 88-point error, the largest single mistake available in this system.
+    Round 1 phrases these positively so it never fired, but a latent inversion
+    is the same problem waiting for a rewording.
+    """
+    from bot.roster import Roster
+
+    context = Roster.load().context("N. Djokovic", "M. Navone", tour="ATP")
+    pricer = Pricer()
+    at_least = pricer.price(
+        parse_question("Will the match feature at least 2 tiebreak(s)?"), context, market_id="1"
+    )
+    fewer = pricer.price(
+        parse_question("Will the match feature fewer than 2 tiebreaks?"), context, market_id="2"
+    )
+    assert at_least.submission + fewer.submission == pytest.approx(100, abs=2)
+    assert fewer.submission > at_least.submission
+
+
+def test_comparator_applies_to_count_comparisons():
+    """'more aces than' and 'fewer aces than' returned an identical number:
+    the comparison families had no direction detection at all."""
+    from bot.roster import Roster
+
+    context = Roster.load().context("N. Djokovic", "M. Navone", tour="ATP")
+    pricer = Pricer()
+    players = ("N. Djokovic", "M. Navone")
+    more = pricer.price(
+        parse_question("Will N. Djokovic record more aces than M. Navone?", players=players),
+        context,
+        market_id="1",
+    )
+    fewer = pricer.price(
+        parse_question("Will N. Djokovic record fewer aces than M. Navone?", players=players),
+        context,
+        market_id="2",
+    )
+    assert more.submission != fewer.submission
+    assert more.submission + fewer.submission == pytest.approx(100, abs=2)
+
+
+@pytest.mark.parametrize(
+    "text,comparator",
+    [
+        ("Will the match last at most 150 minutes?", "lte"),
+        ("Will the match last no more than 150 minutes?", "lte"),
+        ("Will the match be completed within 150 minutes?", "lte"),
+        ("Will the match last no longer than 150 minutes?", "lte"),
+        ("Will the match last longer than 150 minutes?", "gt"),
+        ("Will the match last more than 150 minutes?", "gt"),
+        ("Will the match last under 150 minutes?", "lt"),
+        ("Will the match last at least 150 minutes?", "gte"),
+    ],
+)
+def test_inclusive_upper_bounds_are_not_read_as_greater_than(text, comparator):
+    """The 'more than' alternation matched the tail of 'no more than 150',
+    reporting the exact opposite of what was asked."""
+    assert parse_question(text).comparator == comparator
+
+
+def test_only_one_player_found_in_a_comparison_refuses_to_guess():
+    """Taking 'the first player found' made whichever player happened to match
+    the subject, so a question about the other one was answered backwards."""
+    players = ("Marin Cilic", "Andrey Rublev")
+    spec = parse_question("Will Q. Nobody record more aces than A. Rublev?", players=players)
+    assert spec.subject is None
+
+
+def test_match_winner_still_orients_with_one_name():
+    """Demanding two names would leave every match-winner question unoriented,
+    silently forfeiting a fifth of the competition."""
+    players = ("Marin Cilic", "Andrey Rublev")
+    for text, expected in (
+        ("Will M. Cilic win?", "Marin Cilic"),
+        ("Will A. Rublev win?", "Andrey Rublev"),
+        ("Will M. Čilić win?", "Marin Cilic"),
+    ):
+        assert parse_question(text, players=players).subject == expected
+
+
+def test_ace_comparison_uses_each_players_own_height_prior():
+    """Regressing the opponent toward the SUBJECT's height prior made the answer
+    depend on which player the question named first. P(A>B)+P(B>A)+P(tie) came to
+    1.207 on a live match instead of 1.000."""
+    from bot.data.baserates import count_stats
+    from bot.models.counts import skellam_comparison
+    from bot.models.shrink import CREDIBILITY_K, height_prior_ace_rate, shrink
+    from bot.roster import Roster
+
+    roster, pricer = Roster.load(), Pricer()
+    a, b = "T. Fritz", "D. Blanch"
+    if roster.find(a) is None or roster.find(b) is None:
+        pytest.skip("players absent")
+    context = roster.context(a, b)
+
+    forward = pricer.price(
+        parse_question(f"Will {a} record more aces than {b}?", players=(a, b)),
+        context,
+        market_id="1",
+    ).probability
+    backward = pricer.price(
+        parse_question(f"Will {b} record more aces than {a}?", players=(b, a)),
+        roster.context(b, a),
+        market_id="2",
+    ).probability
+
+    mu = []
+    for name in (a, b):
+        profile = roster.find(name)
+        prior = height_prior_ace_rate(profile.height, context.tour)
+        k = CREDIBILITY_K.get("ace_rate", 50.0)
+        mu.append(
+            shrink(profile.ace_rate, profile.matches, prior, k).estimate
+            * context.expected_service_points
+        )
+    tie = skellam_comparison(mu[0], mu[1]).p_tie
+    count_stats("aces", context.tour)
+    assert forward + backward + tie == pytest.approx(1.0, abs=0.05)
+
+
+def test_double_fault_prior_matches_the_observed_rate():
+    """The ATP prior was derived by dividing a mixed-format per-match count by
+    best-of-five service points, landing 33% below the rate it shrinks toward
+    and dragging every low-sample ATP player down with it."""
+    from bot.data.baserates import COUNT_RATE_PRIOR
+
+    assert COUNT_RATE_PRIOR[("ATP", "double_faults")] == pytest.approx(0.0386, abs=0.002)
+    assert COUNT_RATE_PRIOR[("WTA", "double_faults")] == pytest.approx(0.0508, abs=0.002)
+
+
+def test_simulator_grid_matches_its_documented_resolution():
+    """Inputs are snapped BEFORE the set distribution is solved, so a coarse
+    grid is deterministic bias, not noise. At 0.006 a true 0.4673 snapped to
+    0.5000 - a genuine favourite priced as a coin flip."""
+    from bot.models.simulate import SimulationConfig, simulate_match
+
+    match = simulate_match(0.65, 0.63, best_of=5, config=SimulationConfig(n_sims=20000, sigma=0.0))
+    assert match.p_a_wins_match == pytest.approx(0.6229, abs=0.012)

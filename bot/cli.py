@@ -322,11 +322,34 @@ def run(argv: Sequence[str] | None = None) -> int:
         return 0
 
     desired = result.desired
-    print(f"\nsubmitting {len(desired)} predictions to lobby {result.lobby['id']}...")
-    result.submitted = client.reconcile(str(result.lobby["id"]), desired)
-    print(json.dumps(result.submitted, indent=2, sort_keys=True))
+    lobby_id = str(result.lobby["id"])
+    print(f"\nsubmitting {len(desired)} predictions to lobby {lobby_id}...")
+
+    # upsert_batch is the write path. reconcile is read-only: it diffs desired
+    # against what the server actually holds. Calling only reconcile printed a
+    # convincing "submitting 320 predictions..." and sent nothing at all, and
+    # the test suite passed because the fake client's reconcile recorded the
+    # batch. A mock that does what you wish the real method did turns a green
+    # suite into evidence of nothing.
+    written = client.upsert_batch(lobby_id, desired)
+    print(json.dumps(written, indent=2, sort_keys=True))
+
+    # Verify by reading state back: a request that times out may still have
+    # succeeded server-side, so the only trustworthy check is the server's copy.
+    drift = client.reconcile(lobby_id, desired)
+    result.submitted = {"written": written, "drift": drift}
+    if drift.get("in_sync"):
+        print(f"verified: all {len(desired)} predictions match the server")
+    else:
+        missing, mismatched = drift.get("missing", []), drift.get("mismatched", {})
+        print(
+            f"NOT IN SYNC: {len(missing)} missing, {len(mismatched)} mismatched",
+            file=sys.stderr,
+        )
+        print(json.dumps(drift, indent=2, sort_keys=True), file=sys.stderr)
+
     archive(result, Path(args.out))
-    return 0
+    return 0 if drift.get("in_sync") else 1
 
 
 def _parse_args(argv: Sequence[str] | None) -> argparse.Namespace:

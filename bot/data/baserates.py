@@ -377,3 +377,24 @@ def duration_base(minutes: float, tour: str) -> float:
             weight = (minutes - low) / (high - low)
             return table[low] + weight * (table[high] - table[low])
     return 0.5
+
+
+# ------------------------------------------------- count shrinkage priors
+
+#: Per-service-point rates a player with no record is assumed to have,
+#: measured over our own player table (players with >=30 matches: ATP n=484,
+#: WTA n=169).
+#:
+#: The pricer previously derived this by dividing a per-match count measured on
+#: mixed-format charted matches by best-of-five slam service points.  For the
+#: women's draw the two happen to agree, but for the men's the prior came out
+#: 0.02589 against an observed 0.03858 - 33% low - so every low-sample ATP
+#: player was dragged well below their true double-fault rate, biasing the
+#: answer toward whichever player had fewer recorded matches.
+#:
+#: Ace rate is deliberately absent: it is predicted far better by height than by
+#: a population mean, and ``height_prior_ace_rate`` is used instead.
+COUNT_RATE_PRIOR = {
+    ("ATP", "double_faults"): 0.03858,
+    ("WTA", "double_faults"): 0.05083,
+}

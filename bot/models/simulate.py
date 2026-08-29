@@ -110,6 +110,12 @@ class _SetSampler:
     of 0.002 is finer than the parameter uncertainty in ``p`` itself, and turns
     tens of thousands of solves into a few hundred.
 
+    The default was 0.006 while this docstring claimed 0.002.  Because inputs
+    are snapped *before* the set distribution is solved, that is deterministic
+    bias rather than simulation noise: a sweep of Bo5 matchups found a true
+    win probability of 0.4673 snapped to 0.5000, pricing a genuine favourite as
+    a coin flip on the highest-multiplier family.
+
     Sampling is by inverse-CDF against a uniform draw rather than
     ``Generator.choice``, which is roughly two orders of magnitude faster here
     because it avoids rebuilding an alias table per call.
@@ -117,7 +123,7 @@ class _SetSampler:
 
     __slots__ = ("grid", "_cdf", "_scores")
 
-    def __init__(self, grid: float = 0.006) -> None:
+    def __init__(self, grid: float = 0.002) -> None:
         self.grid = grid
         self._cdf: dict[tuple[int, int, bool, int], np.ndarray] = {}
         self._scores: dict[tuple[int, int, bool, int], list[tuple[int, int, bool]]] = {}

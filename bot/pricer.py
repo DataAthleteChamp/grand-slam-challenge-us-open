@@ -29,6 +29,7 @@ from dataclasses import dataclass, field, replace
 from typing import Any
 
 from .data.baserates import (
+    COUNT_RATE_PRIOR,
     DEFER_TO_BASE_RATE,
     DURATION_SURVIVAL,
     SERVE_RATE_BIAS,
@@ -75,7 +76,27 @@ _BELOW_COMPARATORS = frozenset({"lt", "lte"})
 
 #: Families whose answer is a threshold on a quantity, and therefore sensitive to
 #: which side of the threshold the question asks about.
-_THRESHOLD_SENSITIVE = frozenset({Family.MATCH_DURATION, Family.SET_GAMES, Family.UNFORCED_ERRORS})
+#: Families whose model returns ``P(X > threshold)`` and therefore must be
+#: complemented when the question asks the other way.
+#:
+#: TIEBREAK and the comparison families were missing.  Round 1 phrases them
+#: positively so nothing fired, but "fewer than 2 tiebreaks" would have
+#: submitted 6 where 94 was correct - an 88-point error, and the largest single
+#: mistake available anywhere in this system.  A latent inversion is not a
+#: smaller problem than a live one, it is the same problem waiting for a
+#: rewording.
+_THRESHOLD_SENSITIVE = frozenset(
+    {
+        Family.MATCH_DURATION,
+        Family.SET_GAMES,
+        Family.UNFORCED_ERRORS,
+        Family.TIEBREAK,
+        Family.ACES_COMPARISON,
+        Family.DOUBLE_FAULTS_COMPARISON,
+        Family.WINNERS_COMPARISON,
+        Family.FIRST_SERVE_COMPARISON,
+    }
+)
 
 
 def apply_comparator(probability: float, spec: MarketSpec) -> tuple[float, bool]:
@@ -526,14 +547,17 @@ class Pricer:
             notes.append(f"missing {stat} rates; using the measured even-matchup price")
             return measured["even_p_a_greater"], 0.3
 
-        prior = (
-            height_prior_ace_rate(subject.height, context.tour)
-            if stat == "aces"
-            else population / context.expected_service_points
-        )
+        # One prior per player, not one shared prior. Regressing the opponent
+        # toward the *subject's* height prior made the answer depend on which
+        # player the question happened to name first: P(A>B) + P(B>A) + P(tie)
+        # came to 1.207 on one live match instead of 1.000, and the error was
+        # largest exactly where the heights differ most, which is where the
+        # model should be most confident.
         k = CREDIBILITY_K.get("ace_rate" if stat == "aces" else "df_rate", 50.0)
-        shrunk_subject = shrink(rate_subject, subject.matches, prior, k).estimate
-        shrunk_opponent = shrink(rate_opponent, opponent.matches, prior, k).estimate
+        prior_subject = self._count_prior(stat, subject, context, population)
+        prior_opponent = self._count_prior(stat, opponent, context, population)
+        shrunk_subject = shrink(rate_subject, subject.matches, prior_subject, k).estimate
+        shrunk_opponent = shrink(rate_opponent, opponent.matches, prior_opponent, k).estimate
 
         mu_subject = shrunk_subject * context.expected_service_points
         mu_opponent = shrunk_opponent * context.expected_service_points
@@ -541,6 +565,22 @@ class Pricer:
 
         confidence = 0.75 if min(subject.matches, opponent.matches) >= 20 else 0.45
         return comparison.resolve("no"), confidence
+
+    def _count_prior(self, stat: str, player: PlayerProfile, context, population: float) -> float:
+        """The rate a player with no record is assumed to have.
+
+        Ace rate is predicted well by height, so each player gets their own
+        height prior.  Double faults are not, so the prior is the population
+        mean expressed as a rate over the format's own service points - dividing
+        a mixed-format per-match count by best-of-five service points put the
+        ATP prior 33% below the rate it was shrinking toward.
+        """
+        if stat == "aces":
+            return height_prior_ace_rate(player.height, context.tour)
+        measured = COUNT_RATE_PRIOR.get((context.tour, stat))
+        if measured is not None:
+            return measured
+        return population / max(context.expected_service_points, 1)
 
     def _first_serve_comparison(self, subject, opponent, context, base, notes):
         """P(subject wins a higher share of first-serve points)."""

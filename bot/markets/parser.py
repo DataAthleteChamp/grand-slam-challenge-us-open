@@ -22,6 +22,8 @@ import re
 from dataclasses import dataclass, field
 from typing import Any
 
+from bot.data.names import strip_accents
+
 from .taxonomy import COMPARISON_STAT, Family
 
 
@@ -105,6 +107,9 @@ _RULES: list[tuple[Family, re.Pattern[str], float]] = [
     (Family.UNFORCED_ERRORS, re.compile(r"\bunforced\b|\berrors?\b", re.I), 0.9),
 ]
 
+#: Marks a two-sided comparison. The subject is named before it.
+_COMPARISON_MARKER = re.compile(r"\bthan\b|\bcompared with\b|\bversus\b|\bvs\.?\b")
+
 _SET_ORDINAL = re.compile(r"\b(first|second|third|fourth|fifth|1st|2nd|3rd|4th|5th)\s+set\b", re.I)
 _ORDINALS = {
     "first": 1,
@@ -119,7 +124,12 @@ _ORDINALS = {
     "5th": 5,
 }
 
+# Ordered so that the inclusive-upper forms are tested BEFORE the plain "more
+# than" form. Otherwise the ``more than`` alternation matches the tail of "no
+# more than 150", reporting a strictly-greater question as the exact opposite of
+# what was asked.
 _THRESHOLD_PATTERNS = [
+    (re.compile(rf"(?:at most|no more than|no longer than|within)\s*{_NUMBER}", re.I), "lte"),
     (re.compile(rf"{_NUMBER}\s*(?:or more|\+|or above)", re.I), "gte"),
     (re.compile(rf"(?:at least|minimum of)\s*{_NUMBER}", re.I), "gte"),
     (re.compile(rf"{_NUMBER}\s*(?:or fewer|or less|or below)", re.I), "lte"),
@@ -127,6 +137,11 @@ _THRESHOLD_PATTERNS = [
     (re.compile(rf"(?:fewer than|less than|under|below|shorter than)\s*{_NUMBER}", re.I), "lt"),
     (re.compile(rf"(?:exactly)\s*{_NUMBER}", re.I), "eq"),
 ]
+
+#: Direction words in a head-to-head comparison, which carries no number.
+#: "Will A record FEWER aces than B" is the complement of the modelled
+#: ``P(A > B)`` and without this is submitted uncomplemented.
+_COMPARISON_DIRECTION = re.compile(r"\b(fewer|less|lower|worse)\b", re.I)
 
 _UNPARSED: list[str] = []
 
@@ -141,6 +156,12 @@ def parse_question(text: str, *, players: tuple[str, str] | None = None) -> Mark
     threshold, comparator = _extract_threshold(raw)
     set_number = _extract_set_number(raw)
     subject, opponent = _extract_players(raw, players)
+
+    # A head-to-head comparison carries no number, so _extract_threshold finds
+    # no comparator and leaves the default "gt". "Will A record FEWER aces than
+    # B" is then submitted as P(A > B) — the exact complement of the answer.
+    if family in COMPARISON_STAT and _COMPARISON_DIRECTION.search(raw):
+        comparator = "lt"
 
     notes: list[str] = []
     if family in COMPARISON_STAT and subject is None:
@@ -209,28 +230,58 @@ def _extract_set_number(text: str) -> int | None:
 
 
 def _extract_players(text: str, players: tuple[str, str] | None) -> tuple[str | None, str | None]:
-    """Identify which player a comparison question is about.
+    """Identify which player a question is about.
 
-    Matching is done on surnames, which is how the API labels matches
-    (``"A. Sabalenka vs I. Swiatek"``).  The player named *first* in the question
-    is treated as the subject.
+    Two shapes occur, and conflating them inverts answers:
+
+    *Comparisons* name both players either side of "than" - "Will A record more
+    aces than B?".  The subject is the one named *before* the comparison word.
+    Taking simply "the first player found" is wrong when only one of the two
+    matched, because whichever player happened to match becomes the subject and
+    a question about the other one is answered backwards.
+
+    *Single-subject* questions name one player - "Will A win?".  Here exactly one
+    match is correct and demanding two would leave every match-winner question
+    unoriented, which silently forfeits a fifth of the competition.
+
+    Matching folds accents: the API names a match "M. Čilić vs A. Rublev" and may
+    ask its questions using either spelling.
     """
     if not players:
         return None, None
-    positions = []
+
+    folded = strip_accents(text).lower()
+    positions: dict[str, int] = {}
     for name in players:
-        surname = name.split()[-1] if name else ""
+        surname = strip_accents(name.split()[-1]).lower() if name else ""
         if not surname:
             continue
-        found = re.search(rf"\b{re.escape(surname)}\b", text, re.I)
+        found = re.search(rf"\b{re.escape(surname)}\b", folded)
         if found:
-            positions.append((found.start(), name))
+            positions[name] = found.start()
+
     if not positions:
         return None, None
-    positions.sort()
-    subject = positions[0][1]
-    opponent = next((n for n in players if n != subject), None)
-    return subject, opponent
+
+    comparison = _COMPARISON_MARKER.search(folded)
+    if comparison is None:
+        # Single-subject question. One name is the whole answer; two names means
+        # we cannot tell which is meant.
+        if len(positions) != 1:
+            return None, None
+        subject = next(iter(positions))
+        return subject, next((n for n in players if n != subject), None)
+
+    # Comparison. The subject sits before the comparison word.
+    pivot = comparison.start()
+    before = [n for n, at in positions.items() if at < pivot]
+    if len(before) != 1:
+        # Either both names precede "than" (unparseable) or the only name we
+        # found sits after it, meaning the real subject is someone we failed to
+        # match. Refusing costs a base-rate answer; guessing costs an inversion.
+        return None, None
+    subject = before[0]
+    return subject, next((n for n in players if n != subject), None)
 
 
 def unparsed_report() -> list[str]:

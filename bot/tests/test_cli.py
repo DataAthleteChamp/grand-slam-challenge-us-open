@@ -40,6 +40,8 @@ class FakeClient:
         self.lobby = {"id": "lob1", "joined": True}
         self._matches = matches
         self.reconciled: dict | None = None
+        self.written: dict | None = None
+        self.stored: dict[str, int] = {}
         self.market_calls: list[str] = []
 
     def bootstrap(self):
@@ -58,11 +60,39 @@ class FakeClient:
         ]
 
     def list_predictions(self, lobby_id=None):
-        return []
+        return [
+            {"id": f"p-{mid}", "market_id": mid, "probability": prob}
+            for mid, prob in self.stored.items()
+        ]
+
+    def upsert_batch(self, lobby_id, desired, *, existing=None):
+        """The WRITE path. Only this actually stores anything.
+
+        The previous fake made reconcile record the batch, which made a
+        submission path that called only reconcile look like it worked. The fake
+        now mirrors the real split: reconcile reads, upsert_batch writes.
+        """
+        self.written = {"lobby_id": lobby_id, "desired": dict(desired)}
+        created = sum(1 for mid in desired if mid not in self.stored)
+        self.stored.update(desired)
+        return {"created": created, "updated": len(desired) - created, "failed": 0, "errors": []}
 
     def reconcile(self, lobby_id, desired):
-        self.reconciled = {"lobby_id": lobby_id, "desired": desired}
-        return {"created": len(desired), "updated": 0}
+        """Read-only, exactly like the real client."""
+        self.reconciled = {"lobby_id": lobby_id, "desired": dict(desired)}
+        missing = sorted(set(desired) - set(self.stored))
+        mismatched = {
+            mid: {"desired": p, "actual": self.stored[mid]}
+            for mid, p in desired.items()
+            if mid in self.stored and self.stored[mid] != p
+        }
+        return {
+            "in_sync": not missing and not mismatched,
+            "missing": missing,
+            "mismatched": mismatched,
+            "submitted": len(self.stored),
+            "desired": len(desired),
+        }
 
 
 def _matches():
@@ -285,3 +315,62 @@ def test_the_whole_draw_resolves_except_verified_absences(roster):
         pytest.skip("corpus has no matches yet")
     unresolved = {n for n in names if roster.find(n) is None}
     assert unresolved <= {k for k, v in roster.overrides.items() if not v}, unresolved
+
+
+# ------------------------------------------------- the submission path
+
+
+def _run(argv, fake):
+    from unittest.mock import patch
+
+    import bot.cli as cli
+    from bot.sportspredict.config import Config
+
+    with (
+        patch.object(cli, "SportsPredictClient", lambda c: fake),
+        patch.object(Config, "from_env", classmethod(lambda cls, **k: cls(api_key="sp_live_x"))),
+    ):
+        return cli.run(argv)
+
+
+def test_submit_actually_writes(tmp_path):
+    """Regression, and the worst bug found in this project.
+
+    The submit path called only reconcile, which is READ-ONLY. It printed
+    'submitting 320 predictions...', sent nothing, and exited 0. The test suite
+    passed because the fake client's reconcile recorded the batch - a mock that
+    does what you wish the real method did turns a green suite into evidence of
+    nothing. Every question would have scored as unanswered.
+    """
+    fake = FakeClient(_matches())
+    code = _run(["--submit", "--force", "--out", str(tmp_path)], fake)
+    assert fake.written is not None, "upsert_batch was never called"
+    assert len(fake.written["desired"]) == len(QUESTIONS) * 2
+    assert fake.stored, "nothing reached the server"
+    assert code == 0
+
+
+def test_submit_verifies_against_the_server_afterwards(tmp_path):
+    """A request that times out may still have succeeded, so the only
+    trustworthy check is reading the server's own copy back."""
+    fake = FakeClient(_matches())
+    _run(["--submit", "--force", "--out", str(tmp_path)], fake)
+    assert fake.reconciled is not None
+    assert fake.reconciled["desired"] == fake.written["desired"]
+
+
+def test_a_failed_write_is_reported_not_swallowed(tmp_path):
+    class DropsEverything(FakeClient):
+        def upsert_batch(self, lobby_id, desired, *, existing=None):
+            self.written = {"lobby_id": lobby_id, "desired": dict(desired)}
+            return {"created": 0, "updated": 0, "failed": len(desired), "errors": ["nope"]}
+
+    fake = DropsEverything(_matches())
+    assert _run(["--submit", "--force", "--out", str(tmp_path)], fake) == 1
+
+
+def test_dry_run_writes_nothing(tmp_path):
+    fake = FakeClient(_matches())
+    _run(["--out", str(tmp_path)], fake)
+    assert fake.written is None
+    assert not fake.stored
