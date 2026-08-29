@@ -18,17 +18,16 @@ from bot.markets.parser import Family
 from bot.pricer import Pricer
 from bot.roster import BEST_OF, Roster, normalise_round, players_from_match
 
+#: The five shapes the competition actually asks, verified from the live API on
+#: 29 Aug 2026. The fake previously used ten invented shapes that included no
+#: match-winner question at all, so the whole CLI suite exercised questions the
+#: competition does not ask and missed the family worth a fifth of the score.
 QUESTIONS = [
-    "Will the match include a tiebreak?",
-    "Will the match need a deciding set?",
-    "Will a set end in a lopsided score?",
-    "Will {a} serve more aces than {b}?",
-    "Will {a} hit more double faults than {b}?",
-    "Will the match last more than 150 minutes?",
-    "Will the first set contain 10 or more games?",
-    "Will {a} hit more winners than {b}?",
-    "Will {a} rack up more than 30 unforced errors?",
-    "Will {a} win more than 65% of points on serve?",
+    "Will the match last longer than 150 minutes?",
+    "Will {b} record more aces than {a}?",
+    "Will {b} record more double faults than {a}?",
+    "Will {b} win?",
+    "Will the match feature at least 2 tiebreak(s)?",
 ]
 
 
@@ -100,14 +99,14 @@ def _matches():
         {
             "id": "m1",
             "title": "Carlos Alcaraz vs Jannik Sinner",
-            "round": "Final",
+            "round": "First Round",
             "tour": "ATP",
         },
         {
             "id": "m2",
             "player_a": {"name": "Aryna Sabalenka"},
             "player_b": {"name": "Iga Swiatek"},
-            "round": "Semifinal",
+            "round": "First Round",
             "tour": "WTA",
         },
     ]
@@ -150,8 +149,8 @@ def test_context_carries_tour_and_format(result):
 
 
 def test_rounds_are_normalised(result):
-    assert result.rounds["m1"] == "F"
-    assert result.rounds["m2"] == "SF"
+    assert result.rounds["m1"] == "R128"
+    assert result.rounds["m2"] == "R128"
 
 
 def test_real_players_resolve_to_ratings(result):
@@ -168,10 +167,15 @@ def test_questions_are_understood(result):
 
 
 def test_five_set_and_three_set_price_differently(result):
-    """A best-of-five decider is not a best-of-three decider."""
-    atp = _by_family(result.by_match["m1"], Family.DECIDING_SET)
-    wta = _by_family(result.by_match["m2"], Family.DECIDING_SET)
+    """A best-of-five match is not a best-of-three one.
+
+    Tiebreak count is the sharpest live discriminator: two tiebreaks occur in
+    13.4% of men's slam matches against 2.0% of women's.
+    """
+    atp = _by_family(result.by_match["m1"], Family.TIEBREAK)
+    wta = _by_family(result.by_match["m2"], Family.TIEBREAK)
     assert atp.submission != wta.submission
+    assert atp.submission > wta.submission
 
 
 def _by_family(questions, family):

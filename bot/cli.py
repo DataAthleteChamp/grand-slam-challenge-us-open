@@ -31,6 +31,7 @@ from pathlib import Path
 from typing import Any
 
 from bot.ledger import Entry, Ledger, MatchRecord
+from bot.marketbook import MarketBook
 from bot.markets.parser import Family, parse_question, reset_unparsed, unparsed_report
 from bot.pricer import MatchContext, PricedQuestion, Pricer
 from bot.roster import Roster, players_from_match
@@ -69,6 +70,7 @@ def collect(
     *,
     limit: int | None = None,
     match_filter: str = "",
+    market_book: MarketBook | None = None,
 ) -> RunResult:
     """Walk the event and price every open market.
 
@@ -115,6 +117,15 @@ def collect(
             print(f"  ! {match_id}: markets unavailable ({exc})", file=sys.stderr)
             continue
 
+        # Named market_book, not market: the loop below binds `market` to each
+        # market dict, and a shadowed name here would silently feed the previous
+        # match's payload to every match after the first.
+        ladders = (
+            market_book.ladders_for(context.player_a.name, context.player_b.name)
+            if market_book
+            else None
+        )
+
         match_priced = []
         for market in markets:
             question = _question_text(market)
@@ -122,7 +133,7 @@ def collect(
                 continue
             spec = parse_question(question, players=(context.player_a.name, context.player_b.name))
             market_id = str(market.get("id") or "")
-            result = pricer.price(spec, context, market_id=market_id)
+            result = pricer.price(spec, context, market_id=market_id, ladders=ladders)
             question_text[market_id] = question
             match_priced.append(result)
 
@@ -276,9 +287,26 @@ def run(argv: Sequence[str] | None = None) -> int:
         )
         return 2
 
+    market_book = None
+    if not args.no_market:
+        market_book = MarketBook.fetch()
+        if len(market_book):
+            print(f"market   {len(market_book)} de-vigged quotes loaded")
+        else:
+            print("market   NO QUOTES — match winner will price from the model alone")
+        for note in market_book.skipped:
+            print(f"  ! {note}", file=sys.stderr)
+
     started = time.monotonic()
     try:
-        result = collect(client, roster, pricer, limit=args.limit, match_filter=args.match)
+        result = collect(
+            client,
+            roster,
+            pricer,
+            limit=args.limit,
+            match_filter=args.match,
+            market_book=market_book,
+        )
     except SportsPredictError as exc:
         print(f"api error: {exc}", file=sys.stderr)
         return 2
@@ -369,6 +397,11 @@ def _parse_args(argv: Sequence[str] | None) -> argparse.Namespace:
         help="submit even if validation raised BLOCK findings",
     )
     parser.add_argument("--lane", default="honest", help="bot lane (honest, scenario)")
+    parser.add_argument(
+        "--no-market",
+        action="store_true",
+        help="skip bookmaker odds; match winner then prices from the model alone",
+    )
     parser.add_argument("--limit", type=int, default=None, help="only price the first N matches")
     parser.add_argument("--match", default="", help="only matches whose payload contains this text")
     parser.add_argument("--out", default=str(RUNS_DIR), help="directory for run archives")

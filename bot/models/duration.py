@@ -17,9 +17,21 @@ is not a function of the scoreline alone.  It decomposes cleanly into two parts:
 Fitted on ATP/WTA hard court 2021-2026, excluding retirements and matches under
 20 or over 400 minutes::
 
-    ATP Bo3   minutes = 4.93 * games -  8.8   residual sd 13.5
-    ATP Bo5   minutes = 4.69 * games - 10.6   residual sd 19.4   (slams only)
-    WTA Bo3   minutes = 5.16 * games - 12.2   residual sd 13.4   (slams only)
+    ATP Bo3   minutes = 4.93 * games -  8.8
+    ATP Bo5   minutes = 4.77 * games -  6.3   (hard-court slams, 2023-2026)
+    WTA Bo3   minutes = 5.50 * games - 15.9   (hard-court slams, 2023-2026)
+
+The slam rows are fitted on 2023-2026 only.  Electronic line calling removed
+player challenges from the US Open around 2023, which is a structural break in
+the calibration data, and the eras genuinely differ: at a typical 37 games the
+men's fit moves by 10.6 minutes between them, which is two whole steps on the
+five-minute grid the competition sets its thresholds on.
+
+The spread is **not** constant.  Residual sd runs about 1.4x higher on long
+matches than short ones (ATP 15.2 against 22.2, WTA 10.3 against 17.2), so it is
+modelled as a linear function of games rather than a single number.  Treating it
+as constant would be over-confident on exactly the long matches where the
+questions are hardest.
 
 The best-of-five and women's best-of-three rows are fitted on hard-court *slam*
 matches specifically (ATP n=2,777, WTA n=2,624, r=0.911 both), not on all hard
@@ -37,11 +49,34 @@ import numpy as np
 from scipy import stats
 
 #: ``(tour, best_of) -> (slope, intercept, residual_sd)`` for minutes on games.
+#: ``residual_sd`` is retained for callers that want a single number; the
+#: pricing path uses the heteroscedastic form below.
 DURATION_FIT = {
     ("ATP", 3): (4.93, -8.8, 13.5),
-    ("ATP", 5): (4.69, -10.6, 19.4),
-    ("WTA", 3): (5.16, -12.2, 13.4),
+    ("ATP", 5): (4.774, -6.3, 19.1),
+    ("WTA", 3): (5.499, -15.9, 14.4),
 }
+
+#: ``(tour, best_of) -> (sd_slope, sd_intercept)``: residual sd as a linear
+#: function of total games, fitted on absolute residuals and rescaled by
+#: sqrt(pi/2) to convert mean absolute deviation to a standard deviation.
+DURATION_SD_FIT = {
+    ("ATP", 3): (0.4359, 2.70),
+    ("ATP", 5): (0.4359, 2.70),
+    ("WTA", 3): (0.4687, 2.71),
+}
+
+#: Never let the modelled spread collapse: a duration forecast with a tiny sd
+#: would push answers to 1 and 99 on the strength of a games estimate that is
+#: itself uncertain.
+MIN_DURATION_SD = 8.0
+
+
+def residual_sd_for(games: float, tour: str, best_of: int) -> float:
+    """Residual sd in minutes at a given number of games."""
+    slope, intercept = DURATION_SD_FIT.get((tour, best_of), DURATION_SD_FIT[("ATP", 3)])
+    return max(slope * float(games) + intercept, MIN_DURATION_SD)
+
 
 #: Cap on the per-player pace adjustment, in minutes per match.  The measured
 #: spread is about +/-20 minutes per player; two slow players together should not
@@ -101,7 +136,10 @@ def forecast_duration(
         expected.  Averaged rather than summed — both players are on court for
         every point, so a fast player partly offsets a slow one.
     """
-    slope, intercept, residual_sd = DURATION_FIT.get((tour, best_of), DURATION_FIT[("ATP", 3)])
+    slope, intercept, _ = DURATION_FIT.get((tour, best_of), DURATION_FIT[("ATP", 3)])
+    # Spread grows with match length by about 40% between short and long
+    # matches, so it is read at the games estimate rather than fixed.
+    residual_sd = residual_sd_for(expected_games, tour, best_of)
     base = slope * float(expected_games) + intercept
     pace = float(np.clip((pace_a + pace_b) / 2.0, -PACE_CAP_MINUTES, PACE_CAP_MINUTES))
 

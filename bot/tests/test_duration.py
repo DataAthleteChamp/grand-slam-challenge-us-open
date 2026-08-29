@@ -241,16 +241,40 @@ def test_duration_base_rate_interpolates_between_grid_points():
     assert middle == pytest.approx((low + high) / 2, abs=0.001)
 
 
-def test_slam_duration_slope_is_used():
-    """Slam matches run slightly faster per game than the tour average, and at a
-    typical 37 games the all-surface slope overstates by about five minutes -
-    one whole step on the grid the competition sets thresholds on."""
+def test_duration_fit_uses_the_current_rules_era():
+    """Electronic line calling removed player challenges around 2023, which is a
+    structural break in the calibration data. The eras genuinely differ: at 37
+    games the men's fit moves 10.6 minutes between them, two whole steps on the
+    five-minute grid the thresholds are set on.
+    """
     from bot.models.duration import DURATION_FIT
 
-    slope, intercept, sd = DURATION_FIT[("ATP", 5)]
-    assert slope == pytest.approx(4.69, abs=0.01)
-    predicted = slope * 36.7 + intercept
-    assert predicted == pytest.approx(161.4, abs=2.0)
+    slope, intercept, _ = DURATION_FIT[("ATP", 5)]
+    assert slope == pytest.approx(4.774, abs=0.01)
+    assert slope * 37 + intercept == pytest.approx(170.3, abs=2.0)
 
     slope, intercept, _ = DURATION_FIT[("WTA", 3)]
-    assert slope * 21.6 + intercept == pytest.approx(98.9, abs=2.0)
+    assert slope == pytest.approx(5.499, abs=0.01)
+    assert slope * 21.6 + intercept == pytest.approx(102.9, abs=2.0)
+
+
+def test_duration_spread_grows_with_match_length():
+    """Residual sd runs about 1.4x higher on long matches than short ones, so a
+    single constant is over-confident on exactly the long matches where the
+    questions are hardest."""
+    from bot.models.duration import MIN_DURATION_SD, residual_sd_for
+
+    for tour, best_of in (("ATP", 5), ("WTA", 3)):
+        short = residual_sd_for(18, tour, best_of)
+        long_match = residual_sd_for(45, tour, best_of)
+        assert long_match > short * 1.5
+        assert short >= MIN_DURATION_SD
+
+
+def test_duration_spread_never_collapses():
+    """A tiny sd would push answers to 1 and 99 on the strength of a games
+    estimate that is itself uncertain."""
+    from bot.models.duration import MIN_DURATION_SD, residual_sd_for
+
+    assert residual_sd_for(0, "ATP", 5) >= MIN_DURATION_SD
+    assert residual_sd_for(-5, "WTA", 3) >= MIN_DURATION_SD
