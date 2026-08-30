@@ -48,6 +48,61 @@ TIDY = HISTORY / "settled.csv"
 
 LANES = ("honest", "scenario")
 
+#: Manual website entries are scored under the user account rather than a bot
+#: API key, and the API exposes no user-level endpoint (/users/me returns 404).
+#: They therefore have to be recorded by hand in data/manual/entries.csv as
+#: ``market_id,submitted``.  Scoring them needs nothing further: the crowd value
+#: and outcome come from the settled results we already hold, and RBP is just
+#: ``(crowd_brier - our_brier) * 100``.
+MANUAL_FILE = HISTORY.parent / "manual" / "entries.csv"
+
+
+def load_manual() -> dict[str, int]:
+    if not MANUAL_FILE.exists():
+        return {}
+    out = {}
+    with MANUAL_FILE.open(newline="", encoding="utf-8") as handle:
+        for row in csv.DictReader(handle):
+            try:
+                out[row["market_id"].strip()] = int(row["submitted"])
+            except (KeyError, ValueError, AttributeError):
+                continue
+    return out
+
+
+def manual_rows(results: list[dict], matches: list[dict], ledger: Ledger) -> list[dict]:
+    """Score the manual entry against the same settled outcomes.
+
+    The website cannot be read programmatically, but it does not need to be:
+    given the number that was entered, the outcome and crowd value already in
+    hand determine the score exactly.
+    """
+    entered = load_manual()
+    if not entered:
+        return []
+    rows = []
+    for row in build_rows("manual", results, matches, ledger):
+        submitted = entered.get(row["market_id"])
+        if submitted is None:
+            continue
+        p = submitted / 100.0
+        outcome = float(row["outcome"])
+        brier = (p - outcome) ** 2
+        rbp = (float(row["crowd_brier"]) - brier) * 100.0
+        row["submitted"] = round(p, 4)
+        row["brier"] = round(brier, 6)
+        row["rbp"] = round(rbp, 3)
+        row["weighted_rbp"] = round(rbp * int(row["multiplier"]), 3)
+        row["outcome_tag"] = (
+            "beat_crowd" if rbp > 0 else ("lost_to_crowd" if rbp < 0 else "tied_crowd")
+        )
+        # These describe the bot's reasoning, not the manual entry's.
+        for field in ("base_rate", "model", "market", "market_weight", "confidence", "notes"):
+            row[field] = ""
+        rows.append(row)
+    return rows
+
+
 FIELDS = [
     # identity
     "lane",
@@ -242,6 +297,16 @@ def main(argv: list[str] | None = None) -> int:
         all_rows.extend(rows)
         joined = sum(1 for r in rows if r["base_rate"] != "")
         print(f"{lane}: {len(rows)} settled, {joined} joined to our pricing internals")
+
+    # Score the manual entry from the same settled outcomes.
+    if all_rows:
+        results, matches = collect(LANES[0])
+        manual = manual_rows(results, matches, ledger)
+        if manual:
+            all_rows.extend(manual)
+            print(f"manual: {len(manual)} scored from data/manual/entries.csv")
+        else:
+            print("manual: no entries recorded (data/manual/entries.csv)")
 
     if not all_rows:
         return 0
