@@ -13,15 +13,17 @@
       "market": null,
       "market_id": "b7db1498-07dd-4771-af28-3b53b78865d6",
       "market_weight": 0.0,
-      "model": 0.748729723754937,
-      "notes": [],
+      "model": 0.7941029827592438,
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.230876+00:00",
-      "probability": 0.7093637790039495,
+      "predicted_at": "2026-08-29T22:52:41.874205+00:00",
+      "probability": 0.745662386207395,
       "question": "Will the match last longer than 145 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 71
+      "submission": 75
     },
     {
       "base_rate": 0.46,
@@ -37,7 +39,7 @@
       "model": 0.3763842533430184,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.230876+00:00",
+      "predicted_at": "2026-08-29T22:52:41.874205+00:00",
       "probability": 0.3972881900072638,
       "question": "Will T. Barrios Vera record more aces than A. Blockx?",
       "rbp": null,
@@ -58,7 +60,7 @@
       "model": 0.4052823253340493,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.230876+00:00",
+      "predicted_at": "2026-08-29T22:52:41.874205+00:00",
       "probability": 0.409211744000537,
       "question": "Will T. Barrios Vera record more double faults than A. Blockx?",
       "rbp": null,
@@ -68,26 +70,26 @@
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.7,
+      "confidence": 0.85,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "honest",
-      "market": null,
+      "market": 0.18750000000068734,
       "market_id": "684fd70f-1a08-4b19-a307-d94b4b6804b2",
-      "market_weight": 0.0,
+      "market_weight": 0.85,
       "model": 0.285,
       "notes": [
         "simulated win probability 0.285",
-        "no market quote; this is the family that most needs one"
+        "market consensus 0.188, weight 0.85"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.230876+00:00",
-      "probability": 0.34950000000000003,
+      "predicted_at": "2026-08-29T22:52:41.874205+00:00",
+      "probability": 0.24526383674600627,
       "question": "Will T. Barrios Vera win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 35
+      "submission": 25
     },
     {
       "base_rate": 0.13263821138211385,
@@ -101,9 +103,11 @@
       "market_id": "42a9a775-816a-4440-98a6-26591cd1fe51",
       "market_weight": 0.0,
       "model": 0.157,
-      "notes": [],
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.230876+00:00",
+      "predicted_at": "2026-08-29T22:52:41.874205+00:00",
       "probability": 0.15212764227642278,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,

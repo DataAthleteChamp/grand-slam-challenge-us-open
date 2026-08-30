@@ -13,15 +13,17 @@
       "market": null,
       "market_id": "f7b15234-8855-450f-8929-e1ad97b315ce",
       "market_weight": 0.0,
-      "model": 0.7236835254763879,
-      "notes": [],
+      "model": 0.7540912653058282,
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.240567+00:00",
-      "probability": 0.6926468203811104,
+      "predicted_at": "2026-08-29T22:52:41.886075+00:00",
+      "probability": 0.7169730122446626,
       "question": "Will the match last longer than 85 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 69
+      "submission": 72
     },
     {
       "base_rate": 0.427,
@@ -37,7 +39,7 @@
       "model": 0.39769698798181075,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.240567+00:00",
+      "predicted_at": "2026-08-29T22:52:41.886075+00:00",
       "probability": 0.40502274098635804,
       "question": "Will D. Shnaider record more aces than D. Snigur?",
       "rbp": null,
@@ -58,7 +60,7 @@
       "model": 0.37076543951807794,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.240567+00:00",
+      "predicted_at": "2026-08-29T22:52:41.886075+00:00",
       "probability": 0.38632407963855847,
       "question": "Will D. Shnaider record more double faults than D. Snigur?",
       "rbp": null,
@@ -68,26 +70,26 @@
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.7,
+      "confidence": 0.85,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "honest",
-      "market": null,
+      "market": 0.7266861183070251,
       "market_id": "bfd49009-fe1d-46c4-846a-1a03362d6d8c",
-      "market_weight": 0.0,
+      "market_weight": 0.85,
       "model": 0.6545,
       "notes": [
         "simulated win probability 0.654",
-        "no market quote; this is the family that most needs one"
+        "market consensus 0.727, weight 0.85"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.240567+00:00",
-      "probability": 0.60815,
+      "predicted_at": "2026-08-29T22:52:41.886075+00:00",
+      "probability": 0.6840005516902885,
       "question": "Will D. Shnaider win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 61
+      "submission": 68
     },
     {
       "base_rate": 0.225,
@@ -101,9 +103,11 @@
       "market_id": "1de1dcaa-8cc9-4805-9798-c2970a65c258",
       "market_weight": 0.0,
       "model": 0.26,
-      "notes": [],
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.240567+00:00",
+      "predicted_at": "2026-08-29T22:52:41.886075+00:00",
       "probability": 0.253,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

@@ -398,3 +398,48 @@ COUNT_RATE_PRIOR = {
     ("ATP", "double_faults"): 0.03858,
     ("WTA", "double_faults"): 0.05083,
 }
+
+
+# ------------------------------------------------------- count dispersion
+
+#: Intraclass correlation for each count statistic, fitted so a beta-binomial
+#: reproduces the *within-player* variance measured on hard courts 2023-2026.
+#:
+#: Tennis counts are markedly over-dispersed: a player's ace count varies about
+#: 2.2 times more than binomial sampling allows (ATP), because their true rate
+#: moves between matches with opponent, conditions and form.  A pure Poisson or
+#: binomial model has tails that are too thin, which understates the chance of a
+#: lopsided ace count and correspondingly misstates both P(A > B) and P(tie).
+COUNT_OVERDISPERSION = {
+    ("ATP", "aces"): 0.01321,
+    ("ATP", "double_faults"): 0.00426,
+    ("WTA", "aces"): 0.01337,
+    ("WTA", "double_faults"): 0.00861,
+}
+
+#: Service points per player as a linear function of total games, measured on
+#: hard-court slams 2023-2026 (ATP r=0.968, WTA r=0.954).
+#:
+#: Exposure is the single largest driver of the correlation between the two
+#: players' counts: raw ace counts correlate +0.26, but only +0.02 once service
+#: points are controlled for, and the two players' service-point totals
+#: correlate +0.88.  Using one constant for every match ignores that a 20-game
+#: blowout gives 61 service points while a 44-game marathon gives 138 - a
+#: 2.3-fold range priced as if it were fixed.
+SERVICE_POINTS_FIT = {
+    ("ATP", 5): (3.208, -2.9),
+    ("ATP", 3): (3.208, -2.9),
+    ("WTA", 3): (3.414, -3.3),
+    ("WTA", 5): (3.414, -3.3),
+}
+
+
+def service_points_for(games: float, tour: str, best_of: int) -> int:
+    """Expected service points per player for a match of a given length."""
+    slope, intercept = SERVICE_POINTS_FIT.get((tour, best_of), SERVICE_POINTS_FIT[("ATP", 5)])
+    return int(max(slope * float(games) + intercept, 20.0))
+
+
+def count_overdispersion(stat: str, tour: str) -> float:
+    """Intraclass correlation for a count statistic, 0 when unmeasured."""
+    return COUNT_OVERDISPERSION.get((tour, stat), 0.0)

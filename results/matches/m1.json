@@ -18,7 +18,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:38:17.694235+00:00",
+      "predicted_at": "2026-08-30T00:55:49.609654+00:00",
       "probability": 0.7582114606854572,
       "question": "Will the match last longer than 150 minutes?",
       "rbp": null,
@@ -36,15 +36,17 @@
       "market": null,
       "market_id": "m1-m1",
       "market_weight": 0.0,
-      "model": 0.7214589313246087,
-      "notes": [],
+      "model": 0.6613450770014502,
+      "notes": [
+        "exposure 126 service points from 40.3 games"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:38:17.694235+00:00",
-      "probability": 0.6560941984934565,
+      "predicted_at": "2026-08-30T00:55:49.609654+00:00",
+      "probability": 0.6110088077510877,
       "question": "Will Jannik Sinner record more aces than Carlos Alcaraz?",
       "rbp": null,
       "settled_at": "",
-      "submission": 66
+      "submission": 61
     },
     {
       "base_rate": 0.421,
@@ -57,15 +59,17 @@
       "market": null,
       "market_id": "m1-m2",
       "market_weight": 0.0,
-      "model": 0.3540469661038388,
-      "notes": [],
+      "model": 0.37607253331513385,
+      "notes": [
+        "exposure 126 service points from 40.3 games"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:38:17.694235+00:00",
-      "probability": 0.3707852245778791,
+      "predicted_at": "2026-08-30T00:55:49.609654+00:00",
+      "probability": 0.3873043999863504,
       "question": "Will Jannik Sinner record more double faults than Carlos Alcaraz?",
       "rbp": null,
       "settled_at": "",
-      "submission": 37
+      "submission": 39
     },
     {
       "base_rate": 0.5,
@@ -84,7 +88,7 @@
         "market consensus 0.396, weight 0.85"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:38:17.694235+00:00",
+      "predicted_at": "2026-08-30T00:55:49.609654+00:00",
       "probability": 0.4350774180347579,
       "question": "Will Jannik Sinner win?",
       "rbp": null,
@@ -107,125 +111,12 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:38:17.694235+00:00",
+      "predicted_at": "2026-08-30T00:55:49.609654+00:00",
       "probability": 0.14043577235772356,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
       "submission": 14
-    },
-    {
-      "base_rate": 0.5144,
-      "brier": null,
-      "confidence": 0.8,
-      "crowd": null,
-      "crowd_brier": null,
-      "family": "match_duration",
-      "lane": "honest",
-      "market": null,
-      "market_id": "m1-m5",
-      "market_weight": 0.0,
-      "model": 0.7765948877329638,
-      "notes": [
-        "no usable market quote for this question"
-      ],
-      "outcome": null,
-      "predicted_at": "2026-08-29T22:03:33.883706+00:00",
-      "probability": 0.724155910186371,
-      "question": "Will the match last more than 150 minutes?",
-      "rbp": null,
-      "settled_at": "",
-      "submission": 72
-    },
-    {
-      "base_rate": 0.517,
-      "brier": null,
-      "confidence": 0.8,
-      "crowd": null,
-      "crowd_brier": null,
-      "family": "set_games",
-      "lane": "honest",
-      "market": null,
-      "market_id": "m1-m6",
-      "market_weight": 0.0,
-      "model": 0.533,
-      "notes": [
-        "no usable market quote for this question"
-      ],
-      "outcome": null,
-      "predicted_at": "2026-08-29T22:03:33.883706+00:00",
-      "probability": 0.5298,
-      "question": "Will the first set contain 10 or more games?",
-      "rbp": null,
-      "settled_at": "",
-      "submission": 53
-    },
-    {
-      "base_rate": 0.485,
-      "brier": null,
-      "confidence": 0.75,
-      "crowd": null,
-      "crowd_brier": null,
-      "family": "winners_comparison",
-      "lane": "honest",
-      "market": null,
-      "market_id": "m1-m7",
-      "market_weight": 0.0,
-      "model": 0.6661043170479197,
-      "notes": [],
-      "outcome": null,
-      "predicted_at": "2026-08-29T22:03:33.883706+00:00",
-      "probability": 0.6208282377859398,
-      "question": "Will Carlos Alcaraz hit more winners than Jannik Sinner?",
-      "rbp": null,
-      "settled_at": "",
-      "submission": 62
-    },
-    {
-      "base_rate": 0.5,
-      "brier": null,
-      "confidence": 0.3,
-      "crowd": null,
-      "crowd_brier": null,
-      "family": "unforced_errors",
-      "lane": "honest",
-      "market": null,
-      "market_id": "m1-m8",
-      "market_weight": 0.0,
-      "model": 0.5,
-      "notes": [
-        "threshold family defers to the base rate by policy"
-      ],
-      "outcome": null,
-      "predicted_at": "2026-08-29T22:03:33.883706+00:00",
-      "probability": 0.5,
-      "question": "Will Carlos Alcaraz rack up more than 30 unforced errors?",
-      "rbp": null,
-      "settled_at": "",
-      "submission": 50
-    },
-    {
-      "base_rate": 0.5009331974656881,
-      "brier": null,
-      "confidence": 0.42430093791309365,
-      "crowd": null,
-      "crowd_brier": null,
-      "family": "first_serve_comparison",
-      "lane": "honest",
-      "market": null,
-      "market_id": "m1-m9",
-      "market_weight": 0.0,
-      "model": 0.38315547890527146,
-      "notes": [
-        "serve rate: expected 0.630 vs threshold 0.650, sd 0.069 (0.046 sampling + 0.051 form)"
-      ],
-      "outcome": null,
-      "predicted_at": "2026-08-29T22:03:33.883706+00:00",
-      "probability": 0.4509600010152389,
-      "question": "Will Carlos Alcaraz win more than 65% of points on serve?",
-      "rbp": null,
-      "settled_at": "",
-      "submission": 45
     }
   ],
   "match_id": "m1",

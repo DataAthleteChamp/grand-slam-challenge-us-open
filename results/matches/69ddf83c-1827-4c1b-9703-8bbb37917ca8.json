@@ -13,15 +13,17 @@
       "market": null,
       "market_id": "5d9a20c8-b0b0-4fd9-bfc6-5751dcc24397",
       "market_weight": 0.0,
-      "model": 0.8389644319124082,
-      "notes": [],
+      "model": 0.873658691535071,
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.244234+00:00",
-      "probability": 0.8329515455299266,
+      "predicted_at": "2026-08-29T22:52:41.888571+00:00",
+      "probability": 0.8607069532280568,
       "question": "Will the match last longer than 115 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 83
+      "submission": 86
     },
     {
       "base_rate": 0.46,
@@ -37,7 +39,7 @@
       "model": 0.24660182705969225,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.244234+00:00",
+      "predicted_at": "2026-08-29T22:52:41.888571+00:00",
       "probability": 0.2999513702947692,
       "question": "Will C. Alcaraz record more aces than R. Safiullin?",
       "rbp": null,
@@ -58,7 +60,7 @@
       "model": 0.25974426170705156,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.244234+00:00",
+      "predicted_at": "2026-08-29T22:52:41.888571+00:00",
       "probability": 0.3000581962802887,
       "question": "Will C. Alcaraz record more double faults than R. Safiullin?",
       "rbp": null,
@@ -68,26 +70,26 @@
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.7,
+      "confidence": 0.85,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "honest",
-      "market": null,
+      "market": 0.822314049647598,
       "market_id": "942dcfbb-6701-4e69-8dea-b0f587e70014",
-      "market_weight": 0.0,
+      "market_weight": 0.85,
       "model": 0.901,
       "notes": [
         "simulated win probability 0.901",
-        "no market quote; this is the family that most needs one"
+        "market consensus 0.822, weight 0.85"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.244234+00:00",
-      "probability": 0.7807,
+      "predicted_at": "2026-08-29T22:52:41.888571+00:00",
+      "probability": 0.7861566969677884,
       "question": "Will C. Alcaraz win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 78
+      "submission": 79
     },
     {
       "base_rate": 0.487,
@@ -101,9 +103,11 @@
       "market_id": "394a668e-c537-449a-ad5e-e98a3c96983d",
       "market_weight": 0.0,
       "model": 0.437,
-      "notes": [],
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.244234+00:00",
+      "predicted_at": "2026-08-29T22:52:41.888571+00:00",
       "probability": 0.447,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

@@ -13,15 +13,17 @@
       "market": null,
       "market_id": "92b77692-4af3-4324-b744-5408545b9dcc",
       "market_weight": 0.0,
-      "model": 0.7159980337586471,
-      "notes": [],
+      "model": 0.7653441453644019,
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.242791+00:00",
-      "probability": 0.6908784270069177,
+      "predicted_at": "2026-08-29T22:52:41.887531+00:00",
+      "probability": 0.7303553162915215,
       "question": "Will the match last longer than 140 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 69
+      "submission": 73
     },
     {
       "base_rate": 0.46,
@@ -37,7 +39,7 @@
       "model": 0.31201661743276765,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.242791+00:00",
+      "predicted_at": "2026-08-29T22:52:41.887531+00:00",
       "probability": 0.34901246307457573,
       "question": "Will J. Cerundolo record more aces than C. Ruud?",
       "rbp": null,
@@ -58,7 +60,7 @@
       "model": 0.6105147962957338,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.242791+00:00",
+      "predicted_at": "2026-08-29T22:52:41.887531+00:00",
       "probability": 0.5631360972218004,
       "question": "Will J. Cerundolo record more double faults than C. Ruud?",
       "rbp": null,
@@ -68,26 +70,26 @@
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.7,
+      "confidence": 0.85,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "honest",
-      "market": null,
+      "market": 0.3649526035380735,
       "market_id": "0639e10d-f48e-4939-b9cb-e8d3bd1cad06",
-      "market_weight": 0.0,
+      "market_weight": 0.85,
       "model": 0.116,
       "notes": [
         "simulated win probability 0.116",
-        "no market quote; this is the family that most needs one"
+        "market consensus 0.365, weight 0.85"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.242791+00:00",
-      "probability": 0.23120000000000002,
+      "predicted_at": "2026-08-29T22:52:41.887531+00:00",
+      "probability": 0.343002039394557,
       "question": "Will J. Cerundolo win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 23
+      "submission": 34
     },
     {
       "base_rate": 0.13263821138211385,
@@ -101,9 +103,11 @@
       "market_id": "c512924b-e99c-4462-8013-bc03d864cdf8",
       "market_weight": 0.0,
       "model": 0.139,
-      "notes": [],
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.242791+00:00",
+      "predicted_at": "2026-08-29T22:52:41.887531+00:00",
       "probability": 0.13772764227642278,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,

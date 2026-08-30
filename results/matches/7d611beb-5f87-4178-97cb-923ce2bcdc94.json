@@ -13,15 +13,17 @@
       "market": null,
       "market_id": "b0e79c5f-4a58-4419-8a80-5476383f795d",
       "market_weight": 0.0,
-      "model": 0.6410249369900705,
-      "notes": [],
+      "model": 0.6749196073358109,
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.231275+00:00",
-      "probability": 0.6265199495920564,
+      "predicted_at": "2026-08-29T22:52:41.874936+00:00",
+      "probability": 0.6536356858686487,
       "question": "Will the match last longer than 85 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 63
+      "submission": 65
     },
     {
       "base_rate": 0.427,
@@ -37,7 +39,7 @@
       "model": 0.588970782030631,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.231275+00:00",
+      "predicted_at": "2026-08-29T22:52:41.874936+00:00",
       "probability": 0.5484780865229733,
       "question": "Will S. Cirstea record more aces than J. Grabher?",
       "rbp": null,
@@ -58,7 +60,7 @@
       "model": 0.3394781612629799,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.231275+00:00",
+      "predicted_at": "2026-08-29T22:52:41.874936+00:00",
       "probability": 0.3628586209472349,
       "question": "Will S. Cirstea record more double faults than J. Grabher?",
       "rbp": null,
@@ -68,26 +70,26 @@
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.7,
+      "confidence": 0.85,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "honest",
-      "market": null,
+      "market": 0.9006230529345252,
       "market_id": "32413c46-4e8b-4e25-9bed-eba96df8f88e",
-      "market_weight": 0.0,
+      "market_weight": 0.85,
       "model": 0.871,
       "notes": [
         "simulated win probability 0.871",
-        "no market quote; this is the family that most needs one"
+        "market consensus 0.901, weight 0.85"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.231275+00:00",
-      "probability": 0.7596999999999999,
+      "predicted_at": "2026-08-29T22:52:41.874936+00:00",
+      "probability": 0.8371108833161336,
       "question": "Will S. Cirstea win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 76
+      "submission": 84
     },
     {
       "base_rate": 0.225,
@@ -101,9 +103,11 @@
       "market_id": "70d0e492-dcf1-4ec9-bf56-a0d7fdfffa33",
       "market_weight": 0.0,
       "model": 0.213,
-      "notes": [],
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.231275+00:00",
+      "predicted_at": "2026-08-29T22:52:41.874936+00:00",
       "probability": 0.21539999999999998,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

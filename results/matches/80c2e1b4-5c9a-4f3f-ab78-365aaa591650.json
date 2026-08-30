@@ -13,15 +13,17 @@
       "market": null,
       "market_id": "90415291-d1ce-459a-87bd-9850093e7e17",
       "market_weight": 0.0,
-      "model": 0.9208132007991143,
-      "notes": [],
+      "model": 0.938294294114963,
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.226284+00:00",
-      "probability": 0.8984305606392914,
+      "predicted_at": "2026-08-29T22:52:41.868233+00:00",
+      "probability": 0.9124154352919703,
       "question": "Will the match last longer than 115 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 90
+      "submission": 91
     },
     {
       "base_rate": 0.46,
@@ -37,7 +39,7 @@
       "model": 0.8142308364334996,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.226284+00:00",
+      "predicted_at": "2026-08-29T22:52:41.868233+00:00",
       "probability": 0.7256731273251247,
       "question": "Will A. Bublik record more aces than J. Wolf?",
       "rbp": null,
@@ -58,7 +60,7 @@
       "model": 0.775556547997136,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.226284+00:00",
+      "predicted_at": "2026-08-29T22:52:41.868233+00:00",
       "probability": 0.686917410997852,
       "question": "Will A. Bublik record more double faults than J. Wolf?",
       "rbp": null,
@@ -68,26 +70,26 @@
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.7,
+      "confidence": 0.85,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "honest",
-      "market": null,
+      "market": 0.6879147907707717,
       "market_id": "fe2bdb30-c3d9-41b8-a22b-9b6bd8c6da45",
-      "market_weight": 0.0,
+      "market_weight": 0.85,
       "model": 0.45725,
       "notes": [
         "simulated win probability 0.457",
-        "no market quote; this is the family that most needs one"
+        "market consensus 0.688, weight 0.85"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.226284+00:00",
-      "probability": 0.470075,
+      "predicted_at": "2026-08-29T22:52:41.868233+00:00",
+      "probability": 0.6327147910464763,
       "question": "Will A. Bublik win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 47
+      "submission": 63
     },
     {
       "base_rate": 0.13263821138211385,
@@ -101,9 +103,11 @@
       "market_id": "2999984f-9279-45e0-a855-3c1af3b72814",
       "market_weight": 0.0,
       "model": 0.20525,
-      "notes": [],
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.226284+00:00",
+      "predicted_at": "2026-08-29T22:52:41.868233+00:00",
       "probability": 0.19072764227642278,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,

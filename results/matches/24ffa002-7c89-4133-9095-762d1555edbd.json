@@ -13,15 +13,17 @@
       "market": null,
       "market_id": "06146484-4548-40c6-a87b-5cc96d05c8c7",
       "market_weight": 0.0,
-      "model": 0.7810367936107268,
-      "notes": [],
+      "model": 0.8227536136406335,
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.223498+00:00",
-      "probability": 0.7429094348885814,
+      "predicted_at": "2026-08-29T22:52:41.864856+00:00",
+      "probability": 0.7762828909125068,
       "question": "Will the match last longer than 140 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 74
+      "submission": 78
     },
     {
       "base_rate": 0.46,
@@ -37,7 +39,7 @@
       "model": 0.5781755285355386,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.223498+00:00",
+      "predicted_at": "2026-08-29T22:52:41.864856+00:00",
       "probability": 0.548631646401654,
       "question": "Will C. Norrie record more aces than L. van Assche?",
       "rbp": null,
@@ -58,7 +60,7 @@
       "model": 0.2933859929935312,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.223498+00:00",
+      "predicted_at": "2026-08-29T22:52:41.864856+00:00",
       "probability": 0.3252894947451484,
       "question": "Will C. Norrie record more double faults than L. van Assche?",
       "rbp": null,
@@ -68,26 +70,26 @@
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.7,
+      "confidence": 0.85,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "honest",
-      "market": null,
+      "market": 0.6592664092853323,
       "market_id": "db8cda52-de50-410e-a7b9-b78736ba3db3",
-      "market_weight": 0.0,
+      "market_weight": 0.85,
       "model": 0.73475,
       "notes": [
         "simulated win probability 0.735",
-        "no market quote; this is the family that most needs one"
+        "market consensus 0.659, weight 0.85"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.223498+00:00",
-      "probability": 0.664325,
+      "predicted_at": "2026-08-29T22:52:41.864856+00:00",
+      "probability": 0.6455638784967133,
       "question": "Will C. Norrie win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 66
+      "submission": 65
     },
     {
       "base_rate": 0.13263821138211385,
@@ -101,9 +103,11 @@
       "market_id": "90e6d128-0217-4c1d-9a8c-de8dc7a4e3b7",
       "market_weight": 0.0,
       "model": 0.11025,
-      "notes": [],
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.223498+00:00",
+      "predicted_at": "2026-08-29T22:52:41.864856+00:00",
       "probability": 0.11472764227642276,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,

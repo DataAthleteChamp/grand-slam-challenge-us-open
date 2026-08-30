@@ -13,15 +13,17 @@
       "market": null,
       "market_id": "1362da57-cfd2-4eb6-81df-44fd41cbd0e3",
       "market_weight": 0.0,
-      "model": 0.7533718512615324,
-      "notes": [],
+      "model": 0.7788193229952448,
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.237417+00:00",
-      "probability": 0.730057481009226,
+      "predicted_at": "2026-08-29T22:52:41.882095+00:00",
+      "probability": 0.750415458396196,
       "question": "Will the match last longer than 80 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 73
+      "submission": 75
     },
     {
       "base_rate": 0.427,
@@ -37,7 +39,7 @@
       "model": 0.5727212600998797,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.237417+00:00",
+      "predicted_at": "2026-08-29T22:52:41.882095+00:00",
       "probability": 0.49257456704494584,
       "question": "Will M. Keys record more aces than A. Korneeva?",
       "rbp": null,
@@ -58,7 +60,7 @@
       "model": 0.3721408246848982,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.237417+00:00",
+      "predicted_at": "2026-08-29T22:52:41.882095+00:00",
       "probability": 0.40561337110820417,
       "question": "Will M. Keys record more double faults than A. Korneeva?",
       "rbp": null,
@@ -68,26 +70,26 @@
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.7,
+      "confidence": 0.85,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "honest",
-      "market": null,
+      "market": 0.7141203703702083,
       "market_id": "86fef6a2-0677-4f2b-9ea5-b8daac9ffddd",
-      "market_weight": 0.0,
+      "market_weight": 0.85,
       "model": 0.73075,
       "notes": [
         "simulated win probability 0.731",
-        "no market quote; this is the family that most needs one"
+        "market consensus 0.714, weight 0.85"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.237417+00:00",
-      "probability": 0.661525,
+      "predicted_at": "2026-08-29T22:52:41.882095+00:00",
+      "probability": 0.6841557024051168,
       "question": "Will M. Keys win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 66
+      "submission": 68
     },
     {
       "base_rate": 0.225,
@@ -101,9 +103,11 @@
       "market_id": "68c8acfb-dd86-4f0e-ba2a-59f4116b6334",
       "market_weight": 0.0,
       "model": 0.24775,
-      "notes": [],
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.237417+00:00",
+      "predicted_at": "2026-08-29T22:52:41.882095+00:00",
       "probability": 0.2432,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

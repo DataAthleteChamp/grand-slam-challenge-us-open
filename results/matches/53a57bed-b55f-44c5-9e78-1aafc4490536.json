@@ -13,15 +13,17 @@
       "market": null,
       "market_id": "57bd6040-448e-4698-831c-1e3fde02cc8d",
       "market_weight": 0.0,
-      "model": 0.8544461422001041,
-      "notes": [],
+      "model": 0.8837341047880332,
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.240314+00:00",
-      "probability": 0.8102169137600833,
+      "predicted_at": "2026-08-29T22:52:41.885579+00:00",
+      "probability": 0.8336472838304265,
       "question": "Will the match last longer than 135 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 81
+      "submission": 83
     },
     {
       "base_rate": 0.46,
@@ -37,7 +39,7 @@
       "model": 0.40660407116165553,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.240314+00:00",
+      "predicted_at": "2026-08-29T22:52:41.885579+00:00",
       "probability": 0.41995305337124167,
       "question": "Will Y. Hanfmann record more aces than A. Tabilo?",
       "rbp": null,
@@ -58,7 +60,7 @@
       "model": 0.3190120130779729,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.240314+00:00",
+      "predicted_at": "2026-08-29T22:52:41.885579+00:00",
       "probability": 0.34450900980847965,
       "question": "Will Y. Hanfmann record more double faults than A. Tabilo?",
       "rbp": null,
@@ -68,26 +70,26 @@
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.7,
+      "confidence": 0.85,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "honest",
-      "market": null,
+      "market": 0.43173875055157723,
       "market_id": "60c3ec26-c3d0-45dc-8086-4b9198bc2264",
-      "market_weight": 0.0,
+      "market_weight": 0.85,
       "model": 0.43175,
       "notes": [
         "simulated win probability 0.432",
-        "no market quote; this is the family that most needs one"
+        "market consensus 0.432, weight 0.85"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.240314+00:00",
-      "probability": 0.45222500000000004,
+      "predicted_at": "2026-08-29T22:52:41.885579+00:00",
+      "probability": 0.4419793722696989,
       "question": "Will Y. Hanfmann win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 45
+      "submission": 44
     },
     {
       "base_rate": 0.13263821138211385,
@@ -101,9 +103,11 @@
       "market_id": "c1b5c774-172e-4884-a88b-fdec45c34e53",
       "market_weight": 0.0,
       "model": 0.2175,
-      "notes": [],
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.240314+00:00",
+      "predicted_at": "2026-08-29T22:52:41.885579+00:00",
       "probability": 0.20052764227642278,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,

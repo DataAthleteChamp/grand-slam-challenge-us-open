@@ -253,3 +253,88 @@ method discriminates — pace is real and large; those were not.
 | MCP `ShotDirection`, `NetPoints`, `SnV` | ⚠️ Skip | No outcome data / marginal / extinct tactic |
 | Betfair historical | ⚠️ Marginal | Match-winner only, no props |
 | Kalshi | ⚠️ Marginal | Free API, match winner only, no props |
+
+
+## Height and ace rate — a correction to our own documentation (measured 2026-08-29)
+
+This repository stated that height explains about 83% of the variance in men's
+ace rate.  **That figure is wrong.**  Measured directly on hard-court matches
+2023-2026, for players with at least 20 matches:
+
+| Tour | n players | r | R² |
+|---|---|---|---|
+| ATP | 150 | 0.693 | **0.480** |
+| WTA | 105 | 0.539 | **0.291** |
+
+Height is a moderate predictor, not a dominant one, and on the women's draw it
+explains under a third of the variance.  It remains the right shrinkage prior
+for a player with no record — it is observable when nothing else is — but it
+should not be treated as near-deterministic.
+
+## Count distributions are over-dispersed (measured 2026-08-29)
+
+Within-player variance-to-mean ratio, hard courts 2023-2026, players with at
+least 20 matches:
+
+| Tour | Aces | Double faults |
+|---|---|---|
+| ATP | **2.63** | 1.73 |
+| WTA | **2.10** | 1.88 |
+
+A Poisson or plain binomial model assumes a ratio of 1.0, so its tails are far
+too thin.  Fitted beta-binomial intraclass correlations: ATP aces 0.0132, ATP
+double faults 0.0043, WTA aces 0.0134, WTA double faults 0.0086.
+
+## The two players' counts are correlated — entirely through exposure
+
+| Tour | Stat | corr(counts) | corr after controlling service points | corr(rates) |
+|---|---|---|---|---|
+| ATP | Aces | +0.261 | **+0.021** | +0.031 |
+| ATP | DF | +0.241 | +0.111 | +0.092 |
+| WTA | Aces | +0.163 | **+0.071** | +0.052 |
+| WTA | DF | +0.173 | +0.051 | +0.016 |
+
+`corr(w_svpt, l_svpt)` is **+0.88**: both players are on court for the same
+match, so match length is shared and drives essentially all of the observed
+correlation.  The underlying *rates* are close to independent.
+
+The practical consequence is not that a bivariate model is needed, but that
+**exposure must not be a constant**.  Service points per player run
+`3.21 * games - 2.9` on the men's draw (r=0.968) and `3.41 * games - 3.3` on the
+women's (r=0.954), so a 20-game blowout gives 61 and a 44-game marathon 138.
+Pricing that 2.3-fold range as a single number was the real error.
+
+Switching to a beta-binomial with simulation-derived exposure improved the ace
+comparison Brier by only 0.0022 on a real backtest.  The theory was right and
+the payoff was small; both are worth recording.
+
+## Match duration: a structural break at electronic line calling
+
+Electronic line calling removed player challenges from the US Open around 2023.
+Refitting hard-court slam duration on 2023-2026 alone:
+
+| Fit | Slope | Intercept | At 37 games |
+|---|---|---|---|
+| ATP 2015-2022 | 4.646 | -12.2 | 159.7 min |
+| ATP 2023-2026 | 4.774 | -6.3 | **170.3 min** |
+
+A 10.6-minute difference, two whole steps on the five-minute grid the
+competition sets its thresholds on.
+
+Residual spread is **not** constant: it runs about 1.4x higher on long matches
+than short ones (ATP 15.2 against 22.2, WTA 10.3 against 17.2), so it is now
+modelled as a linear function of games.
+
+Backtested on real 2025-2026 hard-court slam matches, `P(duration > N)` is
+calibrated to within 0.04 at every threshold, mean Brier 0.064 (ATP) and 0.071
+(WTA).
+
+## Rules confirmed for the 2026 US Open
+
+- **10-point match tiebreak** at 6-6 in the final set, in force since 2022.
+  Verified our simulator applies it to the decider only.
+- Full electronic line calling, no player challenges.
+- Shot clock 25 seconds.
+- Court Pace Index approximately 42 (medium-fast); 2025 ace rate 8.64%.
+- Who serves first is worth **under 0.001** of win probability in our simulator,
+  matching published estimates of 0.2-0.5%.

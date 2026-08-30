@@ -13,15 +13,17 @@
       "market": null,
       "market_id": "99cb6554-eca7-4d5f-9627-13d4523f933c",
       "market_weight": 0.0,
-      "model": 0.8995551113647982,
-      "notes": [],
+      "model": 0.9207663980267267,
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.222143+00:00",
-      "probability": 0.8632240890918385,
+      "predicted_at": "2026-08-29T22:52:41.864021+00:00",
+      "probability": 0.8801931184213813,
       "question": "Will the match last longer than 125 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 86
+      "submission": 88
     },
     {
       "base_rate": 0.46,
@@ -37,7 +39,7 @@
       "model": 0.2766229743286692,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.222143+00:00",
+      "predicted_at": "2026-08-29T22:52:41.864021+00:00",
       "probability": 0.3224672307465019,
       "question": "Will P. Carreno Busta record more aces than J. Lehecka?",
       "rbp": null,
@@ -58,7 +60,7 @@
       "model": 0.387766388201333,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.222143+00:00",
+      "predicted_at": "2026-08-29T22:52:41.864021+00:00",
       "probability": 0.3960747911509998,
       "question": "Will P. Carreno Busta record more double faults than J. Lehecka?",
       "rbp": null,
@@ -68,26 +70,26 @@
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.7,
+      "confidence": 0.85,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "honest",
-      "market": null,
+      "market": 0.21781259195640001,
       "market_id": "fa198936-57fe-4ca9-9a43-e97cfcbead42",
-      "market_weight": 0.0,
+      "market_weight": 0.85,
       "model": 0.513,
       "notes": [
         "simulated win probability 0.513",
-        "no market quote; this is the family that most needs one"
+        "market consensus 0.218, weight 0.85"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.222143+00:00",
-      "probability": 0.5091,
+      "predicted_at": "2026-08-29T22:52:41.864021+00:00",
+      "probability": 0.2906589238331283,
       "question": "Will P. Carreno Busta win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 51
+      "submission": 29
     },
     {
       "base_rate": 0.487,
@@ -101,9 +103,11 @@
       "market_id": "d0e9b36e-f33c-4b3e-84c5-1dcebc34b8e2",
       "market_weight": 0.0,
       "model": 0.6245,
-      "notes": [],
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.222143+00:00",
+      "predicted_at": "2026-08-29T22:52:41.864021+00:00",
       "probability": 0.597,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

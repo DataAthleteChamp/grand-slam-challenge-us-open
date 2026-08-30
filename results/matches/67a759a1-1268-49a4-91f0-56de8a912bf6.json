@@ -13,15 +13,17 @@
       "market": null,
       "market_id": "52fe7598-5f45-436b-a481-0fea925d7ac3",
       "market_weight": 0.0,
-      "model": 0.6277141258647259,
-      "notes": [],
+      "model": 0.6673946837538347,
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.228718+00:00",
-      "probability": 0.5820513006917807,
+      "predicted_at": "2026-08-29T22:52:41.871587+00:00",
+      "probability": 0.6137957470030677,
       "question": "Will the match last longer than 100 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 58
+      "submission": 61
     },
     {
       "base_rate": 0.427,
@@ -37,7 +39,7 @@
       "model": 0.6548648866389541,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.228718+00:00",
+      "predicted_at": "2026-08-29T22:52:41.871587+00:00",
       "probability": 0.5978986649792156,
       "question": "Will B. Bencic record more aces than Y. Putintseva?",
       "rbp": null,
@@ -58,7 +60,7 @@
       "model": 0.6632529039653438,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.228718+00:00",
+      "predicted_at": "2026-08-29T22:52:41.871587+00:00",
       "probability": 0.6056896779740077,
       "question": "Will B. Bencic record more double faults than Y. Putintseva?",
       "rbp": null,
@@ -68,26 +70,26 @@
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.7,
+      "confidence": 0.85,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "honest",
-      "market": null,
+      "market": 0.8064240502062925,
       "market_id": "16e1ac7b-4c3f-4923-906d-83b2c2865ece",
-      "market_weight": 0.0,
+      "market_weight": 0.85,
       "model": 0.713,
       "notes": [
         "simulated win probability 0.713",
-        "no market quote; this is the family that most needs one"
+        "market consensus 0.806, weight 0.85"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.228718+00:00",
-      "probability": 0.6491,
+      "predicted_at": "2026-08-29T22:52:41.871587+00:00",
+      "probability": 0.7499266089238936,
       "question": "Will B. Bencic win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 65
+      "submission": 75
     },
     {
       "base_rate": 0.020454545454545454,
@@ -101,9 +103,11 @@
       "market_id": "7a23290c-213a-4648-9e33-db9212de1451",
       "market_weight": 0.0,
       "model": 0.021,
-      "notes": [],
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.228718+00:00",
+      "predicted_at": "2026-08-29T22:52:41.871587+00:00",
       "probability": 0.020890909090909092,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,

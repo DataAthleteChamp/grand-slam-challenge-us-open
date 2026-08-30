@@ -13,15 +13,17 @@
       "market": null,
       "market_id": "ef6fd77f-cd6e-4675-bb00-5bd457f6823c",
       "market_weight": 0.0,
-      "model": 0.5852903105807074,
-      "notes": [],
+      "model": 0.6200563785989076,
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.225323+00:00",
-      "probability": 0.5819322484645659,
+      "predicted_at": "2026-08-29T22:52:41.867412+00:00",
+      "probability": 0.6097451028791261,
       "question": "Will the match last longer than 85 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 58
+      "submission": 61
     },
     {
       "base_rate": 0.427,
@@ -37,7 +39,7 @@
       "model": 0.4897556903332161,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.225323+00:00",
+      "predicted_at": "2026-08-29T22:52:41.867412+00:00",
       "probability": 0.4740667677499121,
       "question": "Will J. Pegula record more aces than E. Ruse?",
       "rbp": null,
@@ -58,7 +60,7 @@
       "model": 0.2665756176280556,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.225323+00:00",
+      "predicted_at": "2026-08-29T22:52:41.867412+00:00",
       "probability": 0.3081817132210417,
       "question": "Will J. Pegula record more double faults than E. Ruse?",
       "rbp": null,
@@ -68,26 +70,26 @@
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.7,
+      "confidence": 0.85,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "honest",
-      "market": null,
+      "market": 0.8831168831598893,
       "market_id": "3b253bc4-1804-485e-a581-15d695e1cc68",
-      "market_weight": 0.0,
+      "market_weight": 0.85,
       "model": 0.91125,
       "notes": [
         "simulated win probability 0.911",
-        "no market quote; this is the family that most needs one"
+        "market consensus 0.883, weight 0.85"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.225323+00:00",
-      "probability": 0.787875,
+      "predicted_at": "2026-08-29T22:52:41.867412+00:00",
+      "probability": 0.8296152866652735,
       "question": "Will J. Pegula win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 79
+      "submission": 83
     },
     {
       "base_rate": 0.225,
@@ -101,9 +103,11 @@
       "market_id": "371995cb-cc4c-493b-89da-dc5ce0b0de61",
       "market_weight": 0.0,
       "model": 0.16125,
-      "notes": [],
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.225323+00:00",
+      "predicted_at": "2026-08-29T22:52:41.867412+00:00",
       "probability": 0.174,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

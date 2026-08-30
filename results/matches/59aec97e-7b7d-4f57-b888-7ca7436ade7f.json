@@ -13,15 +13,17 @@
       "market": null,
       "market_id": "fc70f656-a7e4-4678-a4f3-9e7cfffc6acd",
       "market_weight": 0.0,
-      "model": 0.735207518316832,
-      "notes": [],
+      "model": 0.7800670543123011,
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.227249+00:00",
-      "probability": 0.6845860146534656,
+      "predicted_at": "2026-08-29T22:52:41.869374+00:00",
+      "probability": 0.7204736434498409,
       "question": "Will the match last longer than 155 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 68
+      "submission": 72
     },
     {
       "base_rate": 0.46,
@@ -37,7 +39,7 @@
       "model": 0.31683469642318207,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.227249+00:00",
+      "predicted_at": "2026-08-29T22:52:41.869374+00:00",
       "probability": 0.35262602231738654,
       "question": "Will A. Fils record more aces than S. Tsitsipas?",
       "rbp": null,
@@ -58,7 +60,7 @@
       "model": 0.5411231687037731,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.227249+00:00",
+      "predicted_at": "2026-08-29T22:52:41.869374+00:00",
       "probability": 0.5110923765278298,
       "question": "Will A. Fils record more double faults than S. Tsitsipas?",
       "rbp": null,
@@ -68,26 +70,26 @@
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.7,
+      "confidence": 0.85,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "honest",
-      "market": null,
+      "market": 0.7789085045512236,
       "market_id": "895725d5-afd1-4109-a67d-ab9b030e58fb",
-      "market_weight": 0.0,
+      "market_weight": 0.85,
       "model": 0.322,
       "notes": [
         "simulated win probability 0.322",
-        "no market quote; this is the family that most needs one"
+        "market consensus 0.779, weight 0.85"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.227249+00:00",
-      "probability": 0.3754,
+      "predicted_at": "2026-08-29T22:52:41.869374+00:00",
+      "probability": 0.689437349141476,
       "question": "Will A. Fils win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 38
+      "submission": 69
     },
     {
       "base_rate": 0.13263821138211385,
@@ -101,9 +103,11 @@
       "market_id": "11acee05-6e0f-4fcb-9ed2-203e23dbaf05",
       "market_weight": 0.0,
       "model": 0.331,
-      "notes": [],
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.227249+00:00",
+      "predicted_at": "2026-08-29T22:52:41.869374+00:00",
       "probability": 0.2913276422764228,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,

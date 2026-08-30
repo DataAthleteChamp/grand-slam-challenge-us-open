@@ -36,16 +36,18 @@ from .data.baserates import (
     SERVE_RATE_FORM_SD,
     SERVE_RATE_MARGINAL,
     classify_matchup,
+    count_overdispersion,
     count_stats,
     duration_base,
     serve_rate_base,
+    service_points_for,
     structural,
     tiebreak_count_base,
 )
 from .data.names import strip_accents
 from .markets.parser import MarketSpec
 from .markets.taxonomy import COMPARISON, OUTCOME, STRUCTURAL, THRESHOLD, Family
-from .models.counts import skellam_comparison
+from .models.counts import binomial_comparison
 from .models.derive import (
     blend,
     deciding_set_probability,
@@ -376,8 +378,11 @@ class Pricer:
                 subject, opponent, context, base, notes
             )
         else:
+            expected_games = None
+            if subject.has_ratings and opponent.has_ratings:
+                expected_games = self._simulate(context).mean_total_games
             model, confidence = self._count_comparison(
-                stat, subject, opponent, context, base, notes
+                stat, subject, opponent, context, base, notes, expected_games
             )
 
         return self._finalise(
@@ -536,7 +541,7 @@ class Pricer:
                 return candidate, other
         return None, None
 
-    def _count_comparison(self, stat, subject, opponent, context, base, notes):
+    def _count_comparison(self, stat, subject, opponent, context, base, notes, expected_games=None):
         """P(subject records strictly more than opponent) for a count statistic."""
         measured = count_stats(stat, context.tour)
         population = measured["mean_per_player"]
@@ -559,9 +564,24 @@ class Pricer:
         shrunk_subject = shrink(rate_subject, subject.matches, prior_subject, k).estimate
         shrunk_opponent = shrink(rate_opponent, opponent.matches, prior_opponent, k).estimate
 
-        mu_subject = shrunk_subject * context.expected_service_points
-        mu_opponent = shrunk_opponent * context.expected_service_points
-        comparison = skellam_comparison(mu_subject, mu_opponent)
+        # Exposure, not a constant. Both players serve in the same match, so a
+        # 20-game blowout gives each of them about 61 service points and a
+        # 44-game marathon about 138. Pricing that 2.3-fold range as fixed is
+        # what made the two counts look independent when they are not: raw ace
+        # counts correlate +0.26, but only +0.02 once exposure is controlled.
+        points = context.expected_service_points
+        if expected_games is not None:
+            points = service_points_for(expected_games, context.tour, context.best_of)
+            notes.append(f"exposure {points} service points from {expected_games:.1f} games")
+
+        # Beta-binomial rather than Skellam. A player's ace count varies about
+        # 2.2 times more than binomial sampling allows, because their true rate
+        # moves between matches. Poisson and binomial tails are both too thin,
+        # which understates lopsided counts and misstates P(tie).
+        rho = count_overdispersion(stat, context.tour)
+        comparison = binomial_comparison(
+            shrunk_subject, shrunk_opponent, points, points, overdispersion=rho
+        )
 
         confidence = 0.75 if min(subject.matches, opponent.matches) >= 20 else 0.45
         return comparison.resolve("no"), confidence

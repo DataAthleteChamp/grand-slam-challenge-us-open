@@ -13,15 +13,17 @@
       "market": null,
       "market_id": "9854b426-bd25-4826-9186-bc79577d6ec5",
       "market_weight": 0.0,
-      "model": 0.924981742981259,
-      "notes": [],
+      "model": 0.9424639081026294,
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.236748+00:00",
-      "probability": 0.9017653943850071,
+      "predicted_at": "2026-08-29T22:52:41.881510+00:00",
+      "probability": 0.9157511264821034,
       "question": "Will the match last longer than 115 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 90
+      "submission": 92
     },
     {
       "base_rate": 0.46,
@@ -37,7 +39,7 @@
       "model": 0.40817353363588016,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.236748+00:00",
+      "predicted_at": "2026-08-29T22:52:41.881510+00:00",
       "probability": 0.42113015022691014,
       "question": "Will F. Cobolli record more aces than F. Comesana?",
       "rbp": null,
@@ -58,7 +60,7 @@
       "model": 0.43851166604742287,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.236748+00:00",
+      "predicted_at": "2026-08-29T22:52:41.881510+00:00",
       "probability": 0.43413374953556716,
       "question": "Will F. Cobolli record more double faults than F. Comesana?",
       "rbp": null,
@@ -68,26 +70,26 @@
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.7,
+      "confidence": 0.85,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "honest",
-      "market": null,
+      "market": 0.7925197686394134,
       "market_id": "7339ccad-5f7c-48c4-a29f-01f9e2ccf05f",
-      "market_weight": 0.0,
+      "market_weight": 0.85,
       "model": 0.4905,
       "notes": [
         "simulated win probability 0.490",
-        "no market quote; this is the family that most needs one"
+        "market consensus 0.793, weight 0.85"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.236748+00:00",
-      "probability": 0.49335,
+      "predicted_at": "2026-08-29T22:52:41.881510+00:00",
+      "probability": 0.7180043156780977,
       "question": "Will F. Cobolli win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 49
+      "submission": 72
     },
     {
       "base_rate": 0.487,
@@ -101,9 +103,11 @@
       "market_id": "7a4aefd5-dbfe-417d-9023-3684c10d886e",
       "market_weight": 0.0,
       "model": 0.518,
-      "notes": [],
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.236748+00:00",
+      "predicted_at": "2026-08-29T22:52:41.881510+00:00",
       "probability": 0.5118,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

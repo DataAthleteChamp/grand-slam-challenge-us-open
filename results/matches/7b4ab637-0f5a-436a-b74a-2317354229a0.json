@@ -13,15 +13,17 @@
       "market": null,
       "market_id": "5264f967-5d57-46ec-9556-5cac6c2b27a9",
       "market_weight": 0.0,
-      "model": 0.7148060849348005,
-      "notes": [],
+      "model": 0.7641195368690197,
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.223177+00:00",
-      "probability": 0.6899248679478404,
+      "predicted_at": "2026-08-29T22:52:41.864608+00:00",
+      "probability": 0.7293756294952157,
       "question": "Will the match last longer than 140 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 69
+      "submission": 73
     },
     {
       "base_rate": 0.46,
@@ -37,7 +39,7 @@
       "model": 0.18366330032521994,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.223177+00:00",
+      "predicted_at": "2026-08-29T22:52:41.864608+00:00",
       "probability": 0.25274747524391494,
       "question": "Will T. Paul record more aces than C. Wong?",
       "rbp": null,
@@ -58,7 +60,7 @@
       "model": 0.37013720575516895,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.223177+00:00",
+      "predicted_at": "2026-08-29T22:52:41.864608+00:00",
       "probability": 0.3828529043163767,
       "question": "Will T. Paul record more double faults than C. Wong?",
       "rbp": null,
@@ -68,26 +70,26 @@
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.7,
+      "confidence": 0.85,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "honest",
-      "market": null,
+      "market": 0.8620341861794748,
       "market_id": "9c01d54e-1b97-4ace-8ec4-a2e99a73b003",
-      "market_weight": 0.0,
+      "market_weight": 0.85,
       "model": 0.835,
       "notes": [
         "simulated win probability 0.835",
-        "no market quote; this is the family that most needs one"
+        "market consensus 0.862, weight 0.85"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.223177+00:00",
-      "probability": 0.7344999999999999,
+      "predicted_at": "2026-08-29T22:52:41.864608+00:00",
+      "probability": 0.804495757036541,
       "question": "Will T. Paul win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 73
+      "submission": 80
     },
     {
       "base_rate": 0.487,
@@ -101,9 +103,11 @@
       "market_id": "37bf61f4-4d0d-479b-9685-da97113cb97c",
       "market_weight": 0.0,
       "model": 0.48075,
-      "notes": [],
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.223177+00:00",
+      "predicted_at": "2026-08-29T22:52:41.864608+00:00",
       "probability": 0.48200000000000004,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

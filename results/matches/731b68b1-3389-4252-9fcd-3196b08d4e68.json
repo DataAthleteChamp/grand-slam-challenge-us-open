@@ -13,15 +13,17 @@
       "market": null,
       "market_id": "4ee3307b-fbc3-4d07-b827-a2aa49ec5e8f",
       "market_weight": 0.0,
-      "model": 0.7488909707570268,
-      "notes": [],
+      "model": 0.7746356719355032,
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.222678+00:00",
-      "probability": 0.7264727766056214,
+      "predicted_at": "2026-08-29T22:52:41.864340+00:00",
+      "probability": 0.7470685375484025,
       "question": "Will the match last longer than 80 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 73
+      "submission": 75
     },
     {
       "base_rate": 0.427,
@@ -37,7 +39,7 @@
       "model": 0.20291239359499014,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.222678+00:00",
+      "predicted_at": "2026-08-29T22:52:41.864340+00:00",
       "probability": 0.2589342951962426,
       "question": "Will S. Hunter record more aces than M. Kostyuk?",
       "rbp": null,
@@ -58,7 +60,7 @@
       "model": 0.2759606319380147,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.222678+00:00",
+      "predicted_at": "2026-08-29T22:52:41.864340+00:00",
       "probability": 0.315220473953511,
       "question": "Will S. Hunter record more double faults than M. Kostyuk?",
       "rbp": null,
@@ -68,26 +70,26 @@
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.7,
+      "confidence": 0.85,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "honest",
-      "market": null,
+      "market": 0.1140656785167095,
       "market_id": "7bb1f372-091e-4c15-9c30-c9f7b7a4ef98",
-      "market_weight": 0.0,
+      "market_weight": 0.85,
       "model": 0.2755,
       "notes": [
         "simulated win probability 0.276",
-        "no market quote; this is the family that most needs one"
+        "market consensus 0.114, weight 0.85"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.222678+00:00",
-      "probability": 0.34285,
+      "predicted_at": "2026-08-29T22:52:41.864340+00:00",
+      "probability": 0.18680786128412172,
       "question": "Will S. Hunter win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 34
+      "submission": 19
     },
     {
       "base_rate": 0.225,
@@ -101,9 +103,11 @@
       "market_id": "9b3dc047-be4e-42e1-ae60-e15a614a3640",
       "market_weight": 0.0,
       "model": 0.231,
-      "notes": [],
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.222678+00:00",
+      "predicted_at": "2026-08-29T22:52:41.864340+00:00",
       "probability": 0.2298,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

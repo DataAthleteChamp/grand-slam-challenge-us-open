@@ -13,15 +13,17 @@
       "market": null,
       "market_id": "eeed8fa6-5595-44d2-a051-16aa4d2b562d",
       "market_weight": 0.0,
-      "model": 0.705087910574832,
-      "notes": [],
+      "model": 0.7365408016957202,
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.234298+00:00",
-      "probability": 0.6651703284598656,
+      "predicted_at": "2026-08-29T22:52:41.878593+00:00",
+      "probability": 0.6903326413565761,
       "question": "Will the match last longer than 90 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 67
+      "submission": 69
     },
     {
       "base_rate": 0.427,
@@ -37,7 +39,7 @@
       "model": 0.25030729828739906,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.234298+00:00",
+      "predicted_at": "2026-08-29T22:52:41.878593+00:00",
       "probability": 0.2944804737155493,
       "question": "Will S. Bejlek record more aces than C. Bucsa?",
       "rbp": null,
@@ -58,7 +60,7 @@
       "model": 0.42561419821605917,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.234298+00:00",
+      "predicted_at": "2026-08-29T22:52:41.878593+00:00",
       "probability": 0.4274606486620444,
       "question": "Will S. Bejlek record more double faults than C. Bucsa?",
       "rbp": null,
@@ -68,26 +70,26 @@
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.7,
+      "confidence": 0.85,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "honest",
-      "market": null,
+      "market": 0.7701298701744874,
       "market_id": "fb90e69a-bff1-44aa-b111-29e7b2cda037",
-      "market_weight": 0.0,
+      "market_weight": 0.85,
       "model": 0.64325,
       "notes": [
         "simulated win probability 0.643",
-        "no market quote; this is the family that most needs one"
+        "market consensus 0.770, weight 0.85"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.234298+00:00",
-      "probability": 0.600275,
+      "predicted_at": "2026-08-29T22:52:41.878593+00:00",
+      "probability": 0.7152769072778566,
       "question": "Will S. Bejlek win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 60
+      "submission": 72
     },
     {
       "base_rate": 0.225,
@@ -101,9 +103,11 @@
       "market_id": "8099f7ff-88a4-4dce-8b60-8ff048a2fbe9",
       "market_weight": 0.0,
       "model": 0.22825,
-      "notes": [],
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.234298+00:00",
+      "predicted_at": "2026-08-29T22:52:41.878593+00:00",
       "probability": 0.2276,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

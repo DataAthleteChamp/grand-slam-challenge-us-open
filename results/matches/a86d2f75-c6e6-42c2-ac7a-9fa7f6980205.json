@@ -13,15 +13,17 @@
       "market": null,
       "market_id": "81d4193e-e8ac-4c7f-b18c-aff9ebca432e",
       "market_weight": 0.0,
-      "model": 0.688342414028431,
-      "notes": [],
+      "model": 0.7202782911720823,
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.234553+00:00",
-      "probability": 0.6407539312227447,
+      "predicted_at": "2026-08-29T22:52:41.879007+00:00",
+      "probability": 0.6663026329376658,
       "question": "Will the match last longer than 95 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 64
+      "submission": 67
     },
     {
       "base_rate": 0.427,
@@ -37,7 +39,7 @@
       "model": 0.382842593242805,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.234553+00:00",
+      "predicted_at": "2026-08-29T22:52:41.879007+00:00",
       "probability": 0.39388194493210377,
       "question": "Will M. Bouzkova record more aces than E. Jacquemot?",
       "rbp": null,
@@ -58,7 +60,7 @@
       "model": 0.2964079083909461,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.234553+00:00",
+      "predicted_at": "2026-08-29T22:52:41.879007+00:00",
       "probability": 0.3305559312932096,
       "question": "Will M. Bouzkova record more double faults than E. Jacquemot?",
       "rbp": null,
@@ -68,26 +70,26 @@
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.7,
+      "confidence": 0.85,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "honest",
-      "market": null,
+      "market": 0.891601502385702,
       "market_id": "050da3b4-6fc6-4d03-a981-db0a3e8c829e",
-      "market_weight": 0.0,
+      "market_weight": 0.85,
       "model": 0.759,
       "notes": [
         "simulated win probability 0.759",
-        "no market quote; this is the family that most needs one"
+        "market consensus 0.892, weight 0.85"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.234553+00:00",
-      "probability": 0.6813,
+      "predicted_at": "2026-08-29T22:52:41.879007+00:00",
+      "probability": 0.8203474826066455,
       "question": "Will M. Bouzkova win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 68
+      "submission": 82
     },
     {
       "base_rate": 0.225,
@@ -101,9 +103,11 @@
       "market_id": "32de4749-388a-4586-b237-1057bc59407a",
       "market_weight": 0.0,
       "model": 0.22625,
-      "notes": [],
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.234553+00:00",
+      "predicted_at": "2026-08-29T22:52:41.879007+00:00",
       "probability": 0.226,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

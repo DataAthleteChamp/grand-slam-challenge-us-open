@@ -13,15 +13,17 @@
       "market": null,
       "market_id": "8a592fd8-c287-41c0-a423-d97e2f7683bf",
       "market_weight": 0.0,
-      "model": 0.6800278412656733,
-      "notes": [],
+      "model": 0.7134498808236198,
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.244478+00:00",
-      "probability": 0.6577222730125387,
+      "predicted_at": "2026-08-29T22:52:41.888908+00:00",
+      "probability": 0.684459904658896,
       "question": "Will the match last longer than 85 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 66
+      "submission": 68
     },
     {
       "base_rate": 0.427,
@@ -37,7 +39,7 @@
       "model": 0.3571342135099633,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.244478+00:00",
+      "predicted_at": "2026-08-29T22:52:41.888908+00:00",
       "probability": 0.3746006601324725,
       "question": "Will A. Anisimova record more aces than A. Krueger?",
       "rbp": null,
@@ -58,7 +60,7 @@
       "model": 0.40016441352572063,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.244478+00:00",
+      "predicted_at": "2026-08-29T22:52:41.888908+00:00",
       "probability": 0.4083733101442905,
       "question": "Will A. Anisimova record more double faults than A. Krueger?",
       "rbp": null,
@@ -68,26 +70,26 @@
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.7,
+      "confidence": 0.85,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "honest",
-      "market": null,
+      "market": 0.8347826086462169,
       "market_id": "c645acb5-ec9c-4bdf-8c6f-8bb253ea0e41",
-      "market_weight": 0.0,
+      "market_weight": 0.85,
       "model": 0.761,
       "notes": [
         "simulated win probability 0.761",
-        "no market quote; this is the family that most needs one"
+        "market consensus 0.835, weight 0.85"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.244478+00:00",
-      "probability": 0.6827,
+      "predicted_at": "2026-08-29T22:52:41.888908+00:00",
+      "probability": 0.7762562448857635,
       "question": "Will A. Anisimova win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 68
+      "submission": 78
     },
     {
       "base_rate": 0.225,
@@ -101,9 +103,11 @@
       "market_id": "b6f2df94-07b1-41bb-9f53-5a4a44849a12",
       "market_weight": 0.0,
       "model": 0.26025,
-      "notes": [],
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.244478+00:00",
+      "predicted_at": "2026-08-29T22:52:41.888908+00:00",
       "probability": 0.2532,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

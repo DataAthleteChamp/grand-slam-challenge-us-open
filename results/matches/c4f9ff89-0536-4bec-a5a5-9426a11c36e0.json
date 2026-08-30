@@ -13,15 +13,17 @@
       "market": null,
       "market_id": "39284212-b907-48a0-8a37-c8d1de56cf20",
       "market_weight": 0.0,
-      "model": 0.549415396086987,
-      "notes": [],
+      "model": 0.5892424641660474,
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.226971+00:00",
-      "probability": 0.5406323168695896,
+      "predicted_at": "2026-08-29T22:52:41.868954+00:00",
+      "probability": 0.5724939713328379,
       "question": "Will the match last longer than 90 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 54
+      "submission": 57
     },
     {
       "base_rate": 0.427,
@@ -37,7 +39,7 @@
       "model": 0.28350184186205196,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.226971+00:00",
+      "predicted_at": "2026-08-29T22:52:41.868954+00:00",
       "probability": 0.3624258288379234,
       "question": "Will S. Sierra record more aces than E. Svitolina?",
       "rbp": null,
@@ -58,7 +60,7 @@
       "model": 0.4599790840720165,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.226971+00:00",
+      "predicted_at": "2026-08-29T22:52:41.868954+00:00",
       "probability": 0.4451405878324074,
       "question": "Will S. Sierra record more double faults than E. Svitolina?",
       "rbp": null,
@@ -68,26 +70,26 @@
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.7,
+      "confidence": 0.85,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "honest",
-      "market": null,
+      "market": 0.08644142164949067,
       "market_id": "f06b4b9d-668f-4f04-9afb-242f39aa371d",
-      "market_weight": 0.0,
+      "market_weight": 0.85,
       "model": 0.138,
       "notes": [
         "simulated win probability 0.138",
-        "no market quote; this is the family that most needs one"
+        "market consensus 0.086, weight 0.85"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.226971+00:00",
-      "probability": 0.24660000000000004,
+      "predicted_at": "2026-08-29T22:52:41.868954+00:00",
+      "probability": 0.1539456888460055,
       "question": "Will S. Sierra win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 25
+      "submission": 15
     },
     {
       "base_rate": 0.225,
@@ -101,9 +103,11 @@
       "market_id": "ea467059-3f63-4fc0-9cd6-9a3b47735ee4",
       "market_weight": 0.0,
       "model": 0.2165,
-      "notes": [],
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.226971+00:00",
+      "predicted_at": "2026-08-29T22:52:41.868954+00:00",
       "probability": 0.2182,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

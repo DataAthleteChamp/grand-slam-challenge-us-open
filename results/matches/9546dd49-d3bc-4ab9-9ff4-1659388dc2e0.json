@@ -13,15 +13,17 @@
       "market": null,
       "market_id": "ca5bd10e-5123-4695-a842-f8840c6040f5",
       "market_weight": 0.0,
-      "model": 0.6470204729997231,
-      "notes": [],
+      "model": 0.6843974386916105,
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.232477+00:00",
-      "probability": 0.6076963783997784,
+      "predicted_at": "2026-08-29T22:52:41.877615+00:00",
+      "probability": 0.6375979509532884,
       "question": "Will the match last longer than 95 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 61
+      "submission": 64
     },
     {
       "base_rate": 0.427,
@@ -37,7 +39,7 @@
       "model": 0.30585630632663363,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.232477+00:00",
+      "predicted_at": "2026-08-29T22:52:41.877615+00:00",
       "probability": 0.3724853378469851,
       "question": "Will M. Chwalinska record more aces than T. Townsend?",
       "rbp": null,
@@ -58,7 +60,7 @@
       "model": 0.46711916613019167,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.232477+00:00",
+      "predicted_at": "2026-08-29T22:52:41.877615+00:00",
       "probability": 0.44835362475858626,
       "question": "Will M. Chwalinska record more double faults than T. Townsend?",
       "rbp": null,
@@ -68,22 +70,22 @@
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.7,
+      "confidence": 0.85,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "honest",
-      "market": null,
+      "market": 0.32519157089901934,
       "market_id": "9ab5d812-6d6a-45cd-99fa-5c0674d30b73",
-      "market_weight": 0.0,
+      "market_weight": 0.85,
       "model": 0.267,
       "notes": [
         "simulated win probability 0.267",
-        "no market quote; this is the family that most needs one"
+        "market consensus 0.325, weight 0.85"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.232477+00:00",
-      "probability": 0.33690000000000003,
+      "predicted_at": "2026-08-29T22:52:41.877615+00:00",
+      "probability": 0.3436402222918524,
       "question": "Will M. Chwalinska win?",
       "rbp": null,
       "settled_at": "",
@@ -101,9 +103,11 @@
       "market_id": "a9d88d0f-9d3f-438b-9add-1b2bf85e4af1",
       "market_weight": 0.0,
       "model": 0.02425,
-      "notes": [],
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.232477+00:00",
+      "predicted_at": "2026-08-29T22:52:41.877615+00:00",
       "probability": 0.02349090909090909,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,

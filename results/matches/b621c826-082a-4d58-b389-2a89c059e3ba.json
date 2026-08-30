@@ -13,15 +13,17 @@
       "market": null,
       "market_id": "205388a0-569a-47bd-aa73-e093e4a2d81c",
       "market_weight": 0.0,
-      "model": 0.9237715960533798,
-      "notes": [],
+      "model": 0.940113524878035,
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.224640+00:00",
-      "probability": 0.8918772768427039,
+      "predicted_at": "2026-08-29T22:52:41.866895+00:00",
+      "probability": 0.9049508199024281,
       "question": "Will the match last longer than 120 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 89
+      "submission": 90
     },
     {
       "base_rate": 0.46,
@@ -37,7 +39,7 @@
       "model": 0.8530392244808361,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.224640+00:00",
+      "predicted_at": "2026-08-29T22:52:41.866895+00:00",
       "probability": 0.7547794183606271,
       "question": "Will A. Rinderknech record more aces than S. Shimabukuro?",
       "rbp": null,
@@ -58,7 +60,7 @@
       "model": 0.29005535486069145,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.224640+00:00",
+      "predicted_at": "2026-08-29T22:52:41.866895+00:00",
       "probability": 0.3227915161455186,
       "question": "Will A. Rinderknech record more double faults than S. Shimabukuro?",
       "rbp": null,
@@ -68,26 +70,26 @@
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.7,
+      "confidence": 0.85,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "honest",
-      "market": null,
+      "market": 0.7385827071810132,
       "market_id": "164ecc18-2e9d-4d14-aee3-8719f0682d96",
-      "market_weight": 0.0,
+      "market_weight": 0.85,
       "model": 0.55825,
       "notes": [
         "simulated win probability 0.558",
-        "no market quote; this is the family that most needs one"
+        "market consensus 0.739, weight 0.85"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.224640+00:00",
-      "probability": 0.540775,
+      "predicted_at": "2026-08-29T22:52:41.866895+00:00",
+      "probability": 0.682427515667521,
       "question": "Will A. Rinderknech win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 54
+      "submission": 68
     },
     {
       "base_rate": 0.13263821138211385,
@@ -101,9 +103,11 @@
       "market_id": "fcfabb4f-6929-4757-a979-2b854a718255",
       "market_weight": 0.0,
       "model": 0.2575,
-      "notes": [],
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.224640+00:00",
+      "predicted_at": "2026-08-29T22:52:41.866895+00:00",
       "probability": 0.23252764227642278,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,

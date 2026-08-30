@@ -13,15 +13,17 @@
       "market": null,
       "market_id": "fbf7c246-0e8a-416a-b796-a68f1b00fc5c",
       "market_weight": 0.0,
-      "model": 0.9315247882562205,
-      "notes": [],
+      "model": 0.9443776147370825,
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.245441+00:00",
-      "probability": 0.8980798306049764,
+      "predicted_at": "2026-08-29T22:52:41.889652+00:00",
+      "probability": 0.908362091789666,
       "question": "Will the match last longer than 120 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 90
+      "submission": 91
     },
     {
       "base_rate": 0.46,
@@ -37,7 +39,7 @@
       "model": 0.35998973755599806,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.245441+00:00",
+      "predicted_at": "2026-08-29T22:52:41.889652+00:00",
       "probability": 0.3849923031669985,
       "question": "Will T. Griekspoor record more aces than B. Shelton?",
       "rbp": null,
@@ -58,7 +60,7 @@
       "model": 0.43878406167102857,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.245441+00:00",
+      "predicted_at": "2026-08-29T22:52:41.889652+00:00",
       "probability": 0.43433804625327144,
       "question": "Will T. Griekspoor record more double faults than B. Shelton?",
       "rbp": null,
@@ -68,26 +70,26 @@
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.7,
+      "confidence": 0.85,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "honest",
-      "market": null,
+      "market": 0.1444805195058177,
       "market_id": "bdfb0b78-c7e1-4070-a8ac-64968640c5a2",
-      "market_weight": 0.0,
+      "market_weight": 0.85,
       "model": 0.32675,
       "notes": [
         "simulated win probability 0.327",
-        "no market quote; this is the family that most needs one"
+        "market consensus 0.144, weight 0.85"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.245441+00:00",
-      "probability": 0.378725,
+      "predicted_at": "2026-08-29T22:52:41.889652+00:00",
+      "probability": 0.2153986146758758,
       "question": "Will T. Griekspoor win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 38
+      "submission": 22
     },
     {
       "base_rate": 0.13263821138211385,
@@ -101,9 +103,11 @@
       "market_id": "8605c1eb-2418-464e-ab9b-2b3220e01e77",
       "market_weight": 0.0,
       "model": 0.51625,
-      "notes": [],
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.245441+00:00",
+      "predicted_at": "2026-08-29T22:52:41.889652+00:00",
       "probability": 0.4395276422764228,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,

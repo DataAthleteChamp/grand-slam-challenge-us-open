@@ -13,15 +13,17 @@
       "market": null,
       "market_id": "a0d1b027-a4f4-45b2-bc9d-8e1b3619e616",
       "market_weight": 0.0,
-      "model": 0.8910320822542557,
-      "notes": [],
+      "model": 0.9153325531983442,
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.242309+00:00",
-      "probability": 0.8564056658034045,
+      "predicted_at": "2026-08-29T22:52:41.887182+00:00",
+      "probability": 0.8758460425586753,
       "question": "Will the match last longer than 125 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 86
+      "submission": 88
     },
     {
       "base_rate": 0.46,
@@ -37,7 +39,7 @@
       "model": 0.3617572145630793,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.242309+00:00",
+      "predicted_at": "2026-08-29T22:52:41.887182+00:00",
       "probability": 0.3863179109223095,
       "question": "Will A. Fery record more aces than L. Musetti?",
       "rbp": null,
@@ -58,7 +60,7 @@
       "model": 0.43085954223074274,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.242309+00:00",
+      "predicted_at": "2026-08-29T22:52:41.887182+00:00",
       "probability": 0.42839465667305704,
       "question": "Will A. Fery record more double faults than L. Musetti?",
       "rbp": null,
@@ -68,26 +70,26 @@
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.7,
+      "confidence": 0.85,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "honest",
-      "market": null,
+      "market": 0.21904761909302065,
       "market_id": "dac8a552-271d-4ee7-8306-1b5c4475990f",
-      "market_weight": 0.0,
+      "market_weight": 0.85,
       "model": 0.40275,
       "notes": [
         "simulated win probability 0.403",
-        "no market quote; this is the family that most needs one"
+        "market consensus 0.219, weight 0.85"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.242309+00:00",
-      "probability": 0.431925,
+      "predicted_at": "2026-08-29T22:52:41.887182+00:00",
+      "probability": 0.2810278320449515,
       "question": "Will A. Fery win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 43
+      "submission": 28
     },
     {
       "base_rate": 0.487,
@@ -101,9 +103,11 @@
       "market_id": "b4805aba-4ddb-4d70-bf92-e83e508284af",
       "market_weight": 0.0,
       "model": 0.496,
-      "notes": [],
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.242309+00:00",
+      "predicted_at": "2026-08-29T22:52:41.887182+00:00",
       "probability": 0.49420000000000003,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

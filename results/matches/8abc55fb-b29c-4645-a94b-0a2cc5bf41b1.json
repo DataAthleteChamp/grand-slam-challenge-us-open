@@ -13,15 +13,17 @@
       "market": null,
       "market_id": "4c2b84ae-70e0-46ec-a8d5-35ee06d66207",
       "market_weight": 0.0,
-      "model": 0.8977259190975677,
-      "notes": [],
+      "model": 0.9178822474260162,
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.232025+00:00",
-      "probability": 0.8524807352780542,
+      "predicted_at": "2026-08-29T22:52:41.877370+00:00",
+      "probability": 0.8686057979408129,
       "question": "Will the match last longer than 130 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 85
+      "submission": 87
     },
     {
       "base_rate": 0.46,
@@ -37,7 +39,7 @@
       "model": 0.5124942196951658,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.232025+00:00",
+      "predicted_at": "2026-08-29T22:52:41.877370+00:00",
       "probability": 0.4993706647713744,
       "question": "Will A. Kovacevic record more aces than V. Vacherot?",
       "rbp": null,
@@ -58,7 +60,7 @@
       "model": 0.48315209514946156,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.232025+00:00",
+      "predicted_at": "2026-08-29T22:52:41.877370+00:00",
       "probability": 0.46761407136209615,
       "question": "Will A. Kovacevic record more double faults than V. Vacherot?",
       "rbp": null,
@@ -68,26 +70,26 @@
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.7,
+      "confidence": 0.85,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "honest",
-      "market": null,
+      "market": 0.47769023347717876,
       "market_id": "626429e3-5b89-44c9-8267-7c500ba195c6",
-      "market_weight": 0.0,
+      "market_weight": 0.85,
       "model": 0.461,
       "notes": [
         "simulated win probability 0.461",
-        "no market quote; this is the family that most needs one"
+        "market consensus 0.478, weight 0.85"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.232025+00:00",
-      "probability": 0.4727,
+      "predicted_at": "2026-08-29T22:52:41.877370+00:00",
+      "probability": 0.4789052114805905,
       "question": "Will A. Kovacevic win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 47
+      "submission": 48
     },
     {
       "base_rate": 0.13263821138211385,
@@ -101,9 +103,11 @@
       "market_id": "204564b6-df37-4333-91fb-7809dc337cbd",
       "market_weight": 0.0,
       "model": 0.3675,
-      "notes": [],
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.232025+00:00",
+      "predicted_at": "2026-08-29T22:52:41.877370+00:00",
       "probability": 0.3205276422764227,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,

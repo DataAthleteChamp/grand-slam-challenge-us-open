@@ -13,15 +13,17 @@
       "market": null,
       "market_id": "067061e8-45cc-47c5-b9af-28808d6b70e4",
       "market_weight": 0.0,
-      "model": 0.8816302756174947,
-      "notes": [],
+      "model": 0.9074139018810604,
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.223780+00:00",
-      "probability": 0.8396042204939959,
+      "predicted_at": "2026-08-29T22:52:41.865306+00:00",
+      "probability": 0.8602311215048484,
       "question": "Will the match last longer than 130 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 84
+      "submission": 86
     },
     {
       "base_rate": 0.46,
@@ -37,7 +39,7 @@
       "model": 0.8311666300335785,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.223780+00:00",
+      "predicted_at": "2026-08-29T22:52:41.865306+00:00",
       "probability": 0.7383749725251838,
       "question": "Will T. Etcheverry record more aces than V. Kopriva?",
       "rbp": null,
@@ -58,7 +60,7 @@
       "model": 0.16388691256952392,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.223780+00:00",
+      "predicted_at": "2026-08-29T22:52:41.865306+00:00",
       "probability": 0.22816518442714295,
       "question": "Will T. Etcheverry record more double faults than V. Kopriva?",
       "rbp": null,
@@ -68,26 +70,26 @@
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.7,
+      "confidence": 0.85,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "honest",
-      "market": null,
+      "market": 0.6250714694101321,
       "market_id": "3406f3bf-cd45-4faf-b80c-710d9dd9def9",
-      "market_weight": 0.0,
+      "market_weight": 0.85,
       "model": 0.6465,
       "notes": [
         "simulated win probability 0.646",
-        "no market quote; this is the family that most needs one"
+        "market consensus 0.625, weight 0.85"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.223780+00:00",
-      "probability": 0.6025499999999999,
+      "predicted_at": "2026-08-29T22:52:41.865306+00:00",
+      "probability": 0.609071626998086,
       "question": "Will T. Etcheverry win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 60
+      "submission": 61
     },
     {
       "base_rate": 0.487,
@@ -101,9 +103,11 @@
       "market_id": "98ef5f69-ca0a-4760-8577-7673be0f0b51",
       "market_weight": 0.0,
       "model": 0.5235,
-      "notes": [],
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.223780+00:00",
+      "predicted_at": "2026-08-29T22:52:41.865306+00:00",
       "probability": 0.5162,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

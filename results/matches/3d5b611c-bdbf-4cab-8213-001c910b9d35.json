@@ -13,15 +13,17 @@
       "market": null,
       "market_id": "1c1c4638-6818-46a7-8855-8f042228969e",
       "market_weight": 0.0,
-      "model": 0.6648571068810181,
-      "notes": [],
+      "model": 0.7010110409355728,
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.224385+00:00",
-      "probability": 0.6329856855048145,
+      "predicted_at": "2026-08-29T22:52:41.866322+00:00",
+      "probability": 0.6619088327484582,
       "question": "Will the match last longer than 90 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 63
+      "submission": 66
     },
     {
       "base_rate": 0.427,
@@ -37,7 +39,7 @@
       "model": 0.6168805796431185,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.224385+00:00",
+      "predicted_at": "2026-08-29T22:52:41.866322+00:00",
       "probability": 0.5694104347323389,
       "question": "Will E. Alexandrova record more aces than M. Kessler?",
       "rbp": null,
@@ -58,7 +60,7 @@
       "model": 0.657464983980484,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.224385+00:00",
+      "predicted_at": "2026-08-29T22:52:41.866322+00:00",
       "probability": 0.601348737985363,
       "question": "Will E. Alexandrova record more double faults than M. Kessler?",
       "rbp": null,
@@ -68,26 +70,26 @@
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.7,
+      "confidence": 0.85,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "honest",
-      "market": null,
+      "market": 0.6083873039872022,
       "market_id": "00bb24fd-735e-4dda-80f9-816bbc5e1874",
-      "market_weight": 0.0,
+      "market_weight": 0.85,
       "model": 0.70925,
       "notes": [
         "simulated win probability 0.709",
-        "no market quote; this is the family that most needs one"
+        "market consensus 0.608, weight 0.85"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.224385+00:00",
-      "probability": 0.646475,
+      "predicted_at": "2026-08-29T22:52:41.866322+00:00",
+      "probability": 0.6057305924383476,
       "question": "Will E. Alexandrova win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 65
+      "submission": 61
     },
     {
       "base_rate": 0.225,
@@ -101,9 +103,11 @@
       "market_id": "d6b74082-8f9e-4720-8ed7-6ba122b26f7d",
       "market_weight": 0.0,
       "model": 0.25875,
-      "notes": [],
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.224385+00:00",
+      "predicted_at": "2026-08-29T22:52:41.866322+00:00",
       "probability": 0.252,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

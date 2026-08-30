@@ -13,15 +13,17 @@
       "market": null,
       "market_id": "4233be35-0730-47e9-91e0-f31b8da697d2",
       "market_weight": 0.0,
-      "model": 0.8849859518434995,
-      "notes": [],
+      "model": 0.9124547159886545,
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.234920+00:00",
-      "probability": 0.8837287614747996,
+      "predicted_at": "2026-08-29T22:52:41.879372+00:00",
+      "probability": 0.9057037727909236,
       "question": "Will the match last longer than 105 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 88
+      "submission": 91
     },
     {
       "base_rate": 0.46,
@@ -37,7 +39,7 @@
       "model": 0.9706856516220636,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.234920+00:00",
+      "predicted_at": "2026-08-29T22:52:41.879372+00:00",
       "probability": 0.8430142387165477,
       "question": "Will J. Mensik record more aces than S. Mochizuki?",
       "rbp": null,
@@ -58,7 +60,7 @@
       "model": 0.3043621924458093,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.234920+00:00",
+      "predicted_at": "2026-08-29T22:52:41.879372+00:00",
       "probability": 0.333521644334357,
       "question": "Will J. Mensik record more double faults than S. Mochizuki?",
       "rbp": null,
@@ -68,26 +70,26 @@
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.7,
+      "confidence": 0.85,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "honest",
-      "market": null,
+      "market": 0.9004629629145927,
       "market_id": "44bb8b03-dd1d-4a02-aaac-8a0ba40b8b15",
-      "market_weight": 0.0,
+      "market_weight": 0.85,
       "model": 0.84225,
       "notes": [
         "simulated win probability 0.842",
-        "no market quote; this is the family that most needs one"
+        "market consensus 0.900, weight 0.85"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.234920+00:00",
-      "probability": 0.739575,
+      "predicted_at": "2026-08-29T22:52:41.879372+00:00",
+      "probability": 0.8341737354243037,
       "question": "Will J. Mensik win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 74
+      "submission": 83
     },
     {
       "base_rate": 0.13263821138211385,
@@ -101,9 +103,11 @@
       "market_id": "a9e5fec4-e7ad-4432-b55f-c807076dcca9",
       "market_weight": 0.0,
       "model": 0.0695,
-      "notes": [],
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.234920+00:00",
+      "predicted_at": "2026-08-29T22:52:41.879372+00:00",
       "probability": 0.08212764227642277,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,

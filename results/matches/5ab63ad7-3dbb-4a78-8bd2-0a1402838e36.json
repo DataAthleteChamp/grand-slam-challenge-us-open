@@ -13,15 +13,17 @@
       "market": null,
       "market_id": "6875cdb2-bb92-4c7d-a8fd-7acc16e45cae",
       "market_weight": 0.0,
-      "model": 0.8773973761293381,
-      "notes": [],
+      "model": 0.9042044618710554,
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.227495+00:00",
-      "probability": 0.8547779009034705,
+      "predicted_at": "2026-08-29T22:52:41.870193+00:00",
+      "probability": 0.8762235694968443,
       "question": "Will the match last longer than 120 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 85
+      "submission": 88
     },
     {
       "base_rate": 0.46,
@@ -37,7 +39,7 @@
       "model": 0.6236623664688394,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.227495+00:00",
+      "predicted_at": "2026-08-29T22:52:41.870193+00:00",
       "probability": 0.5827467748516296,
       "question": "Will Z. Bergs record more aces than C. Taberner?",
       "rbp": null,
@@ -58,7 +60,7 @@
       "model": 0.3300323534720644,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.227495+00:00",
+      "predicted_at": "2026-08-29T22:52:41.870193+00:00",
       "probability": 0.3527742651040483,
       "question": "Will Z. Bergs record more double faults than C. Taberner?",
       "rbp": null,
@@ -68,26 +70,26 @@
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.7,
+      "confidence": 0.85,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "honest",
-      "market": null,
+      "market": 0.9454368932682566,
       "market_id": "dc86e12b-f267-4cb8-bcc2-d089f1257874",
-      "market_weight": 0.0,
+      "market_weight": 0.85,
       "model": 0.782,
       "notes": [
         "simulated win probability 0.782",
-        "no market quote; this is the family that most needs one"
+        "market consensus 0.945, weight 0.85"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.227495+00:00",
-      "probability": 0.6974,
+      "predicted_at": "2026-08-29T22:52:41.870193+00:00",
+      "probability": 0.8671042893351464,
       "question": "Will Z. Bergs win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 70
+      "submission": 87
     },
     {
       "base_rate": 0.487,
@@ -101,9 +103,11 @@
       "market_id": "f9ab38f5-6fb0-4219-a13e-94bb1b76cf55",
       "market_weight": 0.0,
       "model": 0.499,
-      "notes": [],
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.227495+00:00",
+      "predicted_at": "2026-08-29T22:52:41.870193+00:00",
       "probability": 0.4966,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

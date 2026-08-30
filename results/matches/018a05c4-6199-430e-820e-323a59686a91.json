@@ -13,15 +13,17 @@
       "market": null,
       "market_id": "9df60878-a140-4269-9e3d-ef0e33ca3628",
       "market_weight": 0.0,
-      "model": 0.9082065287779499,
-      "notes": [],
+      "model": 0.9302722404574193,
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.243271+00:00",
-      "probability": 0.89598522302236,
+      "predicted_at": "2026-08-29T22:52:41.887881+00:00",
+      "probability": 0.9136377923659353,
       "question": "Will the match last longer than 110 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 90
+      "submission": 91
     },
     {
       "base_rate": 0.46,
@@ -37,7 +39,7 @@
       "model": 0.9398578204292164,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.243271+00:00",
+      "predicted_at": "2026-08-29T22:52:41.887881+00:00",
       "probability": 0.8198933653219123,
       "question": "Will F. Auger-Aliassime record more aces than R. Hijikata?",
       "rbp": null,
@@ -58,7 +60,7 @@
       "model": 0.5610684437649915,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.243271+00:00",
+      "predicted_at": "2026-08-29T22:52:41.887881+00:00",
       "probability": 0.5260513328237436,
       "question": "Will F. Auger-Aliassime record more double faults than R. Hijikata?",
       "rbp": null,
@@ -68,26 +70,26 @@
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.7,
+      "confidence": 0.85,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "honest",
-      "market": null,
+      "market": 0.883450333434842,
       "market_id": "8a95f704-34ec-451c-8c67-1d77ea548920",
-      "market_weight": 0.0,
+      "market_weight": 0.85,
       "model": 0.85125,
       "notes": [
         "simulated win probability 0.851",
-        "no market quote; this is the family that most needs one"
+        "market consensus 0.883, weight 0.85"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.243271+00:00",
-      "probability": 0.745875,
+      "predicted_at": "2026-08-29T22:52:41.887881+00:00",
+      "probability": 0.8221826683319773,
       "question": "Will F. Auger-Aliassime win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 75
+      "submission": 82
     },
     {
       "base_rate": 0.487,
@@ -101,9 +103,11 @@
       "market_id": "90b907c6-a920-4a19-8b2f-77b49018a478",
       "market_weight": 0.0,
       "model": 0.48725,
-      "notes": [],
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.243271+00:00",
+      "predicted_at": "2026-08-29T22:52:41.887881+00:00",
       "probability": 0.4872,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

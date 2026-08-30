@@ -13,15 +13,17 @@
       "market": null,
       "market_id": "784ccad2-2925-4523-98df-9d303dab9c40",
       "market_weight": 0.0,
-      "model": 0.7156628134688086,
-      "notes": [],
+      "model": 0.7466010379773658,
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.241797+00:00",
-      "probability": 0.6736302507750468,
+      "predicted_at": "2026-08-29T22:52:41.886823+00:00",
+      "probability": 0.6983808303818926,
       "question": "Will the match last longer than 90 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 67
+      "submission": 70
     },
     {
       "base_rate": 0.427,
@@ -37,7 +39,7 @@
       "model": 0.4637637051424315,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.241797+00:00",
+      "predicted_at": "2026-08-29T22:52:41.886823+00:00",
       "probability": 0.4545727788568236,
       "question": "Will A. Potapova record more aces than T. Valentova?",
       "rbp": null,
@@ -58,7 +60,7 @@
       "model": 0.4792526868873046,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.241797+00:00",
+      "predicted_at": "2026-08-29T22:52:41.886823+00:00",
       "probability": 0.46768951516547846,
       "question": "Will A. Potapova record more double faults than T. Valentova?",
       "rbp": null,
@@ -68,26 +70,26 @@
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.7,
+      "confidence": 0.85,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "honest",
-      "market": null,
+      "market": 0.33459595958011723,
       "market_id": "7b89e7c4-e75d-4ddf-8682-0dd5e5968d57",
-      "market_weight": 0.0,
+      "market_weight": 0.85,
       "model": 0.441,
       "notes": [
         "simulated win probability 0.441",
-        "no market quote; this is the family that most needs one"
+        "market consensus 0.335, weight 0.85"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.241797+00:00",
-      "probability": 0.4587,
+      "predicted_at": "2026-08-29T22:52:41.886823+00:00",
+      "probability": 0.372330510645491,
       "question": "Will A. Potapova win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 46
+      "submission": 37
     },
     {
       "base_rate": 0.225,
@@ -101,9 +103,11 @@
       "market_id": "9e0f66bd-75c3-42fe-a193-a66ca442bf39",
       "market_weight": 0.0,
       "model": 0.247,
-      "notes": [],
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.241797+00:00",
+      "predicted_at": "2026-08-29T22:52:41.886823+00:00",
       "probability": 0.24259999999999998,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

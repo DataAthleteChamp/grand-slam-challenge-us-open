@@ -13,15 +13,17 @@
       "market": null,
       "market_id": "645ae494-a9f0-40a0-881d-db26114d0c78",
       "market_weight": 0.0,
-      "model": 0.8053331682559319,
-      "notes": [],
+      "model": 0.844509748641952,
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.238768+00:00",
-      "probability": 0.7878465346047455,
+      "predicted_at": "2026-08-29T22:52:41.883584+00:00",
+      "probability": 0.8191877989135616,
       "question": "Will the match last longer than 125 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 79
+      "submission": 82
     },
     {
       "base_rate": 0.46,
@@ -37,7 +39,7 @@
       "model": 0.014207013451625006,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.238768+00:00",
+      "predicted_at": "2026-08-29T22:52:41.883584+00:00",
       "probability": 0.12565526008871875,
       "question": "Will S. Baez record more aces than B. Nakashima?",
       "rbp": null,
@@ -58,7 +60,7 @@
       "model": 0.5266085324017273,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.238768+00:00",
+      "predicted_at": "2026-08-29T22:52:41.883584+00:00",
       "probability": 0.5002063993012955,
       "question": "Will S. Baez record more double faults than B. Nakashima?",
       "rbp": null,
@@ -68,26 +70,26 @@
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.7,
+      "confidence": 0.85,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "honest",
-      "market": null,
+      "market": 0.15612648223511225,
       "market_id": "cf3f48d7-41dc-407a-a64e-a6820c3b16f0",
-      "market_weight": 0.0,
+      "market_weight": 0.85,
       "model": 0.14725,
       "notes": [
         "simulated win probability 0.147",
-        "no market quote; this is the family that most needs one"
+        "market consensus 0.156, weight 0.85"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.238768+00:00",
-      "probability": 0.253075,
+      "predicted_at": "2026-08-29T22:52:41.883584+00:00",
+      "probability": 0.20655257740625585,
       "question": "Will S. Baez win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 25
+      "submission": 21
     },
     {
       "base_rate": 0.13263821138211385,
@@ -101,9 +103,11 @@
       "market_id": "b956d713-f1b4-4099-9986-071ff78a4300",
       "market_weight": 0.0,
       "model": 0.128,
-      "notes": [],
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.238768+00:00",
+      "predicted_at": "2026-08-29T22:52:41.883584+00:00",
       "probability": 0.12892764227642278,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,

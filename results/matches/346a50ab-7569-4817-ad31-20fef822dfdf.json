@@ -13,15 +13,17 @@
       "market": null,
       "market_id": "30778e48-dcf9-4aa7-85c0-88ac00a17d0f",
       "market_weight": 0.0,
-      "model": 0.7286925144782401,
-      "notes": [],
+      "model": 0.756989820027387,
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.221241+00:00",
-      "probability": 0.6966540115825921,
+      "predicted_at": "2026-08-29T22:52:41.863095+00:00",
+      "probability": 0.7192918560219097,
       "question": "Will the match last longer than 85 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 70
+      "submission": 72
     },
     {
       "base_rate": 0.427,
@@ -37,7 +39,7 @@
       "model": 0.6013996346769517,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.221241+00:00",
+      "predicted_at": "2026-08-29T22:52:41.863095+00:00",
       "probability": 0.5054798356046282,
       "question": "Will V. Erjavec record more aces than J. Paolini?",
       "rbp": null,
@@ -58,7 +60,7 @@
       "model": 0.5568001856456422,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.221241+00:00",
+      "predicted_at": "2026-08-29T22:52:41.863095+00:00",
       "probability": 0.48871008354053896,
       "question": "Will V. Erjavec record more double faults than J. Paolini?",
       "rbp": null,
@@ -68,26 +70,26 @@
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.7,
+      "confidence": 0.85,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "honest",
-      "market": null,
+      "market": 0.1383218884775331,
       "market_id": "e6d28fbf-d0d0-4dd5-b560-adec11876882",
-      "market_weight": 0.0,
+      "market_weight": 0.85,
       "model": 0.30275,
       "notes": [
         "simulated win probability 0.303",
-        "no market quote; this is the family that most needs one"
+        "market consensus 0.138, weight 0.85"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.221241+00:00",
-      "probability": 0.36192500000000005,
+      "predicted_at": "2026-08-29T22:52:41.863095+00:00",
+      "probability": 0.20852675451869648,
       "question": "Will V. Erjavec win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 36
+      "submission": 21
     },
     {
       "base_rate": 0.225,
@@ -101,9 +103,11 @@
       "market_id": "53fb45c9-a4f5-421b-92c9-2ff8f555fd73",
       "market_weight": 0.0,
       "model": 0.23725,
-      "notes": [],
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.221241+00:00",
+      "predicted_at": "2026-08-29T22:52:41.863095+00:00",
       "probability": 0.23479999999999998,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

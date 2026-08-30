@@ -13,15 +13,17 @@
       "market": null,
       "market_id": "e584c583-7410-44a7-8631-f53a2279245d",
       "market_weight": 0.0,
-      "model": 0.8077578252646678,
-      "notes": [],
+      "model": 0.8447838959404306,
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.233003+00:00",
-      "probability": 0.7490862602117342,
+      "predicted_at": "2026-08-29T22:52:41.877850+00:00",
+      "probability": 0.7787071167523445,
       "question": "Will the match last longer than 150 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 75
+      "submission": 78
     },
     {
       "base_rate": 0.46,
@@ -37,7 +39,7 @@
       "model": 0.11388786376225268,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.233003+00:00",
+      "predicted_at": "2026-08-29T22:52:41.877850+00:00",
       "probability": 0.2004158978216895,
       "question": "Will R. Jodar record more aces than T. Kokkinakis?",
       "rbp": null,
@@ -58,7 +60,7 @@
       "model": 0.41240769184778936,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.233003+00:00",
+      "predicted_at": "2026-08-29T22:52:41.877850+00:00",
       "probability": 0.41455576888584206,
       "question": "Will R. Jodar record more double faults than T. Kokkinakis?",
       "rbp": null,
@@ -68,26 +70,26 @@
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.7,
+      "confidence": 0.85,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "honest",
-      "market": null,
+      "market": 0.8851861846362249,
       "market_id": "563fb05d-98a1-4d5e-ac50-ffae54d02d88",
-      "market_weight": 0.0,
+      "market_weight": 0.85,
       "model": 0.518,
       "notes": [
         "simulated win probability 0.518",
-        "no market quote; this is the family that most needs one"
+        "market consensus 0.885, weight 0.85"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.233003+00:00",
-      "probability": 0.5126,
+      "predicted_at": "2026-08-29T22:52:41.877850+00:00",
+      "probability": 0.7988290941795522,
       "question": "Will R. Jodar win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 51
+      "submission": 80
     },
     {
       "base_rate": 0.13263821138211385,
@@ -101,9 +103,11 @@
       "market_id": "bff4699a-6f71-4142-9f5e-9542478cc7b4",
       "market_weight": 0.0,
       "model": 0.2135,
-      "notes": [],
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T21:59:38.233003+00:00",
+      "predicted_at": "2026-08-29T22:52:41.877850+00:00",
       "probability": 0.19732764227642277,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,
