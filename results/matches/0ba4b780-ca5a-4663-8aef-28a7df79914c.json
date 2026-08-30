@@ -13,17 +13,17 @@
       "market": null,
       "market_id": "abb0f64c-a361-4757-85ad-626c5d7349df",
       "market_weight": 0.0,
-      "model": 0.5648937511358146,
+      "model": 0.4168192171652629,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.823690+00:00",
-      "probability": 0.5648937511358146,
+      "predicted_at": "2026-08-30T10:30:31.497427+00:00",
+      "probability": 0.4168192171652629,
       "question": "Will the match last longer than 170 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 58
+      "submission": 40
     },
     {
       "base_rate": 0.46,
@@ -36,14 +36,14 @@
       "market": null,
       "market_id": "7a768c18-52cb-4145-a5d2-3db257e1ea7e",
       "market_weight": 0.0,
-      "model": 0.6815632105982422,
+      "model": 0.6810544057665099,
       "notes": [
         "exposure 116 service points from 37.1 games",
-        "outcome coupling: P(win)=0.735, delta=+0.60"
+        "outcome coupling: P(win)=0.733, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.823690+00:00",
-      "probability": 0.6815632105982422,
+      "predicted_at": "2026-08-30T10:30:31.497427+00:00",
+      "probability": 0.6810544057665099,
       "question": "Will L. Darderi record more aces than H. Wendelken?",
       "rbp": null,
       "settled_at": "",
@@ -65,7 +65,7 @@
         "exposure 116 service points from 37.1 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.823690+00:00",
+      "predicted_at": "2026-08-30T10:30:31.497427+00:00",
       "probability": 0.4571741174348931,
       "question": "Will L. Darderi record more double faults than H. Wendelken?",
       "rbp": null,
@@ -80,17 +80,17 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.7352352352693664,
+      "market": 0.7333840689575003,
       "market_id": "e10fb7cd-231c-44fc-8647-309118af26e3",
       "market_weight": 0.34,
       "model": 0.318,
       "notes": [
         "simulated win probability 0.318",
-        "market consensus 0.735, weight 0.34"
+        "market consensus 0.733, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.823690+00:00",
-      "probability": 0.46100259399695304,
+      "predicted_at": "2026-08-30T10:30:31.497427+00:00",
+      "probability": 0.46020108993850073,
       "question": "Will L. Darderi win?",
       "rbp": null,
       "settled_at": "",
@@ -112,7 +112,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.823690+00:00",
+      "predicted_at": "2026-08-30T10:30:31.497427+00:00",
       "probability": 0.386,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

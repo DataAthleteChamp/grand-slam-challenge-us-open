@@ -13,17 +13,17 @@
       "market": null,
       "market_id": "21169548-9b46-437e-adac-84bdd29c6a3e",
       "market_weight": 0.0,
-      "model": 0.5370265795061505,
+      "model": 0.4104025006430984,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.818001+00:00",
-      "probability": 0.5370265795061505,
+      "predicted_at": "2026-08-30T10:30:31.492601+00:00",
+      "probability": 0.4104025006430984,
       "question": "Will the match last longer than 100 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 55
+      "submission": 39
     },
     {
       "base_rate": 0.427,
@@ -41,7 +41,7 @@
         "exposure 70 service points from 21.7 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.818001+00:00",
+      "predicted_at": "2026-08-30T10:30:31.492601+00:00",
       "probability": 0.38739670148774225,
       "question": "Will R. Montgomery record more aces than M. Sakkari?",
       "rbp": null,
@@ -64,7 +64,7 @@
         "exposure 70 service points from 21.7 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.818001+00:00",
+      "predicted_at": "2026-08-30T10:30:31.492601+00:00",
       "probability": 0.45044048248451213,
       "question": "Will R. Montgomery record more double faults than M. Sakkari?",
       "rbp": null,
@@ -79,7 +79,7 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.4282360504266098,
+      "market": 0.4278715296685858,
       "market_id": "f7510350-f4a9-426d-b9e1-f809a31bc872",
       "market_weight": 0.34,
       "model": 0.2675,
@@ -88,8 +88,8 @@
         "market consensus 0.428, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.818001+00:00",
-      "probability": 0.3179682972467014,
+      "predicted_at": "2026-08-30T10:30:31.492601+00:00",
+      "probability": 0.3178585241221939,
       "question": "Will R. Montgomery win?",
       "rbp": null,
       "settled_at": "",
@@ -111,7 +111,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.818001+00:00",
+      "predicted_at": "2026-08-30T10:30:31.492601+00:00",
       "probability": 0.21925,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

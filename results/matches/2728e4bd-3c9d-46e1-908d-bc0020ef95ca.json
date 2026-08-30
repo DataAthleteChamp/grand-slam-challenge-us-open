@@ -13,17 +13,17 @@
       "market": null,
       "market_id": "da7de1d6-4e2b-4d05-8e85-31236d9ec4e9",
       "market_weight": 0.0,
-      "model": 0.7162194329865395,
+      "model": 0.6177407208107291,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.827038+00:00",
-      "probability": 0.7162194329865395,
+      "predicted_at": "2026-08-30T10:30:31.500299+00:00",
+      "probability": 0.6177407208107291,
       "question": "Will the match last longer than 85 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 76
+      "submission": 65
     },
     {
       "base_rate": 0.427,
@@ -41,7 +41,7 @@
         "exposure 69 service points from 21.3 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.827038+00:00",
+      "predicted_at": "2026-08-30T10:30:31.500299+00:00",
       "probability": 0.3992557675563082,
       "question": "Will S. Kraus record more aces than K. Muchova?",
       "rbp": null,
@@ -64,7 +64,7 @@
         "exposure 69 service points from 21.3 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.827038+00:00",
+      "predicted_at": "2026-08-30T10:30:31.500299+00:00",
       "probability": 0.45324410403757054,
       "question": "Will S. Kraus record more double faults than K. Muchova?",
       "rbp": null,
@@ -88,7 +88,7 @@
         "market consensus 0.117, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.827038+00:00",
+      "predicted_at": "2026-08-30T10:30:31.500299+00:00",
       "probability": 0.18069491438742044,
       "question": "Will S. Kraus win?",
       "rbp": null,
@@ -111,7 +111,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.827038+00:00",
+      "predicted_at": "2026-08-30T10:30:31.500299+00:00",
       "probability": 0.203,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

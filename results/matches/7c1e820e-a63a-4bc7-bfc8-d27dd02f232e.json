@@ -13,17 +13,17 @@
       "market": null,
       "market_id": "b7db1498-07dd-4771-af28-3b53b78865d6",
       "market_weight": 0.0,
-      "model": 0.7530373874258949,
+      "model": 0.6390384876921117,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.816947+00:00",
-      "probability": 0.7530373874258949,
+      "predicted_at": "2026-08-30T10:30:31.491679+00:00",
+      "probability": 0.6390384876921117,
       "question": "Will the match last longer than 145 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 80
+      "submission": 67
     },
     {
       "base_rate": 0.46,
@@ -42,7 +42,7 @@
         "outcome coupling: P(win)=0.187, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.816947+00:00",
+      "predicted_at": "2026-08-30T10:30:31.491679+00:00",
       "probability": 0.3335026900509127,
       "question": "Will T. Barrios Vera record more aces than A. Blockx?",
       "rbp": null,
@@ -65,7 +65,7 @@
         "exposure 119 service points from 38.0 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.816947+00:00",
+      "predicted_at": "2026-08-30T10:30:31.491679+00:00",
       "probability": 0.41991296445937454,
       "question": "Will T. Barrios Vera record more double faults than A. Blockx?",
       "rbp": null,
@@ -89,7 +89,7 @@
         "market consensus 0.187, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.816947+00:00",
+      "predicted_at": "2026-08-30T10:30:31.491679+00:00",
       "probability": 0.2838421188677264,
       "question": "Will T. Barrios Vera win?",
       "rbp": null,
@@ -112,7 +112,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.816947+00:00",
+      "predicted_at": "2026-08-30T10:30:31.491679+00:00",
       "probability": 0.102,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,

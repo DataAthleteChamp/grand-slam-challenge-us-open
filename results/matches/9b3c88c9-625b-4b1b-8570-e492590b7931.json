@@ -13,17 +13,17 @@
       "market": null,
       "market_id": "ccd050ee-da84-43a7-85f0-98cf229b9859",
       "market_weight": 0.0,
-      "model": 0.7268939699045254,
+      "model": 0.6338101678106342,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.820276+00:00",
-      "probability": 0.7268939699045254,
+      "predicted_at": "2026-08-30T10:30:31.494609+00:00",
+      "probability": 0.6338101678106342,
       "question": "Will the match last longer than 85 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 77
+      "submission": 67
     },
     {
       "base_rate": 0.427,
@@ -41,7 +41,7 @@
         "exposure 71 service points from 21.8 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.820276+00:00",
+      "predicted_at": "2026-08-30T10:30:31.494609+00:00",
       "probability": 0.44656209934549373,
       "question": "Will M. Andreeva record more aces than J. Tjen?",
       "rbp": null,
@@ -64,7 +64,7 @@
         "exposure 71 service points from 21.8 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.820276+00:00",
+      "predicted_at": "2026-08-30T10:30:31.494609+00:00",
       "probability": 0.42422698546214027,
       "question": "Will M. Andreeva record more double faults than J. Tjen?",
       "rbp": null,
@@ -88,7 +88,7 @@
         "market consensus 0.862, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.820276+00:00",
+      "predicted_at": "2026-08-30T10:30:31.494609+00:00",
       "probability": 0.7777952115644459,
       "question": "Will M. Andreeva win?",
       "rbp": null,
@@ -111,7 +111,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.820276+00:00",
+      "predicted_at": "2026-08-30T10:30:31.494609+00:00",
       "probability": 0.21425,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

@@ -13,17 +13,17 @@
       "market": null,
       "market_id": "d7d2241b-8956-43d4-a54f-7fd696cb3543",
       "market_weight": 0.0,
-      "model": 0.5387061994390032,
+      "model": 0.4121539708778247,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.810961+00:00",
-      "probability": 0.5387061994390032,
+      "predicted_at": "2026-08-30T10:30:31.484588+00:00",
+      "probability": 0.4121539708778247,
       "question": "Will the match last longer than 100 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 55
+      "submission": 39
     },
     {
       "base_rate": 0.427,
@@ -41,7 +41,7 @@
         "exposure 73 service points from 22.4 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.810961+00:00",
+      "predicted_at": "2026-08-30T10:30:31.484588+00:00",
       "probability": 0.4332491728025335,
       "question": "Will L. Fernandez record more aces than S. Zhang?",
       "rbp": null,
@@ -64,7 +64,7 @@
         "exposure 73 service points from 22.4 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.810961+00:00",
+      "predicted_at": "2026-08-30T10:30:31.484588+00:00",
       "probability": 0.4495052760570173,
       "question": "Will L. Fernandez record more double faults than S. Zhang?",
       "rbp": null,
@@ -79,17 +79,17 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.6847290640162286,
+      "market": 0.6835317460473197,
       "market_id": "9251b8ce-cd5f-4f3c-bf2f-2445e9240d9c",
       "market_weight": 0.34,
       "model": 0.6355,
       "notes": [
         "simulated win probability 0.635",
-        "market consensus 0.685, weight 0.34"
+        "market consensus 0.684, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.810961+00:00",
-      "probability": 0.652622175486879,
+      "predicted_at": "2026-08-30T10:30:31.484588+00:00",
+      "probability": 0.6521949759577689,
       "question": "Will L. Fernandez win?",
       "rbp": null,
       "settled_at": "",
@@ -111,7 +111,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.810961+00:00",
+      "predicted_at": "2026-08-30T10:30:31.484588+00:00",
       "probability": 0.21675,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

@@ -13,17 +13,17 @@
       "market": null,
       "market_id": "ef6fd77f-cd6e-4675-bb00-5bd457f6823c",
       "market_weight": 0.0,
-      "model": 0.6312205667248012,
+      "model": 0.507084001983885,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.811328+00:00",
-      "probability": 0.6312205667248012,
+      "predicted_at": "2026-08-30T10:30:31.484999+00:00",
+      "probability": 0.507084001983885,
       "question": "Will the match last longer than 85 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 66
+      "submission": 51
     },
     {
       "base_rate": 0.427,
@@ -41,7 +41,7 @@
         "exposure 66 service points from 20.5 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.811328+00:00",
+      "predicted_at": "2026-08-30T10:30:31.484999+00:00",
       "probability": 0.4865299565422053,
       "question": "Will J. Pegula record more aces than E. Ruse?",
       "rbp": null,
@@ -64,7 +64,7 @@
         "exposure 66 service points from 20.5 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.811328+00:00",
+      "predicted_at": "2026-08-30T10:30:31.484999+00:00",
       "probability": 0.41482687512458666,
       "question": "Will J. Pegula record more double faults than E. Ruse?",
       "rbp": null,
@@ -79,21 +79,21 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.8845256023215899,
+      "market": 0.8962962962754081,
       "market_id": "3b253bc4-1804-485e-a581-15d695e1cc68",
       "market_weight": 0.34,
       "model": 0.8235,
       "notes": [
         "simulated win probability 0.824",
-        "market consensus 0.885, weight 0.34"
+        "market consensus 0.896, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.811328+00:00",
-      "probability": 0.8466807108379244,
+      "predicted_at": "2026-08-30T10:30:31.484999+00:00",
+      "probability": 0.8519338131784104,
       "question": "Will J. Pegula win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 89
+      "submission": 90
     },
     {
       "base_rate": 0.225,
@@ -111,7 +111,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.811328+00:00",
+      "predicted_at": "2026-08-30T10:30:31.484999+00:00",
       "probability": 0.16,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

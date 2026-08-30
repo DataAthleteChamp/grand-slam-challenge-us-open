@@ -31,3 +31,7 @@ analysis/
 
 # Odds API quota tracking is machine-local state.
 data/odds_budget.json
+
+# Raw API archives are large and regenerable from the tidy table;
+# settled.csv is committed because it is the feedback record itself.
+data/history/raw/

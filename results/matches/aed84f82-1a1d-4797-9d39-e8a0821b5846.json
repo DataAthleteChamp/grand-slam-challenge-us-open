@@ -19,7 +19,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.822769+00:00",
+      "predicted_at": "2026-08-30T10:30:31.496339+00:00",
       "probability": 0.7946,
       "question": "Will the match last longer than 70 minutes?",
       "rbp": null,
@@ -42,7 +42,7 @@
         "missing aces rates; using the measured even-matchup price"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.822769+00:00",
+      "predicted_at": "2026-08-30T10:30:31.496339+00:00",
       "probability": 0.427,
       "question": "Will T. Frodin record more aces than E. Rybakina?",
       "rbp": null,
@@ -65,7 +65,7 @@
         "missing double_faults rates; using the measured even-matchup price"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.822769+00:00",
+      "predicted_at": "2026-08-30T10:30:31.496339+00:00",
       "probability": 0.43300000000000005,
       "question": "Will T. Frodin record more double faults than E. Rybakina?",
       "rbp": null,
@@ -89,7 +89,7 @@
         "market consensus 0.050, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.822769+00:00",
+      "predicted_at": "2026-08-30T10:30:31.496339+00:00",
       "probability": 0.2691127235289308,
       "question": "Will T. Frodin win?",
       "rbp": null,
@@ -113,7 +113,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.822769+00:00",
+      "predicted_at": "2026-08-30T10:30:31.496339+00:00",
       "probability": 0.225,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

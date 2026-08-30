@@ -13,17 +13,17 @@
       "market": null,
       "market_id": "72932e12-44a5-464f-8dae-efcc5ea91543",
       "market_weight": 0.0,
-      "model": 0.8474247524066489,
+      "model": 0.7780632242847765,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.812840+00:00",
-      "probability": 0.8474247524066489,
+      "predicted_at": "2026-08-30T10:30:31.487368+00:00",
+      "probability": 0.7780632242847765,
       "question": "Will the match last longer than 110 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 90
+      "submission": 83
     },
     {
       "base_rate": 0.46,
@@ -36,14 +36,14 @@
       "market": null,
       "market_id": "af9a614f-5979-4434-902d-a39d702d3480",
       "market_weight": 0.0,
-      "model": 0.789228661569303,
+      "model": 0.7904413737935828,
       "notes": [
         "exposure 99 service points from 31.9 games",
-        "outcome coupling: P(win)=0.817, delta=+0.60"
+        "outcome coupling: P(win)=0.822, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.812840+00:00",
-      "probability": 0.789228661569303,
+      "predicted_at": "2026-08-30T10:30:31.487368+00:00",
+      "probability": 0.7904413737935828,
       "question": "Will N. Djokovic record more aces than M. Navone?",
       "rbp": null,
       "settled_at": "",
@@ -65,7 +65,7 @@
         "exposure 99 service points from 31.9 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.812840+00:00",
+      "predicted_at": "2026-08-30T10:30:31.487368+00:00",
       "probability": 0.3794399269598099,
       "question": "Will N. Djokovic record more double faults than M. Navone?",
       "rbp": null,
@@ -80,17 +80,17 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.8165091033146277,
+      "market": 0.8216879972477715,
       "market_id": "c23338d2-165d-44eb-8fcd-98e651056f69",
       "market_weight": 0.34,
       "model": 0.94275,
       "notes": [
         "simulated win probability 0.943",
-        "market consensus 0.817, weight 0.34"
+        "market consensus 0.822, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.812840+00:00",
-      "probability": 0.9134481791927485,
+      "predicted_at": "2026-08-30T10:30:31.487368+00:00",
+      "probability": 0.9143831298303173,
       "question": "Will N. Djokovic win?",
       "rbp": null,
       "settled_at": "",
@@ -112,7 +112,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.812840+00:00",
+      "predicted_at": "2026-08-30T10:30:31.487368+00:00",
       "probability": 0.313,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

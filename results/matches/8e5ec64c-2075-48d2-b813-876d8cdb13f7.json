@@ -13,17 +13,17 @@
       "market": null,
       "market_id": "850bc2a2-ee18-44f6-b348-4cf3e0abcc35",
       "market_weight": 0.0,
-      "model": 0.4623842933524722,
+      "model": 0.3121235829106737,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.811729+00:00",
-      "probability": 0.4623842933524722,
+      "predicted_at": "2026-08-30T10:30:31.485432+00:00",
+      "probability": 0.3121235829106737,
       "question": "Will the match last longer than 150 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 45
+      "submission": 27
     },
     {
       "base_rate": 0.46,
@@ -36,14 +36,14 @@
       "market": null,
       "market_id": "b3cf8cd7-d3fc-4ad6-8dc4-f7fc47653e56",
       "market_weight": 0.0,
-      "model": 0.07970950927826886,
+      "model": 0.07981031263213802,
       "notes": [
         "exposure 100 service points from 32.4 games",
-        "outcome coupling: P(win)=0.124, delta=+0.60"
+        "outcome coupling: P(win)=0.125, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.811729+00:00",
-      "probability": 0.07970950927826886,
+      "predicted_at": "2026-08-30T10:30:31.485432+00:00",
+      "probability": 0.07981031263213802,
       "question": "Will H. Gaston record more aces than D. Medvedev?",
       "rbp": null,
       "settled_at": "",
@@ -65,7 +65,7 @@
         "exposure 100 service points from 32.4 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.811729+00:00",
+      "predicted_at": "2026-08-30T10:30:31.485432+00:00",
       "probability": 0.2687364585494266,
       "question": "Will H. Gaston record more double faults than D. Medvedev?",
       "rbp": null,
@@ -80,17 +80,17 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.12417641525891747,
+      "market": 0.12500000000022599,
       "market_id": "b35fa292-7262-484e-bf94-f1be583ad269",
       "market_weight": 0.34,
       "model": 0.08875,
       "notes": [
         "simulated win probability 0.089",
-        "market consensus 0.124, weight 0.34"
+        "market consensus 0.125, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.811729+00:00",
-      "probability": 0.09963265859083058,
+      "predicted_at": "2026-08-30T10:30:31.485432+00:00",
+      "probability": 0.09986320965380283,
       "question": "Will H. Gaston win?",
       "rbp": null,
       "settled_at": "",
@@ -112,7 +112,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.811729+00:00",
+      "predicted_at": "2026-08-30T10:30:31.485432+00:00",
       "probability": 0.036,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,

@@ -13,17 +13,17 @@
       "market": null,
       "market_id": "645ae494-a9f0-40a0-881d-db26114d0c78",
       "market_weight": 0.0,
-      "model": 0.8396394288516471,
+      "model": 0.7700666867879854,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.828660+00:00",
-      "probability": 0.8396394288516471,
+      "predicted_at": "2026-08-30T10:30:31.501796+00:00",
+      "probability": 0.7700666867879854,
       "question": "Will the match last longer than 125 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 89
+      "submission": 82
     },
     {
       "base_rate": 0.46,
@@ -42,7 +42,7 @@
         "outcome coupling: P(win)=0.156, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.828660+00:00",
+      "predicted_at": "2026-08-30T10:30:31.501796+00:00",
       "probability": 0.050828709474866084,
       "question": "Will S. Baez record more aces than B. Nakashima?",
       "rbp": null,
@@ -65,7 +65,7 @@
         "exposure 116 service points from 37.3 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.828660+00:00",
+      "predicted_at": "2026-08-30T10:30:31.501796+00:00",
       "probability": 0.523368653627941,
       "question": "Will S. Baez record more double faults than B. Nakashima?",
       "rbp": null,
@@ -89,7 +89,7 @@
         "market consensus 0.156, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.828660+00:00",
+      "predicted_at": "2026-08-30T10:30:31.501796+00:00",
       "probability": 0.20227888007204775,
       "question": "Will S. Baez win?",
       "rbp": null,
@@ -112,7 +112,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.828660+00:00",
+      "predicted_at": "2026-08-30T10:30:31.501796+00:00",
       "probability": 0.09925,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,

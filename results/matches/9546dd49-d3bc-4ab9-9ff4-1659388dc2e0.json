@@ -13,17 +13,17 @@
       "market": null,
       "market_id": "ca5bd10e-5123-4695-a842-f8840c6040f5",
       "market_weight": 0.0,
-      "model": 0.6331364412194892,
+      "model": 0.5154625479325023,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.819289+00:00",
-      "probability": 0.6331364412194892,
+      "predicted_at": "2026-08-30T10:30:31.493852+00:00",
+      "probability": 0.5154625479325023,
       "question": "Will the match last longer than 95 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 66
+      "submission": 52
     },
     {
       "base_rate": 0.427,
@@ -41,7 +41,7 @@
         "exposure 72 service points from 22.2 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.819289+00:00",
+      "predicted_at": "2026-08-30T10:30:31.493852+00:00",
       "probability": 0.376132631482463,
       "question": "Will M. Chwalinska record more aces than T. Townsend?",
       "rbp": null,
@@ -64,7 +64,7 @@
         "exposure 72 service points from 22.2 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.819289+00:00",
+      "predicted_at": "2026-08-30T10:30:31.493852+00:00",
       "probability": 0.4595750941570833,
       "question": "Will M. Chwalinska record more double faults than T. Townsend?",
       "rbp": null,
@@ -88,7 +88,7 @@
         "market consensus 0.325, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.819289+00:00",
+      "predicted_at": "2026-08-30T10:30:31.493852+00:00",
       "probability": 0.3288426070744985,
       "question": "Will M. Chwalinska win?",
       "rbp": null,
@@ -111,7 +111,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.819289+00:00",
+      "predicted_at": "2026-08-30T10:30:31.493852+00:00",
       "probability": 0.018,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,

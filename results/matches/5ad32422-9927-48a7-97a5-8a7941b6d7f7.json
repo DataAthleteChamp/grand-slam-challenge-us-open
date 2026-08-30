@@ -13,17 +13,17 @@
       "market": null,
       "market_id": "6d2da3c9-5b9d-4cd6-ba49-883f0aeea09f",
       "market_weight": 0.0,
-      "model": 0.613725966572821,
+      "model": 0.4664536368042578,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.814439+00:00",
-      "probability": 0.613725966572821,
+      "predicted_at": "2026-08-30T10:30:31.489182+00:00",
+      "probability": 0.4664536368042578,
       "question": "Will the match last longer than 160 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 64
+      "submission": 46
     },
     {
       "base_rate": 0.46,
@@ -36,14 +36,14 @@
       "market": null,
       "market_id": "f0953a36-a56f-43c5-9a33-c31d86c5637a",
       "market_weight": 0.0,
-      "model": 0.5433569932498337,
+      "model": 0.5411247921673841,
       "notes": [
         "exposure 120 service points from 38.4 games",
-        "outcome coupling: P(win)=0.351, delta=+0.60"
+        "outcome coupling: P(win)=0.343, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.814439+00:00",
-      "probability": 0.5433569932498337,
+      "predicted_at": "2026-08-30T10:30:31.489182+00:00",
+      "probability": 0.5411247921673841,
       "question": "Will N. Borges record more aces than L. Tien?",
       "rbp": null,
       "settled_at": "",
@@ -65,7 +65,7 @@
         "exposure 120 service points from 38.4 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.814439+00:00",
+      "predicted_at": "2026-08-30T10:30:31.489182+00:00",
       "probability": 0.31251066482279705,
       "question": "Will N. Borges record more double faults than L. Tien?",
       "rbp": null,
@@ -80,17 +80,17 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.351315929267496,
+      "market": 0.343426308931424,
       "market_id": "e50e692c-6fe3-4400-a58f-0384d1ff5248",
       "market_weight": 0.34,
       "model": 0.46025,
       "notes": [
         "simulated win probability 0.460",
-        "market consensus 0.351, weight 0.34"
+        "market consensus 0.343, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.814439+00:00",
-      "probability": 0.42221911614186725,
+      "predicted_at": "2026-08-30T10:30:31.489182+00:00",
+      "probability": 0.41933518080490656,
       "question": "Will N. Borges win?",
       "rbp": null,
       "settled_at": "",
@@ -112,7 +112,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.814439+00:00",
+      "predicted_at": "2026-08-30T10:30:31.489182+00:00",
       "probability": 0.1,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,

@@ -13,17 +13,17 @@
       "market": null,
       "market_id": "20a38180-81f0-49fc-b37f-348f57c2a9a8",
       "market_weight": 0.0,
-      "model": 0.7310188337226883,
+      "model": 0.638604561316856,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.837757+00:00",
-      "probability": 0.7310188337226883,
+      "predicted_at": "2026-08-30T10:30:31.509453+00:00",
+      "probability": 0.638604561316856,
       "question": "Will the match last longer than 80 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 78
+      "submission": 67
     },
     {
       "base_rate": 0.427,
@@ -41,7 +41,7 @@
         "exposure 71 service points from 21.8 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.837757+00:00",
+      "predicted_at": "2026-08-30T10:30:31.509453+00:00",
       "probability": 0.7395660595213128,
       "question": "Will N. Osaka record more aces than A. Zakharova?",
       "rbp": null,
@@ -64,7 +64,7 @@
         "exposure 71 service points from 21.8 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.837757+00:00",
+      "predicted_at": "2026-08-30T10:30:31.509453+00:00",
       "probability": 0.43651129538999317,
       "question": "Will N. Osaka record more double faults than A. Zakharova?",
       "rbp": null,
@@ -88,7 +88,7 @@
         "market consensus 0.885, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.837757+00:00",
+      "predicted_at": "2026-08-30T10:30:31.509453+00:00",
       "probability": 0.8131227619556404,
       "question": "Will N. Osaka win?",
       "rbp": null,
@@ -111,7 +111,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.837757+00:00",
+      "predicted_at": "2026-08-30T10:30:31.509453+00:00",
       "probability": 0.2345,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

@@ -13,17 +13,17 @@
       "market": null,
       "market_id": "1a7017ff-c894-44b3-abb0-c9f56602530c",
       "market_weight": 0.0,
-      "model": 0.8901520101473239,
+      "model": 0.8524848342733105,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.829570+00:00",
-      "probability": 0.8901520101473239,
+      "predicted_at": "2026-08-30T10:30:31.502563+00:00",
+      "probability": 0.8524848342733105,
       "question": "Will the match last longer than 125 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 93
+      "submission": 90
     },
     {
       "base_rate": 0.46,
@@ -42,7 +42,7 @@
         "outcome coupling: P(win)=0.606, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.829570+00:00",
+      "predicted_at": "2026-08-30T10:30:31.502563+00:00",
       "probability": 0.4029134436955434,
       "question": "Will M. Arnaldi record more aces than J. Duckworth?",
       "rbp": null,
@@ -65,7 +65,7 @@
         "exposure 121 service points from 38.8 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.829570+00:00",
+      "predicted_at": "2026-08-30T10:30:31.502563+00:00",
       "probability": 0.5757789189334902,
       "question": "Will M. Arnaldi record more double faults than J. Duckworth?",
       "rbp": null,
@@ -89,7 +89,7 @@
         "market consensus 0.606, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.829570+00:00",
+      "predicted_at": "2026-08-30T10:30:31.502563+00:00",
       "probability": 0.4701393986883641,
       "question": "Will M. Arnaldi win?",
       "rbp": null,
@@ -112,7 +112,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.829570+00:00",
+      "predicted_at": "2026-08-30T10:30:31.502563+00:00",
       "probability": 0.12325,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,

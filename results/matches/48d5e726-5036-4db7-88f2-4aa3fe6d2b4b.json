@@ -13,17 +13,17 @@
       "market": null,
       "market_id": "d6a7f877-ccf2-4661-af74-f013eab43d7a",
       "market_weight": 0.0,
-      "model": 0.9149041904812045,
+      "model": 0.9040913079132579,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.829975+00:00",
-      "probability": 0.9149041904812045,
+      "predicted_at": "2026-08-30T10:30:31.502932+00:00",
+      "probability": 0.9040913079132579,
       "question": "Will the match last longer than 100 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 95
+      "submission": 94
     },
     {
       "base_rate": 0.46,
@@ -36,14 +36,14 @@
       "market": null,
       "market_id": "9b4ec192-e692-4be3-bce7-c1cbe6709760",
       "market_weight": 0.0,
-      "model": 0.144514565140882,
+      "model": 0.14413362648643613,
       "notes": [
         "exposure 116 service points from 37.1 games",
-        "outcome coupling: P(win)=0.046, delta=+0.60"
+        "outcome coupling: P(win)=0.044, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.829975+00:00",
-      "probability": 0.144514565140882,
+      "predicted_at": "2026-08-30T10:30:31.502932+00:00",
+      "probability": 0.14413362648643613,
       "question": "Will D. Blanch record more aces than T. Fritz?",
       "rbp": null,
       "settled_at": "",
@@ -65,7 +65,7 @@
         "exposure 116 service points from 37.1 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.829975+00:00",
+      "predicted_at": "2026-08-30T10:30:31.502932+00:00",
       "probability": 0.553129209398954,
       "question": "Will D. Blanch record more double faults than T. Fritz?",
       "rbp": null,
@@ -80,17 +80,17 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.045813106839232655,
+      "market": 0.043974871590657945,
       "market_id": "3529880e-b300-4120-8967-ace0f25d64db",
       "market_weight": 0.34,
       "model": 0.142,
       "notes": [
         "simulated win probability 0.142",
-        "market consensus 0.046, weight 0.34"
+        "market consensus 0.044, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.829975+00:00",
-      "probability": 0.09801023859808014,
+      "predicted_at": "2026-08-30T10:30:31.502932+00:00",
+      "probability": 0.09672901189955317,
       "question": "Will D. Blanch win?",
       "rbp": null,
       "settled_at": "",
@@ -112,7 +112,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.829975+00:00",
+      "predicted_at": "2026-08-30T10:30:31.502932+00:00",
       "probability": 0.5455,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

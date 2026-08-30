@@ -13,17 +13,17 @@
       "market": null,
       "market_id": "5622d4f4-5d92-43b1-bdfc-028d4015fcbe",
       "market_weight": 0.0,
-      "model": 0.7751518836434105,
+      "model": 0.6736984035898788,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.831631+00:00",
-      "probability": 0.7751518836434105,
+      "predicted_at": "2026-08-30T10:30:31.504528+00:00",
+      "probability": 0.6736984035898788,
       "question": "Will the match last longer than 145 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 82
+      "submission": 71
     },
     {
       "base_rate": 0.46,
@@ -42,7 +42,7 @@
         "outcome coupling: P(win)=0.259, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.831631+00:00",
+      "predicted_at": "2026-08-30T10:30:31.504528+00:00",
       "probability": 0.5326252962083573,
       "question": "Will M. Cilic record more aces than A. Rublev?",
       "rbp": null,
@@ -65,7 +65,7 @@
         "exposure 123 service points from 39.4 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.831631+00:00",
+      "predicted_at": "2026-08-30T10:30:31.504528+00:00",
       "probability": 0.6024277114885345,
       "question": "Will M. Cilic record more double faults than A. Rublev?",
       "rbp": null,
@@ -89,7 +89,7 @@
         "market consensus 0.259, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.831631+00:00",
+      "predicted_at": "2026-08-30T10:30:31.504528+00:00",
       "probability": 0.29019456420038214,
       "question": "Will M. Cilic win?",
       "rbp": null,
@@ -112,7 +112,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.831631+00:00",
+      "predicted_at": "2026-08-30T10:30:31.504528+00:00",
       "probability": 0.17875,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,

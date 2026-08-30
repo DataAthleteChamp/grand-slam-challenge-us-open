@@ -13,17 +13,17 @@
       "market": null,
       "market_id": "01cae937-4afd-4889-9204-8227f66bcbbf",
       "market_weight": 0.0,
-      "model": 0.6056814640984197,
+      "model": 0.48293420768805423,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.830403+00:00",
-      "probability": 0.6056814640984197,
+      "predicted_at": "2026-08-30T10:30:31.503323+00:00",
+      "probability": 0.48293420768805423,
       "question": "Will the match last longer than 95 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 63
+      "submission": 48
     },
     {
       "base_rate": 0.427,
@@ -41,7 +41,7 @@
         "exposure 72 service points from 22.2 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.830403+00:00",
+      "predicted_at": "2026-08-30T10:30:31.503323+00:00",
       "probability": 0.4232674566675876,
       "question": "Will A. Li record more aces than A. Ruzic?",
       "rbp": null,
@@ -64,7 +64,7 @@
         "exposure 72 service points from 22.2 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.830403+00:00",
+      "predicted_at": "2026-08-30T10:30:31.503323+00:00",
       "probability": 0.43077374065262214,
       "question": "Will A. Li record more double faults than A. Ruzic?",
       "rbp": null,
@@ -88,7 +88,7 @@
         "market consensus 0.745, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.830403+00:00",
+      "predicted_at": "2026-08-30T10:30:31.503323+00:00",
       "probability": 0.6447440755046602,
       "question": "Will A. Li win?",
       "rbp": null,
@@ -111,7 +111,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T07:38:21.830403+00:00",
+      "predicted_at": "2026-08-30T10:30:31.503323+00:00",
       "probability": 0.2025,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
