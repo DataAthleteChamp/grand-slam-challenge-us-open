@@ -36,9 +36,11 @@ from .data.baserates import (
     SERVE_RATE_FORM_SD,
     SERVE_RATE_MARGINAL,
     classify_matchup,
+    count_confidence,
     count_overdispersion,
     count_stats,
     duration_base,
+    outcome_coupling,
     serve_rate_base,
     service_points_for,
     structural,
@@ -55,7 +57,12 @@ from .models.derive import (
     long_set_probability,
     tiebreak_probability,
 )
-from .models.lanes import apply_lane
+from .models.lanes import (
+    LANE_CONFIDENCE_SCALE,
+    LANE_MARKET_SCALE,
+    LANE_SIGMA,
+    apply_lane,
+)
 from .models.shrink import CREDIBILITY_K, height_prior_ace_rate, shrink
 from .models.simulate import (
     SimulationConfig,
@@ -214,8 +221,14 @@ class Pricer:
         market_weights: dict[Family, float] | None = None,
     ) -> None:
         self.lane = lane
-        self.sim_config = sim_config or SimulationConfig(n_sims=4000)
-        self.market_weights = market_weights or dict(MARKET_WEIGHT)
+        self.sim_config = sim_config or SimulationConfig(
+            n_sims=4000, sigma=LANE_SIGMA.get(lane, SimulationConfig.sigma)
+        )
+        # Scaling the market weight by lane is what makes the second entry a
+        # genuinely different model rather than a louder copy of the first.
+        scale = LANE_MARKET_SCALE.get(lane, 1.0)
+        base_weights = market_weights or dict(MARKET_WEIGHT)
+        self.market_weights = {f: w * scale for f, w in base_weights.items()}
         self._sim_cache: dict[tuple, Any] = {}
 
     # ------------------------------------------------------------------ public
@@ -241,7 +254,7 @@ class Pricer:
         if spec.family in STRUCTURAL:
             return self._price_structural(spec, context, base, ladders, market_id, notes)
         if spec.family in COMPARISON:
-            return self._price_comparison(spec, context, base, market_id, notes)
+            return self._price_comparison(spec, context, base, market_id, notes, ladders)
         if spec.family in THRESHOLD:
             return self._price_threshold(spec, context, base, market_id, notes)
 
@@ -284,7 +297,8 @@ class Pricer:
             quoted = ladders.get("match_winner")
             if isinstance(quoted, dict):
                 market = quoted.get(subject.name)
-        weight = self.market_weights.get(spec.family, 0.85) if market is not None else 0.0
+        default = 0.85 * LANE_MARKET_SCALE.get(self.lane, 1.0)
+        weight = self.market_weights.get(spec.family, default) if market is not None else 0.0
         if market is not None:
             notes.append(f"market consensus {market:.3f}, weight {weight:.2f}")
             confidence = max(confidence, 0.85)
@@ -347,7 +361,9 @@ class Pricer:
             spec, probability, base, model, market, weight, market_id, notes, context, confidence
         )
 
-    def _price_comparison(self, spec, context, base, market_id, notes) -> PricedQuestion:
+    def _price_comparison(
+        self, spec, context, base, market_id, notes, ladders=None
+    ) -> PricedQuestion:
         """Head-to-head count comparisons.  No market exists for any of these."""
         stat = {
             Family.ACES_COMPARISON: "aces",
@@ -378,11 +394,19 @@ class Pricer:
                 subject, opponent, context, base, notes
             )
         else:
-            expected_games = None
+            expected_games = win_probability = None
             if subject.has_ratings and opponent.has_ratings:
-                expected_games = self._simulate(context).mean_total_games
+                oriented = context if subject is context.player_a else _swap(context)
+                simulation = self._simulate(oriented)
+                expected_games = simulation.mean_total_games
+                win_probability = simulation.p_a_wins_match
+                # The market price is a better win probability than ours
+                # wherever one exists, and it is the whole point of the coupling.
+                quoted = (ladders or {}).get("match_winner")
+                if isinstance(quoted, dict) and subject.name in quoted:
+                    win_probability = quoted[subject.name]
             model, confidence = self._count_comparison(
-                stat, subject, opponent, context, base, notes, expected_games
+                stat, subject, opponent, context, base, notes, expected_games, win_probability
             )
 
         return self._finalise(
@@ -541,7 +565,17 @@ class Pricer:
                 return candidate, other
         return None, None
 
-    def _count_comparison(self, stat, subject, opponent, context, base, notes, expected_games=None):
+    def _count_comparison(
+        self,
+        stat,
+        subject,
+        opponent,
+        context,
+        base,
+        notes,
+        expected_games=None,
+        win_probability=None,
+    ):
         """P(subject records strictly more than opponent) for a count statistic."""
         measured = count_stats(stat, context.tour)
         population = measured["mean_per_player"]
@@ -583,8 +617,23 @@ class Pricer:
             shrunk_subject, shrunk_opponent, points, points, overdispersion=rho
         )
 
-        confidence = 0.75 if min(subject.matches, opponent.matches) >= 20 else 0.45
-        return comparison.resolve("no"), confidence
+        model = comparison.resolve("no")
+        # Measured per family rather than assumed. The sweep found the women's
+        # double-fault model is beaten outright by its own base rate, so trusting
+        # it uniformly would have cost points on a quarter of the count questions.
+        measured_confidence = count_confidence(stat, context.tour)
+        confidence = measured_confidence if min(subject.matches, opponent.matches) >= 20 else 0.45
+
+        # Winning and out-acing share a cause the historical rate cannot see: on
+        # a day when a player's serve is working they do both. Mixing over the
+        # unknown result rather than assuming one converts our best-priced
+        # family into an edge on a family with no market at all.
+        delta = outcome_coupling(stat, context.tour)
+        if delta and win_probability is not None:
+            model = _mix_over_outcome(model, win_probability, delta)
+            notes.append(f"outcome coupling: P(win)={win_probability:.3f}, delta={delta:+.2f}")
+
+        return model, confidence
 
     def _count_prior(self, stat: str, player: PlayerProfile, context, population: float) -> float:
         """The rate a player with no record is assumed to have.
@@ -688,7 +737,8 @@ class Pricer:
 
         # Low confidence pulls the answer toward the base rate. The system should
         # get less opinionated as it gets less informed.
-        pull = 1.0 - min(max(confidence, 0.0), 1.0)
+        scaled = confidence * LANE_CONFIDENCE_SCALE.get(self.lane, 1.0)
+        pull = 1.0 - min(max(scaled, 0.0), 1.0)
         probability = (1.0 - pull) * probability + pull * base
 
         stat_key = "unforced_errors" if spec.family is Family.UNFORCED_ERRORS else spec.family.value
@@ -764,3 +814,19 @@ def _swap(context: MatchContext) -> MatchContext:
         rank_a=context.rank_b,
         rank_b=context.rank_a,
     )
+
+
+def _mix_over_outcome(model: float, win_probability: float, delta: float) -> float:
+    """Mix a count comparison over the unknown match result.
+
+    The result is not known at submission time, so the coupling is applied as a
+    probability-weighted mixture of the two branches rather than as a single
+    shift. Assuming a winner would be a much stronger claim than the evidence
+    supports.
+    """
+    p = min(max(float(model), 1e-6), 1.0 - 1e-6)
+    logit = math.log(p / (1.0 - p))
+    won = 1.0 / (1.0 + math.exp(-(logit + delta)))
+    lost = 1.0 / (1.0 + math.exp(-(logit - delta)))
+    w = min(max(float(win_probability), 0.0), 1.0)
+    return w * won + (1.0 - w) * lost

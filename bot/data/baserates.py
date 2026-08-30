@@ -443,3 +443,80 @@ def service_points_for(games: float, tour: str, best_of: int) -> int:
 def count_overdispersion(stat: str, tour: str) -> float:
     """Intraclass correlation for a count statistic, 0 when unmeasured."""
     return COUNT_OVERDISPERSION.get((tour, stat), 0.0)
+
+
+# --------------------------------------- outcome coupling for count props
+
+#: How much winning the match shifts the log-odds of out-counting the opponent.
+#:
+#: A player who wins also out-aces their opponent 65.2% of the time on the men's
+#: draw, while a model built purely from historical ace rates says 50%.  The gap
+#: is common form: on a day when a player's serve is working they both ace more
+#: and win more, and the historical rate cannot see which day it is.
+#:
+#: Applied as a mixture over the match result rather than a point estimate,
+#: because the result is unknown at submission time:
+#:
+#:     P(A out-counts B) = w * sigmoid(logit(m) + d) + (1 - w) * sigmoid(logit(m) - d)
+#:
+#: where ``w`` is P(A wins) - ideally the de-vigged market price, our single best
+#: signal - and ``m`` is the count model's own answer.  This is what turns the
+#: one family with a liquid market into an edge on a family with none.
+#:
+#: **Only entries validated out-of-sample are listed.**  Fitted on hard-court
+#: slams 2021-2024 and tested on 2025-2026:
+#:
+#: | Family | delta | Brier change | 95% CI | verdict |
+#: |---|---|---|---|---|
+#: | ATP aces | +0.602 | **+4.3%** | [+0.0025, +0.0150] | significant |
+#: | ATP double faults | -0.318 | +1.7% | [-0.0000, +0.0062] | not significant |
+#:
+#: The in-sample fit was +11.4% for ATP aces; the out-of-sample figure is +4.3%.
+#: That shrinkage is the honest number and the reason the others are omitted.
+OUTCOME_COUPLING = {
+    ("ATP", "aces"): 0.602,
+}
+
+
+def outcome_coupling(stat: str, tour: str) -> float:
+    """Log-odds shift linking the match result to a count comparison."""
+    return OUTCOME_COUPLING.get((tour, stat), 0.0)
+
+
+# ------------------------------------------ measured per-family confidence
+
+#: How far to trust the count model, by tour and statistic.
+#:
+#: Measured by sweeping the shrinkage weight on real hard-court slam matches
+#: (2025-2026) and reading off the Brier minimum:
+#:
+#: | Family | n | best | Brier at best | Brier at 0.75 |
+#: |---|---|---|---|---|
+#: | ATP aces | 358 | 1.00 | 0.1924 | 0.2008 |
+#: | ATP double faults | 358 | 1.00 | 0.1908 | 0.1949 |
+#: | WTA aces | 320 | 0.75 | 0.2420 | 0.2420 |
+#: | WTA double faults | 320 | **0.00** | 0.2717 | 0.2775 |
+#:
+#: The women's double-fault result is the important one and the curve is
+#: monotone: every increase in model weight makes the forecast worse, so the
+#: base rate beats our model outright.  It agrees with an independent finding
+#: that the outcome coupling was actively harmful for the same family.
+#:
+#: This is the tennis analogue of the foul markets that finished 125 relative
+#: points down in the predecessor event, where the crowd beat every model. The
+#: correct response is to stop departing from the base rate, not to model harder.
+#:
+#: Values are deliberately pulled back from the measured optimum: 0.90 rather
+#: than 1.00 where the sweep said "trust it completely", because n is about 350
+#: and the sweep shares data with other fits.
+COUNT_CONFIDENCE = {
+    ("ATP", "aces"): 0.90,
+    ("ATP", "double_faults"): 0.90,
+    ("WTA", "aces"): 0.75,
+    ("WTA", "double_faults"): 0.10,
+}
+
+
+def count_confidence(stat: str, tour: str, default: float = 0.75) -> float:
+    """Measured trust in the count model for one tour and statistic."""
+    return COUNT_CONFIDENCE.get((tour, stat), default)

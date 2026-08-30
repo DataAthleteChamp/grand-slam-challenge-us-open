@@ -922,3 +922,88 @@ def test_simulator_grid_matches_its_documented_resolution():
 
     match = simulate_match(0.65, 0.63, best_of=5, config=SimulationConfig(n_sims=20000, sigma=0.0))
     assert match.p_a_wins_match == pytest.approx(0.6229, abs=0.012)
+
+
+# ---------------------------------------------- outcome coupling (validated)
+
+
+def test_outcome_coupling_is_only_applied_where_it_validated():
+    """Four families looked promising in-sample. Only one survived a true
+    out-of-sample test, and one was actively harmful.
+
+    | family | OOS Brier | 95% CI | verdict |
+    |---|---|---|---|
+    | ATP aces | +4.3% | [+0.0025, +0.0150] | significant |
+    | ATP double faults | +1.7% | [-0.0000, +0.0062] | not significant |
+    | WTA aces | -2.7% | [-0.0135, +0.0001] | not significant |
+    | WTA double faults | -2.9% | [-0.0125, -0.0040] | HARMFUL |
+
+    Trusting the in-sample fit would have made the women's double-fault family
+    measurably worse.
+    """
+    from bot.data.baserates import outcome_coupling
+
+    assert outcome_coupling("aces", "ATP") == pytest.approx(0.602, abs=0.01)
+    assert outcome_coupling("double_faults", "ATP") == 0.0
+    assert outcome_coupling("aces", "WTA") == 0.0
+    assert outcome_coupling("double_faults", "WTA") == 0.0
+
+
+def test_coupling_mixes_over_the_unknown_result():
+    """The result is unknown at submission time, so the coupling is a mixture
+    over both branches, not a shift assuming a winner."""
+    from bot.pricer import _mix_over_outcome
+
+    delta = 0.602
+    assert _mix_over_outcome(0.5, 0.5, delta) == pytest.approx(0.5, abs=1e-9)
+    assert _mix_over_outcome(0.5, 1.0, delta) > 0.6
+    assert _mix_over_outcome(0.5, 0.0, delta) < 0.4
+    # Symmetric in the win probability around an even model.
+    assert _mix_over_outcome(0.5, 0.9, delta) + _mix_over_outcome(0.5, 0.1, delta) == pytest.approx(
+        1.0, abs=1e-9
+    )
+
+
+def test_coupling_moves_the_favourite_toward_out_acing():
+    from bot.pricer import _mix_over_outcome
+
+    plain = 0.55
+    coupled = _mix_over_outcome(plain, 0.90, 0.602)
+    assert coupled > plain
+
+
+def test_a_zero_coupling_changes_nothing():
+    from bot.pricer import _mix_over_outcome
+
+    for w in (0.1, 0.5, 0.9):
+        assert _mix_over_outcome(0.62, w, 0.0) == pytest.approx(0.62, abs=1e-9)
+
+
+def test_lanes_differ_structurally_not_just_in_temperature():
+    """A temperature transform is monotone, so two lanes differing only in
+    temperature always agree on direction. The scenario lane halves its reliance
+    on the bookmaker consensus instead, which produces genuine disagreement."""
+    from bot.models.lanes import LANE_MARKET_SCALE
+
+    assert LANE_MARKET_SCALE["honest"] == 1.0
+    assert LANE_MARKET_SCALE["scenario"] < 0.6
+
+    honest = Pricer(lane="honest")
+    scenario = Pricer(lane="scenario")
+    assert scenario.market_weights[Family.MATCH_WINNER] < honest.market_weights[Family.MATCH_WINNER]
+
+
+def test_both_lanes_stay_in_api_range():
+    from bot.roster import Roster
+
+    roster = Roster.load()
+    context = roster.context("C. Alcaraz", "J. Sinner", tour="ATP")
+    ladders = {"match_winner": {context.player_a.name: 0.93, context.player_b.name: 0.07}}
+    for lane in ("honest", "scenario"):
+        result = Pricer(lane=lane).price(
+            parse_question("Will C. Alcaraz win?", players=("C. Alcaraz", "J. Sinner")),
+            context,
+            market_id="x",
+            ladders=ladders,
+        )
+        assert 1 <= result.submission <= 99

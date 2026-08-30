@@ -30,7 +30,51 @@ from ..data.baserates import DEFER_TO_BASE_RATE
 from ..markets.taxonomy import Family
 
 #: Lane name -> temperature.
-LANE_TEMPERATURE = {"honest": 1.0, "slight": 0.75, "scenario": 0.45}
+#:
+#: ``scenario`` is deliberately mild (0.80, not the old 0.45).  Temperature is a
+#: *monotone* transform, so two lanes differing only in temperature always agree
+#: on direction and disagree only on magnitude - which is weak decorrelation
+#: bought at real expected-value cost.  The scenario lane now gets most of its
+#: independence from a structural difference instead (see ``LANE_MARKET_SCALE``),
+#: and uses temperature only for a light extra spread.
+LANE_TEMPERATURE = {"honest": 1.0, "slight": 0.85, "scenario": 0.80}
+
+#: Lane name -> multiplier on every family's market weight.
+#:
+#: This is where the real decorrelation comes from.  The honest lane leans on the
+#: bookmaker consensus for the match-winner family, which is the single most
+#: efficiently priced market in tennis.  The scenario lane halves that reliance
+#: and leans on our own simulation instead.
+#:
+#: Both stances are defensible, which is the point: a second entry that is simply
+#: a worse version of the first wastes the slot, while one that takes a genuinely
+#: different and arguable position gives a second draw from the outcome
+#: distribution.  Our simulation correlates 0.845 with the market and disagrees
+#: by 14.8 points on average, so the two lanes genuinely diverge on direction and
+#: not merely on confidence.
+LANE_MARKET_SCALE = {"honest": 1.0, "slight": 0.75, "scenario": 0.40}
+
+#: Lane name -> per-set form-shock sigma in the match simulation.
+#:
+#: Market weight alone was not enough.  Four of the five live families have no
+#: market at all, so scaling market reliance left them differing only by
+#: temperature - a monotone transform - and the two lanes came out correlated at
+#: 0.991, which is one effective entry and a wasted slot.
+#:
+#: Sigma is the size of the per-set form swing, and it flows into every
+#: simulation-derived family: tiebreaks, duration and match winner.  A larger
+#: sigma produces more lopsided sets and fewer tiebreaks.  Our fitted value is
+#: 0.05, but the simulator still over-predicts tiebreaks by about 0.089 against a
+#: real-match backtest, so a larger form swing is a genuinely arguable reading of
+#: the same evidence rather than a deliberate handicap.
+LANE_SIGMA = {"honest": 0.05, "slight": 0.07, "scenario": 0.10}
+
+#: Lane name -> multiplier on model confidence.
+#:
+#: Confidence controls how far an answer is pulled back toward its base rate.
+#: The scenario lane trusts the model further, which moves every family
+#: including the four with no market.
+LANE_CONFIDENCE_SCALE = {"honest": 1.0, "slight": 1.1, "scenario": 1.35}
 
 #: Submission bounds.  The API rejects 0 and 100 outright; we keep a wider margin
 #: on the honest lane because the Brier penalty for confident error is quadratic.
