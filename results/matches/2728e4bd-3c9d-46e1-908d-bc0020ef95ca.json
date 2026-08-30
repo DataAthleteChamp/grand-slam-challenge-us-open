@@ -18,12 +18,12 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T10:30:31.500299+00:00",
-      "probability": 0.6177407208107291,
+      "predicted_at": "2026-08-30T23:35:47.624349+00:00",
+      "probability": 0.6138014631458708,
       "question": "Will the match last longer than 85 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 65
+      "submission": 64
     },
     {
       "base_rate": 0.427,
@@ -38,15 +38,16 @@
       "market_weight": 0.0,
       "model": 0.38133048157416993,
       "notes": [
-        "exposure 69 service points from 21.3 games"
+        "exposure 69 service points from 21.3 games",
+        "scenario lane: experimental aces_comparison shift -0.045"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T10:30:31.500299+00:00",
-      "probability": 0.3992557675563082,
+      "predicted_at": "2026-08-30T23:35:47.624349+00:00",
+      "probability": 0.358366024214633,
       "question": "Will S. Kraus record more aces than K. Muchova?",
       "rbp": null,
       "settled_at": "",
-      "submission": 38
+      "submission": 33
     },
     {
       "base_rate": 0.433,
@@ -61,15 +62,16 @@
       "market_weight": 0.0,
       "model": 0.4663236280453837,
       "notes": [
-        "exposure 69 service points from 21.3 games"
+        "exposure 69 service points from 21.3 games",
+        "scenario lane: experimental double_faults_comparison shift -0.065"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T10:30:31.500299+00:00",
-      "probability": 0.45324410403757054,
+      "predicted_at": "2026-08-30T23:35:47.624349+00:00",
+      "probability": 0.385244977513486,
       "question": "Will S. Kraus record more double faults than K. Muchova?",
       "rbp": null,
       "settled_at": "",
-      "submission": 44
+      "submission": 36
     },
     {
       "base_rate": 0.5,
@@ -79,7 +81,7 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.11681848370393494,
+      "market": 0.11688311684011063,
       "market_id": "9586ecb2-ffb4-49c7-86b0-f0f202ae043a",
       "market_weight": 0.34,
       "model": 0.223,
@@ -88,12 +90,12 @@
         "market consensus 0.117, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T10:30:31.500299+00:00",
-      "probability": 0.18069491438742044,
+      "predicted_at": "2026-08-30T23:35:47.624349+00:00",
+      "probability": 0.18791009694215363,
       "question": "Will S. Kraus win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 13
+      "submission": 14
     },
     {
       "base_rate": 0.225,
@@ -108,15 +110,16 @@
       "market_weight": 0.0,
       "model": 0.203,
       "notes": [
-        "no usable market quote for this question"
+        "no usable market quote for this question",
+        "scenario lane: experimental tiebreak shift +0.055"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T10:30:31.500299+00:00",
-      "probability": 0.203,
+      "predicted_at": "2026-08-30T23:35:47.624349+00:00",
+      "probability": 0.25976000000000005,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 15
+      "submission": 21
     }
   ],
   "match_id": "2728e4bd-3c9d-46e1-908d-bc0020ef95ca",

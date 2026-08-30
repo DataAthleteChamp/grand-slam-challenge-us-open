@@ -18,12 +18,12 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T10:30:31.498018+00:00",
-      "probability": 0.8247812496642399,
+      "predicted_at": "2026-08-30T23:35:47.621307+00:00",
+      "probability": 0.8125187496911008,
       "question": "Will the match last longer than 130 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 87
+      "submission": 86
     },
     {
       "base_rate": 0.46,
@@ -36,18 +36,19 @@
       "market": null,
       "market_id": "d79f7d33-e20d-43ad-9bbb-45a1d9e3a40c",
       "market_weight": 0.0,
-      "model": 0.20299864789150235,
+      "model": 0.20286845156368813,
       "notes": [
         "exposure 122 service points from 39.0 games",
-        "outcome coupling: P(win)=0.079, delta=+0.60"
+        "outcome coupling: P(win)=0.078, delta=+0.60",
+        "scenario lane: experimental aces_comparison shift -0.045"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T10:30:31.498018+00:00",
-      "probability": 0.20299864789150235,
+      "predicted_at": "2026-08-30T23:35:47.621307+00:00",
+      "probability": 0.15786845156368812,
       "question": "Will L. Sonego record more aces than A. Zverev?",
       "rbp": null,
       "settled_at": "",
-      "submission": 15
+      "submission": 11
     },
     {
       "base_rate": 0.421,
@@ -62,15 +63,16 @@
       "market_weight": 0.0,
       "model": 0.3743167648752841,
       "notes": [
-        "exposure 122 service points from 39.0 games"
+        "exposure 122 service points from 39.0 games",
+        "scenario lane: experimental double_faults_comparison shift -0.065"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T10:30:31.498018+00:00",
-      "probability": 0.3743167648752841,
+      "predicted_at": "2026-08-30T23:35:47.621307+00:00",
+      "probability": 0.3093167648752841,
       "question": "Will L. Sonego record more double faults than A. Zverev?",
       "rbp": null,
       "settled_at": "",
-      "submission": 34
+      "submission": 27
     },
     {
       "base_rate": 0.5,
@@ -80,21 +82,21 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.07883348308658475,
+      "market": 0.07830188675334715,
       "market_id": "f93d0110-951f-46bc-a630-7d831c4ac561",
       "market_weight": 0.34,
       "model": 0.1995,
       "notes": [
         "simulated win probability 0.200",
-        "market consensus 0.079, weight 0.34"
+        "market consensus 0.078, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T10:30:31.498018+00:00",
-      "probability": 0.1476891304588078,
+      "predicted_at": "2026-08-30T23:35:47.621307+00:00",
+      "probability": 0.15530919717629793,
       "question": "Will L. Sonego win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 10
+      "submission": 11
     },
     {
       "base_rate": 0.13263821138211385,
@@ -109,15 +111,16 @@
       "market_weight": 0.0,
       "model": 0.2305,
       "notes": [
-        "no usable market quote for this question"
+        "no usable market quote for this question",
+        "scenario lane: experimental tiebreak shift +0.055"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T10:30:31.498018+00:00",
-      "probability": 0.2305,
+      "predicted_at": "2026-08-30T23:35:47.621307+00:00",
+      "probability": 0.27767105691056915,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 18
+      "submission": 23
     }
   ],
   "match_id": "0c139c4d-bd36-4387-827b-c4e00b9dae02",

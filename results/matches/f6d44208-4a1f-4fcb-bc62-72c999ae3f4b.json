@@ -18,8 +18,8 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T10:30:31.508123+00:00",
-      "probability": 0.6332031941613517,
+      "predicted_at": "2026-08-30T23:35:47.643535+00:00",
+      "probability": 0.6334909386284435,
       "question": "Will the match last longer than 80 minutes?",
       "rbp": null,
       "settled_at": "",
@@ -38,15 +38,16 @@
       "market_weight": 0.0,
       "model": 0.3581550203202209,
       "notes": [
-        "exposure 65 service points from 20.1 games"
+        "exposure 65 service points from 20.1 games",
+        "scenario lane: experimental aces_comparison shift -0.045"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T10:30:31.508123+00:00",
-      "probability": 0.3581550203202209,
+      "predicted_at": "2026-08-30T23:35:47.643535+00:00",
+      "probability": 0.32262120502619057,
       "question": "Will I. Swiatek record more aces than X. Wang?",
       "rbp": null,
       "settled_at": "",
-      "submission": 33
+      "submission": 28
     },
     {
       "base_rate": 0.433,
@@ -61,15 +62,16 @@
       "market_weight": 0.0,
       "model": 0.2952213637868574,
       "notes": [
-        "exposure 65 service points from 20.1 games"
+        "exposure 65 service points from 20.1 games",
+        "scenario lane: experimental double_faults_comparison shift -0.065"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T10:30:31.508123+00:00",
-      "probability": 0.41439988411122575,
+      "predicted_at": "2026-08-30T23:35:47.643535+00:00",
+      "probability": 0.3521554568354886,
       "question": "Will I. Swiatek record more double faults than X. Wang?",
       "rbp": null,
       "settled_at": "",
-      "submission": 39
+      "submission": 32
     },
     {
       "base_rate": 0.5,
@@ -79,21 +81,21 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.8962962962754081,
+      "market": 0.8941994672849309,
       "market_id": "93743742-b04f-4ac7-8e53-dc65ece16a31",
       "market_weight": 0.34,
       "model": 0.878,
       "notes": [
         "simulated win probability 0.878",
-        "market consensus 0.896, weight 0.34"
+        "market consensus 0.894, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T10:30:31.508123+00:00",
-      "probability": 0.8845132976728362,
+      "predicted_at": "2026-08-30T23:35:47.643535+00:00",
+      "probability": 0.8751004214858671,
       "question": "Will I. Swiatek win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 93
+      "submission": 92
     },
     {
       "base_rate": 0.225,
@@ -108,15 +110,16 @@
       "market_weight": 0.0,
       "model": 0.1675,
       "notes": [
-        "no usable market quote for this question"
+        "no usable market quote for this question",
+        "scenario lane: experimental tiebreak shift +0.055"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T10:30:31.508123+00:00",
-      "probability": 0.1675,
+      "predicted_at": "2026-08-30T23:35:47.643535+00:00",
+      "probability": 0.2271,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 12
+      "submission": 18
     }
   ],
   "match_id": "f6d44208-4a1f-4fcb-bc62-72c999ae3f4b",

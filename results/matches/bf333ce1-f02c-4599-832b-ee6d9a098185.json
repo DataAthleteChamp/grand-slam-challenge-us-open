@@ -18,8 +18,8 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T10:30:31.504175+00:00",
-      "probability": 0.5884449561204145,
+      "predicted_at": "2026-08-30T23:35:47.632593+00:00",
+      "probability": 0.5868493596307813,
       "question": "Will the match last longer than 85 minutes?",
       "rbp": null,
       "settled_at": "",
@@ -38,15 +38,16 @@
       "market_weight": 0.0,
       "model": 0.4154743463559276,
       "notes": [
-        "exposure 72 service points from 22.2 games"
+        "exposure 72 service points from 22.2 games",
+        "scenario lane: experimental aces_comparison shift -0.045"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T10:30:31.504175+00:00",
-      "probability": 0.4154743463559276,
+      "predicted_at": "2026-08-30T23:35:47.632593+00:00",
+      "probability": 0.37205912373198763,
       "question": "Will D. Shnaider record more aces than D. Snigur?",
       "rbp": null,
       "settled_at": "",
-      "submission": 39
+      "submission": 34
     },
     {
       "base_rate": 0.433,
@@ -61,15 +62,16 @@
       "market_weight": 0.0,
       "model": 0.39215400219651786,
       "notes": [
-        "exposure 72 service points from 22.2 games"
+        "exposure 72 service points from 22.2 games",
+        "scenario lane: experimental double_faults_comparison shift -0.065"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T10:30:31.504175+00:00",
-      "probability": 0.42748579029652994,
+      "predicted_at": "2026-08-30T23:35:47.632593+00:00",
+      "probability": 0.3633027102525996,
       "question": "Will D. Shnaider record more double faults than D. Snigur?",
       "rbp": null,
       "settled_at": "",
-      "submission": 41
+      "submission": 33
     },
     {
       "base_rate": 0.5,
@@ -88,8 +90,8 @@
         "market consensus 0.726, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T10:30:31.504175+00:00",
-      "probability": 0.6484261469362783,
+      "predicted_at": "2026-08-30T23:35:47.632593+00:00",
+      "probability": 0.6450865586302121,
       "question": "Will D. Shnaider win?",
       "rbp": null,
       "settled_at": "",
@@ -108,15 +110,16 @@
       "market_weight": 0.0,
       "model": 0.1955,
       "notes": [
-        "no usable market quote for this question"
+        "no usable market quote for this question",
+        "scenario lane: experimental tiebreak shift +0.055"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T10:30:31.504175+00:00",
-      "probability": 0.1955,
+      "predicted_at": "2026-08-30T23:35:47.632593+00:00",
+      "probability": 0.25286000000000003,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 15
+      "submission": 21
     }
   ],
   "match_id": "bf333ce1-f02c-4599-832b-ee6d9a098185",

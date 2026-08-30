@@ -16,12 +16,12 @@
       "model": 0.6657211372173324,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-30T10:30:31.506774+00:00",
-      "probability": 0.6657211372173324,
+      "predicted_at": "2026-08-30T23:35:47.641821+00:00",
+      "probability": 0.6697194462399458,
       "question": "Will the match last longer than 75 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 70
+      "submission": 71
     },
     {
       "base_rate": 0.427,
@@ -36,11 +36,12 @@
       "market_weight": 0.0,
       "model": 0.12748860303606807,
       "notes": [
-        "exposure 67 service points from 20.7 games"
+        "exposure 67 service points from 20.7 games",
+        "scenario lane: experimental aces_comparison shift -0.045"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T10:30:31.506774+00:00",
-      "probability": 0.12748860303606807,
+      "predicted_at": "2026-08-30T23:35:47.641821+00:00",
+      "probability": 0.12367142011860875,
       "question": "Will C. Osorio record more aces than A. Sabalenka?",
       "rbp": null,
       "settled_at": "",
@@ -59,15 +60,16 @@
       "market_weight": 0.0,
       "model": 0.35269580601667533,
       "notes": [
-        "exposure 67 service points from 20.7 games"
+        "exposure 67 service points from 20.7 games",
+        "scenario lane: experimental double_faults_comparison shift -0.065"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T10:30:31.506774+00:00",
-      "probability": 0.42215893381225117,
+      "predicted_at": "2026-08-30T23:35:47.641821+00:00",
+      "probability": 0.35876501769191765,
       "question": "Will C. Osorio record more double faults than A. Sabalenka?",
       "rbp": null,
       "settled_at": "",
-      "submission": 40
+      "submission": 33
     },
     {
       "base_rate": 0.5,
@@ -86,12 +88,12 @@
         "no market quote; this is the family that most needs one"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T10:30:31.506774+00:00",
-      "probability": 0.20681375000000002,
+      "predicted_at": "2026-08-30T23:35:47.641821+00:00",
+      "probability": 0.25024875,
       "question": "Will C. Osorio win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 16
+      "submission": 20
     },
     {
       "base_rate": 0.225,
@@ -105,14 +107,16 @@
       "market_id": "ba98e55d-a98b-4d95-8b20-09513cf8effd",
       "market_weight": 0.0,
       "model": 0.1705,
-      "notes": [],
+      "notes": [
+        "scenario lane: experimental tiebreak shift +0.055"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-30T10:30:31.506774+00:00",
-      "probability": 0.1705,
+      "predicted_at": "2026-08-30T23:35:47.641821+00:00",
+      "probability": 0.22986,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 12
+      "submission": 18
     }
   ],
   "match_id": "b428d06b-15a8-424a-b3f6-a75aeb95535a",

@@ -18,8 +18,8 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T10:30:31.503323+00:00",
-      "probability": 0.48293420768805423,
+      "predicted_at": "2026-08-30T23:35:47.627705+00:00",
+      "probability": 0.4803314710730099,
       "question": "Will the match last longer than 95 minutes?",
       "rbp": null,
       "settled_at": "",
@@ -38,15 +38,16 @@
       "market_weight": 0.0,
       "model": 0.4232674566675876,
       "notes": [
-        "exposure 72 service points from 22.2 games"
+        "exposure 72 service points from 22.2 games",
+        "scenario lane: experimental aces_comparison shift -0.045"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T10:30:31.503323+00:00",
-      "probability": 0.4232674566675876,
+      "predicted_at": "2026-08-30T23:35:47.627705+00:00",
+      "probability": 0.3787806813757943,
       "question": "Will A. Li record more aces than A. Ruzic?",
       "rbp": null,
       "settled_at": "",
-      "submission": 40
+      "submission": 35
     },
     {
       "base_rate": 0.433,
@@ -61,15 +62,16 @@
       "market_weight": 0.0,
       "model": 0.41650919001942305,
       "notes": [
-        "exposure 72 service points from 22.2 games"
+        "exposure 72 service points from 22.2 games",
+        "scenario lane: experimental double_faults_comparison shift -0.065"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T10:30:31.503323+00:00",
-      "probability": 0.43077374065262214,
+      "predicted_at": "2026-08-30T23:35:47.627705+00:00",
+      "probability": 0.36610355685223367,
       "question": "Will A. Li record more double faults than A. Ruzic?",
       "rbp": null,
       "settled_at": "",
-      "submission": 41
+      "submission": 33
     },
     {
       "base_rate": 0.5,
@@ -79,21 +81,21 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.7454545454961681,
+      "market": 0.7425328879500774,
       "market_id": "7a599e4b-fd72-47b5-b44f-8eb60eceb6de",
       "market_weight": 0.34,
       "model": 0.5865,
       "notes": [
         "simulated win probability 0.587",
-        "market consensus 0.745, weight 0.34"
+        "market consensus 0.743, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T10:30:31.503323+00:00",
-      "probability": 0.6447440755046602,
+      "predicted_at": "2026-08-30T23:35:47.627705+00:00",
+      "probability": 0.6403187377124928,
       "question": "Will A. Li win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 68
+      "submission": 67
     },
     {
       "base_rate": 0.225,
@@ -108,15 +110,16 @@
       "market_weight": 0.0,
       "model": 0.2025,
       "notes": [
-        "no usable market quote for this question"
+        "no usable market quote for this question",
+        "scenario lane: experimental tiebreak shift +0.055"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T10:30:31.503323+00:00",
-      "probability": 0.2025,
+      "predicted_at": "2026-08-30T23:35:47.627705+00:00",
+      "probability": 0.25930000000000003,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 15
+      "submission": 21
     }
   ],
   "match_id": "52c0f5e8-bd66-40b9-8656-29a6f0b2c29b",

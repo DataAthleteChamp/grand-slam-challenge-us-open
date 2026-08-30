@@ -18,12 +18,12 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T10:30:31.508493+00:00",
-      "probability": 0.9282262663499807,
+      "predicted_at": "2026-08-30T23:35:47.643047+00:00",
+      "probability": 0.9151121650419823,
       "question": "Will the match last longer than 120 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 96
+      "submission": 95
     },
     {
       "base_rate": 0.46,
@@ -36,18 +36,19 @@
       "market": null,
       "market_id": "d4a733ca-584f-4aa0-b78e-1a7c2891e60e",
       "market_weight": 0.0,
-      "model": 0.31185455867785716,
+      "model": 0.3104117620904583,
       "notes": [
         "exposure 134 service points from 42.8 games",
-        "outcome coupling: P(win)=0.145, delta=+0.60"
+        "outcome coupling: P(win)=0.139, delta=+0.60",
+        "scenario lane: experimental aces_comparison shift -0.045"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T10:30:31.508493+00:00",
-      "probability": 0.31185455867785716,
+      "predicted_at": "2026-08-30T23:35:47.643047+00:00",
+      "probability": 0.2654117620904583,
       "question": "Will T. Griekspoor record more aces than B. Shelton?",
       "rbp": null,
       "settled_at": "",
-      "submission": 27
+      "submission": 22
     },
     {
       "base_rate": 0.421,
@@ -62,15 +63,16 @@
       "market_weight": 0.0,
       "model": 0.4540801799848746,
       "notes": [
-        "exposure 134 service points from 42.8 games"
+        "exposure 134 service points from 42.8 games",
+        "scenario lane: experimental double_faults_comparison shift -0.065"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T10:30:31.508493+00:00",
-      "probability": 0.4540801799848746,
+      "predicted_at": "2026-08-30T23:35:47.643047+00:00",
+      "probability": 0.3890801799848746,
       "question": "Will T. Griekspoor record more double faults than B. Shelton?",
       "rbp": null,
       "settled_at": "",
-      "submission": 44
+      "submission": 36
     },
     {
       "base_rate": 0.5,
@@ -80,21 +82,21 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.14459818426568585,
+      "market": 0.1394893370081647,
       "market_id": "bdfb0b78-c7e1-4070-a8ac-64968640c5a2",
       "market_weight": 0.34,
       "model": 0.371,
       "notes": [
         "simulated win probability 0.371",
-        "market consensus 0.145, weight 0.34"
+        "market consensus 0.139, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T10:30:31.508493+00:00",
-      "probability": 0.2783177415673458,
+      "predicted_at": "2026-08-30T23:35:47.643047+00:00",
+      "probability": 0.28051574115030026,
       "question": "Will T. Griekspoor win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 23
+      "submission": 24
     },
     {
       "base_rate": 0.13263821138211385,
@@ -109,15 +111,16 @@
       "market_weight": 0.0,
       "model": 0.41425,
       "notes": [
-        "no usable market quote for this question"
+        "no usable market quote for this question",
+        "scenario lane: experimental tiebreak shift +0.055"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T10:30:31.508493+00:00",
-      "probability": 0.41425,
+      "predicted_at": "2026-08-30T23:35:47.643047+00:00",
+      "probability": 0.4467210569105691,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 39
+      "submission": 43
     }
   ],
   "match_id": "8a57546b-d6c7-4d73-8773-b0555a3bc186",

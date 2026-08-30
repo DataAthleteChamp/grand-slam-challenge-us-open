@@ -16,12 +16,12 @@
       "model": 0.9408598858111077,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-30T10:30:31.508921+00:00",
-      "probability": 0.9408598858111077,
+      "predicted_at": "2026-08-30T23:35:47.643950+00:00",
+      "probability": 0.933359094946219,
       "question": "Will the match last longer than 110 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 97
+      "submission": 96
     },
     {
       "base_rate": 0.46,
@@ -37,15 +37,16 @@
       "model": 0.6978469273725298,
       "notes": [
         "exposure 128 service points from 40.9 games",
-        "outcome coupling: P(win)=0.327, delta=+0.60"
+        "outcome coupling: P(win)=0.327, delta=+0.60",
+        "scenario lane: experimental aces_comparison shift -0.045"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T10:30:31.508921+00:00",
-      "probability": 0.6978469273725298,
+      "predicted_at": "2026-08-30T23:35:47.643950+00:00",
+      "probability": 0.6528469273725298,
       "question": "Will M. Damm record more aces than F. Tiafoe?",
       "rbp": null,
       "settled_at": "",
-      "submission": 74
+      "submission": 69
     },
     {
       "base_rate": 0.421,
@@ -60,15 +61,16 @@
       "market_weight": 0.0,
       "model": 0.668866330429635,
       "notes": [
-        "exposure 128 service points from 40.9 games"
+        "exposure 128 service points from 40.9 games",
+        "scenario lane: experimental double_faults_comparison shift -0.065"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T10:30:31.508921+00:00",
-      "probability": 0.668866330429635,
+      "predicted_at": "2026-08-30T23:35:47.643950+00:00",
+      "probability": 0.603866330429635,
       "question": "Will M. Damm record more double faults than F. Tiafoe?",
       "rbp": null,
       "settled_at": "",
-      "submission": 71
+      "submission": 63
     },
     {
       "base_rate": 0.5,
@@ -87,12 +89,12 @@
         "no market quote; this is the family that most needs one"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T10:30:31.508921+00:00",
-      "probability": 0.3360425,
+      "predicted_at": "2026-08-30T23:35:47.643950+00:00",
+      "probability": 0.3603325,
       "question": "Will M. Damm win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 30
+      "submission": 33
     },
     {
       "base_rate": 0.487,
@@ -106,14 +108,16 @@
       "market_id": "56294e31-3504-4a97-9c74-dd6019812bca",
       "market_weight": 0.0,
       "model": 0.687,
-      "notes": [],
+      "notes": [
+        "scenario lane: experimental tiebreak shift +0.055"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-30T10:30:31.508921+00:00",
-      "probability": 0.687,
+      "predicted_at": "2026-08-30T23:35:47.643950+00:00",
+      "probability": 0.7260000000000001,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 73
+      "submission": 77
     }
   ],
   "match_id": "594be672-17f6-4d4b-b392-01f4c1208426",

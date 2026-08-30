@@ -27,7 +27,7 @@ secondary bot, never on the main entry.
 from __future__ import annotations
 
 from ..data.baserates import DEFER_TO_BASE_RATE
-from ..markets.taxonomy import Family
+from ..markets.taxonomy import Family  # noqa: F401
 
 #: Lane name -> temperature.
 #:
@@ -74,7 +74,33 @@ LANE_SIGMA = {"honest": 0.05, "slight": 0.07, "scenario": 0.10}
 #: Confidence controls how far an answer is pulled back toward its base rate.
 #: The scenario lane trusts the model further, which moves every family
 #: including the four with no market.
-LANE_CONFIDENCE_SCALE = {"honest": 1.0, "slight": 1.1, "scenario": 1.35}
+LANE_CONFIDENCE_SCALE = {"honest": 1.0, "slight": 1.1, "scenario": 1.15}
+
+#: Per-family probability shifts applied ONLY on the scenario lane.
+#:
+#: These are the directional biases measured against 11 settled matches. None of
+#: them is statistically significant - every bootstrapped interval spans zero -
+#: so they must not go on the main entry, where fitting eleven matches of noise
+#: is the likeliest way to lose.
+#:
+#: Putting them on the second bot instead turns a wasted slot into a controlled
+#: experiment. Both entries face the same questions, so the difference in their
+#: scores is a direct measurement of whether the biases are real. If they are,
+#: the scenario lane pulls ahead and we adopt them on both; if not, we have
+#: falsified them at no cost to the main entry.
+#:
+#: Measured (ours minus realised), 11 matches:
+#:   aces +0.087, double faults +0.128, duration +0.082,
+#:   match winner +0.071, tiebreak -0.105
+#: Applied at roughly half strength, because a bias estimated from eleven
+#: matches is worth hedging even when you are deliberately testing it.
+LANE_FAMILY_SHIFT = {
+    "scenario": {
+        Family.ACES_COMPARISON: -0.045,
+        Family.DOUBLE_FAULTS_COMPARISON: -0.065,
+        Family.TIEBREAK: +0.055,
+    }
+}
 
 #: Submission bounds.  The API rejects 0 and 100 outright; we keep a wider margin
 #: on the honest lane because the Brier penalty for confident error is quadratic.

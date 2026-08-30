@@ -18,12 +18,12 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T10:30:31.491259+00:00",
-      "probability": 0.44782771341671235,
+      "predicted_at": "2026-08-30T23:35:47.636504+00:00",
+      "probability": 0.4480334963433754,
       "question": "Will the match last longer than 95 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 43
+      "submission": 44
     },
     {
       "base_rate": 0.427,
@@ -38,15 +38,16 @@
       "market_weight": 0.0,
       "model": 0.4831376986833135,
       "notes": [
-        "exposure 70 service points from 21.7 games"
+        "exposure 70 service points from 21.7 games",
+        "scenario lane: experimental aces_comparison shift -0.045"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T10:30:31.491259+00:00",
-      "probability": 0.4831376986833135,
+      "predicted_at": "2026-08-30T23:35:47.636504+00:00",
+      "probability": 0.4304187651143579,
       "question": "Will A. Blinkova record more aces than A. Kalinskaya?",
       "rbp": null,
       "settled_at": "",
-      "submission": 48
+      "submission": 41
     },
     {
       "base_rate": 0.433,
@@ -61,15 +62,16 @@
       "market_weight": 0.0,
       "model": 0.48661542634594923,
       "notes": [
-        "exposure 70 service points from 21.7 games"
+        "exposure 70 service points from 21.7 games",
+        "scenario lane: experimental double_faults_comparison shift -0.065"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T10:30:31.491259+00:00",
-      "probability": 0.44023808255670316,
+      "predicted_at": "2026-08-30T23:35:47.636504+00:00",
+      "probability": 0.3741657740297842,
       "question": "Will A. Blinkova record more double faults than A. Kalinskaya?",
       "rbp": null,
       "settled_at": "",
-      "submission": 43
+      "submission": 34
     },
     {
       "base_rate": 0.5,
@@ -79,21 +81,21 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.2586287313638483,
+      "market": 0.25824175819802286,
       "market_id": "3474d89c-1174-414a-8fa0-d46ecd6e797f",
       "market_weight": 0.34,
       "model": 0.3035,
       "notes": [
         "simulated win probability 0.303",
-        "market consensus 0.259, weight 0.34"
+        "market consensus 0.258, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T10:30:31.491259+00:00",
-      "probability": 0.2877556021764238,
+      "predicted_at": "2026-08-30T23:35:47.636504+00:00",
+      "probability": 0.2923935813030018,
       "question": "Will A. Blinkova win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 24
+      "submission": 25
     },
     {
       "base_rate": 0.020454545454545454,
@@ -108,15 +110,16 @@
       "market_weight": 0.0,
       "model": 0.011,
       "notes": [
-        "no usable market quote for this question"
+        "no usable market quote for this question",
+        "scenario lane: experimental tiebreak shift +0.055"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T10:30:31.491259+00:00",
-      "probability": 0.011,
+      "predicted_at": "2026-08-30T23:35:47.636504+00:00",
+      "probability": 0.06675636363636364,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 2
+      "submission": 4
     }
   ],
   "match_id": "7bb62315-64cb-41aa-aa22-c52309acee58",

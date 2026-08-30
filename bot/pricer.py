@@ -59,6 +59,7 @@ from .models.derive import (
 )
 from .models.lanes import (
     LANE_CONFIDENCE_SCALE,
+    LANE_FAMILY_SHIFT,
     LANE_MARKET_SCALE,
     LANE_SIGMA,
     apply_lane,
@@ -740,6 +741,14 @@ class Pricer:
         scaled = confidence * LANE_CONFIDENCE_SCALE.get(self.lane, 1.0)
         pull = 1.0 - min(max(scaled, 0.0), 1.0)
         probability = (1.0 - pull) * probability + pull * base
+
+        # Experimental per-family shift, second bot only. See LANE_FAMILY_SHIFT:
+        # these biases are not significant at eleven matches, so they are tested
+        # on the secondary entry rather than risked on the main one.
+        shift = LANE_FAMILY_SHIFT.get(self.lane, {}).get(spec.family, 0.0)
+        if shift:
+            probability = min(max(probability + shift, 0.02), 0.98)
+            notes.append(f"scenario lane: experimental {spec.family.value} shift {shift:+.3f}")
 
         stat_key = "unforced_errors" if spec.family is Family.UNFORCED_ERRORS else spec.family.value
         submission = apply_lane(
