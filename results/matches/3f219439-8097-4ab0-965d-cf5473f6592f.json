@@ -9,63 +9,68 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "1a7017ff-c894-44b3-abb0-c9f56602530c",
       "market_weight": 0.0,
-      "model": 0.915578546253379,
+      "model": 0.8901520101473239,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.884414+00:00",
-      "probability": 0.8760428370027031,
+      "predicted_at": "2026-08-30T07:38:21.829570+00:00",
+      "probability": 0.8901520101473239,
       "question": "Will the match last longer than 125 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 88
+      "submission": 93
     },
     {
       "base_rate": 0.46,
       "brier": null,
-      "confidence": 0.75,
+      "confidence": 0.9,
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "1f235176-6719-481f-ac28-38805c7f4422",
       "market_weight": 0.0,
-      "model": 0.3036674433433564,
-      "notes": [],
+      "model": 0.4029134436955434,
+      "notes": [
+        "exposure 121 service points from 38.8 games",
+        "outcome coupling: P(win)=0.606, delta=+0.60"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.884414+00:00",
-      "probability": 0.3427505825075173,
+      "predicted_at": "2026-08-30T07:38:21.829570+00:00",
+      "probability": 0.4029134436955434,
       "question": "Will M. Arnaldi record more aces than J. Duckworth?",
       "rbp": null,
       "settled_at": "",
-      "submission": 34
+      "submission": 38
     },
     {
       "base_rate": 0.421,
       "brier": null,
-      "confidence": 0.75,
+      "confidence": 0.9,
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "a1adf192-d37c-456a-8f2b-2fc7baaae04e",
       "market_weight": 0.0,
-      "model": 0.5821127716594305,
-      "notes": [],
+      "model": 0.5757789189334902,
+      "notes": [
+        "exposure 121 service points from 38.8 games"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.884414+00:00",
-      "probability": 0.5418345787445729,
+      "predicted_at": "2026-08-30T07:38:21.829570+00:00",
+      "probability": 0.5757789189334902,
       "question": "Will M. Arnaldi record more double faults than J. Duckworth?",
       "rbp": null,
       "settled_at": "",
-      "submission": 54
+      "submission": 59
     },
     {
       "base_rate": 0.5,
@@ -74,22 +79,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
-      "lane": "honest",
-      "market": 0.6083873039872022,
+      "lane": "scenario",
+      "market": 0.6057053801206653,
       "market_id": "745075e8-a937-4a3b-93e6-34f90d4c8a7d",
-      "market_weight": 0.85,
-      "model": 0.36775,
+      "market_weight": 0.34,
+      "model": 0.40075,
       "notes": [
-        "simulated win probability 0.368",
-        "market consensus 0.608, weight 0.85"
+        "simulated win probability 0.401",
+        "market consensus 0.606, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.884414+00:00",
-      "probability": 0.561857338789773,
+      "predicted_at": "2026-08-30T07:38:21.829570+00:00",
+      "probability": 0.4701393986883641,
       "question": "Will M. Arnaldi win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 56
+      "submission": 46
     },
     {
       "base_rate": 0.13263821138211385,
@@ -98,21 +103,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "4d533b69-e6ec-4d09-adf0-281fadb11466",
       "market_weight": 0.0,
-      "model": 0.1695,
+      "model": 0.12325,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.884414+00:00",
-      "probability": 0.1621276422764228,
+      "predicted_at": "2026-08-30T07:38:21.829570+00:00",
+      "probability": 0.12325,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 16
+      "submission": 8
     }
   ],
   "match_id": "3f219439-8097-4ab0-965d-cf5473f6592f",

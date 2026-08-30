@@ -9,21 +9,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "6e4dda65-a72d-497f-8241-9c39947f5e64",
       "market_weight": 0.0,
-      "model": 0.7025021624246225,
+      "model": 0.7284198356592013,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.889277+00:00",
-      "probability": 0.6893617299396979,
+      "predicted_at": "2026-08-30T07:38:21.836083+00:00",
+      "probability": 0.7284198356592013,
       "question": "Will the match last longer than 80 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 69
+      "submission": 77
     },
     {
       "base_rate": 0.427,
@@ -32,40 +32,44 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "3f411189-161f-432a-b3c0-6f59a575c57c",
       "market_weight": 0.0,
-      "model": 0.32677202157579743,
-      "notes": [],
+      "model": 0.3581550203202209,
+      "notes": [
+        "exposure 65 service points from 20.1 games"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.889277+00:00",
-      "probability": 0.3518290161818481,
+      "predicted_at": "2026-08-30T07:38:21.836083+00:00",
+      "probability": 0.3581550203202209,
       "question": "Will I. Swiatek record more aces than X. Wang?",
       "rbp": null,
       "settled_at": "",
-      "submission": 35
+      "submission": 33
     },
     {
       "base_rate": 0.433,
       "brier": null,
-      "confidence": 0.75,
+      "confidence": 0.1,
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "b9ce5fcc-a99b-4dfa-b210-cc7618b8fbaa",
       "market_weight": 0.0,
-      "model": 0.26330659539519186,
-      "notes": [],
+      "model": 0.2952213637868574,
+      "notes": [
+        "exposure 65 service points from 20.1 games"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.889277+00:00",
-      "probability": 0.3057299465463939,
+      "predicted_at": "2026-08-30T07:38:21.836083+00:00",
+      "probability": 0.41439988411122575,
       "question": "Will I. Swiatek record more double faults than X. Wang?",
       "rbp": null,
       "settled_at": "",
-      "submission": 31
+      "submission": 39
     },
     {
       "base_rate": 0.5,
@@ -74,22 +78,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
-      "lane": "honest",
-      "market": 0.8983743723105155,
+      "lane": "scenario",
+      "market": 0.8975309174892507,
       "market_id": "93743742-b04f-4ac7-8e53-dc65ece16a31",
-      "market_weight": 0.85,
-      "model": 0.9505,
+      "market_weight": 0.34,
+      "model": 0.878,
       "notes": [
-        "simulated win probability 0.951",
-        "market consensus 0.898, weight 0.85"
+        "simulated win probability 0.878",
+        "market consensus 0.898, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.889277+00:00",
-      "probability": 0.8472386975739046,
+      "predicted_at": "2026-08-30T07:38:21.836083+00:00",
+      "probability": 0.8849762576639633,
       "question": "Will I. Swiatek win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 85
+      "submission": 93
     },
     {
       "base_rate": 0.225,
@@ -98,21 +102,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "3ff9a2fd-5abc-4f9e-997a-fdeb72ebafc4",
       "market_weight": 0.0,
-      "model": 0.15725,
+      "model": 0.1675,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.889277+00:00",
-      "probability": 0.17079999999999998,
+      "predicted_at": "2026-08-30T07:38:21.836083+00:00",
+      "probability": 0.1675,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 17
+      "submission": 12
     }
   ],
   "match_id": "f6d44208-4a1f-4fcb-bc62-72c999ae3f4b",

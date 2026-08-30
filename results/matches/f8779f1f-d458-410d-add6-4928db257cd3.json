@@ -9,63 +9,68 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "7d58adee-3c6d-4127-9596-2882dd7f0d3d",
       "market_weight": 0.0,
-      "model": 0.7668760267187522,
+      "model": 0.7392647031115476,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.880086+00:00",
-      "probability": 0.7238808213750018,
+      "predicted_at": "2026-08-30T07:38:21.823225+00:00",
+      "probability": 0.7392647031115476,
       "question": "Will the match last longer than 145 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 72
+      "submission": 79
     },
     {
       "base_rate": 0.46,
       "brier": null,
-      "confidence": 0.75,
+      "confidence": 0.9,
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "ffde4fd5-a93f-4fa1-9e8b-2da35a9d5273",
       "market_weight": 0.0,
-      "model": 0.4745967978259643,
-      "notes": [],
+      "model": 0.5018679531150101,
+      "notes": [
+        "exposure 118 service points from 37.8 games",
+        "outcome coupling: P(win)=0.558, delta=+0.60"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.880086+00:00",
-      "probability": 0.4709475983694732,
+      "predicted_at": "2026-08-30T07:38:21.823225+00:00",
+      "probability": 0.5018679531150101,
       "question": "Will I. Buse record more aces than M. Giron?",
       "rbp": null,
       "settled_at": "",
-      "submission": 47
+      "submission": 50
     },
     {
       "base_rate": 0.421,
       "brier": null,
-      "confidence": 0.75,
+      "confidence": 0.9,
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "96b11cf8-674d-4467-b5bc-436a789b9c27",
       "market_weight": 0.0,
-      "model": 0.6708550747432684,
-      "notes": [],
+      "model": 0.6516812121246884,
+      "notes": [
+        "exposure 118 service points from 37.8 games"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.880086+00:00",
-      "probability": 0.6083913060574513,
+      "predicted_at": "2026-08-30T07:38:21.823225+00:00",
+      "probability": 0.6516812121246884,
       "question": "Will I. Buse record more double faults than M. Giron?",
       "rbp": null,
       "settled_at": "",
-      "submission": 61
+      "submission": 69
     },
     {
       "base_rate": 0.5,
@@ -74,22 +79,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
-      "lane": "honest",
-      "market": 0.570346320356307,
+      "lane": "scenario",
+      "market": 0.5578553038842332,
       "market_id": "fe402172-a792-4945-a803-226a42bb2433",
-      "market_weight": 0.85,
-      "model": 0.21275,
+      "market_weight": 0.34,
+      "model": 0.2885,
       "notes": [
-        "simulated win probability 0.213",
-        "market consensus 0.570, weight 0.85"
+        "simulated win probability 0.288",
+        "market consensus 0.558, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.880086+00:00",
-      "probability": 0.5094569016744606,
+      "predicted_at": "2026-08-30T07:38:21.823225+00:00",
+      "probability": 0.37361676620976464,
       "question": "Will I. Buse win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 51
+      "submission": 34
     },
     {
       "base_rate": 0.13263821138211385,
@@ -98,21 +103,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "2f410562-506c-4bc0-aaa2-28ec07582769",
       "market_weight": 0.0,
-      "model": 0.15225,
+      "model": 0.10375,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.880086+00:00",
-      "probability": 0.14832764227642276,
+      "predicted_at": "2026-08-30T07:38:21.823225+00:00",
+      "probability": 0.10375,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 15
+      "submission": 6
     }
   ],
   "match_id": "f8779f1f-d458-410d-add6-4928db257cd3",

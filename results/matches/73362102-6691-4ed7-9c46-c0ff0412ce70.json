@@ -9,21 +9,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "20a38180-81f0-49fc-b37f-348f57c2a9a8",
       "market_weight": 0.0,
-      "model": 0.7426050422043051,
+      "model": 0.7310188337226883,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.890339+00:00",
-      "probability": 0.721444033763444,
+      "predicted_at": "2026-08-30T07:38:21.837757+00:00",
+      "probability": 0.7310188337226883,
       "question": "Will the match last longer than 80 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 72
+      "submission": 78
     },
     {
       "base_rate": 0.427,
@@ -32,40 +32,44 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "87f151bb-dc27-43fa-948c-12b7d621c019",
       "market_weight": 0.0,
-      "model": 0.7855045026258434,
-      "notes": [],
+      "model": 0.7395660595213128,
+      "notes": [
+        "exposure 71 service points from 21.8 games"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.890339+00:00",
-      "probability": 0.6958783769693825,
+      "predicted_at": "2026-08-30T07:38:21.837757+00:00",
+      "probability": 0.7395660595213128,
       "question": "Will N. Osaka record more aces than A. Zakharova?",
       "rbp": null,
       "settled_at": "",
-      "submission": 70
+      "submission": 79
     },
     {
       "base_rate": 0.433,
       "brier": null,
-      "confidence": 0.75,
+      "confidence": 0.1,
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "e69630ff-2460-43bc-9e89-30944ac54651",
       "market_weight": 0.0,
-      "model": 0.44767710538710914,
-      "notes": [],
+      "model": 0.4590095954814308,
+      "notes": [
+        "exposure 71 service points from 21.8 games"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.890339+00:00",
-      "probability": 0.44400782904033187,
+      "predicted_at": "2026-08-30T07:38:21.837757+00:00",
+      "probability": 0.43651129538999317,
       "question": "Will N. Osaka record more double faults than A. Zakharova?",
       "rbp": null,
       "settled_at": "",
-      "submission": 44
+      "submission": 42
     },
     {
       "base_rate": 0.5,
@@ -74,22 +78,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
-      "lane": "honest",
-      "market": 0.8849138534800982,
+      "lane": "scenario",
+      "market": 0.8853830610073402,
       "market_id": "12f3ac7c-ee47-4544-a0ca-de26ecad8d65",
-      "market_weight": 0.85,
-      "model": 0.84675,
+      "market_weight": 0.34,
+      "model": 0.764,
       "notes": [
-        "simulated win probability 0.847",
-        "market consensus 0.885, weight 0.85"
+        "simulated win probability 0.764",
+        "market consensus 0.885, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.890339+00:00",
-      "probability": 0.8228030840753315,
+      "predicted_at": "2026-08-30T07:38:21.837757+00:00",
+      "probability": 0.8131227619556404,
       "question": "Will N. Osaka win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 82
+      "submission": 86
     },
     {
       "base_rate": 0.225,
@@ -98,21 +102,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "eae02c34-39f8-4d8a-8802-538c17aabfd8",
       "market_weight": 0.0,
-      "model": 0.26325,
+      "model": 0.2345,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.890339+00:00",
-      "probability": 0.2556,
+      "predicted_at": "2026-08-30T07:38:21.837757+00:00",
+      "probability": 0.2345,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 26
+      "submission": 19
     }
   ],
   "match_id": "73362102-6691-4ed7-9c46-c0ff0412ce70",

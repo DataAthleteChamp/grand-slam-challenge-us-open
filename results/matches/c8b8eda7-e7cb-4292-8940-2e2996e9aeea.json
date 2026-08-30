@@ -9,63 +9,68 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "5622d4f4-5d92-43b1-bdfc-028d4015fcbe",
       "market_weight": 0.0,
-      "model": 0.8064351293780814,
+      "model": 0.7751518836434105,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.886545+00:00",
-      "probability": 0.755528103502465,
+      "predicted_at": "2026-08-30T07:38:21.831631+00:00",
+      "probability": 0.7751518836434105,
       "question": "Will the match last longer than 145 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 76
+      "submission": 82
     },
     {
       "base_rate": 0.46,
       "brier": null,
-      "confidence": 0.75,
+      "confidence": 0.9,
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "dd1c34e3-46fc-4277-b6bd-24b84de06591",
       "market_weight": 0.0,
-      "model": 0.6506044335652351,
-      "notes": [],
+      "model": 0.5326252962083573,
+      "notes": [
+        "exposure 123 service points from 39.4 games",
+        "outcome coupling: P(win)=0.259, delta=+0.60"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.886545+00:00",
-      "probability": 0.6029533251739263,
+      "predicted_at": "2026-08-30T07:38:21.831631+00:00",
+      "probability": 0.5326252962083573,
       "question": "Will M. Cilic record more aces than A. Rublev?",
       "rbp": null,
       "settled_at": "",
-      "submission": 60
+      "submission": 54
     },
     {
       "base_rate": 0.421,
       "brier": null,
-      "confidence": 0.75,
+      "confidence": 0.9,
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "b4362157-c5f2-4ee5-ab85-9d5a7649ccee",
       "market_weight": 0.0,
-      "model": 0.6106854907861806,
-      "notes": [],
+      "model": 0.6024277114885345,
+      "notes": [
+        "exposure 123 service points from 39.4 games"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.886545+00:00",
-      "probability": 0.5632641180896354,
+      "predicted_at": "2026-08-30T07:38:21.831631+00:00",
+      "probability": 0.6024277114885345,
       "question": "Will M. Cilic record more double faults than A. Rublev?",
       "rbp": null,
       "settled_at": "",
-      "submission": 56
+      "submission": 63
     },
     {
       "base_rate": 0.5,
@@ -74,22 +79,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
-      "lane": "honest",
-      "market": 0.2603198388997898,
+      "lane": "scenario",
+      "market": 0.25918048331820864,
       "market_id": "8bffc953-551e-4ffc-95db-86460c8c71a5",
-      "market_weight": 0.85,
-      "model": 0.24375,
+      "market_weight": 0.34,
+      "model": 0.307,
       "notes": [
-        "simulated win probability 0.244",
-        "market consensus 0.260, weight 0.85"
+        "simulated win probability 0.307",
+        "market consensus 0.259, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.886545+00:00",
-      "probability": 0.2941201601690203,
+      "predicted_at": "2026-08-30T07:38:21.831631+00:00",
+      "probability": 0.29019456420038214,
       "question": "Will M. Cilic win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 29
+      "submission": 25
     },
     {
       "base_rate": 0.13263821138211385,
@@ -98,21 +103,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "e1ee7081-2e29-4ac7-ab8a-ea76b8f36b8a",
       "market_weight": 0.0,
-      "model": 0.2405,
+      "model": 0.17875,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.886545+00:00",
-      "probability": 0.21892764227642278,
+      "predicted_at": "2026-08-30T07:38:21.831631+00:00",
+      "probability": 0.17875,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 22
+      "submission": 13
     }
   ],
   "match_id": "c8b8eda7-e7cb-4292-8940-2e2996e9aeea",

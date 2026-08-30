@@ -9,21 +9,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "f7b15234-8855-450f-8929-e1ad97b315ce",
       "market_weight": 0.0,
-      "model": 0.7540912653058282,
+      "model": 0.6946070446412375,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.886075+00:00",
-      "probability": 0.7169730122446626,
+      "predicted_at": "2026-08-30T07:38:21.831233+00:00",
+      "probability": 0.6946070446412375,
       "question": "Will the match last longer than 85 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 72
+      "submission": 74
     },
     {
       "base_rate": 0.427,
@@ -32,40 +32,44 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "d6c0b334-e993-4ec9-90a9-5a329186f964",
       "market_weight": 0.0,
-      "model": 0.39769698798181075,
-      "notes": [],
+      "model": 0.4154743463559276,
+      "notes": [
+        "exposure 72 service points from 22.2 games"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.886075+00:00",
-      "probability": 0.40502274098635804,
+      "predicted_at": "2026-08-30T07:38:21.831233+00:00",
+      "probability": 0.4154743463559276,
       "question": "Will D. Shnaider record more aces than D. Snigur?",
       "rbp": null,
       "settled_at": "",
-      "submission": 41
+      "submission": 39
     },
     {
       "base_rate": 0.433,
       "brier": null,
-      "confidence": 0.75,
+      "confidence": 0.1,
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "2367c7e4-4655-40c2-afd5-8216e31646a1",
       "market_weight": 0.0,
-      "model": 0.37076543951807794,
-      "notes": [],
+      "model": 0.39215400219651786,
+      "notes": [
+        "exposure 72 service points from 22.2 games"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.886075+00:00",
-      "probability": 0.38632407963855847,
+      "predicted_at": "2026-08-30T07:38:21.831233+00:00",
+      "probability": 0.42748579029652994,
       "question": "Will D. Shnaider record more double faults than D. Snigur?",
       "rbp": null,
       "settled_at": "",
-      "submission": 39
+      "submission": 41
     },
     {
       "base_rate": 0.5,
@@ -74,18 +78,18 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
-      "lane": "honest",
+      "lane": "scenario",
       "market": 0.7266861183070251,
       "market_id": "bfd49009-fe1d-46c4-846a-1a03362d6d8c",
-      "market_weight": 0.85,
-      "model": 0.6545,
+      "market_weight": 0.34,
+      "model": 0.60475,
       "notes": [
-        "simulated win probability 0.654",
-        "market consensus 0.727, weight 0.85"
+        "simulated win probability 0.605",
+        "market consensus 0.727, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.886075+00:00",
-      "probability": 0.6840005516902885,
+      "predicted_at": "2026-08-30T07:38:21.831233+00:00",
+      "probability": 0.648664238632074,
       "question": "Will D. Shnaider win?",
       "rbp": null,
       "settled_at": "",
@@ -98,21 +102,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "1de1dcaa-8cc9-4805-9798-c2970a65c258",
       "market_weight": 0.0,
-      "model": 0.26,
+      "model": 0.1955,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.886075+00:00",
-      "probability": 0.253,
+      "predicted_at": "2026-08-30T07:38:21.831233+00:00",
+      "probability": 0.1955,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 25
+      "submission": 15
     }
   ],
   "match_id": "bf333ce1-f02c-4599-832b-ee6d9a098185",

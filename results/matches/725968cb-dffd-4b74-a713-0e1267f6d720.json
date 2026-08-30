@@ -9,19 +9,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "daada71e-e45e-4697-aaf4-a8e6abe5318a",
       "market_weight": 0.0,
-      "model": 0.804721989180261,
-      "notes": [],
+      "model": 0.7632868019521302,
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.871888+00:00",
-      "probability": 0.7711375913442089,
+      "predicted_at": "2026-08-30T07:38:21.815706+00:00",
+      "probability": 0.7632868019521302,
       "question": "Will the match last longer than 80 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 77
+      "submission": 81
     },
     {
       "base_rate": 0.427,
@@ -30,64 +32,68 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "721f53bb-933b-40bc-aad0-dc8d6131df0e",
       "market_weight": 0.0,
-      "model": 0.7056976894145668,
-      "notes": [],
+      "model": 0.6712070001585301,
+      "notes": [
+        "exposure 72 service points from 22.2 games"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.871888+00:00",
-      "probability": 0.636023267060925,
+      "predicted_at": "2026-08-30T07:38:21.815706+00:00",
+      "probability": 0.6712070001585301,
       "question": "Will L. Noskova record more aces than K. Volynets?",
       "rbp": null,
       "settled_at": "",
-      "submission": 64
+      "submission": 71
     },
     {
       "base_rate": 0.433,
       "brier": null,
-      "confidence": 0.75,
+      "confidence": 0.1,
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "06fe7fd2-6116-4189-96e0-a93788d96ad6",
       "market_weight": 0.0,
-      "model": 0.6335961930144913,
-      "notes": [],
+      "model": 0.622251849980368,
+      "notes": [
+        "exposure 72 service points from 22.2 games"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.871888+00:00",
-      "probability": 0.5834471447608685,
+      "predicted_at": "2026-08-30T07:38:21.815706+00:00",
+      "probability": 0.4585489997473497,
       "question": "Will L. Noskova record more double faults than K. Volynets?",
       "rbp": null,
       "settled_at": "",
-      "submission": 58
+      "submission": 45
     },
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.7,
+      "confidence": 0.85,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
-      "lane": "honest",
-      "market": null,
+      "lane": "scenario",
+      "market": 0.7375565610662628,
       "market_id": "f3730e1a-f755-4dcc-84ba-fccc6b47db75",
-      "market_weight": 0.0,
-      "model": 0.7245,
+      "market_weight": 0.34,
+      "model": 0.65325,
       "notes": [
-        "simulated win probability 0.725",
-        "no market quote; this is the family that most needs one"
+        "simulated win probability 0.653",
+        "market consensus 0.738, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.871888+00:00",
-      "probability": 0.65715,
+      "predicted_at": "2026-08-30T07:38:21.815706+00:00",
+      "probability": 0.6833779542705345,
       "question": "Will L. Noskova win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 66
+      "submission": 72
     },
     {
       "base_rate": 0.225,
@@ -96,19 +102,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "1df659e7-131d-48a4-9cf5-76b73657447f",
       "market_weight": 0.0,
-      "model": 0.25325,
-      "notes": [],
+      "model": 0.20675,
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.871888+00:00",
-      "probability": 0.2476,
+      "predicted_at": "2026-08-30T07:38:21.815706+00:00",
+      "probability": 0.20675,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 25
+      "submission": 16
     }
   ],
   "match_id": "725968cb-dffd-4b74-a713-0e1267f6d720",

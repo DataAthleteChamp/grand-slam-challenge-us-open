@@ -9,21 +9,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "da7de1d6-4e2b-4d05-8e85-31236d9ec4e9",
       "market_weight": 0.0,
-      "model": 0.7320582525555799,
+      "model": 0.7162194329865395,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.882562+00:00",
-      "probability": 0.699346602044464,
+      "predicted_at": "2026-08-30T07:38:21.827038+00:00",
+      "probability": 0.7162194329865395,
       "question": "Will the match last longer than 85 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 70
+      "submission": 76
     },
     {
       "base_rate": 0.427,
@@ -32,19 +32,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "12434e4d-c95e-49fc-ba58-285787a400d8",
       "market_weight": 0.0,
-      "model": 0.3525398173563715,
-      "notes": [],
+      "model": 0.38133048157416993,
+      "notes": [
+        "exposure 69 service points from 21.3 games"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.882562+00:00",
-      "probability": 0.39349291781036716,
+      "predicted_at": "2026-08-30T07:38:21.827038+00:00",
+      "probability": 0.3992557675563082,
       "question": "Will S. Kraus record more aces than K. Muchova?",
       "rbp": null,
       "settled_at": "",
-      "submission": 39
+      "submission": 38
     },
     {
       "base_rate": 0.433,
@@ -53,15 +55,17 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "fe74579b-a963-405b-83e6-15b85858b0a3",
       "market_weight": 0.0,
-      "model": 0.4580140602224053,
-      "notes": [],
+      "model": 0.4663236280453837,
+      "notes": [
+        "exposure 69 service points from 21.3 games"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.882562+00:00",
-      "probability": 0.4442563271000824,
+      "predicted_at": "2026-08-30T07:38:21.827038+00:00",
+      "probability": 0.45324410403757054,
       "question": "Will S. Kraus record more double faults than K. Muchova?",
       "rbp": null,
       "settled_at": "",
@@ -74,22 +78,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
-      "lane": "honest",
-      "market": 0.11688311684011063,
+      "lane": "scenario",
+      "market": 0.11681848370393494,
       "market_id": "9586ecb2-ffb4-49c7-86b0-f0f202ae043a",
-      "market_weight": 0.85,
-      "model": 0.13325,
+      "market_weight": 0.34,
+      "model": 0.223,
       "notes": [
-        "simulated win probability 0.133",
-        "market consensus 0.117, weight 0.85"
+        "simulated win probability 0.223",
+        "market consensus 0.117, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.882562+00:00",
-      "probability": 0.1763386213823184,
+      "predicted_at": "2026-08-30T07:38:21.827038+00:00",
+      "probability": 0.18069491438742044,
       "question": "Will S. Kraus win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 18
+      "submission": 13
     },
     {
       "base_rate": 0.225,
@@ -98,21 +102,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "579ee20b-0e0e-44cf-8c42-d46b73aa6a9d",
       "market_weight": 0.0,
-      "model": 0.2165,
+      "model": 0.203,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.882562+00:00",
-      "probability": 0.2182,
+      "predicted_at": "2026-08-30T07:38:21.827038+00:00",
+      "probability": 0.203,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 22
+      "submission": 15
     }
   ],
   "match_id": "2728e4bd-3c9d-46e1-908d-bc0020ef95ca",

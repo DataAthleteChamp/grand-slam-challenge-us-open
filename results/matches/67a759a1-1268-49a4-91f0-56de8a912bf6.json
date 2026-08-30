@@ -9,21 +9,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "52fe7598-5f45-436b-a481-0fea925d7ac3",
       "market_weight": 0.0,
-      "model": 0.6673946837538347,
+      "model": 0.6110881714840928,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.871587+00:00",
-      "probability": 0.6137957470030677,
+      "predicted_at": "2026-08-30T07:38:21.815265+00:00",
+      "probability": 0.6110881714840928,
       "question": "Will the match last longer than 100 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 61
+      "submission": 64
     },
     {
       "base_rate": 0.427,
@@ -32,40 +32,44 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "d2ea9d5f-73ef-48f4-8ac1-4cc006d49fcf",
       "market_weight": 0.0,
-      "model": 0.6548648866389541,
-      "notes": [],
+      "model": 0.6262708399429645,
+      "notes": [
+        "exposure 72 service points from 22.3 games"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.871587+00:00",
-      "probability": 0.5978986649792156,
+      "predicted_at": "2026-08-30T07:38:21.815265+00:00",
+      "probability": 0.6262708399429645,
       "question": "Will B. Bencic record more aces than Y. Putintseva?",
       "rbp": null,
       "settled_at": "",
-      "submission": 60
+      "submission": 66
     },
     {
       "base_rate": 0.433,
       "brier": null,
-      "confidence": 0.75,
+      "confidence": 0.1,
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "2ea95450-346d-4b65-ab2f-fcee60705cf6",
       "market_weight": 0.0,
-      "model": 0.6632529039653438,
-      "notes": [],
+      "model": 0.648484901113356,
+      "notes": [
+        "exposure 72 service points from 22.3 games"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.871587+00:00",
-      "probability": 0.6056896779740077,
+      "predicted_at": "2026-08-30T07:38:21.815265+00:00",
+      "probability": 0.4620904616503031,
       "question": "Will B. Bencic record more double faults than Y. Putintseva?",
       "rbp": null,
       "settled_at": "",
-      "submission": 61
+      "submission": 45
     },
     {
       "base_rate": 0.5,
@@ -74,18 +78,18 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
-      "lane": "honest",
-      "market": 0.8064240502062925,
+      "lane": "scenario",
+      "market": 0.8067765567983669,
       "market_id": "16e1ac7b-4c3f-4923-906d-83b2c2865ece",
-      "market_weight": 0.85,
-      "model": 0.713,
+      "market_weight": 0.34,
+      "model": 0.6455,
       "notes": [
-        "simulated win probability 0.713",
-        "market consensus 0.806, weight 0.85"
+        "simulated win probability 0.645",
+        "market consensus 0.807, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.871587+00:00",
-      "probability": 0.7499266089238936,
+      "predicted_at": "2026-08-30T07:38:21.815265+00:00",
+      "probability": 0.7071281895450626,
       "question": "Will B. Bencic win?",
       "rbp": null,
       "settled_at": "",
@@ -98,21 +102,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "7a23290c-213a-4648-9e33-db9212de1451",
       "market_weight": 0.0,
-      "model": 0.021,
+      "model": 0.01625,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.871587+00:00",
-      "probability": 0.020890909090909092,
+      "predicted_at": "2026-08-30T07:38:21.815265+00:00",
+      "probability": 0.01625,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 3
+      "submission": 2
     }
   ],
   "match_id": "67a759a1-1268-49a4-91f0-56de8a912bf6",

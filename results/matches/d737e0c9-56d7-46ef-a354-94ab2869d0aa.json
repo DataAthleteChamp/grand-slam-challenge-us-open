@@ -9,21 +9,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "d7d2241b-8956-43d4-a54f-7fd696cb3543",
       "market_weight": 0.0,
-      "model": 0.6009299730165357,
+      "model": 0.5387061994390032,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.867152+00:00",
-      "probability": 0.5606239784132285,
+      "predicted_at": "2026-08-30T07:38:21.810961+00:00",
+      "probability": 0.5387061994390032,
       "question": "Will the match last longer than 100 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 56
+      "submission": 55
     },
     {
       "base_rate": 0.427,
@@ -32,15 +32,17 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "320eba0e-8bff-44b3-b63a-f21d4680337d",
       "market_weight": 0.0,
-      "model": 0.4154801235044918,
-      "notes": [],
+      "model": 0.4332491728025335,
+      "notes": [
+        "exposure 73 service points from 22.4 games"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.867152+00:00",
-      "probability": 0.4183600926283689,
+      "predicted_at": "2026-08-30T07:38:21.810961+00:00",
+      "probability": 0.4332491728025335,
       "question": "Will L. Fernandez record more aces than S. Zhang?",
       "rbp": null,
       "settled_at": "",
@@ -49,23 +51,25 @@
     {
       "base_rate": 0.433,
       "brier": null,
-      "confidence": 0.75,
+      "confidence": 0.1,
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "5a0bb14a-837b-44e6-a5f2-69907793e86e",
       "market_weight": 0.0,
-      "model": 0.5558594996939865,
-      "notes": [],
+      "model": 0.5552613041260537,
+      "notes": [
+        "exposure 73 service points from 22.4 games"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.867152+00:00",
-      "probability": 0.5251446247704898,
+      "predicted_at": "2026-08-30T07:38:21.810961+00:00",
+      "probability": 0.4495052760570173,
       "question": "Will L. Fernandez record more double faults than S. Zhang?",
       "rbp": null,
       "settled_at": "",
-      "submission": 53
+      "submission": 44
     },
     {
       "base_rate": 0.5,
@@ -74,22 +78,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
-      "lane": "honest",
+      "lane": "scenario",
       "market": 0.6847290640162286,
       "market_id": "9251b8ce-cd5f-4f3c-bf2f-2445e9240d9c",
-      "market_weight": 0.85,
-      "model": 0.695,
+      "market_weight": 0.34,
+      "model": 0.6355,
       "notes": [
-        "simulated win probability 0.695",
-        "market consensus 0.685, weight 0.85"
+        "simulated win probability 0.635",
+        "market consensus 0.685, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.867152+00:00",
-      "probability": 0.6583393529868151,
+      "predicted_at": "2026-08-30T07:38:21.810961+00:00",
+      "probability": 0.652622175486879,
       "question": "Will L. Fernandez win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 66
+      "submission": 69
     },
     {
       "base_rate": 0.225,
@@ -98,21 +102,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "9f4d95ca-8321-4dd7-91c6-ae20059d0e5e",
       "market_weight": 0.0,
-      "model": 0.27675,
+      "model": 0.21675,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.867152+00:00",
-      "probability": 0.2664,
+      "predicted_at": "2026-08-30T07:38:21.810961+00:00",
+      "probability": 0.21675,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 27
+      "submission": 17
     }
   ],
   "match_id": "d737e0c9-56d7-46ef-a354-94ab2869d0aa",

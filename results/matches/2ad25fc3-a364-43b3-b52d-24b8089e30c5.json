@@ -9,21 +9,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "140908c7-4290-46d7-9d13-e9f10e438b5c",
       "market_weight": 0.0,
-      "model": 0.6866364648005437,
+      "model": 0.6167117129443793,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.883004+00:00",
-      "probability": 0.629189171840435,
+      "predicted_at": "2026-08-30T07:38:21.827510+00:00",
+      "probability": 0.6167117129443793,
       "question": "Will the match last longer than 100 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 63
+      "submission": 64
     },
     {
       "base_rate": 0.427,
@@ -32,40 +32,44 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "02e7a270-6ea0-46e3-a1a9-ceaf3a46fd65",
       "market_weight": 0.0,
-      "model": 0.37195189150120167,
-      "notes": [],
+      "model": 0.3970749859445628,
+      "notes": [
+        "exposure 72 service points from 22.2 games"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.883004+00:00",
-      "probability": 0.38571391862590126,
+      "predicted_at": "2026-08-30T07:38:21.827510+00:00",
+      "probability": 0.3970749859445628,
       "question": "Will M. Frech record more aces than I. Jovic?",
       "rbp": null,
       "settled_at": "",
-      "submission": 39
+      "submission": 37
     },
     {
       "base_rate": 0.433,
       "brier": null,
-      "confidence": 0.75,
+      "confidence": 0.1,
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "253e246b-4fee-4f93-b40d-e3606366cd87",
       "market_weight": 0.0,
-      "model": 0.31851434749464724,
-      "notes": [],
+      "model": 0.34544158822713056,
+      "notes": [
+        "exposure 72 service points from 22.2 games"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.883004+00:00",
-      "probability": 0.34713576062098545,
+      "predicted_at": "2026-08-30T07:38:21.827510+00:00",
+      "probability": 0.42117961441066265,
       "question": "Will M. Frech record more double faults than I. Jovic?",
       "rbp": null,
       "settled_at": "",
-      "submission": 35
+      "submission": 40
     },
     {
       "base_rate": 0.5,
@@ -74,22 +78,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
-      "lane": "honest",
-      "market": 0.2468527641295123,
+      "lane": "scenario",
+      "market": 0.24696356276824244,
       "market_id": "7d4c7285-a626-4ef4-a237-3bd5cd175452",
-      "market_weight": 0.85,
-      "model": 0.36675,
+      "market_weight": 0.34,
+      "model": 0.4025,
       "notes": [
-        "simulated win probability 0.367",
-        "market consensus 0.247, weight 0.85"
+        "simulated win probability 0.403",
+        "market consensus 0.247, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.883004+00:00",
-      "probability": 0.29860894695264184,
+      "predicted_at": "2026-08-30T07:38:21.827510+00:00",
+      "probability": 0.3452926963362629,
       "question": "Will M. Frech win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 30
+      "submission": 31
     },
     {
       "base_rate": 0.225,
@@ -98,21 +102,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "6c5e696e-2dc7-41e6-ac8e-e4fd4717df0d",
       "market_weight": 0.0,
-      "model": 0.25825,
+      "model": 0.20375,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.883004+00:00",
-      "probability": 0.2516,
+      "predicted_at": "2026-08-30T07:38:21.827510+00:00",
+      "probability": 0.20375,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 25
+      "submission": 15
     }
   ],
   "match_id": "2ad25fc3-a364-43b3-b52d-24b8089e30c5",

@@ -9,63 +9,68 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "b7db1498-07dd-4771-af28-3b53b78865d6",
       "market_weight": 0.0,
-      "model": 0.7941029827592438,
+      "model": 0.7530373874258949,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.874205+00:00",
-      "probability": 0.745662386207395,
+      "predicted_at": "2026-08-30T07:38:21.816947+00:00",
+      "probability": 0.7530373874258949,
       "question": "Will the match last longer than 145 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 75
+      "submission": 80
     },
     {
       "base_rate": 0.46,
       "brier": null,
-      "confidence": 0.75,
+      "confidence": 0.9,
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "7e223962-f238-4e65-b3a6-64918b09d7d7",
       "market_weight": 0.0,
-      "model": 0.3763842533430184,
-      "notes": [],
+      "model": 0.3335026900509127,
+      "notes": [
+        "exposure 119 service points from 38.0 games",
+        "outcome coupling: P(win)=0.187, delta=+0.60"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.874205+00:00",
-      "probability": 0.3972881900072638,
+      "predicted_at": "2026-08-30T07:38:21.816947+00:00",
+      "probability": 0.3335026900509127,
       "question": "Will T. Barrios Vera record more aces than A. Blockx?",
       "rbp": null,
       "settled_at": "",
-      "submission": 40
+      "submission": 30
     },
     {
       "base_rate": 0.421,
       "brier": null,
-      "confidence": 0.75,
+      "confidence": 0.9,
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "e558a684-77f1-4473-b3e9-8569839ac93e",
       "market_weight": 0.0,
-      "model": 0.4052823253340493,
-      "notes": [],
+      "model": 0.41991296445937454,
+      "notes": [
+        "exposure 119 service points from 38.0 games"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.874205+00:00",
-      "probability": 0.409211744000537,
+      "predicted_at": "2026-08-30T07:38:21.816947+00:00",
+      "probability": 0.41991296445937454,
       "question": "Will T. Barrios Vera record more double faults than A. Blockx?",
       "rbp": null,
       "settled_at": "",
-      "submission": 41
+      "submission": 40
     },
     {
       "base_rate": 0.5,
@@ -74,22 +79,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
-      "lane": "honest",
-      "market": 0.18750000000068734,
+      "lane": "scenario",
+      "market": 0.18677685944580774,
       "market_id": "684fd70f-1a08-4b19-a307-d94b4b6804b2",
-      "market_weight": 0.85,
-      "model": 0.285,
+      "market_weight": 0.34,
+      "model": 0.34425,
       "notes": [
-        "simulated win probability 0.285",
-        "market consensus 0.188, weight 0.85"
+        "simulated win probability 0.344",
+        "market consensus 0.187, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.874205+00:00",
-      "probability": 0.24526383674600627,
+      "predicted_at": "2026-08-30T07:38:21.816947+00:00",
+      "probability": 0.2838421188677264,
       "question": "Will T. Barrios Vera win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 25
+      "submission": 24
     },
     {
       "base_rate": 0.13263821138211385,
@@ -98,21 +103,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "42a9a775-816a-4440-98a6-26591cd1fe51",
       "market_weight": 0.0,
-      "model": 0.157,
+      "model": 0.102,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.874205+00:00",
-      "probability": 0.15212764227642278,
+      "predicted_at": "2026-08-30T07:38:21.816947+00:00",
+      "probability": 0.102,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 15
+      "submission": 6
     }
   ],
   "match_id": "7c1e820e-a63a-4bc7-bfc8-d27dd02f232e",

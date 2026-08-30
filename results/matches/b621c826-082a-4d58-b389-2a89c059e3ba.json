@@ -9,63 +9,68 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "205388a0-569a-47bd-aa73-e093e4a2d81c",
       "market_weight": 0.0,
-      "model": 0.940113524878035,
+      "model": 0.9205674557886292,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.866895+00:00",
-      "probability": 0.9049508199024281,
+      "predicted_at": "2026-08-30T07:38:21.810570+00:00",
+      "probability": 0.9205674557886292,
       "question": "Will the match last longer than 120 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 90
+      "submission": 96
     },
     {
       "base_rate": 0.46,
       "brier": null,
-      "confidence": 0.75,
+      "confidence": 0.9,
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "fefd5c00-b9f9-432b-a2fe-5da742a954c2",
       "market_weight": 0.0,
-      "model": 0.8530392244808361,
-      "notes": [],
+      "model": 0.8044341747791014,
+      "notes": [
+        "exposure 126 service points from 40.2 games",
+        "outcome coupling: P(win)=0.740, delta=+0.60"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.866895+00:00",
-      "probability": 0.7547794183606271,
+      "predicted_at": "2026-08-30T07:38:21.810570+00:00",
+      "probability": 0.8044341747791014,
       "question": "Will A. Rinderknech record more aces than S. Shimabukuro?",
       "rbp": null,
       "settled_at": "",
-      "submission": 75
+      "submission": 85
     },
     {
       "base_rate": 0.421,
       "brier": null,
-      "confidence": 0.75,
+      "confidence": 0.9,
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "c1b776e1-7e7a-414f-9c9a-b1df366dc52a",
       "market_weight": 0.0,
-      "model": 0.29005535486069145,
-      "notes": [],
+      "model": 0.3174491126330515,
+      "notes": [
+        "exposure 126 service points from 40.2 games"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.866895+00:00",
-      "probability": 0.3227915161455186,
+      "predicted_at": "2026-08-30T07:38:21.810570+00:00",
+      "probability": 0.3174491126330515,
       "question": "Will A. Rinderknech record more double faults than S. Shimabukuro?",
       "rbp": null,
       "settled_at": "",
-      "submission": 32
+      "submission": 28
     },
     {
       "base_rate": 0.5,
@@ -74,22 +79,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
-      "lane": "honest",
-      "market": 0.7385827071810132,
+      "lane": "scenario",
+      "market": 0.739793419180995,
       "market_id": "164ecc18-2e9d-4d14-aee3-8719f0682d96",
-      "market_weight": 0.85,
-      "model": 0.55825,
+      "market_weight": 0.34,
+      "model": 0.54475,
       "notes": [
-        "simulated win probability 0.558",
-        "market consensus 0.739, weight 0.85"
+        "simulated win probability 0.545",
+        "market consensus 0.740, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.866895+00:00",
-      "probability": 0.682427515667521,
+      "predicted_at": "2026-08-30T07:38:21.810570+00:00",
+      "probability": 0.6162641618861608,
       "question": "Will A. Rinderknech win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 68
+      "submission": 64
     },
     {
       "base_rate": 0.13263821138211385,
@@ -98,21 +103,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "fcfabb4f-6929-4757-a979-2b854a718255",
       "market_weight": 0.0,
-      "model": 0.2575,
+      "model": 0.194,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.866895+00:00",
-      "probability": 0.23252764227642278,
+      "predicted_at": "2026-08-30T07:38:21.810570+00:00",
+      "probability": 0.194,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 23
+      "submission": 14
     }
   ],
   "match_id": "b621c826-082a-4d58-b389-2a89c059e3ba",

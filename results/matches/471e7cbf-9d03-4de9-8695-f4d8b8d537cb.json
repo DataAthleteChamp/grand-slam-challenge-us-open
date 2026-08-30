@@ -9,21 +9,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "4b415a8f-5bf8-4f80-bf64-b935dc94ac4b",
       "market_weight": 0.0,
-      "model": 0.7020098185371078,
+      "model": 0.6743516579717139,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.865821+00:00",
-      "probability": 0.6627078548296862,
+      "predicted_at": "2026-08-30T07:38:21.809716+00:00",
+      "probability": 0.6743516579717139,
       "question": "Will the match last longer than 90 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 66
+      "submission": 71
     },
     {
       "base_rate": 0.427,
@@ -32,40 +32,44 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "8c717f56-6cc3-4410-9ab8-7c985062863d",
       "market_weight": 0.0,
-      "model": 0.6397969964728212,
-      "notes": [],
+      "model": 0.6126830539893853,
+      "notes": [
+        "exposure 70 service points from 21.5 games"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.865821+00:00",
-      "probability": 0.5865977473546159,
+      "predicted_at": "2026-08-30T07:38:21.809716+00:00",
+      "probability": 0.6126830539893853,
       "question": "Will B. Krejcikova record more aces than K. Rakhimova?",
       "rbp": null,
       "settled_at": "",
-      "submission": 59
+      "submission": 64
     },
     {
       "base_rate": 0.433,
       "brier": null,
-      "confidence": 0.75,
+      "confidence": 0.1,
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "0855302f-95f4-476c-9703-5171c8edb36f",
       "market_weight": 0.0,
-      "model": 0.5346483682182298,
-      "notes": [],
+      "model": 0.5334927790613726,
+      "notes": [
+        "exposure 70 service points from 21.5 games"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.865821+00:00",
-      "probability": 0.5092362761636723,
+      "predicted_at": "2026-08-30T07:38:21.809716+00:00",
+      "probability": 0.4465665251732853,
       "question": "Will B. Krejcikova record more double faults than K. Rakhimova?",
       "rbp": null,
       "settled_at": "",
-      "submission": 51
+      "submission": 43
     },
     {
       "base_rate": 0.5,
@@ -74,22 +78,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
-      "lane": "honest",
-      "market": 0.7487080103649821,
+      "lane": "scenario",
+      "market": 0.7485270331525344,
       "market_id": "c84dc518-1907-4ec1-bf36-337437299754",
-      "market_weight": 0.85,
-      "model": 0.8405,
+      "market_weight": 0.34,
+      "model": 0.75575,
       "notes": [
-        "simulated win probability 0.841",
-        "market consensus 0.749, weight 0.85"
+        "simulated win probability 0.756",
+        "market consensus 0.749, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.865821+00:00",
-      "probability": 0.7247875528984862,
+      "predicted_at": "2026-08-30T07:38:21.809716+00:00",
+      "probability": 0.7533100342310163,
       "question": "Will B. Krejcikova win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 72
+      "submission": 80
     },
     {
       "base_rate": 0.225,
@@ -98,21 +102,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "76a9e2ce-8daa-4b1e-b488-f036809d86ed",
       "market_weight": 0.0,
-      "model": 0.2235,
+      "model": 0.19375,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.865821+00:00",
-      "probability": 0.2238,
+      "predicted_at": "2026-08-30T07:38:21.809716+00:00",
+      "probability": 0.19375,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 22
+      "submission": 14
     }
   ],
   "match_id": "471e7cbf-9d03-4de9-8695-f4d8b8d537cb",

@@ -9,63 +9,68 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "90415291-d1ce-459a-87bd-9850093e7e17",
       "market_weight": 0.0,
-      "model": 0.938294294114963,
+      "model": 0.9162372710431621,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.868233+00:00",
-      "probability": 0.9124154352919703,
+      "predicted_at": "2026-08-30T07:38:21.812456+00:00",
+      "probability": 0.9162372710431621,
       "question": "Will the match last longer than 115 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 91
+      "submission": 95
     },
     {
       "base_rate": 0.46,
       "brier": null,
-      "confidence": 0.75,
+      "confidence": 0.9,
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "f4eb2fa6-bcab-4d68-9438-77153d2f0568",
       "market_weight": 0.0,
-      "model": 0.8142308364334996,
-      "notes": [],
+      "model": 0.7627147833084691,
+      "notes": [
+        "exposure 123 service points from 39.5 games",
+        "outcome coupling: P(win)=0.685, delta=+0.60"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.868233+00:00",
-      "probability": 0.7256731273251247,
+      "predicted_at": "2026-08-30T07:38:21.812456+00:00",
+      "probability": 0.7627147833084691,
       "question": "Will A. Bublik record more aces than J. Wolf?",
       "rbp": null,
       "settled_at": "",
-      "submission": 73
+      "submission": 81
     },
     {
       "base_rate": 0.421,
       "brier": null,
-      "confidence": 0.75,
+      "confidence": 0.9,
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "b2914988-5144-4eca-b892-0ea6e3d12e7d",
       "market_weight": 0.0,
-      "model": 0.775556547997136,
-      "notes": [],
+      "model": 0.7519687192651365,
+      "notes": [
+        "exposure 123 service points from 39.5 games"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.868233+00:00",
-      "probability": 0.686917410997852,
+      "predicted_at": "2026-08-30T07:38:21.812456+00:00",
+      "probability": 0.7519687192651365,
       "question": "Will A. Bublik record more double faults than J. Wolf?",
       "rbp": null,
       "settled_at": "",
-      "submission": 69
+      "submission": 80
     },
     {
       "base_rate": 0.5,
@@ -74,22 +79,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
-      "lane": "honest",
-      "market": 0.6879147907707717,
+      "lane": "scenario",
+      "market": 0.6851184036709673,
       "market_id": "fe2bdb30-c3d9-41b8-a22b-9b6bd8c6da45",
-      "market_weight": 0.85,
-      "model": 0.45725,
+      "market_weight": 0.34,
+      "model": 0.473,
       "notes": [
-        "simulated win probability 0.457",
-        "market consensus 0.688, weight 0.85"
+        "simulated win probability 0.473",
+        "market consensus 0.685, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.868233+00:00",
-      "probability": 0.6327147910464763,
+      "predicted_at": "2026-08-30T07:38:21.812456+00:00",
+      "probability": 0.5480920878889818,
       "question": "Will A. Bublik win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 63
+      "submission": 56
     },
     {
       "base_rate": 0.13263821138211385,
@@ -98,21 +103,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "2999984f-9279-45e0-a855-3c1af3b72814",
       "market_weight": 0.0,
-      "model": 0.20525,
+      "model": 0.14575,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.868233+00:00",
-      "probability": 0.19072764227642278,
+      "predicted_at": "2026-08-30T07:38:21.812456+00:00",
+      "probability": 0.14575,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 19
+      "submission": 10
     }
   ],
   "match_id": "80c2e1b4-5c9a-4f3f-ab78-365aaa591650",

@@ -9,21 +9,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "30778e48-dcf9-4aa7-85c0-88ac00a17d0f",
       "market_weight": 0.0,
-      "model": 0.756989820027387,
+      "model": 0.710210148888496,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.863095+00:00",
-      "probability": 0.7192918560219097,
+      "predicted_at": "2026-08-30T07:38:21.805865+00:00",
+      "probability": 0.710210148888496,
       "question": "Will the match last longer than 85 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 72
+      "submission": 75
     },
     {
       "base_rate": 0.427,
@@ -32,19 +32,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "283c61d5-4247-4601-9d3e-8c6c4b7fc2f0",
       "market_weight": 0.0,
-      "model": 0.6013996346769517,
-      "notes": [],
+      "model": 0.5778204130572999,
+      "notes": [
+        "exposure 71 service points from 22.0 games"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.863095+00:00",
-      "probability": 0.5054798356046282,
+      "predicted_at": "2026-08-30T07:38:21.805865+00:00",
+      "probability": 0.5186234009323097,
       "question": "Will V. Erjavec record more aces than J. Paolini?",
       "rbp": null,
       "settled_at": "",
-      "submission": 51
+      "submission": 52
     },
     {
       "base_rate": 0.433,
@@ -53,19 +55,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "2d78d743-0b68-4d62-a215-f8bc82873510",
       "market_weight": 0.0,
-      "model": 0.5568001856456422,
-      "notes": [],
+      "model": 0.5535631093337005,
+      "notes": [
+        "exposure 71 service points from 22.0 games"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.863095+00:00",
-      "probability": 0.48871008354053896,
+      "predicted_at": "2026-08-30T07:38:21.805865+00:00",
+      "probability": 0.506242088920223,
       "question": "Will V. Erjavec record more double faults than J. Paolini?",
       "rbp": null,
       "settled_at": "",
-      "submission": 49
+      "submission": 51
     },
     {
       "base_rate": 0.5,
@@ -74,22 +78,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
-      "lane": "honest",
-      "market": 0.1383218884775331,
+      "lane": "scenario",
+      "market": 0.13824223822323797,
       "market_id": "e6d28fbf-d0d0-4dd5-b560-adec11876882",
-      "market_weight": 0.85,
-      "model": 0.30275,
+      "market_weight": 0.34,
+      "model": 0.36025,
       "notes": [
-        "simulated win probability 0.303",
-        "market consensus 0.138, weight 0.85"
+        "simulated win probability 0.360",
+        "market consensus 0.138, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.863095+00:00",
-      "probability": 0.20852675451869648,
+      "predicted_at": "2026-08-30T07:38:21.805865+00:00",
+      "probability": 0.2687030014574165,
       "question": "Will V. Erjavec win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 21
+      "submission": 22
     },
     {
       "base_rate": 0.225,
@@ -98,21 +102,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "53fb45c9-a4f5-421b-92c9-2ff8f555fd73",
       "market_weight": 0.0,
-      "model": 0.23725,
+      "model": 0.188,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.863095+00:00",
-      "probability": 0.23479999999999998,
+      "predicted_at": "2026-08-30T07:38:21.805865+00:00",
+      "probability": 0.188,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 23
+      "submission": 14
     }
   ],
   "match_id": "346a50ab-7569-4817-ad31-20fef822dfdf",

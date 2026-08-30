@@ -9,19 +9,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "72b3684f-be18-4f7e-a18e-a5ed3df90539",
       "market_weight": 0.0,
-      "model": 0.809746742503722,
-      "notes": [],
+      "model": 0.7821907311557332,
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.871063+00:00",
-      "probability": 0.7751573940029777,
+      "predicted_at": "2026-08-30T07:38:21.814833+00:00",
+      "probability": 0.7821907311557332,
       "question": "Will the match last longer than 80 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 78
+      "submission": 83
     },
     {
       "base_rate": 0.427,
@@ -30,19 +32,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "4690ecb4-4f88-43e0-8cfe-bb169baa2868",
       "market_weight": 0.0,
-      "model": 0.6239620184996177,
-      "notes": [],
+      "model": 0.6008829729169743,
+      "notes": [
+        "exposure 70 service points from 21.7 games"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.871063+00:00",
-      "probability": 0.5156329083248279,
+      "predicted_at": "2026-08-30T07:38:21.814833+00:00",
+      "probability": 0.532633906047062,
       "question": "Will E. Mertens record more aces than K. Quevedo?",
       "rbp": null,
       "settled_at": "",
-      "submission": 52
+      "submission": 54
     },
     {
       "base_rate": 0.433,
@@ -51,43 +55,45 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "571ad544-cad7-42f7-9bd2-17d83a88316f",
       "market_weight": 0.0,
-      "model": 0.6287966878420423,
-      "notes": [],
+      "model": 0.615487752658473,
+      "notes": [
+        "exposure 70 service points from 21.7 games"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.871063+00:00",
-      "probability": 0.5211085095289191,
+      "predicted_at": "2026-08-30T07:38:21.814833+00:00",
+      "probability": 0.5438613097400223,
       "question": "Will E. Mertens record more double faults than K. Quevedo?",
       "rbp": null,
       "settled_at": "",
-      "submission": 52
+      "submission": 55
     },
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.7,
+      "confidence": 0.85,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
-      "lane": "honest",
-      "market": null,
+      "lane": "scenario",
+      "market": 0.8289473684374579,
       "market_id": "d67d9886-df29-49c5-80c4-47bab7b57d9a",
-      "market_weight": 0.0,
-      "model": 0.789,
+      "market_weight": 0.34,
+      "model": 0.70725,
       "notes": [
-        "simulated win probability 0.789",
-        "no market quote; this is the family that most needs one"
+        "simulated win probability 0.707",
+        "market consensus 0.829, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.871063+00:00",
-      "probability": 0.7023,
+      "predicted_at": "2026-08-30T07:38:21.814833+00:00",
+      "probability": 0.7537560498588203,
       "question": "Will E. Mertens win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 70
+      "submission": 80
     },
     {
       "base_rate": 0.225,
@@ -96,19 +102,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "ad607633-3d3f-4957-9dd4-f7e923f40783",
       "market_weight": 0.0,
-      "model": 0.221,
-      "notes": [],
+      "model": 0.1825,
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.871063+00:00",
-      "probability": 0.2218,
+      "predicted_at": "2026-08-30T07:38:21.814833+00:00",
+      "probability": 0.1825,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 22
+      "submission": 13
     }
   ],
   "match_id": "5da71b62-006d-41d7-a6bb-dcb102937b29",

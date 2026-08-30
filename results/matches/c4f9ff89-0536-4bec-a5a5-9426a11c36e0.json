@@ -9,21 +9,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "39284212-b907-48a0-8a37-c8d1de56cf20",
       "market_weight": 0.0,
-      "model": 0.5892424641660474,
+      "model": 0.5798734395517794,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.868954+00:00",
-      "probability": 0.5724939713328379,
+      "predicted_at": "2026-08-30T07:38:21.813214+00:00",
+      "probability": 0.5798734395517794,
       "question": "Will the match last longer than 90 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 57
+      "submission": 60
     },
     {
       "base_rate": 0.427,
@@ -32,19 +32,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "d916c12a-9543-4ade-9143-788cd92df114",
       "market_weight": 0.0,
-      "model": 0.28350184186205196,
-      "notes": [],
+      "model": 0.32186383939659824,
+      "notes": [
+        "exposure 69 service points from 21.2 games"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.868954+00:00",
-      "probability": 0.3624258288379234,
+      "predicted_at": "2026-08-30T07:38:21.813214+00:00",
+      "probability": 0.3631297824334334,
       "question": "Will S. Sierra record more aces than E. Svitolina?",
       "rbp": null,
       "settled_at": "",
-      "submission": 36
+      "submission": 33
     },
     {
       "base_rate": 0.433,
@@ -53,19 +55,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "f5d8b87d-854b-4c91-9db7-3fb102e1a0e5",
       "market_weight": 0.0,
-      "model": 0.4599790840720165,
-      "notes": [],
+      "model": 0.4680083240440216,
+      "notes": [
+        "exposure 69 service points from 21.2 games"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.868954+00:00",
-      "probability": 0.4451405878324074,
+      "predicted_at": "2026-08-30T07:38:21.813214+00:00",
+      "probability": 0.45426755685674314,
       "question": "Will S. Sierra record more double faults than E. Svitolina?",
       "rbp": null,
       "settled_at": "",
-      "submission": 45
+      "submission": 44
     },
     {
       "base_rate": 0.5,
@@ -74,22 +78,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
-      "lane": "honest",
-      "market": 0.08644142164949067,
+      "lane": "scenario",
+      "market": 0.0871254162410276,
       "market_id": "f06b4b9d-668f-4f04-9afb-242f39aa371d",
-      "market_weight": 0.85,
-      "model": 0.138,
+      "market_weight": 0.34,
+      "model": 0.22725,
       "notes": [
-        "simulated win probability 0.138",
-        "market consensus 0.086, weight 0.85"
+        "simulated win probability 0.227",
+        "market consensus 0.087, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.868954+00:00",
-      "probability": 0.1539456888460055,
+      "predicted_at": "2026-08-30T07:38:21.813214+00:00",
+      "probability": 0.16707202720099612,
       "question": "Will S. Sierra win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 15
+      "submission": 12
     },
     {
       "base_rate": 0.225,
@@ -98,21 +102,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "ea467059-3f63-4fc0-9cd6-9a3b47735ee4",
       "market_weight": 0.0,
-      "model": 0.2165,
+      "model": 0.193,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.868954+00:00",
-      "probability": 0.2182,
+      "predicted_at": "2026-08-30T07:38:21.813214+00:00",
+      "probability": 0.193,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 22
+      "submission": 14
     }
   ],
   "match_id": "c4f9ff89-0536-4bec-a5a5-9426a11c36e0",

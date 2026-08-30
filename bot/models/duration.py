@@ -43,6 +43,7 @@ five-minute grid the competition sets its thresholds on.
 
 from __future__ import annotations
 
+import math
 from dataclasses import dataclass
 
 import numpy as np
@@ -78,6 +79,29 @@ def residual_sd_for(games: float, tour: str, best_of: int) -> float:
     return max(slope * float(games) + intercept, MIN_DURATION_SD)
 
 
+#: Correction applied to the simulator's expected total games, in games.
+#:
+#: Measured against real hard-court slam matches, 2025-2026: the simulator
+#: predicts 39.18 games where 36.94 are played on the men's draw, and 22.97
+#: against 22.04 on the women's.  Left uncorrected this pushed every duration
+#: forecast about 11 minutes long on the men's side, which is two steps on the
+#: five-minute grid the competition sets its thresholds on, and put us above the
+#: unconditional base rate on 60 of 64 Round 1 duration questions - a systematic
+#: lean in a first round full of mismatches, where the opposite was expected.
+#:
+#: A flat offset rather than a fitted regression on purpose.  ``mean_total_games``
+#: is an *expectation* over thousands of simulations, so it legitimately varies
+#: less across matchups than single realised matches do; regressing one on the
+#: other would rescale a quantity that is not mis-scaled, only mis-centred.
+GAMES_BIAS = {("ATP", 5): -2.24, ("ATP", 3): -1.20, ("WTA", 3): -0.93, ("WTA", 5): -0.93}
+
+
+def correct_games(games: float, tour: str, best_of: int) -> float:
+    """Remove the simulator's measured over-prediction of total games."""
+    offset = GAMES_BIAS.get((tour, best_of), 0.0)
+    return max(float(games) + offset, 6.0)
+
+
 #: Cap on the per-player pace adjustment, in minutes per match.  The measured
 #: spread is about +/-20 minutes per player; two slow players together should not
 #: be allowed to compound without limit.
@@ -94,15 +118,33 @@ class DurationForecast:
     pace_adjustment: float
 
     def probability_over(self, threshold_minutes: float) -> float:
-        """``P(duration > threshold)`` under a normal approximation.
+        """``P(duration > threshold)`` under a lognormal.
 
-        The residual around the games fit is close to symmetric and unimodal, so
-        a normal is adequate; the dominant uncertainty is the games distribution
-        itself, which the simulator handles exactly.
+        Match duration is right-skewed: a five-setter can run two hours past the
+        median but nothing finishes in under about forty minutes.  The men's
+        hard-court slam mean is 167.8 minutes against a median near 153, and a
+        normal centred on the mean therefore puts too much weight above every
+        threshold below it.  Measured on real 2025-2026 matches the normal
+        predicted 0.66 at the 150-minute line where 0.58 was realised, and it
+        over-predicted at all five thresholds tested on both draws.
+
+        The lognormal is parameterised to carry the same mean and standard
+        deviation, so this changes the shape of the tail without re-centring the
+        forecast or discarding the fitted spread.
         """
+        threshold = float(threshold_minutes)
+        if threshold <= 0.0:
+            return 1.0
         if self.sd_minutes <= 0:
-            return float(self.expected_minutes > threshold_minutes)
-        z = (float(threshold_minutes) - self.expected_minutes) / self.sd_minutes
+            return float(self.expected_minutes > threshold)
+        mean = max(float(self.expected_minutes), 1.0)
+        variance = float(self.sd_minutes) ** 2
+        sigma_sq = math.log1p(variance / (mean * mean))
+        if sigma_sq <= 0:
+            return float(mean > threshold)
+        sigma = math.sqrt(sigma_sq)
+        mu = math.log(mean) - 0.5 * sigma_sq
+        z = (math.log(threshold) - mu) / sigma
         return float(stats.norm.sf(z))
 
 
@@ -137,6 +179,7 @@ def forecast_duration(
         every point, so a fast player partly offsets a slow one.
     """
     slope, intercept, _ = DURATION_FIT.get((tour, best_of), DURATION_FIT[("ATP", 3)])
+    expected_games = correct_games(expected_games, tour, best_of)
     # Spread grows with match length by about 40% between short and long
     # matches, so it is read at the games estimate rather than fixed.
     residual_sd = residual_sd_for(expected_games, tour, best_of)

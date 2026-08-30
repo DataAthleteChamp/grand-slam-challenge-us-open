@@ -9,21 +9,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "b0e79c5f-4a58-4419-8a80-5476383f795d",
       "market_weight": 0.0,
-      "model": 0.6749196073358109,
+      "model": 0.656295849144836,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.874936+00:00",
-      "probability": 0.6536356858686487,
+      "predicted_at": "2026-08-30T07:38:21.817481+00:00",
+      "probability": 0.656295849144836,
       "question": "Will the match last longer than 85 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 65
+      "submission": 69
     },
     {
       "base_rate": 0.427,
@@ -32,40 +32,44 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "7bd2d38a-2109-4f23-8bd7-a13dd4cf25b9",
       "market_weight": 0.0,
-      "model": 0.588970782030631,
-      "notes": [],
+      "model": 0.5692406202054825,
+      "notes": [
+        "exposure 69 service points from 21.4 games"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.874936+00:00",
-      "probability": 0.5484780865229733,
+      "predicted_at": "2026-08-30T07:38:21.817481+00:00",
+      "probability": 0.5692406202054825,
       "question": "Will S. Cirstea record more aces than J. Grabher?",
       "rbp": null,
       "settled_at": "",
-      "submission": 55
+      "submission": 59
     },
     {
       "base_rate": 0.433,
       "brier": null,
-      "confidence": 0.75,
+      "confidence": 0.1,
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "6e6569fe-6123-4d02-8233-2c3c30a88240",
       "market_weight": 0.0,
-      "model": 0.3394781612629799,
-      "notes": [],
+      "model": 0.3633183768149645,
+      "notes": [
+        "exposure 69 service points from 21.4 games"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.874936+00:00",
-      "probability": 0.3628586209472349,
+      "predicted_at": "2026-08-30T07:38:21.817481+00:00",
+      "probability": 0.42359298087002023,
       "question": "Will S. Cirstea record more double faults than J. Grabher?",
       "rbp": null,
       "settled_at": "",
-      "submission": 36
+      "submission": 40
     },
     {
       "base_rate": 0.5,
@@ -74,22 +78,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
-      "lane": "honest",
+      "lane": "scenario",
       "market": 0.9006230529345252,
       "market_id": "32413c46-4e8b-4e25-9bed-eba96df8f88e",
-      "market_weight": 0.85,
-      "model": 0.871,
+      "market_weight": 0.34,
+      "model": 0.783,
       "notes": [
-        "simulated win probability 0.871",
-        "market consensus 0.901, weight 0.85"
+        "simulated win probability 0.783",
+        "market consensus 0.901, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.874936+00:00",
-      "probability": 0.8371108833161336,
+      "predicted_at": "2026-08-30T07:38:21.817481+00:00",
+      "probability": 0.8315079067517558,
       "question": "Will S. Cirstea win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 84
+      "submission": 88
     },
     {
       "base_rate": 0.225,
@@ -98,21 +102,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "70d0e492-dcf1-4ec9-bf56-a0d7fdfffa33",
       "market_weight": 0.0,
-      "model": 0.213,
+      "model": 0.19925,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.874936+00:00",
-      "probability": 0.21539999999999998,
+      "predicted_at": "2026-08-30T07:38:21.817481+00:00",
+      "probability": 0.19925,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 22
+      "submission": 15
     }
   ],
   "match_id": "7d611beb-5f87-4178-97cb-923ce2bcdc94",

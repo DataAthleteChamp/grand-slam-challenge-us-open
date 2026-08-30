@@ -9,21 +9,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "ef6fd77f-cd6e-4675-bb00-5bd457f6823c",
       "market_weight": 0.0,
-      "model": 0.6200563785989076,
+      "model": 0.6312205667248012,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.867412+00:00",
-      "probability": 0.6097451028791261,
+      "predicted_at": "2026-08-30T07:38:21.811328+00:00",
+      "probability": 0.6312205667248012,
       "question": "Will the match last longer than 85 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 61
+      "submission": 66
     },
     {
       "base_rate": 0.427,
@@ -32,40 +32,44 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "4e96fa5f-99d3-47cc-af92-3292a252817e",
       "market_weight": 0.0,
-      "model": 0.4897556903332161,
-      "notes": [],
+      "model": 0.4865299565422053,
+      "notes": [
+        "exposure 66 service points from 20.5 games"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.867412+00:00",
-      "probability": 0.4740667677499121,
+      "predicted_at": "2026-08-30T07:38:21.811328+00:00",
+      "probability": 0.4865299565422053,
       "question": "Will J. Pegula record more aces than E. Ruse?",
       "rbp": null,
       "settled_at": "",
-      "submission": 47
+      "submission": 48
     },
     {
       "base_rate": 0.433,
       "brier": null,
-      "confidence": 0.75,
+      "confidence": 0.1,
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "1b3fc35b-c5a9-4bb2-8264-f26eb5b14484",
       "market_weight": 0.0,
-      "model": 0.2665756176280556,
-      "notes": [],
+      "model": 0.29838426018212316,
+      "notes": [
+        "exposure 66 service points from 20.5 games"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.867412+00:00",
-      "probability": 0.3081817132210417,
+      "predicted_at": "2026-08-30T07:38:21.811328+00:00",
+      "probability": 0.41482687512458666,
       "question": "Will J. Pegula record more double faults than E. Ruse?",
       "rbp": null,
       "settled_at": "",
-      "submission": 31
+      "submission": 39
     },
     {
       "base_rate": 0.5,
@@ -74,22 +78,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
-      "lane": "honest",
-      "market": 0.8831168831598893,
+      "lane": "scenario",
+      "market": 0.8845256023215899,
       "market_id": "3b253bc4-1804-485e-a581-15d695e1cc68",
-      "market_weight": 0.85,
-      "model": 0.91125,
+      "market_weight": 0.34,
+      "model": 0.8235,
       "notes": [
-        "simulated win probability 0.911",
-        "market consensus 0.883, weight 0.85"
+        "simulated win probability 0.824",
+        "market consensus 0.885, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.867412+00:00",
-      "probability": 0.8296152866652735,
+      "predicted_at": "2026-08-30T07:38:21.811328+00:00",
+      "probability": 0.8466807108379244,
       "question": "Will J. Pegula win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 83
+      "submission": 89
     },
     {
       "base_rate": 0.225,
@@ -98,21 +102,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "371995cb-cc4c-493b-89da-dc5ce0b0de61",
       "market_weight": 0.0,
-      "model": 0.16125,
+      "model": 0.16,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.867412+00:00",
-      "probability": 0.174,
+      "predicted_at": "2026-08-30T07:38:21.811328+00:00",
+      "probability": 0.16,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 17
+      "submission": 11
     }
   ],
   "match_id": "b2208aa9-a969-4350-a2a2-0546679a8586",

@@ -9,63 +9,68 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "92b77692-4af3-4324-b744-5408545b9dcc",
       "market_weight": 0.0,
-      "model": 0.7653441453644019,
+      "model": 0.7646028958339659,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.887531+00:00",
-      "probability": 0.7303553162915215,
+      "predicted_at": "2026-08-30T07:38:21.833034+00:00",
+      "probability": 0.7646028958339659,
       "question": "Will the match last longer than 140 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 73
+      "submission": 81
     },
     {
       "base_rate": 0.46,
       "brier": null,
-      "confidence": 0.75,
+      "confidence": 0.9,
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "ba263608-0d69-4502-895f-0a622e23a5c3",
       "market_weight": 0.0,
-      "model": 0.31201661743276765,
-      "notes": [],
+      "model": 0.34477533386768733,
+      "notes": [
+        "exposure 116 service points from 37.1 games",
+        "outcome coupling: P(win)=0.372, delta=+0.60"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.887531+00:00",
-      "probability": 0.34901246307457573,
+      "predicted_at": "2026-08-30T07:38:21.833034+00:00",
+      "probability": 0.34477533386768733,
       "question": "Will J. Cerundolo record more aces than C. Ruud?",
       "rbp": null,
       "settled_at": "",
-      "submission": 35
+      "submission": 31
     },
     {
       "base_rate": 0.421,
       "brier": null,
-      "confidence": 0.75,
+      "confidence": 0.9,
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "77851f29-74bb-4df7-8077-7d4a3822f6df",
       "market_weight": 0.0,
-      "model": 0.6105147962957338,
-      "notes": [],
+      "model": 0.5968928317029523,
+      "notes": [
+        "exposure 116 service points from 37.1 games"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.887531+00:00",
-      "probability": 0.5631360972218004,
+      "predicted_at": "2026-08-30T07:38:21.833034+00:00",
+      "probability": 0.5968928317029523,
       "question": "Will J. Cerundolo record more double faults than C. Ruud?",
       "rbp": null,
       "settled_at": "",
-      "submission": 56
+      "submission": 62
     },
     {
       "base_rate": 0.5,
@@ -74,22 +79,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
-      "lane": "honest",
-      "market": 0.3649526035380735,
+      "lane": "scenario",
+      "market": 0.37211142766053196,
       "market_id": "0639e10d-f48e-4939-b9cb-e8d3bd1cad06",
-      "market_weight": 0.85,
-      "model": 0.116,
+      "market_weight": 0.34,
+      "model": 0.204,
       "notes": [
-        "simulated win probability 0.116",
-        "market consensus 0.365, weight 0.85"
+        "simulated win probability 0.204",
+        "market consensus 0.372, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.887531+00:00",
-      "probability": 0.343002039394557,
+      "predicted_at": "2026-08-30T07:38:21.833034+00:00",
+      "probability": 0.2541776784205767,
       "question": "Will J. Cerundolo win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 34
+      "submission": 21
     },
     {
       "base_rate": 0.13263821138211385,
@@ -98,21 +103,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "c512924b-e99c-4462-8013-bc03d864cdf8",
       "market_weight": 0.0,
-      "model": 0.139,
+      "model": 0.11275,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.887531+00:00",
-      "probability": 0.13772764227642278,
+      "predicted_at": "2026-08-30T07:38:21.833034+00:00",
+      "probability": 0.11275,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 14
+      "submission": 7
     }
   ],
   "match_id": "f45a85b0-d65d-484d-a78f-eec1b5b671fb",

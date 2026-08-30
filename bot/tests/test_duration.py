@@ -39,7 +39,13 @@ def test_forecast_duration_splits_games_and_pace():
     slow = forecast_duration(30, "ATP", 5, pace_a=15, pace_b=15)
     assert fast.expected_minutes < neutral.expected_minutes < slow.expected_minutes
     assert neutral.pace_adjustment == 0.0
-    assert neutral.from_games == pytest.approx(minutes_from_games(30, "ATP", 5))
+    # from_games reflects the bias-corrected games count, not the raw input:
+    # the simulator over-predicts games by 2.24 on the men's draw.
+    from bot.models.duration import correct_games
+
+    assert neutral.from_games == pytest.approx(
+        minutes_from_games(correct_games(30, "ATP", 5), "ATP", 5)
+    )
 
 
 def test_pace_is_averaged_not_summed():
@@ -65,7 +71,11 @@ def test_probability_over_is_monotonic_and_bounded():
     mid = forecast.probability_over(forecast.expected_minutes)
     low = forecast.probability_over(forecast.expected_minutes - 60)
     assert 0.0 <= high < mid < low <= 1.0
-    assert mid == pytest.approx(0.5, abs=0.01)
+    # Under a lognormal the median sits BELOW the mean, so P(> mean) is under
+    # 0.5. That is the point of the change: duration is right-skewed, and a
+    # normal centred on the mean over-predicted every threshold below it.
+    assert mid < 0.5
+    assert mid == pytest.approx(0.48, abs=0.03)
 
 
 def test_player_pace_recovers_a_planted_slow_player():
@@ -278,3 +288,71 @@ def test_duration_spread_never_collapses():
 
     assert residual_sd_for(0, "ATP", 5) >= MIN_DURATION_SD
     assert residual_sd_for(-5, "WTA", 3) >= MIN_DURATION_SD
+
+
+# ------------------------------------------- duration bias and skew (live)
+
+
+def test_simulator_games_bias_is_corrected():
+    """The simulator predicts 39.18 games where 36.94 are played on the men's
+    draw. Left uncorrected that pushed every duration forecast about 11 minutes
+    long - two steps on the five-minute grid the thresholds use - and put us
+    above the base rate on 60 of 64 Round 1 questions, in a first round full of
+    mismatches where the opposite was expected."""
+    from bot.models.duration import correct_games
+
+    assert correct_games(39.18, "ATP", 5) == pytest.approx(36.94, abs=0.05)
+    assert correct_games(22.97, "WTA", 3) == pytest.approx(22.04, abs=0.05)
+
+
+def test_games_correction_cannot_produce_an_impossible_match():
+    from bot.models.duration import correct_games
+
+    assert correct_games(0, "ATP", 5) >= 6.0
+    assert correct_games(-10, "WTA", 3) >= 6.0
+
+
+def test_duration_is_right_skewed_not_normal():
+    """A five-setter can run two hours past the median but nothing finishes in
+    under about forty minutes. The men's mean is 167.8 against a median near
+    153, so a normal centred on the mean over-predicts every threshold below it:
+    it gave 0.66 at the 150-minute line where 0.58 was realised.
+    """
+    from bot.models.duration import DurationForecast
+
+    forecast = DurationForecast(
+        expected_minutes=170.0, sd_minutes=45.0, from_games=37.0, pace_adjustment=0.0
+    )
+    # Under a lognormal the median sits below the mean, so P(> mean) < 0.5.
+    assert forecast.probability_over(170.0) < 0.5
+    # And the right tail is fatter than a normal's.
+    assert forecast.probability_over(300.0) > 0.0
+
+
+def test_duration_probability_is_monotone_and_bounded():
+    from bot.models.duration import DurationForecast
+
+    forecast = DurationForecast(
+        expected_minutes=110.0, sd_minutes=30.0, from_games=22.0, pace_adjustment=0.0
+    )
+    values = [forecast.probability_over(n) for n in range(30, 300, 10)]
+    assert values == sorted(values, reverse=True)
+    assert all(0.0 <= v <= 1.0 for v in values)
+    assert forecast.probability_over(0) == 1.0
+
+
+def test_duration_forecast_keeps_its_mean():
+    """The lognormal is parameterised to carry the same mean and sd, so this
+    changes the tail shape without re-centring the forecast."""
+    import math
+
+    from bot.models.duration import DurationForecast
+
+    mean, sd = 165.0, 40.0
+    forecast = DurationForecast(
+        expected_minutes=mean, sd_minutes=sd, from_games=36.0, pace_adjustment=0.0
+    )
+    sigma_sq = math.log1p((sd / mean) ** 2)
+    mu = math.log(mean) - 0.5 * sigma_sq
+    assert math.exp(mu + 0.5 * sigma_sq) == pytest.approx(mean, rel=1e-9)
+    assert forecast.probability_over(mean) < 0.5

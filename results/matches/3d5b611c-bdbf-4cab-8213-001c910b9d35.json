@@ -9,21 +9,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "1c1c4638-6818-46a7-8855-8f042228969e",
       "market_weight": 0.0,
-      "model": 0.7010110409355728,
+      "model": 0.6460039229584538,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.866322+00:00",
-      "probability": 0.6619088327484582,
+      "predicted_at": "2026-08-30T07:38:21.810181+00:00",
+      "probability": 0.6460039229584538,
       "question": "Will the match last longer than 90 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 66
+      "submission": 68
     },
     {
       "base_rate": 0.427,
@@ -32,40 +32,44 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "42b29c7d-4135-4fca-a902-cdd2073a2fe8",
       "market_weight": 0.0,
-      "model": 0.6168805796431185,
-      "notes": [],
+      "model": 0.5976147209436476,
+      "notes": [
+        "exposure 72 service points from 22.3 games"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.866322+00:00",
-      "probability": 0.5694104347323389,
+      "predicted_at": "2026-08-30T07:38:21.810181+00:00",
+      "probability": 0.5976147209436476,
       "question": "Will E. Alexandrova record more aces than M. Kessler?",
       "rbp": null,
       "settled_at": "",
-      "submission": 57
+      "submission": 62
     },
     {
       "base_rate": 0.433,
       "brier": null,
-      "confidence": 0.75,
+      "confidence": 0.1,
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "928b00c8-b2d4-40dc-8266-135cff2c7d2b",
       "market_weight": 0.0,
-      "model": 0.657464983980484,
-      "notes": [],
+      "model": 0.6433907383715892,
+      "notes": [
+        "exposure 72 service points from 22.3 games"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.866322+00:00",
-      "probability": 0.601348737985363,
+      "predicted_at": "2026-08-30T07:38:21.810181+00:00",
+      "probability": 0.4614027496801646,
       "question": "Will E. Alexandrova record more double faults than M. Kessler?",
       "rbp": null,
       "settled_at": "",
-      "submission": 60
+      "submission": 45
     },
     {
       "base_rate": 0.5,
@@ -74,22 +78,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
-      "lane": "honest",
-      "market": 0.6083873039872022,
+      "lane": "scenario",
+      "market": 0.5839461194830183,
       "market_id": "00bb24fd-735e-4dda-80f9-816bbc5e1874",
-      "market_weight": 0.85,
-      "model": 0.70925,
+      "market_weight": 0.34,
+      "model": 0.64275,
       "notes": [
-        "simulated win probability 0.709",
-        "market consensus 0.608, weight 0.85"
+        "simulated win probability 0.643",
+        "market consensus 0.584, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.866322+00:00",
-      "probability": 0.6057305924383476,
+      "predicted_at": "2026-08-30T07:38:21.810181+00:00",
+      "probability": 0.6231380540802526,
       "question": "Will E. Alexandrova win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 61
+      "submission": 65
     },
     {
       "base_rate": 0.225,
@@ -98,21 +102,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "d6b74082-8f9e-4720-8ed7-6ba122b26f7d",
       "market_weight": 0.0,
-      "model": 0.25875,
+      "model": 0.207,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.866322+00:00",
-      "probability": 0.252,
+      "predicted_at": "2026-08-30T07:38:21.810181+00:00",
+      "probability": 0.207,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 25
+      "submission": 16
     }
   ],
   "match_id": "3d5b611c-bdbf-4cab-8213-001c910b9d35",

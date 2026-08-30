@@ -1,0 +1,98 @@
+{
+  "event": {
+    "id": "0cf0efd1-7e12-4ca9-8068-89eb48466a37",
+    "title": "Grand Slam Challenge"
+  },
+  "generated_at": "20260830T071216Z",
+  "lobby": {
+    "id": "b1419bb4-6dff-4172-9a42-a206b0a24ad9"
+  },
+  "matches": {
+    "346a50ab-7569-4817-ad31-20fef822dfdf": {
+      "player_a": "Jasmine Paolini",
+      "player_b": "Veronika Erjavec",
+      "questions": [
+        {
+          "base_rate": 0.5685,
+          "confidence": 0.8,
+          "family": "match_duration",
+          "lane": "honest",
+          "market": null,
+          "market_id": "30778e48-dcf9-4aa7-85c0-88ac00a17d0f",
+          "market_weight": 0.0,
+          "model": 0.757,
+          "notes": [],
+          "probability": 0.7193,
+          "submission": 72
+        },
+        {
+          "base_rate": 0.427,
+          "confidence": 0.45,
+          "family": "aces_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "283c61d5-4247-4601-9d3e-8c6c4b7fc2f0",
+          "market_weight": 0.0,
+          "model": 0.583,
+          "notes": [
+            "exposure 74 service points from 22.9 games"
+          ],
+          "probability": 0.4972,
+          "submission": 50
+        },
+        {
+          "base_rate": 0.433,
+          "confidence": 0.45,
+          "family": "double_faults_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "2d78d743-0b68-4d62-a215-f8bc82873510",
+          "market_weight": 0.0,
+          "model": 0.5573,
+          "notes": [
+            "exposure 74 service points from 22.9 games"
+          ],
+          "probability": 0.4889,
+          "submission": 49
+        },
+        {
+          "base_rate": 0.5,
+          "confidence": 0.7,
+          "family": "match_winner",
+          "lane": "honest",
+          "market": null,
+          "market_id": "e6d28fbf-d0d0-4dd5-b560-adec11876882",
+          "market_weight": 0.0,
+          "model": 0.3028,
+          "notes": [
+            "simulated win probability 0.303",
+            "no market quote; this is the family that most needs one"
+          ],
+          "probability": 0.3619,
+          "submission": 36
+        },
+        {
+          "base_rate": 0.225,
+          "confidence": 0.8,
+          "family": "tiebreak",
+          "lane": "honest",
+          "market": null,
+          "market_id": "53fb45c9-a4f5-421b-92c9-2ff8f555fd73",
+          "market_weight": 0.0,
+          "model": 0.2372,
+          "notes": [],
+          "probability": 0.2348,
+          "submission": 23
+        }
+      ],
+      "rated_a": true,
+      "rated_b": true,
+      "round": "R128",
+      "tour": "WTA"
+    }
+  },
+  "n_matches": 1,
+  "n_questions": 5,
+  "roster_misses": [],
+  "unparsed": []
+}

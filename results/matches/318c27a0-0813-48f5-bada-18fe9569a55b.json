@@ -9,63 +9,68 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "645ae494-a9f0-40a0-881d-db26114d0c78",
       "market_weight": 0.0,
-      "model": 0.844509748641952,
+      "model": 0.8396394288516471,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.883584+00:00",
-      "probability": 0.8191877989135616,
+      "predicted_at": "2026-08-30T07:38:21.828660+00:00",
+      "probability": 0.8396394288516471,
       "question": "Will the match last longer than 125 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 82
+      "submission": 89
     },
     {
       "base_rate": 0.46,
       "brier": null,
-      "confidence": 0.75,
+      "confidence": 0.9,
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "005133db-5232-48af-99fd-d6b17a7f5ea3",
       "market_weight": 0.0,
-      "model": 0.014207013451625006,
-      "notes": [],
+      "model": 0.050828709474866084,
+      "notes": [
+        "exposure 116 service points from 37.3 games",
+        "outcome coupling: P(win)=0.156, delta=+0.60"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.883584+00:00",
-      "probability": 0.12565526008871875,
+      "predicted_at": "2026-08-30T07:38:21.828660+00:00",
+      "probability": 0.050828709474866084,
       "question": "Will S. Baez record more aces than B. Nakashima?",
       "rbp": null,
       "settled_at": "",
-      "submission": 13
+      "submission": 3
     },
     {
       "base_rate": 0.421,
       "brier": null,
-      "confidence": 0.75,
+      "confidence": 0.9,
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "507669a3-efb0-4029-ae72-19606ea58056",
       "market_weight": 0.0,
-      "model": 0.5266085324017273,
-      "notes": [],
+      "model": 0.523368653627941,
+      "notes": [
+        "exposure 116 service points from 37.3 games"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.883584+00:00",
-      "probability": 0.5002063993012955,
+      "predicted_at": "2026-08-30T07:38:21.828660+00:00",
+      "probability": 0.523368653627941,
       "question": "Will S. Baez record more double faults than B. Nakashima?",
       "rbp": null,
       "settled_at": "",
-      "submission": 50
+      "submission": 53
     },
     {
       "base_rate": 0.5,
@@ -74,22 +79,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
-      "lane": "honest",
+      "lane": "scenario",
       "market": 0.15612648223511225,
       "market_id": "cf3f48d7-41dc-407a-a64e-a6820c3b16f0",
-      "market_weight": 0.85,
-      "model": 0.14725,
+      "market_weight": 0.34,
+      "model": 0.22975,
       "notes": [
-        "simulated win probability 0.147",
-        "market consensus 0.156, weight 0.85"
+        "simulated win probability 0.230",
+        "market consensus 0.156, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.883584+00:00",
-      "probability": 0.20655257740625585,
+      "predicted_at": "2026-08-30T07:38:21.828660+00:00",
+      "probability": 0.20227888007204775,
       "question": "Will S. Baez win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 21
+      "submission": 15
     },
     {
       "base_rate": 0.13263821138211385,
@@ -98,21 +103,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "b956d713-f1b4-4099-9986-071ff78a4300",
       "market_weight": 0.0,
-      "model": 0.128,
+      "model": 0.09925,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.883584+00:00",
-      "probability": 0.12892764227642278,
+      "predicted_at": "2026-08-30T07:38:21.828660+00:00",
+      "probability": 0.09925,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 13
+      "submission": 6
     }
   ],
   "match_id": "318c27a0-0813-48f5-bada-18fe9569a55b",

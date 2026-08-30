@@ -9,17 +9,17 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "1c5e0f5c-366d-475b-b800-14136d72512b",
       "market_weight": 0.0,
-      "model": 0.6264029429186388,
+      "model": 0.5749058005054494,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.872239+00:00",
-      "probability": 0.5912023543349111,
+      "predicted_at": "2026-08-30T07:38:21.816196+00:00",
+      "probability": 0.5749058005054494,
       "question": "Will the match last longer than 95 minutes?",
       "rbp": null,
       "settled_at": "",
@@ -32,40 +32,44 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "5d31c7cc-b1d3-41cb-bda4-9ecbd6a25e73",
       "market_weight": 0.0,
-      "model": 0.48038355994549475,
-      "notes": [],
+      "model": 0.4831376986833135,
+      "notes": [
+        "exposure 70 service points from 21.7 games"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.872239+00:00",
-      "probability": 0.4670376699591211,
+      "predicted_at": "2026-08-30T07:38:21.816196+00:00",
+      "probability": 0.4831376986833135,
       "question": "Will A. Blinkova record more aces than A. Kalinskaya?",
       "rbp": null,
       "settled_at": "",
-      "submission": 47
+      "submission": 48
     },
     {
       "base_rate": 0.433,
       "brier": null,
-      "confidence": 0.75,
+      "confidence": 0.1,
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "67ccacb4-f5bb-407f-b259-9496c8384aa2",
       "market_weight": 0.0,
-      "model": 0.480351497550879,
-      "notes": [],
+      "model": 0.48661542634594923,
+      "notes": [
+        "exposure 70 service points from 21.7 games"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.872239+00:00",
-      "probability": 0.4685136231631593,
+      "predicted_at": "2026-08-30T07:38:21.816196+00:00",
+      "probability": 0.44023808255670316,
       "question": "Will A. Blinkova record more double faults than A. Kalinskaya?",
       "rbp": null,
       "settled_at": "",
-      "submission": 47
+      "submission": 43
     },
     {
       "base_rate": 0.5,
@@ -74,22 +78,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
-      "lane": "honest",
-      "market": 0.2590627763297049,
+      "lane": "scenario",
+      "market": 0.25824175819802286,
       "market_id": "3474d89c-1174-414a-8fa0-d46ecd6e797f",
-      "market_weight": 0.85,
-      "model": 0.23625,
+      "market_weight": 0.34,
+      "model": 0.3035,
       "notes": [
-        "simulated win probability 0.236",
-        "market consensus 0.259, weight 0.85"
+        "simulated win probability 0.303",
+        "market consensus 0.258, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.872239+00:00",
-      "probability": 0.2922185424071687,
+      "predicted_at": "2026-08-30T07:38:21.816196+00:00",
+      "probability": 0.2876149169340172,
       "question": "Will A. Blinkova win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 29
+      "submission": 24
     },
     {
       "base_rate": 0.020454545454545454,
@@ -98,21 +102,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "724ada9c-bf97-4298-9ced-b82955fc4a1e",
       "market_weight": 0.0,
-      "model": 0.018,
+      "model": 0.011,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.872239+00:00",
-      "probability": 0.01849090909090909,
+      "predicted_at": "2026-08-30T07:38:21.816196+00:00",
+      "probability": 0.011,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 3
+      "submission": 2
     }
   ],
   "match_id": "7bb62315-64cb-41aa-aa22-c52309acee58",

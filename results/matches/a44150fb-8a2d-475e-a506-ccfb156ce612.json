@@ -9,21 +9,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "eeed8fa6-5595-44d2-a051-16aa4d2b562d",
       "market_weight": 0.0,
-      "model": 0.7365408016957202,
+      "model": 0.6736690984380457,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.878593+00:00",
-      "probability": 0.6903326413565761,
+      "predicted_at": "2026-08-30T07:38:21.820849+00:00",
+      "probability": 0.6736690984380457,
       "question": "Will the match last longer than 90 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 69
+      "submission": 71
     },
     {
       "base_rate": 0.427,
@@ -32,40 +32,44 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "63eff6a0-1b1a-4969-a8a7-467a590d65cd",
       "market_weight": 0.0,
-      "model": 0.25030729828739906,
-      "notes": [],
+      "model": 0.2843215578105529,
+      "notes": [
+        "exposure 71 service points from 22.0 games"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.878593+00:00",
-      "probability": 0.2944804737155493,
+      "predicted_at": "2026-08-30T07:38:21.820849+00:00",
+      "probability": 0.2843215578105529,
       "question": "Will S. Bejlek record more aces than C. Bucsa?",
       "rbp": null,
       "settled_at": "",
-      "submission": 29
+      "submission": 24
     },
     {
       "base_rate": 0.433,
       "brier": null,
-      "confidence": 0.75,
+      "confidence": 0.1,
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "6d2d8883-e221-4c76-9cc1-ed46b511809a",
       "market_weight": 0.0,
-      "model": 0.42561419821605917,
-      "notes": [],
+      "model": 0.43971965366156013,
+      "notes": [
+        "exposure 71 service points from 22.0 games"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.878593+00:00",
-      "probability": 0.4274606486620444,
+      "predicted_at": "2026-08-30T07:38:21.820849+00:00",
+      "probability": 0.4339071532443106,
       "question": "Will S. Bejlek record more double faults than C. Bucsa?",
       "rbp": null,
       "settled_at": "",
-      "submission": 43
+      "submission": 42
     },
     {
       "base_rate": 0.5,
@@ -74,22 +78,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
-      "lane": "honest",
-      "market": 0.7701298701744874,
+      "lane": "scenario",
+      "market": 0.7701869337431446,
       "market_id": "fb90e69a-bff1-44aa-b111-29e7b2cda037",
-      "market_weight": 0.85,
-      "model": 0.64325,
+      "market_weight": 0.34,
+      "model": 0.59775,
       "notes": [
-        "simulated win probability 0.643",
-        "market consensus 0.770, weight 0.85"
+        "simulated win probability 0.598",
+        "market consensus 0.770, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.878593+00:00",
-      "probability": 0.7152769072778566,
+      "predicted_at": "2026-08-30T07:38:21.820849+00:00",
+      "probability": 0.6620873381715369,
       "question": "Will S. Bejlek win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 72
+      "submission": 70
     },
     {
       "base_rate": 0.225,
@@ -98,21 +102,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "8099f7ff-88a4-4dce-8b60-8ff048a2fbe9",
       "market_weight": 0.0,
-      "model": 0.22825,
+      "model": 0.17725,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.878593+00:00",
-      "probability": 0.2276,
+      "predicted_at": "2026-08-30T07:38:21.820849+00:00",
+      "probability": 0.17725,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 23
+      "submission": 13
     }
   ],
   "match_id": "a44150fb-8a2d-475e-a506-ccfb156ce612",

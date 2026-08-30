@@ -9,63 +9,68 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "72932e12-44a5-464f-8dae-efcc5ea91543",
       "market_weight": 0.0,
-      "model": 0.8273525416647853,
+      "model": 0.8474247524066489,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.868563+00:00",
-      "probability": 0.8313020333318282,
+      "predicted_at": "2026-08-30T07:38:21.812840+00:00",
+      "probability": 0.8474247524066489,
       "question": "Will the match last longer than 110 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 83
+      "submission": 90
     },
     {
       "base_rate": 0.46,
       "brier": null,
-      "confidence": 0.75,
+      "confidence": 0.9,
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "af9a614f-5979-4434-902d-a39d702d3480",
       "market_weight": 0.0,
-      "model": 0.8288463118654139,
-      "notes": [],
+      "model": 0.789228661569303,
+      "notes": [
+        "exposure 99 service points from 31.9 games",
+        "outcome coupling: P(win)=0.817, delta=+0.60"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.868563+00:00",
-      "probability": 0.7366347338990604,
+      "predicted_at": "2026-08-30T07:38:21.812840+00:00",
+      "probability": 0.789228661569303,
       "question": "Will N. Djokovic record more aces than M. Navone?",
       "rbp": null,
       "settled_at": "",
-      "submission": 74
+      "submission": 84
     },
     {
       "base_rate": 0.421,
       "brier": null,
-      "confidence": 0.75,
+      "confidence": 0.9,
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "8aba4ecd-f968-4282-b567-b4d1131e4c02",
       "market_weight": 0.0,
-      "model": 0.36401277568028256,
-      "notes": [],
+      "model": 0.3794399269598099,
+      "notes": [
+        "exposure 99 service points from 31.9 games"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.868563+00:00",
-      "probability": 0.37825958176021196,
+      "predicted_at": "2026-08-30T07:38:21.812840+00:00",
+      "probability": 0.3794399269598099,
       "question": "Will N. Djokovic record more double faults than M. Navone?",
       "rbp": null,
       "settled_at": "",
-      "submission": 38
+      "submission": 35
     },
     {
       "base_rate": 0.5,
@@ -74,22 +79,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
-      "lane": "honest",
-      "market": 0.8176240666740529,
+      "lane": "scenario",
+      "market": 0.8165091033146277,
       "market_id": "c23338d2-165d-44eb-8fcd-98e651056f69",
-      "market_weight": 0.85,
-      "model": 0.9895,
+      "market_weight": 0.34,
+      "model": 0.94275,
       "notes": [
-        "simulated win probability 0.990",
-        "market consensus 0.818, weight 0.85"
+        "simulated win probability 0.943",
+        "market consensus 0.817, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.868563+00:00",
-      "probability": 0.8197911413057553,
+      "predicted_at": "2026-08-30T07:38:21.812840+00:00",
+      "probability": 0.9134481791927485,
       "question": "Will N. Djokovic win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 82
+      "submission": 95
     },
     {
       "base_rate": 0.487,
@@ -98,21 +103,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "b41ed332-aace-42e6-ab79-944d372de125",
       "market_weight": 0.0,
-      "model": 0.27525,
+      "model": 0.313,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.868563+00:00",
-      "probability": 0.3176,
+      "predicted_at": "2026-08-30T07:38:21.812840+00:00",
+      "probability": 0.313,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 32
+      "submission": 27
     }
   ],
   "match_id": "0c453cdf-d5bc-412f-bd8f-f508a249fa2b",

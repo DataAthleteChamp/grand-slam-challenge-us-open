@@ -9,63 +9,68 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "5264f967-5d57-46ec-9556-5cac6c2b27a9",
       "market_weight": 0.0,
-      "model": 0.7641195368690197,
+      "model": 0.7463507171751222,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.864608+00:00",
-      "probability": 0.7293756294952157,
+      "predicted_at": "2026-08-30T07:38:21.808258+00:00",
+      "probability": 0.7463507171751222,
       "question": "Will the match last longer than 140 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 73
+      "submission": 79
     },
     {
       "base_rate": 0.46,
       "brier": null,
-      "confidence": 0.75,
+      "confidence": 0.9,
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "f0250651-a5d5-4ff6-b6e6-394e78106c91",
       "market_weight": 0.0,
-      "model": 0.18366330032521994,
-      "notes": [],
+      "model": 0.36503301613493255,
+      "notes": [
+        "exposure 115 service points from 36.9 games",
+        "outcome coupling: P(win)=0.842, delta=+0.60"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.864608+00:00",
-      "probability": 0.25274747524391494,
+      "predicted_at": "2026-08-30T07:38:21.808258+00:00",
+      "probability": 0.36503301613493255,
       "question": "Will T. Paul record more aces than C. Wong?",
       "rbp": null,
       "settled_at": "",
-      "submission": 25
+      "submission": 33
     },
     {
       "base_rate": 0.421,
       "brier": null,
-      "confidence": 0.75,
+      "confidence": 0.9,
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "5d72fa1f-7815-4ed3-98bc-c8b3be5e14d4",
       "market_weight": 0.0,
-      "model": 0.37013720575516895,
-      "notes": [],
+      "model": 0.3880523919817183,
+      "notes": [
+        "exposure 115 service points from 36.9 games"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.864608+00:00",
-      "probability": 0.3828529043163767,
+      "predicted_at": "2026-08-30T07:38:21.808258+00:00",
+      "probability": 0.3880523919817183,
       "question": "Will T. Paul record more double faults than C. Wong?",
       "rbp": null,
       "settled_at": "",
-      "submission": 38
+      "submission": 36
     },
     {
       "base_rate": 0.5,
@@ -74,22 +79,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
-      "lane": "honest",
-      "market": 0.8620341861794748,
+      "lane": "scenario",
+      "market": 0.8421900161000982,
       "market_id": "9c01d54e-1b97-4ace-8ec4-a2e99a73b003",
-      "market_weight": 0.85,
-      "model": 0.835,
+      "market_weight": 0.34,
+      "model": 0.75075,
       "notes": [
-        "simulated win probability 0.835",
-        "market consensus 0.862, weight 0.85"
+        "simulated win probability 0.751",
+        "market consensus 0.842, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.864608+00:00",
-      "probability": 0.804495757036541,
+      "predicted_at": "2026-08-30T07:38:21.808258+00:00",
+      "probability": 0.7853457566073496,
       "question": "Will T. Paul win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 80
+      "submission": 83
     },
     {
       "base_rate": 0.487,
@@ -98,21 +103,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "37bf61f4-4d0d-479b-9685-da97113cb97c",
       "market_weight": 0.0,
-      "model": 0.48075,
+      "model": 0.431,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.864608+00:00",
-      "probability": 0.48200000000000004,
+      "predicted_at": "2026-08-30T07:38:21.808258+00:00",
+      "probability": 0.431,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 48
+      "submission": 41
     }
   ],
   "match_id": "7b4ab637-0f5a-436a-b74a-2317354229a0",

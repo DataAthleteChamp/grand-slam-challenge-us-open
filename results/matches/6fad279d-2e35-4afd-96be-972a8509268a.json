@@ -9,21 +9,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "8a592fd8-c287-41c0-a423-d97e2f7683bf",
       "market_weight": 0.0,
-      "model": 0.7134498808236198,
+      "model": 0.668688632782691,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.888908+00:00",
-      "probability": 0.684459904658896,
+      "predicted_at": "2026-08-30T07:38:21.835376+00:00",
+      "probability": 0.668688632782691,
       "question": "Will the match last longer than 85 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 68
+      "submission": 71
     },
     {
       "base_rate": 0.427,
@@ -32,36 +32,40 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "95cc4d6c-06a7-44f6-8443-4ba11d4ac7f9",
       "market_weight": 0.0,
-      "model": 0.3571342135099633,
-      "notes": [],
+      "model": 0.38745385373377283,
+      "notes": [
+        "exposure 72 service points from 22.2 games"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.888908+00:00",
-      "probability": 0.3746006601324725,
+      "predicted_at": "2026-08-30T07:38:21.835376+00:00",
+      "probability": 0.38745385373377283,
       "question": "Will A. Anisimova record more aces than A. Krueger?",
       "rbp": null,
       "settled_at": "",
-      "submission": 37
+      "submission": 36
     },
     {
       "base_rate": 0.433,
       "brier": null,
-      "confidence": 0.75,
+      "confidence": 0.1,
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "ea55ee38-7dfd-4da5-9387-f0130bfba79f",
       "market_weight": 0.0,
-      "model": 0.40016441352572063,
-      "notes": [],
+      "model": 0.41804403806791635,
+      "notes": [
+        "exposure 72 service points from 22.2 games"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.888908+00:00",
-      "probability": 0.4083733101442905,
+      "predicted_at": "2026-08-30T07:38:21.835376+00:00",
+      "probability": 0.43098094513916874,
       "question": "Will A. Anisimova record more double faults than A. Krueger?",
       "rbp": null,
       "settled_at": "",
@@ -74,22 +78,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
-      "lane": "honest",
+      "lane": "scenario",
       "market": 0.8347826086462169,
       "market_id": "c645acb5-ec9c-4bdf-8c6f-8bb253ea0e41",
-      "market_weight": 0.85,
-      "model": 0.761,
+      "market_weight": 0.34,
+      "model": 0.68275,
       "notes": [
-        "simulated win probability 0.761",
-        "market consensus 0.835, weight 0.85"
+        "simulated win probability 0.683",
+        "market consensus 0.835, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.888908+00:00",
-      "probability": 0.7762562448857635,
+      "predicted_at": "2026-08-30T07:38:21.835376+00:00",
+      "probability": 0.7420438335999179,
       "question": "Will A. Anisimova win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 78
+      "submission": 79
     },
     {
       "base_rate": 0.225,
@@ -98,21 +102,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "b6f2df94-07b1-41bb-9f53-5a4a44849a12",
       "market_weight": 0.0,
-      "model": 0.26025,
+      "model": 0.2155,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.888908+00:00",
-      "probability": 0.2532,
+      "predicted_at": "2026-08-30T07:38:21.835376+00:00",
+      "probability": 0.2155,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 25
+      "submission": 17
     }
   ],
   "match_id": "6fad279d-2e35-4afd-96be-972a8509268a",

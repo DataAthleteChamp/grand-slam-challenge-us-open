@@ -9,63 +9,68 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "d6a7f877-ccf2-4661-af74-f013eab43d7a",
       "market_weight": 0.0,
-      "model": 0.9089277644502844,
+      "model": 0.9149041904812045,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.884667+00:00",
-      "probability": 0.9095422115602276,
+      "predicted_at": "2026-08-30T07:38:21.829975+00:00",
+      "probability": 0.9149041904812045,
       "question": "Will the match last longer than 100 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 91
+      "submission": 95
     },
     {
       "base_rate": 0.46,
       "brier": null,
-      "confidence": 0.75,
+      "confidence": 0.9,
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "9b4ec192-e692-4be3-bce7-c1cbe6709760",
       "market_weight": 0.0,
-      "model": 0.13207681733450782,
-      "notes": [],
+      "model": 0.144514565140882,
+      "notes": [
+        "exposure 116 service points from 37.1 games",
+        "outcome coupling: P(win)=0.046, delta=+0.60"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.884667+00:00",
-      "probability": 0.2140576130008809,
+      "predicted_at": "2026-08-30T07:38:21.829975+00:00",
+      "probability": 0.144514565140882,
       "question": "Will D. Blanch record more aces than T. Fritz?",
       "rbp": null,
       "settled_at": "",
-      "submission": 21
+      "submission": 10
     },
     {
       "base_rate": 0.421,
       "brier": null,
-      "confidence": 0.75,
+      "confidence": 0.9,
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "5cac6828-2b85-4aa8-a961-286572c3974b",
       "market_weight": 0.0,
-      "model": 0.5601562056465543,
-      "notes": [],
+      "model": 0.553129209398954,
+      "notes": [
+        "exposure 116 service points from 37.1 games"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.884667+00:00",
-      "probability": 0.5253671542349158,
+      "predicted_at": "2026-08-30T07:38:21.829975+00:00",
+      "probability": 0.553129209398954,
       "question": "Will D. Blanch record more double faults than T. Fritz?",
       "rbp": null,
       "settled_at": "",
-      "submission": 53
+      "submission": 57
     },
     {
       "base_rate": 0.5,
@@ -74,22 +79,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
-      "lane": "honest",
-      "market": 0.04789644018503136,
+      "lane": "scenario",
+      "market": 0.045813106839232655,
       "market_id": "3529880e-b300-4120-8967-ace0f25d64db",
-      "market_weight": 0.85,
-      "model": 0.061,
+      "market_weight": 0.34,
+      "model": 0.142,
       "notes": [
-        "simulated win probability 0.061",
-        "market consensus 0.048, weight 0.85"
+        "simulated win probability 0.142",
+        "market consensus 0.046, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.884667+00:00",
-      "probability": 0.1172246836845709,
+      "predicted_at": "2026-08-30T07:38:21.829975+00:00",
+      "probability": 0.09801023859808014,
       "question": "Will D. Blanch win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 12
+      "submission": 6
     },
     {
       "base_rate": 0.487,
@@ -98,21 +103,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "fedcc35c-f012-46df-a86b-747c74e6e263",
       "market_weight": 0.0,
-      "model": 0.559,
+      "model": 0.5455,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.884667+00:00",
-      "probability": 0.5446,
+      "predicted_at": "2026-08-30T07:38:21.829975+00:00",
+      "probability": 0.5455,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 54
+      "submission": 56
     }
   ],
   "match_id": "48d5e726-5036-4db7-88f2-4aa3fe6d2b4b",

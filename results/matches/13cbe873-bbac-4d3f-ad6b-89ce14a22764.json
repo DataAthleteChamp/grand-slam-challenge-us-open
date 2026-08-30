@@ -9,21 +9,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "d758dc75-600a-42a8-9007-b1a02cd84ffa",
       "market_weight": 0.0,
-      "model": 0.6625651583280198,
+      "model": 0.6476520083278108,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.881103+00:00",
-      "probability": 0.6437521266624159,
+      "predicted_at": "2026-08-30T07:38:21.824947+00:00",
+      "probability": 0.6476520083278108,
       "question": "Will the match last longer than 85 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 64
+      "submission": 68
     },
     {
       "base_rate": 0.427,
@@ -32,40 +32,44 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "7fba1f47-bc5d-4ed8-8679-e54f694b1d76",
       "market_weight": 0.0,
-      "model": 0.6689277620535028,
-      "notes": [],
+      "model": 0.6320406768745552,
+      "notes": [
+        "exposure 67 service points from 20.9 games"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.881103+00:00",
-      "probability": 0.608445821540127,
+      "predicted_at": "2026-08-30T07:38:21.824947+00:00",
+      "probability": 0.6320406768745552,
       "question": "Will C. Gauff record more aces than Z. Sonmez?",
       "rbp": null,
       "settled_at": "",
-      "submission": 61
+      "submission": 66
     },
     {
       "base_rate": 0.433,
       "brier": null,
-      "confidence": 0.75,
+      "confidence": 0.1,
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "eea04b86-e70c-4be2-a722-c57a45a933be",
       "market_weight": 0.0,
-      "model": 0.5972359384943264,
-      "notes": [],
+      "model": 0.5838375582015695,
+      "notes": [
+        "exposure 67 service points from 20.9 games"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.881103+00:00",
-      "probability": 0.5561769538707448,
+      "predicted_at": "2026-08-30T07:38:21.824947+00:00",
+      "probability": 0.4533630703572119,
       "question": "Will C. Gauff record more double faults than Z. Sonmez?",
       "rbp": null,
       "settled_at": "",
-      "submission": 56
+      "submission": 44
     },
     {
       "base_rate": 0.5,
@@ -74,22 +78,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
-      "lane": "honest",
+      "lane": "scenario",
       "market": 0.9353757892379595,
       "market_id": "2eac6cdb-f410-4157-ad82-7099fc68ab05",
-      "market_weight": 0.85,
-      "model": 0.8795,
+      "market_weight": 0.34,
+      "model": 0.78775,
       "notes": [
-        "simulated win probability 0.879",
-        "market consensus 0.935, weight 0.85"
+        "simulated win probability 0.788",
+        "market consensus 0.935, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.881103+00:00",
-      "probability": 0.8645508052853286,
+      "predicted_at": "2026-08-30T07:38:21.824947+00:00",
+      "probability": 0.8549713527747841,
       "question": "Will C. Gauff win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 86
+      "submission": 90
     },
     {
       "base_rate": 0.225,
@@ -98,21 +102,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "3412c4bb-89ba-4d6f-89a7-9f0bfc5895f3",
       "market_weight": 0.0,
-      "model": 0.17475,
+      "model": 0.1655,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.881103+00:00",
-      "probability": 0.1848,
+      "predicted_at": "2026-08-30T07:38:21.824947+00:00",
+      "probability": 0.1655,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 18
+      "submission": 12
     }
   ],
   "match_id": "13cbe873-bbac-4d3f-ad6b-89ce14a22764",

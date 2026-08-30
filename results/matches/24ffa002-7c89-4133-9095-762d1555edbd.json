@@ -9,63 +9,68 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "06146484-4548-40c6-a87b-5cc96d05c8c7",
       "market_weight": 0.0,
-      "model": 0.8227536136406335,
+      "model": 0.7933499990874754,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.864856+00:00",
-      "probability": 0.7762828909125068,
+      "predicted_at": "2026-08-30T07:38:21.808657+00:00",
+      "probability": 0.7933499990874754,
       "question": "Will the match last longer than 140 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 78
+      "submission": 84
     },
     {
       "base_rate": 0.46,
       "brier": null,
-      "confidence": 0.75,
+      "confidence": 0.9,
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "1d00c838-9527-4a9b-8bef-82d4a7c79a69",
       "market_weight": 0.0,
-      "model": 0.5781755285355386,
-      "notes": [],
+      "model": 0.5957879911804094,
+      "notes": [
+        "exposure 117 service points from 37.5 games",
+        "outcome coupling: P(win)=0.659, delta=+0.60"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.864856+00:00",
-      "probability": 0.548631646401654,
+      "predicted_at": "2026-08-30T07:38:21.808657+00:00",
+      "probability": 0.5957879911804094,
       "question": "Will C. Norrie record more aces than L. van Assche?",
       "rbp": null,
       "settled_at": "",
-      "submission": 55
+      "submission": 62
     },
     {
       "base_rate": 0.421,
       "brier": null,
-      "confidence": 0.75,
+      "confidence": 0.9,
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "f07d5b14-19ec-42e1-be96-cc6b165e7a90",
       "market_weight": 0.0,
-      "model": 0.2933859929935312,
-      "notes": [],
+      "model": 0.32055185854598056,
+      "notes": [
+        "exposure 117 service points from 37.5 games"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.864856+00:00",
-      "probability": 0.3252894947451484,
+      "predicted_at": "2026-08-30T07:38:21.808657+00:00",
+      "probability": 0.32055185854598056,
       "question": "Will C. Norrie record more double faults than L. van Assche?",
       "rbp": null,
       "settled_at": "",
-      "submission": 33
+      "submission": 28
     },
     {
       "base_rate": 0.5,
@@ -74,22 +79,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
-      "lane": "honest",
-      "market": 0.6592664092853323,
+      "lane": "scenario",
+      "market": 0.6594148510206377,
       "market_id": "db8cda52-de50-410e-a7b9-b78736ba3db3",
-      "market_weight": 0.85,
-      "model": 0.73475,
+      "market_weight": 0.34,
+      "model": 0.6705,
       "notes": [
-        "simulated win probability 0.735",
-        "market consensus 0.659, weight 0.85"
+        "simulated win probability 0.670",
+        "market consensus 0.659, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.864856+00:00",
-      "probability": 0.6455638784967133,
+      "predicted_at": "2026-08-30T07:38:21.808657+00:00",
+      "probability": 0.6667515242505997,
       "question": "Will C. Norrie win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 65
+      "submission": 70
     },
     {
       "base_rate": 0.13263821138211385,
@@ -98,21 +103,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "90e6d128-0217-4c1d-9a8c-de8dc7a4e3b7",
       "market_weight": 0.0,
-      "model": 0.11025,
+      "model": 0.0725,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.864856+00:00",
-      "probability": 0.11472764227642276,
+      "predicted_at": "2026-08-30T07:38:21.808657+00:00",
+      "probability": 0.0725,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 11
+      "submission": 4
     }
   ],
   "match_id": "24ffa002-7c89-4133-9095-762d1555edbd",

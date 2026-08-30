@@ -9,63 +9,68 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "99cb6554-eca7-4d5f-9627-13d4523f933c",
       "market_weight": 0.0,
-      "model": 0.9207663980267267,
+      "model": 0.8933002880345577,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.864021+00:00",
-      "probability": 0.8801931184213813,
+      "predicted_at": "2026-08-30T07:38:21.806640+00:00",
+      "probability": 0.8933002880345577,
       "question": "Will the match last longer than 125 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 88
+      "submission": 93
     },
     {
       "base_rate": 0.46,
       "brier": null,
-      "confidence": 0.75,
+      "confidence": 0.9,
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "a43cf952-78b8-49d9-8666-47c99bd2eaa0",
       "market_weight": 0.0,
-      "model": 0.2766229743286692,
-      "notes": [],
+      "model": 0.2799641041152969,
+      "notes": [
+        "exposure 124 service points from 39.7 games",
+        "outcome coupling: P(win)=0.216, delta=+0.60"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.864021+00:00",
-      "probability": 0.3224672307465019,
+      "predicted_at": "2026-08-30T07:38:21.806640+00:00",
+      "probability": 0.2799641041152969,
       "question": "Will P. Carreno Busta record more aces than J. Lehecka?",
       "rbp": null,
       "settled_at": "",
-      "submission": 32
+      "submission": 23
     },
     {
       "base_rate": 0.421,
       "brier": null,
-      "confidence": 0.75,
+      "confidence": 0.9,
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "e21f2462-d114-43e8-a40d-b16558c6802c",
       "market_weight": 0.0,
-      "model": 0.387766388201333,
-      "notes": [],
+      "model": 0.4059096232949591,
+      "notes": [
+        "exposure 124 service points from 39.7 games"
+      ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.864021+00:00",
-      "probability": 0.3960747911509998,
+      "predicted_at": "2026-08-30T07:38:21.806640+00:00",
+      "probability": 0.4059096232949591,
       "question": "Will P. Carreno Busta record more double faults than J. Lehecka?",
       "rbp": null,
       "settled_at": "",
-      "submission": 40
+      "submission": 38
     },
     {
       "base_rate": 0.5,
@@ -74,22 +79,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
-      "lane": "honest",
-      "market": 0.21781259195640001,
+      "lane": "scenario",
+      "market": 0.21612906064560464,
       "market_id": "fa198936-57fe-4ca9-9a43-e97cfcbead42",
-      "market_weight": 0.85,
-      "model": 0.513,
+      "market_weight": 0.34,
+      "model": 0.515,
       "notes": [
-        "simulated win probability 0.513",
-        "market consensus 0.218, weight 0.85"
+        "simulated win probability 0.515",
+        "market consensus 0.216, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.864021+00:00",
-      "probability": 0.2906589238331283,
+      "predicted_at": "2026-08-30T07:38:21.806640+00:00",
+      "probability": 0.4016887768558704,
       "question": "Will P. Carreno Busta win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 29
+      "submission": 38
     },
     {
       "base_rate": 0.487,
@@ -98,21 +103,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "d0e9b36e-f33c-4b3e-84c5-1dcebc34b8e2",
       "market_weight": 0.0,
-      "model": 0.6245,
+      "model": 0.54675,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-29T22:52:41.864021+00:00",
-      "probability": 0.597,
+      "predicted_at": "2026-08-30T07:38:21.806640+00:00",
+      "probability": 0.54675,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 60
+      "submission": 56
     }
   ],
   "match_id": "db653555-af12-45c7-9e5c-3d6a4ac4bf96",
