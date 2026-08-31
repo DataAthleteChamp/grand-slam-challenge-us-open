@@ -1,0 +1,129 @@
+{
+  "closing_time": "",
+  "draw": "womens",
+  "entries": [
+    {
+      "base_rate": 0.0827,
+      "brier": null,
+      "confidence": 0.8,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_duration",
+      "lane": "honest",
+      "market": null,
+      "market_id": "m2-m0",
+      "market_weight": 0.0,
+      "model": 0.10785981983216825,
+      "notes": [
+        "no usable market quote for this question"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-08-31T23:15:28.920756+00:00",
+      "probability": 0.1028278558657346,
+      "question": "Will the match last longer than 150 minutes?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 10
+    },
+    {
+      "base_rate": 0.427,
+      "brier": null,
+      "confidence": 0.75,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "aces_comparison",
+      "lane": "honest",
+      "market": null,
+      "market_id": "m2-m1",
+      "market_weight": 0.0,
+      "model": 0.24881701518232827,
+      "notes": [
+        "exposure 76 service points from 23.4 games"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-08-31T23:15:28.920756+00:00",
+      "probability": 0.2933627613867462,
+      "question": "Will Iga Swiatek record more aces than Aryna Sabalenka?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 29
+    },
+    {
+      "base_rate": 0.433,
+      "brier": null,
+      "confidence": 0.1,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "double_faults_comparison",
+      "lane": "honest",
+      "market": null,
+      "market_id": "m2-m2",
+      "market_weight": 0.0,
+      "model": 0.2375909018705327,
+      "notes": [
+        "exposure 76 service points from 23.4 games"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-08-31T23:15:28.920756+00:00",
+      "probability": 0.41345909018705324,
+      "question": "Will Iga Swiatek record more double faults than Aryna Sabalenka?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 41
+    },
+    {
+      "base_rate": 0.5,
+      "brier": null,
+      "confidence": 0.85,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_winner",
+      "lane": "honest",
+      "market": 0.5476190476129825,
+      "market_id": "m2-m3",
+      "market_weight": 0.85,
+      "model": 0.6825,
+      "notes": [
+        "simulated win probability 0.682",
+        "market consensus 0.548, weight 0.85"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-08-31T23:15:28.920756+00:00",
+      "probability": 0.5585285322862854,
+      "question": "Will Iga Swiatek win?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 56
+    },
+    {
+      "base_rate": 0.02463636363636364,
+      "brier": null,
+      "confidence": 0.8,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "tiebreak",
+      "lane": "honest",
+      "market": null,
+      "market_id": "m2-m4",
+      "market_weight": 0.0,
+      "model": 0.02125,
+      "notes": [
+        "no usable market quote for this question"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-08-31T23:15:28.920756+00:00",
+      "probability": 0.02192727272727273,
+      "question": "Will the match feature at least 2 tiebreak(s)?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 3
+    }
+  ],
+  "match_id": "m2",
+  "match_name": "",
+  "multiplier": 1,
+  "opening_time": "",
+  "player_a": "Aryna Sabalenka",
+  "player_b": "Iga Swiatek",
+  "round_code": "R128"
+}

@@ -29,6 +29,8 @@ from dataclasses import dataclass, field, replace
 from typing import Any
 
 from .data.baserates import (
+    ACE_VULNERABILITY_EXPONENT,
+    ACE_VULNERABILITY_TOURS,
     COUNT_RATE_PRIOR,
     DEFER_TO_BASE_RATE,
     DURATION_SURVIVAL,
@@ -153,6 +155,10 @@ class PlayerProfile:
     unforced_rate: float | None = None
     height: float | None = None
     pace_minutes: float = 0.0
+    #: Aces conceded per return point, relative to tour average. 1.0 is average,
+    #: above 1 means this player is read easily on serve. A distinct skill from
+    #: winning return points: the two correlate only -0.29.
+    ace_vulnerability: float = 1.0
 
     @property
     def has_ratings(self) -> bool:
@@ -598,6 +604,21 @@ class Pricer:
         prior_opponent = self._count_prior(stat, opponent, context, population)
         shrunk_subject = shrink(rate_subject, subject.matches, prior_subject, k).estimate
         shrunk_opponent = shrink(rate_opponent, opponent.matches, prior_opponent, k).estimate
+
+        # Scale each server's ace rate by how easily the OTHER player is aced.
+        # Conceding aces is a different skill from winning return points - the
+        # two correlate only -0.29 - and the multiplier spans 0.56 to 1.43, so
+        # ignoring it discarded a real and large effect. Out-of-sample this
+        # improved the men's ace Brier by 12.9%; the women's effect was absent,
+        # so it is applied to the men's draw only.
+        if stat == "aces" and context.tour in ACE_VULNERABILITY_TOURS:
+            e = ACE_VULNERABILITY_EXPONENT
+            shrunk_subject *= opponent.ace_vulnerability**e
+            shrunk_opponent *= subject.ace_vulnerability**e
+            notes.append(
+                f"ace vulnerability: {opponent.name} {opponent.ace_vulnerability:.2f}, "
+                f"{subject.name} {subject.ace_vulnerability:.2f}"
+            )
 
         # Exposure, not a constant. Both players serve in the same match, so a
         # 20-game blowout gives each of them about 61 service points and a

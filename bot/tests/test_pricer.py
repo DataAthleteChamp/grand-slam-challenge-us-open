@@ -1007,3 +1007,61 @@ def test_both_lanes_stay_in_api_range():
             ladders=ladders,
         )
         assert 1 <= result.submission <= 99
+
+
+# ------------------------------------------------- ace vulnerability
+
+
+def test_ace_vulnerability_is_a_distinct_skill():
+    """Conceding aces is not the same as winning return points: the two
+    correlate only -0.29. Adding it lifts a server-plus-returner model's
+    R-squared from 0.367 to 0.465 on the men's draw."""
+    from bot.roster import Roster
+
+    roster = Roster.load()
+    medvedev = roster.find("D. Medvedev")
+    if medvedev is None:
+        pytest.skip("player missing")
+    assert medvedev.ace_vulnerability < 0.75, "elite returner should concede few aces"
+
+
+def test_ace_vulnerability_is_damped():
+    """The undamped multiplier scores better out-of-sample (+12.9% against
+    +8.6%) but says Opelka is 35% to out-ace Medvedev. Opelka out-aces his
+    opponent in 93% of hard-court matches and out-aced Medvedev in all four of
+    their hard-court meetings, so the fitted optimum is picking up confounding:
+    vulnerability is never adjusted for which servers a player faced."""
+    from bot.data.baserates import ACE_VULNERABILITY_EXPONENT
+
+    assert 0.3 <= ACE_VULNERABILITY_EXPONENT <= 0.7
+
+
+def test_ace_vulnerability_applies_to_men_only():
+    """Measured +12.9% on the men's draw, -1.2% and not significant on the
+    women's, where the far lower ace rate leaves less room for a returner
+    effect."""
+    from bot.data.baserates import ACE_VULNERABILITY_TOURS
+
+    assert "ATP" in ACE_VULNERABILITY_TOURS
+    assert "WTA" not in ACE_VULNERABILITY_TOURS
+
+
+def test_vulnerability_moves_the_ace_price_the_right_way():
+    from bot.roster import Roster
+
+    roster, pricer = Roster.load(), Pricer()
+    tough = roster.find("D. Medvedev")
+    easy = roster.find("Y. Nishioka")
+    if tough is None or easy is None:
+        pytest.skip("players missing")
+    assert easy.ace_vulnerability > tough.ace_vulnerability
+
+    def price(opponent):
+        context = roster.context("R. Opelka", opponent, tour="ATP")
+        spec = parse_question(
+            f"Will R. Opelka record more aces than {opponent}?",
+            players=("R. Opelka", opponent),
+        )
+        return pricer.price(spec, context, market_id="x").submission
+
+    assert price("Y. Nishioka") > price("D. Medvedev")

@@ -1,0 +1,106 @@
+{
+  "event": {
+    "id": "0cf0efd1-7e12-4ca9-8068-89eb48466a37",
+    "title": "Grand Slam Challenge"
+  },
+  "generated_at": "20260831T180450Z",
+  "lobby": {
+    "id": "b1419bb4-6dff-4172-9a42-a206b0a24ad9"
+  },
+  "matches": {
+    "6ee3851f-cb96-443d-b38c-3a1d1a735754": {
+      "player_a": "Juan Manuel Cerundolo",
+      "player_b": "Arthur Gea",
+      "questions": [
+        {
+          "base_rate": 0.2636,
+          "confidence": 0.8,
+          "family": "match_duration",
+          "lane": "scenario",
+          "market": null,
+          "market_id": "cc4837d2-e104-4233-b327-753181f8e7d4",
+          "market_weight": 0.0,
+          "model": 0.2575,
+          "notes": [
+            "no usable market quote for this question"
+          ],
+          "probability": 0.2579,
+          "submission": 21
+        },
+        {
+          "base_rate": 0.46,
+          "confidence": 0.9,
+          "family": "aces_comparison",
+          "lane": "scenario",
+          "market": null,
+          "market_id": "9580b2a7-2856-4447-95d1-0183afc6975b",
+          "market_weight": 0.0,
+          "model": 0.4756,
+          "notes": [
+            "exposure 117 service points from 37.4 games",
+            "outcome coupling: P(win)=0.487, delta=+0.60",
+            "scenario lane: experimental aces_comparison shift -0.045"
+          ],
+          "probability": 0.4306,
+          "submission": 41
+        },
+        {
+          "base_rate": 0.421,
+          "confidence": 0.9,
+          "family": "double_faults_comparison",
+          "lane": "scenario",
+          "market": null,
+          "market_id": "b458a3af-ed00-4f05-8e84-e13abeefd4c7",
+          "market_weight": 0.0,
+          "model": 0.4145,
+          "notes": [
+            "exposure 117 service points from 37.4 games",
+            "scenario lane: experimental double_faults_comparison shift -0.065"
+          ],
+          "probability": 0.3495,
+          "submission": 32
+        },
+        {
+          "base_rate": 0.5,
+          "confidence": 0.85,
+          "family": "match_winner",
+          "lane": "scenario",
+          "market": 0.4866,
+          "market_id": "bf7b03d0-0aa1-4558-9fed-fc7e05397447",
+          "market_weight": 0.34,
+          "model": 0.3488,
+          "notes": [
+            "simulated win probability 0.349",
+            "market consensus 0.487, weight 0.34"
+          ],
+          "probability": 0.3964,
+          "submission": 37
+        },
+        {
+          "base_rate": 0.487,
+          "confidence": 0.8,
+          "family": "tiebreak",
+          "lane": "scenario",
+          "market": null,
+          "market_id": "1b95b3ff-8221-4ee2-b52b-1cf6933f43fd",
+          "market_weight": 0.0,
+          "model": 0.4108,
+          "notes": [
+            "no usable market quote for this question",
+            "scenario lane: experimental tiebreak shift +0.055"
+          ],
+          "probability": 0.4718,
+          "submission": 46
+        }
+      ],
+      "rated_a": true,
+      "rated_b": true,
+      "round": "R128",
+      "tour": "ATP"
+    }
+  },
+  "n_matches": 1,
+  "n_questions": 5,
+  "roster_misses": [],
+  "unparsed": []
+}

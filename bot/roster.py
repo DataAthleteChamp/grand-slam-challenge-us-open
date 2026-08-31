@@ -97,6 +97,20 @@ class Roster:
             with path.open(newline="", encoding="utf-8") as handle:
                 for row in csv.DictReader(handle):
                     roster._add(row)
+        # Ace vulnerability: how many aces this player concedes per return
+        # point, relative to tour average. A different skill from winning
+        # return points, and worth 10 points of R-squared on the men's draw.
+        for tour in ("atp", "wta"):
+            path = directory / f"{tour}_ace_vulnerability.csv"
+            if not path.exists():
+                continue
+            with path.open(newline="", encoding="utf-8") as handle:
+                for row in csv.DictReader(handle):
+                    name = (row.get("opponent") or "").strip()
+                    profile = roster.profiles.get(name)
+                    if profile is not None:
+                        profile.ace_vulnerability = _number(row.get("vuln"), 1.0)
+
         names = list(roster.profiles)
         roster.crosswalk = build_crosswalk(names)
         roster._ambiguous = ambiguous_keys(names)
@@ -138,6 +152,7 @@ class Roster:
             unforced_rate=_optional(row.get("unforced_rate")),
             height=_optional(row.get("height")),
             pace_minutes=_number(row.get("pace_minutes"), 0.0),
+            ace_vulnerability=_number(row.get("ace_vulnerability"), 1.0),
         )
         # Keep the profile with more matches when a name appears twice, which
         # happens when the raw feeds spell one player two ways.

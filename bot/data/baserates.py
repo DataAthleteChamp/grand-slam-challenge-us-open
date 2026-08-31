@@ -520,3 +520,46 @@ COUNT_CONFIDENCE = {
 def count_confidence(stat: str, tour: str, default: float = 0.75) -> float:
     """Measured trust in the count model for one tour and statistic."""
     return COUNT_CONFIDENCE.get((tour, stat), default)
+
+
+# --------------------------------------------------- ace vulnerability
+
+#: Whether a returner's ace-vulnerability multiplier is trusted, by tour.
+#:
+#: Aces conceded is a *different skill* from winning return points. Our fitted
+#: return rating correlates only -0.29 with aces conceded on the men's tour, so
+#: a player can win plenty of return points and still be read easily on serve.
+#: Adding the returner's own ace-conceded rate lifts the R-squared of a
+#: server-plus-returner model from 0.367 to 0.465.
+#:
+#: Validated out-of-sample - built on 2021-2024, tested on 2025-2026 slams:
+#:
+#: | Tour | Brier | change | 95% CI | verdict |
+#: |---|---|---|---|---|
+#: | ATP | 0.2028 -> 0.1765 | **+12.9%** | [+0.0160, +0.0366] | significant |
+#: | WTA | 0.2454 -> 0.2484 | -1.2% | [-0.0140, +0.0078] | not significant |
+#:
+#: Applied to the men's draw only. The women's effect is absent, which is
+#: consistent with the much smaller ace rate there leaving less room for a
+#: returner effect to show.
+ACE_VULNERABILITY_TOURS = frozenset({"ATP"})
+
+#: Exponent damping the vulnerability multiplier.
+#:
+#: The raw multiplier scores best out-of-sample (+12.9% Brier at exponent 1.0
+#: against +8.6% at 0.5, both significant) but it is *confounded*: a player's
+#: aces-conceded rate is never adjusted for which servers they happened to face,
+#: so an elite returner who also draws big servers looks better than they are.
+#:
+#: At full strength the model says Opelka is 35% to out-ace Medvedev. Opelka
+#: out-aces his opponent in 93% of hard-court matches and out-aced Medvedev in
+#: all four of their hard-court meetings, so 35% is not a defensible number
+#: whatever the aggregate Brier says. When a fitted optimum contradicts a plain
+#: fact, the usual cause is confounding rather than insight.
+#:
+#: An exponent of 0.5 keeps most of the measured gain (+8.6%, CI [+0.012,
+#: +0.023], still significant) and returns 58 for that matchup, which is at
+#: least on the right side of even. The right long-term fix is a two-way fit
+#: that adjusts vulnerability for server quality, as the serve and return
+#: ratings already do.
+ACE_VULNERABILITY_EXPONENT = 0.5
