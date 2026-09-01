@@ -302,7 +302,23 @@ def test_simulator_games_bias_is_corrected():
     from bot.models.duration import correct_games
 
     assert correct_games(39.18, "ATP", 5) == pytest.approx(36.94, abs=0.05)
-    assert correct_games(22.97, "WTA", 3) == pytest.approx(22.04, abs=0.05)
+
+
+def test_womens_games_offset_is_zero_because_sigma_now_carries_it():
+    """The women's offset and the per-tour between-set sigma were removing the
+    same over-prediction, so applying both double-counted.
+
+    Against Pinnacle's total-games lines on 45 live US Open matches the raw
+    simulator is +2.76 games on the men's draw (t=+4.27) but -0.48 on the
+    women's (t=-1.12).  Subtracting a further 0.93 there gave -1.41 games
+    (SE 0.43), a real bias in the opposite direction.
+    """
+    from bot.models.duration import correct_games
+
+    assert correct_games(22.04, "WTA", 3) == pytest.approx(22.04, abs=1e-9)
+    # The men's draw still needs its offset: that residual is a point-level iid
+    # effect (Klaassen & Magnus 2001) which the between-set sigma cannot reach.
+    assert correct_games(39.18, "ATP", 5) < 39.18
 
 
 def test_games_correction_cannot_produce_an_impossible_match():

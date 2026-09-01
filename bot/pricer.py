@@ -355,7 +355,21 @@ class Pricer:
         if context.player_a.has_ratings and context.player_b.has_ratings:
             simulation = self._simulate(context)
             model = self._read_simulation(spec, simulation, base, notes, context)
-            confidence = 0.8
+            # 0.8 here was an unmeasured guess, and unlike COUNT_CONFIDENCE it
+            # was never swept.  Against 42 settled matches, dropping the pull
+            # toward the base rate entirely would have gained +0.91 RBP/question
+            # on duration and +0.69 on tiebreak, and cost nothing on match
+            # winner (-0.24, CI [-2.40, +2.22]) because the market blend is
+            # applied before the pull and so survives it.  Pooled across all
+            # families the gain is +0.77, CI [+0.08, +1.47].
+            #
+            # The pull is not removed outright: these are simulated quantities
+            # and a small anchor still limits the damage when the ratings are
+            # thin.  0.95 keeps that guard while recovering most of the loss.
+            # Note the base rate for "will X win" is 0.50, which carries no
+            # information about the matchup at all, so pulling a market-informed
+            # number toward it was never defensible.
+            confidence = 0.95
         else:
             notes.append("one or both players unrated; using the base rate as the model")
 

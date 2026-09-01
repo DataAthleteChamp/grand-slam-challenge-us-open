@@ -93,7 +93,32 @@ def residual_sd_for(games: float, tour: str, best_of: int) -> float:
 #: is an *expectation* over thousands of simulations, so it legitimately varies
 #: less across matchups than single realised matches do; regressing one on the
 #: other would rescale a quantity that is not mis-scaled, only mis-centred.
-GAMES_BIAS = {("ATP", 5): -2.24, ("ATP", 3): -1.20, ("WTA", 3): -0.93, ("WTA", 5): -0.93}
+#:
+#: The women's offset was retired once the between-set sigma was fitted per tour.
+#: Both corrections were removing the *same* over-prediction, so applying them
+#: together double-counted.  Checked against Pinnacle's total-games lines on 45
+#: live US Open matches (they post per-player game totals, and Pinnacle is the
+#: sharpest book on tennis totals), comparing the raw simulator before any
+#: offset:
+#:
+#:   ATP  simulator - Pinnacle  +2.76 games  sd 3.17  n=24  t=+4.27  systematic
+#:   WTA  simulator - Pinnacle  -0.48 games  sd 1.98  n=21  t=-1.12  no bias left
+#:
+#: So the men's offset is still earning its keep (residual after -2.24 is +0.52,
+#: SE 0.65, indistinguishable from zero) while the women's had become harmful:
+#: -0.48 - 0.93 = -1.41 games, SE 0.43, t = -3.3 against the sharpest available
+#: benchmark.  The two independent estimates of the remaining women's raw bias
+#: (+0.57 from the historical sigma sweep, -0.48 from Pinnacle) average to about
+#: zero, so the offset goes to zero rather than being flipped positive on the
+#: strength of one sample.
+#:
+#: The men's residual is consistent with Klaassen & Magnus (2001), who show that
+#: points in tennis are *not* iid: servers win fewer points than iid predicts on
+#: the most important points, so real matches contain more breaks - and therefore
+#: fewer games - than an iid simulator produces.  That is a point-level effect
+#: and cannot be fixed by the between-set sigma, which is why the men's draw
+#: still needs an explicit offset while the women's no longer does.
+GAMES_BIAS = {("ATP", 5): -2.24, ("ATP", 3): -1.20, ("WTA", 3): 0.0, ("WTA", 5): 0.0}
 
 
 def correct_games(games: float, tour: str, best_of: int) -> float:

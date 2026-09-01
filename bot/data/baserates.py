@@ -506,13 +506,28 @@ def outcome_coupling(stat: str, tour: str) -> float:
 #: points down in the predecessor event, where the crowd beat every model. The
 #: correct response is to stop departing from the base rate, not to model harder.
 #:
-#: Values are deliberately pulled back from the measured optimum: 0.90 rather
-#: than 1.00 where the sweep said "trust it completely", because n is about 350
-#: and the sweep shares data with other fits.
+#: Values were previously pulled back from the measured optimum (0.90 rather
+#: than 1.00) because n is about 350 and the sweep shares data with other fits.
+#: That hedge has now been tested against live settled results and it was
+#: costing us.  Submitting the unshrunk model instead of the pulled-back value
+#: would have gained, per question, over 42 settled matches:
+#:
+#:   ATP aces   +1.09 RBP  95% CI [+0.39, +2.00]   significant
+#:   WTA aces   +1.73 RBP  95% CI [+0.69, +2.77]   significant
+#:   ATP double faults  +0.45  CI [-0.19, +1.14]   directional only
+#:   WTA double faults  +1.85  CI [-1.30, +5.17]   uninformative, CI is huge
+#:
+#: So the ATP hedge is removed outright: the historical sweep said 1.00 and the
+#: live results independently agree.  WTA aces is a genuine conflict - the sweep
+#: said 0.75 on n=320, the live sample says 1.00 on n=13 - and is split at 0.85
+#: rather than believing the smaller sample.  WTA double faults stays pinned
+#: near zero: the historical curve was monotone toward 0.00 on n=320, server
+#: identity explains only 14% of that family's variance, and the live interval
+#: is far too wide to overturn any of that.
 COUNT_CONFIDENCE = {
-    ("ATP", "aces"): 0.90,
-    ("ATP", "double_faults"): 0.90,
-    ("WTA", "aces"): 0.75,
+    ("ATP", "aces"): 1.00,
+    ("ATP", "double_faults"): 1.00,
+    ("WTA", "aces"): 0.85,
     ("WTA", "double_faults"): 0.10,
 }
 

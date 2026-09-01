@@ -5,7 +5,7 @@
     {
       "base_rate": 0.5144,
       "brier": null,
-      "confidence": 0.8,
+      "confidence": 0.95,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
@@ -18,17 +18,17 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:32:28.797679+00:00",
-      "probability": 0.6936621184247432,
+      "predicted_at": "2026-09-01T07:26:09.695397+00:00",
+      "probability": 0.7272737656293826,
       "question": "Will the match last longer than 150 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 69
+      "submission": 73
     },
     {
       "base_rate": 0.46,
       "brier": null,
-      "confidence": 0.9,
+      "confidence": 1.0,
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
@@ -43,8 +43,8 @@
         "outcome coupling: P(win)=0.396, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:32:28.797679+00:00",
-      "probability": 0.5360021822522659,
+      "predicted_at": "2026-09-01T07:26:09.695397+00:00",
+      "probability": 0.5444468691691843,
       "question": "Will Jannik Sinner record more aces than Carlos Alcaraz?",
       "rbp": null,
       "settled_at": "",
@@ -53,7 +53,7 @@
     {
       "base_rate": 0.421,
       "brier": null,
-      "confidence": 0.9,
+      "confidence": 1.0,
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
@@ -66,8 +66,8 @@
         "exposure 126 service points from 40.4 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:32:28.797679+00:00",
-      "probability": 0.38056527998362044,
+      "predicted_at": "2026-09-01T07:26:09.695397+00:00",
+      "probability": 0.37607253331513385,
       "question": "Will Jannik Sinner record more double faults than Carlos Alcaraz?",
       "rbp": null,
       "settled_at": "",
@@ -90,7 +90,7 @@
         "market consensus 0.396, weight 0.85"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:32:28.797679+00:00",
+      "predicted_at": "2026-09-01T07:26:09.695397+00:00",
       "probability": 0.4350774180347579,
       "question": "Will Jannik Sinner win?",
       "rbp": null,
@@ -100,7 +100,7 @@
     {
       "base_rate": 0.1361788617886179,
       "brier": null,
-      "confidence": 0.8,
+      "confidence": 0.95,
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
@@ -113,8 +113,8 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:32:28.797679+00:00",
-      "probability": 0.14043577235772356,
+      "predicted_at": "2026-09-01T07:26:09.695397+00:00",
+      "probability": 0.14123394308943088,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
