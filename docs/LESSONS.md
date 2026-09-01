@@ -82,31 +82,141 @@ shrunk version**, so the answer to "should we hedge more" is measurably no.
 
 ---
 
-## What to actually do
+## What to actually do  (rewritten at 37 settled matches)
 
-1. **Do not retune the model on 11 matches.** Nothing is significant, and the
-   most likely way to lose from here is to fit noise.
-2. **Keep answers away from the tails.** Not because of a measured bias, but
-   because the scoring rule pays about +1.9 per question for being reasonable
-   and a -40 miss wipes out twenty of them. No sharpening below 20 or above 80.
-3. **Do not shrink toward base rates.** Measured to be actively harmful.
-4. **Re-run this analysis at 50+ matches.** Then the family numbers will mean
-   something. The infrastructure exists, so it costs one command.
+1. **The free term is +2.00/question and nothing you submit changes it.**
+   Confirmed exactly against 185 API-scored questions:
+   `rbp = 100 * [ (crowd - y)^2 + Var_crowd - (ours - y)^2 ]`, with the gap term
+   averaging **+2.001** (sd 0.73, range 0.42-5.12). So total points is just
+   `2.00 * n_questions + 100 * sum(crowd_brier - our_brier)`. Two consequences:
+   maximising score is *exactly* minimising our own Brier, and **every
+   unanswered question is a guaranteed -2.00 against everyone who answered it.**
+   Coverage has been verified complete (37 settled + 23 open matches, 5 of 5
+   questions each, zero gaps) - keep it that way.
+
+2. **Do not recalibrate on settled results.** Six separate post-hoc transforms
+   have now been tested with leave-one-match-out cross-validation and bootstrap
+   intervals. Every one is indistinguishable from zero or actively worse:
+
+   | transform | out-of-sample result |
+   |---|---|
+   | shrink toward 50 | no gain |
+   | shrink toward base rate | worse at every weight |
+   | shrink toward our own family mean | worse at every weight (k=0 costs -6.5 on aces) |
+   | expand spread (k=1.25) | +0.21 [-0.23, +0.63] |
+   | per-family bias correction | -0.07 [-1.33, +1.19] |
+   | pooled YES-shading | +0.12 [-0.57, +0.82], and it reverses on the manual lane |
+
+   The reason they all fail: our deficit is **discrimination, not calibration**.
+   On the women's draw our predictions correlate +0.58 with outcomes against the
+   crowd's +0.70. No monotone transform of a weaker signal fixes that.
+
+3. **Fix measured defects in the model instead.** The one change that survived
+   scrutiny this round came from re-running a calibration *per tour* against
+   historical matches, not from fitting this tournament. See below.
+
+4. **Re-run this analysis every round.** One command, and the family intervals
+   are still wide at n=37 per family.
+
+---
+
+## The men's/women's split was real, and cost us the women's draw
+
+The simulator's between-set form sigma was fitted on 150 **ATP** matches and
+then applied to both draws. Re-fitting per tour over 2023-26 slam hard-court
+matches (120 per tour):
+
+| sigma = 0.05 (shared) | total games | any tiebreak | any lopsided set |
+|---|---|---|---|
+| ATP | +1.98 | +0.019 | -0.041 |
+| WTA | +1.91 | +0.073 | -0.097 |
+
+ATP is minimised at 0.05; WTA at **0.11**, where every bias essentially
+vanishes (games +0.57, tiebreak +0.003, lopsided +0.039). The women's game has
+more between-set swing. This matters because the women's draw is exactly where
+the live entry bled: **-1.37 RBP/question against -0.39 for the men's.**
+
+Lesson: **before trusting any fitted constant, check what population it was
+fitted on.** Sixteen of eighteen constants were already tour-split; this one was
+not, and it was the one feeding three families at once.
+
+---
+
+## Where we actually stand (185 settled questions, honest lane)
+
+| family | n | our bias | skill/q | 95% CI |
+|---|---|---|---|---|
+| tiebreak | 37 | +0.085 | **+2.33** | [+0.75, +3.57] |
+| match_duration | 37 | +0.138 | +0.10 | [-3.65, +3.47] |
+| match_winner | 37 | +0.101 | -0.43 | [-1.16, +0.27] |
+| aces_comparison | 37 | +0.045 | -2.07 | [-4.44, +0.36] |
+| double_faults_comparison | 37 | -0.090 | -2.22 | [-4.86, +0.33] |
+
+Tiebreak is the only family that is significantly positive, and it is where the
+crowd is most wrong (they price 0.315 against a realised 0.162). That is the
+pocket worth defending and extending.
+
+**Correction to an earlier entry in this file:** it previously said "we
+under-predict tiebreaks". That was measured on 11 matches and is backwards. At
+37 matches we *over*-predict them (+0.085), which is why the second bot's
+tiebreak shift was pushing the wrong way.
+
+---
+
+## How much of the leaderboard is luck
+
+Simulating a forecaster with **zero** skill (submits the crowd value plus noise)
+over the same 185 questions: median **304**, 99th percentile 465, and across
+20,000 draws the maximum seen was 576. Taking the best of N such entrants:
+
+| entrants | expected top score |
+|---|---|
+| 200 | 493 |
+| 1,000 | 528 |
+| 5,000 | 558 |
+
+Our own per-question skill has sd 7.50, so the standard error on our total over
+185 questions is **+/-102 points**. A leader on ~600 is perhaps a 0.010-0.015
+Brier edge per question above the crowd, but a large part of the visible gap is
+selection across many entrants plus noise. **Chase expected skill, not the
+leader's number** - and do not read our own rank movements as signal.
+
+---
+
+## Falsified: the per-family shift experiment
+
+Bot 2 carried the n=11 family biases at half strength. Two ways of reading the
+result, both negative:
+
+* the lanes are indistinguishable after 37 matches (-0.46 vs -0.47 RBP/q);
+* the underlying estimates reversed sign as the sample tripled - double faults
+  **+0.128 -> -0.090**, tiebreak **-0.105 -> +0.085**. Two of five flipping sign
+  is what noise looks like, so two of the three shifts were pushing against the
+  true direction.
+
+Retired. Only the tiebreak shift survives, and only because its direction is
+corroborated by a dataset outside this tournament.
+
+---
 
 ## Standing observations, held loosely
 
-Directional and *not* yet significant:
+- On aces the crowd correlates **+0.71** with outcomes against our **+0.56**;
+  they hold information our historical rates do not.
+- Double faults are close to irreducible: server identity explains 14-21% of the
+  variance. Do not try to win this family, just avoid losing it.
+- When we deviate from the crowd by more than 4 points on aces or double faults,
+  we have been right only 41% and 36% of the time. Deviate there only with a
+  reason that was validated out-of-sample.
 
-- Duration is our best family; the crowd under-predicts long matches.
-- We under-predict tiebreaks; the crowd does too, slightly less.
-- Both we and the crowd say YES too often on ace and double-fault comparisons.
-- On aces the crowd correlates **+0.79** with the outcome against our **+0.59**,
-  suggesting they hold information our historical rates do not - recent form,
-  injuries, conditions.
+---
 
 ## One methodological note
 
-The manual entry's tiebreak losses were not an independent draw: they were bot
-1's numbers, sharpened. **All three entries share one model**, so spreading
-across entries buys variance, not diversification, and gives no protection
-against a family-level modelling error.
+The manual entry's numbers are bot 1's, sharpened. **All three entries share one
+model**, so spreading across entries buys variance, not diversification, and
+gives no protection against a family-level modelling error. Paired on the same
+40 questions, sharpening gained on four families (+3.19 aces, +1.61 double
+faults, +1.38 duration, +1.36 winner) and lost **-5.95 on tiebreak** - because
+sharpening pushes an already-too-high tiebreak number further up. Sharpen the
+four, leave tiebreak alone.

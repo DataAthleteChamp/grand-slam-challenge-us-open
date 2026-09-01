@@ -13,17 +13,17 @@
       "market": null,
       "market_id": "44c8be20-8dcc-48e9-b64f-823587f9e7bd",
       "market_weight": 0.0,
-      "model": 0.6086359000273609,
+      "model": 0.5574784854745778,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:23:36.587529+00:00",
-      "probability": 0.600385028025172,
+      "predicted_at": "2026-09-01T01:48:24.971690+00:00",
+      "probability": 0.5533202066366115,
       "question": "Will the match last longer than 90 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 62
+      "submission": 57
     },
     {
       "base_rate": 0.427,
@@ -36,13 +36,13 @@
       "market": null,
       "market_id": "edbe39ed-5573-4192-8c29-1abf4cf272de",
       "market_weight": 0.0,
-      "model": 0.3617601187587847,
+      "model": 0.3603821287643558,
       "notes": [
-        "exposure 72 service points from 22.2 games"
+        "exposure 70 service points from 21.5 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:23:36.587529+00:00",
-      "probability": 0.3932383614576711,
+      "predicted_at": "2026-09-01T01:48:24.971690+00:00",
+      "probability": 0.39252525163555413,
       "question": "Will A. Eala record more aces than M. Stoiana?",
       "rbp": null,
       "settled_at": "",
@@ -59,13 +59,13 @@
       "market": null,
       "market_id": "9526b157-f9d8-4cca-8bc5-d072a83f475b",
       "market_weight": 0.0,
-      "model": 0.4250813641004367,
+      "model": 0.42387013053311945,
       "notes": [
-        "exposure 72 service points from 22.2 games"
+        "exposure 70 service points from 21.5 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:23:36.587529+00:00",
-      "probability": 0.428902105921976,
+      "predicted_at": "2026-09-01T01:48:24.971690+00:00",
+      "probability": 0.4282752925508893,
       "question": "Will A. Eala record more double faults than M. Stoiana?",
       "rbp": null,
       "settled_at": "",
@@ -82,18 +82,18 @@
       "market": 0.7812745869416673,
       "market_id": "349d5bdf-6b46-42b9-a1e8-055ab0f7e4d6",
       "market_weight": 0.34,
-      "model": 0.56125,
+      "model": 0.544,
       "notes": [
-        "simulated win probability 0.561",
+        "simulated win probability 0.544",
         "market consensus 0.781, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:23:36.587529+00:00",
-      "probability": 0.6413436765806477,
+      "predicted_at": "2026-09-01T01:48:24.971690+00:00",
+      "probability": 0.6309629694682464,
       "question": "Will A. Eala win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 67
+      "submission": 66
     },
     {
       "base_rate": 0.225,
@@ -106,18 +106,18 @@
       "market": null,
       "market_id": "505bc957-7053-480c-af08-92fed840cf3d",
       "market_weight": 0.0,
-      "model": 0.191,
+      "model": 0.17625,
       "notes": [
         "no usable market quote for this question",
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:23:36.587529+00:00",
-      "probability": 0.15372,
+      "predicted_at": "2026-09-01T01:48:24.971690+00:00",
+      "probability": 0.14015,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 11
+      "submission": 9
     }
   ],
   "match_id": "4e1fcf17-6767-410c-9e50-6fb990238239",

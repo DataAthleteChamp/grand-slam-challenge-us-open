@@ -13,17 +13,17 @@
       "market": null,
       "market_id": "52fe7598-5f45-436b-a481-0fea925d7ac3",
       "market_weight": 0.0,
-      "model": 0.4919560132654318,
+      "model": 0.4464913909699521,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:23:36.577937+00:00",
-      "probability": 0.4845515322041973,
+      "predicted_at": "2026-09-01T01:48:24.962465+00:00",
+      "probability": 0.44272407969235594,
       "question": "Will the match last longer than 100 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 48
+      "submission": 43
     },
     {
       "base_rate": 0.427,
@@ -36,13 +36,13 @@
       "market": null,
       "market_id": "d2ea9d5f-73ef-48f4-8ac1-4cc006d49fcf",
       "market_weight": 0.0,
-      "model": 0.6262708399429645,
+      "model": 0.622779645277471,
       "notes": [
-        "exposure 72 service points from 22.3 games"
+        "exposure 70 service points from 21.6 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:23:36.577937+00:00",
-      "probability": 0.5988710994508069,
+      "predicted_at": "2026-09-01T01:48:24.962465+00:00",
+      "probability": 0.5958599440518187,
       "question": "Will B. Bencic record more aces than Y. Putintseva?",
       "rbp": null,
       "settled_at": "",
@@ -59,13 +59,13 @@
       "market": null,
       "market_id": "2ea95450-346d-4b65-ab2f-fcee60705cf6",
       "market_weight": 0.0,
-      "model": 0.648484901113356,
+      "model": 0.6453505718266789,
       "notes": [
-        "exposure 72 service points from 22.3 games"
+        "exposure 70 service points from 21.6 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:23:36.577937+00:00",
-      "probability": 0.45778076362803594,
+      "predicted_at": "2026-09-01T01:48:24.962465+00:00",
+      "probability": 0.4574203157600681,
       "question": "Will B. Bencic record more double faults than Y. Putintseva?",
       "rbp": null,
       "settled_at": "",
@@ -82,18 +82,18 @@
       "market": 0.809031732261249,
       "market_id": "16e1ac7b-4c3f-4923-906d-83b2c2865ece",
       "market_weight": 0.34,
-      "model": 0.6455,
+      "model": 0.61975,
       "notes": [
-        "simulated win probability 0.645",
+        "simulated win probability 0.620",
         "market consensus 0.809, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:23:36.577937+00:00",
-      "probability": 0.7034669603706956,
+      "predicted_at": "2026-09-01T01:48:24.962465+00:00",
+      "probability": 0.6884677659717875,
       "question": "Will B. Bencic win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 75
+      "submission": 73
     },
     {
       "base_rate": 0.020454545454545454,
@@ -106,13 +106,13 @@
       "market": null,
       "market_id": "7a23290c-213a-4648-9e33-db9212de1451",
       "market_weight": 0.0,
-      "model": 0.01625,
+      "model": 0.0115,
       "notes": [
         "no usable market quote for this question",
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:23:36.577937+00:00",
+      "predicted_at": "2026-09-01T01:48:24.962465+00:00",
       "probability": 0.02,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,
