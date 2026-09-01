@@ -1,5 +1,5 @@
 {
-  "closing_time": "2026-09-01T12:10:00.000Z",
+  "closing_time": "2026-09-01T10:30:00.000Z",
   "draw": "mens",
   "entries": [
     {
@@ -9,19 +9,19 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
-      "lane": "scenario",
+      "lane": "honest",
       "market": null,
       "market_id": "5b148d9e-be88-4155-b9ca-fb1919f13b61",
       "market_weight": 0.0,
-      "model": 0.9408598858111077,
+      "model": 0.9572443522371891,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-30T23:35:47.643950+00:00",
-      "probability": 0.933359094946219,
+      "predicted_at": "2026-09-01T01:03:27.081036+00:00",
+      "probability": 0.9352154817897513,
       "question": "Will the match last longer than 110 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 96
+      "submission": 94
     },
     {
       "base_rate": 0.46,
@@ -30,23 +30,23 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
-      "lane": "scenario",
+      "lane": "honest",
       "market": null,
       "market_id": "09aaac4d-de82-41fe-9992-99bbd0ea7a8b",
       "market_weight": 0.0,
-      "model": 0.6978469273725298,
+      "model": 0.7642861478455591,
       "notes": [
-        "exposure 128 service points from 40.9 games",
-        "outcome coupling: P(win)=0.327, delta=+0.60",
-        "scenario lane: experimental aces_comparison shift -0.045"
+        "ace vulnerability: Frances Tiafoe 1.36, Martin Damm 1.13",
+        "exposure 133 service points from 42.4 games",
+        "outcome coupling: P(win)=0.270, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T23:35:47.643950+00:00",
-      "probability": 0.6528469273725298,
+      "predicted_at": "2026-09-01T01:03:27.081036+00:00",
+      "probability": 0.7338575330610033,
       "question": "Will M. Damm record more aces than F. Tiafoe?",
       "rbp": null,
       "settled_at": "",
-      "submission": 69
+      "submission": 73
     },
     {
       "base_rate": 0.421,
@@ -55,22 +55,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
-      "lane": "scenario",
+      "lane": "honest",
       "market": null,
       "market_id": "0511d72e-9029-4952-ba4b-0c906c69ab74",
       "market_weight": 0.0,
-      "model": 0.668866330429635,
+      "model": 0.6727215850099788,
       "notes": [
-        "exposure 128 service points from 40.9 games",
-        "scenario lane: experimental double_faults_comparison shift -0.065"
+        "exposure 133 service points from 42.4 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T23:35:47.643950+00:00",
-      "probability": 0.603866330429635,
+      "predicted_at": "2026-09-01T01:03:27.081036+00:00",
+      "probability": 0.647549426508981,
       "question": "Will M. Damm record more double faults than F. Tiafoe?",
       "rbp": null,
       "settled_at": "",
-      "submission": 63
+      "submission": 65
     },
     {
       "base_rate": 0.5,
@@ -79,22 +78,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
-      "lane": "scenario",
+      "lane": "honest",
       "market": null,
       "market_id": "0c6adb48-984d-4bd4-bb81-d47c4cdcd00a",
       "market_weight": 0.0,
-      "model": 0.3265,
+      "model": 0.27,
       "notes": [
-        "simulated win probability 0.327",
+        "simulated win probability 0.270",
         "no market quote; this is the family that most needs one"
       ],
       "outcome": null,
-      "predicted_at": "2026-08-30T23:35:47.643950+00:00",
-      "probability": 0.3603325,
+      "predicted_at": "2026-09-01T01:03:27.081036+00:00",
+      "probability": 0.339,
       "question": "Will M. Damm win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 33
+      "submission": 34
     },
     {
       "base_rate": 0.487,
@@ -103,27 +102,25 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
-      "lane": "scenario",
+      "lane": "honest",
       "market": null,
       "market_id": "56294e31-3504-4a97-9c74-dd6019812bca",
       "market_weight": 0.0,
-      "model": 0.687,
-      "notes": [
-        "scenario lane: experimental tiebreak shift +0.055"
-      ],
+      "model": 0.75625,
+      "notes": [],
       "outcome": null,
-      "predicted_at": "2026-08-30T23:35:47.643950+00:00",
-      "probability": 0.7260000000000001,
+      "predicted_at": "2026-09-01T01:03:27.081036+00:00",
+      "probability": 0.7023999999999999,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 77
+      "submission": 70
     }
   ],
   "match_id": "594be672-17f6-4d4b-b392-01f4c1208426",
   "match_name": "M. Damm vs F. Tiafoe",
   "multiplier": 1,
-  "opening_time": "2026-09-01T00:10:00.000Z",
+  "opening_time": "2026-08-31T22:30:00.000Z",
   "player_a": "Martin Damm",
   "player_b": "Frances Tiafoe",
   "round_code": "R128"

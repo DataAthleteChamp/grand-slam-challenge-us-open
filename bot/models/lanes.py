@@ -54,20 +54,24 @@ LANE_TEMPERATURE = {"honest": 1.0, "slight": 0.85, "scenario": 0.80}
 #: not merely on confidence.
 LANE_MARKET_SCALE = {"honest": 1.0, "slight": 0.75, "scenario": 0.40}
 
-#: Lane name -> per-set form-shock sigma in the match simulation.
+#: Lane name -> *offset* added to the tour's fitted between-set sigma.
 #:
-#: Market weight alone was not enough.  Four of the five live families have no
-#: market at all, so scaling market reliance left them differing only by
-#: temperature - a monotone transform - and the two lanes came out correlated at
-#: 0.991, which is one effective entry and a wasted slot.
+#: Market weight alone was not enough to separate the lanes.  Four of the five
+#: live families have no market at all, so scaling market reliance left them
+#: differing only by temperature - a monotone transform - and the two lanes came
+#: out correlated at 0.991, which is one effective entry and a wasted slot.
+#: Sigma is the size of the per-set form swing and it flows into every
+#: simulation-derived family (tiebreaks, duration, match winner), so nudging it
+#: separates the lanes in a way temperature cannot.
 #:
-#: Sigma is the size of the per-set form swing, and it flows into every
-#: simulation-derived family: tiebreaks, duration and match winner.  A larger
-#: sigma produces more lopsided sets and fewer tiebreaks.  Our fitted value is
-#: 0.05, but the simulator still over-predicts tiebreaks by about 0.089 against a
-#: real-match backtest, so a larger form swing is a genuinely arguable reading of
-#: the same evidence rather than a deliberate handicap.
-LANE_SIGMA = {"honest": 0.05, "slight": 0.07, "scenario": 0.10}
+#: This used to be an absolute sigma per lane (honest 0.05, scenario 0.10).  That
+#: was written before the calibration was run per tour, and it silently applied
+#: the men's fitted value to the women's draw.  ``TOUR_SIGMA`` now carries the
+#: fitted base (ATP 0.05, WTA 0.11) and a lane only nudges it, so the second bot
+#: stays decorrelated without being deliberately miscalibrated - the family-shift
+#: experiment already showed that handicapping bot 2 costs points and teaches
+#: nothing.
+LANE_SIGMA_OFFSET = {"honest": 0.0, "slight": 0.01, "scenario": 0.02}
 
 #: Lane name -> multiplier on model confidence.
 #:
@@ -78,27 +82,39 @@ LANE_CONFIDENCE_SCALE = {"honest": 1.0, "slight": 1.1, "scenario": 1.15}
 
 #: Per-family probability shifts applied ONLY on the scenario lane.
 #:
-#: These are the directional biases measured against 11 settled matches. None of
-#: them is statistically significant - every bootstrapped interval spans zero -
-#: so they must not go on the main entry, where fitting eleven matches of noise
-#: is the likeliest way to lose.
+#: The first version of this experiment carried the per-family biases measured
+#: over 11 settled matches (aces +0.087, double faults +0.128, tiebreak -0.105).
+#: It has now been run and FALSIFIED, twice over:
 #:
-#: Putting them on the second bot instead turns a wasted slot into a controlled
-#: experiment. Both entries face the same questions, so the difference in their
-#: scores is a direct measurement of whether the biases are real. If they are,
-#: the scenario lane pulls ahead and we adopt them on both; if not, we have
-#: falsified them at no cost to the main entry.
+#:   1. After 37 settled matches the two lanes are indistinguishable: honest
+#:      -0.46 RBP/question, scenario -0.47.  The shifts bought nothing.
+#:   2. The underlying measurements themselves reversed sign as the sample
+#:      tripled - double faults went +0.128 -> -0.090 and tiebreak went
+#:      -0.105 -> +0.085.  Two of five flipping sign is what noise looks like,
+#:      so the original shifts were pushing *against* the true direction.
 #:
-#: Measured (ours minus realised), 11 matches:
-#:   aces +0.087, double faults +0.128, duration +0.082,
-#:   match winner +0.071, tiebreak -0.105
-#: Applied at roughly half strength, because a bias estimated from eleven
-#: matches is worth hedging even when you are deliberately testing it.
+#: Chasing the new n=37 numbers would repeat the same mistake, so the aces and
+#: double-fault shifts are retired outright.  Aces are now handled properly by
+#: the ace-vulnerability model, which is fitted out-of-sample rather than to
+#: this tournament; stacking a crude shift on top would double-count it.  Double
+#: faults are ~80% irreducible noise (server identity explains 14-21% of the
+#: variance), so there is nothing there to correct toward.
+#:
+#: One shift survives, because it is the only one with corroboration from a
+#: source independent of this tournament.  Two separate datasets agree that the
+#: simulator produces too many tiebreaks:
+#:   - historical 2023-26 slam hard-court matches: simulated any-tiebreak rate
+#:     runs +0.019 above realised;
+#:   - the 37 settled matches here: we price 0.248 against a realised 0.162.
+#: Tiebreak is also our only significantly positive family (+2.33 RBP/question,
+#: 95% CI [+0.75, +3.57]), and the crowd is far more wrong than we are (+0.152),
+#: so it is the pocket where extra accuracy is worth the most.
+#:
+#: Sized at -0.04: between the two estimates and nearer the corroborated
+#: (smaller) one, because the live estimate is still only 37 matches deep.
 LANE_FAMILY_SHIFT = {
     "scenario": {
-        Family.ACES_COMPARISON: -0.045,
-        Family.DOUBLE_FAULTS_COMPARISON: -0.065,
-        Family.TIEBREAK: +0.055,
+        Family.TIEBREAK: -0.04,
     }
 }
 

@@ -105,7 +105,9 @@ def test_established_player_keeps_most_of_their_own_rate():
 
 
 def test_height_prior_orders_players_correctly():
-    """Height explains ~83% of ace-rate variance — the fallback for unknown players."""
+    """Height explains 48% of men's ace-rate variance (r=0.69) and 29% of the
+    women's — a moderate predictor, and the only one available for a player we
+    have never otherwise measured."""
     tall = height_prior_ace_rate(208, "ATP")
     short = height_prior_ace_rate(175, "ATP")
     assert tall > height_prior_ace_rate(188, "ATP") > short

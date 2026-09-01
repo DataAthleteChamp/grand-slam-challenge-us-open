@@ -1065,3 +1065,32 @@ def test_vulnerability_moves_the_ace_price_the_right_way():
         return pricer.price(spec, context, market_id="x").submission
 
     assert price("Y. Nishioka") > price("D. Medvedev")
+
+
+def test_between_set_sigma_is_fitted_per_tour_not_shared():
+    """The women's draw needs more between-set variation than the men's.
+
+    Sharing one sigma applied the ATP-fitted 0.05 to the WTA draw, where it
+    over-predicts tiebreaks by +0.073 and total games by +1.91.  Guard the split
+    so a future refactor cannot silently collapse it back to one value.
+    """
+    pricer = Pricer(lane="honest")
+    assert pricer._sim_config_for("ATP").sigma == pytest.approx(0.05)
+    assert pricer._sim_config_for("WTA").sigma == pytest.approx(0.11)
+    assert pricer._sim_config_for("WTA").sigma > pricer._sim_config_for("ATP").sigma
+
+
+def test_lane_offset_shifts_sigma_without_discarding_the_tour_fit():
+    scenario = Pricer(lane="scenario")
+    honest = Pricer(lane="honest")
+    for tour in ("ATP", "WTA"):
+        assert scenario._sim_config_for(tour).sigma > honest._sim_config_for(tour).sigma
+    # The offset must stay small enough that the tour split still dominates it.
+    assert scenario._sim_config_for("WTA").sigma > scenario._sim_config_for("ATP").sigma
+
+
+def test_explicit_sim_config_still_overrides_the_tour_fit():
+    pinned = SimulationConfig(n_sims=64, sigma=0.123)
+    pricer = Pricer(lane="honest", sim_config=pinned)
+    assert pricer._sim_config_for("WTA").sigma == pytest.approx(0.123)
+    assert pricer._sim_config_for("ATP").sigma == pytest.approx(0.123)

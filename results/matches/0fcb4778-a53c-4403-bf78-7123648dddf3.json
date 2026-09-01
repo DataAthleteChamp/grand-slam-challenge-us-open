@@ -1,0 +1,130 @@
+{
+  "closing_time": "2026-09-02T05:50:00.000Z",
+  "draw": "womens",
+  "entries": [
+    {
+      "base_rate": 0.6368,
+      "brier": null,
+      "confidence": 0.8,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_duration",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "72b3684f-be18-4f7e-a18e-a5ed3df90539",
+      "market_weight": 0.0,
+      "model": 0.7117043228027302,
+      "notes": [
+        "no usable market quote for this question"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T01:23:36.584882+00:00",
+      "probability": 0.7057119769785118,
+      "question": "Will the match last longer than 80 minutes?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 75
+    },
+    {
+      "base_rate": 0.427,
+      "brier": null,
+      "confidence": 0.45,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "aces_comparison",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "4690ecb4-4f88-43e0-8cfe-bb169baa2868",
+      "market_weight": 0.0,
+      "model": 0.6008829729169743,
+      "notes": [
+        "exposure 70 service points from 21.7 games"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T01:23:36.584882+00:00",
+      "probability": 0.5169844384845342,
+      "question": "Will E. Mertens record more aces than K. Quevedo?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 52
+    },
+    {
+      "base_rate": 0.433,
+      "brier": null,
+      "confidence": 0.45,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "double_faults_comparison",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "571ad544-cad7-42f7-9bd2-17d83a88316f",
+      "market_weight": 0.0,
+      "model": 0.615487752658473,
+      "notes": [
+        "exposure 70 service points from 21.7 games"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T01:23:36.584882+00:00",
+      "probability": 0.5274374120007598,
+      "question": "Will E. Mertens record more double faults than K. Quevedo?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 53
+    },
+    {
+      "base_rate": 0.5,
+      "brier": null,
+      "confidence": 0.85,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_winner",
+      "lane": "scenario",
+      "market": 0.8375219170468854,
+      "market_id": "d67d9886-df29-49c5-80c4-47bab7b57d9a",
+      "market_weight": 0.34,
+      "model": 0.70725,
+      "notes": [
+        "simulated win probability 0.707",
+        "market consensus 0.838, weight 0.34"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T01:23:36.584882+00:00",
+      "probability": 0.7518334772708424,
+      "question": "Will E. Mertens win?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 80
+    },
+    {
+      "base_rate": 0.225,
+      "brier": null,
+      "confidence": 0.8,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "tiebreak",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "ad607633-3d3f-4957-9dd4-f7e923f40783",
+      "market_weight": 0.0,
+      "model": 0.1825,
+      "notes": [
+        "no usable market quote for this question",
+        "scenario lane: experimental tiebreak shift -0.040"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T01:23:36.584882+00:00",
+      "probability": 0.1459,
+      "question": "Will the match feature at least 1 tiebreak(s)?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 10
+    }
+  ],
+  "match_id": "0fcb4778-a53c-4403-bf78-7123648dddf3",
+  "match_name": "Kaitlin Quevedo vs E. Mertens",
+  "multiplier": 1,
+  "opening_time": "2026-09-01T17:50:00.000Z",
+  "player_a": "Kaitlin Quevedo",
+  "player_b": "Elise Mertens",
+  "round_code": "R128"
+}

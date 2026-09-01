@@ -1,0 +1,130 @@
+{
+  "closing_time": "2026-09-02T03:00:00.000Z",
+  "draw": "womens",
+  "entries": [
+    {
+      "base_rate": 0.3994,
+      "brier": null,
+      "confidence": 0.8,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_duration",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "21169548-9b46-437e-adac-84bdd29c6a3e",
+      "market_weight": 0.0,
+      "model": 0.4104025006430984,
+      "notes": [
+        "no usable market quote for this question"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T01:23:36.577295+00:00",
+      "probability": 0.40952230059165057,
+      "question": "Will the match last longer than 100 minutes?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 39
+    },
+    {
+      "base_rate": 0.427,
+      "brier": null,
+      "confidence": 0.75,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "aces_comparison",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "a5296cbf-4b43-4269-b1df-0062040d660b",
+      "market_weight": 0.0,
+      "model": 0.38739670148774225,
+      "notes": [
+        "exposure 70 service points from 21.7 games"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T01:23:36.577295+00:00",
+      "probability": 0.39284215503317765,
+      "question": "Will R. Montgomery record more aces than M. Sakkari?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 37
+    },
+    {
+      "base_rate": 0.433,
+      "brier": null,
+      "confidence": 0.1,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "double_faults_comparison",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "b099fff8-4e59-494d-910b-590177c8e138",
+      "market_weight": 0.0,
+      "model": 0.5621887591445343,
+      "notes": [
+        "exposure 70 service points from 21.7 games"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T01:23:36.577295+00:00",
+      "probability": 0.44785670730162147,
+      "question": "Will R. Montgomery record more double faults than M. Sakkari?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 43
+    },
+    {
+      "base_rate": 0.5,
+      "brier": null,
+      "confidence": 0.85,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_winner",
+      "lane": "scenario",
+      "market": 0.4278715296685858,
+      "market_id": "f7510350-f4a9-426d-b9e1-f809a31bc872",
+      "market_weight": 0.34,
+      "model": 0.2675,
+      "notes": [
+        "simulated win probability 0.268",
+        "market consensus 0.428, weight 0.34"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T01:23:36.577295+00:00",
+      "probability": 0.32195670732944454,
+      "question": "Will R. Montgomery win?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 28
+    },
+    {
+      "base_rate": 0.225,
+      "brier": null,
+      "confidence": 0.8,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "tiebreak",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "32dd0aec-b288-4854-96b2-095e148d5737",
+      "market_weight": 0.0,
+      "model": 0.21925,
+      "notes": [
+        "no usable market quote for this question",
+        "scenario lane: experimental tiebreak shift -0.040"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T01:23:36.577295+00:00",
+      "probability": 0.17970999999999998,
+      "question": "Will the match feature at least 1 tiebreak(s)?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 13
+    }
+  ],
+  "match_id": "dea28514-d97b-4a27-a97b-12be499745f2",
+  "match_name": "M. Sakkari vs R. Montgomery",
+  "multiplier": 1,
+  "opening_time": "2026-09-01T15:00:00.000Z",
+  "player_a": "Maria Sakkari",
+  "player_b": "Robin Montgomery",
+  "round_code": "R128"
+}

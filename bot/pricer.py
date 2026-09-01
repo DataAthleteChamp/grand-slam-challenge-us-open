@@ -63,11 +63,13 @@ from .models.lanes import (
     LANE_CONFIDENCE_SCALE,
     LANE_FAMILY_SHIFT,
     LANE_MARKET_SCALE,
-    LANE_SIGMA,
+    LANE_SIGMA_OFFSET,
     apply_lane,
 )
 from .models.shrink import CREDIBILITY_K, height_prior_ace_rate, shrink
 from .models.simulate import (
+    FITTED_SIGMA,
+    TOUR_SIGMA,
     SimulationConfig,
     matchup_probabilities,
     simulate_match,
@@ -228,9 +230,8 @@ class Pricer:
         market_weights: dict[Family, float] | None = None,
     ) -> None:
         self.lane = lane
-        self.sim_config = sim_config or SimulationConfig(
-            n_sims=4000, sigma=LANE_SIGMA.get(lane, SimulationConfig.sigma)
-        )
+        self._sim_config_override = sim_config
+        self.sim_config = sim_config or SimulationConfig(n_sims=4000)
         # Scaling the market weight by lane is what makes the second entry a
         # genuinely different model rather than a louder copy of the first.
         scale = LANE_MARKET_SCALE.get(lane, 1.0)
@@ -495,9 +496,20 @@ class Pricer:
             context.player_b.serve_skill,
             context.player_b.return_skill,
         )
-        result = simulate_match(pa, pb, context.best_of, config=self.sim_config)
+        result = simulate_match(pa, pb, context.best_of, config=self._sim_config_for(context.tour))
         self._sim_cache[key] = result
         return result
+
+    def _sim_config_for(self, tour: str) -> SimulationConfig:
+        """Between-set variation is fitted per tour, not shared.
+
+        An explicit ``sim_config`` passed to the constructor still wins, so
+        backtests and tests can pin the parameters.
+        """
+        if self._sim_config_override is not None:
+            return self._sim_config_override
+        sigma = TOUR_SIGMA.get(tour, FITTED_SIGMA) + LANE_SIGMA_OFFSET.get(self.lane, 0.0)
+        return replace(self.sim_config, sigma=sigma)
 
     def _read_simulation(self, spec, simulation, base, notes, context) -> float:
         """Read one question off a simulated match."""

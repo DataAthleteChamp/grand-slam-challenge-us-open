@@ -1,0 +1,132 @@
+{
+  "closing_time": "2026-09-02T09:00:00.000Z",
+  "draw": "mens",
+  "entries": [
+    {
+      "base_rate": 0.8089,
+      "brier": null,
+      "confidence": 0.8,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_duration",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "295e4a71-ceae-46fc-b116-efe405898a65",
+      "market_weight": 0.0,
+      "model": 0.8137494758463943,
+      "notes": [
+        "no usable market quote for this question"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T01:23:36.586131+00:00",
+      "probability": 0.8133615177786828,
+      "question": "Will the match last longer than 115 minutes?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 86
+    },
+    {
+      "base_rate": 0.46,
+      "brier": null,
+      "confidence": 0.45,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "aces_comparison",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "796f885d-51c4-4015-aa5f-47cd4518f07c",
+      "market_weight": 0.0,
+      "model": 0.6209251698302618,
+      "notes": [
+        "ace vulnerability: Andrea Guerrieri 1.00, Alex de Minaur 0.78",
+        "exposure 109 service points from 35.0 games",
+        "outcome coupling: P(win)=0.944, delta=+0.60"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T01:23:36.586131+00:00",
+      "probability": 0.5432787753871605,
+      "question": "Will A. De Minaur record more aces than A. Guerrieri?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 55
+    },
+    {
+      "base_rate": 0.421,
+      "brier": null,
+      "confidence": 0.45,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "double_faults_comparison",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "17b3c279-15ec-4ccd-8d07-17b89188ab57",
+      "market_weight": 0.0,
+      "model": 0.3495887498936672,
+      "notes": [
+        "exposure 109 service points from 35.0 games"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T01:23:36.586131+00:00",
+      "probability": 0.3840446780699728,
+      "question": "Will A. De Minaur record more double faults than A. Guerrieri?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 36
+    },
+    {
+      "base_rate": 0.5,
+      "brier": null,
+      "confidence": 0.85,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_winner",
+      "lane": "scenario",
+      "market": 0.9437702265115442,
+      "market_id": "aa0de94a-3b64-4bc6-8f5b-58abec2bbfcb",
+      "market_weight": 0.34,
+      "model": 0.82725,
+      "notes": [
+        "simulated win probability 0.827",
+        "market consensus 0.944, weight 0.34"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T01:23:36.586131+00:00",
+      "probability": 0.8714758830065719,
+      "question": "Will A. De Minaur win?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 92
+    },
+    {
+      "base_rate": 0.487,
+      "brier": null,
+      "confidence": 0.8,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "tiebreak",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "8cc30ba2-1556-4744-b23e-53228ec7b521",
+      "market_weight": 0.0,
+      "model": 0.35575,
+      "notes": [
+        "no usable market quote for this question",
+        "scenario lane: experimental tiebreak shift -0.040"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T01:23:36.586131+00:00",
+      "probability": 0.32625000000000004,
+      "question": "Will the match feature at least 1 tiebreak(s)?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 29
+    }
+  ],
+  "match_id": "98dc51c5-807b-4441-825f-79c49f5c537f",
+  "match_name": "A. Guerrieri vs A. De Minaur",
+  "multiplier": 1,
+  "opening_time": "2026-09-01T21:00:00.000Z",
+  "player_a": "Andrea Guerrieri",
+  "player_b": "Alex de Minaur",
+  "round_code": "R128"
+}

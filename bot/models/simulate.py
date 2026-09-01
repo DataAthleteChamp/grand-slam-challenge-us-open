@@ -52,6 +52,32 @@ FITTED_SIGMA = 0.05
 FITTED_RHO = -0.6
 SKILL_SCALE = 1.5
 
+#: Between-set form variation, fitted separately per tour.
+#:
+#: ``FITTED_SIGMA`` above was fitted on ATP matches only and was then applied to
+#: both draws.  Re-running the same calibration per tour over 2023-26 slam
+#: hard-court matches (120 matches per tour, both players with 20+ tour matches)
+#: shows the men's value is right and the women's value is badly wrong.  Mean
+#: simulated minus realised, at the current shared sigma = 0.05:
+#:
+#:            total games   any tiebreak   any lopsided set
+#:   ATP         +1.98         +0.019          -0.041
+#:   WTA         +1.91         +0.073          -0.097
+#:
+#: Sweeping sigma moves all three together.  For ATP the error is minimised at
+#: 0.05 (raising it overshoots lopsided sets badly: -0.041 -> +0.070 at 0.08).
+#: For WTA it is minimised at 0.11, where every bias essentially vanishes:
+#:
+#:   WTA sigma 0.11: games +0.57, tiebreak +0.003, lopsided +0.039
+#:
+#: The women's game has more between-set swing than the men's, so holding serve
+#: is less persistent across sets; one shared parameter cannot describe both.
+#: This matters because the women's draw is where the live entry bleeds
+#: (-1.37 RBP/question against -0.39 for the men's), and because the simulated
+#: WTA any-tiebreak rate at 0.11 (0.186) matches both the historical rate
+#: (0.183) and the rate realised in this tournament (0.162).
+TOUR_SIGMA = {"ATP": 0.05, "WTA": 0.11}
+
 
 @dataclass(frozen=True)
 class SimulationConfig:

@@ -91,10 +91,16 @@ def shrink_stat(observed: float, n: float, prior: float, stat: str) -> Credibili
 def height_prior_ace_rate(height_cm: float | None, tour: str = "ATP") -> float:
     """Prior ace rate from height alone — the fallback for an unknown player.
 
-    Height explains roughly 83% of the variance in men's ace rate and 92% of the
-    variance in first-serve points won, and it is known for essentially every
-    player on tour including qualifiers.  That makes it the single most useful
-    piece of information about an opponent we have never otherwise measured.
+    Height explains 48% of the variance in men's ace rate and 29% of the
+    women's, measured directly on hard courts 2023-2026 over players with at
+    least 20 matches (r = 0.693 and 0.539).
+
+    An earlier version of this docstring claimed 83%, which was wrong and made
+    the prior look far stronger than it is. Height remains the right fallback
+    because it is known for essentially every player including qualifiers, so it
+    is the only thing we have about a player we have never otherwise measured -
+    but it is a moderate predictor, not a near-deterministic one, and on the
+    women's draw it explains under a third of the variance.
 
     The slope is calibrated so a 175cm player sits near the bottom of the observed
     range and a 205cm player near the top.

@@ -1,0 +1,132 @@
+{
+  "closing_time": "2026-09-02T04:10:00.000Z",
+  "draw": "mens",
+  "entries": [
+    {
+      "base_rate": 0.7643,
+      "brier": null,
+      "confidence": 0.8,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_duration",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "6875cdb2-bb92-4c7d-a8fd-7acc16e45cae",
+      "market_weight": 0.0,
+      "model": 0.8557293885321577,
+      "notes": [
+        "no usable market quote for this question"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T01:23:36.581254+00:00",
+      "probability": 0.8484150374495851,
+      "question": "Will the match last longer than 120 minutes?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 90
+    },
+    {
+      "base_rate": 0.46,
+      "brier": null,
+      "confidence": 0.9,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "aces_comparison",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "1aa003b9-36bf-45dc-aab6-76e85e502cf5",
+      "market_weight": 0.0,
+      "model": 0.7557654094770306,
+      "notes": [
+        "ace vulnerability: Carlos Taberner 1.00, Zizou Bergs 0.78",
+        "exposure 116 service points from 37.3 games",
+        "outcome coupling: P(win)=0.945, delta=+0.60"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T01:23:36.581254+00:00",
+      "probability": 0.7557654094770306,
+      "question": "Will Z. Bergs record more aces than C. Taberner?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 80
+    },
+    {
+      "base_rate": 0.421,
+      "brier": null,
+      "confidence": 0.9,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "double_faults_comparison",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "72092e1d-2026-480f-8422-16543310800e",
+      "market_weight": 0.0,
+      "model": 0.35321576556653483,
+      "notes": [
+        "exposure 116 service points from 37.3 games"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T01:23:36.581254+00:00",
+      "probability": 0.35321576556653483,
+      "question": "Will Z. Bergs record more double faults than C. Taberner?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 32
+    },
+    {
+      "base_rate": 0.5,
+      "brier": null,
+      "confidence": 0.85,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_winner",
+      "lane": "scenario",
+      "market": 0.9454368932682566,
+      "market_id": "dc86e12b-f267-4cb8-bcc2-d089f1257874",
+      "market_weight": 0.34,
+      "model": 0.709,
+      "notes": [
+        "simulated win probability 0.709",
+        "market consensus 0.945, weight 0.34"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T01:23:36.581254+00:00",
+      "probability": 0.818663614877911,
+      "question": "Will Z. Bergs win?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 87
+    },
+    {
+      "base_rate": 0.487,
+      "brier": null,
+      "confidence": 0.8,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "tiebreak",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "f9ab38f5-6fb0-4219-a13e-94bb1b76cf55",
+      "market_weight": 0.0,
+      "model": 0.41925,
+      "notes": [
+        "no usable market quote for this question",
+        "scenario lane: experimental tiebreak shift -0.040"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T01:23:36.581254+00:00",
+      "probability": 0.38467000000000007,
+      "question": "Will the match feature at least 1 tiebreak(s)?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 36
+    }
+  ],
+  "match_id": "901f9ec3-4671-4d86-94dc-1b700b57f127",
+  "match_name": "Z. Bergs vs C. Taberner",
+  "multiplier": 1,
+  "opening_time": "2026-09-01T16:10:00.000Z",
+  "player_a": "Zizou Bergs",
+  "player_b": "Carlos Taberner",
+  "round_code": "R128"
+}

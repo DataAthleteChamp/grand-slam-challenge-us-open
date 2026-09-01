@@ -1,0 +1,132 @@
+{
+  "closing_time": "2026-09-02T03:00:00.000Z",
+  "draw": "mens",
+  "entries": [
+    {
+      "base_rate": 0.8089,
+      "brier": null,
+      "confidence": 0.8,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_duration",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "9854b426-bd25-4826-9186-bc79577d6ec5",
+      "market_weight": 0.0,
+      "model": 0.9029270240429699,
+      "notes": [
+        "no usable market quote for this question"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T01:23:36.579998+00:00",
+      "probability": 0.8954048621195323,
+      "question": "Will the match last longer than 115 minutes?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 94
+    },
+    {
+      "base_rate": 0.46,
+      "brier": null,
+      "confidence": 0.9,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "aces_comparison",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "28af57d5-0b3c-446b-9a52-0c25197be98b",
+      "market_weight": 0.0,
+      "model": 0.5371202544130921,
+      "notes": [
+        "ace vulnerability: Francisco Comesana 0.95, Flavio Cobolli 0.92",
+        "exposure 120 service points from 38.4 games",
+        "outcome coupling: P(win)=0.803, delta=+0.60"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T01:23:36.579998+00:00",
+      "probability": 0.5371202544130921,
+      "question": "Will F. Cobolli record more aces than F. Comesana?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 55
+    },
+    {
+      "base_rate": 0.421,
+      "brier": null,
+      "confidence": 0.9,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "double_faults_comparison",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "97fdafdd-09a8-45d0-8da3-84a24eddcbb7",
+      "market_weight": 0.0,
+      "model": 0.44946140429422626,
+      "notes": [
+        "exposure 120 service points from 38.4 games"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T01:23:36.579998+00:00",
+      "probability": 0.44946140429422626,
+      "question": "Will F. Cobolli record more double faults than F. Comesana?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 44
+    },
+    {
+      "base_rate": 0.5,
+      "brier": null,
+      "confidence": 0.85,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_winner",
+      "lane": "scenario",
+      "market": 0.8030303030765125,
+      "market_id": "7339ccad-5f7c-48c4-a29f-01f9e2ccf05f",
+      "market_weight": 0.34,
+      "model": 0.499,
+      "notes": [
+        "simulated win probability 0.499",
+        "market consensus 0.803, weight 0.34"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T01:23:36.579998+00:00",
+      "probability": 0.6139845373026229,
+      "question": "Will F. Cobolli win?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 64
+    },
+    {
+      "base_rate": 0.487,
+      "brier": null,
+      "confidence": 0.8,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "tiebreak",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "7a4aefd5-dbfe-417d-9023-3684c10d886e",
+      "market_weight": 0.0,
+      "model": 0.443,
+      "notes": [
+        "no usable market quote for this question",
+        "scenario lane: experimental tiebreak shift -0.040"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T01:23:36.579998+00:00",
+      "probability": 0.40652000000000005,
+      "question": "Will the match feature at least 1 tiebreak(s)?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 38
+    }
+  ],
+  "match_id": "4e0009aa-aaba-4680-ade1-2575876fe83a",
+  "match_name": "F. Comesana vs F. Cobolli",
+  "multiplier": 1,
+  "opening_time": "2026-09-01T15:00:00.000Z",
+  "player_a": "Francisco Comesana",
+  "player_b": "Flavio Cobolli",
+  "round_code": "R128"
+}

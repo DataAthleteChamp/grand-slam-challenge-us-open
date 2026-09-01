@@ -1,0 +1,132 @@
+{
+  "closing_time": "2026-09-02T03:00:00.000Z",
+  "draw": "womens",
+  "entries": [
+    {
+      "base_rate": 0.7946,
+      "brier": null,
+      "confidence": 0.35,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_duration",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "c15a33fa-651c-4c01-8bf2-e2306c10bbaa",
+      "market_weight": 0.0,
+      "model": 0.7946,
+      "notes": [
+        "one or both players unrated; using the base rate as the model",
+        "no usable market quote for this question"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T01:23:36.579352+00:00",
+      "probability": 0.7946,
+      "question": "Will the match last longer than 70 minutes?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 84
+    },
+    {
+      "base_rate": 0.427,
+      "brier": null,
+      "confidence": 0.3,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "aces_comparison",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "62d9005e-99db-4a7f-a634-f101d52ef25c",
+      "market_weight": 0.0,
+      "model": 0.427,
+      "notes": [
+        "missing aces rates; using the measured even-matchup price"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T01:23:36.579352+00:00",
+      "probability": 0.427,
+      "question": "Will T. Frodin record more aces than E. Rybakina?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 41
+    },
+    {
+      "base_rate": 0.433,
+      "brier": null,
+      "confidence": 0.3,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "double_faults_comparison",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "a92d29d1-84c1-4697-84e1-69e83c7b7bf5",
+      "market_weight": 0.0,
+      "model": 0.433,
+      "notes": [
+        "missing double_faults rates; using the measured even-matchup price"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T01:23:36.579352+00:00",
+      "probability": 0.433,
+      "question": "Will T. Frodin record more double faults than E. Rybakina?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 42
+    },
+    {
+      "base_rate": 0.5,
+      "brier": null,
+      "confidence": 0.85,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_winner",
+      "lane": "scenario",
+      "market": 0.059624210676113995,
+      "market_id": "afd7d544-e636-43f2-88ce-1687110d6156",
+      "market_weight": 0.34,
+      "model": 0.5,
+      "notes": [
+        "one or both players unrated; using an even prior",
+        "market consensus 0.060, weight 0.34"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T01:23:36.579352+00:00",
+      "probability": 0.2862658566833773,
+      "question": "Will T. Frodin win?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 24
+    },
+    {
+      "base_rate": 0.225,
+      "brier": null,
+      "confidence": 0.35,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "tiebreak",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "fecbf6d3-fb1c-4e9c-b4db-11aa19c087df",
+      "market_weight": 0.0,
+      "model": 0.225,
+      "notes": [
+        "one or both players unrated; using the base rate as the model",
+        "no usable market quote for this question",
+        "scenario lane: experimental tiebreak shift -0.040"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T01:23:36.579352+00:00",
+      "probability": 0.185,
+      "question": "Will the match feature at least 1 tiebreak(s)?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 14
+    }
+  ],
+  "match_id": "4f3412cc-088f-4997-9825-34e7dddf3bab",
+  "match_name": "T. Frodin vs E. Rybakina",
+  "multiplier": 1,
+  "opening_time": "2026-09-01T15:00:00.000Z",
+  "player_a": "T. Frodin",
+  "player_b": "Elena Rybakina",
+  "round_code": "R128"
+}

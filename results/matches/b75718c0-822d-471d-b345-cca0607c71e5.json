@@ -1,0 +1,130 @@
+{
+  "closing_time": "2026-09-02T04:40:00.000Z",
+  "draw": "womens",
+  "entries": [
+    {
+      "base_rate": 0.5055,
+      "brier": null,
+      "confidence": 0.8,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_duration",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "784ccad2-2925-4523-98df-9d303dab9c40",
+      "market_weight": 0.0,
+      "model": 0.5696278917829692,
+      "notes": [
+        "no usable market quote for this question"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T01:23:36.582953+00:00",
+      "probability": 0.5644976604403317,
+      "question": "Will the match last longer than 90 minutes?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 58
+    },
+    {
+      "base_rate": 0.427,
+      "brier": null,
+      "confidence": 0.75,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "aces_comparison",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "f74f7844-eb8b-4341-8435-cd72f5b4a46d",
+      "market_weight": 0.0,
+      "model": 0.4680207306632283,
+      "notes": [
+        "exposure 71 service points from 22.0 games"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T01:23:36.582953+00:00",
+      "probability": 0.4623803801970344,
+      "question": "Will A. Potapova record more aces than T. Valentova?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 45
+    },
+    {
+      "base_rate": 0.433,
+      "brier": null,
+      "confidence": 0.1,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "double_faults_comparison",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "ccbb116e-2a7d-4a47-8937-421b18e34401",
+      "market_weight": 0.0,
+      "model": 0.48649724587218857,
+      "notes": [
+        "exposure 71 service points from 22.0 games"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T01:23:36.582953+00:00",
+      "probability": 0.4391521832753017,
+      "question": "Will A. Potapova record more double faults than T. Valentova?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 42
+    },
+    {
+      "base_rate": 0.5,
+      "brier": null,
+      "confidence": 0.85,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_winner",
+      "lane": "scenario",
+      "market": 0.33459595958011723,
+      "market_id": "7b89e7c4-e75d-4ddf-8682-0dd5e5968d57",
+      "market_weight": 0.34,
+      "model": 0.4515,
+      "notes": [
+        "simulated win probability 0.452",
+        "market consensus 0.335, weight 0.34"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T01:23:36.582953+00:00",
+      "probability": 0.41244630964051276,
+      "question": "Will A. Potapova win?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 39
+    },
+    {
+      "base_rate": 0.225,
+      "brier": null,
+      "confidence": 0.8,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "tiebreak",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "9e0f66bd-75c3-42fe-a193-a66ca442bf39",
+      "market_weight": 0.0,
+      "model": 0.182,
+      "notes": [
+        "no usable market quote for this question",
+        "scenario lane: experimental tiebreak shift -0.040"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T01:23:36.582953+00:00",
+      "probability": 0.14543999999999999,
+      "question": "Will the match feature at least 1 tiebreak(s)?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 10
+    }
+  ],
+  "match_id": "b75718c0-822d-471d-b345-cca0607c71e5",
+  "match_name": "A. Potapova vs T. Valentova",
+  "multiplier": 1,
+  "opening_time": "2026-09-01T16:40:00.000Z",
+  "player_a": "Anastasia Potapova",
+  "player_b": "Tereza Valentova",
+  "round_code": "R128"
+}
