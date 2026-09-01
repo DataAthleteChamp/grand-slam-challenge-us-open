@@ -1,5 +1,5 @@
 {
-  "closing_time": "2026-09-02T05:20:00.000Z",
+  "closing_time": "2026-09-02T02:30:00.000Z",
   "draw": "mens",
   "entries": [
     {
@@ -13,17 +13,18 @@
       "market": null,
       "market_id": "e584c583-7410-44a7-8631-f53a2279245d",
       "market_weight": 0.0,
-      "model": 0.7476906827234989,
+      "model": 0.5750572454159486,
       "notes": [
+        "total games: simulator 38.3, Pinnacle 31.9, used 34.5 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.408829+00:00",
-      "probability": 0.7476906827234989,
+      "predicted_at": "2026-09-01T14:33:19.110347+00:00",
+      "probability": 0.5750572454159486,
       "question": "Will the match last longer than 150 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 80
+      "submission": 59
     },
     {
       "base_rate": 0.46,
@@ -36,15 +37,15 @@
       "market": null,
       "market_id": "9104c18a-ddca-4f51-bec0-b4bbcf650060",
       "market_weight": 0.0,
-      "model": 0.35354898655408346,
+      "model": 0.351567502632532,
       "notes": [
         "ace vulnerability: Thanasi Kokkinakis 1.01, Rafael Jodar 0.85",
         "exposure 127 service points from 40.6 games",
-        "outcome coupling: P(win)=0.897, delta=+0.60"
+        "outcome coupling: P(win)=0.888, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.408829+00:00",
-      "probability": 0.35354898655408346,
+      "predicted_at": "2026-09-01T14:33:19.110347+00:00",
+      "probability": 0.351567502632532,
       "question": "Will R. Jodar record more aces than T. Kokkinakis?",
       "rbp": null,
       "settled_at": "",
@@ -66,7 +67,7 @@
         "exposure 127 service points from 40.6 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.408829+00:00",
+      "predicted_at": "2026-09-01T14:33:19.110347+00:00",
       "probability": 0.42873787614029324,
       "question": "Will R. Jodar record more double faults than T. Kokkinakis?",
       "rbp": null,
@@ -81,21 +82,21 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.897173489270836,
+      "market": 0.8882930610685039,
       "market_id": "563fb05d-98a1-4d5e-ac50-ffae54d02d88",
       "market_weight": 0.34,
       "model": 0.51275,
       "notes": [
         "simulated win probability 0.513",
-        "market consensus 0.897, weight 0.34"
+        "market consensus 0.888, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.408829+00:00",
-      "probability": 0.6794291746026462,
+      "predicted_at": "2026-09-01T14:33:19.110347+00:00",
+      "probability": 0.6727207688047101,
       "question": "Will R. Jodar win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 72
+      "submission": 71
     },
     {
       "base_rate": 0.13263821138211385,
@@ -114,7 +115,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.408829+00:00",
+      "predicted_at": "2026-09-01T14:33:19.110347+00:00",
       "probability": 0.13899999999999998,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,
@@ -125,7 +126,7 @@
   "match_id": "fd89b40c-5f37-4d42-97f5-7d1eaa5ed008",
   "match_name": "R. Jodar vs T. Kokkinakis",
   "multiplier": 1,
-  "opening_time": "2026-09-01T17:20:00.000Z",
+  "opening_time": "2026-09-01T14:30:00.000Z",
   "player_a": "Rafael Jodar",
   "player_b": "Thanasi Kokkinakis",
   "round_code": "R128"

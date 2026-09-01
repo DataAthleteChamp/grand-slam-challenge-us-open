@@ -1,5 +1,5 @@
 {
-  "closing_time": "2026-09-02T03:00:00.000Z",
+  "closing_time": "2026-09-02T02:30:00.000Z",
   "draw": "mens",
   "entries": [
     {
@@ -13,17 +13,18 @@
       "market": null,
       "market_id": "3abfd20b-9823-4a03-90d9-731fa941206f",
       "market_weight": 0.0,
-      "model": 0.7161664947875318,
+      "model": 0.5537339799590677,
       "notes": [
+        "total games: simulator 35.7, Pinnacle 29.9, used 32.2 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.401063+00:00",
-      "probability": 0.7161664947875318,
+      "predicted_at": "2026-09-01T14:33:19.106252+00:00",
+      "probability": 0.5537339799590677,
       "question": "Will the match last longer than 135 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 76
+      "submission": 57
     },
     {
       "base_rate": 0.46,
@@ -36,15 +37,15 @@
       "market": null,
       "market_id": "9b55d8d8-7080-4296-bee9-8e74a52d3f4b",
       "market_weight": 0.0,
-      "model": 0.6565028052267046,
+      "model": 0.6584332912189026,
       "notes": [
         "ace vulnerability: Filip Misolic 1.08, Francisco Cerundolo 0.75",
         "exposure 118 service points from 37.8 games",
-        "outcome coupling: P(win)=0.920, delta=+0.60"
+        "outcome coupling: P(win)=0.926, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.401063+00:00",
-      "probability": 0.6565028052267046,
+      "predicted_at": "2026-09-01T14:33:19.106252+00:00",
+      "probability": 0.6584332912189026,
       "question": "Will F. Cerundolo record more aces than F. Misolic?",
       "rbp": null,
       "settled_at": "",
@@ -66,7 +67,7 @@
         "exposure 118 service points from 37.8 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.401063+00:00",
+      "predicted_at": "2026-09-01T14:33:19.106252+00:00",
       "probability": 0.4755713022456066,
       "question": "Will F. Cerundolo record more double faults than F. Misolic?",
       "rbp": null,
@@ -81,21 +82,21 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.9195497409714365,
+      "market": 0.9261904761295752,
       "market_id": "82e8a389-7516-446a-b61a-e1799f1a144a",
       "market_weight": 0.34,
       "model": 0.738,
       "notes": [
         "simulated win probability 0.738",
-        "market consensus 0.920, weight 0.34"
+        "market consensus 0.926, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.401063+00:00",
-      "probability": 0.8121456677916137,
+      "predicted_at": "2026-09-01T14:33:19.106252+00:00",
+      "probability": 0.8166916190525495,
       "question": "Will F. Cerundolo win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 86
+      "submission": 87
     },
     {
       "base_rate": 0.13263821138211385,
@@ -114,7 +115,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.401063+00:00",
+      "predicted_at": "2026-09-01T14:33:19.106252+00:00",
       "probability": 0.0525,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,
@@ -125,7 +126,7 @@
   "match_id": "e9e932a9-7755-4696-aaf9-10011b49b311",
   "match_name": "F. Misolic vs F. Cerundolo",
   "multiplier": 1,
-  "opening_time": "2026-09-01T15:00:00.000Z",
+  "opening_time": "2026-09-01T14:30:00.000Z",
   "player_a": "Filip Misolic",
   "player_b": "Francisco Cerundolo",
   "round_code": "R128"

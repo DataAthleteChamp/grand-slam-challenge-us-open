@@ -13,17 +13,18 @@
       "market": null,
       "market_id": "861853b9-d110-44bd-abbc-4ae989518494",
       "market_weight": 0.0,
-      "model": 0.7855281826050425,
+      "model": 0.7305119334452304,
       "notes": [
+        "total games: simulator 21.7, Pinnacle 20.4, used 20.9 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.420642+00:00",
-      "probability": 0.7855281826050425,
+      "predicted_at": "2026-09-01T14:33:19.129867+00:00",
+      "probability": 0.7305119334452304,
       "question": "Will the match last longer than 75 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 84
+      "submission": 78
     },
     {
       "base_rate": 0.427,
@@ -41,7 +42,7 @@
         "exposure 70 service points from 21.7 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.420642+00:00",
+      "predicted_at": "2026-09-01T14:33:19.129867+00:00",
       "probability": 0.4115395452646867,
       "question": "Will A. Anisimova record more aces than L. Tagger?",
       "rbp": null,
@@ -64,7 +65,7 @@
         "exposure 70 service points from 21.7 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.420642+00:00",
+      "predicted_at": "2026-09-01T14:33:19.129867+00:00",
       "probability": 0.4576416867144478,
       "question": "Will A. Anisimova record more double faults than L. Tagger?",
       "rbp": null,
@@ -79,17 +80,17 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.8064291557635026,
+      "market": 0.8090567149855566,
       "market_id": "276cfddd-8d7f-4327-aa60-a8e95f9c0a0c",
       "market_weight": 0.34,
       "model": 0.59575,
       "notes": [
         "simulated win probability 0.596",
-        "market consensus 0.806, weight 0.34"
+        "market consensus 0.809, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.420642+00:00",
-      "probability": 0.6732507690019818,
+      "predicted_at": "2026-09-01T14:33:19.129867+00:00",
+      "probability": 0.6744787106622401,
       "question": "Will A. Anisimova win?",
       "rbp": null,
       "settled_at": "",
@@ -112,7 +113,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.420642+00:00",
+      "predicted_at": "2026-09-01T14:33:19.129867+00:00",
       "probability": 0.155,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

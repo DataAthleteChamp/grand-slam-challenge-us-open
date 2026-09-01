@@ -1,5 +1,5 @@
 {
-  "closing_time": "2026-09-02T12:10:00.000Z",
+  "closing_time": "2026-09-02T10:30:00.000Z",
   "draw": "mens",
   "entries": [
     {
@@ -13,17 +13,18 @@
       "market": null,
       "market_id": "a6c3dcd9-cd5d-4336-939f-aec41e75d6fc",
       "market_weight": 0.0,
-      "model": 0.8272862413699404,
+      "model": 0.7470621693374888,
       "notes": [
+        "total games: simulator 36.6, Pinnacle 33.0, used 34.5 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.413274+00:00",
-      "probability": 0.8272862413699404,
+      "predicted_at": "2026-09-01T14:33:19.113778+00:00",
+      "probability": 0.7470621693374888,
       "question": "Will the match last longer than 130 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 88
+      "submission": 79
     },
     {
       "base_rate": 0.46,
@@ -43,7 +44,7 @@
         "outcome coupling: P(win)=0.078, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.413274+00:00",
+      "predicted_at": "2026-09-01T14:33:19.113778+00:00",
       "probability": 0.28197854974955083,
       "question": "Will L. Sonego record more aces than A. Zverev?",
       "rbp": null,
@@ -66,7 +67,7 @@
         "exposure 122 service points from 39.2 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.413274+00:00",
+      "predicted_at": "2026-09-01T14:33:19.113778+00:00",
       "probability": 0.3743167648752841,
       "question": "Will L. Sonego record more double faults than A. Zverev?",
       "rbp": null,
@@ -90,7 +91,7 @@
         "market consensus 0.078, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.413274+00:00",
+      "predicted_at": "2026-09-01T14:33:19.113778+00:00",
       "probability": 0.12815283116670398,
       "question": "Will L. Sonego win?",
       "rbp": null,
@@ -114,7 +115,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.413274+00:00",
+      "predicted_at": "2026-09-01T14:33:19.113778+00:00",
       "probability": 0.21174999999999997,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,
@@ -125,7 +126,7 @@
   "match_id": "b08799e7-3a66-495c-87e9-cc69eb6524e1",
   "match_name": "A. Zverev vs L. Sonego",
   "multiplier": 1,
-  "opening_time": "2026-09-02T00:10:00.000Z",
+  "opening_time": "2026-09-01T22:30:00.000Z",
   "player_a": "Alexander Zverev",
   "player_b": "Lorenzo Sonego",
   "round_code": "R128"

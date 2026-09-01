@@ -981,12 +981,24 @@ def test_a_zero_coupling_changes_nothing():
 
 def test_lanes_differ_structurally_not_just_in_temperature():
     """A temperature transform is monotone, so two lanes differing only in
-    temperature always agree on direction. The scenario lane halves its reliance
-    on the bookmaker consensus instead, which produces genuine disagreement."""
-    from bot.models.lanes import LANE_MARKET_SCALE
+    temperature always agree on direction.
+
+    The scenario lane used to get its separation by halving its reliance on the
+    bookmaker consensus.  The settled results falsified that: sweeping the
+    match-winner market weight is strictly monotone in favour of the market, so
+    downweighting it is simply worse rather than a different reading.  The lanes
+    are now separated by the between-set sigma and the tiebreak experiment,
+    neither of which is known to be harmful.
+    """
+    from bot.models.lanes import LANE_FAMILY_SHIFT, LANE_MARKET_SCALE, LANE_SIGMA_OFFSET
 
     assert LANE_MARKET_SCALE["honest"] == 1.0
-    assert LANE_MARKET_SCALE["scenario"] < 0.6
+    # Still below the honest lane, but no longer a handicap on the one family
+    # where we have a genuinely superior outside signal.
+    assert 0.7 < LANE_MARKET_SCALE["scenario"] < 1.0
+    # The separation now has to come from somewhere that is not the market.
+    assert LANE_SIGMA_OFFSET["scenario"] > LANE_SIGMA_OFFSET["honest"]
+    assert LANE_FAMILY_SHIFT.get("scenario")
 
     honest = Pricer(lane="honest")
     scenario = Pricer(lane="scenario")

@@ -1,5 +1,5 @@
 {
-  "closing_time": "2026-09-02T03:00:00.000Z",
+  "closing_time": "2026-09-02T02:30:00.000Z",
   "draw": "womens",
   "entries": [
     {
@@ -13,17 +13,18 @@
       "market": null,
       "market_id": "52fe7598-5f45-436b-a481-0fea925d7ac3",
       "market_weight": 0.0,
-      "model": 0.5154914697800927,
+      "model": 0.4577710889015732,
       "notes": [
+        "total games: simulator 21.7, Pinnacle 20.4, used 20.9 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.403538+00:00",
-      "probability": 0.5154914697800927,
+      "predicted_at": "2026-09-01T14:33:19.100922+00:00",
+      "probability": 0.4577710889015732,
       "question": "Will the match last longer than 100 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 52
+      "submission": 45
     },
     {
       "base_rate": 0.427,
@@ -41,7 +42,7 @@
         "exposure 70 service points from 21.6 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.403538+00:00",
+      "predicted_at": "2026-09-01T14:33:19.100922+00:00",
       "probability": 0.6183746032587278,
       "question": "Will B. Bencic record more aces than Y. Putintseva?",
       "rbp": null,
@@ -64,7 +65,7 @@
         "exposure 70 service points from 21.6 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.403538+00:00",
+      "predicted_at": "2026-09-01T14:33:19.100922+00:00",
       "probability": 0.4574203157600681,
       "question": "Will B. Bencic record more double faults than Y. Putintseva?",
       "rbp": null,
@@ -79,17 +80,17 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.8073737856718164,
+      "market": 0.8113273695905898,
       "market_id": "16e1ac7b-4c3f-4923-906d-83b2c2865ece",
       "market_weight": 0.34,
       "model": 0.61975,
       "notes": [
         "simulated win probability 0.620",
-        "market consensus 0.807, weight 0.34"
+        "market consensus 0.811, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.403538+00:00",
-      "probability": 0.6877106989464623,
+      "predicted_at": "2026-09-01T14:33:19.100922+00:00",
+      "probability": 0.6895225845690058,
       "question": "Will B. Bencic win?",
       "rbp": null,
       "settled_at": "",
@@ -112,7 +113,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.403538+00:00",
+      "predicted_at": "2026-09-01T14:33:19.100922+00:00",
       "probability": 0.02,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,
@@ -123,7 +124,7 @@
   "match_id": "6286c8a5-fd6c-4a5b-99f4-6e17e6261360",
   "match_name": "Y. Putintseva vs B. Bencic",
   "multiplier": 1,
-  "opening_time": "2026-09-01T15:00:00.000Z",
+  "opening_time": "2026-09-01T14:30:00.000Z",
   "player_a": "Yulia Putintseva",
   "player_b": "Belinda Bencic",
   "round_code": "R128"

@@ -13,17 +13,18 @@
       "market": null,
       "market_id": "fa450655-c654-4a1b-a8dc-e03a5b030248",
       "market_weight": 0.0,
-      "model": 0.6178035606722074,
+      "model": 0.7334230603625238,
       "notes": [
+        "total games: simulator 21.5, Pinnacle 24.1, used 23.0 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.431368+00:00",
-      "probability": 0.6178035606722074,
+      "predicted_at": "2026-09-01T14:33:19.141688+00:00",
+      "probability": 0.7334230603625238,
       "question": "Will the match last longer than 90 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 65
+      "submission": 78
     },
     {
       "base_rate": 0.427,
@@ -41,7 +42,7 @@
         "exposure 69 service points from 21.5 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.431368+00:00",
+      "predicted_at": "2026-09-01T14:33:19.141688+00:00",
       "probability": 0.38741093692772577,
       "question": "Will K. Rakhimova record more aces than O. Selekhmeteva?",
       "rbp": null,
@@ -64,7 +65,7 @@
         "exposure 69 service points from 21.5 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.431368+00:00",
+      "predicted_at": "2026-09-01T14:33:19.141688+00:00",
       "probability": 0.41775641251187023,
       "question": "Will K. Rakhimova record more double faults than O. Selekhmeteva?",
       "rbp": null,
@@ -79,17 +80,17 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.6057805017043566,
+      "market": 0.6152946515819744,
       "market_id": "210986fc-f7d5-48b5-bcec-eb4411e058be",
       "market_weight": 0.34,
       "model": 0.482,
       "notes": [
         "simulated win probability 0.482",
-        "market consensus 0.606, weight 0.34"
+        "market consensus 0.615, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.431368+00:00",
-      "probability": 0.5240580294275983,
+      "predicted_at": "2026-09-01T14:33:19.141688+00:00",
+      "probability": 0.5273734504393741,
       "question": "Will K. Rakhimova win?",
       "rbp": null,
       "settled_at": "",
@@ -112,7 +113,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.431368+00:00",
+      "predicted_at": "2026-09-01T14:33:19.141688+00:00",
       "probability": 0.122,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

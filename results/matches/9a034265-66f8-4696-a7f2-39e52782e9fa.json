@@ -1,5 +1,5 @@
 {
-  "closing_time": "2026-09-02T08:30:00.000Z",
+  "closing_time": "2026-09-02T08:00:00.000Z",
   "draw": "mens",
   "entries": [
     {
@@ -13,17 +13,18 @@
       "market": null,
       "market_id": "7d58adee-3c6d-4127-9596-2882dd7f0d3d",
       "market_weight": 0.0,
-      "model": 0.6486965389686139,
+      "model": 0.7467550160816115,
       "notes": [
+        "total games: simulator 36.1, Pinnacle 39.9, used 38.4 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.411383+00:00",
-      "probability": 0.6486965389686139,
+      "predicted_at": "2026-09-01T14:33:19.112531+00:00",
+      "probability": 0.7467550160816115,
       "question": "Will the match last longer than 145 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 68
+      "submission": 79
     },
     {
       "base_rate": 0.46,
@@ -36,19 +37,19 @@
       "market": null,
       "market_id": "ffde4fd5-a93f-4fa1-9e8b-2da35a9d5273",
       "market_weight": 0.0,
-      "model": 0.49583267065095815,
+      "model": 0.4995243033771449,
       "notes": [
         "ace vulnerability: Marcos Giron 0.95, Ignacio Buse 1.00",
         "exposure 120 service points from 38.5 games",
-        "outcome coupling: P(win)=0.578, delta=+0.60"
+        "outcome coupling: P(win)=0.590, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.411383+00:00",
-      "probability": 0.49583267065095815,
+      "predicted_at": "2026-09-01T14:33:19.112531+00:00",
+      "probability": 0.4995243033771449,
       "question": "Will I. Buse record more aces than M. Giron?",
       "rbp": null,
       "settled_at": "",
-      "submission": 49
+      "submission": 50
     },
     {
       "base_rate": 0.421,
@@ -66,7 +67,7 @@
         "exposure 120 service points from 38.5 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.411383+00:00",
+      "predicted_at": "2026-09-01T14:33:19.112531+00:00",
       "probability": 0.6535230139958819,
       "question": "Will I. Buse record more double faults than M. Giron?",
       "rbp": null,
@@ -81,21 +82,21 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.5776053215179595,
+      "market": 0.590277777774921,
       "market_id": "fe402172-a792-4945-a803-226a42bb2433",
       "market_weight": 0.34,
       "model": 0.2445,
       "notes": [
         "simulated win probability 0.244",
-        "market consensus 0.578, weight 0.34"
+        "market consensus 0.590, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.411383+00:00",
-      "probability": 0.34912958474481226,
+      "predicted_at": "2026-09-01T14:33:19.112531+00:00",
+      "probability": 0.3530613648918138,
       "question": "Will I. Buse win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 31
+      "submission": 32
     },
     {
       "base_rate": 0.13263821138211385,
@@ -114,7 +115,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.411383+00:00",
+      "predicted_at": "2026-09-01T14:33:19.112531+00:00",
       "probability": 0.09175,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,
@@ -125,7 +126,7 @@
   "match_id": "9a034265-66f8-4696-a7f2-39e52782e9fa",
   "match_name": "M. Giron vs I. Buse",
   "multiplier": 1,
-  "opening_time": "2026-09-01T20:30:00.000Z",
+  "opening_time": "2026-09-01T20:00:00.000Z",
   "player_a": "Marcos Giron",
   "player_b": "Ignacio Buse",
   "round_code": "R128"

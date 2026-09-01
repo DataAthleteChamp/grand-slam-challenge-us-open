@@ -13,17 +13,18 @@
       "market": null,
       "market_id": "6348fb3c-fad7-42f8-8b18-123ec512ca43",
       "market_weight": 0.0,
-      "model": 0.7240634120419973,
+      "model": 0.5612236145712429,
       "notes": [
+        "total games: simulator 20.7, Pinnacle 17.2, used 18.6 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.423554+00:00",
-      "probability": 0.7240634120419973,
+      "predicted_at": "2026-09-01T14:33:19.133460+00:00",
+      "probability": 0.5612236145712429,
       "question": "Will the match last longer than 75 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 77
+      "submission": 58
     },
     {
       "base_rate": 0.427,
@@ -41,7 +42,7 @@
         "exposure 66 service points from 20.6 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.423554+00:00",
+      "predicted_at": "2026-09-01T14:33:19.133460+00:00",
       "probability": 0.3227200543235999,
       "question": "Will P. Iatcenko record more aces than A. Sabalenka?",
       "rbp": null,
@@ -64,7 +65,7 @@
         "exposure 66 service points from 20.6 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.423554+00:00",
+      "predicted_at": "2026-09-01T14:33:19.133460+00:00",
       "probability": 0.3775260380603438,
       "question": "Will P. Iatcenko record more double faults than A. Sabalenka?",
       "rbp": null,
@@ -79,21 +80,21 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.04381752696443985,
+      "market": 0.033766097157426275,
       "market_id": "cb73ae53-0211-445e-9978-f7618744b78d",
       "market_weight": 0.34,
       "model": 0.216,
       "notes": [
         "simulated win probability 0.216",
-        "market consensus 0.044, weight 0.34"
+        "market consensus 0.034, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.423554+00:00",
-      "probability": 0.13853979737044506,
+      "predicted_at": "2026-09-01T14:33:19.133460+00:00",
+      "probability": 0.12868026998401993,
       "question": "Will P. Iatcenko win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 9
+      "submission": 8
     },
     {
       "base_rate": 0.179,
@@ -112,7 +113,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.423554+00:00",
+      "predicted_at": "2026-09-01T14:33:19.133460+00:00",
       "probability": 0.13249999999999998,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

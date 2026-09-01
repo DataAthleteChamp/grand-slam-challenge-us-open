@@ -13,17 +13,18 @@
       "market": null,
       "market_id": "1a7adaf2-4dda-4a50-87ee-6698e9547bba",
       "market_weight": 0.0,
-      "model": 0.6701292814626036,
+      "model": 0.7198083161935684,
       "notes": [
+        "total games: simulator 38.5, Pinnacle 40.5, used 39.7 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.434072+00:00",
-      "probability": 0.6701292814626036,
+      "predicted_at": "2026-09-01T14:33:19.145304+00:00",
+      "probability": 0.7198083161935684,
       "question": "Will the match last longer than 150 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 71
+      "submission": 76
     },
     {
       "base_rate": 0.46,
@@ -36,15 +37,15 @@
       "market": null,
       "market_id": "95c472ec-bc53-4233-8c5b-4f26a065c4a0",
       "market_weight": 0.0,
-      "model": 0.24892850143596898,
+      "model": 0.2512322830521556,
       "notes": [
         "ace vulnerability: Valentin Vacherot 1.05, Kamil Majchrzak 1.27",
         "exposure 128 service points from 40.8 games",
-        "outcome coupling: P(win)=0.444, delta=+0.60"
+        "outcome coupling: P(win)=0.454, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.434072+00:00",
-      "probability": 0.24892850143596898,
+      "predicted_at": "2026-09-01T14:33:19.145304+00:00",
+      "probability": 0.2512322830521556,
       "question": "Will K. Majchrzak record more aces than V. Vacherot?",
       "rbp": null,
       "settled_at": "",
@@ -66,7 +67,7 @@
         "exposure 128 service points from 40.8 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.434072+00:00",
+      "predicted_at": "2026-09-01T14:33:19.145304+00:00",
       "probability": 0.30022856254145225,
       "question": "Will K. Majchrzak record more double faults than V. Vacherot?",
       "rbp": null,
@@ -81,21 +82,21 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.4439775910336598,
+      "market": 0.4544003647909676,
       "market_id": "563d100b-b355-4b73-91ab-4fabd2359796",
       "market_weight": 0.34,
       "model": 0.519,
       "notes": [
         "simulated win probability 0.519",
-        "market consensus 0.444, weight 0.34"
+        "market consensus 0.454, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.434072+00:00",
-      "probability": 0.49356657224509654,
+      "predicted_at": "2026-09-01T14:33:19.145304+00:00",
+      "probability": 0.4970665243918748,
       "question": "Will K. Majchrzak win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 49
+      "submission": 50
     },
     {
       "base_rate": 0.487,
@@ -114,7 +115,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.434072+00:00",
+      "predicted_at": "2026-09-01T14:33:19.145304+00:00",
       "probability": 0.54475,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

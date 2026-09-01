@@ -13,17 +13,18 @@
       "market": null,
       "market_id": "f7c708a4-1c18-4c23-bb4e-91dc476d3d2a",
       "market_weight": 0.0,
-      "model": 0.2506497258295192,
+      "model": 0.3011022289832488,
       "notes": [
+        "total games: simulator 36.5, Pinnacle 39.0, used 38.0 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.414385+00:00",
-      "probability": 0.2506497258295192,
+      "predicted_at": "2026-09-01T14:33:19.116077+00:00",
+      "probability": 0.3011022289832488,
       "question": "Will the match last longer than 195 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 20
+      "submission": 26
     },
     {
       "base_rate": 0.46,
@@ -36,19 +37,19 @@
       "market": null,
       "market_id": "f282f3cb-3596-42bf-bb38-8396621c1592",
       "market_weight": 0.0,
-      "model": 0.8477169751980567,
+      "model": 0.846465486682253,
       "notes": [
         "ace vulnerability: Luca Van Assche 1.16, Denis Shapovalov 0.58",
         "exposure 121 service points from 38.7 games",
-        "outcome coupling: P(win)=0.568, delta=+0.60"
+        "outcome coupling: P(win)=0.560, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.414385+00:00",
-      "probability": 0.8477169751980567,
+      "predicted_at": "2026-09-01T14:33:19.116077+00:00",
+      "probability": 0.846465486682253,
       "question": "Will D. Shapovalov record more aces than L. Van Assche?",
       "rbp": null,
       "settled_at": "",
-      "submission": 90
+      "submission": 89
     },
     {
       "base_rate": 0.421,
@@ -66,7 +67,7 @@
         "exposure 121 service points from 38.7 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.414385+00:00",
+      "predicted_at": "2026-09-01T14:33:19.116077+00:00",
       "probability": 0.727706840570919,
       "question": "Will D. Shapovalov record more double faults than L. Van Assche?",
       "rbp": null,
@@ -81,17 +82,17 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.5682612494484228,
+      "market": 0.5600835945588375,
       "market_id": "f43214ac-88d5-427c-af90-ae0705816b92",
       "market_weight": 0.34,
       "model": 0.7135,
       "notes": [
         "simulated win probability 0.714",
-        "market consensus 0.568, weight 0.34"
+        "market consensus 0.560, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.414385+00:00",
-      "probability": 0.663456109316467,
+      "predicted_at": "2026-09-01T14:33:19.116077+00:00",
+      "probability": 0.6609971406001327,
       "question": "Will D. Shapovalov win?",
       "rbp": null,
       "settled_at": "",
@@ -114,7 +115,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.414385+00:00",
+      "predicted_at": "2026-09-01T14:33:19.116077+00:00",
       "probability": 0.45675000000000004,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

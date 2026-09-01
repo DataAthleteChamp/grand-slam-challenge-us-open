@@ -13,13 +13,14 @@
       "market": null,
       "market_id": "0aedabe7-e6ba-46be-b09b-4df240610605",
       "market_weight": 0.0,
-      "model": 0.8511369409778659,
+      "model": 0.8477334111685921,
       "notes": [
+        "total games: simulator 21.6, Pinnacle 21.5, used 21.5 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.419663+00:00",
-      "probability": 0.8511369409778659,
+      "predicted_at": "2026-09-01T14:33:19.127651+00:00",
+      "probability": 0.8477334111685921,
       "question": "Will the match last longer than 70 minutes?",
       "rbp": null,
       "settled_at": "",
@@ -41,7 +42,7 @@
         "exposure 70 service points from 21.6 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.419663+00:00",
+      "predicted_at": "2026-09-01T14:33:19.127651+00:00",
       "probability": 0.6279191683252716,
       "question": "Will E. Alexandrova record more aces than K. Birrell?",
       "rbp": null,
@@ -64,7 +65,7 @@
         "exposure 70 service points from 21.6 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.419663+00:00",
+      "predicted_at": "2026-09-01T14:33:19.127651+00:00",
       "probability": 0.4472101631039303,
       "question": "Will E. Alexandrova record more double faults than K. Birrell?",
       "rbp": null,
@@ -79,21 +80,21 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.7593419781487856,
+      "market": 0.7848360656194846,
       "market_id": "b9424542-45e3-4e90-bed6-3a7e6e071d94",
       "market_weight": 0.34,
       "model": 0.6215,
       "notes": [
         "simulated win probability 0.622",
-        "market consensus 0.759, weight 0.34"
+        "market consensus 0.785, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.419663+00:00",
-      "probability": 0.6682911336407396,
+      "predicted_at": "2026-09-01T14:33:19.127651+00:00",
+      "probability": 0.6788188744477894,
       "question": "Will E. Alexandrova win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 71
+      "submission": 72
     },
     {
       "base_rate": 0.225,
@@ -112,7 +113,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.419663+00:00",
+      "predicted_at": "2026-09-01T14:33:19.127651+00:00",
       "probability": 0.15175,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

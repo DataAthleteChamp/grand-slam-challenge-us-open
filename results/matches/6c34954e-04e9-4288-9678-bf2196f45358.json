@@ -13,17 +13,18 @@
       "market": null,
       "market_id": "4243d8fa-7ffe-46a9-9326-6ef3927a71ba",
       "market_weight": 0.0,
-      "model": 0.7619858807636255,
+      "model": 0.6346419661486347,
       "notes": [
+        "total games: simulator 19.1, Pinnacle 16.4, used 17.5 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.433285+00:00",
-      "probability": 0.7619858807636255,
+      "predicted_at": "2026-09-01T14:33:19.143749+00:00",
+      "probability": 0.6346419661486347,
       "question": "Will the match last longer than 70 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 81
+      "submission": 67
     },
     {
       "base_rate": 0.427,
@@ -41,7 +42,7 @@
         "exposure 62 service points from 19.2 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.433285+00:00",
+      "predicted_at": "2026-09-01T14:33:19.143749+00:00",
       "probability": 0.31162545114392554,
       "question": "Will N. Podoroska record more aces than I. Swiatek?",
       "rbp": null,
@@ -64,7 +65,7 @@
         "exposure 62 service points from 19.2 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.433285+00:00",
+      "predicted_at": "2026-09-01T14:33:19.143749+00:00",
       "probability": 0.4454323598458449,
       "question": "Will N. Podoroska record more double faults than I. Swiatek?",
       "rbp": null,
@@ -79,17 +80,17 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.02876001885846796,
+      "market": 0.033613445408804,
       "market_id": "abd7e6c5-25e1-4832-a44a-830f28134333",
       "market_weight": 0.34,
       "model": 0.12525,
       "notes": [
         "simulated win probability 0.125",
-        "market consensus 0.029, weight 0.34"
+        "market consensus 0.034, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.433285+00:00",
-      "probability": 0.08682170132213463,
+      "predicted_at": "2026-09-01T14:33:19.143749+00:00",
+      "probability": 0.09072683571866345,
       "question": "Will N. Podoroska win?",
       "rbp": null,
       "settled_at": "",
@@ -112,7 +113,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.433285+00:00",
+      "predicted_at": "2026-09-01T14:33:19.143749+00:00",
       "probability": 0.08925,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

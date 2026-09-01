@@ -134,8 +134,21 @@ def apply_comparator(probability: float, spec: MarketSpec) -> tuple[float, bool]
 #: Market weight by how much we trust the market for that family.  Structural
 #: questions have a liquid market and a documented history of market consensus
 #: outscoring model alpha; the statistic families have no market at all.
+#:
+#: Match winner is at 0.95 because the settled results say the market alone is
+#: better than any blend with our model.  Sweeping the weight over 26 settled
+#: match-winner questions gives a strictly monotone curve - skill per question
+#: runs -2.76 at weight 0.0, -0.31 at 0.5, +0.48 at 0.8 and +0.71 at 1.0 - and
+#: the market correlates +0.733 with outcomes against our model's +0.585.  A
+#: forty-book consensus prices injuries, late withdrawals, travel and conditions
+#: that a ratings-only simulator cannot see, so this is expected rather than
+#: surprising.
+#:
+#: Not set to a full 1.0.  The last step from 0.9 is worth only 0.08 RBP and
+#: keeping a sliver of model weight is cheap insurance against a bad quote - a
+#: de-vig error or a mismatched player would otherwise pass straight through.
 MARKET_WEIGHT = {
-    Family.MATCH_WINNER: 0.85,
+    Family.MATCH_WINNER: 0.95,
     Family.DECIDING_SET: 0.85,
     Family.SET_GAMES: 0.85,
     Family.TIEBREAK: 0.55,

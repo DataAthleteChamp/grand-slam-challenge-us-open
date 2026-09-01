@@ -13,17 +13,18 @@
       "market": null,
       "market_id": "6151c61e-a578-40c4-a06f-ca5d0f1ba665",
       "market_weight": 0.0,
-      "model": 0.4986497251870614,
+      "model": 0.5226933968935249,
       "notes": [
+        "total games: simulator 39.1, Pinnacle 40.0, used 39.6 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.430819+00:00",
-      "probability": 0.4986497251870614,
+      "predicted_at": "2026-09-01T14:33:19.141185+00:00",
+      "probability": 0.5226933968935249,
       "question": "Will the match last longer than 180 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 50
+      "submission": 53
     },
     {
       "base_rate": 0.46,
@@ -36,15 +37,15 @@
       "market": null,
       "market_id": "8d630555-cde6-409a-9f5d-37e9cf028164",
       "market_weight": 0.0,
-      "model": 0.2153409844655353,
+      "model": 0.21516775999628102,
       "notes": [
         "ace vulnerability: Arthur Rinderknech 0.97, Jaume Munar 0.77",
         "exposure 129 service points from 41.3 games",
         "outcome coupling: P(win)=0.388, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.430819+00:00",
-      "probability": 0.2153409844655353,
+      "predicted_at": "2026-09-01T14:33:19.141185+00:00",
+      "probability": 0.21516775999628102,
       "question": "Will J. Munar record more aces than A. Rinderknech?",
       "rbp": null,
       "settled_at": "",
@@ -66,7 +67,7 @@
         "exposure 129 service points from 41.3 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.430819+00:00",
+      "predicted_at": "2026-09-01T14:33:19.141185+00:00",
       "probability": 0.5719130068285984,
       "question": "Will J. Munar record more double faults than A. Rinderknech?",
       "rbp": null,
@@ -81,7 +82,7 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.3884623365805483,
+      "market": 0.3876259364493129,
       "market_id": "099bf7c4-26c9-4287-ac0b-bf6f5ddbf7d5",
       "market_weight": 0.34,
       "model": 0.523,
@@ -90,8 +91,8 @@
         "market consensus 0.388, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.430819+00:00",
-      "probability": 0.4771620999912211,
+      "predicted_at": "2026-09-01T14:33:19.141185+00:00",
+      "probability": 0.4768700970692828,
       "question": "Will J. Munar win?",
       "rbp": null,
       "settled_at": "",
@@ -114,7 +115,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.430819+00:00",
+      "predicted_at": "2026-09-01T14:33:19.141185+00:00",
       "probability": 0.188,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,

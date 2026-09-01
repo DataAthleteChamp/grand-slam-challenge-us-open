@@ -1,5 +1,5 @@
 {
-  "closing_time": "2026-09-02T03:30:00.000Z",
+  "closing_time": "2026-09-02T03:00:00.000Z",
   "draw": "womens",
   "entries": [
     {
@@ -13,17 +13,18 @@
       "market": null,
       "market_id": "1362da57-cfd2-4eb6-81df-44fd41cbd0e3",
       "market_weight": 0.0,
-      "model": 0.6816543219909278,
+      "model": 0.7223571394793232,
       "notes": [
+        "total games: simulator 21.5, Pinnacle 22.4, used 22.0 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.404678+00:00",
-      "probability": 0.6816543219909278,
+      "predicted_at": "2026-09-01T14:33:19.111991+00:00",
+      "probability": 0.7223571394793232,
       "question": "Will the match last longer than 80 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 72
+      "submission": 77
     },
     {
       "base_rate": 0.427,
@@ -41,7 +42,7 @@
         "exposure 69 service points from 21.5 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.404678+00:00",
+      "predicted_at": "2026-09-01T14:33:19.111991+00:00",
       "probability": 0.4947210486561616,
       "question": "Will M. Keys record more aces than A. Korneeva?",
       "rbp": null,
@@ -64,7 +65,7 @@
         "exposure 69 service points from 21.5 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.404678+00:00",
+      "predicted_at": "2026-09-01T14:33:19.111991+00:00",
       "probability": 0.41178244705371614,
       "question": "Will M. Keys record more double faults than A. Korneeva?",
       "rbp": null,
@@ -79,21 +80,21 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.714580782202559,
+      "market": 0.7138986595881085,
       "market_id": "86fef6a2-0677-4f2b-9ea5-b8daac9ffddd",
       "market_weight": 0.34,
       "model": 0.63425,
       "notes": [
         "simulated win probability 0.634",
-        "market consensus 0.715, weight 0.34"
+        "market consensus 0.714, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.404678+00:00",
-      "probability": 0.6590406510288558,
+      "predicted_at": "2026-09-01T14:33:19.111991+00:00",
+      "probability": 0.6587923233748663,
       "question": "Will M. Keys win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 70
+      "submission": 69
     },
     {
       "base_rate": 0.225,
@@ -112,7 +113,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.404678+00:00",
+      "predicted_at": "2026-09-01T14:33:19.111991+00:00",
       "probability": 0.152,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
@@ -123,7 +124,7 @@
   "match_id": "08e89925-ee60-4736-bef2-f991c634cbfe",
   "match_name": "M. Keys vs A. Korneeva",
   "multiplier": 1,
-  "opening_time": "2026-09-01T15:30:00.000Z",
+  "opening_time": "2026-09-01T15:00:00.000Z",
   "player_a": "Madison Keys",
   "player_b": "Alina Korneeva",
   "round_code": "R128"

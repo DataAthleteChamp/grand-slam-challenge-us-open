@@ -1,5 +1,5 @@
 {
-  "closing_time": "2026-09-02T03:00:00.000Z",
+  "closing_time": "2026-09-02T02:30:00.000Z",
   "draw": "womens",
   "entries": [
     {
@@ -13,17 +13,18 @@
       "market": null,
       "market_id": "21169548-9b46-437e-adac-84bdd29c6a3e",
       "market_weight": 0.0,
-      "model": 0.4468016485399043,
+      "model": 0.5652511609436773,
       "notes": [
+        "total games: simulator 21.4, Pinnacle 24.1, used 23.0 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.404250+00:00",
-      "probability": 0.4468016485399043,
+      "predicted_at": "2026-09-01T14:33:19.105663+00:00",
+      "probability": 0.5652511609436773,
       "question": "Will the match last longer than 100 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 43
+      "submission": 58
     },
     {
       "base_rate": 0.427,
@@ -41,7 +42,7 @@
         "exposure 69 service points from 21.3 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.404250+00:00",
+      "predicted_at": "2026-09-01T14:33:19.105663+00:00",
       "probability": 0.3877009902474003,
       "question": "Will R. Montgomery record more aces than M. Sakkari?",
       "rbp": null,
@@ -64,7 +65,7 @@
         "exposure 69 service points from 21.3 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.404250+00:00",
+      "predicted_at": "2026-09-01T14:33:19.105663+00:00",
       "probability": 0.4477217097270593,
       "question": "Will R. Montgomery record more double faults than M. Sakkari?",
       "rbp": null,
@@ -79,21 +80,21 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.41948208795758557,
+      "market": 0.40266787586450686,
       "market_id": "f7510350-f4a9-426d-b9e1-f809a31bc872",
       "market_weight": 0.34,
       "model": 0.3045,
       "notes": [
         "simulated win probability 0.304",
-        "market consensus 0.419, weight 0.34"
+        "market consensus 0.403, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.404250+00:00",
-      "probability": 0.3452899178546268,
+      "predicted_at": "2026-09-01T14:33:19.105663+00:00",
+      "probability": 0.3401164116396734,
       "question": "Will R. Montgomery win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 31
+      "submission": 30
     },
     {
       "base_rate": 0.225,
@@ -112,7 +113,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.404250+00:00",
+      "predicted_at": "2026-09-01T14:33:19.105663+00:00",
       "probability": 0.15475,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
@@ -123,7 +124,7 @@
   "match_id": "dea28514-d97b-4a27-a97b-12be499745f2",
   "match_name": "M. Sakkari vs R. Montgomery",
   "multiplier": 1,
-  "opening_time": "2026-09-01T15:00:00.000Z",
+  "opening_time": "2026-09-01T14:30:00.000Z",
   "player_a": "Maria Sakkari",
   "player_b": "Robin Montgomery",
   "round_code": "R128"

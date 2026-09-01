@@ -13,15 +13,18 @@
       "market": null,
       "market_id": "6dc90b69-060f-477b-bc36-4ae216e16bcf",
       "market_weight": 0.0,
-      "model": 0.7052994744544276,
-      "notes": [],
+      "model": 0.6877463319772096,
+      "notes": [
+        "total games: simulator 21.8, Pinnacle 21.4, used 21.6 at weight 0.60",
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.417891+00:00",
-      "probability": 0.7052994744544276,
+      "predicted_at": "2026-09-01T14:33:19.124284+00:00",
+      "probability": 0.6877463319772096,
       "question": "Will the match last longer than 80 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 75
+      "submission": 73
     },
     {
       "base_rate": 0.427,
@@ -39,7 +42,7 @@
         "exposure 71 service points from 21.9 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.417891+00:00",
+      "predicted_at": "2026-09-01T14:33:19.124284+00:00",
       "probability": 0.5077896079642306,
       "question": "Will L. Noskova record more aces than L. Tararudee?",
       "rbp": null,
@@ -62,7 +65,7 @@
         "exposure 71 service points from 21.9 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.417891+00:00",
+      "predicted_at": "2026-09-01T14:33:19.124284+00:00",
       "probability": 0.4500009718981107,
       "question": "Will L. Noskova record more double faults than L. Tararudee?",
       "rbp": null,
@@ -72,26 +75,26 @@
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.7,
+      "confidence": 0.85,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": null,
+      "market": 0.7948777892389852,
       "market_id": "53bef7e8-19bb-42d2-97f4-4f57c9a83fd1",
-      "market_weight": 0.0,
+      "market_weight": 0.34,
       "model": 0.6025,
       "notes": [
         "simulated win probability 0.603",
-        "no market quote; this is the family that most needs one"
+        "market consensus 0.795, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.417891+00:00",
-      "probability": 0.5825125,
+      "predicted_at": "2026-09-01T14:33:19.124284+00:00",
+      "probability": 0.671953856156216,
       "question": "Will L. Noskova win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 60
+      "submission": 71
     },
     {
       "base_rate": 0.225,
@@ -106,10 +109,11 @@
       "market_weight": 0.0,
       "model": 0.2135,
       "notes": [
+        "no usable market quote for this question",
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.417891+00:00",
+      "predicted_at": "2026-09-01T14:33:19.124284+00:00",
       "probability": 0.1735,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

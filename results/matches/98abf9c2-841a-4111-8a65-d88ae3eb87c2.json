@@ -1,0 +1,131 @@
+{
+  "closing_time": "2026-09-03T03:00:00.000Z",
+  "draw": "womens",
+  "entries": [
+    {
+      "base_rate": 0.3194,
+      "brier": null,
+      "confidence": 0.95,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_duration",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "2bb53b82-307e-426d-a039-31d6c94528bf",
+      "market_weight": 0.0,
+      "model": 0.3347486104730038,
+      "notes": [
+        "total games: simulator 21.5, Pinnacle 22.0, used 21.8 at weight 0.60",
+        "no usable market quote for this question"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T14:33:19.117891+00:00",
+      "probability": 0.3347486104730038,
+      "question": "Will the match last longer than 110 minutes?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 30
+    },
+    {
+      "base_rate": 0.427,
+      "brier": null,
+      "confidence": 0.85,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "aces_comparison",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "86e2dc1c-b5d8-4c1e-b334-fe4013750d6d",
+      "market_weight": 0.0,
+      "model": 0.7208621035252343,
+      "notes": [
+        "exposure 70 service points from 21.5 games"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T14:33:19.117891+00:00",
+      "probability": 0.7142502061959164,
+      "question": "Will N. Osaka record more aces than K. Siniakova?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 76
+    },
+    {
+      "base_rate": 0.433,
+      "brier": null,
+      "confidence": 0.1,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "double_faults_comparison",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "39482f1b-f46c-431e-8a31-82537480afac",
+      "market_weight": 0.0,
+      "model": 0.335789916211685,
+      "notes": [
+        "exposure 70 service points from 21.5 games"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T14:33:19.117891+00:00",
+      "probability": 0.4218208403643438,
+      "question": "Will N. Osaka record more double faults than K. Siniakova?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 40
+    },
+    {
+      "base_rate": 0.5,
+      "brier": null,
+      "confidence": 0.85,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_winner",
+      "lane": "scenario",
+      "market": 0.7685492801373636,
+      "market_id": "dec1b81b-432c-4a17-bc41-731064fd58fe",
+      "market_weight": 0.34,
+      "model": 0.6555,
+      "notes": [
+        "simulated win probability 0.655",
+        "market consensus 0.769, weight 0.34"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T14:33:19.117891+00:00",
+      "probability": 0.6924797551663511,
+      "question": "Will N. Osaka win?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 73
+    },
+    {
+      "base_rate": 0.225,
+      "brier": null,
+      "confidence": 0.95,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "tiebreak",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "320145bb-59eb-43da-a4bf-24993eb9ab86",
+      "market_weight": 0.0,
+      "model": 0.20825,
+      "notes": [
+        "no usable market quote for this question",
+        "scenario lane: experimental tiebreak shift -0.040"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T14:33:19.117891+00:00",
+      "probability": 0.16824999999999998,
+      "question": "Will the match feature at least 1 tiebreak(s)?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 12
+    }
+  ],
+  "match_id": "98abf9c2-841a-4111-8a65-d88ae3eb87c2",
+  "match_name": "N. Osaka vs K. Siniakova",
+  "multiplier": 1,
+  "opening_time": "2026-09-02T15:00:00.000Z",
+  "player_a": "Naomi Osaka",
+  "player_b": "Katerina Siniakova",
+  "round_code": "R128"
+}

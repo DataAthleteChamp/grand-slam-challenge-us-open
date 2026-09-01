@@ -1,0 +1,133 @@
+{
+  "closing_time": "2026-09-03T03:00:00.000Z",
+  "draw": "mens",
+  "entries": [
+    {
+      "base_rate": 0.4141,
+      "brier": null,
+      "confidence": 0.95,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_duration",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "d2055bba-cd7b-4c8f-a1e2-61c9bf69f17e",
+      "market_weight": 0.0,
+      "model": 0.5482235477754837,
+      "notes": [
+        "total games: simulator 38.4, Pinnacle 38.0, used 38.2 at weight 0.60",
+        "no usable market quote for this question"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T14:33:19.132198+00:00",
+      "probability": 0.5482235477754837,
+      "question": "Will the match last longer than 165 minutes?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 56
+    },
+    {
+      "base_rate": 0.46,
+      "brier": null,
+      "confidence": 1.0,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "aces_comparison",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "7a8165e6-bf9d-4704-a8f8-e717d33ce11f",
+      "market_weight": 0.0,
+      "model": 0.5341197346110609,
+      "notes": [
+        "ace vulnerability: Frances Tiafoe 1.36, Rei Sakamoto 1.00",
+        "exposure 127 service points from 40.6 games",
+        "outcome coupling: P(win)=0.222, delta=+0.60"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T14:33:19.132198+00:00",
+      "probability": 0.5341197346110609,
+      "question": "Will R. Sakamoto record more aces than F. Tiafoe?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 54
+    },
+    {
+      "base_rate": 0.421,
+      "brier": null,
+      "confidence": 1.0,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "double_faults_comparison",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "c29188f6-2109-4e60-acdb-c21de3a7d68f",
+      "market_weight": 0.0,
+      "model": 0.46634847897367815,
+      "notes": [
+        "exposure 127 service points from 40.6 games"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T14:33:19.132198+00:00",
+      "probability": 0.46634847897367815,
+      "question": "Will R. Sakamoto record more double faults than F. Tiafoe?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 46
+    },
+    {
+      "base_rate": 0.5,
+      "brier": null,
+      "confidence": 0.85,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_winner",
+      "lane": "scenario",
+      "market": 0.22177419352861452,
+      "market_id": "3432316d-2565-4dbe-b859-9f09a3c20505",
+      "market_weight": 0.34,
+      "model": 0.3605,
+      "notes": [
+        "simulated win probability 0.360",
+        "market consensus 0.222, weight 0.34"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T14:33:19.132198+00:00",
+      "probability": 0.31322835447319625,
+      "question": "Will R. Sakamoto win?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 27
+    },
+    {
+      "base_rate": 0.13263821138211385,
+      "brier": null,
+      "confidence": 0.95,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "tiebreak",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "b74d93c0-1420-4b27-b0af-69e9564f7b7a",
+      "market_weight": 0.0,
+      "model": 0.2015,
+      "notes": [
+        "no usable market quote for this question",
+        "scenario lane: experimental tiebreak shift -0.040"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T14:33:19.132198+00:00",
+      "probability": 0.1615,
+      "question": "Will the match feature at least 2 tiebreak(s)?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 11
+    }
+  ],
+  "match_id": "f2f39a05-c836-4690-81f8-b46a67bfce96",
+  "match_name": "R. Sakamoto vs F. Tiafoe",
+  "multiplier": 1,
+  "opening_time": "2026-09-02T15:00:00.000Z",
+  "player_a": "Rei Sakamoto",
+  "player_b": "Frances Tiafoe",
+  "round_code": "R128"
+}

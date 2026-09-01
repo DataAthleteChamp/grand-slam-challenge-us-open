@@ -41,18 +41,25 @@ LANE_TEMPERATURE = {"honest": 1.0, "slight": 0.85, "scenario": 0.80}
 
 #: Lane name -> multiplier on every family's market weight.
 #:
-#: This is where the real decorrelation comes from.  The honest lane leans on the
-#: bookmaker consensus for the match-winner family, which is the single most
-#: efficiently priced market in tennis.  The scenario lane halves that reliance
-#: and leans on our own simulation instead.
+#: The honest lane leans on the bookmaker consensus for the match-winner family,
+#: which is the single most efficiently priced market in tennis.
 #:
-#: Both stances are defensible, which is the point: a second entry that is simply
-#: a worse version of the first wastes the slot, while one that takes a genuinely
-#: different and arguable position gives a second draw from the outcome
-#: distribution.  Our simulation correlates 0.845 with the market and disagrees
-#: by 14.8 points on average, so the two lanes genuinely diverge on direction and
-#: not merely on confidence.
-LANE_MARKET_SCALE = {"honest": 1.0, "slight": 0.75, "scenario": 0.40}
+#: The scenario lane used to halve that reliance (0.40) on the grounds that
+#: leaning on our own simulation was an equally defensible stance and gave a
+#: second draw from the outcome distribution.  The settled results have now
+#: falsified the "equally defensible" half of that argument.  Sweeping the
+#: match-winner market weight over 26 settled questions is strictly monotone in
+#: favour of the market - skill per question runs -2.76 at weight 0.0, -0.31 at
+#: 0.5 and +0.71 at 1.0 - because the market correlates +0.733 with outcomes and
+#: our simulation only +0.585.  Downweighting it is not a different reading of
+#: the same evidence, it is simply worse.
+#:
+#: Raised to 0.85 so the second bot is decorrelated by things that are not known
+#: to be harmful - a larger between-set sigma and the tiebreak experiment -
+#: rather than by a handicap on the one family where we have a genuinely superior
+#: outside signal.  This is the same lesson the per-family shift experiment
+#: taught: a second entry that is deliberately worse wastes the slot.
+LANE_MARKET_SCALE = {"honest": 1.0, "slight": 0.9, "scenario": 0.85}
 
 #: Lane name -> *offset* added to the tour's fitted between-set sigma.
 #:

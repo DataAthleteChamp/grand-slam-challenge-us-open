@@ -1,5 +1,5 @@
 {
-  "closing_time": "2026-09-02T05:50:00.000Z",
+  "closing_time": "2026-09-02T02:30:00.000Z",
   "draw": "womens",
   "entries": [
     {
@@ -13,17 +13,18 @@
       "market": null,
       "market_id": "72b3684f-be18-4f7e-a18e-a5ed3df90539",
       "market_weight": 0.0,
-      "model": 0.746668966588061,
+      "model": 0.7144912092191908,
       "notes": [
+        "total games: simulator 21.1, Pinnacle 20.4, used 20.7 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.410190+00:00",
-      "probability": 0.746668966588061,
+      "predicted_at": "2026-09-01T14:33:19.094411+00:00",
+      "probability": 0.7144912092191908,
       "question": "Will the match last longer than 80 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 79
+      "submission": 76
     },
     {
       "base_rate": 0.427,
@@ -41,7 +42,7 @@
         "exposure 69 service points from 21.2 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.410190+00:00",
+      "predicted_at": "2026-09-01T14:33:19.094411+00:00",
       "probability": 0.5162788400722078,
       "question": "Will E. Mertens record more aces than K. Quevedo?",
       "rbp": null,
@@ -64,7 +65,7 @@
         "exposure 69 service points from 21.2 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.410190+00:00",
+      "predicted_at": "2026-09-01T14:33:19.094411+00:00",
       "probability": 0.5267472560925948,
       "question": "Will E. Mertens record more double faults than K. Quevedo?",
       "rbp": null,
@@ -79,17 +80,17 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.8329952671073049,
+      "market": 0.8348806366162295,
       "market_id": "d67d9886-df29-49c5-80c4-47bab7b57d9a",
       "market_weight": 0.34,
       "model": 0.673,
       "notes": [
         "simulated win probability 0.673",
-        "market consensus 0.833, weight 0.34"
+        "market consensus 0.835, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.410190+00:00",
-      "probability": 0.7302109273833648,
+      "predicted_at": "2026-09-01T14:33:19.094411+00:00",
+      "probability": 0.7310901845914703,
       "question": "Will E. Mertens win?",
       "rbp": null,
       "settled_at": "",
@@ -112,7 +113,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.410190+00:00",
+      "predicted_at": "2026-09-01T14:33:19.094411+00:00",
       "probability": 0.124,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
@@ -123,7 +124,7 @@
   "match_id": "0fcb4778-a53c-4403-bf78-7123648dddf3",
   "match_name": "Kaitlin Quevedo vs E. Mertens",
   "multiplier": 1,
-  "opening_time": "2026-09-01T17:50:00.000Z",
+  "opening_time": "2026-09-01T14:30:00.000Z",
   "player_a": "Kaitlin Quevedo",
   "player_b": "Elise Mertens",
   "round_code": "R128"

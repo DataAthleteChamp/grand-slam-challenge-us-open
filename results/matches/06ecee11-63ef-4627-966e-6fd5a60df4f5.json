@@ -1,5 +1,5 @@
 {
-  "closing_time": "2026-09-02T11:00:00.000Z",
+  "closing_time": "2026-09-02T10:30:00.000Z",
   "draw": "womens",
   "entries": [
     {
@@ -13,17 +13,18 @@
       "market": null,
       "market_id": "d758dc75-600a-42a8-9007-b1a02cd84ffa",
       "market_weight": 0.0,
-      "model": 0.580326280998031,
+      "model": 0.44676958846497233,
       "notes": [
+        "total games: simulator 20.5, Pinnacle 17.7, used 18.8 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.412640+00:00",
-      "probability": 0.580326280998031,
+      "predicted_at": "2026-09-01T14:33:19.115292+00:00",
+      "probability": 0.44676958846497233,
       "question": "Will the match last longer than 85 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 60
+      "submission": 43
     },
     {
       "base_rate": 0.427,
@@ -41,7 +42,7 @@
         "exposure 67 service points from 20.6 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.412640+00:00",
+      "predicted_at": "2026-09-01T14:33:19.115292+00:00",
       "probability": 0.6274272616448777,
       "question": "Will C. Gauff record more aces than Z. Sonmez?",
       "rbp": null,
@@ -64,7 +65,7 @@
         "exposure 67 service points from 20.6 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.412640+00:00",
+      "predicted_at": "2026-09-01T14:33:19.115292+00:00",
       "probability": 0.45034631919318047,
       "question": "Will C. Gauff record more double faults than Z. Sonmez?",
       "rbp": null,
@@ -79,21 +80,21 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.9331501832001796,
+      "market": 0.9353146853113156,
       "market_id": "2eac6cdb-f410-4157-ad82-7099fc68ab05",
       "market_weight": 0.34,
       "model": 0.7445,
       "notes": [
         "simulated win probability 0.745",
-        "market consensus 0.933, weight 0.34"
+        "market consensus 0.935, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.412640+00:00",
-      "probability": 0.8248406298340751,
+      "predicted_at": "2026-09-01T14:33:19.115292+00:00",
+      "probability": 0.8264683107639508,
       "question": "Will C. Gauff win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 87
+      "submission": 88
     },
     {
       "base_rate": 0.225,
@@ -112,7 +113,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T07:56:05.412640+00:00",
+      "predicted_at": "2026-09-01T14:33:19.115292+00:00",
       "probability": 0.11474999999999999,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
@@ -123,7 +124,7 @@
   "match_id": "06ecee11-63ef-4627-966e-6fd5a60df4f5",
   "match_name": "Z. Sonmez vs C. Gauff",
   "multiplier": 1,
-  "opening_time": "2026-09-01T23:00:00.000Z",
+  "opening_time": "2026-09-01T22:30:00.000Z",
   "player_a": "Zeynep Sonmez",
   "player_b": "Coco Gauff",
   "round_code": "R128"
