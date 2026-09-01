@@ -127,6 +127,26 @@ def correct_games(games: float, tour: str, best_of: int) -> float:
     return max(float(games) + offset, 6.0)
 
 
+#: Weight given to a bookmaker's total-games line over the simulator's own.
+#:
+#: Measured against Pinnacle on 45 live US Open matches, the two disagree far
+#: more than a shared offset would explain: per-match correlation is only +0.52
+#: on the men's draw and +0.63 on the women's, with sd(simulator - Pinnacle) of
+#: 3.17 and 1.98 games.  They disagree about *which* matches run long, not just
+#: about the average, so this is a genuine second opinion rather than a
+#: recalibration of the first.
+#:
+#: 0.60 rather than the variance-optimal weight.  If both were unbiased with
+#: independent errors, sigma_sim^2 + sigma_pin^2 = 3.17^2, and a sharp closing
+#: total on a Grand Slam match is one of the better-priced numbers in tennis, so
+#: the optimal weight on Pinnacle would be well above 0.8.  It is held down to
+#: 0.6 for two reasons: the market number is *inferred* from per-player game
+#: totals rather than read directly, and unlike every other constant here it has
+#: not yet been validated against settled results.  Re-fit it once enough
+#: duration questions have settled with a line recorded against them.
+GAMES_MARKET_WEIGHT = 0.60
+
+
 #: Cap on the per-player pace adjustment, in minutes per match.  The measured
 #: spread is about +/-20 minutes per player; two slow players together should not
 #: be allowed to compound without limit.
@@ -187,6 +207,7 @@ def forecast_duration(
     games_sd: float = 0.0,
     pace_a: float = 0.0,
     pace_b: float = 0.0,
+    already_corrected: bool = False,
 ) -> DurationForecast:
     """Forecast match duration from the games distribution and player pace.
 
@@ -202,9 +223,15 @@ def forecast_duration(
         Per-player duration residuals in minutes, positive meaning slower than
         expected.  Averaged rather than summed — both players are on court for
         every point, so a fast player partly offsets a slow one.
+    already_corrected:
+        Set when the caller has already applied ``correct_games`` — for example
+        after blending the simulator against a bookmaker's total-games line,
+        where the market number needs no correction of its own and applying the
+        offset a second time would double-count it.
     """
     slope, intercept, _ = DURATION_FIT.get((tour, best_of), DURATION_FIT[("ATP", 3)])
-    expected_games = correct_games(expected_games, tour, best_of)
+    if not already_corrected:
+        expected_games = correct_games(expected_games, tour, best_of)
     # Spread grows with match length by about 40% between short and long
     # matches, so it is read at the games estimate rather than fixed.
     residual_sd = residual_sd_for(expected_games, tour, best_of)

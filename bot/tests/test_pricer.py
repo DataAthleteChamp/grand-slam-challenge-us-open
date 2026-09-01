@@ -1094,3 +1094,30 @@ def test_explicit_sim_config_still_overrides_the_tour_fit():
     pricer = Pricer(lane="honest", sim_config=pinned)
     assert pricer._sim_config_for("WTA").sigma == pytest.approx(0.123)
     assert pricer._sim_config_for("ATP").sigma == pytest.approx(0.123)
+
+
+def test_pinnacle_games_line_shortens_a_duration_answer():
+    """A market line far below the simulator must pull the duration answer down.
+
+    This is the whole point of carrying a second opinion: the simulator and
+    Pinnacle correlate only +0.52 on the men's draw, so they disagree about
+    which matches run long, and the blend has to actually move.
+    """
+    from dataclasses import replace as _replace
+
+    from bot.roster import Roster
+
+    roster = Roster.load()
+    pricer = Pricer(lane="honest")
+    context = roster.context("A. Zverev", "L. Sonego", tour="ATP")
+    if not (context.player_a.has_ratings and context.player_b.has_ratings):
+        pytest.skip("players missing from roster")
+    spec = parse_question(
+        "Will the match last longer than 130 minutes?",
+        players=(context.player_a.name, context.player_b.name),
+    )
+    without = pricer.price(spec, context, market_id="a").submission
+    short = _replace(context, market_total_games=24.0)
+    Pricer(lane="honest")  # fresh cache is not required; sim cache keys on names
+    with_line = pricer.price(spec, short, market_id="b").submission
+    assert with_line < without

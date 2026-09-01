@@ -179,6 +179,9 @@ class MatchContext:
     rank_a: float | None = None
     rank_b: float | None = None
     expected_service_points: int = 80
+    #: Pinnacle's expected total games for this match, when it published a line.
+    #: ``None`` means the simulator answers alone, which is the old behaviour.
+    market_total_games: float | None = None
 
     @property
     def matchup(self) -> str:
@@ -542,15 +545,29 @@ class Pricer:
             if spec.threshold is None:
                 notes.append("duration threshold unknown; using the base rate")
                 return base
-            from .models.duration import forecast_duration
+            from .models.duration import GAMES_MARKET_WEIGHT, correct_games, forecast_duration
+
+            expected_games = correct_games(
+                simulation.mean_total_games, context.tour, context.best_of
+            )
+            if context.market_total_games is not None:
+                weight = GAMES_MARKET_WEIGHT
+                blended = (1.0 - weight) * expected_games + weight * context.market_total_games
+                notes.append(
+                    f"total games: simulator {expected_games:.1f}, "
+                    f"Pinnacle {context.market_total_games:.1f}, "
+                    f"used {blended:.1f} at weight {weight:.2f}"
+                )
+                expected_games = blended
 
             forecast = forecast_duration(
-                simulation.mean_total_games,
+                expected_games,
                 tour=context.tour,
                 best_of=context.best_of,
                 games_sd=simulation.sd_total_games,
                 pace_a=context.player_a.pace_minutes,
                 pace_b=context.player_b.pace_minutes,
+                already_corrected=True,
             )
             return forecast.probability_over(spec.threshold)
         return base

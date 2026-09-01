@@ -372,3 +372,29 @@ def test_duration_forecast_keeps_its_mean():
     mu = math.log(mean) - 0.5 * sigma_sq
     assert math.exp(mu + 0.5 * sigma_sq) == pytest.approx(mean, rel=1e-9)
     assert forecast.probability_over(mean) < 0.5
+
+
+def test_market_games_line_is_not_corrected_twice():
+    """A bookmaker's total-games line already describes games actually played.
+
+    ``correct_games`` exists to remove the *simulator's* over-prediction, so
+    applying it to a blended number that already contains a market line would
+    subtract the men's 2.24-game offset from a quantity that never had it.
+    """
+    from bot.models.duration import forecast_duration
+
+    raw = forecast_duration(36.0, tour="ATP", best_of=5)
+    pre = forecast_duration(36.0, tour="ATP", best_of=5, already_corrected=True)
+    assert pre.from_games > raw.from_games
+    # Uncorrected path must still shorten the match, as before.
+    assert raw.expected_minutes < pre.expected_minutes
+
+
+def test_market_weight_keeps_both_opinions():
+    """The blend must move toward the market without discarding the simulator."""
+    from bot.models.duration import GAMES_MARKET_WEIGHT
+
+    assert 0.0 < GAMES_MARKET_WEIGHT < 1.0
+    sim, market = 40.0, 30.0
+    blended = (1 - GAMES_MARKET_WEIGHT) * sim + GAMES_MARKET_WEIGHT * market
+    assert market < blended < sim

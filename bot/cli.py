@@ -25,7 +25,7 @@ import json
 import sys
 import time
 from collections.abc import Sequence
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, replace
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
@@ -63,6 +63,32 @@ class RunResult:
         return {q.market_id: q.submission for q in self.priced if q.market_id}
 
 
+def build_games_book(roster: Roster, event_filter: str = "US Open") -> dict[frozenset[str], float]:
+    """Map each match to Pinnacle's expected total games.
+
+    Keyed on the pair of *roster-resolved* names so that Pinnacle's spelling
+    ("Botic Van de Zandschulp") and the competition's ("B. Van de Zandschulp")
+    land on the same entry.  A pair we cannot resolve is dropped rather than
+    guessed: a mis-keyed line would be applied to the wrong match, which is
+    worse than having no line at all.
+    """
+    from bot.markets.pinnacle import PinnacleError, fetch_games_lines
+
+    try:
+        lines = fetch_games_lines(event_filter=event_filter)
+    except PinnacleError as exc:
+        print(f"  ! total-games lines unavailable ({exc})", file=sys.stderr)
+        return {}
+
+    book: dict[frozenset[str], float] = {}
+    for line in lines:
+        a, b = roster.find(line.player_a), roster.find(line.player_b)
+        if a is None or b is None or a.name == b.name:
+            continue
+        book[frozenset({a.name, b.name})] = line.total_games
+    return book
+
+
 def collect(
     client: SportsPredictClient,
     roster: Roster,
@@ -71,6 +97,7 @@ def collect(
     limit: int | None = None,
     match_filter: str = "",
     market_book: MarketBook | None = None,
+    games_book: dict[frozenset[str], float] | None = None,
 ) -> RunResult:
     """Walk the event and price every open market.
 
@@ -107,6 +134,10 @@ def collect(
             round_code=match.get("round") or match.get("round_name"),
             tour=match.get("tour") or match.get("category"),
         )
+        if games_book:
+            line = games_book.get(frozenset({context.player_a.name, context.player_b.name}))
+            if line is not None:
+                context = replace(context, market_total_games=line)
         contexts[match_id] = context
         rounds[match_id] = context.round_code
         raw_matches[match_id] = match
@@ -297,6 +328,11 @@ def run(argv: Sequence[str] | None = None) -> int:
         for note in market_book.skipped:
             print(f"  ! {note}", file=sys.stderr)
 
+    games_book: dict[frozenset[str], float] = {}
+    if not args.no_market:
+        games_book = build_games_book(roster)
+        print(f"games    {len(games_book)} total-games lines loaded")
+
     started = time.monotonic()
     try:
         result = collect(
@@ -306,6 +342,7 @@ def run(argv: Sequence[str] | None = None) -> int:
             limit=args.limit,
             match_filter=args.match,
             market_book=market_book,
+            games_book=games_book,
         )
     except SportsPredictError as exc:
         print(f"api error: {exc}", file=sys.stderr)
