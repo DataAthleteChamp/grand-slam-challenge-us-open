@@ -1,0 +1,130 @@
+{
+  "closing_time": "2026-09-03T03:00:00.000Z",
+  "draw": "womens",
+  "entries": [
+    {
+      "base_rate": 0.7157,
+      "brier": null,
+      "confidence": 0.95,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_duration",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "861853b9-d110-44bd-abbc-4ae989518494",
+      "market_weight": 0.0,
+      "model": 0.7855281826050425,
+      "notes": [
+        "no usable market quote for this question"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.420642+00:00",
+      "probability": 0.7855281826050425,
+      "question": "Will the match last longer than 75 minutes?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 84
+    },
+    {
+      "base_rate": 0.427,
+      "brier": null,
+      "confidence": 0.45,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "aces_comparison",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "549a1b9c-3017-4294-9219-32f1d46b4787",
+      "market_weight": 0.0,
+      "model": 0.3971247251491531,
+      "notes": [
+        "exposure 70 service points from 21.7 games"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.420642+00:00",
+      "probability": 0.4115395452646867,
+      "question": "Will A. Anisimova record more aces than L. Tagger?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 39
+    },
+    {
+      "base_rate": 0.433,
+      "brier": null,
+      "confidence": 0.45,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "double_faults_comparison",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "302e77d3-d5ee-49b8-8896-00ce083e45b0",
+      "market_weight": 0.0,
+      "model": 0.48061678592163826,
+      "notes": [
+        "exposure 70 service points from 21.7 games"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.420642+00:00",
+      "probability": 0.4576416867144478,
+      "question": "Will A. Anisimova record more double faults than L. Tagger?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 45
+    },
+    {
+      "base_rate": 0.5,
+      "brier": null,
+      "confidence": 0.85,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_winner",
+      "lane": "scenario",
+      "market": 0.8064291557635026,
+      "market_id": "276cfddd-8d7f-4327-aa60-a8e95f9c0a0c",
+      "market_weight": 0.34,
+      "model": 0.59575,
+      "notes": [
+        "simulated win probability 0.596",
+        "market consensus 0.806, weight 0.34"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.420642+00:00",
+      "probability": 0.6732507690019818,
+      "question": "Will A. Anisimova win?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 71
+    },
+    {
+      "base_rate": 0.225,
+      "brier": null,
+      "confidence": 0.95,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "tiebreak",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "ba24f428-7788-4d63-b528-8a8a43f95399",
+      "market_weight": 0.0,
+      "model": 0.195,
+      "notes": [
+        "no usable market quote for this question",
+        "scenario lane: experimental tiebreak shift -0.040"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.420642+00:00",
+      "probability": 0.155,
+      "question": "Will the match feature at least 1 tiebreak(s)?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 11
+    }
+  ],
+  "match_id": "df6e8ac7-4982-49af-96a7-73a3488dbe37",
+  "match_name": "L. Tagger vs A. Anisimova",
+  "multiplier": 1,
+  "opening_time": "2026-09-02T15:00:00.000Z",
+  "player_a": "Lilli Tagger",
+  "player_b": "Amanda Anisimova",
+  "round_code": "R128"
+}

@@ -5,7 +5,7 @@
     {
       "base_rate": 0.8089,
       "brier": null,
-      "confidence": 0.8,
+      "confidence": 0.95,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
@@ -18,8 +18,8 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:48:24.970549+00:00",
-      "probability": 0.8081737216371807,
+      "predicted_at": "2026-09-01T07:56:05.412024+00:00",
+      "probability": 0.8081105669969356,
       "question": "Will the match last longer than 115 minutes?",
       "rbp": null,
       "settled_at": "",
@@ -43,7 +43,7 @@
         "outcome coupling: P(win)=0.944, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:48:24.970549+00:00",
+      "predicted_at": "2026-09-01T07:56:05.412024+00:00",
       "probability": 0.5431104811347516,
       "question": "Will A. De Minaur record more aces than A. Guerrieri?",
       "rbp": null,
@@ -66,7 +66,7 @@
         "exposure 108 service points from 34.9 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:48:24.970549+00:00",
+      "predicted_at": "2026-09-01T07:56:05.412024+00:00",
       "probability": 0.3839971119330662,
       "question": "Will A. De Minaur record more double faults than A. Guerrieri?",
       "rbp": null,
@@ -90,7 +90,7 @@
         "market consensus 0.944, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:48:24.970549+00:00",
+      "predicted_at": "2026-09-01T07:56:05.412024+00:00",
       "probability": 0.8960003255335458,
       "question": "Will A. De Minaur win?",
       "rbp": null,
@@ -100,7 +100,7 @@
     {
       "base_rate": 0.487,
       "brier": null,
-      "confidence": 0.8,
+      "confidence": 0.95,
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
@@ -114,12 +114,12 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:48:24.970549+00:00",
-      "probability": 0.33982000000000007,
+      "predicted_at": "2026-09-01T07:56:05.412024+00:00",
+      "probability": 0.3305,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 30
+      "submission": 29
     }
   ],
   "match_id": "98dc51c5-807b-4441-825f-79c49f5c537f",

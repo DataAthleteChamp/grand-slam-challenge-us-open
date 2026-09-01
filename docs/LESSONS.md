@@ -220,3 +220,81 @@ gives no protection against a family-level modelling error. Paired on the same
 faults, +1.38 duration, +1.36 winner) and lost **-5.95 on tiebreak** - because
 sharpening pushes an already-too-high tiebreak number further up. Sharpen the
 four, leave tiebreak alone.
+
+---
+
+## Round 2: the loss was discrimination, and the shrinkage was the cause
+
+A Murphy decomposition (Brier = reliability - resolution + uncertainty) over 210
+settled questions finally located the problem. We are *better calibrated* than
+the crowd on four of five families. Every loss is **resolution** - the ability
+to separate yes from no:
+
+| family | AUC ours | AUC crowd | calibration cost | discrimination cost |
+|---|---|---|---|---|
+| aces | 0.860 | 0.957 | -4.81 | **+6.20** |
+| double faults | 0.630 | 0.718 | -1.27 | **+2.99** |
+| match winner | 0.895 | 0.920 | -0.85 | **+2.01** |
+| duration | 0.771 | 0.750 | +1.64 | -2.45 |
+| tiebreak | 0.722 | 0.751 | **-2.26** | +1.02 |
+
+That is why all six recalibration transforms failed: a monotone transform cannot
+add resolution. It also explains the fix. Our *raw model* discriminates far
+better than what we were submitting (ace AUC 0.938 raw against 0.860 submitted),
+because the confidence pull dragged every answer toward a base rate that carries
+no matchup information. Replaying the settled questions without that pull:
+
+| family | gain from submitting the raw model | 95% CI |
+|---|---|---|
+| aces (men) | +1.09 | [+0.39, +2.00] |
+| aces (women) | +1.73 | [+0.69, +2.77] |
+| tiebreak (women) | +1.02 | [+0.40, +1.58] |
+| pooled, all families | **+0.77** | **[+0.08, +1.47]** |
+
+**Lesson: shrinking toward a base rate is only conservative if the base rate is
+informative.** For "will A out-ace B" it is ~0.45 regardless of who A and B are,
+and for "will X win" it is exactly 0.50. Pulling toward those numbers is not
+caution, it is deleting the signal.
+
+## Pinnacle is a free, immediate calibration benchmark
+
+`https://guest.api.arcadia.pinnacle.com/0.1/` serves tennis matchups and markets
+without authentication, including per-player game totals (`team_total`). Summing
+the two sides gives a sharp total-games line for every match. This does not need
+settled results, so the simulator can be checked *before* anything resolves:
+
+    ATP  simulator - Pinnacle  +2.76 games  sd 3.17  n=24  t=+4.27
+    WTA  simulator - Pinnacle  -0.48 games  sd 1.98  n=21  t=-1.12
+
+That single check confirmed the per-tour sigma fix had worked on the women's
+draw (historical bias +1.91 -> effectively zero) and caught that the women's
+`GAMES_BIAS` offset had become a double-count. Re-run it whenever a
+simulation parameter changes.
+
+The men's residual is consistent with Klaassen & Magnus (2001), *Are Points in
+Tennis Independent and Identically Distributed?* - servers win fewer of the
+important points than iid assumes, so real matches have more breaks and fewer
+games than an iid simulator produces. It is a point-level effect, which is why
+the between-set sigma cannot remove it.
+
+## Coverage is worth more than cleverness
+
+A routine repricing created **195 new predictions** that did not exist before:
+new rounds seed continuously and each unanswered question forfeits the free
+~2.00 RBP everyone else collects. That single run was worth roughly 390 points,
+far more than any modelling change found so far. **Reprice on a schedule, not
+only when the model changes.**
+
+## An open question about the benchmark
+
+The crowd's ace AUC over 28 questions with a known draw is **1.000** - perfect
+separation, which chance alone would produce with probability 3.3e-08. Our best
+model reaches 0.938 and the best naive career-rate rule about 0.95. Markets were
+also verified earlier to accept writes for hours after a match has begun, while
+the FAQ states they close at the first ball. Those two facts together suggest
+part of the crowd value may be informed by play already completed.
+
+This is *not* being exploited, and it should not be: it depends on a gap between
+the stated rules and the implementation. It is recorded because it bounds what
+honest modelling can achieve - if the benchmark is partly post-hoc, a negative
+skill number is not by itself proof the model is bad.

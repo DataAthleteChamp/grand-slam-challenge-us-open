@@ -5,7 +5,7 @@
     {
       "base_rate": 0.7643,
       "brier": null,
-      "confidence": 0.8,
+      "confidence": 0.95,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
@@ -18,17 +18,17 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:48:24.965929+00:00",
-      "probability": 0.8636124239737073,
+      "predicted_at": "2026-09-01T07:56:05.405090+00:00",
+      "probability": 0.8722482869279427,
       "question": "Will the match last longer than 120 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 91
+      "submission": 92
     },
     {
       "base_rate": 0.46,
       "brier": null,
-      "confidence": 0.9,
+      "confidence": 1.0,
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
@@ -36,24 +36,24 @@
       "market": null,
       "market_id": "1aa003b9-36bf-45dc-aab6-76e85e502cf5",
       "market_weight": 0.0,
-      "model": 0.7569618497775761,
+      "model": 0.7560387486697221,
       "notes": [
         "ace vulnerability: Carlos Taberner 1.00, Zizou Bergs 0.78",
         "exposure 119 service points from 38.0 games",
-        "outcome coupling: P(win)=0.945, delta=+0.60"
+        "outcome coupling: P(win)=0.942, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:48:24.965929+00:00",
-      "probability": 0.7569618497775761,
+      "predicted_at": "2026-09-01T07:56:05.405090+00:00",
+      "probability": 0.7560387486697221,
       "question": "Will Z. Bergs record more aces than C. Taberner?",
       "rbp": null,
       "settled_at": "",
-      "submission": 81
+      "submission": 80
     },
     {
       "base_rate": 0.421,
       "brier": null,
-      "confidence": 0.9,
+      "confidence": 1.0,
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
@@ -66,7 +66,7 @@
         "exposure 119 service points from 38.0 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:48:24.965929+00:00",
+      "predicted_at": "2026-09-01T07:56:05.405090+00:00",
       "probability": 0.35337313728080594,
       "question": "Will Z. Bergs record more double faults than C. Taberner?",
       "rbp": null,
@@ -81,26 +81,26 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.9454368932682566,
+      "market": 0.9419958061758644,
       "market_id": "dc86e12b-f267-4cb8-bcc2-d089f1257874",
       "market_weight": 0.34,
       "model": 0.74875,
       "notes": [
         "simulated win probability 0.749",
-        "market consensus 0.945, weight 0.34"
+        "market consensus 0.942, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:48:24.965929+00:00",
-      "probability": 0.8365394918705349,
+      "predicted_at": "2026-09-01T07:56:05.405090+00:00",
+      "probability": 0.833686489868577,
       "question": "Will Z. Bergs win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 89
+      "submission": 88
     },
     {
       "base_rate": 0.487,
       "brier": null,
-      "confidence": 0.8,
+      "confidence": 0.95,
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
@@ -114,12 +114,12 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:48:24.965929+00:00",
-      "probability": 0.42469,
+      "predicted_at": "2026-09-01T07:56:05.405090+00:00",
+      "probability": 0.42275,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 41
+      "submission": 40
     }
   ],
   "match_id": "901f9ec3-4671-4d86-94dc-1b700b57f127",

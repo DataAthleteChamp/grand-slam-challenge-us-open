@@ -5,7 +5,7 @@
     {
       "base_rate": 0.6333,
       "brier": null,
-      "confidence": 0.8,
+      "confidence": 0.95,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
@@ -18,17 +18,17 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:48:24.963367+00:00",
-      "probability": 0.7095371752045293,
+      "predicted_at": "2026-09-01T07:56:05.401063+00:00",
+      "probability": 0.7161664947875318,
       "question": "Will the match last longer than 135 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 75
+      "submission": 76
     },
     {
       "base_rate": 0.46,
       "brier": null,
-      "confidence": 0.9,
+      "confidence": 1.0,
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
@@ -36,15 +36,15 @@
       "market": null,
       "market_id": "9b55d8d8-7080-4296-bee9-8e74a52d3f4b",
       "market_weight": 0.0,
-      "model": 0.6568182709069051,
+      "model": 0.6565028052267046,
       "notes": [
         "ace vulnerability: Filip Misolic 1.08, Francisco Cerundolo 0.75",
         "exposure 118 service points from 37.8 games",
-        "outcome coupling: P(win)=0.921, delta=+0.60"
+        "outcome coupling: P(win)=0.920, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:48:24.963367+00:00",
-      "probability": 0.6568182709069051,
+      "predicted_at": "2026-09-01T07:56:05.401063+00:00",
+      "probability": 0.6565028052267046,
       "question": "Will F. Cerundolo record more aces than F. Misolic?",
       "rbp": null,
       "settled_at": "",
@@ -53,7 +53,7 @@
     {
       "base_rate": 0.421,
       "brier": null,
-      "confidence": 0.9,
+      "confidence": 1.0,
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
@@ -66,7 +66,7 @@
         "exposure 118 service points from 37.8 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:48:24.963367+00:00",
+      "predicted_at": "2026-09-01T07:56:05.401063+00:00",
       "probability": 0.4755713022456066,
       "question": "Will F. Cerundolo record more double faults than F. Misolic?",
       "rbp": null,
@@ -81,17 +81,17 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.9206349205801776,
+      "market": 0.9195497409714365,
       "market_id": "82e8a389-7516-446a-b61a-e1799f1a144a",
       "market_weight": 0.34,
       "model": 0.738,
       "notes": [
         "simulated win probability 0.738",
-        "market consensus 0.921, weight 0.34"
+        "market consensus 0.920, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:48:24.963367+00:00",
-      "probability": 0.8128706561277388,
+      "predicted_at": "2026-09-01T07:56:05.401063+00:00",
+      "probability": 0.8121456677916137,
       "question": "Will F. Cerundolo win?",
       "rbp": null,
       "settled_at": "",
@@ -100,7 +100,7 @@
     {
       "base_rate": 0.13263821138211385,
       "brier": null,
-      "confidence": 0.8,
+      "confidence": 0.95,
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
@@ -114,8 +114,8 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:48:24.963367+00:00",
-      "probability": 0.05571105691056911,
+      "predicted_at": "2026-09-01T07:56:05.401063+00:00",
+      "probability": 0.0525,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",

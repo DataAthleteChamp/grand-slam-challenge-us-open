@@ -5,7 +5,7 @@
     {
       "base_rate": 0.3511,
       "brier": null,
-      "confidence": 0.8,
+      "confidence": 0.95,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
@@ -13,22 +13,22 @@
       "market": null,
       "market_id": "38ad0f22-5a9e-4322-a56f-221c50c44c6b",
       "market_weight": 0.0,
-      "model": 0.28546243350474665,
+      "model": 0.34140453179181773,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:48:24.967223+00:00",
-      "probability": 0.2907134388243669,
+      "predicted_at": "2026-09-01T07:56:05.407321+00:00",
+      "probability": 0.34140453179181773,
       "question": "Will the match last longer than 105 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 25
+      "submission": 31
     },
     {
       "base_rate": 0.427,
       "brier": null,
-      "confidence": 0.75,
+      "confidence": 0.85,
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
@@ -41,8 +41,8 @@
         "exposure 68 service points from 21.1 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:48:24.967223+00:00",
-      "probability": 0.43200634899383983,
+      "predicted_at": "2026-09-01T07:56:05.407321+00:00",
+      "probability": 0.43267386219301845,
       "question": "Will T. Maria record more aces than J. Ostapenko?",
       "rbp": null,
       "settled_at": "",
@@ -64,7 +64,7 @@
         "exposure 68 service points from 21.1 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:48:24.967223+00:00",
+      "predicted_at": "2026-09-01T07:56:05.407321+00:00",
       "probability": 0.42279443108687037,
       "question": "Will T. Maria record more double faults than J. Ostapenko?",
       "rbp": null,
@@ -79,17 +79,17 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.3948106591812864,
+      "market": 0.4002659574523767,
       "market_id": "a78eafbb-59f4-4076-86b4-185529416786",
       "market_weight": 0.34,
       "model": 0.33825,
       "notes": [
         "simulated win probability 0.338",
-        "market consensus 0.395, weight 0.34"
+        "market consensus 0.400, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:48:24.967223+00:00",
-      "probability": 0.3602747928386747,
+      "predicted_at": "2026-09-01T07:56:05.407321+00:00",
+      "probability": 0.3620145987634065,
       "question": "Will T. Maria win?",
       "rbp": null,
       "settled_at": "",
@@ -98,7 +98,7 @@
     {
       "base_rate": 0.020454545454545454,
       "brier": null,
-      "confidence": 0.8,
+      "confidence": 0.95,
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
@@ -112,7 +112,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:48:24.967223+00:00",
+      "predicted_at": "2026-09-01T07:56:05.407321+00:00",
       "probability": 0.02,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,

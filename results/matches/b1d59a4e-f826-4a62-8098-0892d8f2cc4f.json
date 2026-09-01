@@ -5,7 +5,7 @@
     {
       "base_rate": 0.3994,
       "brier": null,
-      "confidence": 0.8,
+      "confidence": 0.95,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
@@ -13,22 +13,22 @@
       "market": null,
       "market_id": "140908c7-4290-46d7-9d13-e9f10e438b5c",
       "market_weight": 0.0,
-      "model": 0.4528859661240518,
+      "model": 0.5223115455749526,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:48:24.969193+00:00",
-      "probability": 0.44860708883412764,
+      "predicted_at": "2026-09-01T07:56:05.410811+00:00",
+      "probability": 0.5223115455749526,
       "question": "Will the match last longer than 100 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 44
+      "submission": 53
     },
     {
       "base_rate": 0.427,
       "brier": null,
-      "confidence": 0.75,
+      "confidence": 0.85,
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
@@ -41,12 +41,12 @@
         "exposure 70 service points from 21.6 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:48:24.969193+00:00",
-      "probability": 0.39989989238838863,
+      "predicted_at": "2026-09-01T07:56:05.410811+00:00",
+      "probability": 0.39628654470684044,
       "question": "Will M. Frech record more aces than I. Jovic?",
       "rbp": null,
       "settled_at": "",
-      "submission": 38
+      "submission": 37
     },
     {
       "base_rate": 0.433,
@@ -64,7 +64,7 @@
         "exposure 70 service points from 21.6 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:48:24.969193+00:00",
+      "predicted_at": "2026-09-01T07:56:05.410811+00:00",
       "probability": 0.42285468833675627,
       "question": "Will M. Frech record more double faults than I. Jovic?",
       "rbp": null,
@@ -88,7 +88,7 @@
         "market consensus 0.248, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:48:24.969193+00:00",
+      "predicted_at": "2026-09-01T07:56:05.410811+00:00",
       "probability": 0.35932420352859773,
       "question": "Will M. Frech win?",
       "rbp": null,
@@ -98,7 +98,7 @@
     {
       "base_rate": 0.225,
       "brier": null,
-      "confidence": 0.8,
+      "confidence": 0.95,
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
@@ -112,12 +112,12 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:48:24.969193+00:00",
-      "probability": 0.14290999999999998,
+      "predicted_at": "2026-09-01T07:56:05.410811+00:00",
+      "probability": 0.13924999999999998,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 10
+      "submission": 9
     }
   ],
   "match_id": "b1d59a4e-f826-4a62-8098-0892d8f2cc4f",

@@ -1,0 +1,133 @@
+{
+  "closing_time": "2026-09-03T03:00:00.000Z",
+  "draw": "mens",
+  "entries": [
+    {
+      "base_rate": 0.446,
+      "brier": null,
+      "confidence": 0.35,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_duration",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "ac56778a-abc4-4b04-8274-2b308d4fd867",
+      "market_weight": 0.0,
+      "model": 0.446,
+      "notes": [
+        "one or both players unrated; using the base rate as the model",
+        "no usable market quote for this question"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.429446+00:00",
+      "probability": 0.446,
+      "question": "Will the match last longer than 160 minutes?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 43
+    },
+    {
+      "base_rate": 0.46,
+      "brier": null,
+      "confidence": 0.3,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "aces_comparison",
+      "lane": "scenario",
+      "market": 0.0,
+      "market_id": "689f112a-98b2-47c1-acab-f2183a60db24",
+      "market_weight": 0.0,
+      "model": null,
+      "notes": [
+        "comparison subject not identified",
+        "question not understood; answering from the base rate"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.429446+00:00",
+      "probability": 0.46,
+      "question": "Will D. Merida record more aces than A. Rublev?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 45
+    },
+    {
+      "base_rate": 0.421,
+      "brier": null,
+      "confidence": 0.3,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "double_faults_comparison",
+      "lane": "scenario",
+      "market": 0.0,
+      "market_id": "53181869-a68f-445c-a067-3232e38429c0",
+      "market_weight": 0.0,
+      "model": null,
+      "notes": [
+        "comparison subject not identified",
+        "question not understood; answering from the base rate"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.429446+00:00",
+      "probability": 0.42100000000000004,
+      "question": "Will D. Merida record more double faults than A. Rublev?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 40
+    },
+    {
+      "base_rate": 0.5,
+      "brier": null,
+      "confidence": 0.2,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_winner",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "aaa43077-b00d-4ff9-802f-a48f105a466a",
+      "market_weight": 0.0,
+      "model": null,
+      "notes": [
+        "no identifiable subject; cannot tell which player is meant"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.429446+00:00",
+      "probability": 0.5,
+      "question": "Will D. Merida win?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 50
+    },
+    {
+      "base_rate": 0.13263821138211385,
+      "brier": null,
+      "confidence": 0.35,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "tiebreak",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "6aaa6326-4891-4cde-a6e1-46e38236aca9",
+      "market_weight": 0.0,
+      "model": 0.13263821138211385,
+      "notes": [
+        "one or both players unrated; using the base rate as the model",
+        "no usable market quote for this question",
+        "scenario lane: experimental tiebreak shift -0.040"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.429446+00:00",
+      "probability": 0.09263821138211384,
+      "question": "Will the match feature at least 2 tiebreak(s)?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 5
+    }
+  ],
+  "match_id": "55c11023-98de-4c04-946c-59d6ab9b91a7",
+  "match_name": "D. Merida Aguilar vs A. Rublev",
+  "multiplier": 1,
+  "opening_time": "2026-09-02T15:00:00.000Z",
+  "player_a": "D. Merida Aguilar",
+  "player_b": "Andrey Rublev",
+  "round_code": "R128"
+}

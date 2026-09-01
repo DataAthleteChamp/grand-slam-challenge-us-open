@@ -1,0 +1,132 @@
+{
+  "closing_time": "2026-09-03T03:00:00.000Z",
+  "draw": "mens",
+  "entries": [
+    {
+      "base_rate": 0.2636,
+      "brier": null,
+      "confidence": 0.95,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_duration",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "49c4890c-5fbc-42ca-a832-0c1b4c50bd39",
+      "market_weight": 0.0,
+      "model": 0.24087630852490644,
+      "notes": [
+        "no usable market quote for this question"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.430188+00:00",
+      "probability": 0.24087630852490644,
+      "question": "Will the match last longer than 190 minutes?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 19
+    },
+    {
+      "base_rate": 0.46,
+      "brier": null,
+      "confidence": 1.0,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "aces_comparison",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "0130a2b1-393f-42d3-9b09-42dd651c3cc1",
+      "market_weight": 0.0,
+      "model": 0.7232172664200102,
+      "notes": [
+        "ace vulnerability: Dalibor Svrcina 0.93, Luciano Darderi 1.37",
+        "exposure 116 service points from 37.2 games",
+        "outcome coupling: P(win)=0.610, delta=+0.60"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.430188+00:00",
+      "probability": 0.7232172664200102,
+      "question": "Will L. Darderi record more aces than D. Svrcina?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 77
+    },
+    {
+      "base_rate": 0.421,
+      "brier": null,
+      "confidence": 1.0,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "double_faults_comparison",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "d15981b4-09f1-401d-97cc-486880d5449d",
+      "market_weight": 0.0,
+      "model": 0.28008639708900185,
+      "notes": [
+        "exposure 116 service points from 37.2 games"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.430188+00:00",
+      "probability": 0.28008639708900185,
+      "question": "Will L. Darderi record more double faults than D. Svrcina?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 24
+    },
+    {
+      "base_rate": 0.5,
+      "brier": null,
+      "confidence": 0.85,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_winner",
+      "lane": "scenario",
+      "market": 0.610138004265975,
+      "market_id": "e03ac6f3-2ea1-481c-b2fe-10b1e0dc7abc",
+      "market_weight": 0.34,
+      "model": 0.31225,
+      "notes": [
+        "simulated win probability 0.312",
+        "market consensus 0.610, weight 0.34"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.430188+00:00",
+      "probability": 0.4108665772697843,
+      "question": "Will L. Darderi win?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 39
+    },
+    {
+      "base_rate": 0.487,
+      "brier": null,
+      "confidence": 0.95,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "tiebreak",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "1944b831-1c09-424c-8e3b-1765c2a63260",
+      "market_weight": 0.0,
+      "model": 0.343,
+      "notes": [
+        "no usable market quote for this question",
+        "scenario lane: experimental tiebreak shift -0.040"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.430188+00:00",
+      "probability": 0.30300000000000005,
+      "question": "Will the match feature at least 1 tiebreak(s)?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 26
+    }
+  ],
+  "match_id": "57e9fb52-8b4f-4a95-92fe-15012455338e",
+  "match_name": "L. Darderi vs D. Svrcina",
+  "multiplier": 1,
+  "opening_time": "2026-09-02T15:00:00.000Z",
+  "player_a": "Luciano Darderi",
+  "player_b": "Dalibor Svrcina",
+  "round_code": "R128"
+}

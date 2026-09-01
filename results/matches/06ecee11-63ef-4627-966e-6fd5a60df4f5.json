@@ -5,7 +5,7 @@
     {
       "base_rate": 0.5685,
       "brier": null,
-      "confidence": 0.8,
+      "confidence": 0.95,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
@@ -13,22 +13,22 @@
       "market": null,
       "market_id": "d758dc75-600a-42a8-9007-b1a02cd84ffa",
       "market_weight": 0.0,
-      "model": 0.5059748324573768,
+      "model": 0.580326280998031,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:48:24.970919+00:00",
-      "probability": 0.5109768458607867,
+      "predicted_at": "2026-09-01T07:56:05.412640+00:00",
+      "probability": 0.580326280998031,
       "question": "Will the match last longer than 85 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 51
+      "submission": 60
     },
     {
       "base_rate": 0.427,
       "brier": null,
-      "confidence": 0.75,
+      "confidence": 0.85,
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
@@ -41,12 +41,12 @@
         "exposure 67 service points from 20.6 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:48:24.970919+00:00",
-      "probability": 0.6038475838043039,
+      "predicted_at": "2026-09-01T07:56:05.412640+00:00",
+      "probability": 0.6274272616448777,
       "question": "Will C. Gauff record more aces than Z. Sonmez?",
       "rbp": null,
       "settled_at": "",
-      "submission": 63
+      "submission": 66
     },
     {
       "base_rate": 0.433,
@@ -64,7 +64,7 @@
         "exposure 67 service points from 20.6 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:48:24.970919+00:00",
+      "predicted_at": "2026-09-01T07:56:05.412640+00:00",
       "probability": 0.45034631919318047,
       "question": "Will C. Gauff record more double faults than Z. Sonmez?",
       "rbp": null,
@@ -79,26 +79,26 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.9355049925280858,
+      "market": 0.9331501832001796,
       "market_id": "2eac6cdb-f410-4157-ad82-7099fc68ab05",
       "market_weight": 0.34,
       "model": 0.7445,
       "notes": [
         "simulated win probability 0.745",
-        "market consensus 0.936, weight 0.34"
+        "market consensus 0.933, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:48:24.970919+00:00",
-      "probability": 0.8266132004583604,
+      "predicted_at": "2026-09-01T07:56:05.412640+00:00",
+      "probability": 0.8248406298340751,
       "question": "Will C. Gauff win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 88
+      "submission": 87
     },
     {
       "base_rate": 0.225,
       "brier": null,
-      "confidence": 0.8,
+      "confidence": 0.95,
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
@@ -112,12 +112,12 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:48:24.970919+00:00",
-      "probability": 0.12037,
+      "predicted_at": "2026-09-01T07:56:05.412640+00:00",
+      "probability": 0.11474999999999999,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 8
+      "submission": 7
     }
   ],
   "match_id": "06ecee11-63ef-4627-966e-6fd5a60df4f5",

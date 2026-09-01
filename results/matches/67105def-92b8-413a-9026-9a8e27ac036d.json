@@ -1,0 +1,130 @@
+{
+  "closing_time": "2026-09-03T03:00:00.000Z",
+  "draw": "womens",
+  "entries": [
+    {
+      "base_rate": 0.5685,
+      "brier": null,
+      "confidence": 0.95,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_duration",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "bdf4f44d-d8c1-4e4d-a8bb-d4bf3d8e64cd",
+      "market_weight": 0.0,
+      "model": 0.6309534970712305,
+      "notes": [
+        "no usable market quote for this question"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.432393+00:00",
+      "probability": 0.6309534970712305,
+      "question": "Will the match last longer than 85 minutes?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 66
+    },
+    {
+      "base_rate": 0.427,
+      "brier": null,
+      "confidence": 0.85,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "aces_comparison",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "a844c1b1-1df0-44d6-8fe9-f789b3b9e463",
+      "market_weight": 0.0,
+      "model": 0.734354485623778,
+      "notes": [
+        "exposure 71 service points from 22.0 games"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.432393+00:00",
+      "probability": 0.727439009697243,
+      "question": "Will K. Pliskova record more aces than D. Shnaider?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 77
+    },
+    {
+      "base_rate": 0.433,
+      "brier": null,
+      "confidence": 0.1,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "double_faults_comparison",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "a40eabdb-dd7f-4466-9246-12afec9aeeb9",
+      "market_weight": 0.0,
+      "model": 0.6202234584106114,
+      "notes": [
+        "exposure 71 service points from 22.0 games"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.432393+00:00",
+      "probability": 0.4545306977172203,
+      "question": "Will K. Pliskova record more double faults than D. Shnaider?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 44
+    },
+    {
+      "base_rate": 0.5,
+      "brier": null,
+      "confidence": 0.85,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_winner",
+      "lane": "scenario",
+      "market": 0.27480772044862256,
+      "market_id": "925ae463-ee6d-4cb1-8730-44aab77a8718",
+      "market_weight": 0.34,
+      "model": 0.48075,
+      "notes": [
+        "simulated win probability 0.481",
+        "market consensus 0.275, weight 0.34"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.432393+00:00",
+      "probability": 0.4080576857941451,
+      "question": "Will K. Pliskova win?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 39
+    },
+    {
+      "base_rate": 0.225,
+      "brier": null,
+      "confidence": 0.95,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "tiebreak",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "dfe4ec4b-d0c6-47a4-9e9b-0f0f552bc53a",
+      "market_weight": 0.0,
+      "model": 0.2105,
+      "notes": [
+        "no usable market quote for this question",
+        "scenario lane: experimental tiebreak shift -0.040"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.432393+00:00",
+      "probability": 0.17049999999999998,
+      "question": "Will the match feature at least 1 tiebreak(s)?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 12
+    }
+  ],
+  "match_id": "67105def-92b8-413a-9026-9a8e27ac036d",
+  "match_name": "K. Pliskova vs D. Shnaider",
+  "multiplier": 1,
+  "opening_time": "2026-09-02T15:00:00.000Z",
+  "player_a": "Karolina Pliskova",
+  "player_b": "Diana Shnaider",
+  "round_code": "R128"
+}

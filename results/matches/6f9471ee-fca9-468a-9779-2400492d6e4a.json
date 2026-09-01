@@ -1,0 +1,132 @@
+{
+  "closing_time": "2026-09-03T03:00:00.000Z",
+  "draw": "mens",
+  "entries": [
+    {
+      "base_rate": 0.5144,
+      "brier": null,
+      "confidence": 0.95,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_duration",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "1a7adaf2-4dda-4a50-87ee-6698e9547bba",
+      "market_weight": 0.0,
+      "model": 0.6701292814626036,
+      "notes": [
+        "no usable market quote for this question"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.434072+00:00",
+      "probability": 0.6701292814626036,
+      "question": "Will the match last longer than 150 minutes?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 71
+    },
+    {
+      "base_rate": 0.46,
+      "brier": null,
+      "confidence": 1.0,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "aces_comparison",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "95c472ec-bc53-4233-8c5b-4f26a065c4a0",
+      "market_weight": 0.0,
+      "model": 0.24892850143596898,
+      "notes": [
+        "ace vulnerability: Valentin Vacherot 1.05, Kamil Majchrzak 1.27",
+        "exposure 128 service points from 40.8 games",
+        "outcome coupling: P(win)=0.444, delta=+0.60"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.434072+00:00",
+      "probability": 0.24892850143596898,
+      "question": "Will K. Majchrzak record more aces than V. Vacherot?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 20
+    },
+    {
+      "base_rate": 0.421,
+      "brier": null,
+      "confidence": 1.0,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "double_faults_comparison",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "073c94f0-449c-4784-a8e3-4822388e1199",
+      "market_weight": 0.0,
+      "model": 0.30022856254145225,
+      "notes": [
+        "exposure 128 service points from 40.8 games"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.434072+00:00",
+      "probability": 0.30022856254145225,
+      "question": "Will K. Majchrzak record more double faults than V. Vacherot?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 26
+    },
+    {
+      "base_rate": 0.5,
+      "brier": null,
+      "confidence": 0.85,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_winner",
+      "lane": "scenario",
+      "market": 0.4439775910336598,
+      "market_id": "563d100b-b355-4b73-91ab-4fabd2359796",
+      "market_weight": 0.34,
+      "model": 0.519,
+      "notes": [
+        "simulated win probability 0.519",
+        "market consensus 0.444, weight 0.34"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.434072+00:00",
+      "probability": 0.49356657224509654,
+      "question": "Will K. Majchrzak win?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 49
+    },
+    {
+      "base_rate": 0.487,
+      "brier": null,
+      "confidence": 0.95,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "tiebreak",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "cbe89f8f-45f9-4787-a1c2-1fbd35c52a8b",
+      "market_weight": 0.0,
+      "model": 0.58475,
+      "notes": [
+        "no usable market quote for this question",
+        "scenario lane: experimental tiebreak shift -0.040"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.434072+00:00",
+      "probability": 0.54475,
+      "question": "Will the match feature at least 1 tiebreak(s)?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 56
+    }
+  ],
+  "match_id": "6f9471ee-fca9-468a-9779-2400492d6e4a",
+  "match_name": "V. Vacherot vs K. Majchrzak",
+  "multiplier": 1,
+  "opening_time": "2026-09-02T15:00:00.000Z",
+  "player_a": "Valentin Vacherot",
+  "player_b": "Kamil Majchrzak",
+  "round_code": "R128"
+}

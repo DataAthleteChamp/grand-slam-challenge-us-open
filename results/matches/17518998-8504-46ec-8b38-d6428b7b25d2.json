@@ -1,0 +1,130 @@
+{
+  "closing_time": "2026-09-03T03:00:00.000Z",
+  "draw": "womens",
+  "entries": [
+    {
+      "base_rate": 0.5685,
+      "brier": null,
+      "confidence": 0.95,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_duration",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "6b5fae44-60be-423b-82cf-d06e4dc849ee",
+      "market_weight": 0.0,
+      "model": 0.7219033987351036,
+      "notes": [
+        "no usable market quote for this question"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.425302+00:00",
+      "probability": 0.7219033987351036,
+      "question": "Will the match last longer than 85 minutes?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 77
+    },
+    {
+      "base_rate": 0.427,
+      "brier": null,
+      "confidence": 0.85,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "aces_comparison",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "72f87077-39fe-45c4-9121-492ffe5e513d",
+      "market_weight": 0.0,
+      "model": 0.401890915427583,
+      "notes": [
+        "exposure 70 service points from 21.7 games"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.425302+00:00",
+      "probability": 0.4024558698304624,
+      "question": "Will K. Boulter record more aces than K. Muchova?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 38
+    },
+    {
+      "base_rate": 0.433,
+      "brier": null,
+      "confidence": 0.1,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "double_faults_comparison",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "090b0ae4-cbdb-4361-ba70-f3193e657588",
+      "market_weight": 0.0,
+      "model": 0.5658560306857597,
+      "notes": [
+        "exposure 70 service points from 21.7 games"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.425302+00:00",
+      "probability": 0.44827844352886237,
+      "question": "Will K. Boulter record more double faults than K. Muchova?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 44
+    },
+    {
+      "base_rate": 0.5,
+      "brier": null,
+      "confidence": 0.85,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_winner",
+      "lane": "scenario",
+      "market": 0.1800766283541005,
+      "market_id": "c2cc802b-b145-452d-bd45-c639731cdc24",
+      "market_weight": 0.34,
+      "model": 0.36125,
+      "notes": [
+        "simulated win probability 0.361",
+        "market consensus 0.180, weight 0.34"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.425302+00:00",
+      "probability": 0.2954985033747909,
+      "question": "Will K. Boulter win?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 25
+    },
+    {
+      "base_rate": 0.225,
+      "brier": null,
+      "confidence": 0.95,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "tiebreak",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "52eaf99e-2f12-4ad1-92a4-290a6e77a6d0",
+      "market_weight": 0.0,
+      "model": 0.20525,
+      "notes": [
+        "no usable market quote for this question",
+        "scenario lane: experimental tiebreak shift -0.040"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.425302+00:00",
+      "probability": 0.16524999999999998,
+      "question": "Will the match feature at least 1 tiebreak(s)?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 12
+    }
+  ],
+  "match_id": "17518998-8504-46ec-8b38-d6428b7b25d2",
+  "match_name": "K. Boulter vs K. Muchova",
+  "multiplier": 1,
+  "opening_time": "2026-09-02T15:00:00.000Z",
+  "player_a": "Katie Boulter",
+  "player_b": "Karolina Muchova",
+  "round_code": "R128"
+}

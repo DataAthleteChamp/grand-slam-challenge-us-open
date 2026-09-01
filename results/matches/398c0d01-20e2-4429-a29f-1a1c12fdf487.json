@@ -1,0 +1,130 @@
+{
+  "closing_time": "2026-09-03T03:00:00.000Z",
+  "draw": "womens",
+  "entries": [
+    {
+      "base_rate": 0.5685,
+      "brier": null,
+      "confidence": 0.95,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_duration",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "80df31a2-ed2a-45f9-8cb4-69de1b5b32fc",
+      "market_weight": 0.0,
+      "model": 0.6856971658993019,
+      "notes": [
+        "no usable market quote for this question"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.428890+00:00",
+      "probability": 0.6856971658993019,
+      "question": "Will the match last longer than 85 minutes?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 73
+    },
+    {
+      "base_rate": 0.427,
+      "brier": null,
+      "confidence": 0.45,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "aces_comparison",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "525ad673-d204-447b-9965-367037067548",
+      "market_weight": 0.0,
+      "model": 0.5404225573812308,
+      "notes": [
+        "exposure 70 service points from 21.6 games"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.428890+00:00",
+      "probability": 0.4856961734447869,
+      "question": "Will L. Fernandez record more aces than M. Sawangkaew?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 48
+    },
+    {
+      "base_rate": 0.433,
+      "brier": null,
+      "confidence": 0.45,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "double_faults_comparison",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "df4e8529-64f7-46d0-a4f9-3d12c716473a",
+      "market_weight": 0.0,
+      "model": 0.4713691627529789,
+      "notes": [
+        "exposure 70 service points from 21.6 games"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.428890+00:00",
+      "probability": 0.4528560417246666,
+      "question": "Will L. Fernandez record more double faults than M. Sawangkaew?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 44
+    },
+    {
+      "base_rate": 0.5,
+      "brier": null,
+      "confidence": 0.85,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_winner",
+      "lane": "scenario",
+      "market": 0.7467518288265295,
+      "market_id": "b216eb32-0927-48b5-b45a-acb599f2abdc",
+      "market_weight": 0.34,
+      "model": 0.58125,
+      "notes": [
+        "simulated win probability 0.581",
+        "market consensus 0.747, weight 0.34"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.428890+00:00",
+      "probability": 0.6388109837219482,
+      "question": "Will L. Fernandez win?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 67
+    },
+    {
+      "base_rate": 0.225,
+      "brier": null,
+      "confidence": 0.95,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "tiebreak",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "e5a903ad-affa-4d30-aea5-46aea2c1591b",
+      "market_weight": 0.0,
+      "model": 0.18325,
+      "notes": [
+        "no usable market quote for this question",
+        "scenario lane: experimental tiebreak shift -0.040"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.428890+00:00",
+      "probability": 0.14325,
+      "question": "Will the match feature at least 1 tiebreak(s)?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 10
+    }
+  ],
+  "match_id": "398c0d01-20e2-4429-a29f-1a1c12fdf487",
+  "match_name": "M. Sawangkaew vs L. Fernandez",
+  "multiplier": 1,
+  "opening_time": "2026-09-02T15:00:00.000Z",
+  "player_a": "Mananchaya Sawangkaew",
+  "player_b": "Leylah Fernandez",
+  "round_code": "R128"
+}

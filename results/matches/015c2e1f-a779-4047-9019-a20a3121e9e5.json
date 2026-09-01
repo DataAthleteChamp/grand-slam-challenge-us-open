@@ -5,7 +5,7 @@
     {
       "base_rate": 0.912,
       "brier": null,
-      "confidence": 0.8,
+      "confidence": 0.95,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
@@ -18,8 +18,8 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:48:24.966342+00:00",
-      "probability": 0.8993884506957243,
+      "predicted_at": "2026-09-01T07:56:05.406757+00:00",
+      "probability": 0.8982917942344829,
       "question": "Will the match last longer than 100 minutes?",
       "rbp": null,
       "settled_at": "",
@@ -28,7 +28,7 @@
     {
       "base_rate": 0.46,
       "brier": null,
-      "confidence": 0.9,
+      "confidence": 1.0,
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
@@ -36,15 +36,15 @@
       "market": null,
       "market_id": "9b4ec192-e692-4be3-bce7-c1cbe6709760",
       "market_weight": 0.0,
-      "model": 0.14314621211612094,
+      "model": 0.143795737015817,
       "notes": [
         "ace vulnerability: Taylor Fritz 0.99, Darwin Blanch 1.00",
         "exposure 115 service points from 37.0 games",
-        "outcome coupling: P(win)=0.045, delta=+0.60"
+        "outcome coupling: P(win)=0.048, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:48:24.966342+00:00",
-      "probability": 0.14314621211612094,
+      "predicted_at": "2026-09-01T07:56:05.406757+00:00",
+      "probability": 0.143795737015817,
       "question": "Will D. Blanch record more aces than T. Fritz?",
       "rbp": null,
       "settled_at": "",
@@ -53,7 +53,7 @@
     {
       "base_rate": 0.421,
       "brier": null,
-      "confidence": 0.9,
+      "confidence": 1.0,
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
@@ -66,7 +66,7 @@
         "exposure 115 service points from 37.0 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:48:24.966342+00:00",
+      "predicted_at": "2026-09-01T07:56:05.406757+00:00",
       "probability": 0.5524314485379485,
       "question": "Will D. Blanch record more double faults than T. Fritz?",
       "rbp": null,
@@ -81,17 +81,17 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.0447465394341879,
+      "market": 0.04789644018503136,
       "market_id": "3529880e-b300-4120-8967-ace0f25d64db",
       "market_weight": 0.34,
       "model": 0.0935,
       "notes": [
         "simulated win probability 0.093",
-        "market consensus 0.045, weight 0.34"
+        "market consensus 0.048, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:48:24.966342+00:00",
-      "probability": 0.08270621054775516,
+      "predicted_at": "2026-09-01T07:56:05.406757+00:00",
+      "probability": 0.08432922227229549,
       "question": "Will D. Blanch win?",
       "rbp": null,
       "settled_at": "",
@@ -100,7 +100,7 @@
     {
       "base_rate": 0.487,
       "brier": null,
-      "confidence": 0.8,
+      "confidence": 0.95,
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
@@ -114,8 +114,8 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:48:24.966342+00:00",
-      "probability": 0.5127799999999999,
+      "predicted_at": "2026-09-01T07:56:05.406757+00:00",
+      "probability": 0.5185,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",

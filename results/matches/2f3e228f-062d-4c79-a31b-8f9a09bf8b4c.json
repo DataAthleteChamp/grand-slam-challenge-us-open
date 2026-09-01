@@ -1,0 +1,132 @@
+{
+  "closing_time": "2026-09-03T03:00:00.000Z",
+  "draw": "mens",
+  "entries": [
+    {
+      "base_rate": 0.2883,
+      "brier": null,
+      "confidence": 0.95,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_duration",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "375df71b-9306-47be-a43c-83917705c94e",
+      "market_weight": 0.0,
+      "model": 0.39107013402621643,
+      "notes": [
+        "no usable market quote for this question"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.427069+00:00",
+      "probability": 0.39107013402621643,
+      "question": "Will the match last longer than 185 minutes?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 37
+    },
+    {
+      "base_rate": 0.46,
+      "brier": null,
+      "confidence": 1.0,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "aces_comparison",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "59ee00f8-fbc5-4b63-a13e-2c74c948eba7",
+      "market_weight": 0.0,
+      "model": 0.32991126784243685,
+      "notes": [
+        "ace vulnerability: Brandon Nakashima 1.15, Alex Michelsen 0.96",
+        "exposure 129 service points from 41.2 games",
+        "outcome coupling: P(win)=0.389, delta=+0.60"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.427069+00:00",
+      "probability": 0.32991126784243685,
+      "question": "Will A. Michelsen record more aces than B. Nakashima?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 29
+    },
+    {
+      "base_rate": 0.421,
+      "brier": null,
+      "confidence": 1.0,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "double_faults_comparison",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "c98d2562-51bd-4b7d-b4d3-1c7c51f1d87c",
+      "market_weight": 0.0,
+      "model": 0.613073642853115,
+      "notes": [
+        "exposure 129 service points from 41.2 games"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.427069+00:00",
+      "probability": 0.613073642853115,
+      "question": "Will A. Michelsen record more double faults than B. Nakashima?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 64
+    },
+    {
+      "base_rate": 0.5,
+      "brier": null,
+      "confidence": 0.85,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_winner",
+      "lane": "scenario",
+      "market": 0.38869220040961044,
+      "market_id": "2ed6b812-e10f-41af-8c18-bf38658757c4",
+      "market_weight": 0.34,
+      "model": 0.418,
+      "notes": [
+        "simulated win probability 0.418",
+        "market consensus 0.389, weight 0.34"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.427069+00:00",
+      "probability": 0.410029946070457,
+      "question": "Will A. Michelsen win?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 39
+    },
+    {
+      "base_rate": 0.13263821138211385,
+      "brier": null,
+      "confidence": 0.95,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "tiebreak",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "0b5f4ebb-36fd-4118-91d9-09958752d907",
+      "market_weight": 0.0,
+      "model": 0.23125,
+      "notes": [
+        "no usable market quote for this question",
+        "scenario lane: experimental tiebreak shift -0.040"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.427069+00:00",
+      "probability": 0.19125,
+      "question": "Will the match feature at least 2 tiebreak(s)?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 14
+    }
+  ],
+  "match_id": "2f3e228f-062d-4c79-a31b-8f9a09bf8b4c",
+  "match_name": "B. Nakashima vs A. Michelsen",
+  "multiplier": 1,
+  "opening_time": "2026-09-02T15:00:00.000Z",
+  "player_a": "Brandon Nakashima",
+  "player_b": "Alex Michelsen",
+  "round_code": "R128"
+}

@@ -5,7 +5,7 @@
     {
       "base_rate": 0.2636,
       "brier": null,
-      "confidence": 0.8,
+      "confidence": 0.95,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
@@ -18,8 +18,8 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:48:24.968126+00:00",
-      "probability": 0.29342974899245156,
+      "predicted_at": "2026-09-01T07:56:05.409575+00:00",
+      "probability": 0.2960236402091865,
       "question": "Will the match last longer than 190 minutes?",
       "rbp": null,
       "settled_at": "",
@@ -28,7 +28,7 @@
     {
       "base_rate": 0.46,
       "brier": null,
-      "confidence": 0.9,
+      "confidence": 1.0,
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
@@ -36,15 +36,15 @@
       "market": null,
       "market_id": "9580b2a7-2856-4447-95d1-0183afc6975b",
       "market_weight": 0.0,
-      "model": 0.46548607901273986,
+      "model": 0.4651485354391339,
       "notes": [
         "ace vulnerability: Arthur Gea 0.87, Juan Manuel Cerundolo 0.89",
         "exposure 120 service points from 38.5 games",
-        "outcome coupling: P(win)=0.473, delta=+0.60"
+        "outcome coupling: P(win)=0.472, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:48:24.968126+00:00",
-      "probability": 0.46548607901273986,
+      "predicted_at": "2026-09-01T07:56:05.409575+00:00",
+      "probability": 0.4651485354391339,
       "question": "Will J. Cerundolo record more aces than A. Gea?",
       "rbp": null,
       "settled_at": "",
@@ -53,7 +53,7 @@
     {
       "base_rate": 0.421,
       "brier": null,
-      "confidence": 0.9,
+      "confidence": 1.0,
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
@@ -66,7 +66,7 @@
         "exposure 120 service points from 38.5 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:48:24.968126+00:00",
+      "predicted_at": "2026-09-01T07:56:05.409575+00:00",
       "probability": 0.41522104830795714,
       "question": "Will J. Cerundolo record more double faults than A. Gea?",
       "rbp": null,
@@ -81,17 +81,17 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.47338092115768676,
+      "market": 0.47222222222403093,
       "market_id": "bf7b03d0-0aa1-4558-9fed-fc7e05397447",
       "market_weight": 0.34,
       "model": 0.319,
       "notes": [
         "simulated win probability 0.319",
-        "market consensus 0.473, weight 0.34"
+        "market consensus 0.472, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:48:24.968126+00:00",
-      "probability": 0.37189015038656886,
+      "predicted_at": "2026-09-01T07:56:05.409575+00:00",
+      "probability": 0.3715305248890723,
       "question": "Will J. Cerundolo win?",
       "rbp": null,
       "settled_at": "",
@@ -100,7 +100,7 @@
     {
       "base_rate": 0.487,
       "brier": null,
-      "confidence": 0.8,
+      "confidence": 0.95,
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
@@ -114,12 +114,12 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:48:24.968126+00:00",
-      "probability": 0.39962000000000003,
+      "predicted_at": "2026-09-01T07:56:05.409575+00:00",
+      "probability": 0.3955,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 38
+      "submission": 37
     }
   ],
   "match_id": "6ee3851f-cb96-443d-b38c-3a1d1a735754",

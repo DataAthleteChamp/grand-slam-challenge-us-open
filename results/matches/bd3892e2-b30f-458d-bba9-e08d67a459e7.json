@@ -1,0 +1,132 @@
+{
+  "closing_time": "2026-09-03T03:00:00.000Z",
+  "draw": "mens",
+  "entries": [
+    {
+      "base_rate": 0.5904,
+      "brier": null,
+      "confidence": 0.95,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_duration",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "2588c5a8-f29b-42ae-9d3b-b01e2d26d293",
+      "market_weight": 0.0,
+      "model": 0.7318978813032007,
+      "notes": [
+        "no usable market quote for this question"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.417231+00:00",
+      "probability": 0.7318978813032007,
+      "question": "Will the match last longer than 140 minutes?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 78
+    },
+    {
+      "base_rate": 0.46,
+      "brier": null,
+      "confidence": 1.0,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "aces_comparison",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "7b34912d-13f2-46c1-897b-83082e3d7e58",
+      "market_weight": 0.0,
+      "model": 0.5690420015198925,
+      "notes": [
+        "ace vulnerability: Toby Samuel 1.00, Jiri Lehecka 0.93",
+        "exposure 125 service points from 39.9 games",
+        "outcome coupling: P(win)=0.714, delta=+0.60"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.417231+00:00",
+      "probability": 0.5690420015198925,
+      "question": "Will J. Lehecka record more aces than T. Samuel?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 59
+    },
+    {
+      "base_rate": 0.421,
+      "brier": null,
+      "confidence": 1.0,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "double_faults_comparison",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "e35c20a3-51be-4a2d-b0be-7bf1041b64ef",
+      "market_weight": 0.0,
+      "model": 0.3509388815362407,
+      "notes": [
+        "exposure 125 service points from 39.9 games"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.417231+00:00",
+      "probability": 0.3509388815362407,
+      "question": "Will J. Lehecka record more double faults than T. Samuel?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 32
+    },
+    {
+      "base_rate": 0.5,
+      "brier": null,
+      "confidence": 0.85,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_winner",
+      "lane": "scenario",
+      "market": 0.7141203703702083,
+      "market_id": "69eb4d47-9c36-4b00-af8d-aa8dae45b630",
+      "market_weight": 0.34,
+      "model": 0.497,
+      "notes": [
+        "simulated win probability 0.497",
+        "market consensus 0.714, weight 0.34"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.417231+00:00",
+      "probability": 0.5735662781609883,
+      "question": "Will J. Lehecka win?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 59
+    },
+    {
+      "base_rate": 0.487,
+      "brier": null,
+      "confidence": 0.95,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "tiebreak",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "a97a338d-49da-49b2-9601-53ce0de4a972",
+      "market_weight": 0.0,
+      "model": 0.51125,
+      "notes": [
+        "no usable market quote for this question",
+        "scenario lane: experimental tiebreak shift -0.040"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.417231+00:00",
+      "probability": 0.47125,
+      "question": "Will the match feature at least 1 tiebreak(s)?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 46
+    }
+  ],
+  "match_id": "bd3892e2-b30f-458d-bba9-e08d67a459e7",
+  "match_name": "J. Lehecka vs T. Samuel",
+  "multiplier": 1,
+  "opening_time": "2026-09-02T15:00:00.000Z",
+  "player_a": "Jiri Lehecka",
+  "player_b": "Toby Samuel",
+  "round_code": "R128"
+}

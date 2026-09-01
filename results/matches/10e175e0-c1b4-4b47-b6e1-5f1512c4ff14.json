@@ -5,7 +5,7 @@
     {
       "base_rate": 0.5685,
       "brier": null,
-      "confidence": 0.8,
+      "confidence": 0.95,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
@@ -13,22 +13,22 @@
       "market": null,
       "market_id": "ccd050ee-da84-43a7-85f0-98cf229b9859",
       "market_weight": 0.0,
-      "model": 0.6026693520458415,
+      "model": 0.6736562326066577,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:48:24.966770+00:00",
-      "probability": 0.5999358038821742,
+      "predicted_at": "2026-09-01T07:56:05.408108+00:00",
+      "probability": 0.6736562326066577,
       "question": "Will the match last longer than 85 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 62
+      "submission": 71
     },
     {
       "base_rate": 0.427,
       "brier": null,
-      "confidence": 0.75,
+      "confidence": 0.85,
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
@@ -41,8 +41,8 @@
         "exposure 69 service points from 21.4 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:48:24.966770+00:00",
-      "probability": 0.4423311044320637,
+      "predicted_at": "2026-09-01T07:56:05.408108+00:00",
+      "probability": 0.44437525168967223,
       "question": "Will M. Andreeva record more aces than J. Tjen?",
       "rbp": null,
       "settled_at": "",
@@ -64,7 +64,7 @@
         "exposure 69 service points from 21.4 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:48:24.966770+00:00",
+      "predicted_at": "2026-09-01T07:56:05.408108+00:00",
       "probability": 0.4254477536332284,
       "question": "Will M. Andreeva record more double faults than J. Tjen?",
       "rbp": null,
@@ -79,17 +79,17 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.8683035713956169,
+      "market": 0.8667728442795121,
       "market_id": "6fb91f58-081c-4579-a72a-ddc28e1ae22a",
       "market_weight": 0.34,
       "model": 0.6865,
       "notes": [
         "simulated win probability 0.686",
-        "market consensus 0.868, weight 0.34"
+        "market consensus 0.867, weight 0.34"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:48:24.966770+00:00",
-      "probability": 0.7551980688361934,
+      "predicted_at": "2026-09-01T07:56:05.408108+00:00",
+      "probability": 0.7543920892389409,
       "question": "Will M. Andreeva win?",
       "rbp": null,
       "settled_at": "",
@@ -98,7 +98,7 @@
     {
       "base_rate": 0.225,
       "brier": null,
-      "confidence": 0.8,
+      "confidence": 0.95,
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
@@ -112,8 +112,8 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T01:48:24.966770+00:00",
-      "probability": 0.14543999999999999,
+      "predicted_at": "2026-09-01T07:56:05.408108+00:00",
+      "probability": 0.142,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",

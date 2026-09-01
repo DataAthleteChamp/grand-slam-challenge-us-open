@@ -1,0 +1,132 @@
+{
+  "closing_time": "2026-09-03T03:00:00.000Z",
+  "draw": "mens",
+  "entries": [
+    {
+      "base_rate": 0.5519,
+      "brier": null,
+      "confidence": 0.95,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_duration",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "60a96cae-151e-43fe-a42b-1902f5aaffc6",
+      "market_weight": 0.0,
+      "model": 0.7654446004164752,
+      "notes": [
+        "no usable market quote for this question"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.428129+00:00",
+      "probability": 0.7654446004164752,
+      "question": "Will the match last longer than 145 minutes?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 81
+    },
+    {
+      "base_rate": 0.46,
+      "brier": null,
+      "confidence": 1.0,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "aces_comparison",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "41dcf08b-5afd-4504-958d-673c0b3fe527",
+      "market_weight": 0.0,
+      "model": 0.6000864828768147,
+      "notes": [
+        "ace vulnerability: Jacob Fearnley 0.97, Tomas Martin Etcheverry 1.03",
+        "exposure 124 service points from 39.7 games",
+        "outcome coupling: P(win)=0.456, delta=+0.60"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.428129+00:00",
+      "probability": 0.6000864828768147,
+      "question": "Will T. Etcheverry record more aces than J. Fearnley?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 62
+    },
+    {
+      "base_rate": 0.421,
+      "brier": null,
+      "confidence": 1.0,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "double_faults_comparison",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "f9caffaa-21ce-4820-9ec1-22aa4c7cf1dd",
+      "market_weight": 0.0,
+      "model": 0.11961157408711945,
+      "notes": [
+        "exposure 124 service points from 39.7 games"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.428129+00:00",
+      "probability": 0.11961157408711945,
+      "question": "Will T. Etcheverry record more double faults than J. Fearnley?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 8
+    },
+    {
+      "base_rate": 0.5,
+      "brier": null,
+      "confidence": 0.85,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_winner",
+      "lane": "scenario",
+      "market": 0.45613437857520495,
+      "market_id": "8f20e581-3946-43da-8ae2-194bfdb17445",
+      "market_weight": 0.34,
+      "model": 0.46825,
+      "notes": [
+        "simulated win probability 0.468",
+        "market consensus 0.456, weight 0.34"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.428129+00:00",
+      "probability": 0.4649329329164439,
+      "question": "Will T. Etcheverry win?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 46
+    },
+    {
+      "base_rate": 0.487,
+      "brier": null,
+      "confidence": 0.95,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "tiebreak",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "db50fc46-f2e6-4d91-bd83-8498f4666b8a",
+      "market_weight": 0.0,
+      "model": 0.49775,
+      "notes": [
+        "no usable market quote for this question",
+        "scenario lane: experimental tiebreak shift -0.040"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.428129+00:00",
+      "probability": 0.45775000000000005,
+      "question": "Will the match feature at least 1 tiebreak(s)?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 45
+    }
+  ],
+  "match_id": "3973c707-539f-4f9a-90af-e20345de19f1",
+  "match_name": "T. Etcheverry vs J. Fearnley",
+  "multiplier": 1,
+  "opening_time": "2026-09-02T15:00:00.000Z",
+  "player_a": "Tomas Martin Etcheverry",
+  "player_b": "Jacob Fearnley",
+  "round_code": "R128"
+}

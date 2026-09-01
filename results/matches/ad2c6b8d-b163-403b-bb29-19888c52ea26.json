@@ -1,0 +1,130 @@
+{
+  "closing_time": "2026-09-03T03:00:00.000Z",
+  "draw": "womens",
+  "entries": [
+    {
+      "base_rate": 0.5685,
+      "brier": null,
+      "confidence": 0.95,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_duration",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "ae1cd4bc-997e-4135-a38d-690fddf1d211",
+      "market_weight": 0.0,
+      "model": 0.6196972854944373,
+      "notes": [
+        "no usable market quote for this question"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.416150+00:00",
+      "probability": 0.6196972854944373,
+      "question": "Will the match last longer than 85 minutes?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 65
+    },
+    {
+      "base_rate": 0.427,
+      "brier": null,
+      "confidence": 0.85,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "aces_comparison",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "28521f4d-5f1e-431a-9032-1ebec7eb3ff1",
+      "market_weight": 0.0,
+      "model": 0.35102673469851653,
+      "notes": [
+        "exposure 69 service points from 21.2 games"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.416150+00:00",
+      "probability": 0.35273613316779995,
+      "question": "Will M. Joint record more aces than E. Svitolina?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 32
+    },
+    {
+      "base_rate": 0.433,
+      "brier": null,
+      "confidence": 0.1,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "double_faults_comparison",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "d05b8fac-23be-4b67-9f97-d30bceb9d489",
+      "market_weight": 0.0,
+      "model": 0.4558494709641422,
+      "notes": [
+        "exposure 69 service points from 21.2 games"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.416150+00:00",
+      "probability": 0.43562768916087635,
+      "question": "Will M. Joint record more double faults than E. Svitolina?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 42
+    },
+    {
+      "base_rate": 0.5,
+      "brier": null,
+      "confidence": 0.85,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_winner",
+      "lane": "scenario",
+      "market": 0.131696428604383,
+      "market_id": "cfcdf43c-ab90-4d9e-ace6-a511768c97d3",
+      "market_weight": 0.34,
+      "model": 0.34075,
+      "notes": [
+        "simulated win probability 0.341",
+        "market consensus 0.132, weight 0.34"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.416150+00:00",
+      "probability": 0.25964014762130033,
+      "question": "Will M. Joint win?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 21
+    },
+    {
+      "base_rate": 0.225,
+      "brier": null,
+      "confidence": 0.95,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "tiebreak",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "f6ca7e42-2ae1-4561-aa55-9a89ec40d26a",
+      "market_weight": 0.0,
+      "model": 0.18125,
+      "notes": [
+        "no usable market quote for this question",
+        "scenario lane: experimental tiebreak shift -0.040"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.416150+00:00",
+      "probability": 0.14125,
+      "question": "Will the match feature at least 1 tiebreak(s)?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 9
+    }
+  ],
+  "match_id": "ad2c6b8d-b163-403b-bb29-19888c52ea26",
+  "match_name": "E. Svitolina vs M. Joint",
+  "multiplier": 1,
+  "opening_time": "2026-09-02T15:00:00.000Z",
+  "player_a": "Elina Svitolina",
+  "player_b": "Maya Joint",
+  "round_code": "R128"
+}

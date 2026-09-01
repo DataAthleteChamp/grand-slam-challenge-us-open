@@ -1,0 +1,132 @@
+{
+  "closing_time": "2026-09-03T03:00:00.000Z",
+  "draw": "mens",
+  "entries": [
+    {
+      "base_rate": 0.2371,
+      "brier": null,
+      "confidence": 0.95,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_duration",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "f7c708a4-1c18-4c23-bb4e-91dc476d3d2a",
+      "market_weight": 0.0,
+      "model": 0.2506497258295192,
+      "notes": [
+        "no usable market quote for this question"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.414385+00:00",
+      "probability": 0.2506497258295192,
+      "question": "Will the match last longer than 195 minutes?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 20
+    },
+    {
+      "base_rate": 0.46,
+      "brier": null,
+      "confidence": 1.0,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "aces_comparison",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "f282f3cb-3596-42bf-bb38-8396621c1592",
+      "market_weight": 0.0,
+      "model": 0.8477169751980567,
+      "notes": [
+        "ace vulnerability: Luca Van Assche 1.16, Denis Shapovalov 0.58",
+        "exposure 121 service points from 38.7 games",
+        "outcome coupling: P(win)=0.568, delta=+0.60"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.414385+00:00",
+      "probability": 0.8477169751980567,
+      "question": "Will D. Shapovalov record more aces than L. Van Assche?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 90
+    },
+    {
+      "base_rate": 0.421,
+      "brier": null,
+      "confidence": 1.0,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "double_faults_comparison",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "028e95ed-2bd0-49e1-8e3f-54e79b54672a",
+      "market_weight": 0.0,
+      "model": 0.727706840570919,
+      "notes": [
+        "exposure 121 service points from 38.7 games"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.414385+00:00",
+      "probability": 0.727706840570919,
+      "question": "Will D. Shapovalov record more double faults than L. Van Assche?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 77
+    },
+    {
+      "base_rate": 0.5,
+      "brier": null,
+      "confidence": 0.85,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_winner",
+      "lane": "scenario",
+      "market": 0.5682612494484228,
+      "market_id": "f43214ac-88d5-427c-af90-ae0705816b92",
+      "market_weight": 0.34,
+      "model": 0.7135,
+      "notes": [
+        "simulated win probability 0.714",
+        "market consensus 0.568, weight 0.34"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.414385+00:00",
+      "probability": 0.663456109316467,
+      "question": "Will D. Shapovalov win?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 70
+    },
+    {
+      "base_rate": 0.487,
+      "brier": null,
+      "confidence": 0.95,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "tiebreak",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "3ea86ffc-a372-458a-b0b9-05b2a6398c4d",
+      "market_weight": 0.0,
+      "model": 0.49675,
+      "notes": [
+        "no usable market quote for this question",
+        "scenario lane: experimental tiebreak shift -0.040"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.414385+00:00",
+      "probability": 0.45675000000000004,
+      "question": "Will the match feature at least 1 tiebreak(s)?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 45
+    }
+  ],
+  "match_id": "7da70edf-61b0-4ed0-982f-0672077bced5",
+  "match_name": "D. Shapovalov vs L. Van Assche",
+  "multiplier": 1,
+  "opening_time": "2026-09-02T15:00:00.000Z",
+  "player_a": "Denis Shapovalov",
+  "player_b": "Luca Van Assche",
+  "round_code": "R128"
+}

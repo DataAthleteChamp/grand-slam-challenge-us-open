@@ -1,0 +1,130 @@
+{
+  "closing_time": "2026-09-03T03:00:00.000Z",
+  "draw": "womens",
+  "entries": [
+    {
+      "base_rate": 0.5055,
+      "brier": null,
+      "confidence": 0.95,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_duration",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "a1ad49df-532f-4439-b977-cb228a43b586",
+      "market_weight": 0.0,
+      "model": 0.4657391978663298,
+      "notes": [
+        "no usable market quote for this question"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.418601+00:00",
+      "probability": 0.4657391978663298,
+      "question": "Will the match last longer than 90 minutes?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 46
+    },
+    {
+      "base_rate": 0.427,
+      "brier": null,
+      "confidence": 0.85,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "aces_comparison",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "f886c855-249a-4f0f-8808-e93fd6292d85",
+      "market_weight": 0.0,
+      "model": 0.3027043461556281,
+      "notes": [
+        "exposure 67 service points from 20.8 games"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.418601+00:00",
+      "probability": 0.30550099836712646,
+      "question": "Will S. Kenin record more aces than J. Pegula?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 26
+    },
+    {
+      "base_rate": 0.433,
+      "brier": null,
+      "confidence": 0.1,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "double_faults_comparison",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "431388de-a0e2-42cc-b60e-565152fc5c60",
+      "market_weight": 0.0,
+      "model": 0.45699720594189003,
+      "notes": [
+        "exposure 67 service points from 20.8 games"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.418601+00:00",
+      "probability": 0.4357596786833174,
+      "question": "Will S. Kenin record more double faults than J. Pegula?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 42
+    },
+    {
+      "base_rate": 0.5,
+      "brier": null,
+      "confidence": 0.85,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_winner",
+      "lane": "scenario",
+      "market": 0.06926406919566919,
+      "market_id": "333fe55b-2ad9-4da9-acfe-9094248dbc86",
+      "market_weight": 0.34,
+      "model": 0.217,
+      "notes": [
+        "simulated win probability 0.217",
+        "market consensus 0.069, weight 0.34"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.418601+00:00",
+      "probability": 0.15841534216917375,
+      "question": "Will S. Kenin win?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 11
+    },
+    {
+      "base_rate": 0.225,
+      "brier": null,
+      "confidence": 0.95,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "tiebreak",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "8646dd7b-b336-4a70-a114-1f57fa53b4fb",
+      "market_weight": 0.0,
+      "model": 0.1935,
+      "notes": [
+        "no usable market quote for this question",
+        "scenario lane: experimental tiebreak shift -0.040"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.418601+00:00",
+      "probability": 0.1535,
+      "question": "Will the match feature at least 1 tiebreak(s)?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 11
+    }
+  ],
+  "match_id": "bf880435-8d89-4adc-a8c2-41a1467f6096",
+  "match_name": "J. Pegula vs S. Kenin",
+  "multiplier": 1,
+  "opening_time": "2026-09-02T15:00:00.000Z",
+  "player_a": "Jessica Pegula",
+  "player_b": "Sofia Kenin",
+  "round_code": "R128"
+}

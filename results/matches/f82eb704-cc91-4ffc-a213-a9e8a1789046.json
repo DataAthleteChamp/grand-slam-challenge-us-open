@@ -1,0 +1,132 @@
+{
+  "closing_time": "2026-09-03T03:00:00.000Z",
+  "draw": "mens",
+  "entries": [
+    {
+      "base_rate": 0.7643,
+      "brier": null,
+      "confidence": 0.95,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_duration",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "2b5723d3-5a6a-4271-8b36-3e18a1562a74",
+      "market_weight": 0.0,
+      "model": 0.5673101752596823,
+      "notes": [
+        "no usable market quote for this question"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.423109+00:00",
+      "probability": 0.5673101752596823,
+      "question": "Will the match last longer than 120 minutes?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 58
+    },
+    {
+      "base_rate": 0.46,
+      "brier": null,
+      "confidence": 0.45,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "aces_comparison",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "d7f77272-66da-4f28-ad8b-1f0a6a457983",
+      "market_weight": 0.0,
+      "model": 0.12104025655137289,
+      "notes": [
+        "ace vulnerability: Daniil Medvedev 0.56, Sebastian Gorzny 1.00",
+        "exposure 97 service points from 31.3 games",
+        "outcome coupling: P(win)=0.048, delta=+0.60"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.423109+00:00",
+      "probability": 0.2845883327653355,
+      "question": "Will S. Gorzny record more aces than D. Medvedev?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 24
+    },
+    {
+      "base_rate": 0.421,
+      "brier": null,
+      "confidence": 0.45,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "double_faults_comparison",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "f654ded9-1560-4bc6-8ee7-049f624c8290",
+      "market_weight": 0.0,
+      "model": 0.3282675672520365,
+      "notes": [
+        "exposure 97 service points from 31.3 games"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.423109+00:00",
+      "probability": 0.3730109660529289,
+      "question": "Will S. Gorzny record more double faults than D. Medvedev?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 34
+    },
+    {
+      "base_rate": 0.5,
+      "brier": null,
+      "confidence": 0.85,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_winner",
+      "lane": "scenario",
+      "market": 0.04791867718717394,
+      "market_id": "aa558da2-0ff8-419c-a5f9-1fe089bc8ddd",
+      "market_weight": 0.34,
+      "model": 0.02875,
+      "notes": [
+        "simulated win probability 0.029",
+        "market consensus 0.048, weight 0.34"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.423109+00:00",
+      "probability": 0.04472111989818742,
+      "question": "Will S. Gorzny win?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 2
+    },
+    {
+      "base_rate": 0.377,
+      "brier": null,
+      "confidence": 0.95,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "tiebreak",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "798f4825-82b0-415a-92e4-a42505ca1924",
+      "market_weight": 0.0,
+      "model": 0.27975,
+      "notes": [
+        "no usable market quote for this question",
+        "scenario lane: experimental tiebreak shift -0.040"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.423109+00:00",
+      "probability": 0.23975,
+      "question": "Will the match feature at least 1 tiebreak(s)?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 19
+    }
+  ],
+  "match_id": "f82eb704-cc91-4ffc-a213-a9e8a1789046",
+  "match_name": "D. Medvedev vs S. Gorzny",
+  "multiplier": 1,
+  "opening_time": "2026-09-02T15:00:00.000Z",
+  "player_a": "Daniil Medvedev",
+  "player_b": "Sebastian Gorzny",
+  "round_code": "R128"
+}

@@ -1,0 +1,130 @@
+{
+  "closing_time": "2026-09-03T03:00:00.000Z",
+  "draw": "womens",
+  "entries": [
+    {
+      "base_rate": 0.7946,
+      "brier": null,
+      "confidence": 0.95,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_duration",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "4243d8fa-7ffe-46a9-9326-6ef3927a71ba",
+      "market_weight": 0.0,
+      "model": 0.7619858807636255,
+      "notes": [
+        "no usable market quote for this question"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.433285+00:00",
+      "probability": 0.7619858807636255,
+      "question": "Will the match last longer than 70 minutes?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 81
+    },
+    {
+      "base_rate": 0.427,
+      "brier": null,
+      "confidence": 0.85,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "aces_comparison",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "a63a9626-7229-4af2-a64a-952332cafb3b",
+      "market_weight": 0.0,
+      "model": 0.30896977099122813,
+      "notes": [
+        "exposure 62 service points from 19.2 games"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.433285+00:00",
+      "probability": 0.31162545114392554,
+      "question": "Will N. Podoroska record more aces than I. Swiatek?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 27
+    },
+    {
+      "base_rate": 0.433,
+      "brier": null,
+      "confidence": 0.1,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "double_faults_comparison",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "03293de0-1ba7-4b40-8b02-c47c6e107e49",
+      "market_weight": 0.0,
+      "model": 0.5411074769203903,
+      "notes": [
+        "exposure 62 service points from 19.2 games"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.433285+00:00",
+      "probability": 0.4454323598458449,
+      "question": "Will N. Podoroska record more double faults than I. Swiatek?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 43
+    },
+    {
+      "base_rate": 0.5,
+      "brier": null,
+      "confidence": 0.85,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_winner",
+      "lane": "scenario",
+      "market": 0.02876001885846796,
+      "market_id": "abd7e6c5-25e1-4832-a44a-830f28134333",
+      "market_weight": 0.34,
+      "model": 0.12525,
+      "notes": [
+        "simulated win probability 0.125",
+        "market consensus 0.029, weight 0.34"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.433285+00:00",
+      "probability": 0.08682170132213463,
+      "question": "Will N. Podoroska win?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 5
+    },
+    {
+      "base_rate": 0.225,
+      "brier": null,
+      "confidence": 0.95,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "tiebreak",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "acc5698b-69f1-422e-a28c-1fd8a5ea19a9",
+      "market_weight": 0.0,
+      "model": 0.12925,
+      "notes": [
+        "no usable market quote for this question",
+        "scenario lane: experimental tiebreak shift -0.040"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T07:56:05.433285+00:00",
+      "probability": 0.08925,
+      "question": "Will the match feature at least 1 tiebreak(s)?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 5
+    }
+  ],
+  "match_id": "6c34954e-04e9-4288-9678-bf2196f45358",
+  "match_name": "I. Swiatek vs N. Podoroska",
+  "multiplier": 1,
+  "opening_time": "2026-09-02T15:00:00.000Z",
+  "player_a": "Iga Swiatek",
+  "player_b": "Nadia Podoroska",
+  "round_code": "R128"
+}
