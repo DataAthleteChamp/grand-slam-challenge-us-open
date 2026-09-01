@@ -19,7 +19,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T14:33:19.139249+00:00",
+      "predicted_at": "2026-09-01T15:53:09.853998+00:00",
       "probability": 0.7231301924074112,
       "question": "Will the match last longer than 85 minutes?",
       "rbp": null,
@@ -42,7 +42,7 @@
         "exposure 70 service points from 21.6 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T14:33:19.139249+00:00",
+      "predicted_at": "2026-09-01T15:53:09.853998+00:00",
       "probability": 0.4856961734447869,
       "question": "Will L. Fernandez record more aces than M. Sawangkaew?",
       "rbp": null,
@@ -65,7 +65,7 @@
         "exposure 70 service points from 21.6 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T14:33:19.139249+00:00",
+      "predicted_at": "2026-09-01T15:53:09.853998+00:00",
       "probability": 0.4528560417246666,
       "question": "Will L. Fernandez record more double faults than M. Sawangkaew?",
       "rbp": null,
@@ -80,21 +80,21 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.7282860883693067,
+      "market": 0.7286232053746979,
       "market_id": "b216eb32-0927-48b5-b45a-acb599f2abdc",
-      "market_weight": 0.34,
+      "market_weight": 0.8075,
       "model": 0.58125,
       "notes": [
         "simulated win probability 0.581",
-        "market consensus 0.728, weight 0.34"
+        "market consensus 0.729, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T14:33:19.139249+00:00",
-      "probability": 0.6314892935857199,
+      "predicted_at": "2026-09-01T15:53:09.853998+00:00",
+      "probability": 0.6982331589035755,
       "question": "Will L. Fernandez win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 66
+      "submission": 74
     },
     {
       "base_rate": 0.225,
@@ -113,7 +113,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T14:33:19.139249+00:00",
+      "predicted_at": "2026-09-01T15:53:09.853998+00:00",
       "probability": 0.14325,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

@@ -13,14 +13,14 @@
       "market": null,
       "market_id": "72b3684f-be18-4f7e-a18e-a5ed3df90539",
       "market_weight": 0.0,
-      "model": 0.7144912092191908,
+      "model": 0.7193617223562683,
       "notes": [
-        "total games: simulator 21.1, Pinnacle 20.4, used 20.7 at weight 0.60",
+        "total games: simulator 21.1, Pinnacle 20.5, used 20.7 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T14:33:19.094411+00:00",
-      "probability": 0.7144912092191908,
+      "predicted_at": "2026-09-01T15:53:09.831357+00:00",
+      "probability": 0.7193617223562683,
       "question": "Will the match last longer than 80 minutes?",
       "rbp": null,
       "settled_at": "",
@@ -42,7 +42,7 @@
         "exposure 69 service points from 21.2 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T14:33:19.094411+00:00",
+      "predicted_at": "2026-09-01T15:53:09.831357+00:00",
       "probability": 0.5162788400722078,
       "question": "Will E. Mertens record more aces than K. Quevedo?",
       "rbp": null,
@@ -65,7 +65,7 @@
         "exposure 69 service points from 21.2 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T14:33:19.094411+00:00",
+      "predicted_at": "2026-09-01T15:53:09.831357+00:00",
       "probability": 0.5267472560925948,
       "question": "Will E. Mertens record more double faults than K. Quevedo?",
       "rbp": null,
@@ -80,21 +80,21 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.8348806366162295,
+      "market": 0.8347826086462169,
       "market_id": "d67d9886-df29-49c5-80c4-47bab7b57d9a",
-      "market_weight": 0.34,
+      "market_weight": 0.8075,
       "model": 0.673,
       "notes": [
         "simulated win probability 0.673",
-        "market consensus 0.835, weight 0.34"
+        "market consensus 0.835, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T14:33:19.094411+00:00",
-      "probability": 0.7310901845914703,
+      "predicted_at": "2026-09-01T15:53:09.831357+00:00",
+      "probability": 0.8025747991863552,
       "question": "Will E. Mertens win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 78
+      "submission": 85
     },
     {
       "base_rate": 0.225,
@@ -113,7 +113,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T14:33:19.094411+00:00",
+      "predicted_at": "2026-09-01T15:53:09.831357+00:00",
       "probability": 0.124,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

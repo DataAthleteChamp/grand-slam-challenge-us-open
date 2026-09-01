@@ -19,7 +19,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T14:33:19.096869+00:00",
+      "predicted_at": "2026-09-01T15:53:09.827472+00:00",
       "probability": 0.4630881356696789,
       "question": "Will the match last longer than 105 minutes?",
       "rbp": null,
@@ -42,7 +42,7 @@
         "exposure 68 service points from 21.1 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T14:33:19.096869+00:00",
+      "predicted_at": "2026-09-01T15:53:09.827472+00:00",
       "probability": 0.43267386219301845,
       "question": "Will T. Maria record more aces than J. Ostapenko?",
       "rbp": null,
@@ -65,7 +65,7 @@
         "exposure 68 service points from 21.1 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T14:33:19.096869+00:00",
+      "predicted_at": "2026-09-01T15:53:09.827472+00:00",
       "probability": 0.42279443108687037,
       "question": "Will T. Maria record more double faults than J. Ostapenko?",
       "rbp": null,
@@ -82,19 +82,19 @@
       "lane": "scenario",
       "market": 0.4211849435989602,
       "market_id": "a78eafbb-59f4-4076-86b4-185529416786",
-      "market_weight": 0.34,
+      "market_weight": 0.8075,
       "model": 0.33825,
       "notes": [
         "simulated win probability 0.338",
-        "market consensus 0.421, weight 0.34"
+        "market consensus 0.421, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T14:33:19.096869+00:00",
-      "probability": 0.36865175087855173,
+      "predicted_at": "2026-09-01T15:53:09.827472+00:00",
+      "probability": 0.406848741168467,
       "question": "Will T. Maria win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 34
+      "submission": 38
     },
     {
       "base_rate": 0.020454545454545454,
@@ -113,7 +113,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T14:33:19.096869+00:00",
+      "predicted_at": "2026-09-01T15:53:09.827472+00:00",
       "probability": 0.02,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,

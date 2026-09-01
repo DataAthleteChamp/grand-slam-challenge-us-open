@@ -19,7 +19,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T14:33:19.138781+00:00",
+      "predicted_at": "2026-09-01T15:53:09.853555+00:00",
       "probability": 0.810259033427979,
       "question": "Will the match last longer than 145 minutes?",
       "rbp": null,
@@ -37,15 +37,15 @@
       "market": null,
       "market_id": "41dcf08b-5afd-4504-958d-673c0b3fe527",
       "market_weight": 0.0,
-      "model": 0.6268649103054608,
+      "model": 0.6273532619407742,
       "notes": [
         "ace vulnerability: Jacob Fearnley 0.97, Tomas Martin Etcheverry 1.03",
         "exposure 124 service points from 39.7 games",
-        "outcome coupling: P(win)=0.553, delta=+0.60"
+        "outcome coupling: P(win)=0.555, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T14:33:19.138781+00:00",
-      "probability": 0.6268649103054608,
+      "predicted_at": "2026-09-01T15:53:09.853555+00:00",
+      "probability": 0.6273532619407742,
       "question": "Will T. Etcheverry record more aces than J. Fearnley?",
       "rbp": null,
       "settled_at": "",
@@ -67,7 +67,7 @@
         "exposure 124 service points from 39.7 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T14:33:19.138781+00:00",
+      "predicted_at": "2026-09-01T15:53:09.853555+00:00",
       "probability": 0.11961157408711945,
       "question": "Will T. Etcheverry record more double faults than J. Fearnley?",
       "rbp": null,
@@ -82,21 +82,21 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.5530806326859183,
+      "market": 0.5548486178246513,
       "market_id": "8f20e581-3946-43da-8ae2-194bfdb17445",
-      "market_weight": 0.34,
+      "market_weight": 0.8075,
       "model": 0.46825,
       "notes": [
         "simulated win probability 0.468",
-        "market consensus 0.553, weight 0.34"
+        "market consensus 0.555, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T14:33:19.138781+00:00",
-      "probability": 0.4971969938735678,
+      "predicted_at": "2026-09-01T15:53:09.853555+00:00",
+      "probability": 0.537412910423636,
       "question": "Will T. Etcheverry win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 50
+      "submission": 55
     },
     {
       "base_rate": 0.487,
@@ -115,7 +115,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T14:33:19.138781+00:00",
+      "predicted_at": "2026-09-01T15:53:09.853555+00:00",
       "probability": 0.45775000000000005,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

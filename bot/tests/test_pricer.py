@@ -1037,21 +1037,28 @@ def test_ace_vulnerability_is_a_distinct_skill():
     assert medvedev.ace_vulnerability < 0.75, "elite returner should concede few aces"
 
 
-def test_ace_vulnerability_is_damped():
-    """The undamped multiplier scores better out-of-sample (+12.9% against
-    +8.6%) but says Opelka is 35% to out-ace Medvedev. Opelka out-aces his
-    opponent in 93% of hard-court matches and out-aced Medvedev in all four of
-    their hard-court meetings, so the fitted optimum is picking up confounding:
-    vulnerability is never adjusted for which servers a player faced."""
+def test_ace_vulnerability_is_no_longer_damped():
+    """The damping has been removed after a leak-free re-validation.
+
+    It was introduced because the undamped multiplier makes Opelka only ~24% to
+    out-ace Medvedev, when Opelka out-aces his opponent in 154 of 163 hard-court
+    matches and out-aced Medvedev in all four hard-court meetings.  Both facts
+    check out against the match data, but the confounding they were blamed on
+    does not exist: a two-way ridge that adjusts vulnerability for server quality
+    makes the effect *stronger*, and refitting vulnerability on 2021-24 only
+    (the shipped table is fitted on 2021-26 and had been leaking into its own
+    hold-out) leaves full strength ahead of 0.5 by +1.38 RBP/question,
+    95% CI [+0.90, +1.88], in every mismatch bucket."""
     from bot.data.baserates import ACE_VULNERABILITY_EXPONENT
 
-    assert 0.3 <= ACE_VULNERABILITY_EXPONENT <= 0.7
+    assert ACE_VULNERABILITY_EXPONENT == 1.0
 
 
 def test_ace_vulnerability_applies_to_men_only():
-    """Measured +12.9% on the men's draw, -1.2% and not significant on the
-    women's, where the far lower ace rate leaves less room for a returner
-    effect."""
+    """Refit on 2021-24 and tested on 2025-26 slams, the men's effect is worth
+    +3.43 RBP/question (95% CI [+2.44, +4.46]) and the women's -0.03
+    ([-1.08, +1.01]).  The earlier apparent women's effect came from a table
+    fitted on 2021-26 being scored against 2025-26."""
     from bot.data.baserates import ACE_VULNERABILITY_TOURS
 
     assert "ATP" in ACE_VULNERABILITY_TOURS
@@ -1133,3 +1140,38 @@ def test_pinnacle_games_line_shortens_a_duration_answer():
     Pricer(lane="honest")  # fresh cache is not required; sim cache keys on names
     with_line = pricer.price(spec, short, market_id="b").submission
     assert with_line < without
+
+
+def test_ace_vulnerability_is_used_at_full_strength_on_the_mens_draw_only():
+    """Exponent 1.0, ATP only - both settled by a leak-free re-validation.
+
+    The tables in data/players are fitted on 2021-26, so any hold-out test that
+    uses them to score 2025-26 is scoring against its own training data.  Refit
+    on 2021-24 and re-tested, the men's effect is worth +3.43 RBP/question
+    against not using it (95% CI [+2.44, +4.46]) and full strength beats the old
+    damped 0.5 by +1.38 ([+0.90, +1.88]), while the women's effect is -0.03
+    ([-1.08, +1.01]) - nothing.  The earlier apparent women's gain was leakage.
+    """
+    from bot.data.baserates import ACE_VULNERABILITY_EXPONENT, ACE_VULNERABILITY_TOURS
+
+    assert ACE_VULNERABILITY_EXPONENT == 1.0
+    assert "ATP" in ACE_VULNERABILITY_TOURS
+    assert "WTA" not in ACE_VULNERABILITY_TOURS
+
+
+def test_vulnerability_can_reverse_a_narrow_career_rate_edge():
+    """The multiplier has to be strong enough to change the call, not just nudge.
+
+    Where it reverses what career ace rates alone would say, the reversal is
+    right 65.9% of the time on held-out slams (n=41, CI [51.2%, 80.5%]) against
+    34.1% for the unadjusted call, so a version too weak to ever flip would be
+    throwing away the part that pays.
+    """
+    from bot.data.baserates import ACE_VULNERABILITY_EXPONENT
+
+    # A returner 30% harder to ace than average, against one 15% easier.
+    tough, easy = 0.70, 1.15
+    slightly_bigger_server, smaller_server = 0.095, 0.088
+    a = slightly_bigger_server * easy**ACE_VULNERABILITY_EXPONENT
+    b = smaller_server * tough**ACE_VULNERABILITY_EXPONENT
+    assert a > b  # the weaker server facing the tougher returner is now behind

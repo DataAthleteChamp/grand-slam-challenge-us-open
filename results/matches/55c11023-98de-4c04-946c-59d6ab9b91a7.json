@@ -19,7 +19,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T14:33:19.140401+00:00",
+      "predicted_at": "2026-09-01T15:53:09.854424+00:00",
       "probability": 0.446,
       "question": "Will the match last longer than 160 minutes?",
       "rbp": null,
@@ -43,7 +43,7 @@
         "question not understood; answering from the base rate"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T14:33:19.140401+00:00",
+      "predicted_at": "2026-09-01T15:53:09.854424+00:00",
       "probability": 0.46,
       "question": "Will D. Merida record more aces than A. Rublev?",
       "rbp": null,
@@ -67,7 +67,7 @@
         "question not understood; answering from the base rate"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T14:33:19.140401+00:00",
+      "predicted_at": "2026-09-01T15:53:09.854424+00:00",
       "probability": 0.42100000000000004,
       "question": "Will D. Merida record more double faults than A. Rublev?",
       "rbp": null,
@@ -90,7 +90,7 @@
         "no identifiable subject; cannot tell which player is meant"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T14:33:19.140401+00:00",
+      "predicted_at": "2026-09-01T15:53:09.854424+00:00",
       "probability": 0.5,
       "question": "Will D. Merida win?",
       "rbp": null,
@@ -115,7 +115,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T14:33:19.140401+00:00",
+      "predicted_at": "2026-09-01T15:53:09.854424+00:00",
       "probability": 0.09263821138211384,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,

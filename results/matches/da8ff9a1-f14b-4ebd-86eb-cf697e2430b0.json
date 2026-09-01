@@ -19,7 +19,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T14:33:19.128580+00:00",
+      "predicted_at": "2026-09-01T15:53:09.845758+00:00",
       "probability": 0.6479517340449042,
       "question": "Will the match last longer than 135 minutes?",
       "rbp": null,
@@ -37,15 +37,15 @@
       "market": null,
       "market_id": "6dbb50d4-3a5e-4f2b-87a0-a7dc96e65d61",
       "market_weight": 0.0,
-      "model": 0.8110362389544068,
+      "model": 0.8110273384443003,
       "notes": [
         "ace vulnerability: Jurij Rodionov 0.93, Jakub Mensik 0.84",
         "exposure 123 service points from 39.4 games",
         "outcome coupling: P(win)=0.871, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T14:33:19.128580+00:00",
-      "probability": 0.8110362389544068,
+      "predicted_at": "2026-09-01T15:53:09.845758+00:00",
+      "probability": 0.8110273384443003,
       "question": "Will J. Mensik record more aces than J. Rodionov?",
       "rbp": null,
       "settled_at": "",
@@ -67,7 +67,7 @@
         "exposure 123 service points from 39.4 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T14:33:19.128580+00:00",
+      "predicted_at": "2026-09-01T15:53:09.845758+00:00",
       "probability": 0.5154896803633539,
       "question": "Will J. Mensik record more double faults than J. Rodionov?",
       "rbp": null,
@@ -82,21 +82,21 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.8711697438672115,
+      "market": 0.8711307129588168,
       "market_id": "7f773f07-3eca-43ad-80b3-1734f09a7e9c",
-      "market_weight": 0.34,
+      "market_weight": 0.8075,
       "model": 0.6425,
       "notes": [
         "simulated win probability 0.642",
-        "market consensus 0.871, weight 0.34"
+        "market consensus 0.871, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T14:33:19.128580+00:00",
-      "probability": 0.732865967065145,
+      "predicted_at": "2026-09-01T15:53:09.845758+00:00",
+      "probability": 0.8320540028090122,
       "question": "Will J. Mensik win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 78
+      "submission": 88
     },
     {
       "base_rate": 0.13263821138211385,
@@ -115,7 +115,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T14:33:19.128580+00:00",
+      "predicted_at": "2026-09-01T15:53:09.845758+00:00",
       "probability": 0.09175,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,

@@ -19,7 +19,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T14:33:19.134793+00:00",
+      "predicted_at": "2026-09-01T15:53:09.850113+00:00",
       "probability": 0.634497557949113,
       "question": "Will the match last longer than 95 minutes?",
       "rbp": null,
@@ -42,7 +42,7 @@
         "exposure 70 service points from 21.5 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T14:33:19.134793+00:00",
+      "predicted_at": "2026-09-01T15:53:09.850113+00:00",
       "probability": 0.3907227703223649,
       "question": "Will C. Bucsa record more aces than H. Sakatsume?",
       "rbp": null,
@@ -65,7 +65,7 @@
         "exposure 70 service points from 21.5 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T14:33:19.134793+00:00",
+      "predicted_at": "2026-09-01T15:53:09.850113+00:00",
       "probability": 0.42119771192061106,
       "question": "Will C. Bucsa record more double faults than H. Sakatsume?",
       "rbp": null,
@@ -80,21 +80,21 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.6654040404198828,
+      "market": 0.6655100785459,
       "market_id": "90b5f48b-27cf-40e9-9fe9-df15a32160c4",
-      "market_weight": 0.34,
+      "market_weight": 0.8075,
       "model": 0.4735,
       "notes": [
         "simulated win probability 0.473",
-        "market consensus 0.665, weight 0.34"
+        "market consensus 0.666, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T14:33:19.134793+00:00",
-      "probability": 0.5399185938777484,
+      "predicted_at": "2026-09-01T15:53:09.850113+00:00",
+      "probability": 0.6277301294775703,
       "question": "Will C. Bucsa win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 55
+      "submission": 66
     },
     {
       "base_rate": 0.225,
@@ -113,7 +113,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T14:33:19.134793+00:00",
+      "predicted_at": "2026-09-01T15:53:09.850113+00:00",
       "probability": 0.13374999999999998,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

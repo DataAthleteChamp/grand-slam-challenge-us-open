@@ -19,7 +19,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T14:33:19.111046+00:00",
+      "predicted_at": "2026-09-01T15:53:09.834912+00:00",
       "probability": 0.8261369923964972,
       "question": "Will the match last longer than 100 minutes?",
       "rbp": null,
@@ -37,15 +37,15 @@
       "market": null,
       "market_id": "9b4ec192-e692-4be3-bce7-c1cbe6709760",
       "market_weight": 0.0,
-      "model": 0.14200883338985437,
+      "model": 0.1420072783088157,
       "notes": [
         "ace vulnerability: Taylor Fritz 0.99, Darwin Blanch 1.00",
         "exposure 115 service points from 37.0 games",
         "outcome coupling: P(win)=0.039, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T14:33:19.111046+00:00",
-      "probability": 0.14200883338985437,
+      "predicted_at": "2026-09-01T15:53:09.834912+00:00",
+      "probability": 0.1420072783088157,
       "question": "Will D. Blanch record more aces than T. Fritz?",
       "rbp": null,
       "settled_at": "",
@@ -67,7 +67,7 @@
         "exposure 115 service points from 37.0 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T14:33:19.111046+00:00",
+      "predicted_at": "2026-09-01T15:53:09.834912+00:00",
       "probability": 0.5524314485379485,
       "question": "Will D. Blanch record more double faults than T. Fritz?",
       "rbp": null,
@@ -82,21 +82,21 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.03923076920653831,
+      "market": 0.03922322776981499,
       "market_id": "3529880e-b300-4120-8967-ace0f25d64db",
-      "market_weight": 0.34,
+      "market_weight": 0.8075,
       "model": 0.0935,
       "notes": [
         "simulated win probability 0.093",
-        "market consensus 0.039, weight 0.34"
+        "market consensus 0.039, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T14:33:19.111046+00:00",
-      "probability": 0.07967506577270882,
+      "predicted_at": "2026-09-01T15:53:09.834912+00:00",
+      "probability": 0.05673112651272824,
       "question": "Will D. Blanch win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 4
+      "submission": 3
     },
     {
       "base_rate": 0.487,
@@ -115,7 +115,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T14:33:19.111046+00:00",
+      "predicted_at": "2026-09-01T15:53:09.834912+00:00",
       "probability": 0.5185,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

@@ -19,7 +19,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T14:33:19.144778+00:00",
+      "predicted_at": "2026-09-01T15:53:09.857839+00:00",
       "probability": 0.4480678815916825,
       "question": "Will the match last longer than 185 minutes?",
       "rbp": null,
@@ -37,15 +37,15 @@
       "market": null,
       "market_id": "6187ad9f-b5f5-4d3e-8b6f-88230e822cbc",
       "market_weight": 0.0,
-      "model": 0.5402964642974487,
+      "model": 0.5406807681867085,
       "notes": [
         "ace vulnerability: Stefanos Tsitsipas 0.82, Lloyd Harris 0.93",
         "exposure 132 service points from 42.2 games",
-        "outcome coupling: P(win)=0.319, delta=+0.60"
+        "outcome coupling: P(win)=0.320, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T14:33:19.144778+00:00",
-      "probability": 0.5402964642974487,
+      "predicted_at": "2026-09-01T15:53:09.857839+00:00",
+      "probability": 0.5406807681867085,
       "question": "Will L. Harris record more aces than S. Tsitsipas?",
       "rbp": null,
       "settled_at": "",
@@ -67,7 +67,7 @@
         "exposure 132 service points from 42.2 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T14:33:19.144778+00:00",
+      "predicted_at": "2026-09-01T15:53:09.857839+00:00",
       "probability": 0.4315086004006669,
       "question": "Will L. Harris record more double faults than S. Tsitsipas?",
       "rbp": null,
@@ -82,21 +82,21 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.31910684001359474,
+      "market": 0.3204714397451522,
       "market_id": "5fe7cc35-3456-4190-8b6e-b2589d039207",
-      "market_weight": 0.34,
+      "market_weight": 0.8075,
       "model": 0.3485,
       "notes": [
         "simulated win probability 0.348",
-        "market consensus 0.319, weight 0.34"
+        "market consensus 0.320, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T14:33:19.144778+00:00",
-      "probability": 0.3419991594890095,
+      "predicted_at": "2026-09-01T15:53:09.857839+00:00",
+      "probability": 0.32969494575309316,
       "question": "Will L. Harris win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 31
+      "submission": 29
     },
     {
       "base_rate": 0.10267886178861789,
@@ -115,7 +115,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T14:33:19.144778+00:00",
+      "predicted_at": "2026-09-01T15:53:09.857839+00:00",
       "probability": 0.28425,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,

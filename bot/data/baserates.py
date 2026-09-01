@@ -554,27 +554,59 @@ def count_confidence(stat: str, tour: str, default: float = 0.75) -> float:
 #: | ATP | 0.2028 -> 0.1765 | **+12.9%** | [+0.0160, +0.0366] | significant |
 #: | WTA | 0.2454 -> 0.2484 | -1.2% | [-0.0140, +0.0078] | not significant |
 #:
-#: Applied to the men's draw only. The women's effect is absent, which is
-#: consistent with the much smaller ace rate there leaving less room for a
-#: returner effect to show.
+#: Men's draw only.
+#:
+#: The table above, and the -1.2% women's figure in it, came from a validation
+#: that was CONTAMINATED: the vulnerability table shipped in
+#: data/players/*_ace_vulnerability.csv is fitted on 2021-26, which includes the
+#: 2025-26 hold-out it was tested against.  Match counts in the CSV match the
+#: full range exactly (Medvedev 277 against 206 for 2021-24, Opelka 105 against
+#: 66), so the effect was being scored partly against its own training data.
+#:
+#: Using the CSV for live pricing is right - more history is better when
+#: forecasting tomorrow's match - but measuring it that way is not.  Refitting
+#: vulnerability on 2021-24 alone and re-testing on 2025-26 slams, by Brier on
+#: the head-to-head question the competition actually asks:
+#:
+#: | Tour | none | exp 0.5 | exp 1.0 | exp 1.0 vs none | 95% CI |
+#: |---|---|---|---|---|---|
+#: | ATP | 0.2208 | 0.2004 | 0.1865 | +3.43 RBP/q | [+2.44, +4.46] |
+#: | WTA | 0.2568 | 0.2557 | 0.2571 | -0.03 RBP/q | [-1.08, +1.01] |
+#:
+#: So the men's effect is real and large and the women's is nothing at all - the
+#: apparent women's gain was entirely leakage.  An independent two-way ridge fit
+#: (mu + server + returner on log ace rate, trained 2021-24) agrees: it lifts
+#: men's head-to-head AUC 0.7625 -> 0.8335 and women's only 0.6143 -> 0.6199.
 ACE_VULNERABILITY_TOURS = frozenset({"ATP"})
 
-#: Exponent damping the vulnerability multiplier.
+#: Exponent on the vulnerability multiplier.  1.0 means it is used as measured.
 #:
-#: The raw multiplier scores best out-of-sample (+12.9% Brier at exponent 1.0
-#: against +8.6% at 0.5, both significant) but it is *confounded*: a player's
-#: aces-conceded rate is never adjusted for which servers they happened to face,
-#: so an elite returner who also draws big servers looks better than they are.
+#: Damped to 0.5 on the suspicion that the multiplier was *confounded*: a
+#: player's aces-conceded rate is not adjusted for which servers they faced, so
+#: an elite returner who draws big servers looks better than they are.  The
+#: evidence was one matchup - at full strength the model makes Opelka 24% to
+#: out-ace Medvedev, and Opelka out-aces his opponent in 154 of 163 hard-court
+#: matches (94%) and out-aced Medvedev in all four hard-court meetings.  Both of
+#: those facts are confirmed against the match data; the anecdote is accurate.
 #:
-#: At full strength the model says Opelka is 35% to out-ace Medvedev. Opelka
-#: out-aces his opponent in 93% of hard-court matches and out-aced Medvedev in
-#: all four of their hard-court meetings, so 35% is not a defensible number
-#: whatever the aggregate Brier says. When a fitted optimum contradicts a plain
-#: fact, the usual cause is confounding rather than insight.
+#: It is nonetheless outvoted, because three tests on clean 2021-24-fitted
+#: vulnerability all point the same way on the men's draw:
 #:
-#: An exponent of 0.5 keeps most of the measured gain (+8.6%, CI [+0.012,
-#: +0.023], still significant) and returns 58 for that matchup, which is at
-#: least on the right side of even. The right long-term fix is a two-way fit
-#: that adjusts vulnerability for server quality, as the serve and return
-#: ratings already do.
-ACE_VULNERABILITY_EXPONENT = 0.5
+#: 1. Brier on 362 held-out head-to-heads: 0.2004 at exponent 0.5 against
+#:    0.1865 at 1.0, a gain of +1.38 RBP/question, 95% CI [+0.90, +1.88].
+#: 2. The gain holds in every mismatch bucket, including the most lopsided
+#:    servers (+0.92, CI [+0.13, +1.79]), so it is not an artefact of easy
+#:    cases.  Capping the multiplier to 1.5, 1.35 or 1.25 makes Brier worse.
+#: 3. The confounding story predicts the opposite of what happens.  A two-way
+#:    ridge that *does* adjust vulnerability for server quality makes the
+#:    returner effect stronger, not weaker (AUC 0.8335 against 0.8243).
+#:
+#: Where the multiplier reverses what career rates alone would say, the reversal
+#: is right 65.9% of the time (n=41, 95% CI [51.2%, 80.5%]) against 34.1% for
+#: the unadjusted call, so even the flips carry signal.
+#:
+#: One caveat worth keeping: every observed flip is between servers whose career
+#: rates are within about 20% of each other.  Opelka against Medvedev is a 77%
+#: gap, so that particular number is an extrapolation beyond anything the
+#: hold-out tests, and it should not be treated as validated.
+ACE_VULNERABILITY_EXPONENT = 1.0
