@@ -1,4 +1,4 @@
-MANUAL NUMBERS — 200 questions across 40 matches
+MANUAL NUMBERS — 170 questions across 34 matches
 Rule: sharpen x1.15 in log-odds on winner/aces/DF/duration; tiebreak left AT the bot number.
 Why milder than before: the bots now submit the near-unshrunk model, so most of the
 gap the old sharpening was closing is already inside the model. Tiebreak is untouched
@@ -6,7 +6,7 @@ because sharpening it cost -5.95 RBP/q on the settled sample (it pushes an alrea
 too-high number higher).
 
 --- V. Vacherot vs K. Majchrzak   (starts 2026-09-02 16:00Z)
-     bot  46  ->  MANUAL  45   Will K. Majchrzak win?
+     bot  47  ->  MANUAL  47   Will K. Majchrzak win?
      bot  20  ->  MANUAL  17   Will K. Majchrzak record more aces than V. Vacherot?
      bot  30  ->  MANUAL  27   Will K. Majchrzak record more double faults than V. Vacherot?
      bot  55  ->  MANUAL  55   Will the match feature at least 1 tiebreak(s)?
@@ -26,61 +26,19 @@ too-high number higher).
      bot  17  ->  MANUAL  17   Will the match feature at least 2 tiebreak(s)?
      bot  81  ->  MANUAL  84   Will the match last longer than 130 minutes?
 
---- X. Wang vs A. Kalinskaya   (starts 2026-09-02 16:00Z)
-     bot  63  ->  MANUAL  65   Will A. Kalinskaya win?
-     bot  31  ->  MANUAL  28   Will A. Kalinskaya record more aces than X. Wang?
-     bot  41  ->  MANUAL  40   Will A. Kalinskaya record more double faults than X. Wang?
-     bot  23  ->  MANUAL  23   Will the match feature at least 1 tiebreak(s)?
-     bot  69  ->  MANUAL  72   Will the match last longer than 90 minutes?
-
---- J. Duckworth vs Y. Wu   (starts 2026-09-02 16:00Z)
-     bot  45  ->  MANUAL  44   Will J. Duckworth win?
-     bot  59  ->  MANUAL  60   Will J. Duckworth record more aces than Y. Wu?
-     bot  42  ->  MANUAL  41   Will J. Duckworth record more double faults than Y. Wu?
-     bot  17  ->  MANUAL  17   Will the match feature at least 2 tiebreak(s)?
-     bot  35  ->  MANUAL  33   Will the match last longer than 190 minutes?
-
---- D. Shapovalov vs L. Van Assche   (starts 2026-09-02 16:00Z)
-     bot  57  ->  MANUAL  58   Will D. Shapovalov win?
-     bot  92  ->  MANUAL  94   Will D. Shapovalov record more aces than L. Van Assche?
-     bot  73  ->  MANUAL  76   Will D. Shapovalov record more double faults than L. Van Assche?
-     bot  47  ->  MANUAL  47   Will the match feature at least 1 tiebreak(s)?
-     bot  31  ->  MANUAL  28   Will the match last longer than 195 minutes?
-
 --- M. Berrettini vs M. Navone   (starts 2026-09-02 17:30Z)
-     bot  61  ->  MANUAL  63   Will M. Berrettini win?
-     bot  81  ->  MANUAL  84   Will M. Berrettini record more aces than M. Navone?
+     bot  59  ->  MANUAL  60   Will M. Berrettini win?
+     bot  80  ->  MANUAL  83   Will M. Berrettini record more aces than M. Navone?
      bot  27  ->  MANUAL  24   Will M. Berrettini record more double faults than M. Navone?
      bot  16  ->  MANUAL  16   Will the match feature at least 2 tiebreak(s)?
-     bot  48  ->  MANUAL  48   Will the match last longer than 175 minutes?
-
---- K. Birrell vs E. Alexandrova   (starts 2026-09-02 17:30Z)
-     bot  73  ->  MANUAL  76   Will E. Alexandrova win?
-     bot  63  ->  MANUAL  65   Will E. Alexandrova record more aces than K. Birrell?
-     bot  56  ->  MANUAL  57   Will E. Alexandrova record more double faults than K. Birrell?
-     bot  19  ->  MANUAL  19   Will the match feature at least 1 tiebreak(s)?
-     bot  85  ->  MANUAL  88   Will the match last longer than 70 minutes?
+     bot  50  ->  MANUAL  50   Will the match last longer than 175 minutes?
 
 --- D. Prizmic vs T. Paul   (starts 2026-09-02 17:30Z)
      bot  78  ->  MANUAL  81   Will T. Paul win?
      bot  66  ->  MANUAL  68   Will T. Paul record more aces than D. Prizmic?
      bot  32  ->  MANUAL  30   Will T. Paul record more double faults than D. Prizmic?
      bot  39  ->  MANUAL  39   Will the match feature at least 1 tiebreak(s)?
-     bot  54  ->  MANUAL  55   Will the match last longer than 155 minutes?
-
---- J. Lehecka vs T. Samuel   (starts 2026-09-02 17:30Z)
-     bot  67  ->  MANUAL  69   Will J. Lehecka win?
-     bot  59  ->  MANUAL  60   Will J. Lehecka record more aces than T. Samuel?
-     bot  35  ->  MANUAL  33   Will J. Lehecka record more double faults than T. Samuel?
-     bot  49  ->  MANUAL  49   Will the match feature at least 1 tiebreak(s)?
-     bot  77  ->  MANUAL  80   Will the match last longer than 140 minutes?
-
---- L. Harris vs S. Tsitsipas   (starts 2026-09-02 20:00Z)
-     bot  34  ->  MANUAL  32   Will L. Harris win?
-     bot  50  ->  MANUAL  50   Will L. Harris record more aces than S. Tsitsipas?
-     bot  43  ->  MANUAL  42   Will L. Harris record more double faults than S. Tsitsipas?
-     bot  31  ->  MANUAL  31   Will the match feature at least 2 tiebreak(s)?
-     bot  45  ->  MANUAL  44   Will the match last longer than 185 minutes?
+     bot  55  ->  MANUAL  56   Will the match last longer than 155 minutes?
 
 --- E. Svitolina vs M. Joint   (starts 2026-09-02 20:30Z)
      bot  18  ->  MANUAL  15   Will M. Joint win?
@@ -104,7 +62,7 @@ too-high number higher).
      bot  57  ->  MANUAL  58   Will the match last longer than 75 minutes?
 
 --- L. Tararudee vs L. Noskova   (starts 2026-09-02 22:30Z)
-     bot  75  ->  MANUAL  78   Will L. Noskova win?
+     bot  76  ->  MANUAL  79   Will L. Noskova win?
      bot  50  ->  MANUAL  50   Will L. Noskova record more aces than L. Tararudee?
      bot  45  ->  MANUAL  44   Will L. Noskova record more double faults than L. Tararudee?
      bot  21  ->  MANUAL  21   Will the match feature at least 1 tiebreak(s)?
@@ -234,7 +192,7 @@ too-high number higher).
      bot  45  ->  MANUAL  44   Will M. Bouzkova record more aces than H. Dart?
      bot  33  ->  MANUAL  31   Will M. Bouzkova record more double faults than H. Dart?
      bot  16  ->  MANUAL  16   Will the match feature at least 1 tiebreak(s)?
-     bot  61  ->  MANUAL  63   Will the match last longer than 90 minutes?
+     bot  63  ->  MANUAL  65   Will the match last longer than 90 minutes?
 
 --- I. Swiatek vs N. Podoroska   (starts 2026-09-03 15:00Z)
      bot  10  ->  MANUAL   7   Will N. Podoroska win?

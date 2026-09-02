@@ -9,22 +9,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
-      "lane": "scenario",
+      "lane": "honest",
       "market": null,
       "market_id": "ce45a153-c654-41f4-aeee-4b59c8641d56",
       "market_weight": 0.0,
-      "model": 0.8131563212741268,
+      "model": 0.8212949541426253,
       "notes": [
-        "total games: simulator 38.1, Pinnacle 37.0, used 37.4 at weight 0.60",
+        "total games: simulator 39.0, Pinnacle 37.0, used 37.8 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T20:45:20.708832+00:00",
-      "probability": 0.8131563212741268,
+      "predicted_at": "2026-09-02T22:53:24.158263+00:00",
+      "probability": 0.813805206435494,
       "question": "Will the match last longer than 130 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 86
+      "submission": 81
     },
     {
       "base_rate": 0.46,
@@ -33,23 +33,23 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
-      "lane": "scenario",
+      "lane": "honest",
       "market": null,
       "market_id": "555ce72f-2dd2-4e9f-9049-8163ca63cc47",
       "market_weight": 0.0,
-      "model": 0.9550867525557346,
+      "model": 0.9558472694445754,
       "notes": [
         "ace vulnerability: Adrian Mannarino 1.19, Alexander Bublik 0.88",
-        "exposure 126 service points from 40.3 games",
+        "exposure 129 service points from 41.2 games",
         "outcome coupling: P(win)=0.767, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T20:45:20.708832+00:00",
-      "probability": 0.9550867525557346,
+      "predicted_at": "2026-09-02T22:53:24.158263+00:00",
+      "probability": 0.9558472694445754,
       "question": "Will A. Bublik record more aces than A. Mannarino?",
       "rbp": null,
       "settled_at": "",
-      "submission": 98
+      "submission": 96
     },
     {
       "base_rate": 0.421,
@@ -58,21 +58,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
-      "lane": "scenario",
+      "lane": "honest",
       "market": null,
       "market_id": "d0f2b0a4-6136-4423-a847-da48c3cbb6e6",
       "market_weight": 0.0,
-      "model": 0.8603522037972221,
+      "model": 0.8628299807740171,
       "notes": [
-        "exposure 126 service points from 40.3 games"
+        "exposure 129 service points from 41.2 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T20:45:20.708832+00:00",
-      "probability": 0.8603522037972221,
+      "predicted_at": "2026-09-02T22:53:24.158263+00:00",
+      "probability": 0.8628299807740171,
       "question": "Will A. Bublik record more double faults than A. Mannarino?",
       "rbp": null,
       "settled_at": "",
-      "submission": 91
+      "submission": 86
     },
     {
       "base_rate": 0.5,
@@ -81,22 +81,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
-      "lane": "scenario",
+      "lane": "honest",
       "market": 0.7666666667148607,
       "market_id": "f3417381-2cc2-420c-8f08-0c43c83f01ac",
-      "market_weight": 0.8075,
-      "model": 0.475,
+      "market_weight": 0.95,
+      "model": 0.467,
       "notes": [
-        "simulated win probability 0.475",
-        "market consensus 0.767, weight 0.81"
+        "simulated win probability 0.467",
+        "market consensus 0.767, weight 0.95"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T20:45:20.708832+00:00",
-      "probability": 0.7144310798323634,
+      "predicted_at": "2026-09-02T22:53:24.158263+00:00",
+      "probability": 0.7164410035264683,
       "question": "Will A. Bublik win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 76
+      "submission": 72
     },
     {
       "base_rate": 0.13263821138211385,
@@ -105,23 +105,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
-      "lane": "scenario",
+      "lane": "honest",
       "market": null,
       "market_id": "28427656-1529-4e4b-9194-eaee9f15cc4b",
       "market_weight": 0.0,
-      "model": 0.14366,
+      "model": 0.16896,
       "notes": [
         "tiebreak iid correction x0.88 (ATP)",
-        "no usable market quote for this question",
-        "scenario lane: experimental tiebreak shift -0.040"
+        "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T20:45:20.708832+00:00",
-      "probability": 0.10366,
+      "predicted_at": "2026-09-02T22:53:24.158263+00:00",
+      "probability": 0.16714391056910569,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 6
+      "submission": 17
     }
   ],
   "match_id": "344e54e9-af5a-471c-8f4f-c3ea6ff2c4a1",

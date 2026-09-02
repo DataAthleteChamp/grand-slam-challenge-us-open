@@ -13,14 +13,14 @@
       "market": null,
       "market_id": "7560833d-b5e4-4231-a8bc-dc710610ccc9",
       "market_weight": 0.0,
-      "model": 0.7595915299500968,
+      "model": 0.7593227994546163,
       "notes": [
         "total games: simulator 29.7, Pinnacle 33.0, used 31.7 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T20:45:20.714564+00:00",
-      "probability": 0.7595915299500968,
+      "predicted_at": "2026-09-02T22:37:48.458384+00:00",
+      "probability": 0.7593227994546163,
       "question": "Will the match last longer than 115 minutes?",
       "rbp": null,
       "settled_at": "",
@@ -37,15 +37,15 @@
       "market": null,
       "market_id": "ed3ccd72-30e8-4816-bd6c-76d3909e19f6",
       "market_weight": 0.0,
-      "model": 0.6246532400557216,
+      "model": 0.6249726824275446,
       "notes": [
         "ace vulnerability: Jaime Faria 0.95, Carlos Alcaraz 0.66",
         "exposure 98 service points from 31.6 games",
-        "outcome coupling: P(win)=0.906, delta=+0.60"
+        "outcome coupling: P(win)=0.907, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T20:45:20.714564+00:00",
-      "probability": 0.6246532400557216,
+      "predicted_at": "2026-09-02T22:37:48.458384+00:00",
+      "probability": 0.6249726824275446,
       "question": "Will C. Alcaraz record more aces than J. Faria?",
       "rbp": null,
       "settled_at": "",
@@ -67,7 +67,7 @@
         "exposure 98 service points from 31.6 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T20:45:20.714564+00:00",
+      "predicted_at": "2026-09-02T22:37:48.458384+00:00",
       "probability": 0.23420138137061478,
       "question": "Will C. Alcaraz record more double faults than J. Faria?",
       "rbp": null,
@@ -82,17 +82,17 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.9063141098561213,
+      "market": 0.9074074074239363,
       "market_id": "0cc848bc-c099-4631-a861-42249a946e2f",
       "market_weight": 0.8075,
       "model": 0.959,
       "notes": [
         "simulated win probability 0.959",
-        "market consensus 0.906, weight 0.81"
+        "market consensus 0.907, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T20:45:20.714564+00:00",
-      "probability": 0.9103372023166572,
+      "predicted_at": "2026-09-02T22:37:48.458384+00:00",
+      "probability": 0.9110877509079776,
       "question": "Will C. Alcaraz win?",
       "rbp": null,
       "settled_at": "",
@@ -116,7 +116,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T20:45:20.714564+00:00",
+      "predicted_at": "2026-09-02T22:37:48.458384+00:00",
       "probability": 0.21982,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

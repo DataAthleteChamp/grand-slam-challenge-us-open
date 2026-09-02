@@ -9,22 +9,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
-      "lane": "scenario",
+      "lane": "honest",
       "market": null,
       "market_id": "1a7adaf2-4dda-4a50-87ee-6698e9547bba",
       "market_weight": 0.0,
-      "model": 0.7223173315363163,
+      "model": 0.732805486805411,
       "notes": [
-        "total games: simulator 38.5, Pinnacle 40.5, used 39.7 at weight 0.60",
+        "total games: simulator 39.4, Pinnacle 40.5, used 40.1 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T20:45:20.706528+00:00",
-      "probability": 0.7223173315363163,
+      "predicted_at": "2026-09-02T22:53:24.156076+00:00",
+      "probability": 0.7218852124651405,
       "question": "Will the match last longer than 150 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 77
+      "submission": 72
     },
     {
       "base_rate": 0.46,
@@ -33,23 +33,23 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
-      "lane": "scenario",
+      "lane": "honest",
       "market": null,
       "market_id": "95c472ec-bc53-4233-8c5b-4f26a065c4a0",
       "market_weight": 0.0,
-      "model": 0.19793673865518727,
+      "model": 0.19838687327703494,
       "notes": [
         "ace vulnerability: Valentin Vacherot 1.05, Kamil Majchrzak 1.27",
-        "exposure 128 service points from 40.8 games",
-        "outcome coupling: P(win)=0.451, delta=+0.60"
+        "exposure 130 service points from 41.7 games",
+        "outcome coupling: P(win)=0.455, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T20:45:20.706528+00:00",
-      "probability": 0.19793673865518727,
+      "predicted_at": "2026-09-02T22:53:24.156076+00:00",
+      "probability": 0.19838687327703494,
       "question": "Will K. Majchrzak record more aces than V. Vacherot?",
       "rbp": null,
       "settled_at": "",
-      "submission": 15
+      "submission": 20
     },
     {
       "base_rate": 0.421,
@@ -58,21 +58,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
-      "lane": "scenario",
+      "lane": "honest",
       "market": null,
       "market_id": "073c94f0-449c-4784-a8e3-4822388e1199",
       "market_weight": 0.0,
-      "model": 0.30022856254145225,
+      "model": 0.3001322145362461,
       "notes": [
-        "exposure 128 service points from 40.8 games"
+        "exposure 130 service points from 41.7 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T20:45:20.706528+00:00",
-      "probability": 0.30022856254145225,
+      "predicted_at": "2026-09-02T22:53:24.156076+00:00",
+      "probability": 0.3001322145362461,
       "question": "Will K. Majchrzak record more double faults than V. Vacherot?",
       "rbp": null,
       "settled_at": "",
-      "submission": 26
+      "submission": 30
     },
     {
       "base_rate": 0.5,
@@ -81,18 +81,18 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
-      "lane": "scenario",
-      "market": 0.45058260507015413,
+      "lane": "honest",
+      "market": 0.45512709165708837,
       "market_id": "563d100b-b355-4b73-91ab-4fabd2359796",
-      "market_weight": 0.8075,
-      "model": 0.519,
+      "market_weight": 0.95,
+      "model": 0.52675,
       "notes": [
-        "simulated win probability 0.519",
-        "market consensus 0.451, weight 0.81"
+        "simulated win probability 0.527",
+        "market consensus 0.455, weight 0.95"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T20:45:20.706528+00:00",
-      "probability": 0.4645050759644448,
+      "predicted_at": "2026-09-02T22:53:24.156076+00:00",
+      "probability": 0.4648855638184795,
       "question": "Will K. Majchrzak win?",
       "rbp": null,
       "settled_at": "",
@@ -105,23 +105,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
-      "lane": "scenario",
+      "lane": "honest",
       "market": null,
       "market_id": "cbe89f8f-45f9-4787-a1c2-1fbd35c52a8b",
       "market_weight": 0.0,
-      "model": 0.51458,
+      "model": 0.55484,
       "notes": [
         "tiebreak iid correction x0.88 (ATP)",
-        "no usable market quote for this question",
-        "scenario lane: experimental tiebreak shift -0.040"
+        "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T20:45:20.706528+00:00",
-      "probability": 0.47458000000000006,
+      "predicted_at": "2026-09-02T22:53:24.156076+00:00",
+      "probability": 0.5514479999999999,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 47
+      "submission": 55
     }
   ],
   "match_id": "6f9471ee-fca9-468a-9779-2400492d6e4a",

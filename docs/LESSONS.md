@@ -298,3 +298,57 @@ This is *not* being exploited, and it should not be: it depends on a gap between
 the stated rules and the implementation. It is recorded because it bounds what
 honest modelling can achieve - if the benchmark is partly post-hoc, a negative
 skill number is not by itself proof the model is bad.
+
+---
+
+## The rounds ahead are worth 2.34x everything played so far
+
+The event applies a **scoring multiplier by round**, exposed per match by the API as
+`multiplier` and archived with every settled row:
+
+| Round | Dates | Multiplier |
+|---|---|---|
+| First round | 30 Aug - 2 Sep | 1x |
+| Second round | 2 - 4 Sep | 1x |
+| Third round | 4 - 6 Sep | **2x** |
+| Round of 16 | 6 - 8 Sep | **2x** |
+| Quarter-finals | 8 - 9 Sep | **3x** |
+| Semi-finals | 10 - 11 Sep | **3x** |
+| Finals | 12 - 13 Sep | **3x** |
+
+Everything settled so far scored at 1x.  What remains:
+
+| Round | Questions | Weighted | Free points |
+|---|---|---|---|
+| rest of second round | 100 | 100 | 200 |
+| third round | 160 | 320 | 640 |
+| round of 16 | 80 | 160 | 320 |
+| quarter-finals | 40 | 120 | 240 |
+| semi-finals | 20 | 60 | 120 |
+| finals | 10 | 30 | 60 |
+| **total** | **410** | **790** | **1,581** |
+
+**790 weighted questions against 337 already settled - 2.34x the weight of the entire
+tournament to date, and none of it scored yet.**
+
+Two consequences.
+
+**The gap is not what it looks like.** The leader's implied skill is only **+0.33
+RBP/question**; the rest of their lead is the free term everyone collects.  Simulating the
+remaining schedule:
+
+| our skill/question | P(overtake the leader) |
+|---|---|
+| -0.5 | 0.7% |
+| 0.0 | 6.3% |
+| **+0.5** | **26.4%** |
+| **+1.0** | **60.7%** |
+| +1.5 | 87.7% |
+
+**Every model improvement is now worth 2-3x what the same improvement was worth last week**,
+and so is every mistake.  A missed question in the quarter-finals forfeits six free points,
+not two.  Coverage discipline matters three times as much from here.
+
+This does *not* change what to submit on any individual question - the multiplier scales the
+score, not the odds, so honest reporting stays optimal.  It changes only where attention is
+worth spending, and how expensive an unanswered market is.

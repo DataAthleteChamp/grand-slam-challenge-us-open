@@ -19,7 +19,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T20:45:20.730317+00:00",
+      "predicted_at": "2026-09-02T22:37:48.460119+00:00",
       "probability": 0.6109871539298295,
       "question": "Will the match last longer than 70 minutes?",
       "rbp": null,
@@ -42,7 +42,7 @@
         "exposure 62 service points from 19.2 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T20:45:20.730317+00:00",
+      "predicted_at": "2026-09-02T22:37:48.460119+00:00",
       "probability": 0.30896977099122813,
       "question": "Will N. Podoroska record more aces than I. Swiatek?",
       "rbp": null,
@@ -65,7 +65,7 @@
         "exposure 62 service points from 19.2 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T20:45:20.730317+00:00",
+      "predicted_at": "2026-09-02T22:37:48.460119+00:00",
       "probability": 0.5411074769203903,
       "question": "Will N. Podoroska record more double faults than I. Swiatek?",
       "rbp": null,
@@ -89,7 +89,7 @@
         "market consensus 0.029, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T20:45:20.730317+00:00",
+      "predicted_at": "2026-09-02T22:37:48.460119+00:00",
       "probability": 0.04894246475674935,
       "question": "Will N. Podoroska win?",
       "rbp": null,
@@ -113,7 +113,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T20:45:20.730317+00:00",
+      "predicted_at": "2026-09-02T22:37:48.460119+00:00",
       "probability": 0.08925,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

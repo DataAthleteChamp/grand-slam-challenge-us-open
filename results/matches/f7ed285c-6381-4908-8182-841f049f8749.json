@@ -19,7 +19,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T20:45:20.720073+00:00",
+      "predicted_at": "2026-09-02T22:37:48.465886+00:00",
       "probability": 0.5604954269689248,
       "question": "Will the match last longer than 135 minutes?",
       "rbp": null,
@@ -37,15 +37,15 @@
       "market": null,
       "market_id": "d32d951c-36e0-4545-9a04-7a4175cde617",
       "market_weight": 0.0,
-      "model": 0.8147782209082398,
+      "model": 0.815138751139766,
       "notes": [
         "ace vulnerability: Dane Sweeny 1.00, Lorenzo Musetti 0.85",
         "exposure 115 service points from 37.0 games",
-        "outcome coupling: P(win)=0.946, delta=+0.60"
+        "outcome coupling: P(win)=0.948, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T20:45:20.720073+00:00",
-      "probability": 0.8147782209082398,
+      "predicted_at": "2026-09-02T22:37:48.465886+00:00",
+      "probability": 0.815138751139766,
       "question": "Will L. Musetti record more aces than D. Sweeny?",
       "rbp": null,
       "settled_at": "",
@@ -67,7 +67,7 @@
         "exposure 115 service points from 37.0 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T20:45:20.720073+00:00",
+      "predicted_at": "2026-09-02T22:37:48.465886+00:00",
       "probability": 0.2713703756194064,
       "question": "Will L. Musetti record more double faults than D. Sweeny?",
       "rbp": null,
@@ -82,17 +82,17 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.9461006166304113,
+      "market": 0.9476190476381016,
       "market_id": "86c6ce65-d9f2-4c92-a1df-f97d1fd2e204",
       "market_weight": 0.8075,
       "model": 0.7665,
       "notes": [
         "simulated win probability 0.766",
-        "market consensus 0.946, weight 0.81"
+        "market consensus 0.948, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T20:45:20.720073+00:00",
-      "probability": 0.9174582657791837,
+      "predicted_at": "2026-09-02T22:37:48.465886+00:00",
+      "probability": 0.9190522701028379,
       "question": "Will L. Musetti win?",
       "rbp": null,
       "settled_at": "",
@@ -116,7 +116,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T20:45:20.720073+00:00",
+      "predicted_at": "2026-09-02T22:37:48.465886+00:00",
       "probability": 0.3032,
       "question": "Will the match feature at least 1 tiebreak?",
       "rbp": null,

@@ -19,7 +19,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T20:45:20.719301+00:00",
+      "predicted_at": "2026-09-02T22:37:48.465167+00:00",
       "probability": 0.7309503480102039,
       "question": "Will the match last longer than 75 minutes?",
       "rbp": null,
@@ -42,7 +42,7 @@
         "exposure 70 service points from 21.7 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T20:45:20.719301+00:00",
+      "predicted_at": "2026-09-02T22:37:48.465167+00:00",
       "probability": 0.4115395452646867,
       "question": "Will A. Anisimova record more aces than L. Tagger?",
       "rbp": null,
@@ -65,7 +65,7 @@
         "exposure 70 service points from 21.7 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T20:45:20.719301+00:00",
+      "predicted_at": "2026-09-02T22:37:48.465167+00:00",
       "probability": 0.4576416867144478,
       "question": "Will A. Anisimova record more double faults than L. Tagger?",
       "rbp": null,
@@ -80,17 +80,17 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.807971014545266,
+      "market": 0.8089213793318671,
       "market_id": "276cfddd-8d7f-4327-aa60-a8e95f9c0a0c",
       "market_weight": 0.8075,
       "model": 0.59575,
       "notes": [
         "simulated win probability 0.596",
-        "market consensus 0.808, weight 0.81"
+        "market consensus 0.809, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T20:45:20.719301+00:00",
-      "probability": 0.7684999004951607,
+      "predicted_at": "2026-09-02T22:37:48.465167+00:00",
+      "probability": 0.7693442818302008,
       "question": "Will A. Anisimova win?",
       "rbp": null,
       "settled_at": "",
@@ -113,7 +113,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T20:45:20.719301+00:00",
+      "predicted_at": "2026-09-02T22:37:48.465167+00:00",
       "probability": 0.155,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

@@ -9,22 +9,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
-      "lane": "scenario",
+      "lane": "honest",
       "market": null,
       "market_id": "53e34659-aa12-4974-9b63-faa2d4e6bffe",
       "market_weight": 0.0,
-      "model": 0.5624716277671171,
+      "model": 0.5754422844887801,
       "notes": [
-        "total games: simulator 21.8, Pinnacle 24.1, used 23.2 at weight 0.60",
+        "total games: simulator 22.2, Pinnacle 24.1, used 23.4 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T20:45:20.709485+00:00",
-      "probability": 0.5624716277671171,
+      "predicted_at": "2026-09-02T22:53:24.157441+00:00",
+      "probability": 0.5666401702643411,
       "question": "Will the match last longer than 100 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 58
+      "submission": 57
     },
     {
       "base_rate": 0.427,
@@ -33,21 +33,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
-      "lane": "scenario",
+      "lane": "honest",
       "market": null,
       "market_id": "3f0a213e-2d76-47c7-aa08-d6b1a814b306",
       "market_weight": 0.0,
-      "model": 0.3167353508914882,
+      "model": 0.31701617271476407,
       "notes": [
-        "exposure 71 service points from 21.8 games"
+        "exposure 72 service points from 22.2 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T20:45:20.709485+00:00",
-      "probability": 0.3167353508914882,
+      "predicted_at": "2026-09-02T22:53:24.157441+00:00",
+      "probability": 0.31701617271476407,
       "question": "Will A. Li record more aces than D. Vekic?",
       "rbp": null,
       "settled_at": "",
-      "submission": 28
+      "submission": 32
     },
     {
       "base_rate": 0.433,
@@ -56,21 +56,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
-      "lane": "scenario",
+      "lane": "honest",
       "market": null,
       "market_id": "5f3b7d39-042d-4fe4-9b53-6a25ee8acc21",
       "market_weight": 0.0,
-      "model": 0.3056240174823381,
+      "model": 0.30563757823137055,
       "notes": [
-        "exposure 71 service points from 21.8 games"
+        "exposure 72 service points from 22.2 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T20:45:20.709485+00:00",
-      "probability": 0.3056240174823381,
+      "predicted_at": "2026-09-02T22:53:24.157441+00:00",
+      "probability": 0.30563757823137055,
       "question": "Will A. Li record more double faults than D. Vekic?",
       "rbp": null,
       "settled_at": "",
-      "submission": 26
+      "submission": 31
     },
     {
       "base_rate": 0.5,
@@ -79,22 +79,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
-      "lane": "scenario",
-      "market": 0.6030602147857574,
+      "lane": "honest",
+      "market": 0.6047961239124305,
       "market_id": "553a592f-f14e-4524-ad59-d1ab8eb6d83f",
-      "market_weight": 0.8075,
-      "model": 0.50775,
+      "market_weight": 0.95,
+      "model": 0.50625,
       "notes": [
-        "simulated win probability 0.508",
-        "market consensus 0.603, weight 0.81"
+        "simulated win probability 0.506",
+        "market consensus 0.605, weight 0.95"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T20:45:20.709485+00:00",
-      "probability": 0.583172303201934,
+      "predicted_at": "2026-09-02T22:53:24.157441+00:00",
+      "probability": 0.5850000238926676,
       "question": "Will A. Li win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 60
+      "submission": 59
     },
     {
       "base_rate": 0.225,
@@ -103,22 +103,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
-      "lane": "scenario",
+      "lane": "honest",
       "market": null,
       "market_id": "9f692c57-c3e0-4928-82a7-d478804db96e",
       "market_weight": 0.0,
-      "model": 0.1885,
+      "model": 0.20575,
       "notes": [
-        "no usable market quote for this question",
-        "scenario lane: experimental tiebreak shift -0.040"
+        "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T20:45:20.709485+00:00",
-      "probability": 0.1485,
+      "predicted_at": "2026-09-02T22:53:24.157441+00:00",
+      "probability": 0.2067125,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 10
+      "submission": 21
     }
   ],
   "match_id": "2071d543-3369-4ae2-a38a-2a748f1feff0",

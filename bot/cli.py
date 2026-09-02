@@ -284,6 +284,18 @@ def summarise(result: RunResult) -> str:
         lines.append("families " + ", ".join(f"{f.value}={n}" for f, n in families[:8]))
         values = [q.submission for q in result.priced]
         lines.append(f"range    {min(values)}-{max(values)}, mean {sum(values) / len(values):.1f}")
+        # Later rounds pay 2x and 3x.  A missed question in the quarter-finals
+        # forfeits three times the free points a first-round one does, so the
+        # weighting is printed rather than left implicit.
+        weighted: dict[int, int] = {}
+        for match_id, questions in result.by_match.items():
+            payload = result.raw_matches.get(match_id) or {}
+            multiplier = int(payload.get("multiplier") or 1)
+            weighted[multiplier] = weighted.get(multiplier, 0) + len(questions)
+        if weighted and set(weighted) != {1}:
+            spread = ", ".join(f"{m}x={n}" for m, n in sorted(weighted.items()))
+            total = sum(m * n for m, n in weighted.items())
+            lines.append(f"boost    {spread}  ({total} multiplier-weighted questions)")
     unrated = sum(
         1
         for c in result.contexts.values()
