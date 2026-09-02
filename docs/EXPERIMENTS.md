@@ -121,7 +121,7 @@ would falsify it.
   clearest illustration yet of why one hold-out is not evidence, and it is exactly the shape
   of the two false positives already found this week.
 
-### 3. Tournament/surface court-speed adjustment for aces — HIGH
+### 3. Tournament/surface court-speed adjustment for aces — ~~HIGH~~ CLOSED, rejected
 - **Source:** tennis review, Area 6; court pace index literature. Our women's ace weakness is
   described as *"partly recoverable by per-surface, per-tournament speed adjustments."*
 - **Why it might work here:** we have one global hard-court ace rate per player. The US Open
@@ -131,8 +131,21 @@ would falsify it.
 - **Test:** estimate a per-tournament ace multiplier from history; check whether a
   player×speed interaction predicts out-of-sample beyond the main effects.
 - **Falsified if:** the interaction adds nothing once the tournament main effect is removed.
+- **RESULT — REJECTED, in three steps.**
+  1. *The main effect is real, and tour-specific.* Tournament ace multipliers span 0.86-1.19
+     (WTA) and 0.85-1.26 (ATP). The US Open sits at **1.095, CI [1.046, 1.147] for the
+     women** - genuinely ~9.5% faster - but **0.985, CI [0.958, 1.013] for the men**, i.e.
+     average. Worth knowing, and not something I would have guessed.
+  2. *But it cancels in a comparison.* Both players share the tournament, so a common
+     multiplier scales both rates and barely moves P(A > B): ΔAUC between -0.0002 and
+     +0.0010, ΔBrier under 0.001, hold-outs disagreeing on sign. Rejected as a comparison
+     feature.
+  3. *And the interaction runs the wrong way.* The player x speed coefficient is consistently
+     **negative** (WTA -0.89 and -0.67; ATP -0.35 and -0.51), so fast courts *compress*
+     ace-rate differences rather than expanding them. Out of sample it made the women's cell
+     worse. The hypothesis was backwards.
 
-### 4. Serve/return Elo as a second rating system — MEDIUM
+### 4. Serve/return Elo as a second rating system — ~~MEDIUM~~ CLOSED, rejected
 - **Source:** Kovalchik (2016) rating-system comparison; serve/return Elo the best standalone
   system, surface specificity worth ~0.5pp, ~0.3pp on hard.
 - **Why it might work here:** we have exactly one rating system (ridge on match-level rates).
@@ -141,6 +154,21 @@ would falsify it.
   no fitting).
 - **Test:** implement serve/return Elo, compare alone and 50/50 against the ridge.
 - **Falsified if:** the average is no better than the ridge alone.
+- **RESULT — REJECTED, and reassuring.** K swept over {4, 8, 16, 32}, chosen on held-out
+  service-point RMSE, compared like-for-like on rows where both systems have a rating:
+
+  | tour / hold-out | ridge Brier | Elo Brier | 50/50 |
+  |---|---|---|---|
+  | ATP ≤2023→2024 | **0.2121** | 0.2281 | 0.2164 |
+  | ATP ≤2024→2026 | **0.2278** | 0.2444 | 0.2329 |
+  | WTA ≤2023→2024 | **0.2081** | 0.2324 | 0.2165 |
+
+  Elo is worse everywhere (Brier +0.016 to +0.024, all CIs excluding zero) and the 50/50
+  average is also worse, so there is nothing to gain even from equal-weight combination.
+  Kovalchik rates serve/return Elo the best standalone tennis system, so our batch-refitted
+  ridge clearing it on every metric and both hold-outs is a genuine check on the core of the
+  model. Career rate alone trails badly (Brier 0.243-0.262), confirming the opponent
+  adjustment is doing real work.
 
 ### 5. Shin de-vigging for longshot quotes — MEDIUM, cheap
 - **Source:** Štrumbelj (2014), *International Journal of Forecasting*; Shin (1993).
@@ -206,6 +234,21 @@ would falsify it.
   +44 without). Effort there is wasted.
 - **Deliberate variance-seeking to catch up.** Simulated at −EV here, and independently
   concluded in the previous campaign's `VARIANCE_STRATEGY.md`.
+
+---
+
+## Scoreboard
+
+Four experiments run properly, four rejected. That is a real result, not a wasted night: it
+says the remaining standard techniques are already priced into this model, and it means the
+two changes that *did* validate this week - unpinning the women's count confidence (+4.22
+RBP/question on the worst cell) and reconciling the simulation to the winner market (+1.72
+pooled) - were where the value actually was.
+
+The common-opponent test is the one to remember. On ATP thin-data players its first hold-out
+gave +0.0481 AUC at 99% confidence, and the next window gave -0.0527. That is now the third
+false positive this week that a single hold-out would have waved through, alongside the
+ace-vulnerability leak and the women's confidence sweep. **Two hold-outs, always.**
 
 ---
 
