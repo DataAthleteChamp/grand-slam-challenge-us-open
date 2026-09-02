@@ -13,14 +13,14 @@
       "market": null,
       "market_id": "67002658-0ff1-4e06-86a3-6b4532a23224",
       "market_weight": 0.0,
-      "model": 0.5427221569370517,
+      "model": 0.5430014462641908,
       "notes": [
         "total games: simulator 35.3, Pinnacle 34.5, used 34.8 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T15:17:47.166172+00:00",
-      "probability": 0.5427221569370517,
+      "predicted_at": "2026-09-02T19:29:19.892238+00:00",
+      "probability": 0.5430014462641908,
       "question": "Will the match last longer than 155 minutes?",
       "rbp": null,
       "settled_at": "",
@@ -44,7 +44,7 @@
         "outcome coupling: P(win)=0.827, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T15:17:47.166172+00:00",
+      "predicted_at": "2026-09-02T19:29:19.892238+00:00",
       "probability": 0.660561365440139,
       "question": "Will T. Paul record more aces than D. Prizmic?",
       "rbp": null,
@@ -67,7 +67,7 @@
         "exposure 117 service points from 37.4 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T15:17:47.166172+00:00",
+      "predicted_at": "2026-09-02T19:29:19.892238+00:00",
       "probability": 0.3238801254092962,
       "question": "Will T. Paul record more double faults than D. Prizmic?",
       "rbp": null,
@@ -91,7 +91,7 @@
         "market consensus 0.827, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T15:17:47.166172+00:00",
+      "predicted_at": "2026-09-02T19:29:19.892238+00:00",
       "probability": 0.8076710678945238,
       "question": "Will T. Paul win?",
       "rbp": null,
@@ -116,7 +116,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T15:17:47.166172+00:00",
+      "predicted_at": "2026-09-02T19:29:19.892238+00:00",
       "probability": 0.3219,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

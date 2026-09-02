@@ -19,7 +19,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T15:17:47.177340+00:00",
+      "predicted_at": "2026-09-02T19:29:19.897402+00:00",
       "probability": 0.5680587115133574,
       "question": "Will the match last longer than 175 minutes?",
       "rbp": null,
@@ -44,7 +44,7 @@
         "outcome coupling: P(win)=0.712, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T15:17:47.177340+00:00",
+      "predicted_at": "2026-09-02T19:29:19.897402+00:00",
       "probability": 0.8002433015952486,
       "question": "Will F. Auger-Aliassime record more aces than K. Khachanov?",
       "rbp": null,
@@ -67,7 +67,7 @@
         "exposure 130 service points from 41.7 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T15:17:47.177340+00:00",
+      "predicted_at": "2026-09-02T19:29:19.897402+00:00",
       "probability": 0.6681400319483523,
       "question": "Will F. Auger-Aliassime record more double faults than K. Khachanov?",
       "rbp": null,
@@ -91,7 +91,7 @@
         "market consensus 0.712, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T15:17:47.177340+00:00",
+      "predicted_at": "2026-09-02T19:29:19.897402+00:00",
       "probability": 0.6815428723448882,
       "question": "Will F. Auger-Aliassime win?",
       "rbp": null,
@@ -116,7 +116,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T15:17:47.177340+00:00",
+      "predicted_at": "2026-09-02T19:29:19.897402+00:00",
       "probability": 0.1888,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,

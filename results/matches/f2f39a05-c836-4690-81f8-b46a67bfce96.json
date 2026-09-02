@@ -13,18 +13,18 @@
       "market": null,
       "market_id": "d2055bba-cd7b-4c8f-a1e2-61c9bf69f17e",
       "market_weight": 0.0,
-      "model": 0.5501172336370883,
+      "model": 0.5752581014898602,
       "notes": [
-        "total games: simulator 38.4, Pinnacle 38.0, used 38.2 at weight 0.60",
+        "total games: simulator 38.4, Pinnacle 39.0, used 38.8 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T15:17:47.171161+00:00",
-      "probability": 0.5501172336370883,
+      "predicted_at": "2026-09-02T19:29:19.894820+00:00",
+      "probability": 0.5752581014898602,
       "question": "Will the match last longer than 165 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 56
+      "submission": 59
     },
     {
       "base_rate": 0.46,
@@ -37,15 +37,15 @@
       "market": null,
       "market_id": "7a8165e6-bf9d-4704-a8f8-e717d33ce11f",
       "market_weight": 0.0,
-      "model": 0.646960558720664,
+      "model": 0.6457893745004504,
       "notes": [
         "ace vulnerability: Frances Tiafoe 1.36, Rei Sakamoto 1.00",
         "exposure 127 service points from 40.6 games",
-        "outcome coupling: P(win)=0.228, delta=+0.60"
+        "outcome coupling: P(win)=0.223, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T15:17:47.171161+00:00",
-      "probability": 0.646960558720664,
+      "predicted_at": "2026-09-02T19:29:19.894820+00:00",
+      "probability": 0.6457893745004504,
       "question": "Will R. Sakamoto record more aces than F. Tiafoe?",
       "rbp": null,
       "settled_at": "",
@@ -67,7 +67,7 @@
         "exposure 127 service points from 40.6 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T15:17:47.171161+00:00",
+      "predicted_at": "2026-09-02T19:29:19.894820+00:00",
       "probability": 0.46634847897367815,
       "question": "Will R. Sakamoto record more double faults than F. Tiafoe?",
       "rbp": null,
@@ -82,21 +82,21 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.22831387362556135,
+      "market": 0.22335647203512762,
       "market_id": "3432316d-2565-4dbe-b859-9f09a3c20505",
       "market_weight": 0.8075,
       "model": 0.3605,
       "notes": [
         "simulated win probability 0.360",
-        "market consensus 0.228, weight 0.81"
+        "market consensus 0.223, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T15:17:47.171161+00:00",
-      "probability": 0.2565155668642384,
+      "predicted_at": "2026-09-02T19:29:19.894820+00:00",
+      "probability": 0.2523327717223055,
       "question": "Will R. Sakamoto win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 21
+      "submission": 20
     },
     {
       "base_rate": 0.13263821138211385,
@@ -116,7 +116,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T15:17:47.171161+00:00",
+      "predicted_at": "2026-09-02T19:29:19.894820+00:00",
       "probability": 0.13732,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,

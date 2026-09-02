@@ -25,7 +25,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from bot.data.charting import load_overview, summarise_charting  # noqa: E402
-from bot.data.ingest import load_matches, load_players  # noqa: E402
+from bot.data.ingest import drop_broken_serve_blocks, load_matches, load_players  # noqa: E402
 from bot.data.names import canonical_spellings  # noqa: E402
 from bot.data.players import (  # noqa: E402
     build_player_matches,
@@ -121,6 +121,25 @@ def build_tour(tour: str, years: list[int], *, refresh: bool, surface: str) -> d
     if matches.empty:
         print(f"  no data available for {tour}")
         return {}
+    # Some source blocks carry inverted or randomised winner/loser serve
+    # statistics - the whole of the 2025 women's season and the 2026 women's
+    # hard-court block.  ``drop_broken_serve_blocks`` identifies them, and it is
+    # deliberately NOT applied here.
+    #
+    # Dropping them was tried and made the entry worse.  Re-pricing 104 settled
+    # ace and double-fault questions with a roster built without those blocks
+    # cost 2.23 RBP/question on women's aces (95% CI [-4.19, -0.47]) and 0.74
+    # pooled, and women's ace AUC fell from 0.827 to 0.781.  The reason is that
+    # excluding a quarter of the women's history also removes 78 players from the
+    # roster entirely - three of them in the current draw - and every trace of
+    # recent form for the rest.  A rating built partly on bad rows still beats no
+    # rating at all.
+    #
+    # Where the corruption does real damage is in *validation*: a constant fitted
+    # against those blocks can be badly wrong, which is exactly what happened to
+    # the women's double-fault confidence.  Check the fitting window there, not
+    # here.
+    _ = drop_broken_serve_blocks
     latest = int(matches["tourney_date"].max())
     print(f"  {len(matches):,} matches, latest {latest}")
 

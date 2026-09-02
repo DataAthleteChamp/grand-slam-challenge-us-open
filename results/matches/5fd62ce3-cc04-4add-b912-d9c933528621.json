@@ -19,7 +19,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T15:17:47.174176+00:00",
+      "predicted_at": "2026-09-02T19:29:19.904272+00:00",
       "probability": 0.6694317231747393,
       "question": "Will the match last longer than 75 minutes?",
       "rbp": null,
@@ -29,7 +29,7 @@
     {
       "base_rate": 0.427,
       "brier": null,
-      "confidence": 0.85,
+      "confidence": 1.0,
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
@@ -42,17 +42,17 @@
         "exposure 67 service points from 20.7 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T15:17:47.174176+00:00",
-      "probability": 0.1319310352365713,
+      "predicted_at": "2026-09-02T19:29:19.904272+00:00",
+      "probability": 0.12513916648242585,
       "question": "Will J. Bouzas Maneiro record more aces than E. Rybakina?",
       "rbp": null,
       "settled_at": "",
-      "submission": 9
+      "submission": 8
     },
     {
       "base_rate": 0.433,
       "brier": null,
-      "confidence": 0.1,
+      "confidence": 1.0,
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
@@ -65,12 +65,12 @@
         "exposure 67 service points from 20.7 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T15:17:47.174176+00:00",
-      "probability": 0.4368862433489784,
+      "predicted_at": "2026-09-02T19:29:19.904272+00:00",
+      "probability": 0.46679342042589916,
       "question": "Will J. Bouzas Maneiro record more double faults than E. Rybakina?",
       "rbp": null,
       "settled_at": "",
-      "submission": 42
+      "submission": 46
     },
     {
       "base_rate": 0.5,
@@ -80,17 +80,17 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.1369047619281495,
+      "market": 0.14097496708878401,
       "market_id": "0437ce62-1923-4605-a902-0b3e1e2b284b",
       "market_weight": 0.8075,
       "model": 0.22025,
       "notes": [
         "simulated win probability 0.220",
-        "market consensus 0.137, weight 0.81"
+        "market consensus 0.141, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T15:17:47.174176+00:00",
-      "probability": 0.15842918502795156,
+      "predicted_at": "2026-09-02T19:29:19.904272+00:00",
+      "probability": 0.16189705536118848,
       "question": "Will J. Bouzas Maneiro win?",
       "rbp": null,
       "settled_at": "",
@@ -113,7 +113,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T15:17:47.174176+00:00",
+      "predicted_at": "2026-09-02T19:29:19.904272+00:00",
       "probability": 0.14575,
       "question": "Will the match feature at least 1 tiebreak?",
       "rbp": null,

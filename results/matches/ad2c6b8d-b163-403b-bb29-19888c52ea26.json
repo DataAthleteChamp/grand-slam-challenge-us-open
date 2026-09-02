@@ -19,7 +19,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T15:17:47.168876+00:00",
+      "predicted_at": "2026-09-02T19:29:19.894391+00:00",
       "probability": 0.5066868606881164,
       "question": "Will the match last longer than 85 minutes?",
       "rbp": null,
@@ -29,7 +29,7 @@
     {
       "base_rate": 0.427,
       "brier": null,
-      "confidence": 0.85,
+      "confidence": 1.0,
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
@@ -42,8 +42,8 @@
         "exposure 69 service points from 21.2 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T15:17:47.168876+00:00",
-      "probability": 0.35273613316779995,
+      "predicted_at": "2026-09-02T19:29:19.894391+00:00",
+      "probability": 0.35102673469851653,
       "question": "Will M. Joint record more aces than E. Svitolina?",
       "rbp": null,
       "settled_at": "",
@@ -52,7 +52,7 @@
     {
       "base_rate": 0.433,
       "brier": null,
-      "confidence": 0.1,
+      "confidence": 1.0,
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
@@ -65,12 +65,12 @@
         "exposure 69 service points from 21.2 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T15:17:47.168876+00:00",
-      "probability": 0.43562768916087635,
+      "predicted_at": "2026-09-02T19:29:19.894391+00:00",
+      "probability": 0.4558494709641422,
       "question": "Will M. Joint record more double faults than E. Svitolina?",
       "rbp": null,
       "settled_at": "",
-      "submission": 42
+      "submission": 44
     },
     {
       "base_rate": 0.5,
@@ -80,17 +80,17 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.12008141105975811,
+      "market": 0.12103064531198558,
       "market_id": "cfcdf43c-ab90-4d9e-ace6-a511768c97d3",
       "market_weight": 0.8075,
       "model": 0.34075,
       "notes": [
         "simulated win probability 0.341",
-        "market consensus 0.120, weight 0.81"
+        "market consensus 0.121, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T15:17:47.168876+00:00",
-      "probability": 0.1577871503976786,
+      "predicted_at": "2026-09-02T19:29:19.894391+00:00",
+      "probability": 0.15869003470204915,
       "question": "Will M. Joint win?",
       "rbp": null,
       "settled_at": "",
@@ -113,7 +113,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T15:17:47.168876+00:00",
+      "predicted_at": "2026-09-02T19:29:19.894391+00:00",
       "probability": 0.14125,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

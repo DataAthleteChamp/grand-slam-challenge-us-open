@@ -13,14 +13,14 @@
       "market": null,
       "market_id": "6b5fae44-60be-423b-82cf-d06e4dc849ee",
       "market_weight": 0.0,
-      "model": 0.6407026795309557,
+      "model": 0.6397741944187979,
       "notes": [
         "total games: simulator 21.7, Pinnacle 19.9, used 20.6 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T15:17:47.164914+00:00",
-      "probability": 0.6407026795309557,
+      "predicted_at": "2026-09-02T19:29:19.891447+00:00",
+      "probability": 0.6397741944187979,
       "question": "Will the match last longer than 85 minutes?",
       "rbp": null,
       "settled_at": "",
@@ -29,7 +29,7 @@
     {
       "base_rate": 0.427,
       "brier": null,
-      "confidence": 0.85,
+      "confidence": 1.0,
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
@@ -42,8 +42,8 @@
         "exposure 70 service points from 21.7 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T15:17:47.164914+00:00",
-      "probability": 0.4024558698304624,
+      "predicted_at": "2026-09-02T19:29:19.891447+00:00",
+      "probability": 0.401890915427583,
       "question": "Will K. Boulter record more aces than K. Muchova?",
       "rbp": null,
       "settled_at": "",
@@ -52,7 +52,7 @@
     {
       "base_rate": 0.433,
       "brier": null,
-      "confidence": 0.1,
+      "confidence": 1.0,
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
@@ -65,12 +65,12 @@
         "exposure 70 service points from 21.7 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T15:17:47.164914+00:00",
-      "probability": 0.44827844352886237,
+      "predicted_at": "2026-09-02T19:29:19.891447+00:00",
+      "probability": 0.5658560306857597,
       "question": "Will K. Boulter record more double faults than K. Muchova?",
       "rbp": null,
       "settled_at": "",
-      "submission": 44
+      "submission": 58
     },
     {
       "base_rate": 0.5,
@@ -80,17 +80,17 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.14085545727998502,
+      "market": 0.13832658566870365,
       "market_id": "c2cc802b-b145-452d-bd45-c639731cdc24",
       "market_weight": 0.8075,
       "model": 0.36125,
       "notes": [
         "simulated win probability 0.361",
-        "market consensus 0.141, weight 0.81"
+        "market consensus 0.138, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T15:17:47.164914+00:00",
-      "probability": 0.17961411550251333,
+      "predicted_at": "2026-09-02T19:29:19.891447+00:00",
+      "probability": 0.1772577239194914,
       "question": "Will K. Boulter win?",
       "rbp": null,
       "settled_at": "",
@@ -113,7 +113,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T15:17:47.164914+00:00",
+      "predicted_at": "2026-09-02T19:29:19.891447+00:00",
       "probability": 0.16524999999999998,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

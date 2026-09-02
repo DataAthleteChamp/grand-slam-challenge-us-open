@@ -19,7 +19,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T15:17:47.174680+00:00",
+      "predicted_at": "2026-09-02T19:29:19.903824+00:00",
       "probability": 0.3143164538124191,
       "question": "Will the match last longer than 190 minutes?",
       "rbp": null,
@@ -44,7 +44,7 @@
         "outcome coupling: P(win)=0.586, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T15:17:47.174680+00:00",
+      "predicted_at": "2026-09-02T19:29:19.903824+00:00",
       "probability": 0.6429460909221417,
       "question": "Will L. Darderi record more aces than D. Svrcina?",
       "rbp": null,
@@ -67,7 +67,7 @@
         "exposure 116 service points from 37.2 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T15:17:47.174680+00:00",
+      "predicted_at": "2026-09-02T19:29:19.903824+00:00",
       "probability": 0.28008639708900185,
       "question": "Will L. Darderi record more double faults than D. Svrcina?",
       "rbp": null,
@@ -91,7 +91,7 @@
         "market consensus 0.586, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T15:17:47.174680+00:00",
+      "predicted_at": "2026-09-02T19:29:19.903824+00:00",
       "probability": 0.5317153749239498,
       "question": "Will L. Darderi win?",
       "rbp": null,
@@ -116,7 +116,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T15:17:47.174680+00:00",
+      "predicted_at": "2026-09-02T19:29:19.903824+00:00",
       "probability": 0.2618400000000001,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

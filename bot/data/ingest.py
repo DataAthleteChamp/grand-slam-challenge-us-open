@@ -202,3 +202,67 @@ def load_players(tour: str, *, refresh: bool = False) -> pd.DataFrame:
     last = players.get("name_last", pd.Series(dtype=str)).fillna("")
     players["full_name"] = (first.astype(str) + " " + last.astype(str)).str.strip()
     return players
+
+
+#: Minimum rows in a (year, surface) block before it is worth checking.
+_QUALITY_MIN_ROWS = 150
+
+#: A block fails if winners do not double-fault less and ace more than losers.
+#:
+#: Both hold overwhelmingly in every clean block of this dataset - winners are
+#: ahead on 0.55-0.65 of ace comparisons and behind on only 0.30-0.40 of
+#: double-fault comparisons - because serving well is most of how matches are
+#: won.  A block where the relationship vanishes or reverses is not describing
+#: tennis.
+_QUALITY_MAX_DF_SHARE = 0.45
+_QUALITY_MIN_ACE_SHARE = 0.50
+
+
+def serve_stats_look_sane(frame: pd.DataFrame) -> bool:
+    """Whether one block's winner/loser serve statistics are self-consistent."""
+    needed = {"w_df", "l_df", "w_ace", "l_ace"}
+    if not needed.issubset(frame.columns):
+        return True
+    rows = frame.dropna(subset=list(needed))
+    if len(rows) < _QUALITY_MIN_ROWS:
+        return True
+    df_share = float((rows.w_df > rows.l_df).mean())
+    ace_share = float((rows.w_ace > rows.l_ace).mean())
+    return df_share <= _QUALITY_MAX_DF_SHARE and ace_share >= _QUALITY_MIN_ACE_SHARE
+
+
+def drop_broken_serve_blocks(matches: pd.DataFrame, *, label: str = "") -> pd.DataFrame:
+    """Remove (year, surface) blocks whose serve statistics are not credible.
+
+    Some source files carry winner/loser serve statistics that are inverted or
+    apparently randomised.  In this dataset the whole of the 2025 women's season
+    is affected on every surface, and the 2026 women's hard-court block sits at
+    exactly 0.500 on both checks, which is what randomly assigned numbers look
+    like.  The men's files are clean throughout.
+
+    This matters more than a data-hygiene note suggests.  Ratings fitted through
+    such a block are not merely noisier, they are pulled toward the *opposite* of
+    the truth, and a model validated against one looks worthless when it is
+    fine: the women's double-fault confidence had been pinned near zero on
+    exactly that evidence, which cost roughly 4 relative points per question on
+    the worst-performing family in the entry.
+
+    Blocks are judged rather than listed by year so that a future file going bad
+    is caught automatically instead of silently retraining the model.
+    """
+    if matches.empty or "surface" not in matches.columns:
+        return matches
+    frame = matches.copy()
+    year = pd.to_datetime(
+        frame["tourney_date"].astype(str), format="%Y%m%d", errors="coerce"
+    ).dt.year
+    keep = pd.Series(True, index=frame.index)
+    for (block_year, surface), rows in frame.groupby([year, frame["surface"].astype(str)]):
+        if not serve_stats_look_sane(rows):
+            keep.loc[rows.index] = False
+            where = f"{label} " if label else ""
+            print(
+                f"  ! dropping {where}{int(block_year)} {surface}: "
+                f"{len(rows):,} rows with implausible serve statistics"
+            )
+    return frame[keep]

@@ -19,7 +19,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T15:17:47.177892+00:00",
+      "predicted_at": "2026-09-02T19:29:19.902733+00:00",
       "probability": 0.7553017132133448,
       "question": "Will the match last longer than 125 minutes?",
       "rbp": null,
@@ -37,15 +37,15 @@
       "market": null,
       "market_id": "11c47ade-9076-437f-991d-caa59baea236",
       "market_weight": 0.0,
-      "model": 0.11388066522383225,
+      "model": 0.1139631834632547,
       "notes": [
         "ace vulnerability: Taylor Fritz 0.99, Mattia Bellucci 1.06",
         "exposure 123 service points from 39.4 games",
-        "outcome coupling: P(win)=0.112, delta=+0.60"
+        "outcome coupling: P(win)=0.113, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T15:17:47.177892+00:00",
-      "probability": 0.11388066522383225,
+      "predicted_at": "2026-09-02T19:29:19.902733+00:00",
+      "probability": 0.1139631834632547,
       "question": "Will M. Bellucci record more aces than T. Fritz?",
       "rbp": null,
       "settled_at": "",
@@ -67,7 +67,7 @@
         "exposure 123 service points from 39.4 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T15:17:47.177892+00:00",
+      "predicted_at": "2026-09-02T19:29:19.902733+00:00",
       "probability": 0.5506951141324286,
       "question": "Will M. Bellucci record more double faults than T. Fritz?",
       "rbp": null,
@@ -82,17 +82,17 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.11221196926915576,
+      "market": 0.11271297508959367,
       "market_id": "7b837288-b2f4-4ff2-abec-a6e1cb35c145",
       "market_weight": 0.8075,
       "model": 0.218,
       "notes": [
         "simulated win probability 0.218",
-        "market consensus 0.112, weight 0.81"
+        "market consensus 0.113, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T15:17:47.177892+00:00",
-      "probability": 0.13666271075016434,
+      "predicted_at": "2026-09-02T19:29:19.902733+00:00",
+      "probability": 0.13710647739063492,
       "question": "Will M. Bellucci win?",
       "rbp": null,
       "settled_at": "",
@@ -116,7 +116,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T15:17:47.177892+00:00",
+      "predicted_at": "2026-09-02T19:29:19.902733+00:00",
       "probability": 0.1371,
       "question": "Will the match feature at least 2 tiebreaks?",
       "rbp": null,

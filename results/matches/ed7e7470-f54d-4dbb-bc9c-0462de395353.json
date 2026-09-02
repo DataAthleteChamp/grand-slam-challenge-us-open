@@ -18,7 +18,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T15:17:47.161670+00:00",
+      "predicted_at": "2026-09-02T19:29:19.886220+00:00",
       "probability": 0.6655805230329885,
       "question": "Will the match last longer than 90 minutes?",
       "rbp": null,
@@ -28,7 +28,7 @@
     {
       "base_rate": 0.427,
       "brier": null,
-      "confidence": 0.85,
+      "confidence": 1.0,
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
@@ -41,17 +41,17 @@
         "exposure 71 service points from 21.9 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T15:17:47.161670+00:00",
-      "probability": 0.30772070248318023,
+      "predicted_at": "2026-09-02T19:29:19.886220+00:00",
+      "probability": 0.30497514320529945,
       "question": "Will A. Kalinskaya record more aces than X. Wang?",
       "rbp": null,
       "settled_at": "",
-      "submission": 27
+      "submission": 26
     },
     {
       "base_rate": 0.433,
       "brier": null,
-      "confidence": 0.1,
+      "confidence": 1.0,
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
@@ -64,12 +64,12 @@
         "exposure 71 service points from 21.9 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T15:17:47.161670+00:00",
-      "probability": 0.4297897977423408,
+      "predicted_at": "2026-09-02T19:29:19.886220+00:00",
+      "probability": 0.40508519775948504,
       "question": "Will A. Kalinskaya record more double faults than X. Wang?",
       "rbp": null,
       "settled_at": "",
-      "submission": 41
+      "submission": 38
     },
     {
       "base_rate": 0.5,
@@ -79,21 +79,21 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.6654040404198828,
+      "market": 0.6546876546935165,
       "market_id": "4e767150-9efb-461e-91db-02ad54769545",
       "market_weight": 0.8075,
       "model": 0.54,
       "notes": [
         "simulated win probability 0.540",
-        "market consensus 0.665, weight 0.81"
+        "market consensus 0.655, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T15:17:47.161670+00:00",
-      "probability": 0.6392414593921538,
+      "predicted_at": "2026-09-02T19:29:19.886220+00:00",
+      "probability": 0.6305346997736816,
       "question": "Will A. Kalinskaya win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 67
+      "submission": 66
     },
     {
       "base_rate": 0.225,
@@ -112,7 +112,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T15:17:47.161670+00:00",
+      "predicted_at": "2026-09-02T19:29:19.886220+00:00",
       "probability": 0.174,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

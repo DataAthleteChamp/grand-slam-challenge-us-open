@@ -19,7 +19,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T15:17:47.180584+00:00",
+      "predicted_at": "2026-09-02T19:29:19.901609+00:00",
       "probability": 0.5722569804530931,
       "question": "Will the match last longer than 80 minutes?",
       "rbp": null,
@@ -29,7 +29,7 @@
     {
       "base_rate": 0.427,
       "brier": null,
-      "confidence": 0.85,
+      "confidence": 1.0,
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
@@ -42,17 +42,17 @@
         "exposure 68 service points from 21.1 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T15:17:47.180584+00:00",
-      "probability": 0.5975911289603932,
+      "predicted_at": "2026-09-02T19:29:19.901609+00:00",
+      "probability": 0.6015177789876146,
       "question": "Will M. Andreeva record more aces than E. Lys?",
       "rbp": null,
       "settled_at": "",
-      "submission": 62
+      "submission": 63
     },
     {
       "base_rate": 0.433,
       "brier": null,
-      "confidence": 0.1,
+      "confidence": 1.0,
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
@@ -65,12 +65,12 @@
         "exposure 68 service points from 21.1 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T15:17:47.180584+00:00",
-      "probability": 0.43143337800087994,
+      "predicted_at": "2026-09-02T19:29:19.901609+00:00",
+      "probability": 0.41937720000765133,
       "question": "Will M. Andreeva record more double faults than E. Lys?",
       "rbp": null,
       "settled_at": "",
-      "submission": 41
+      "submission": 40
     },
     {
       "base_rate": 0.5,
@@ -89,7 +89,7 @@
         "market consensus 0.900, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T15:17:47.180584+00:00",
+      "predicted_at": "2026-09-02T19:29:19.901609+00:00",
       "probability": 0.8643654048321858,
       "question": "Will M. Andreeva win?",
       "rbp": null,
@@ -113,7 +113,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T15:17:47.180584+00:00",
+      "predicted_at": "2026-09-02T19:29:19.901609+00:00",
       "probability": 0.11574999999999999,
       "question": "Will the match feature at least 1 tiebreak?",
       "rbp": null,
