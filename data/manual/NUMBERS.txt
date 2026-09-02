@@ -1,9 +1,7 @@
-MANUAL NUMBERS — 170 questions across 34 matches
-Rule: sharpen x1.15 in log-odds on winner/aces/DF/duration; tiebreak left AT the bot number.
-Why milder than before: the bots now submit the near-unshrunk model, so most of the
-gap the old sharpening was closing is already inside the model. Tiebreak is untouched
-because sharpening it cost -5.95 RBP/q on the settled sample (it pushes an already-
-too-high number higher).
+MANUAL NUMBERS - 160 questions across 32 matches
+Sharpened x1.15 in log-odds on winner/aces/double faults/duration.
+Tiebreak is left AT the bot number: sharpening it cost 5.95 RBP/question
+on the settled sample, because it pushes an already-high number higher.
 
 --- V. Vacherot vs K. Majchrzak   (starts 2026-09-02 16:00Z)
      bot  47  ->  MANUAL  47   Will K. Majchrzak win?
@@ -26,13 +24,6 @@ too-high number higher).
      bot  17  ->  MANUAL  17   Will the match feature at least 2 tiebreak(s)?
      bot  81  ->  MANUAL  84   Will the match last longer than 130 minutes?
 
---- M. Berrettini vs M. Navone   (starts 2026-09-02 17:30Z)
-     bot  59  ->  MANUAL  60   Will M. Berrettini win?
-     bot  80  ->  MANUAL  83   Will M. Berrettini record more aces than M. Navone?
-     bot  27  ->  MANUAL  24   Will M. Berrettini record more double faults than M. Navone?
-     bot  16  ->  MANUAL  16   Will the match feature at least 2 tiebreak(s)?
-     bot  50  ->  MANUAL  50   Will the match last longer than 175 minutes?
-
 --- D. Prizmic vs T. Paul   (starts 2026-09-02 17:30Z)
      bot  78  ->  MANUAL  81   Will T. Paul win?
      bot  66  ->  MANUAL  68   Will T. Paul record more aces than D. Prizmic?
@@ -46,13 +37,6 @@ too-high number higher).
      bot  46  ->  MANUAL  45   Will M. Joint record more double faults than E. Svitolina?
      bot  19  ->  MANUAL  19   Will the match feature at least 1 tiebreak(s)?
      bot  52  ->  MANUAL  52   Will the match last longer than 85 minutes?
-
---- R. Sakamoto vs F. Tiafoe   (starts 2026-09-02 22:30Z)
-     bot  27  ->  MANUAL  24   Will R. Sakamoto win?
-     bot  65  ->  MANUAL  67   Will R. Sakamoto record more aces than F. Tiafoe?
-     bot  47  ->  MANUAL  47   Will R. Sakamoto record more double faults than F. Tiafoe?
-     bot  19  ->  MANUAL  19   Will the match feature at least 2 tiebreak(s)?
-     bot  58  ->  MANUAL  59   Will the match last longer than 165 minutes?
 
 --- A. Sabalenka vs Polina Iatcenko   (starts 2026-09-02 22:30Z)
      bot  11  ->  MANUAL   8   Will P. Iatcenko win?

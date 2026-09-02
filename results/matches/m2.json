@@ -14,9 +14,11 @@
       "market_id": "m2-m0",
       "market_weight": 0.0,
       "model": 0.09749020750619153,
-      "notes": [],
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-09-02T22:56:04.064579+00:00",
+      "predicted_at": "2026-09-02T23:02:50.976014+00:00",
       "probability": 0.09675069713088194,
       "question": "Will the match last longer than 150 minutes?",
       "rbp": null,
@@ -39,7 +41,7 @@
         "exposure 72 service points from 22.1 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T22:56:04.064579+00:00",
+      "predicted_at": "2026-09-02T23:02:50.976014+00:00",
       "probability": 0.24911660272924374,
       "question": "Will Iga Swiatek record more aces than Aryna Sabalenka?",
       "rbp": null,
@@ -62,7 +64,7 @@
         "exposure 72 service points from 22.1 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T22:56:04.064579+00:00",
+      "predicted_at": "2026-09-02T23:02:50.976014+00:00",
       "probability": 0.23857730864889667,
       "question": "Will Iga Swiatek record more double faults than Aryna Sabalenka?",
       "rbp": null,
@@ -72,26 +74,26 @@
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.7,
+      "confidence": 0.85,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "honest",
-      "market": null,
+      "market": 0.5476190476129825,
       "market_id": "m2-m3",
-      "market_weight": 0.0,
+      "market_weight": 0.95,
       "model": 0.6185,
       "notes": [
         "simulated win probability 0.619",
-        "no market quote; this is the family that most needs one"
+        "market consensus 0.548, weight 0.95"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T22:56:04.064579+00:00",
-      "probability": 0.5829500000000001,
+      "predicted_at": "2026-09-02T23:02:50.976014+00:00",
+      "probability": 0.5435497377787457,
       "question": "Will Iga Swiatek win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 58
+      "submission": 54
     },
     {
       "base_rate": 0.02463636363636364,
@@ -105,9 +107,11 @@
       "market_id": "m2-m4",
       "market_weight": 0.0,
       "model": 0.0155,
-      "notes": [],
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-09-02T22:56:04.064579+00:00",
+      "predicted_at": "2026-09-02T23:02:50.976014+00:00",
       "probability": 0.015956818181818183,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,
