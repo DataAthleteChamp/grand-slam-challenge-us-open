@@ -19,7 +19,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.831740+00:00",
+      "predicted_at": "2026-09-01T18:08:25.447682+00:00",
       "probability": 0.6236089469549577,
       "question": "Will the match last longer than 85 minutes?",
       "rbp": null,
@@ -42,7 +42,7 @@
         "exposure 69 service points from 21.3 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.831740+00:00",
+      "predicted_at": "2026-09-01T18:08:25.447682+00:00",
       "probability": 0.4117959709903417,
       "question": "Will A. Potapova record more aces than D. Semenistaja?",
       "rbp": null,
@@ -65,7 +65,7 @@
         "exposure 69 service points from 21.3 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.831740+00:00",
+      "predicted_at": "2026-09-01T18:08:25.447682+00:00",
       "probability": 0.47839282656070553,
       "question": "Will A. Potapova record more double faults than D. Semenistaja?",
       "rbp": null,
@@ -89,7 +89,7 @@
         "market consensus 0.792, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.831740+00:00",
+      "predicted_at": "2026-09-01T18:08:25.447682+00:00",
       "probability": 0.7557077937547536,
       "question": "Will A. Potapova win?",
       "rbp": null,
@@ -113,7 +113,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.831740+00:00",
+      "predicted_at": "2026-09-01T18:08:25.447682+00:00",
       "probability": 0.1315,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

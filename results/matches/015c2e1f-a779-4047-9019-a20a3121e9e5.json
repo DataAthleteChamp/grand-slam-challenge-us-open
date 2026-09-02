@@ -9,22 +9,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
-      "lane": "scenario",
+      "lane": "honest",
       "market": null,
       "market_id": "d6a7f877-ccf2-4661-af74-f013eab43d7a",
       "market_weight": 0.0,
-      "model": 0.8261369923964972,
+      "model": 0.8251630441676694,
       "notes": [
-        "total games: simulator 34.3, Pinnacle 30.5, used 32.0 at weight 0.60",
+        "total games: simulator 34.0, Pinnacle 30.5, used 31.9 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.834912+00:00",
-      "probability": 0.8261369923964972,
+      "predicted_at": "2026-09-01T17:49:47.859781+00:00",
+      "probability": 0.829504891959286,
       "question": "Will the match last longer than 100 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 88
+      "submission": 83
     },
     {
       "base_rate": 0.46,
@@ -33,23 +33,23 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
-      "lane": "scenario",
+      "lane": "honest",
       "market": null,
       "market_id": "9b4ec192-e692-4be3-bce7-c1cbe6709760",
       "market_weight": 0.0,
-      "model": 0.1420072783088157,
+      "model": 0.14168350370725075,
       "notes": [
         "ace vulnerability: Taylor Fritz 0.99, Darwin Blanch 1.00",
-        "exposure 115 service points from 37.0 games",
-        "outcome coupling: P(win)=0.039, delta=+0.60"
+        "exposure 114 service points from 36.6 games",
+        "outcome coupling: P(win)=0.043, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.834912+00:00",
-      "probability": 0.1420072783088157,
+      "predicted_at": "2026-09-01T17:49:47.859781+00:00",
+      "probability": 0.14168350370725075,
       "question": "Will D. Blanch record more aces than T. Fritz?",
       "rbp": null,
       "settled_at": "",
-      "submission": 10
+      "submission": 14
     },
     {
       "base_rate": 0.421,
@@ -58,21 +58,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
-      "lane": "scenario",
+      "lane": "honest",
       "market": null,
       "market_id": "5cac6828-2b85-4aa8-a961-286572c3974b",
       "market_weight": 0.0,
-      "model": 0.5524314485379485,
+      "model": 0.5517256230741617,
       "notes": [
-        "exposure 115 service points from 37.0 games"
+        "exposure 114 service points from 36.6 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.834912+00:00",
-      "probability": 0.5524314485379485,
+      "predicted_at": "2026-09-01T17:49:47.859781+00:00",
+      "probability": 0.5517256230741617,
       "question": "Will D. Blanch record more double faults than T. Fritz?",
       "rbp": null,
       "settled_at": "",
-      "submission": 57
+      "submission": 55
     },
     {
       "base_rate": 0.5,
@@ -81,22 +81,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
-      "lane": "scenario",
-      "market": 0.03922322776981499,
+      "lane": "honest",
+      "market": 0.043137254906942674,
       "market_id": "3529880e-b300-4120-8967-ace0f25d64db",
-      "market_weight": 0.8075,
-      "model": 0.0935,
+      "market_weight": 0.95,
+      "model": 0.061,
       "notes": [
-        "simulated win probability 0.093",
-        "market consensus 0.039, weight 0.81"
+        "simulated win probability 0.061",
+        "market consensus 0.043, weight 0.95"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.834912+00:00",
-      "probability": 0.05673112651272824,
+      "predicted_at": "2026-09-01T17:49:47.859781+00:00",
+      "probability": 0.11231292382184369,
       "question": "Will D. Blanch win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 3
+      "submission": 11
     },
     {
       "base_rate": 0.487,
@@ -105,22 +105,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
-      "lane": "scenario",
+      "lane": "honest",
       "market": null,
       "market_id": "fedcc35c-f012-46df-a86b-747c74e6e263",
       "market_weight": 0.0,
-      "model": 0.5585,
+      "model": 0.559,
       "notes": [
-        "no usable market quote for this question",
-        "scenario lane: experimental tiebreak shift -0.040"
+        "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.834912+00:00",
-      "probability": 0.5185,
+      "predicted_at": "2026-09-01T17:49:47.859781+00:00",
+      "probability": 0.5554,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 52
+      "submission": 56
     }
   ],
   "match_id": "015c2e1f-a779-4047-9019-a20a3121e9e5",

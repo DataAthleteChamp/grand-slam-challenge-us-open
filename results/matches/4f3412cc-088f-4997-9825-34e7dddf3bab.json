@@ -19,7 +19,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.833816+00:00",
+      "predicted_at": "2026-09-01T18:08:25.442646+00:00",
       "probability": 0.7946,
       "question": "Will the match last longer than 70 minutes?",
       "rbp": null,
@@ -42,7 +42,7 @@
         "missing aces rates; using the measured even-matchup price"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.833816+00:00",
+      "predicted_at": "2026-09-01T18:08:25.442646+00:00",
       "probability": 0.427,
       "question": "Will T. Frodin record more aces than E. Rybakina?",
       "rbp": null,
@@ -65,7 +65,7 @@
         "missing double_faults rates; using the measured even-matchup price"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.833816+00:00",
+      "predicted_at": "2026-09-01T18:08:25.442646+00:00",
       "probability": 0.433,
       "question": "Will T. Frodin record more double faults than E. Rybakina?",
       "rbp": null,
@@ -80,17 +80,17 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.05474133481456654,
+      "market": 0.057692307616379564,
       "market_id": "afd7d544-e636-43f2-88ce-1687110d6156",
       "market_weight": 0.8075,
       "model": 0.5,
       "notes": [
         "one or both players unrated; using an even prior",
-        "market consensus 0.055, weight 0.81"
+        "market consensus 0.058, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.833816+00:00",
-      "probability": 0.10028724892530395,
+      "predicted_at": "2026-09-01T18:08:25.442646+00:00",
+      "probability": 0.10399009015919781,
       "question": "Will T. Frodin win?",
       "rbp": null,
       "settled_at": "",
@@ -114,7 +114,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.833816+00:00",
+      "predicted_at": "2026-09-01T18:08:25.442646+00:00",
       "probability": 0.185,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

@@ -19,7 +19,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.830961+00:00",
+      "predicted_at": "2026-09-01T18:08:25.445759+00:00",
       "probability": 0.5407410737965433,
       "question": "Will the match last longer than 135 minutes?",
       "rbp": null,
@@ -37,19 +37,19 @@
       "market": null,
       "market_id": "9b55d8d8-7080-4296-bee9-8e74a52d3f4b",
       "market_weight": 0.0,
-      "model": 0.659023238292923,
+      "model": 0.7305206332837093,
       "notes": [
         "ace vulnerability: Filip Misolic 1.08, Francisco Cerundolo 0.75",
         "exposure 118 service points from 37.8 games",
-        "outcome coupling: P(win)=0.928, delta=+0.60"
+        "outcome coupling: P(win)=0.931, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.830961+00:00",
-      "probability": 0.659023238292923,
+      "predicted_at": "2026-09-01T18:08:25.445759+00:00",
+      "probability": 0.7305206332837093,
       "question": "Will F. Cerundolo record more aces than F. Misolic?",
       "rbp": null,
       "settled_at": "",
-      "submission": 70
+      "submission": 78
     },
     {
       "base_rate": 0.421,
@@ -67,7 +67,7 @@
         "exposure 118 service points from 37.8 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.830961+00:00",
+      "predicted_at": "2026-09-01T18:08:25.445759+00:00",
       "probability": 0.4755713022456066,
       "question": "Will F. Cerundolo record more double faults than F. Misolic?",
       "rbp": null,
@@ -82,17 +82,17 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.928219852303099,
+      "market": 0.9307692307603176,
       "market_id": "82e8a389-7516-446a-b61a-e1799f1a144a",
       "market_weight": 0.8075,
       "model": 0.738,
       "notes": [
         "simulated win probability 0.738",
-        "market consensus 0.928, weight 0.81"
+        "market consensus 0.931, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.830961+00:00",
-      "probability": 0.8969094727752913,
+      "predicted_at": "2026-09-01T18:08:25.445759+00:00",
+      "probability": 0.899490516743757,
       "question": "Will F. Cerundolo win?",
       "rbp": null,
       "settled_at": "",
@@ -115,7 +115,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.830961+00:00",
+      "predicted_at": "2026-09-01T18:08:25.445759+00:00",
       "probability": 0.0525,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,

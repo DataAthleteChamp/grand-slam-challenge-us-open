@@ -19,7 +19,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.858825+00:00",
+      "predicted_at": "2026-09-01T18:08:25.453248+00:00",
       "probability": 0.7198083161935684,
       "question": "Will the match last longer than 150 minutes?",
       "rbp": null,
@@ -37,19 +37,19 @@
       "market": null,
       "market_id": "95c472ec-bc53-4233-8c5b-4f26a065c4a0",
       "market_weight": 0.0,
-      "model": 0.2511090663763658,
+      "model": 0.19854381794919052,
       "notes": [
         "ace vulnerability: Valentin Vacherot 1.05, Kamil Majchrzak 1.27",
         "exposure 128 service points from 40.8 games",
         "outcome coupling: P(win)=0.454, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.858825+00:00",
-      "probability": 0.2511090663763658,
+      "predicted_at": "2026-09-01T18:08:25.453248+00:00",
+      "probability": 0.19854381794919052,
       "question": "Will K. Majchrzak record more aces than V. Vacherot?",
       "rbp": null,
       "settled_at": "",
-      "submission": 20
+      "submission": 15
     },
     {
       "base_rate": 0.421,
@@ -67,7 +67,7 @@
         "exposure 128 service points from 40.8 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.858825+00:00",
+      "predicted_at": "2026-09-01T18:08:25.453248+00:00",
       "probability": 0.30022856254145225,
       "question": "Will K. Majchrzak record more double faults than V. Vacherot?",
       "rbp": null,
@@ -91,7 +91,7 @@
         "market consensus 0.454, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.858825+00:00",
+      "predicted_at": "2026-09-01T18:08:25.453248+00:00",
       "probability": 0.467089543100646,
       "question": "Will K. Majchrzak win?",
       "rbp": null,
@@ -115,7 +115,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.858825+00:00",
+      "predicted_at": "2026-09-01T18:08:25.453248+00:00",
       "probability": 0.54475,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

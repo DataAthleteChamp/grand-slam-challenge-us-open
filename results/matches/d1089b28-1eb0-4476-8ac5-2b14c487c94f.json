@@ -19,7 +19,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.845030+00:00",
+      "predicted_at": "2026-09-01T18:08:25.459215+00:00",
       "probability": 0.8477334111685921,
       "question": "Will the match last longer than 70 minutes?",
       "rbp": null,
@@ -42,7 +42,7 @@
         "exposure 70 service points from 21.6 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.845030+00:00",
+      "predicted_at": "2026-09-01T18:08:25.459215+00:00",
       "probability": 0.6279191683252716,
       "question": "Will E. Alexandrova record more aces than K. Birrell?",
       "rbp": null,
@@ -65,7 +65,7 @@
         "exposure 70 service points from 21.6 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.845030+00:00",
+      "predicted_at": "2026-09-01T18:08:25.459215+00:00",
       "probability": 0.4472101631039303,
       "question": "Will E. Alexandrova record more double faults than K. Birrell?",
       "rbp": null,
@@ -80,17 +80,17 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.7872058045568298,
+      "market": 0.7894717903448727,
       "market_id": "b9424542-45e3-4e90-bed6-3a7e6e071d94",
       "market_weight": 0.8075,
       "model": 0.6215,
       "notes": [
         "simulated win probability 0.622",
-        "market consensus 0.787, weight 0.81"
+        "market consensus 0.789, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.845030+00:00",
-      "probability": 0.7539944339455065,
+      "predicted_at": "2026-09-01T18:08:25.459215+00:00",
+      "probability": 0.755944940245284,
       "question": "Will E. Alexandrova win?",
       "rbp": null,
       "settled_at": "",
@@ -113,7 +113,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.845030+00:00",
+      "predicted_at": "2026-09-01T18:08:25.459215+00:00",
       "probability": 0.15175,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

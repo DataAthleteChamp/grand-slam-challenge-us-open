@@ -19,7 +19,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.836530+00:00",
+      "predicted_at": "2026-09-01T18:08:25.451506+00:00",
       "probability": 0.44676958846497233,
       "question": "Will the match last longer than 85 minutes?",
       "rbp": null,
@@ -42,7 +42,7 @@
         "exposure 67 service points from 20.6 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.836530+00:00",
+      "predicted_at": "2026-09-01T18:08:25.451506+00:00",
       "probability": 0.6274272616448777,
       "question": "Will C. Gauff record more aces than Z. Sonmez?",
       "rbp": null,
@@ -65,7 +65,7 @@
         "exposure 67 service points from 20.6 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.836530+00:00",
+      "predicted_at": "2026-09-01T18:08:25.451506+00:00",
       "probability": 0.45034631919318047,
       "question": "Will C. Gauff record more double faults than Z. Sonmez?",
       "rbp": null,
@@ -89,7 +89,7 @@
         "market consensus 0.935, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.836530+00:00",
+      "predicted_at": "2026-09-01T18:08:25.451506+00:00",
       "probability": 0.9046471753330723,
       "question": "Will C. Gauff win?",
       "rbp": null,
@@ -113,7 +113,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.836530+00:00",
+      "predicted_at": "2026-09-01T18:08:25.451506+00:00",
       "probability": 0.11474999999999999,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

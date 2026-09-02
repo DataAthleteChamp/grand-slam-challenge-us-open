@@ -13,14 +13,14 @@
       "market": null,
       "market_id": "2b5723d3-5a6a-4271-8b36-3e18a1562a74",
       "market_weight": 0.0,
-      "model": 0.5869559585341274,
+      "model": 0.5866377860473371,
       "notes": [
-        "total games: simulator 28.8, Pinnacle 29.4, used 29.2 at weight 0.60",
+        "total games: simulator 28.8, Pinnacle 29.4, used 29.1 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.848497+00:00",
-      "probability": 0.5869559585341274,
+      "predicted_at": "2026-09-01T18:08:25.463172+00:00",
+      "probability": 0.5866377860473371,
       "question": "Will the match last longer than 120 minutes?",
       "rbp": null,
       "settled_at": "",
@@ -37,19 +37,19 @@
       "market": null,
       "market_id": "d7f77272-66da-4f28-ad8b-1f0a6a457983",
       "market_weight": 0.0,
-      "model": 0.1214982979625804,
+      "model": 0.06944281089724491,
       "notes": [
         "ace vulnerability: Daniil Medvedev 0.56, Sebastian Gorzny 1.00",
         "exposure 97 service points from 31.3 games",
         "outcome coupling: P(win)=0.050, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.848497+00:00",
-      "probability": 0.2848253691956354,
+      "predicted_at": "2026-09-01T18:08:25.463172+00:00",
+      "probability": 0.25788665463932425,
       "question": "Will S. Gorzny record more aces than D. Medvedev?",
       "rbp": null,
       "settled_at": "",
-      "submission": 24
+      "submission": 21
     },
     {
       "base_rate": 0.421,
@@ -67,7 +67,7 @@
         "exposure 97 service points from 31.3 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.848497+00:00",
+      "predicted_at": "2026-09-01T18:08:25.463172+00:00",
       "probability": 0.3730109660529289,
       "question": "Will S. Gorzny record more double faults than D. Medvedev?",
       "rbp": null,
@@ -91,7 +91,7 @@
         "market consensus 0.050, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.848497+00:00",
+      "predicted_at": "2026-09-01T18:08:25.463172+00:00",
       "probability": 0.05551914388276354,
       "question": "Will S. Gorzny win?",
       "rbp": null,
@@ -115,7 +115,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.848497+00:00",
+      "predicted_at": "2026-09-01T18:08:25.463172+00:00",
       "probability": 0.23975,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

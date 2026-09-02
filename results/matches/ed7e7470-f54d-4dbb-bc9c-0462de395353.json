@@ -18,7 +18,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.849610+00:00",
+      "predicted_at": "2026-09-01T18:08:25.461544+00:00",
       "probability": 0.6655805230329885,
       "question": "Will the match last longer than 90 minutes?",
       "rbp": null,
@@ -41,7 +41,7 @@
         "exposure 71 service points from 21.9 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.849610+00:00",
+      "predicted_at": "2026-09-01T18:08:25.461544+00:00",
       "probability": 0.30772070248318023,
       "question": "Will A. Kalinskaya record more aces than X. Wang?",
       "rbp": null,
@@ -64,7 +64,7 @@
         "exposure 71 service points from 21.9 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.849610+00:00",
+      "predicted_at": "2026-09-01T18:08:25.461544+00:00",
       "probability": 0.4297897977423408,
       "question": "Will A. Kalinskaya record more double faults than X. Wang?",
       "rbp": null,
@@ -88,7 +88,7 @@
         "market consensus 0.669, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.849610+00:00",
+      "predicted_at": "2026-09-01T18:08:25.461544+00:00",
       "probability": 0.6424897120038167,
       "question": "Will A. Kalinskaya win?",
       "rbp": null,
@@ -112,7 +112,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.849610+00:00",
+      "predicted_at": "2026-09-01T18:08:25.461544+00:00",
       "probability": 0.174,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

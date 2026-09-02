@@ -1175,3 +1175,36 @@ def test_vulnerability_can_reverse_a_narrow_career_rate_edge():
     a = slightly_bigger_server * easy**ACE_VULNERABILITY_EXPONENT
     b = smaller_server * tough**ACE_VULNERABILITY_EXPONENT
     assert a > b  # the weaker server facing the tougher returner is now behind
+
+
+def test_tiebreak_iid_correction_is_mens_only():
+    """Points are not iid, so an iid simulator makes too few breaks and too many
+    tiebreaks (Klaassen & Magnus 2001).
+
+    Measured on 250 slam hard-court matches per tour: the men's simulator runs
+    +0.081 above realised (SE 0.032) and the women's -0.065 (SE 0.028).  Only
+    the men's correction ships, because only there do the backtest and this
+    tournament agree on the sign - and tiebreak is currently our strongest
+    family, so a half-supported correction is not worth risking it on.
+    """
+    from bot.data.baserates import tiebreak_sim_scale
+
+    assert tiebreak_sim_scale("ATP") < 1.0
+    assert tiebreak_sim_scale("WTA") == 1.0
+    assert tiebreak_sim_scale("UNKNOWN") == 1.0
+
+
+def test_tiebreak_correction_lowers_a_mens_tiebreak_price():
+    from bot.roster import Roster
+
+    roster, pricer = Roster.load(), Pricer(lane="honest")
+    context = roster.context("A. Zverev", "L. Sonego", tour="ATP")
+    if not (context.player_a.has_ratings and context.player_b.has_ratings):
+        pytest.skip("players missing from roster")
+    spec = parse_question(
+        "Will the match feature at least 1 tiebreak(s)?",
+        players=(context.player_a.name, context.player_b.name),
+    )
+    priced = pricer.price(spec, context, market_id="tb")
+    assert any("iid correction" in n for n in priced.notes)
+    assert priced.model_probability is not None

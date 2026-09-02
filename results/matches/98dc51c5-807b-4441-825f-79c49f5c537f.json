@@ -19,7 +19,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.835795+00:00",
+      "predicted_at": "2026-09-01T18:08:25.451073+00:00",
       "probability": 0.6953620203169917,
       "question": "Will the match last longer than 115 minutes?",
       "rbp": null,
@@ -37,19 +37,19 @@
       "market": null,
       "market_id": "796f885d-51c4-4015-aa5f-47cd4518f07c",
       "market_weight": 0.0,
-      "model": 0.6205999635454137,
+      "model": 0.6703889013896872,
       "notes": [
         "ace vulnerability: Andrea Guerrieri 1.00, Alex de Minaur 0.78",
         "exposure 108 service points from 34.9 games",
         "outcome coupling: P(win)=0.944, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.835795+00:00",
-      "probability": 0.5431104811347516,
+      "predicted_at": "2026-09-01T18:08:25.451073+00:00",
+      "probability": 0.5688762564691632,
       "question": "Will A. De Minaur record more aces than A. Guerrieri?",
       "rbp": null,
       "settled_at": "",
-      "submission": 55
+      "submission": 59
     },
     {
       "base_rate": 0.421,
@@ -67,7 +67,7 @@
         "exposure 108 service points from 34.9 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.835795+00:00",
+      "predicted_at": "2026-09-01T18:08:25.451073+00:00",
       "probability": 0.3839971119330662,
       "question": "Will A. De Minaur record more double faults than A. Guerrieri?",
       "rbp": null,
@@ -91,7 +91,7 @@
         "market consensus 0.944, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.835795+00:00",
+      "predicted_at": "2026-09-01T18:08:25.451073+00:00",
       "probability": 0.9245843768479809,
       "question": "Will A. De Minaur win?",
       "rbp": null,
@@ -115,7 +115,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.835795+00:00",
+      "predicted_at": "2026-09-01T18:08:25.451073+00:00",
       "probability": 0.3305,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

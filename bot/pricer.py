@@ -47,6 +47,7 @@ from .data.baserates import (
     service_points_for,
     structural,
     tiebreak_count_base,
+    tiebreak_sim_scale,
 )
 from .data.names import strip_accents
 from .markets.parser import MarketSpec
@@ -547,7 +548,11 @@ class Pricer:
             # The question carries a count: 'at least 1' and 'at least 2' are
             # different questions and a third of them asked for two.
             wanted = int(spec.threshold) if spec.threshold else 1
-            return tiebreak_at_least(simulation, wanted)
+            raw = tiebreak_at_least(simulation, wanted)
+            scale = tiebreak_sim_scale(context.tour)
+            if scale != 1.0:
+                notes.append(f"tiebreak iid correction x{scale:.2f} ({context.tour})")
+            return min(max(raw * scale, 0.002), 0.998)
         if spec.family is Family.DECIDING_SET:
             return simulation.p_deciding_set
         if spec.family is Family.LOPSIDED_SET:

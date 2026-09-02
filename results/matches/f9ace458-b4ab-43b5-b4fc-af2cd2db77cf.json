@@ -19,7 +19,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.832499+00:00",
+      "predicted_at": "2026-09-01T18:08:25.448169+00:00",
       "probability": 0.849963270893779,
       "question": "Will the match last longer than 125 minutes?",
       "rbp": null,
@@ -37,19 +37,19 @@
       "market": null,
       "market_id": "c468ca6c-33a5-4e87-979b-a4e0e503d8d2",
       "market_weight": 0.0,
-      "model": 0.3020504338317455,
+      "model": 0.27280074971438156,
       "notes": [
         "ace vulnerability: Lorenzo Musetti 0.85, Arthur Fery 1.00",
         "exposure 123 service points from 39.3 games",
-        "outcome coupling: P(win)=0.222, delta=+0.60"
+        "outcome coupling: P(win)=0.225, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.832499+00:00",
-      "probability": 0.3020504338317455,
+      "predicted_at": "2026-09-01T18:08:25.448169+00:00",
+      "probability": 0.27280074971438156,
       "question": "Will A. Fery record more aces than L. Musetti?",
       "rbp": null,
       "settled_at": "",
-      "submission": 26
+      "submission": 23
     },
     {
       "base_rate": 0.421,
@@ -67,7 +67,7 @@
         "exposure 123 service points from 39.3 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.832499+00:00",
+      "predicted_at": "2026-09-01T18:08:25.448169+00:00",
       "probability": 0.4438838673780512,
       "question": "Will A. Fery record more double faults than L. Musetti?",
       "rbp": null,
@@ -82,21 +82,21 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.22177419352861452,
+      "market": 0.22500000004291476,
       "market_id": "dac8a552-271d-4ee7-8306-1b5c4475990f",
       "market_weight": 0.8075,
       "model": 0.42325,
       "notes": [
         "simulated win probability 0.423",
-        "market consensus 0.222, weight 0.81"
+        "market consensus 0.225, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.832499+00:00",
-      "probability": 0.26029929434181764,
+      "predicted_at": "2026-09-01T18:08:25.448169+00:00",
+      "probability": 0.2630962571150054,
       "question": "Will A. Fery win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 21
+      "submission": 22
     },
     {
       "base_rate": 0.487,
@@ -115,7 +115,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.832499+00:00",
+      "predicted_at": "2026-09-01T18:08:25.448169+00:00",
       "probability": 0.42600000000000005,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

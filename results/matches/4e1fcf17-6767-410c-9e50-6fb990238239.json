@@ -13,14 +13,14 @@
       "market": null,
       "market_id": "44c8be20-8dcc-48e9-b64f-823587f9e7bd",
       "market_weight": 0.0,
-      "model": 0.604858638880829,
+      "model": 0.6025290920729648,
       "notes": [
-        "total games: simulator 21.5, Pinnacle 20.9, used 21.2 at weight 0.60",
+        "total games: simulator 21.5, Pinnacle 20.9, used 21.1 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.836157+00:00",
-      "probability": 0.604858638880829,
+      "predicted_at": "2026-09-01T18:08:25.451988+00:00",
+      "probability": 0.6025290920729648,
       "question": "Will the match last longer than 90 minutes?",
       "rbp": null,
       "settled_at": "",
@@ -42,7 +42,7 @@
         "exposure 70 service points from 21.5 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.836157+00:00",
+      "predicted_at": "2026-09-01T18:08:25.451988+00:00",
       "probability": 0.39252525163555413,
       "question": "Will A. Eala record more aces than M. Stoiana?",
       "rbp": null,
@@ -65,7 +65,7 @@
         "exposure 70 service points from 21.5 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.836157+00:00",
+      "predicted_at": "2026-09-01T18:08:25.451988+00:00",
       "probability": 0.4282752925508893,
       "question": "Will A. Eala record more double faults than M. Stoiana?",
       "rbp": null,
@@ -80,21 +80,21 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.7914887266558537,
+      "market": 0.7936170213295443,
       "market_id": "349d5bdf-6b46-42b9-a1e8-055ab0f7e4d6",
       "market_weight": 0.8075,
       "model": 0.544,
       "notes": [
         "simulated win probability 0.544",
-        "market consensus 0.791, weight 0.81"
+        "market consensus 0.794, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.836157+00:00",
-      "probability": 0.7466584876121443,
+      "predicted_at": "2026-09-01T18:08:25.451988+00:00",
+      "probability": 0.7485573136018673,
       "question": "Will A. Eala win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 79
+      "submission": 80
     },
     {
       "base_rate": 0.225,
@@ -113,7 +113,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.836157+00:00",
+      "predicted_at": "2026-09-01T18:08:25.451988+00:00",
       "probability": 0.13624999999999998,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

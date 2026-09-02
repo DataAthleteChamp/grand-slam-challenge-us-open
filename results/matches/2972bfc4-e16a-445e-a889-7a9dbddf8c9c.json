@@ -13,18 +13,18 @@
       "market": null,
       "market_id": "05f1a5fc-c6b4-43a3-bfc8-1788bb301552",
       "market_weight": 0.0,
-      "model": 0.6180223769332106,
+      "model": 0.6063044802786575,
       "notes": [
-        "total games: simulator 39.4, Pinnacle 41.0, used 40.4 at weight 0.60",
+        "total games: simulator 39.4, Pinnacle 40.5, used 40.1 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.851877+00:00",
-      "probability": 0.6180223769332106,
+      "predicted_at": "2026-09-01T18:08:25.465891+00:00",
+      "probability": 0.6063044802786575,
       "question": "Will the match last longer than 165 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 65
+      "submission": 63
     },
     {
       "base_rate": 0.46,
@@ -37,19 +37,19 @@
       "market": null,
       "market_id": "585e7ae7-c9f2-4bb5-80e5-aa49a932688a",
       "market_weight": 0.0,
-      "model": 0.6687816493201202,
+      "model": 0.7598976800114385,
       "notes": [
         "ace vulnerability: Alejandro Tabilo 1.30, Alexei Popyrin 0.98",
         "exposure 130 service points from 41.7 games",
-        "outcome coupling: P(win)=0.434, delta=+0.60"
+        "outcome coupling: P(win)=0.439, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.851877+00:00",
-      "probability": 0.6687816493201202,
+      "predicted_at": "2026-09-01T18:08:25.465891+00:00",
+      "probability": 0.7598976800114385,
       "question": "Will A. Popyrin record more aces than A. Tabilo?",
       "rbp": null,
       "settled_at": "",
-      "submission": 71
+      "submission": 81
     },
     {
       "base_rate": 0.421,
@@ -67,7 +67,7 @@
         "exposure 130 service points from 41.7 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.851877+00:00",
+      "predicted_at": "2026-09-01T18:08:25.465891+00:00",
       "probability": 0.526601865512451,
       "question": "Will A. Popyrin record more double faults than A. Tabilo?",
       "rbp": null,
@@ -82,17 +82,17 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.43418711693297574,
+      "market": 0.4387235514192025,
       "market_id": "e7161d71-387c-4e06-855d-6be9d9aa7320",
       "market_weight": 0.8075,
       "model": 0.503,
       "notes": [
         "simulated win probability 0.503",
-        "market consensus 0.434, weight 0.81"
+        "market consensus 0.439, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.851877+00:00",
-      "probability": 0.44850500886492695,
+      "predicted_at": "2026-09-01T18:08:25.465891+00:00",
+      "probability": 0.45210692726269003,
       "question": "Will A. Popyrin win?",
       "rbp": null,
       "settled_at": "",
@@ -115,7 +115,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.851877+00:00",
+      "predicted_at": "2026-09-01T18:08:25.465891+00:00",
       "probability": 0.22324999999999998,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,

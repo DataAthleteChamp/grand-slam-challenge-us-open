@@ -19,7 +19,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.834393+00:00",
+      "predicted_at": "2026-09-01T18:08:25.448679+00:00",
       "probability": 0.5661422526134986,
       "question": "Will the match last longer than 100 minutes?",
       "rbp": null,
@@ -42,7 +42,7 @@
         "exposure 69 service points from 21.3 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.834393+00:00",
+      "predicted_at": "2026-09-01T18:08:25.448679+00:00",
       "probability": 0.3877009902474003,
       "question": "Will R. Montgomery record more aces than M. Sakkari?",
       "rbp": null,
@@ -65,7 +65,7 @@
         "exposure 69 service points from 21.3 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.834393+00:00",
+      "predicted_at": "2026-09-01T18:08:25.448679+00:00",
       "probability": 0.4477217097270593,
       "question": "Will R. Montgomery record more double faults than M. Sakkari?",
       "rbp": null,
@@ -80,17 +80,17 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.4026436466024718,
+      "market": 0.4009254122605587,
       "market_id": "f7510350-f4a9-426d-b9e1-f809a31bc872",
       "market_weight": 0.8075,
       "model": 0.3045,
       "notes": [
         "simulated win probability 0.304",
-        "market consensus 0.403, weight 0.81"
+        "market consensus 0.401, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.834393+00:00",
-      "probability": 0.38547283750098205,
+      "predicted_at": "2026-09-01T18:08:25.448679+00:00",
+      "probability": 0.3841405125529703,
       "question": "Will R. Montgomery win?",
       "rbp": null,
       "settled_at": "",
@@ -113,7 +113,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.834393+00:00",
+      "predicted_at": "2026-09-01T18:08:25.448679+00:00",
       "probability": 0.15475,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

@@ -1,0 +1,131 @@
+{
+  "closing_time": "2026-09-02T06:00:00.000Z",
+  "draw": "mens",
+  "entries": [
+    {
+      "base_rate": 0.4821,
+      "brier": null,
+      "confidence": 0.95,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_duration",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "e2845e51-14bc-4f68-812d-52db2a74af98",
+      "market_weight": 0.0,
+      "model": 0.526656626827151,
+      "notes": [
+        "total games: simulator 37.0, Pinnacle 33.5, used 34.9 at weight 0.60"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T18:08:25.450180+00:00",
+      "probability": 0.526656626827151,
+      "question": "Will the match last longer than 155 minutes?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 53
+    },
+    {
+      "base_rate": 0.46,
+      "brier": null,
+      "confidence": 1.0,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "aces_comparison",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "a56f62fe-a868-46df-abb6-c2f8535995b8",
+      "market_weight": 0.0,
+      "model": 0.3047758644965908,
+      "notes": [
+        "ace vulnerability: Rafael Jodar 0.85, Yunchaokete Bu 1.16",
+        "exposure 122 service points from 39.2 games",
+        "outcome coupling: P(win)=0.359, delta=+0.60"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T18:08:25.450180+00:00",
+      "probability": 0.3047758644965908,
+      "question": "Will Y. Bu record more aces than R. Jodar?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 26
+    },
+    {
+      "base_rate": 0.421,
+      "brier": null,
+      "confidence": 1.0,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "double_faults_comparison",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "d756e254-e8e6-465c-abdb-bd8cf5c78428",
+      "market_weight": 0.0,
+      "model": 0.37217641020690573,
+      "notes": [
+        "exposure 122 service points from 39.2 games"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T18:08:25.450180+00:00",
+      "probability": 0.37217641020690573,
+      "question": "Will Y. Bu record more double faults than R. Jodar?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 34
+    },
+    {
+      "base_rate": 0.5,
+      "brier": null,
+      "confidence": 0.7,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_winner",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "206fa372-9307-4764-afc8-ee21c76058b8",
+      "market_weight": 0.0,
+      "model": 0.359,
+      "notes": [
+        "simulated win probability 0.359",
+        "no market quote; this is the family that most needs one"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T18:08:25.450180+00:00",
+      "probability": 0.386495,
+      "question": "Will Y. Bu win?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 36
+    },
+    {
+      "base_rate": 0.13263821138211385,
+      "brier": null,
+      "confidence": 0.95,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "tiebreak",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "8bd1a6a8-bfa7-4f7e-a010-d26926354da9",
+      "market_weight": 0.0,
+      "model": 0.1205,
+      "notes": [
+        "scenario lane: experimental tiebreak shift -0.040"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-01T18:08:25.450180+00:00",
+      "probability": 0.08049999999999999,
+      "question": "Will the match feature at least 2 tiebreak(s)?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 5
+    }
+  ],
+  "match_id": "1b12111f-3a6a-4d35-aa64-9ba0c8c3c5f1",
+  "match_name": "R. Jodar vs Y. Bu",
+  "multiplier": 1,
+  "opening_time": "2026-09-01T18:00:00.000Z",
+  "player_a": "Rafael Jodar",
+  "player_b": "Yunchaokete Bu",
+  "round_code": "R128"
+}

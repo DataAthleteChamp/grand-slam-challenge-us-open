@@ -19,7 +19,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.855626+00:00",
+      "predicted_at": "2026-09-01T18:08:25.469655+00:00",
       "probability": 0.7334230603625238,
       "question": "Will the match last longer than 90 minutes?",
       "rbp": null,
@@ -42,7 +42,7 @@
         "exposure 69 service points from 21.5 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.855626+00:00",
+      "predicted_at": "2026-09-01T18:08:25.469655+00:00",
       "probability": 0.38741093692772577,
       "question": "Will K. Rakhimova record more aces than O. Selekhmeteva?",
       "rbp": null,
@@ -65,7 +65,7 @@
         "exposure 69 service points from 21.5 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.855626+00:00",
+      "predicted_at": "2026-09-01T18:08:25.469655+00:00",
       "probability": 0.41775641251187023,
       "question": "Will K. Rakhimova record more double faults than O. Selekhmeteva?",
       "rbp": null,
@@ -89,7 +89,7 @@
         "market consensus 0.615, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.855626+00:00",
+      "predicted_at": "2026-09-01T18:08:25.469655+00:00",
       "probability": 0.5883035508008558,
       "question": "Will K. Rakhimova win?",
       "rbp": null,
@@ -113,7 +113,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.855626+00:00",
+      "predicted_at": "2026-09-01T18:08:25.469655+00:00",
       "probability": 0.122,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

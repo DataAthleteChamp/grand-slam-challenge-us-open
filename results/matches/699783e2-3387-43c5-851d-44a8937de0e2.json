@@ -19,7 +19,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.856784+00:00",
+      "predicted_at": "2026-09-01T18:08:25.471120+00:00",
       "probability": 0.6076598942848785,
       "question": "Will the match last longer than 90 minutes?",
       "rbp": null,
@@ -42,7 +42,7 @@
         "exposure 69 service points from 21.2 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.856784+00:00",
+      "predicted_at": "2026-09-01T18:08:25.471120+00:00",
       "probability": 0.4487615753412694,
       "question": "Will M. Bouzkova record more aces than H. Dart?",
       "rbp": null,
@@ -65,7 +65,7 @@
         "exposure 69 service points from 21.2 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.856784+00:00",
+      "predicted_at": "2026-09-01T18:08:25.471120+00:00",
       "probability": 0.42156651018818897,
       "question": "Will M. Bouzkova record more double faults than H. Dart?",
       "rbp": null,
@@ -89,7 +89,7 @@
         "market consensus 0.834, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.856784+00:00",
+      "predicted_at": "2026-09-01T18:08:25.471120+00:00",
       "probability": 0.7967992598908324,
       "question": "Will M. Bouzkova win?",
       "rbp": null,
@@ -113,7 +113,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.856784+00:00",
+      "predicted_at": "2026-09-01T18:08:25.471120+00:00",
       "probability": 0.11825,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

@@ -13,14 +13,14 @@
       "market": null,
       "market_id": "49c4890c-5fbc-42ca-a832-0c1b4c50bd39",
       "market_weight": 0.0,
-      "model": 0.31387075796007385,
+      "model": 0.31409356006215505,
       "notes": [
         "total games: simulator 34.9, Pinnacle 38.5, used 37.1 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.854875+00:00",
-      "probability": 0.31387075796007385,
+      "predicted_at": "2026-09-01T18:08:25.468585+00:00",
+      "probability": 0.31409356006215505,
       "question": "Will the match last longer than 190 minutes?",
       "rbp": null,
       "settled_at": "",
@@ -37,19 +37,19 @@
       "market": null,
       "market_id": "0130a2b1-393f-42d3-9b09-42dd651c3cc1",
       "market_weight": 0.0,
-      "model": 0.7202873622184816,
+      "model": 0.6462346977353176,
       "notes": [
         "ace vulnerability: Dalibor Svrcina 0.93, Luciano Darderi 1.37",
         "exposure 116 service points from 37.2 games",
         "outcome coupling: P(win)=0.598, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.854875+00:00",
-      "probability": 0.7202873622184816,
+      "predicted_at": "2026-09-01T18:08:25.468585+00:00",
+      "probability": 0.6462346977353176,
       "question": "Will L. Darderi record more aces than D. Svrcina?",
       "rbp": null,
       "settled_at": "",
-      "submission": 77
+      "submission": 68
     },
     {
       "base_rate": 0.421,
@@ -67,7 +67,7 @@
         "exposure 116 service points from 37.2 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.854875+00:00",
+      "predicted_at": "2026-09-01T18:08:25.468585+00:00",
       "probability": 0.28008639708900185,
       "question": "Will L. Darderi record more double faults than D. Svrcina?",
       "rbp": null,
@@ -82,7 +82,7 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.5981150848662083,
+      "market": 0.5984151329312593,
       "market_id": "e03ac6f3-2ea1-481c-b2fe-10b1e0dc7abc",
       "market_weight": 0.8075,
       "model": 0.31225,
@@ -91,8 +91,8 @@
         "market consensus 0.598, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.854875+00:00",
-      "probability": 0.5412193079509808,
+      "predicted_at": "2026-09-01T18:08:25.468585+00:00",
+      "probability": 0.5414638978003519,
       "question": "Will L. Darderi win?",
       "rbp": null,
       "settled_at": "",
@@ -115,7 +115,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.854875+00:00",
+      "predicted_at": "2026-09-01T18:08:25.468585+00:00",
       "probability": 0.30300000000000005,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

@@ -19,7 +19,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.852604+00:00",
+      "predicted_at": "2026-09-01T18:08:25.466319+00:00",
       "probability": 0.4261242352884776,
       "question": "Will the match last longer than 185 minutes?",
       "rbp": null,
@@ -37,19 +37,19 @@
       "market": null,
       "market_id": "59ee00f8-fbc5-4b63-a13e-2c74c948eba7",
       "market_weight": 0.0,
-      "model": 0.3169936192163584,
+      "model": 0.36666439434213394,
       "notes": [
         "ace vulnerability: Brandon Nakashima 1.15, Alex Michelsen 0.96",
         "exposure 129 service points from 41.2 games",
         "outcome coupling: P(win)=0.340, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.852604+00:00",
-      "probability": 0.3169936192163584,
+      "predicted_at": "2026-09-01T18:08:25.466319+00:00",
+      "probability": 0.36666439434213394,
       "question": "Will A. Michelsen record more aces than B. Nakashima?",
       "rbp": null,
       "settled_at": "",
-      "submission": 28
+      "submission": 34
     },
     {
       "base_rate": 0.421,
@@ -67,7 +67,7 @@
         "exposure 129 service points from 41.2 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.852604+00:00",
+      "predicted_at": "2026-09-01T18:08:25.466319+00:00",
       "probability": 0.613073642853115,
       "question": "Will A. Michelsen record more double faults than B. Nakashima?",
       "rbp": null,
@@ -91,7 +91,7 @@
         "market consensus 0.340, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.852604+00:00",
+      "predicted_at": "2026-09-01T18:08:25.466319+00:00",
       "probability": 0.3580596418152995,
       "question": "Will A. Michelsen win?",
       "rbp": null,
@@ -115,7 +115,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.852604+00:00",
+      "predicted_at": "2026-09-01T18:08:25.466319+00:00",
       "probability": 0.19125,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,

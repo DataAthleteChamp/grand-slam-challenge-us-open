@@ -229,6 +229,44 @@ TIEBREAK_COUNTS = {
 }
 
 
+#: Multiplicative correction on the simulator's tiebreak probability, by tour.
+#:
+#: The simulator assumes points are iid given the server.  Klaassen & Magnus
+#: (2001) showed they are not: servers win fewer of the most important points
+#: than iid predicts, so real matches contain more breaks - and therefore fewer
+#: tiebreaks - than the simulation produces.  Measured on 2022-25 slam hard
+#: courts with rated players, 250 matches per tour, at the sigma each tour now
+#: uses:
+#:
+#: | Tour | simulated P(>=1 TB) | realised | bias | SE |
+#: |---|---|---|---|---|
+#: | ATP | 0.557 | 0.476 | +0.081 | 0.032 |
+#: | WTA | 0.191 | 0.256 | -0.065 | 0.028 |
+#:
+#: Only the men's correction is applied, because only there do the historical
+#: and live evidence agree.  On the men's draw the simulator over-predicts in
+#: the backtest (t=+2.5) and has over-predicted in this tournament as well.
+#:
+#: The women's number says the opposite - that raising sigma to 0.11 has left us
+#: *under*-predicting tiebreaks - but this tournament's women's tiebreaks have
+#: come in far below any historical rate, so history and live data disagree
+#: about the sign.  Tiebreak is also currently our strongest family
+#: (+1.41 RBP/question overall, +3.07 on the women's draw), and a correction
+#: that is not supported by both sources is not worth risking it on.  Revisit
+#: once more women's tiebreak questions have settled.
+#:
+#: Applied multiplicatively rather than as an offset so it cannot push a
+#: probability below zero, and so it carries over to the "at least two"
+#: question: the simulated ratio of P(>=2) to P(>=1) is 0.333 against a realised
+#: 0.336, so the count structure is already right and only the level is wrong.
+TIEBREAK_SIM_SCALE = {"ATP": 0.88, "WTA": 1.0}
+
+
+def tiebreak_sim_scale(tour: str) -> float:
+    """Correction factor on the simulator's tiebreak probability."""
+    return TIEBREAK_SIM_SCALE.get(tour, 1.0)
+
+
 def tiebreak_count_base(count: int, tour: str) -> float:
     """Unconditional ``P(at least `count` tiebreaks)`` for a tour."""
     table = TIEBREAK_COUNTS.get(tour, TIEBREAK_COUNTS["ATP"])

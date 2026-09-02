@@ -19,7 +19,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.851454+00:00",
+      "predicted_at": "2026-09-01T18:08:25.465477+00:00",
       "probability": 0.5624716277671171,
       "question": "Will the match last longer than 100 minutes?",
       "rbp": null,
@@ -42,7 +42,7 @@
         "exposure 71 service points from 21.8 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.851454+00:00",
+      "predicted_at": "2026-09-01T18:08:25.465477+00:00",
       "probability": 0.3192163054964297,
       "question": "Will A. Li record more aces than D. Vekic?",
       "rbp": null,
@@ -65,7 +65,7 @@
         "exposure 71 service points from 21.8 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.851454+00:00",
+      "predicted_at": "2026-09-01T18:08:25.465477+00:00",
       "probability": 0.41835176201046886,
       "question": "Will A. Li record more double faults than D. Vekic?",
       "rbp": null,
@@ -80,17 +80,17 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.6083873039872022,
+      "market": 0.6051893408187136,
       "market_id": "553a592f-f14e-4524-ad59-d1ab8eb6d83f",
       "market_weight": 0.8075,
       "model": 0.50775,
       "notes": [
         "simulated win probability 0.508",
-        "market consensus 0.608, weight 0.81"
+        "market consensus 0.605, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.851454+00:00",
-      "probability": 0.5874398659388453,
+      "predicted_at": "2026-09-01T18:08:25.465477+00:00",
+      "probability": 0.5848771550271081,
       "question": "Will A. Li win?",
       "rbp": null,
       "settled_at": "",
@@ -113,7 +113,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.851454+00:00",
+      "predicted_at": "2026-09-01T18:08:25.465477+00:00",
       "probability": 0.1485,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

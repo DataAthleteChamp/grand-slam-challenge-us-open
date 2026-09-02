@@ -19,7 +19,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.850553+00:00",
+      "predicted_at": "2026-09-01T18:08:25.464547+00:00",
       "probability": 0.6641862653653261,
       "question": "Will the match last longer than 85 minutes?",
       "rbp": null,
@@ -42,7 +42,7 @@
         "exposure 70 service points from 21.7 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.850553+00:00",
+      "predicted_at": "2026-09-01T18:08:25.464547+00:00",
       "probability": 0.4024558698304624,
       "question": "Will K. Boulter record more aces than K. Muchova?",
       "rbp": null,
@@ -65,7 +65,7 @@
         "exposure 70 service points from 21.7 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.850553+00:00",
+      "predicted_at": "2026-09-01T18:08:25.464547+00:00",
       "probability": 0.44827844352886237,
       "question": "Will K. Boulter record more double faults than K. Muchova?",
       "rbp": null,
@@ -89,7 +89,7 @@
         "market consensus 0.148, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.850553+00:00",
+      "predicted_at": "2026-09-01T18:08:25.464547+00:00",
       "probability": 0.18586343643018652,
       "question": "Will K. Boulter win?",
       "rbp": null,
@@ -113,7 +113,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T15:53:09.850553+00:00",
+      "predicted_at": "2026-09-01T18:08:25.464547+00:00",
       "probability": 0.16524999999999998,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
