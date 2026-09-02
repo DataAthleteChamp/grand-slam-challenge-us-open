@@ -348,3 +348,25 @@ def test_beta_comparison_prior_shifts_thin_samples_more_than_thick_ones():
     thin = beta_comparison(3, 5, 2, 5, prior=(1.0, 1.0))
     thick = beta_comparison(300, 500, 200, 500, prior=(1.0, 1.0))
     assert thick > thin, "a large sample should express the difference more strongly"
+
+
+def test_count_confidence_is_not_pinned_to_the_base_rate_anywhere():
+    """The women's double-fault model was pinned at 0.10 by a sweep run on
+    broken data.
+
+    That sweep used 2025-2026 hard-court slams.  On the women's tour those files
+    invert the winner/loser serve statistics: winners double-fault *more* (0.61
+    in 2025 against 0.34-0.39 in every clean year) and ace less, and the 2026
+    hard-court subset sits at exactly 0.50 for both, which is what randomly
+    assigned statistics look like.  The men's figures are stable across all six
+    years, so this is a data fault and not a real change in the sport.
+
+    Re-swept on a clean hold-out, every family wants the model at full strength,
+    and replaying the competition's own settled women's double-fault questions at
+    1.00 instead of 0.10 is worth +4.22 RBP/question, 95% CI [+1.70, +6.75].
+    """
+    from bot.data.baserates import COUNT_CONFIDENCE
+
+    assert COUNT_CONFIDENCE[("WTA", "double_faults")] >= 0.9
+    for key, value in COUNT_CONFIDENCE.items():
+        assert 0.85 <= value <= 1.0, f"{key} pulled too far toward its base rate"

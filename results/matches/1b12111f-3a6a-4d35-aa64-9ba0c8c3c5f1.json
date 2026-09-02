@@ -1,5 +1,5 @@
 {
-  "closing_time": "2026-09-02T06:00:00.000Z",
+  "closing_time": "2026-09-03T04:30:00.000Z",
   "draw": "mens",
   "entries": [
     {
@@ -13,17 +13,17 @@
       "market": null,
       "market_id": "e2845e51-14bc-4f68-812d-52db2a74af98",
       "market_weight": 0.0,
-      "model": 0.526656626827151,
+      "model": 0.4825108558858836,
       "notes": [
-        "total games: simulator 37.0, Pinnacle 33.5, used 34.9 at weight 0.60"
+        "total games: simulator 37.0, Pinnacle 31.9, used 33.9 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T18:08:25.450180+00:00",
-      "probability": 0.526656626827151,
+      "predicted_at": "2026-09-02T15:17:47.164211+00:00",
+      "probability": 0.4825108558858836,
       "question": "Will the match last longer than 155 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 53
+      "submission": 48
     },
     {
       "base_rate": 0.46,
@@ -43,7 +43,7 @@
         "outcome coupling: P(win)=0.359, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T18:08:25.450180+00:00",
+      "predicted_at": "2026-09-02T15:17:47.164211+00:00",
       "probability": 0.3047758644965908,
       "question": "Will Y. Bu record more aces than R. Jodar?",
       "rbp": null,
@@ -66,7 +66,7 @@
         "exposure 122 service points from 39.2 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T18:08:25.450180+00:00",
+      "predicted_at": "2026-09-02T15:17:47.164211+00:00",
       "probability": 0.37217641020690573,
       "question": "Will Y. Bu record more double faults than R. Jodar?",
       "rbp": null,
@@ -90,7 +90,7 @@
         "no market quote; this is the family that most needs one"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T18:08:25.450180+00:00",
+      "predicted_at": "2026-09-02T15:17:47.164211+00:00",
       "probability": 0.386495,
       "question": "Will Y. Bu win?",
       "rbp": null,
@@ -108,23 +108,24 @@
       "market": null,
       "market_id": "8bd1a6a8-bfa7-4f7e-a010-d26926354da9",
       "market_weight": 0.0,
-      "model": 0.1205,
+      "model": 0.10604,
       "notes": [
+        "tiebreak iid correction x0.88 (ATP)",
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T18:08:25.450180+00:00",
-      "probability": 0.08049999999999999,
+      "predicted_at": "2026-09-02T15:17:47.164211+00:00",
+      "probability": 0.06603999999999999,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 5
+      "submission": 4
     }
   ],
   "match_id": "1b12111f-3a6a-4d35-aa64-9ba0c8c3c5f1",
   "match_name": "R. Jodar vs Y. Bu",
   "multiplier": 1,
-  "opening_time": "2026-09-01T18:00:00.000Z",
+  "opening_time": "2026-09-02T16:30:00.000Z",
   "player_a": "Rafael Jodar",
   "player_b": "Yunchaokete Bu",
   "round_code": "R128"

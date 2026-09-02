@@ -1,5 +1,5 @@
 {
-  "closing_time": "2026-09-03T03:00:00.000Z",
+  "closing_time": "2026-09-03T04:00:00.000Z",
   "draw": "womens",
   "entries": [
     {
@@ -19,7 +19,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T18:08:25.465477+00:00",
+      "predicted_at": "2026-09-02T15:17:47.162351+00:00",
       "probability": 0.5624716277671171,
       "question": "Will the match last longer than 100 minutes?",
       "rbp": null,
@@ -42,7 +42,7 @@
         "exposure 71 service points from 21.8 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T18:08:25.465477+00:00",
+      "predicted_at": "2026-09-02T15:17:47.162351+00:00",
       "probability": 0.3192163054964297,
       "question": "Will A. Li record more aces than D. Vekic?",
       "rbp": null,
@@ -65,7 +65,7 @@
         "exposure 71 service points from 21.8 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T18:08:25.465477+00:00",
+      "predicted_at": "2026-09-02T15:17:47.162351+00:00",
       "probability": 0.41835176201046886,
       "question": "Will A. Li record more double faults than D. Vekic?",
       "rbp": null,
@@ -80,7 +80,7 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.6051893408187136,
+      "market": 0.6046176046046371,
       "market_id": "553a592f-f14e-4524-ad59-d1ab8eb6d83f",
       "market_weight": 0.8075,
       "model": 0.50775,
@@ -89,12 +89,12 @@
         "market consensus 0.605, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T18:08:25.465477+00:00",
-      "probability": 0.5848771550271081,
+      "predicted_at": "2026-09-02T15:17:47.162351+00:00",
+      "probability": 0.5844192458914637,
       "question": "Will A. Li win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 61
+      "submission": 60
     },
     {
       "base_rate": 0.225,
@@ -113,7 +113,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T18:08:25.465477+00:00",
+      "predicted_at": "2026-09-02T15:17:47.162351+00:00",
       "probability": 0.1485,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
@@ -124,7 +124,7 @@
   "match_id": "2071d543-3369-4ae2-a38a-2a748f1feff0",
   "match_name": "A. Li vs D. Vekic",
   "multiplier": 1,
-  "opening_time": "2026-09-02T15:00:00.000Z",
+  "opening_time": "2026-09-02T16:00:00.000Z",
   "player_a": "Ann Li",
   "player_b": "Donna Vekic",
   "round_code": "R128"

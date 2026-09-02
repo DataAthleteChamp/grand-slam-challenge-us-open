@@ -1,0 +1,131 @@
+{
+  "closing_time": "2026-09-04T03:00:00.000Z",
+  "draw": "womens",
+  "entries": [
+    {
+      "base_rate": 0.5055,
+      "brier": null,
+      "confidence": 0.95,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_duration",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "daa119a0-9aa3-47c9-9381-a9a11ed7d3ee",
+      "market_weight": 0.0,
+      "model": 0.45558969907877356,
+      "notes": [
+        "total games: simulator 21.5, Pinnacle 17.7, used 19.2 at weight 0.60",
+        "no usable market quote for this question"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-02T15:17:47.175867+00:00",
+      "probability": 0.45558969907877356,
+      "question": "Will the match last longer than 90 minutes?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 44
+    },
+    {
+      "base_rate": 0.427,
+      "brier": null,
+      "confidence": 0.45,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "aces_comparison",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "79aad0dc-1453-4951-bd7b-e62f23e20a02",
+      "market_weight": 0.0,
+      "model": 0.4234803373053838,
+      "notes": [
+        "exposure 70 service points from 21.5 games"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-02T15:17:47.175867+00:00",
+      "probability": 0.4251785745555361,
+      "question": "Will A. Eala record more aces than O. Oliynykova?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 41
+    },
+    {
+      "base_rate": 0.433,
+      "brier": null,
+      "confidence": 0.45,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "double_faults_comparison",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "c8242bb0-2b29-48f2-8a3c-66bdc57e2d3f",
+      "market_weight": 0.0,
+      "model": 0.43068214877952204,
+      "notes": [
+        "exposure 70 service points from 21.5 games"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-02T15:17:47.175867+00:00",
+      "probability": 0.43180051199340264,
+      "question": "Will A. Eala record more double faults than O. Oliynykova?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 42
+    },
+    {
+      "base_rate": 0.5,
+      "brier": null,
+      "confidence": 0.85,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_winner",
+      "lane": "scenario",
+      "market": 0.9006230529345252,
+      "market_id": "7dbc8499-e848-4fab-abdb-1f0db8b2084b",
+      "market_weight": 0.8075,
+      "model": 0.53375,
+      "notes": [
+        "simulated win probability 0.534",
+        "market consensus 0.901, weight 0.81"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-02T15:17:47.175867+00:00",
+      "probability": 0.8507901543905592,
+      "question": "Will A. Eala win?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 90
+    },
+    {
+      "base_rate": 0.225,
+      "brier": null,
+      "confidence": 0.95,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "tiebreak",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "1ef28e16-8763-48e0-a09a-bd6c9e47d0c7",
+      "market_weight": 0.0,
+      "model": 0.17425,
+      "notes": [
+        "no usable market quote for this question",
+        "scenario lane: experimental tiebreak shift -0.040"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-02T15:17:47.175867+00:00",
+      "probability": 0.13424999999999998,
+      "question": "Will the match feature at least 1 tiebreak(s)?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 9
+    }
+  ],
+  "match_id": "39c6e47e-24af-495c-917b-a60ec7e3cb9b",
+  "match_name": "O. Oliynykova vs A. Eala",
+  "multiplier": 1,
+  "opening_time": "2026-09-03T15:00:00.000Z",
+  "player_a": "Oleksandra Oliynykova",
+  "player_b": "Alexandra Eala",
+  "round_code": "R128"
+}

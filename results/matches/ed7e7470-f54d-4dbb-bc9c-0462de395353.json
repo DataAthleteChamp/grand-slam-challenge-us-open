@@ -1,5 +1,5 @@
 {
-  "closing_time": "2026-09-03T03:00:00.000Z",
+  "closing_time": "2026-09-03T04:00:00.000Z",
   "draw": "womens",
   "entries": [
     {
@@ -18,7 +18,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T18:08:25.461544+00:00",
+      "predicted_at": "2026-09-02T15:17:47.161670+00:00",
       "probability": 0.6655805230329885,
       "question": "Will the match last longer than 90 minutes?",
       "rbp": null,
@@ -41,7 +41,7 @@
         "exposure 71 service points from 21.9 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T18:08:25.461544+00:00",
+      "predicted_at": "2026-09-02T15:17:47.161670+00:00",
       "probability": 0.30772070248318023,
       "question": "Will A. Kalinskaya record more aces than X. Wang?",
       "rbp": null,
@@ -64,7 +64,7 @@
         "exposure 71 service points from 21.9 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T18:08:25.461544+00:00",
+      "predicted_at": "2026-09-02T15:17:47.161670+00:00",
       "probability": 0.4297897977423408,
       "question": "Will A. Kalinskaya record more double faults than X. Wang?",
       "rbp": null,
@@ -79,21 +79,21 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.6693889896960425,
+      "market": 0.6654040404198828,
       "market_id": "4e767150-9efb-461e-91db-02ad54769545",
       "market_weight": 0.8075,
       "model": 0.54,
       "notes": [
         "simulated win probability 0.540",
-        "market consensus 0.669, weight 0.81"
+        "market consensus 0.665, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T18:08:25.461544+00:00",
-      "probability": 0.6424897120038167,
+      "predicted_at": "2026-09-02T15:17:47.161670+00:00",
+      "probability": 0.6392414593921538,
       "question": "Will A. Kalinskaya win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 68
+      "submission": 67
     },
     {
       "base_rate": 0.225,
@@ -112,7 +112,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T18:08:25.461544+00:00",
+      "predicted_at": "2026-09-02T15:17:47.161670+00:00",
       "probability": 0.174,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
@@ -123,7 +123,7 @@
   "match_id": "ed7e7470-f54d-4dbb-bc9c-0462de395353",
   "match_name": "X. Wang vs A. Kalinskaya",
   "multiplier": 1,
-  "opening_time": "2026-09-02T15:00:00.000Z",
+  "opening_time": "2026-09-02T16:00:00.000Z",
   "player_a": "Xiyu Wang",
   "player_b": "Anna Kalinskaya",
   "round_code": "R128"

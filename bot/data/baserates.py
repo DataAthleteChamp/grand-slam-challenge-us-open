@@ -525,48 +525,53 @@ def outcome_coupling(stat: str, tour: str) -> float:
 
 #: How far to trust the count model, by tour and statistic.
 #:
-#: Measured by sweeping the shrinkage weight on real hard-court slam matches
-#: (2025-2026) and reading off the Brier minimum:
+#: All four are 1.00: use the count model as it comes, with no pull toward the
+#: base rate.  Getting here required throwing out the original sweep entirely.
 #:
-#: | Family | n | best | Brier at best | Brier at 0.75 |
-#: |---|---|---|---|---|
-#: | ATP aces | 358 | 1.00 | 0.1924 | 0.2008 |
-#: | ATP double faults | 358 | 1.00 | 0.1908 | 0.1949 |
-#: | WTA aces | 320 | 0.75 | 0.2420 | 0.2420 |
-#: | WTA double faults | 320 | **0.00** | 0.2717 | 0.2775 |
+#: That sweep was run on "real hard-court slam matches (2025-2026)" and reported
+#: an optimum of **0.00** for women's double faults, concluding that "the base
+#: rate beats our model outright".  The data it was run on is broken.  Comparing
+#: the winner's and loser's serve statistics year by year on hard courts:
 #:
-#: The women's double-fault result is the important one and the curve is
-#: monotone: every increase in model weight makes the forecast worse, so the
-#: base rate beats our model outright.  It agrees with an independent finding
-#: that the outcome coupling was actively harmful for the same family.
+#: | WTA year | winner > loser DF | winner > loser aces |
+#: |---|---|---|
+#: | 2021-2024 | 0.34 - 0.39 | 0.55 - 0.56 |
+#: | 2025 | **0.61** | **0.44** |
+#: | 2026 (hard) | **0.50** | **0.50** |
 #:
-#: This is the tennis analogue of the foul markets that finished 125 relative
-#: points down in the predecessor event, where the crowd beat every model. The
-#: correct response is to stop departing from the base rate, not to model harder.
+#: Winners double-fault less and ace more, consistently, in every clean year and
+#: on both tours; the men's figures are stable across all six years.  The 2025
+#: women's file inverts both and the 2026 hard-court subset is at exactly 0.50,
+#: which is what randomly assigned statistics look like.  A model scored against
+#: that data looks worthless however good it is.
 #:
-#: Values were previously pulled back from the measured optimum (0.90 rather
-#: than 1.00) because n is about 350 and the sweep shares data with other fits.
-#: That hedge has now been tested against live settled results and it was
-#: costing us.  Submitting the unshrunk model instead of the pulled-back value
-#: would have gained, per question, over 42 settled matches:
+#: Re-swept on a clean hold-out (fit 2021-23, test 2024, subject drawn at random
+#: as the competition does rather than always winner-first, which would leave the
+#: base rate wrong by construction and flatter any setting that moves away from
+#: it):
 #:
-#:   ATP aces   +1.09 RBP  95% CI [+0.39, +2.00]   significant
-#:   WTA aces   +1.73 RBP  95% CI [+0.69, +2.77]   significant
-#:   ATP double faults  +0.45  CI [-0.19, +1.14]   directional only
-#:   WTA double faults  +1.85  CI [-1.30, +5.17]   uninformative, CI is huge
+#: | Family | best | Brier at best | Brier at 0.10 | gain vs 0.10 | 95% CI |
+#: |---|---|---|---|---|---|
+#: | WTA aces | 1.00 | 0.1967 | 0.2438 | +4.71 | [+3.61, +5.79] |
+#: | WTA double faults | 1.00 | 0.2036 | 0.2496 | +4.60 | [+3.63, +5.58] |
+#: | ATP aces | 0.90 | 0.2133 | 0.2432 | +3.00 | [+1.84, +4.13] |
+#: | ATP double faults | 1.00 | 0.2113 | 0.2522 | +4.09 | [+3.12, +5.11] |
 #:
-#: So the ATP hedge is removed outright: the historical sweep said 1.00 and the
-#: live results independently agree.  WTA aces is a genuine conflict - the sweep
-#: said 0.75 on n=320, the live sample says 1.00 on n=13 - and is split at 0.85
-#: rather than believing the smaller sample.  WTA double faults stays pinned
-#: near zero: the historical curve was monotone toward 0.00 on n=320, server
-#: identity explains only 14% of that family's variance, and the live interval
-#: is far too wide to overturn any of that.
+#: Confirmed independently on the competition's own settled questions: replaying
+#: the women's double-fault markets at 1.00 instead of 0.10 is worth +4.22
+#: RBP/question, 95% CI [+1.70, +6.75].  On those same questions the unshrunk
+#: model separates the outcome with AUC 0.797 and a spread of 0.094 - almost
+#: exactly the crowd's 0.092 - while what we actually submitted had a spread of
+#: 0.021, the same answer every time.
+#:
+#: ATP aces measures 0.90 rather than 1.00, but the curve is flat there
+#: (0.2133 against 0.2140, under a tenth of a point per question) and the live
+#: settled questions prefer 1.00, so it is left at 1.00 rather than split.
 COUNT_CONFIDENCE = {
     ("ATP", "aces"): 1.00,
     ("ATP", "double_faults"): 1.00,
-    ("WTA", "aces"): 0.85,
-    ("WTA", "double_faults"): 0.10,
+    ("WTA", "aces"): 1.00,
+    ("WTA", "double_faults"): 1.00,
 }
 
 

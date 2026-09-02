@@ -1,5 +1,5 @@
 {
-  "closing_time": "2026-09-03T03:00:00.000Z",
+  "closing_time": "2026-09-03T02:30:00.000Z",
   "draw": "mens",
   "entries": [
     {
@@ -13,14 +13,14 @@
       "market": null,
       "market_id": "6151c61e-a578-40c4-a06f-ca5d0f1ba665",
       "market_weight": 0.0,
-      "model": 0.5226933968935249,
+      "model": 0.5229594823486441,
       "notes": [
         "total games: simulator 39.1, Pinnacle 40.0, used 39.6 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T18:08:25.469008+00:00",
-      "probability": 0.5226933968935249,
+      "predicted_at": "2026-09-02T15:17:47.153517+00:00",
+      "probability": 0.5229594823486441,
       "question": "Will the match last longer than 180 minutes?",
       "rbp": null,
       "settled_at": "",
@@ -37,19 +37,19 @@
       "market": null,
       "market_id": "8d630555-cde6-409a-9f5d-37e9cf028164",
       "market_weight": 0.0,
-      "model": 0.2692026808489727,
+      "model": 0.2732946196962881,
       "notes": [
         "ace vulnerability: Arthur Rinderknech 0.97, Jaume Munar 0.77",
         "exposure 129 service points from 41.3 games",
-        "outcome coupling: P(win)=0.387, delta=+0.60"
+        "outcome coupling: P(win)=0.404, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T18:08:25.469008+00:00",
-      "probability": 0.2692026808489727,
+      "predicted_at": "2026-09-02T15:17:47.153517+00:00",
+      "probability": 0.2732946196962881,
       "question": "Will J. Munar record more aces than A. Rinderknech?",
       "rbp": null,
       "settled_at": "",
-      "submission": 22
+      "submission": 23
     },
     {
       "base_rate": 0.421,
@@ -67,7 +67,7 @@
         "exposure 129 service points from 41.3 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T18:08:25.469008+00:00",
+      "predicted_at": "2026-09-02T15:17:47.153517+00:00",
       "probability": 0.5719130068285984,
       "question": "Will J. Munar record more double faults than A. Rinderknech?",
       "rbp": null,
@@ -82,21 +82,21 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.38695605915269776,
+      "market": 0.4039995923383324,
       "market_id": "099bf7c4-26c9-4287-ac0b-bf6f5ddbf7d5",
       "market_weight": 0.8075,
       "model": 0.523,
       "notes": [
         "simulated win probability 0.523",
-        "market consensus 0.387, weight 0.81"
+        "market consensus 0.404, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T18:08:25.469008+00:00",
-      "probability": 0.4144240328254034,
+      "predicted_at": "2026-09-02T15:17:47.153517+00:00",
+      "probability": 0.42812742237448215,
       "question": "Will J. Munar win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 39
+      "submission": 41
     },
     {
       "base_rate": 0.13263821138211385,
@@ -109,24 +109,25 @@
       "market": null,
       "market_id": "5b6eaf82-2797-46db-ab20-b0daad3d5469",
       "market_weight": 0.0,
-      "model": 0.228,
+      "model": 0.20064,
       "notes": [
+        "tiebreak iid correction x0.88 (ATP)",
         "no usable market quote for this question",
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T18:08:25.469008+00:00",
-      "probability": 0.188,
+      "predicted_at": "2026-09-02T15:17:47.153517+00:00",
+      "probability": 0.16064,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 14
+      "submission": 11
     }
   ],
   "match_id": "5b80201d-548f-4957-9cbc-6789c3f54ded",
   "match_name": "J. Munar vs A. Rinderknech",
   "multiplier": 1,
-  "opening_time": "2026-09-02T15:00:00.000Z",
+  "opening_time": "2026-09-02T14:30:00.000Z",
   "player_a": "Jaume Munar",
   "player_b": "Arthur Rinderknech",
   "round_code": "R128"

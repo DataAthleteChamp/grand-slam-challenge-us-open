@@ -1,0 +1,131 @@
+{
+  "closing_time": "2026-09-04T03:00:00.000Z",
+  "draw": "womens",
+  "entries": [
+    {
+      "base_rate": 0.3511,
+      "brier": null,
+      "confidence": 0.95,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_duration",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "4542a275-fe06-4c70-a9c3-675d9aadfb39",
+      "market_weight": 0.0,
+      "model": 0.5268066524978191,
+      "notes": [
+        "total games: simulator 21.9, Pinnacle 23.0, used 22.5 at weight 0.60",
+        "no usable market quote for this question"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-02T15:17:47.176756+00:00",
+      "probability": 0.5268066524978191,
+      "question": "Will the match last longer than 105 minutes?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 53
+    },
+    {
+      "base_rate": 0.427,
+      "brier": null,
+      "confidence": 0.85,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "aces_comparison",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "5347c7da-11dc-4df9-acc5-4a0ce6797f65",
+      "market_weight": 0.0,
+      "model": 0.09494803646409039,
+      "notes": [
+        "exposure 71 service points from 21.9 games"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-02T15:17:47.176756+00:00",
+      "probability": 0.10241920564364838,
+      "question": "Will Y. Putintseva record more aces than Q. Zheng?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 6
+    },
+    {
+      "base_rate": 0.433,
+      "brier": null,
+      "confidence": 0.1,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "double_faults_comparison",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "e051db28-c8ac-4420-a2f1-6131fd7d9909",
+      "market_weight": 0.0,
+      "model": 0.22020753749214567,
+      "notes": [
+        "exposure 71 service points from 21.9 games"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-02T15:17:47.176756+00:00",
+      "probability": 0.4085288668115968,
+      "question": "Will Y. Putintseva record more double faults than Q. Zheng?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 39
+    },
+    {
+      "base_rate": 0.5,
+      "brier": null,
+      "confidence": 0.85,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_winner",
+      "lane": "scenario",
+      "market": 0.27986095753332496,
+      "market_id": "dd790caf-6543-43a9-9288-1b611ac2a933",
+      "market_weight": 0.8075,
+      "model": 0.41325,
+      "notes": [
+        "simulated win probability 0.413",
+        "market consensus 0.280, weight 0.81"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-02T15:17:47.176756+00:00",
+      "probability": 0.30792048476969797,
+      "question": "Will Y. Putintseva win?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 27
+    },
+    {
+      "base_rate": 0.225,
+      "brier": null,
+      "confidence": 0.95,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "tiebreak",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "42a6e78a-c964-44dc-b5de-d21d9f92e212",
+      "market_weight": 0.0,
+      "model": 0.214,
+      "notes": [
+        "no usable market quote for this question",
+        "scenario lane: experimental tiebreak shift -0.040"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-02T15:17:47.176756+00:00",
+      "probability": 0.174,
+      "question": "Will the match feature at least 1 tiebreak?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 12
+    }
+  ],
+  "match_id": "f99c6da6-ae00-41de-bc04-2c0589ce1b50",
+  "match_name": "Q. Zheng vs Y. Putintseva",
+  "multiplier": 1,
+  "opening_time": "2026-09-03T15:00:00.000Z",
+  "player_a": "Qinwen Zheng",
+  "player_b": "Yulia Putintseva",
+  "round_code": "R128"
+}

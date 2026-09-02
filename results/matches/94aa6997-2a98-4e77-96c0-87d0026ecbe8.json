@@ -1,5 +1,5 @@
 {
-  "closing_time": "2026-09-03T03:00:00.000Z",
+  "closing_time": "2026-09-03T02:30:00.000Z",
   "draw": "womens",
   "entries": [
     {
@@ -13,14 +13,14 @@
       "market": null,
       "market_id": "664da829-c3c6-4071-8df0-a57f5906e7ff",
       "market_weight": 0.0,
-      "model": 0.715038022481502,
+      "model": 0.7145996239359773,
       "notes": [
         "total games: simulator 21.6, Pinnacle 20.9, used 21.2 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T18:08:25.454532+00:00",
-      "probability": 0.715038022481502,
+      "predicted_at": "2026-09-02T15:17:47.147110+00:00",
+      "probability": 0.7145996239359773,
       "question": "Will the match last longer than 80 minutes?",
       "rbp": null,
       "settled_at": "",
@@ -42,7 +42,7 @@
         "exposure 70 service points from 21.6 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T18:08:25.454532+00:00",
+      "predicted_at": "2026-09-02T15:17:47.147110+00:00",
       "probability": 0.38302300426092545,
       "question": "Will T. Preston record more aces than T. Townsend?",
       "rbp": null,
@@ -65,7 +65,7 @@
         "exposure 70 service points from 21.6 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T18:08:25.454532+00:00",
+      "predicted_at": "2026-09-02T15:17:47.147110+00:00",
       "probability": 0.4618618798443587,
       "question": "Will T. Preston record more double faults than T. Townsend?",
       "rbp": null,
@@ -80,21 +80,21 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.2219512194640713,
+      "market": 0.21505323157016948,
       "market_id": "57f95785-6618-443a-80cb-b5279cea9a86",
       "market_weight": 0.8075,
       "model": 0.374,
       "notes": [
         "simulated win probability 0.374",
-        "market consensus 0.222, weight 0.81"
+        "market consensus 0.215, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T18:08:25.454532+00:00",
-      "probability": 0.2531743220237911,
+      "predicted_at": "2026-09-02T15:17:47.147110+00:00",
+      "probability": 0.24728453847098952,
       "question": "Will T. Preston win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 21
+      "submission": 20
     },
     {
       "base_rate": 0.225,
@@ -113,7 +113,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T18:08:25.454532+00:00",
+      "predicted_at": "2026-09-02T15:17:47.147110+00:00",
       "probability": 0.16125,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
@@ -124,7 +124,7 @@
   "match_id": "94aa6997-2a98-4e77-96c0-87d0026ecbe8",
   "match_name": "T. Townsend vs T. Preston",
   "multiplier": 1,
-  "opening_time": "2026-09-02T15:00:00.000Z",
+  "opening_time": "2026-09-02T14:30:00.000Z",
   "player_a": "Taylor Townsend",
   "player_b": "Taylah Preston",
   "round_code": "R128"

@@ -1,0 +1,131 @@
+{
+  "closing_time": "2026-09-04T03:00:00.000Z",
+  "draw": "womens",
+  "entries": [
+    {
+      "base_rate": 0.6368,
+      "brier": null,
+      "confidence": 0.95,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_duration",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "d13700b0-f793-4bc9-bb0e-78878cefb31b",
+      "market_weight": 0.0,
+      "model": 0.5722569804530931,
+      "notes": [
+        "total games: simulator 21.1, Pinnacle 18.7, used 19.6 at weight 0.60",
+        "no usable market quote for this question"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-02T15:17:47.180584+00:00",
+      "probability": 0.5722569804530931,
+      "question": "Will the match last longer than 80 minutes?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 59
+    },
+    {
+      "base_rate": 0.427,
+      "brier": null,
+      "confidence": 0.85,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "aces_comparison",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "309d4a27-68b4-410a-9cad-cb5087949b29",
+      "market_weight": 0.0,
+      "model": 0.6015177789876146,
+      "notes": [
+        "exposure 68 service points from 21.1 games"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-02T15:17:47.180584+00:00",
+      "probability": 0.5975911289603932,
+      "question": "Will M. Andreeva record more aces than E. Lys?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 62
+    },
+    {
+      "base_rate": 0.433,
+      "brier": null,
+      "confidence": 0.1,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "double_faults_comparison",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "95978099-de00-4e3b-bb27-504130d23c25",
+      "market_weight": 0.0,
+      "model": 0.41937720000765133,
+      "notes": [
+        "exposure 68 service points from 21.1 games"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-02T15:17:47.180584+00:00",
+      "probability": 0.43143337800087994,
+      "question": "Will M. Andreeva record more double faults than E. Lys?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 41
+    },
+    {
+      "base_rate": 0.5,
+      "brier": null,
+      "confidence": 0.85,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "match_winner",
+      "lane": "scenario",
+      "market": 0.9004629629145927,
+      "market_id": "34771698-6335-4ec7-a0bb-e2325596cc60",
+      "market_weight": 0.8075,
+      "model": 0.68225,
+      "notes": [
+        "simulated win probability 0.682",
+        "market consensus 0.900, weight 0.81"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-02T15:17:47.180584+00:00",
+      "probability": 0.8643654048321858,
+      "question": "Will M. Andreeva win?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 91
+    },
+    {
+      "base_rate": 0.225,
+      "brier": null,
+      "confidence": 0.95,
+      "crowd": null,
+      "crowd_brier": null,
+      "family": "tiebreak",
+      "lane": "scenario",
+      "market": null,
+      "market_id": "a28381d9-7497-42c6-a7a1-920a1d516573",
+      "market_weight": 0.0,
+      "model": 0.15575,
+      "notes": [
+        "no usable market quote for this question",
+        "scenario lane: experimental tiebreak shift -0.040"
+      ],
+      "outcome": null,
+      "predicted_at": "2026-09-02T15:17:47.180584+00:00",
+      "probability": 0.11574999999999999,
+      "question": "Will the match feature at least 1 tiebreak?",
+      "rbp": null,
+      "settled_at": "",
+      "submission": 7
+    }
+  ],
+  "match_id": "2395fe71-ca10-40fa-9081-4315c87e7685",
+  "match_name": "M. Andreeva vs E. Lys",
+  "multiplier": 1,
+  "opening_time": "2026-09-03T15:00:00.000Z",
+  "player_a": "Mirra Andreeva",
+  "player_b": "Eva Lys",
+  "round_code": "R128"
+}

@@ -1,5 +1,5 @@
 {
-  "closing_time": "2026-09-03T03:00:00.000Z",
+  "closing_time": "2026-09-03T05:30:00.000Z",
   "draw": "mens",
   "entries": [
     {
@@ -13,14 +13,14 @@
       "market": null,
       "market_id": "67002658-0ff1-4e06-86a3-6b4532a23224",
       "market_weight": 0.0,
-      "model": 0.5435600404890153,
+      "model": 0.5427221569370517,
       "notes": [
-        "total games: simulator 35.3, Pinnacle 34.5, used 34.9 at weight 0.60",
+        "total games: simulator 35.3, Pinnacle 34.5, used 34.8 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T18:08:25.456547+00:00",
-      "probability": 0.5435600404890153,
+      "predicted_at": "2026-09-02T15:17:47.166172+00:00",
+      "probability": 0.5427221569370517,
       "question": "Will the match last longer than 155 minutes?",
       "rbp": null,
       "settled_at": "",
@@ -37,19 +37,19 @@
       "market": null,
       "market_id": "b9c2bb99-bc46-49ea-891f-94fca332fb87",
       "market_weight": 0.0,
-      "model": 0.6553193915016922,
+      "model": 0.660561365440139,
       "notes": [
         "ace vulnerability: Dino Prizmic 0.92, Tommy Paul 0.74",
         "exposure 117 service points from 37.4 games",
-        "outcome coupling: P(win)=0.809, delta=+0.60"
+        "outcome coupling: P(win)=0.827, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T18:08:25.456547+00:00",
-      "probability": 0.6553193915016922,
+      "predicted_at": "2026-09-02T15:17:47.166172+00:00",
+      "probability": 0.660561365440139,
       "question": "Will T. Paul record more aces than D. Prizmic?",
       "rbp": null,
       "settled_at": "",
-      "submission": 69
+      "submission": 70
     },
     {
       "base_rate": 0.421,
@@ -67,7 +67,7 @@
         "exposure 117 service points from 37.4 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T18:08:25.456547+00:00",
+      "predicted_at": "2026-09-02T15:17:47.166172+00:00",
       "probability": 0.3238801254092962,
       "question": "Will T. Paul record more double faults than D. Prizmic?",
       "rbp": null,
@@ -82,21 +82,21 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.809056473806849,
+      "market": 0.8273504274087227,
       "market_id": "3a052c93-46af-413c-b568-08bf2a5e1c57",
       "market_weight": 0.8075,
       "model": 0.75425,
       "notes": [
         "simulated win probability 0.754",
-        "market consensus 0.809, weight 0.81"
+        "market consensus 0.827, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T18:08:25.456547+00:00",
-      "probability": 0.7925482115320628,
+      "predicted_at": "2026-09-02T15:17:47.166172+00:00",
+      "probability": 0.8076710678945238,
       "question": "Will T. Paul win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 84
+      "submission": 86
     },
     {
       "base_rate": 0.487,
@@ -109,24 +109,25 @@
       "market": null,
       "market_id": "0fdda990-3817-4aa9-b216-bff16becd078",
       "market_weight": 0.0,
-      "model": 0.41125,
+      "model": 0.3619,
       "notes": [
+        "tiebreak iid correction x0.88 (ATP)",
         "no usable market quote for this question",
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T18:08:25.456547+00:00",
-      "probability": 0.37125,
+      "predicted_at": "2026-09-02T15:17:47.166172+00:00",
+      "probability": 0.3219,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 34
+      "submission": 28
     }
   ],
   "match_id": "b0f53747-3c70-419c-a00f-05d592862105",
   "match_name": "D. Prizmic vs T. Paul",
   "multiplier": 1,
-  "opening_time": "2026-09-02T15:00:00.000Z",
+  "opening_time": "2026-09-02T17:30:00.000Z",
   "player_a": "Dino Prizmic",
   "player_b": "Tommy Paul",
   "round_code": "R128"

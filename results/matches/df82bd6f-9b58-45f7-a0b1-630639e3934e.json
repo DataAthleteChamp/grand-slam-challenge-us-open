@@ -13,18 +13,18 @@
       "market": null,
       "market_id": "efa34237-bc36-4b07-aae3-3d400198d857",
       "market_weight": 0.0,
-      "model": 0.6007520687806401,
+      "model": 0.6017672383644596,
       "notes": [
         "total games: simulator 42.3, Pinnacle 41.5, used 41.8 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T18:08:25.460476+00:00",
-      "probability": 0.6007520687806401,
+      "predicted_at": "2026-09-02T15:17:47.157975+00:00",
+      "probability": 0.6017672383644596,
       "question": "Will the match last longer than 170 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 62
+      "submission": 63
     },
     {
       "base_rate": 0.46,
@@ -37,15 +37,15 @@
       "market": null,
       "market_id": "36166d7a-7ac6-4f74-aa77-60bc35d87565",
       "market_weight": 0.0,
-      "model": 0.5572973626466043,
+      "model": 0.5552774994502925,
       "notes": [
         "ace vulnerability: Ben Shelton 0.83, Hubert Hurkacz 0.87",
         "exposure 139 service points from 44.5 games",
-        "outcome coupling: P(win)=0.317, delta=+0.60"
+        "outcome coupling: P(win)=0.310, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T18:08:25.460476+00:00",
-      "probability": 0.5572973626466043,
+      "predicted_at": "2026-09-02T15:17:47.157975+00:00",
+      "probability": 0.5552774994502925,
       "question": "Will H. Hurkacz record more aces than B. Shelton?",
       "rbp": null,
       "settled_at": "",
@@ -67,7 +67,7 @@
         "exposure 139 service points from 44.5 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T18:08:25.460476+00:00",
+      "predicted_at": "2026-09-02T15:17:47.157975+00:00",
       "probability": 0.25573455602022765,
       "question": "Will H. Hurkacz record more double faults than B. Shelton?",
       "rbp": null,
@@ -82,21 +82,21 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.3168062428774089,
+      "market": 0.309523809550927,
       "market_id": "05484453-0e0a-4e4e-a99a-728f3bf51a84",
       "market_weight": 0.8075,
       "model": 0.57575,
       "notes": [
         "simulated win probability 0.576",
-        "market consensus 0.317, weight 0.81"
+        "market consensus 0.310, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T18:08:25.460476+00:00",
-      "probability": 0.36621646570503397,
+      "predicted_at": "2026-09-02T15:17:47.157975+00:00",
+      "probability": 0.3600591360122167,
       "question": "Will H. Hurkacz win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 34
+      "submission": 33
     },
     {
       "base_rate": 0.13263821138211385,
@@ -109,18 +109,19 @@
       "market": null,
       "market_id": "2f5bdf21-9ff7-45d2-b5b3-212dc2a33329",
       "market_weight": 0.0,
-      "model": 0.5085,
+      "model": 0.44747999999999993,
       "notes": [
+        "tiebreak iid correction x0.88 (ATP)",
         "no usable market quote for this question",
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T18:08:25.460476+00:00",
-      "probability": 0.46849999999999997,
+      "predicted_at": "2026-09-02T15:17:47.157975+00:00",
+      "probability": 0.40747999999999995,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 46
+      "submission": 39
     }
   ],
   "match_id": "df82bd6f-9b58-45f7-a0b1-630639e3934e",

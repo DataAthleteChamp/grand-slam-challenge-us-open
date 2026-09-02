@@ -1,5 +1,5 @@
 {
-  "closing_time": "2026-09-03T03:00:00.000Z",
+  "closing_time": "2026-09-04T03:00:00.000Z",
   "draw": "womens",
   "entries": [
     {
@@ -19,7 +19,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T18:08:25.471120+00:00",
+      "predicted_at": "2026-09-02T15:17:47.172644+00:00",
       "probability": 0.6076598942848785,
       "question": "Will the match last longer than 90 minutes?",
       "rbp": null,
@@ -42,7 +42,7 @@
         "exposure 69 service points from 21.2 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T18:08:25.471120+00:00",
+      "predicted_at": "2026-09-02T15:17:47.172644+00:00",
       "probability": 0.4487615753412694,
       "question": "Will M. Bouzkova record more aces than H. Dart?",
       "rbp": null,
@@ -65,7 +65,7 @@
         "exposure 69 service points from 21.2 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T18:08:25.471120+00:00",
+      "predicted_at": "2026-09-02T15:17:47.172644+00:00",
       "probability": 0.42156651018818897,
       "question": "Will M. Bouzkova record more double faults than H. Dart?",
       "rbp": null,
@@ -80,17 +80,17 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.8338011656474695,
+      "market": 0.8348316226312231,
       "market_id": "dc8e1980-2a37-4f87-96bd-7b6a8297e8f7",
       "market_weight": 0.8075,
       "model": 0.63525,
       "notes": [
         "simulated win probability 0.635",
-        "market consensus 0.834, weight 0.81"
+        "market consensus 0.835, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T18:08:25.471120+00:00",
-      "probability": 0.7967992598908324,
+      "predicted_at": "2026-09-02T15:17:47.172644+00:00",
+      "probability": 0.7977261224861085,
       "question": "Will M. Bouzkova win?",
       "rbp": null,
       "settled_at": "",
@@ -113,7 +113,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-01T18:08:25.471120+00:00",
+      "predicted_at": "2026-09-02T15:17:47.172644+00:00",
       "probability": 0.11825,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
@@ -124,7 +124,7 @@
   "match_id": "699783e2-3387-43c5-851d-44a8937de0e2",
   "match_name": "H. Dart vs M. Bouzkova",
   "multiplier": 1,
-  "opening_time": "2026-09-02T15:00:00.000Z",
+  "opening_time": "2026-09-03T15:00:00.000Z",
   "player_a": "Harriet Dart",
   "player_b": "Marie Bouzkova",
   "round_code": "R128"
