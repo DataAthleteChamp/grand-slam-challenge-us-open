@@ -65,7 +65,7 @@ for that task". Treat the oracle floor as an upper bound that is not reachable.
 Ranked by `headroom × P(works) ÷ effort`. Each entry states how it will be tested and what
 would falsify it.
 
-### 1. Time-weighted ratings (exponential decay) — HIGH
+### 1. Time-weighted ratings (exponential decay) — ~~HIGH~~ CLOSED, rejected
 - **Source:** cross-sport review, Topic 3: *"the real gains come from better team strength
   estimation (e.g. time-weighting recent matches), not from the distribution choice."*
   Dixon & Coles (1997) half-life weighting is the canonical form.
@@ -77,8 +77,22 @@ would falsify it.
   head-to-head AUC and Brier on all four count cells. Fitted on thousands of matches, so
   sample size is not a constraint.
 - **Falsified if:** flat weighting wins at every half-life.
+- **RESULT — REJECTED.** Half-lives of 3/6/12/24/48/flat months, two hold-outs per cell
+  (train ≤2023 test 2024; train ≤2024 test 2026), subject assigned at random:
 
-### 2. Common-opponent adjustment — HIGH
+  | cell | best half-life | vs flat |
+  |---|---|---|
+  | ATP aces | flat | decay strictly worse at every H |
+  | WTA aces | flat | decay strictly worse at every H |
+  | ATP double faults | 12 months | +0.0039 AUC, CI [-0.0020, +0.0099] |
+  | WTA double faults | 12 months | +0.0064 AUC, CI [-0.0004, +0.0135], and the two hold-outs disagree - 2026 improves AUC while worsening Brier |
+
+  Both ace cells prefer flat weighting *monotonically*, which is a strong signal rather than a
+  wash: a player's serve is stable enough that old matches are still informative, and
+  discarding them only adds variance. The double-fault cells hint at a 12-month half-life but
+  neither interval excludes zero. Nothing to adopt.
+
+### 2. Common-opponent adjustment — ~~HIGH~~ CLOSED, rejected (failed to replicate)
 - **Source:** Knottenbelt, Spanias & Moldovan (2012); Spanias & Knottenbelt (2013).
   Reported **66.1% accuracy vs 63.5%** for rankings and 64.2% for Elo of the era; +2–3pp
   over naive player averages, though only **~1pp on hard courts**.
@@ -89,6 +103,23 @@ would falsify it.
 - **Test:** for settled matches where at least one player has <20 rated matches, compare our
   current price against a common-opponent estimate.
 - **Falsified if:** no gain on the thin-data subset (where the whole hypothesis lives).
+- **RESULT — REJECTED, and instructive.** Common opponents were available for ~72-74% of
+  matches. Overall the estimate was neutral on ATP (-0.007, CI [-0.018, +0.004]) and
+  significantly worse on WTA (-0.017, CI [-0.031, -0.005]).
+
+  On the thin-data subset the first hold-out looked like a genuine find:
+
+  | tour | hold-out | global AUC | common AUC | difference | P(better) |
+  |---|---|---|---|---|---|
+  | ATP | ≤2023 → 2024 | 0.7374 | **0.7863** | **+0.0481** CI [+0.0071, +0.0915] | **99%** |
+  | ATP | ≤2024 → 2026 | 0.7283 | 0.6769 | **-0.0527** CI [-0.1115, +0.0028] | 3% |
+  | WTA | ≤2023 → 2024 | 0.7455 | 0.6987 | -0.0463 CI [-0.0933, -0.0012] | 2% |
+  | WTA | ≤2024 → 2026 | 0.7470 | 0.6739 | -0.0730 CI [-0.1298, -0.0217] | 0% |
+
+  The ATP 2024 result would have passed a single-hold-out test at 99% confidence and is
+  flatly contradicted by the very next window. Three of four splits are negative. This is the
+  clearest illustration yet of why one hold-out is not evidence, and it is exactly the shape
+  of the two false positives already found this week.
 
 ### 3. Tournament/surface court-speed adjustment for aces — HIGH
 - **Source:** tennis review, Area 6; court pace index literature. Our women's ace weakness is
