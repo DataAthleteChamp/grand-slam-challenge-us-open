@@ -19,7 +19,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T19:29:19.904797+00:00",
+      "predicted_at": "2026-09-02T20:45:20.729271+00:00",
       "probability": 0.646068332850688,
       "question": "Will the match last longer than 90 minutes?",
       "rbp": null,
@@ -42,7 +42,7 @@
         "exposure 68 service points from 21.2 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T19:29:19.904797+00:00",
+      "predicted_at": "2026-09-02T20:45:20.729271+00:00",
       "probability": 0.5566030761660262,
       "question": "Will E. Mertens record more aces than M. Timofeeva?",
       "rbp": null,
@@ -65,7 +65,7 @@
         "exposure 68 service points from 21.2 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T19:29:19.904797+00:00",
+      "predicted_at": "2026-09-02T20:45:20.729271+00:00",
       "probability": 0.544926615874443,
       "question": "Will E. Mertens record more double faults than M. Timofeeva?",
       "rbp": null,
@@ -80,17 +80,17 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.7361480269894183,
+      "market": 0.7365994938725655,
       "market_id": "3a507874-412a-426b-b922-66330d055198",
       "market_weight": 0.8075,
       "model": 0.672,
       "notes": [
         "simulated win probability 0.672",
-        "market consensus 0.736, weight 0.81"
+        "market consensus 0.737, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T19:29:19.904797+00:00",
-      "probability": 0.7193912257480848,
+      "predicted_at": "2026-09-02T20:45:20.729271+00:00",
+      "probability": 0.7197575221670178,
       "question": "Will E. Mertens win?",
       "rbp": null,
       "settled_at": "",
@@ -113,7 +113,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T19:29:19.904797+00:00",
+      "predicted_at": "2026-09-02T20:45:20.729271+00:00",
       "probability": 0.12025,
       "question": "Will the match feature at least 1 tiebreak?",
       "rbp": null,

@@ -19,7 +19,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T19:29:19.892619+00:00",
+      "predicted_at": "2026-09-02T20:45:20.712107+00:00",
       "probability": 0.7637303420456959,
       "question": "Will the match last longer than 140 minutes?",
       "rbp": null,
@@ -44,7 +44,7 @@
         "outcome coupling: P(win)=0.714, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T19:29:19.892619+00:00",
+      "predicted_at": "2026-09-02T20:45:20.712107+00:00",
       "probability": 0.5893571954669811,
       "question": "Will J. Lehecka record more aces than T. Samuel?",
       "rbp": null,
@@ -67,7 +67,7 @@
         "exposure 125 service points from 39.9 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T19:29:19.892619+00:00",
+      "predicted_at": "2026-09-02T20:45:20.712107+00:00",
       "probability": 0.3509388815362407,
       "question": "Will J. Lehecka record more double faults than T. Samuel?",
       "rbp": null,
@@ -91,7 +91,7 @@
         "market consensus 0.714, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T19:29:19.892619+00:00",
+      "predicted_at": "2026-09-02T20:45:20.712107+00:00",
       "probability": 0.6723591476094493,
       "question": "Will J. Lehecka win?",
       "rbp": null,
@@ -116,7 +116,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T19:29:19.892619+00:00",
+      "predicted_at": "2026-09-02T20:45:20.712107+00:00",
       "probability": 0.4099,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

@@ -19,7 +19,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T19:29:19.893091+00:00",
+      "predicted_at": "2026-09-02T20:45:20.713202+00:00",
       "probability": 0.4887573855788997,
       "question": "Will the match last longer than 175 minutes?",
       "rbp": null,
@@ -37,19 +37,19 @@
       "market": null,
       "market_id": "fe9ea545-07b7-457b-b4cb-2324aec24b52",
       "market_weight": 0.0,
-      "model": 0.8055020656274418,
+      "model": 0.8051061783654034,
       "notes": [
         "ace vulnerability: Mariano Navone 0.78, Matteo Berrettini 0.84",
         "exposure 120 service points from 38.6 games",
-        "outcome coupling: P(win)=0.621, delta=+0.60"
+        "outcome coupling: P(win)=0.618, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T19:29:19.893091+00:00",
-      "probability": 0.8055020656274418,
+      "predicted_at": "2026-09-02T20:45:20.713202+00:00",
+      "probability": 0.8051061783654034,
       "question": "Will M. Berrettini record more aces than M. Navone?",
       "rbp": null,
       "settled_at": "",
-      "submission": 86
+      "submission": 85
     },
     {
       "base_rate": 0.421,
@@ -67,7 +67,7 @@
         "exposure 120 service points from 38.6 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T19:29:19.893091+00:00",
+      "predicted_at": "2026-09-02T20:45:20.713202+00:00",
       "probability": 0.26874763868970125,
       "question": "Will M. Berrettini record more double faults than M. Navone?",
       "rbp": null,
@@ -82,17 +82,17 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.620512820490707,
+      "market": 0.6184676949318118,
       "market_id": "498a7eb8-3f87-473d-9bbd-3e17f5b10f36",
       "market_weight": 0.8075,
       "model": 0.799,
       "notes": [
         "simulated win probability 0.799",
-        "market consensus 0.621, weight 0.81"
+        "market consensus 0.618, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T19:29:19.893091+00:00",
-      "probability": 0.6562760275288555,
+      "predicted_at": "2026-09-02T20:45:20.713202+00:00",
+      "probability": 0.6547372845070174,
       "question": "Will M. Berrettini win?",
       "rbp": null,
       "settled_at": "",
@@ -116,7 +116,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T19:29:19.893091+00:00",
+      "predicted_at": "2026-09-02T20:45:20.713202+00:00",
       "probability": 0.10982,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,

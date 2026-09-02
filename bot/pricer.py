@@ -132,6 +132,16 @@ def apply_comparator(probability: float, spec: MarketSpec) -> tuple[float, bool]
     return probability, False
 
 
+#: Bisection settings for aligning the simulation with the market's winner price.
+#:
+#: Nine steps over a bracket of +/-0.10 in skill units resolves the shift to
+#: about 0.0004, far finer than the ratings themselves are known.  The search
+#: simulations are cheap and only locate the shift; the answer is re-simulated
+#: at full resolution.
+SHIFT_SEARCH_SIMS = 900
+SHIFT_SEARCH_STEPS = 9
+SHIFT_SEARCH_BRACKET = 0.10
+
 #: Market weight by how much we trust the market for that family.  Structural
 #: questions have a liquid market and a documented history of market consensus
 #: outscoring model alpha; the statistic families have no market at all.
@@ -310,6 +320,10 @@ class Pricer:
         model, confidence = base, 0.3
         if subject.has_ratings and opponent.has_ratings:
             oriented = context if subject is context.player_a else _swap(context)
+            # Deliberately NOT reconciled against the market here: this number is
+            # then blended with that same market, and forcing it to agree first
+            # would collapse the blend and throw away the independent check that
+            # catches a mis-mapped or badly de-vigged quote.
             simulation = self._simulate(oriented)
             model = simulation.p_a_wins_match
             confidence = 0.7
@@ -370,7 +384,9 @@ class Pricer:
         confidence = 0.35
 
         if context.player_a.has_ratings and context.player_b.has_ratings:
-            simulation = self._simulate(context)
+            # Reconciled against the winner market so the match shape agrees
+            # with what we are about to say about who wins it.
+            simulation = self._simulate(context, ladders)
             model = self._read_simulation(spec, simulation, base, notes, context)
             # 0.8 here was an unmeasured guess, and unlike COUNT_CONFIDENCE it
             # was never swept.  Against 42 settled matches, dropping the pull
@@ -436,7 +452,9 @@ class Pricer:
             expected_games = win_probability = None
             if subject.has_ratings and opponent.has_ratings:
                 oriented = context if subject is context.player_a else _swap(context)
-                simulation = self._simulate(oriented)
+                # Also reconciled: how many service points a player sees depends
+                # on how long the match runs, and the market knows that better.
+                simulation = self._simulate(oriented, ladders)
                 expected_games = simulation.mean_total_games
                 win_probability = simulation.p_a_wins_match
                 # The market price is a better win probability than ours
@@ -508,28 +526,82 @@ class Pricer:
 
     # ----------------------------------------------------------------- helpers
 
-    def _simulate(self, context: MatchContext):
-        """Simulate the match once and reuse it for every structural question."""
+    def _simulate(self, context: MatchContext, ladders: dict | None = None):
+        """Simulate the match once and reuse it for every structural question.
+
+        When the bookmakers have priced the winner, the simulation is shifted
+        until it agrees with them before anything is read off it.  Otherwise the
+        entry says two different things about the same match: the match-winner
+        answer comes 95% from the market, while duration and tiebreak come from
+        a simulation that may put that match at even money.  Tiebreaks and long
+        matches are far likelier in a close contest than a one-sided one, so the
+        inconsistency is not cosmetic - our simulated win probability differs
+        from Pinnacle's by 12 points on average.
+
+        Measured on 49 settled matches, pricing the structural questions from a
+        market-consistent simulation rather than the raw one is worth +2.57
+        RBP/question on duration (95% CI [+0.46, +4.67]) and +0.87 on tiebreak,
+        +1.72 pooled (95% CI [+0.54, +2.98]).
+        """
+        target = None
+        if ladders:
+            quote = ladders.get(context.player_a.name)
+            if quote is not None and 0.02 < float(quote) < 0.98:
+                target = float(quote)
+
         key = (
             context.player_a.name,
             context.player_b.name,
             context.best_of,
             context.tour,
+            round(target, 3) if target is not None else None,
         )
         cached = self._sim_cache.get(key)
         if cached is not None:
             return cached
 
-        pa, pb = matchup_probabilities(
-            TOUR_BASE[context.tour],
-            context.player_a.serve_skill,
-            context.player_a.return_skill,
-            context.player_b.serve_skill,
-            context.player_b.return_skill,
+        shift = self._skill_shift_for(context, target) if target is not None else 0.0
+        result = simulate_match(
+            *self._matchup(context, shift),
+            context.best_of,
+            config=self._sim_config_for(context.tour),
         )
-        result = simulate_match(pa, pb, context.best_of, config=self._sim_config_for(context.tour))
         self._sim_cache[key] = result
         return result
+
+    def _matchup(self, context: MatchContext, shift: float = 0.0) -> tuple[float, float]:
+        """Service-point win probabilities, with a symmetric skill shift applied."""
+        return matchup_probabilities(
+            TOUR_BASE[context.tour],
+            context.player_a.serve_skill + shift,
+            context.player_a.return_skill + shift,
+            context.player_b.serve_skill - shift,
+            context.player_b.return_skill - shift,
+        )
+
+    def _skill_shift_for(self, context: MatchContext, target: float) -> float:
+        """Find the skill shift that makes the simulation agree with the market.
+
+        Bisection on a monotone function.  The search runs at a low simulation
+        count because it only has to locate the shift; the result that gets used
+        is then simulated at full resolution.  The bracket is deliberately not
+        widened beyond what real quotes need: if the market and the ratings
+        disagree by more than this, the ratings are probably wrong about who
+        these players are, and stretching them to fit would hide that rather
+        than fix it.
+        """
+        search = replace(self._sim_config_for(context.tour), n_sims=SHIFT_SEARCH_SIMS)
+        low, high = -SHIFT_SEARCH_BRACKET, SHIFT_SEARCH_BRACKET
+        for _ in range(SHIFT_SEARCH_STEPS):
+            mid = (low + high) / 2.0
+            probability = simulate_match(
+                *self._matchup(context, mid), context.best_of, config=search
+            ).p_a_wins_match
+            if probability < target:
+                low = mid
+            else:
+                high = mid
+        return (low + high) / 2.0
 
     def _sim_config_for(self, tour: str) -> SimulationConfig:
         """Between-set variation is fitted per tour, not shared.

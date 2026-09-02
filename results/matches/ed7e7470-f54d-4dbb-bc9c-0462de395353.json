@@ -18,7 +18,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T19:29:19.886220+00:00",
+      "predicted_at": "2026-09-02T20:45:20.709977+00:00",
       "probability": 0.6655805230329885,
       "question": "Will the match last longer than 90 minutes?",
       "rbp": null,
@@ -41,7 +41,7 @@
         "exposure 71 service points from 21.9 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T19:29:19.886220+00:00",
+      "predicted_at": "2026-09-02T20:45:20.709977+00:00",
       "probability": 0.30497514320529945,
       "question": "Will A. Kalinskaya record more aces than X. Wang?",
       "rbp": null,
@@ -64,7 +64,7 @@
         "exposure 71 service points from 21.9 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T19:29:19.886220+00:00",
+      "predicted_at": "2026-09-02T20:45:20.709977+00:00",
       "probability": 0.40508519775948504,
       "question": "Will A. Kalinskaya record more double faults than X. Wang?",
       "rbp": null,
@@ -79,7 +79,7 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.6546876546935165,
+      "market": 0.6553362572905334,
       "market_id": "4e767150-9efb-461e-91db-02ad54769545",
       "market_weight": 0.8075,
       "model": 0.54,
@@ -88,8 +88,8 @@
         "market consensus 0.655, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T19:29:19.886220+00:00",
-      "probability": 0.6305346997736816,
+      "predicted_at": "2026-09-02T20:45:20.709977+00:00",
+      "probability": 0.6310605367981956,
       "question": "Will A. Kalinskaya win?",
       "rbp": null,
       "settled_at": "",
@@ -112,7 +112,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T19:29:19.886220+00:00",
+      "predicted_at": "2026-09-02T20:45:20.709977+00:00",
       "probability": 0.174,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

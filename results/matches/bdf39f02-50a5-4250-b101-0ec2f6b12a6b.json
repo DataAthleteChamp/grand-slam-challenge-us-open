@@ -19,7 +19,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T19:29:19.895734+00:00",
+      "predicted_at": "2026-09-02T20:45:20.715721+00:00",
       "probability": 0.6649525632549025,
       "question": "Will the match last longer than 80 minutes?",
       "rbp": null,
@@ -42,7 +42,7 @@
         "exposure 71 service points from 21.9 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T19:29:19.895734+00:00",
+      "predicted_at": "2026-09-02T20:45:20.715721+00:00",
       "probability": 0.5077896079642306,
       "question": "Will L. Noskova record more aces than L. Tararudee?",
       "rbp": null,
@@ -65,7 +65,7 @@
         "exposure 71 service points from 21.9 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T19:29:19.895734+00:00",
+      "predicted_at": "2026-09-02T20:45:20.715721+00:00",
       "probability": 0.4500009718981107,
       "question": "Will L. Noskova record more double faults than L. Tararudee?",
       "rbp": null,
@@ -80,7 +80,7 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.8050642316255129,
+      "market": 0.8045729076823782,
       "market_id": "53bef7e8-19bb-42d2-97f4-4f57c9a83fd1",
       "market_weight": 0.8075,
       "model": 0.6025,
@@ -89,8 +89,8 @@
         "market consensus 0.805, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T19:29:19.895734+00:00",
-      "probability": 0.7668521436878466,
+      "predicted_at": "2026-09-02T20:45:20.715721+00:00",
+      "probability": 0.7664186298166669,
       "question": "Will L. Noskova win?",
       "rbp": null,
       "settled_at": "",
@@ -113,7 +113,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T19:29:19.895734+00:00",
+      "predicted_at": "2026-09-02T20:45:20.715721+00:00",
       "probability": 0.1735,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

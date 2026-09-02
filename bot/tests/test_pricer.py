@@ -1208,3 +1208,57 @@ def test_tiebreak_correction_lowers_a_mens_tiebreak_price():
     priced = pricer.price(spec, context, market_id="tb")
     assert any("iid correction" in n for n in priced.notes)
     assert priced.model_probability is not None
+
+
+def test_simulation_is_reconciled_to_the_winner_market():
+    """Structural questions must be priced from a match the market recognises.
+
+    Without this the entry says two different things about one match: the
+    match-winner answer is 95% the market's, while duration and tiebreak came
+    from a simulation that can put the same match at even money.  Our simulated
+    win probability differs from Pinnacle's by 12 points on average, and
+    tiebreaks and long matches are much likelier in a close contest than a
+    one-sided one.
+
+    Worth +2.57 RBP/question on duration (95% CI [+0.46, +4.67]) and +1.72
+    pooled across 49 settled matches.
+    """
+    from bot.roster import Roster
+
+    roster, pricer = Roster.load(), Pricer(lane="honest")
+    context = roster.context("A. Bublik", "A. Mannarino", tour="ATP")
+    if not (context.player_a.has_ratings and context.player_b.has_ratings):
+        pytest.skip("players missing from roster")
+
+    raw = pricer._simulate(context)
+    aligned = pricer._simulate(context, {context.player_a.name: 0.76})
+    assert abs(aligned.p_a_wins_match - 0.76) < 0.05
+    assert abs(raw.p_a_wins_match - 0.76) > abs(aligned.p_a_wins_match - 0.76)
+    # A more one-sided match is a shorter one.
+    assert aligned.mean_total_games < raw.mean_total_games
+
+
+def test_reconciliation_is_cached_per_market_price():
+    """Two different quotes on the same pair must not collide in the cache."""
+    from bot.roster import Roster
+
+    roster, pricer = Roster.load(), Pricer(lane="honest")
+    context = roster.context("A. Bublik", "A. Mannarino", tour="ATP")
+    if not (context.player_a.has_ratings and context.player_b.has_ratings):
+        pytest.skip("players missing from roster")
+    low = pricer._simulate(context, {context.player_a.name: 0.30})
+    high = pricer._simulate(context, {context.player_a.name: 0.80})
+    assert low.p_a_wins_match < high.p_a_wins_match
+
+
+def test_extreme_or_missing_quotes_fall_back_to_the_plain_simulation():
+    """A junk quote must not stretch the ratings to fit it."""
+    from bot.roster import Roster
+
+    roster, pricer = Roster.load(), Pricer(lane="honest")
+    context = roster.context("A. Bublik", "A. Mannarino", tour="ATP")
+    if not (context.player_a.has_ratings and context.player_b.has_ratings):
+        pytest.skip("players missing from roster")
+    plain = pricer._simulate(context)
+    for junk in ({}, {"someone else": 0.6}, {context.player_a.name: 0.995}):
+        assert pricer._simulate(context, junk).p_a_wins_match == plain.p_a_wins_match

@@ -19,7 +19,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T19:29:19.899770+00:00",
+      "predicted_at": "2026-09-02T20:45:20.717069+00:00",
       "probability": 0.5510783695697281,
       "question": "Will the match last longer than 95 minutes?",
       "rbp": null,
@@ -42,7 +42,7 @@
         "exposure 69 service points from 21.3 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T19:29:19.899770+00:00",
+      "predicted_at": "2026-09-02T20:45:20.717069+00:00",
       "probability": 0.37247802563306676,
       "question": "Will L. Jeanjean record more aces than A. Potapova?",
       "rbp": null,
@@ -65,7 +65,7 @@
         "exposure 69 service points from 21.3 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T19:29:19.899770+00:00",
+      "predicted_at": "2026-09-02T20:45:20.717069+00:00",
       "probability": 0.3934379969116244,
       "question": "Will L. Jeanjean record more double faults than A. Potapova?",
       "rbp": null,
@@ -89,7 +89,7 @@
         "market consensus 0.236, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T19:29:19.899770+00:00",
+      "predicted_at": "2026-09-02T20:45:20.717069+00:00",
       "probability": 0.26209243748260097,
       "question": "Will L. Jeanjean win?",
       "rbp": null,
@@ -113,7 +113,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T19:29:19.899770+00:00",
+      "predicted_at": "2026-09-02T20:45:20.717069+00:00",
       "probability": 0.144,
       "question": "Will the match feature at least 1 tiebreak?",
       "rbp": null,

@@ -41,7 +41,7 @@ too-high number higher).
      bot  35  ->  MANUAL  33   Will the match last longer than 190 minutes?
 
 --- D. Shapovalov vs L. Van Assche   (starts 2026-09-02 16:00Z)
-     bot  58  ->  MANUAL  59   Will D. Shapovalov win?
+     bot  57  ->  MANUAL  58   Will D. Shapovalov win?
      bot  92  ->  MANUAL  94   Will D. Shapovalov record more aces than L. Van Assche?
      bot  73  ->  MANUAL  76   Will D. Shapovalov record more double faults than L. Van Assche?
      bot  47  ->  MANUAL  47   Will the match feature at least 1 tiebreak(s)?
@@ -258,7 +258,7 @@ too-high number higher).
      bot  32  ->  MANUAL  30   Will the match last longer than 190 minutes?
 
 --- A. Blockx vs M. Trungelliti   (starts 2026-09-03 15:00Z)
-     bot  77  ->  MANUAL  80   Will A. Blockx win?
+     bot  78  ->  MANUAL  81   Will A. Blockx win?
      bot  80  ->  MANUAL  83   Will A. Blockx record more aces than M. Trungelliti?
      bot  26  ->  MANUAL  23   Will A. Blockx record more double faults than M. Trungelliti?
      bot  42  ->  MANUAL  42   Will the match feature at least 1 tiebreak(s)?
