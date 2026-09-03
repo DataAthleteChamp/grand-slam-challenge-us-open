@@ -264,3 +264,74 @@ ace-vulnerability leak and the women's confidence sweep. **Two hold-outs, always
 3. **Pre-specify the parameter.** A swept optimum on 68 observations is noise.
 4. **Multipliers make this urgent.** 790 weighted questions remain against 337 settled, so
    anything shipped now is worth roughly 2.3× what the same change was worth last week.
+
+---
+
+# Round 2 — six literature threads, and what came out of them
+
+**Caveat on sourcing.** The `web_search` tool was broken throughout this round (MCP transport
+error on every call, reproduced directly). The six research threads fell back to training
+knowledge plus direct Wikipedia and arXiv fetches. Treat citations as leads to verify, not as
+freshly confirmed sources.
+
+## Serve statistics are far more reliable than assumed — and double faults are NOT noise
+
+Split-half reliability (odd/even matches per player, Spearman-Brown corrected), on clean
+blocks, players with 20+ matches:
+
+| tour | statistic | split-half r | ICC |
+|---|---|---|---|
+| ATP | ace rate | 0.962 | 0.981 |
+| ATP | double-fault rate | **0.881** | **0.937** |
+| WTA | ace rate | 0.933 | 0.965 |
+| WTA | double-fault rate | **0.886** | **0.939** |
+
+This settles a question that has been open all week. **Double faults are not mostly noise.**
+An ICC of 0.94 means between-player differences are real and stable, comparable to first-serve
+percentage. The earlier suspicion that double faults are ~80% irreducible was wrong.
+
+So our deficit on that family against the crowd is a modelling gap, not a ceiling. That is
+worth knowing before deciding to abandon it.
+
+## But the shrinkage constant is not the binding constraint
+
+The natural follow-up was that if rates are this reliable, our K = 800 service points is far
+too much shrinkage. Swept over two hold-outs:
+
+| cell | best K | AUC at best | AUC at K=800 | gain |
+|---|---|---|---|---|
+| ATP aces | 200 | 0.7581 | 0.7553 | +0.0029 |
+| WTA aces | 100 | 0.7782 | 0.7748 | +0.0034 |
+| ATP double faults | 1600 | 0.6597 | 0.6575 | +0.0022 |
+| WTA double faults | 800 | 0.7022 | 0.7022 | 0.0000 |
+
+The direction is exactly what the ICC predicts — aces are more reliable so want less
+shrinkage, double faults less so and want more — which is a nice internal consistency check.
+But a **32-fold** range of K moves AUC by 0.003. The curve is flat. Not worth changing, and
+more usefully: shrinkage is not what is holding us back, so stop looking there.
+
+## Crowd-bias tests run against our own settled data
+
+| hypothesis | result |
+|---|---|
+| Round-number clustering in the crowd value | **No.** Multiples of 5 appear 16.9% (chance 20%), of 10 at 8.3% (chance 10%). Averaging over many forecasters washes it out. |
+| Scope insensitivity across "at least 1" vs "at least 2" tiebreaks | **Confirmed in the crowd** — they price ≥2 at 0.722 of ≥1 where the realised ratio is 0.299. But our simulator's own ratio was independently measured at 0.333 against a realised 0.336, so we already price it correctly. This is *why* we beat the crowd on tiebreak. Nothing to change. |
+| Threshold anchoring on duration | Our women's 81–100 minute band is +0.336 too high (n=20). But the large-sample checks all clear the model: residual sd matches reality at every games level (at 18 games, model 11.15 against actual 10.70), the minutes-per-game fit is unbiased (+0.13), and Pinnacle agrees on games. With ~25 hypotheses tested, one bad cell at p≈0.004 is expected. **Watching, not acting.** |
+
+## Still open, ranked
+
+1. **Coherence across the five questions of a match.** We price match winner, duration,
+   tiebreak and two count comparisons semi-independently, and the simulator is now reconciled
+   to the winner market but the count models are only partly so. Ranjan & Gneiting (2010)
+   report 3–8% Brier improvements from enforcing coherence in combination. Testable
+   retroactively: define the constraints, measure whether our settled scores were worse on
+   matches where we violated them.
+2. **Pressure conditioning for double faults.** Double-fault rates are reported 30–60% higher
+   on break points, and the ICC result says the family has real signal we are not extracting.
+   The Match Charting Project has score-conditional serve data. This is the best-motivated
+   remaining idea for our worst family.
+3. **Multi-task learning across tours.** Our women's models are weaker and the two tours share
+   structure. Borrowing strength from the men's fit is standard hierarchical modelling.
+4. **Selective prediction / learning to defer.** Identify questions where our model is
+   unreliable and fall back to the base rate only there. Requires a usable uncertainty
+   estimate, which we do not currently produce.
