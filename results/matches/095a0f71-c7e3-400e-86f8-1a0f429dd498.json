@@ -1,5 +1,5 @@
 {
-  "closing_time": "2026-09-04T03:00:00.000Z",
+  "closing_time": "2026-09-04T02:30:00.000Z",
   "draw": "womens",
   "entries": [
     {
@@ -13,14 +13,14 @@
       "market": null,
       "market_id": "e2825672-e1cd-439e-a3e0-f5a0a39f637a",
       "market_weight": 0.0,
-      "model": 0.6349472859331073,
+      "model": 0.638642643547711,
       "notes": [
-        "total games: simulator 21.5, Pinnacle 23.9, used 23.0 at weight 0.60",
+        "total games: simulator 21.8, Pinnacle 24.0, used 23.1 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.855640+00:00",
-      "probability": 0.6349472859331073,
+      "predicted_at": "2026-09-03T15:32:12.425346+00:00",
+      "probability": 0.638642643547711,
       "question": "Will the match last longer than 95 minutes?",
       "rbp": null,
       "settled_at": "",
@@ -37,17 +37,17 @@
       "market": null,
       "market_id": "4b2fa595-18fa-4904-9111-30dc15d24303",
       "market_weight": 0.0,
-      "model": 0.3568990730866955,
+      "model": 0.3601605395807348,
       "notes": [
-        "exposure 70 service points from 21.5 games"
+        "exposure 75 service points from 23.0 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.855640+00:00",
-      "probability": 0.3907227703223649,
+      "predicted_at": "2026-09-03T15:32:12.425346+00:00",
+      "probability": 0.39241057923303024,
       "question": "Will C. Bucsa record more aces than H. Sakatsume?",
       "rbp": null,
       "settled_at": "",
-      "submission": 36
+      "submission": 37
     },
     {
       "base_rate": 0.433,
@@ -60,13 +60,13 @@
       "market": null,
       "market_id": "3a1ad1ba-40ad-48a6-8b56-95b3606a9027",
       "market_weight": 0.0,
-      "model": 0.4101936462234031,
+      "model": 0.4129633040767246,
       "notes": [
-        "exposure 70 service points from 21.5 games"
+        "exposure 75 service points from 23.0 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.855640+00:00",
-      "probability": 0.42119771192061106,
+      "predicted_at": "2026-09-03T15:32:12.425346+00:00",
+      "probability": 0.422631009859705,
       "question": "Will C. Bucsa record more double faults than H. Sakatsume?",
       "rbp": null,
       "settled_at": "",
@@ -80,21 +80,21 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.6654040404198828,
+      "market": 0.637254901970119,
       "market_id": "90b5f48b-27cf-40e9-9fe9-df15a32160c4",
       "market_weight": 0.8075,
-      "model": 0.4735,
+      "model": 0.463,
       "notes": [
-        "simulated win probability 0.473",
-        "market consensus 0.665, weight 0.81"
+        "simulated win probability 0.463",
+        "market consensus 0.637, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.855640+00:00",
-      "probability": 0.6276425529106844,
+      "predicted_at": "2026-09-03T15:32:12.425346+00:00",
+      "probability": 0.6026647459841421,
       "question": "Will C. Bucsa win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 66
+      "submission": 63
     },
     {
       "base_rate": 0.225,
@@ -107,24 +107,24 @@
       "market": null,
       "market_id": "6bc542f4-ad13-4185-8b4b-bf727604fd33",
       "market_weight": 0.0,
-      "model": 0.17375,
+      "model": 0.2245,
       "notes": [
         "no usable market quote for this question",
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.855640+00:00",
-      "probability": 0.13374999999999998,
+      "predicted_at": "2026-09-03T15:32:12.425346+00:00",
+      "probability": 0.1845,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 9
+      "submission": 13
     }
   ],
   "match_id": "095a0f71-c7e3-400e-86f8-1a0f429dd498",
   "match_name": "C. Bucsa vs H. Sakatsume",
   "multiplier": 1,
-  "opening_time": "2026-09-03T15:00:00.000Z",
+  "opening_time": "2026-09-03T14:30:00.000Z",
   "player_a": "Cristina Bucsa",
   "player_b": "Himeno Sakatsume",
   "round_code": "R128"

@@ -1,5 +1,5 @@
 {
-  "closing_time": "2026-09-04T03:00:00.000Z",
+  "closing_time": "2026-09-04T12:40:00.000Z",
   "draw": "womens",
   "entries": [
     {
@@ -13,18 +13,18 @@
       "market": null,
       "market_id": "a8b831a6-8b29-4d37-bf45-f7d2ad445c76",
       "market_weight": 0.0,
-      "model": 0.6703732864877562,
+      "model": 0.633980899037293,
       "notes": [
-        "total games: simulator 20.7, Pinnacle 19.9, used 20.2 at weight 0.60",
+        "total games: simulator 19.8, Pinnacle 19.9, used 19.8 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.863081+00:00",
-      "probability": 0.6703732864877562,
+      "predicted_at": "2026-09-03T15:32:12.440084+00:00",
+      "probability": 0.633980899037293,
       "question": "Will the match last longer than 75 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 71
+      "submission": 67
     },
     {
       "base_rate": 0.427,
@@ -37,13 +37,13 @@
       "market": null,
       "market_id": "36f553d7-743e-40bf-acaf-4f531241aa0c",
       "market_weight": 0.0,
-      "model": 0.12513916648242585,
+      "model": 0.1247163563466654,
       "notes": [
-        "exposure 67 service points from 20.7 games"
+        "exposure 68 service points from 21.1 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.863081+00:00",
-      "probability": 0.12513916648242585,
+      "predicted_at": "2026-09-03T15:32:12.440084+00:00",
+      "probability": 0.1247163563466654,
       "question": "Will J. Bouzas Maneiro record more aces than E. Rybakina?",
       "rbp": null,
       "settled_at": "",
@@ -60,13 +60,13 @@
       "market": null,
       "market_id": "f3092b0c-78af-4a50-b53b-897216d85fdf",
       "market_weight": 0.0,
-      "model": 0.46679342042589916,
+      "model": 0.4676724916285573,
       "notes": [
-        "exposure 67 service points from 20.7 games"
+        "exposure 68 service points from 21.1 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.863081+00:00",
-      "probability": 0.46679342042589916,
+      "predicted_at": "2026-09-03T15:32:12.440084+00:00",
+      "probability": 0.4676724916285573,
       "question": "Will J. Bouzas Maneiro record more double faults than E. Rybakina?",
       "rbp": null,
       "settled_at": "",
@@ -80,21 +80,21 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.15229885059330997,
+      "market": 0.15664160397066565,
       "market_id": "0437ce62-1923-4605-a902-0b3e1e2b284b",
       "market_weight": 0.8075,
-      "model": 0.22025,
+      "model": 0.12675,
       "notes": [
-        "simulated win probability 0.220",
-        "market consensus 0.152, weight 0.81"
+        "simulated win probability 0.127",
+        "market consensus 0.157, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.863081+00:00",
-      "probability": 0.17145011619735695,
+      "predicted_at": "2026-09-03T15:32:12.440084+00:00",
+      "probability": 0.1583372372832262,
       "question": "Will J. Bouzas Maneiro win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 12
+      "submission": 11
     },
     {
       "base_rate": 0.225,
@@ -107,14 +107,14 @@
       "market": null,
       "market_id": "fd207ff8-2369-4574-ad46-55e873418236",
       "market_weight": 0.0,
-      "model": 0.18575,
+      "model": 0.18925,
       "notes": [
         "no usable market quote for this question",
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.863081+00:00",
-      "probability": 0.14575,
+      "predicted_at": "2026-09-03T15:32:12.440084+00:00",
+      "probability": 0.14925,
       "question": "Will the match feature at least 1 tiebreak?",
       "rbp": null,
       "settled_at": "",
@@ -124,7 +124,7 @@
   "match_id": "5fd62ce3-cc04-4add-b912-d9c933528621",
   "match_name": "J. Bouzas Maneiro vs E. Rybakina",
   "multiplier": 1,
-  "opening_time": "2026-09-03T15:00:00.000Z",
+  "opening_time": "2026-09-03T22:30:00.000Z",
   "player_a": "Jessica Bouzas Maneiro",
   "player_b": "Elena Rybakina",
   "round_code": "R128"

@@ -13,18 +13,18 @@
       "market": null,
       "market_id": "d03d0809-ead6-4555-ad6f-332807ba54b2",
       "market_weight": 0.0,
-      "model": 0.5685906823959856,
+      "model": 0.5816085914005156,
       "notes": [
-        "total games: simulator 39.4, Pinnacle 40.0, used 39.8 at weight 0.60",
+        "total games: simulator 39.4, Pinnacle 40.5, used 40.1 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.865595+00:00",
-      "probability": 0.5685906823959856,
+      "predicted_at": "2026-09-03T09:35:30.860959+00:00",
+      "probability": 0.5816085914005156,
       "question": "Will the match last longer than 175 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 59
+      "submission": 60
     },
     {
       "base_rate": 0.46,
@@ -37,15 +37,15 @@
       "market": null,
       "market_id": "ec15f80b-158b-46e5-b56e-ebcf76c095f1",
       "market_weight": 0.0,
-      "model": 0.8005917652649986,
+      "model": 0.8007325231742755,
       "notes": [
         "ace vulnerability: Karen Khachanov 1.04, Felix Auger-Aliassime 0.76",
         "exposure 130 service points from 41.7 games",
-        "outcome coupling: P(win)=0.713, delta=+0.60"
+        "outcome coupling: P(win)=0.714, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.865595+00:00",
-      "probability": 0.8005917652649986,
+      "predicted_at": "2026-09-03T09:35:30.860959+00:00",
+      "probability": 0.8007325231742755,
       "question": "Will F. Auger-Aliassime record more aces than K. Khachanov?",
       "rbp": null,
       "settled_at": "",
@@ -67,7 +67,7 @@
         "exposure 130 service points from 41.7 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.865595+00:00",
+      "predicted_at": "2026-09-03T09:35:30.860959+00:00",
       "probability": 0.6681400319483523,
       "question": "Will F. Auger-Aliassime record more double faults than K. Khachanov?",
       "rbp": null,
@@ -82,17 +82,17 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.7132930090731098,
+      "market": 0.7139606376599732,
       "market_id": "09286167-a26f-4656-9a12-c9eaa2a82e25",
       "market_weight": 0.8075,
       "model": 0.5655,
       "notes": [
         "simulated win probability 0.566",
-        "market consensus 0.713, weight 0.81"
+        "market consensus 0.714, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.865595+00:00",
-      "probability": 0.6829136363347525,
+      "predicted_at": "2026-09-03T09:35:30.860959+00:00",
+      "probability": 0.6834677306737438,
       "question": "Will F. Auger-Aliassime win?",
       "rbp": null,
       "settled_at": "",
@@ -116,7 +116,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.865595+00:00",
+      "predicted_at": "2026-09-03T09:35:30.860959+00:00",
       "probability": 0.1888,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,

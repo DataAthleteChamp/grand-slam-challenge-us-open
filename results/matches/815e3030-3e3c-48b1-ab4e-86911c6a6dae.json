@@ -13,15 +13,18 @@
       "market": null,
       "market_id": "e8d84463-c61b-428d-ae4e-397ee28826ca",
       "market_weight": 0.0,
-      "model": 0.4222981006780183,
-      "notes": [],
+      "model": 0.46350721418612884,
+      "notes": [
+        "total games: simulator 21.9, Pinnacle 22.5, used 22.3 at weight 0.60",
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.879277+00:00",
-      "probability": 0.4222981006780183,
+      "predicted_at": "2026-09-03T15:32:12.450936+00:00",
+      "probability": 0.46350721418612884,
       "question": "Will the match last longer than 100 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 40
+      "submission": 45
     },
     {
       "base_rate": 0.427,
@@ -34,13 +37,13 @@
       "market": null,
       "market_id": "781633f3-62db-4348-b1e5-79d6ea7eeec3",
       "market_weight": 0.0,
-      "model": 0.5285125621784665,
+      "model": 0.5335590161436269,
       "notes": [
-        "exposure 70 service points from 21.7 games"
+        "exposure 75 service points from 23.2 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.879277+00:00",
-      "probability": 0.5285125621784665,
+      "predicted_at": "2026-09-03T15:32:12.450936+00:00",
+      "probability": 0.5335590161436269,
       "question": "Will E. Alexandrova record more aces than M. Kostyuk?",
       "rbp": null,
       "settled_at": "",
@@ -57,17 +60,17 @@
       "market": null,
       "market_id": "4b85ae66-b02a-4f64-ae7f-e8906c9227d6",
       "market_weight": 0.0,
-      "model": 0.4547149905783371,
+      "model": 0.4575604470549754,
       "notes": [
-        "exposure 70 service points from 21.7 games"
+        "exposure 75 service points from 23.2 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.879277+00:00",
-      "probability": 0.4547149905783371,
+      "predicted_at": "2026-09-03T15:32:12.450936+00:00",
+      "probability": 0.4575604470549754,
       "question": "Will E. Alexandrova record more double faults than M. Kostyuk?",
       "rbp": null,
       "settled_at": "",
-      "submission": 44
+      "submission": 45
     },
     {
       "base_rate": 0.5,
@@ -85,7 +88,7 @@
         "threshold family defers to the base rate by policy"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.879277+00:00",
+      "predicted_at": "2026-09-03T15:32:12.450936+00:00",
       "probability": 0.5,
       "question": "Will E. Alexandrova commit more than 37 unforced errors?",
       "rbp": null,
@@ -108,7 +111,7 @@
         "serve rate: expected 0.569 vs threshold 0.660, sd 0.084 (0.061 sampling + 0.058 form)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.879277+00:00",
+      "predicted_at": "2026-09-03T15:32:12.450936+00:00",
       "probability": 0.14465345688560707,
       "question": "Will M. Kostyuk win more than 66% of points played on their first serve?",
       "rbp": null,
@@ -126,13 +129,13 @@
       "market": null,
       "market_id": "19ccc2a9-a0d0-4d35-a6d6-c1e2f79af115",
       "market_weight": 0.0,
-      "model": 0.46810547417814546,
+      "model": 0.46986706208392315,
       "notes": [
-        "exposure 70 service points from 21.7 games"
+        "exposure 75 service points from 23.2 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.879277+00:00",
-      "probability": 0.4702909714786505,
+      "predicted_at": "2026-09-03T15:32:12.450936+00:00",
+      "probability": 0.47181034104738373,
       "question": "Will E. Alexandrova hit more winners than M. Kostyuk?",
       "rbp": null,
       "settled_at": "",
@@ -149,63 +152,64 @@
       "market": null,
       "market_id": "e03d8339-b7fb-489e-be38-0c2171125344",
       "market_weight": 0.0,
-      "model": 0.5035,
-      "notes": [],
+      "model": 0.505,
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.879277+00:00",
-      "probability": 0.5035,
+      "predicted_at": "2026-09-03T15:32:12.450936+00:00",
+      "probability": 0.505,
       "question": "Will the match require a deciding set?",
       "rbp": null,
       "settled_at": "",
-      "submission": 50
+      "submission": 51
     },
     {
-      "base_rate": 0.5,
+      "base_rate": 0.641,
       "brier": null,
-      "confidence": 0.3,
+      "confidence": 0.95,
       "crowd": null,
       "crowd_brier": null,
-      "family": "other",
+      "family": "lopsided_set",
       "lane": "scenario",
-      "market": 0.0,
+      "market": null,
       "market_id": "73bfa023-5b1c-4ab7-88ed-e0bbbf4cdf25",
       "market_weight": 0.0,
-      "model": null,
+      "model": 0.692,
       "notes": [
-        "unclassified \u2014 will be priced from the base rate",
-        "question not understood; answering from the base rate"
+        "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.879277+00:00",
-      "probability": 0.5,
+      "predicted_at": "2026-09-03T15:32:12.450936+00:00",
+      "probability": 0.692,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
       "settled_at": "",
-      "submission": 50
+      "submission": 73
     },
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.7,
+      "confidence": 0.85,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": null,
+      "market": 0.27505827504555064,
       "market_id": "7af8e268-db2e-428e-96c2-637ae0033b3f",
-      "market_weight": 0.0,
-      "model": 0.50025,
+      "market_weight": 0.8075,
+      "model": 0.4985,
       "notes": [
-        "simulated win probability 0.500",
-        "no market quote; this is the family that most needs one"
+        "simulated win probability 0.498",
+        "market consensus 0.275, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.879277+00:00",
-      "probability": 0.5002012499999999,
+      "predicted_at": "2026-09-03T15:32:12.450936+00:00",
+      "probability": 0.31771663979811177,
       "question": "Will E. Alexandrova win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 50
+      "submission": 28
     },
     {
       "base_rate": 0.225,
@@ -218,17 +222,18 @@
       "market": null,
       "market_id": "c7a13851-6c6e-4aaa-8558-a55c2f8a784b",
       "market_weight": 0.0,
-      "model": 0.17925,
+      "model": 0.23825,
       "notes": [
+        "no usable market quote for this question",
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.879277+00:00",
-      "probability": 0.13924999999999998,
+      "predicted_at": "2026-09-03T15:32:12.450936+00:00",
+      "probability": 0.19824999999999998,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 9
+      "submission": 15
     }
   ],
   "match_id": "815e3030-3e3c-48b1-ab4e-86911c6a6dae",

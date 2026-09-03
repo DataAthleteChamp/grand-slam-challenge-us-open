@@ -13,17 +13,18 @@
       "market": null,
       "market_id": "c40d06a2-2a93-4ebf-8b13-f7ce1d2b46a1",
       "market_weight": 0.0,
-      "model": 0.561440293651256,
+      "model": 0.6775150335985383,
       "notes": [
+        "total games: simulator 22.4, Pinnacle 24.8, used 23.9 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.872384+00:00",
-      "probability": 0.561440293651256,
+      "predicted_at": "2026-09-03T15:32:12.452160+00:00",
+      "probability": 0.6775150335985383,
       "question": "Will the match last longer than 95 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 58
+      "submission": 72
     },
     {
       "base_rate": 0.427,
@@ -36,13 +37,13 @@
       "market": null,
       "market_id": "e93e7d6d-659a-4d34-a79a-a4fc9eb786d9",
       "market_weight": 0.0,
-      "model": 0.3030160694791381,
+      "model": 0.30445824349300254,
       "notes": [
-        "exposure 72 service points from 22.2 games"
+        "exposure 77 service points from 23.7 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.872384+00:00",
-      "probability": 0.3030160694791381,
+      "predicted_at": "2026-09-03T15:32:12.452160+00:00",
+      "probability": 0.30445824349300254,
       "question": "Will D. Shnaider record more aces than T. Townsend?",
       "rbp": null,
       "settled_at": "",
@@ -59,17 +60,17 @@
       "market": null,
       "market_id": "aa9c900d-e5e3-4237-948c-3f269926a779",
       "market_weight": 0.0,
-      "model": 0.4134059457254847,
+      "model": 0.41622276066568403,
       "notes": [
-        "exposure 72 service points from 22.2 games"
+        "exposure 77 service points from 23.7 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.872384+00:00",
-      "probability": 0.4134059457254847,
+      "predicted_at": "2026-09-03T15:32:12.452160+00:00",
+      "probability": 0.41622276066568403,
       "question": "Will D. Shnaider record more double faults than T. Townsend?",
       "rbp": null,
       "settled_at": "",
-      "submission": 39
+      "submission": 40
     },
     {
       "base_rate": 0.5,
@@ -87,7 +88,7 @@
         "threshold family defers to the base rate by policy"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.872384+00:00",
+      "predicted_at": "2026-09-03T15:32:12.452160+00:00",
       "probability": 0.5,
       "question": "Will D. Shnaider commit more than 30 unforced errors?",
       "rbp": null,
@@ -110,7 +111,7 @@
         "serve rate: expected 0.592 vs threshold 0.680, sd 0.084 (0.061 sampling + 0.058 form)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.872384+00:00",
+      "predicted_at": "2026-09-03T15:32:12.452160+00:00",
       "probability": 0.13642751594350572,
       "question": "Will T. Townsend win more than 68% of points played on their first serve?",
       "rbp": null,
@@ -128,13 +129,13 @@
       "market": null,
       "market_id": "bf8d254a-4fbd-45c4-8c0b-051ecd167aa2",
       "market_weight": 0.0,
-      "model": 0.22644402535445335,
+      "model": 0.22084080755727029,
       "notes": [
-        "exposure 72 service points from 22.2 games"
+        "exposure 77 service points from 23.7 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.872384+00:00",
-      "probability": 0.261857971868216,
+      "predicted_at": "2026-09-03T15:32:12.452160+00:00",
+      "probability": 0.2570251965181456,
       "question": "Will D. Shnaider hit more winners than T. Townsend?",
       "rbp": null,
       "settled_at": "",
@@ -151,41 +152,40 @@
       "market": null,
       "market_id": "dbe6f28f-a26f-469d-af22-04fb0cfe0e11",
       "market_weight": 0.0,
-      "model": 0.50425,
+      "model": 0.50375,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.872384+00:00",
-      "probability": 0.50425,
+      "predicted_at": "2026-09-03T15:32:12.452160+00:00",
+      "probability": 0.50375,
       "question": "Will the match require a deciding set?",
       "rbp": null,
       "settled_at": "",
-      "submission": 51
+      "submission": 50
     },
     {
-      "base_rate": 0.5,
+      "base_rate": 0.641,
       "brier": null,
-      "confidence": 0.3,
+      "confidence": 0.95,
       "crowd": null,
       "crowd_brier": null,
-      "family": "other",
+      "family": "lopsided_set",
       "lane": "scenario",
-      "market": 0.0,
+      "market": null,
       "market_id": "f6d07153-5bfe-419a-8310-81f4e50c133e",
       "market_weight": 0.0,
-      "model": null,
+      "model": 0.6355,
       "notes": [
-        "unclassified \u2014 will be priced from the base rate",
-        "question not understood; answering from the base rate"
+        "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.872384+00:00",
-      "probability": 0.5,
+      "predicted_at": "2026-09-03T15:32:12.452160+00:00",
+      "probability": 0.6355,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
       "settled_at": "",
-      "submission": 50
+      "submission": 67
     },
     {
       "base_rate": 0.5,
@@ -195,21 +195,21 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.6425253378587212,
+      "market": 0.6051893408187136,
       "market_id": "f215ac2a-69d4-4d7b-8af1-7da905355f91",
       "market_weight": 0.8075,
-      "model": 0.505,
+      "model": 0.50625,
       "notes": [
-        "simulated win probability 0.505",
-        "market consensus 0.643, weight 0.81"
+        "simulated win probability 0.506",
+        "market consensus 0.605, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.872384+00:00",
-      "probability": 0.6144800041029894,
+      "predicted_at": "2026-09-03T15:32:12.452160+00:00",
+      "probability": 0.584603332894905,
       "question": "Will D. Shnaider win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 64
+      "submission": 61
     },
     {
       "base_rate": 0.225,
@@ -222,18 +222,18 @@
       "market": null,
       "market_id": "67677a0f-caf6-4149-8acc-d6a911d2cd21",
       "market_weight": 0.0,
-      "model": 0.23475,
+      "model": 0.29275,
       "notes": [
         "no usable market quote for this question",
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.872384+00:00",
-      "probability": 0.19474999999999998,
+      "predicted_at": "2026-09-03T15:32:12.452160+00:00",
+      "probability": 0.25275000000000003,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 15
+      "submission": 21
     }
   ],
   "match_id": "2db30852-6cf0-4018-a4da-29a6b2a1d792",

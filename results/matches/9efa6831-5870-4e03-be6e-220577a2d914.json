@@ -1,5 +1,5 @@
 {
-  "closing_time": "2026-09-04T06:30:00.000Z",
+  "closing_time": "2026-09-04T06:00:00.000Z",
   "draw": "womens",
   "entries": [
     {
@@ -13,15 +13,18 @@
       "market": null,
       "market_id": "5e741d54-7fe0-4395-a4e0-a059ab5786d5",
       "market_weight": 0.0,
-      "model": 0.38471166593470285,
-      "notes": [],
+      "model": 0.4424922254299828,
+      "notes": [
+        "total games: simulator 21.7, Pinnacle 23.0, used 22.5 at weight 0.60",
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.867231+00:00",
-      "probability": 0.38471166593470285,
+      "predicted_at": "2026-09-03T15:32:12.434060+00:00",
+      "probability": 0.4424922254299828,
       "question": "Will the match last longer than 110 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 36
+      "submission": 43
     },
     {
       "base_rate": 0.427,
@@ -34,13 +37,13 @@
       "market": null,
       "market_id": "87ba9f51-baed-4eb2-8222-5b43cf87c32e",
       "market_weight": 0.0,
-      "model": 0.3765640792783671,
+      "model": 0.37934323300837264,
       "notes": [
-        "exposure 70 service points from 21.6 games"
+        "exposure 75 service points from 23.0 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.867231+00:00",
-      "probability": 0.3765640792783671,
+      "predicted_at": "2026-09-03T15:32:12.434060+00:00",
+      "probability": 0.37934323300837264,
       "question": "Will N. Bartunkova record more aces than T. Maria?",
       "rbp": null,
       "settled_at": "",
@@ -57,41 +60,41 @@
       "market": null,
       "market_id": "2c945df9-9a54-4e9b-b7aa-40669e10599b",
       "market_weight": 0.0,
-      "model": 0.43822546788197114,
+      "model": 0.44145689509811736,
       "notes": [
-        "exposure 70 service points from 21.6 games"
+        "exposure 75 service points from 23.0 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.867231+00:00",
-      "probability": 0.43822546788197114,
+      "predicted_at": "2026-09-03T15:32:12.434060+00:00",
+      "probability": 0.44145689509811736,
       "question": "Will N. Bartunkova record more double faults than T. Maria?",
       "rbp": null,
       "settled_at": "",
-      "submission": 42
+      "submission": 43
     },
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.7,
+      "confidence": 0.85,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": null,
+      "market": 0.6984219076423517,
       "market_id": "22a62a32-5907-4630-908d-6022866e6bd9",
-      "market_weight": 0.0,
-      "model": 0.56825,
+      "market_weight": 0.8075,
+      "model": 0.62075,
       "notes": [
-        "simulated win probability 0.568",
-        "no market quote; this is the family that most needs one"
+        "simulated win probability 0.621",
+        "market consensus 0.698, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.867231+00:00",
-      "probability": 0.5549412499999999,
+      "predicted_at": "2026-09-03T15:32:12.434060+00:00",
+      "probability": 0.6800225196126592,
       "question": "Will N. Bartunkova win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 57
+      "submission": 72
     },
     {
       "base_rate": 0.225,
@@ -104,23 +107,24 @@
       "market": null,
       "market_id": "af804938-3ef4-48c8-8e6a-690436a0d1e9",
       "market_weight": 0.0,
-      "model": 0.183,
+      "model": 0.24025,
       "notes": [
+        "no usable market quote for this question",
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.867231+00:00",
-      "probability": 0.143,
+      "predicted_at": "2026-09-03T15:32:12.434060+00:00",
+      "probability": 0.20024999999999998,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 10
+      "submission": 15
     }
   ],
   "match_id": "9efa6831-5870-4e03-be6e-220577a2d914",
   "match_name": "N. Bartunkova vs T. Maria",
   "multiplier": 1,
-  "opening_time": "2026-09-03T18:30:00.000Z",
+  "opening_time": "2026-09-03T18:00:00.000Z",
   "player_a": "Nikola Bartunkova",
   "player_b": "Tatjana Maria",
   "round_code": "R128"

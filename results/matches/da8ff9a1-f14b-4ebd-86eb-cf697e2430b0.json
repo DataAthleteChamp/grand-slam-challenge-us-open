@@ -1,5 +1,5 @@
 {
-  "closing_time": "2026-09-04T03:00:00.000Z",
+  "closing_time": "2026-09-04T02:30:00.000Z",
   "draw": "mens",
   "entries": [
     {
@@ -13,14 +13,14 @@
       "market": null,
       "market_id": "89a6baaa-82e9-46b3-b270-4f183236fd9c",
       "market_weight": 0.0,
-      "model": 0.6479517340449042,
+      "model": 0.6471117506924006,
       "notes": [
         "total games: simulator 37.2, Pinnacle 33.0, used 34.7 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.861613+00:00",
-      "probability": 0.6479517340449042,
+      "predicted_at": "2026-09-03T15:32:12.426030+00:00",
+      "probability": 0.6471117506924006,
       "question": "Will the match last longer than 135 minutes?",
       "rbp": null,
       "settled_at": "",
@@ -37,15 +37,15 @@
       "market": null,
       "market_id": "6dbb50d4-3a5e-4f2b-87a0-a7dc96e65d61",
       "market_weight": 0.0,
-      "model": 0.8244667088098382,
+      "model": 0.8241045250702569,
       "notes": [
         "ace vulnerability: Jurij Rodionov 0.93, Jakub Mensik 0.84",
         "exposure 123 service points from 39.4 games",
-        "outcome coupling: P(win)=0.874, delta=+0.60"
+        "outcome coupling: P(win)=0.872, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.861613+00:00",
-      "probability": 0.8244667088098382,
+      "predicted_at": "2026-09-03T15:32:12.426030+00:00",
+      "probability": 0.8241045250702569,
       "question": "Will J. Mensik record more aces than J. Rodionov?",
       "rbp": null,
       "settled_at": "",
@@ -67,7 +67,7 @@
         "exposure 123 service points from 39.4 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.861613+00:00",
+      "predicted_at": "2026-09-03T15:32:12.426030+00:00",
       "probability": 0.5154896803633539,
       "question": "Will J. Mensik record more double faults than J. Rodionov?",
       "rbp": null,
@@ -82,17 +82,17 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.8740106503219566,
+      "market": 0.8723544972942846,
       "market_id": "7f773f07-3eca-43ad-80b3-1734f09a7e9c",
       "market_weight": 0.8075,
       "model": 0.6425,
       "notes": [
         "simulated win probability 0.642",
-        "market consensus 0.874, weight 0.81"
+        "market consensus 0.872, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.861613+00:00",
-      "probability": 0.8347865137520805,
+      "predicted_at": "2026-09-03T15:32:12.426030+00:00",
+      "probability": 0.8332134618681135,
       "question": "Will J. Mensik win?",
       "rbp": null,
       "settled_at": "",
@@ -116,7 +116,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.861613+00:00",
+      "predicted_at": "2026-09-03T15:32:12.426030+00:00",
       "probability": 0.07594000000000001,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,
@@ -127,7 +127,7 @@
   "match_id": "da8ff9a1-f14b-4ebd-86eb-cf697e2430b0",
   "match_name": "J. Mensik vs J. Rodionov",
   "multiplier": 1,
-  "opening_time": "2026-09-03T15:00:00.000Z",
+  "opening_time": "2026-09-03T14:30:00.000Z",
   "player_a": "Jakub Mensik",
   "player_b": "Jurij Rodionov",
   "round_code": "R128"

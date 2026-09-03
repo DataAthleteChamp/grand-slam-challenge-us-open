@@ -352,3 +352,57 @@ not two.  Coverage discipline matters three times as much from here.
 This does *not* change what to submit on any individual question - the multiplier scales the
 score, not the odds, so honest reporting stays optimal.  It changes only where attention is
 worth spending, and how expensive an unanswered market is.
+
+---
+
+## Where we lose: uncertain AND contrarian
+
+Borrowed from the Akuna market-making project, whose one scoring change came from
+slicing realised settlements by a model-internal ratio rather than from any simulation.
+Applying the same idea to 475 settled questions, cut by our own confidence and by how far
+we sat from the crowd:
+
+| | near 50 (\|p-0.5\| <= .10) | mid | confident (> .30) |
+|---|---|---|---|
+| agree with crowd (<= .06) | -0.26 (n=110) | +0.12 (n=96) | +0.52 (n=27) |
+| mid | -2.15 (n=47) | 0.00 (n=72) | +3.17 (n=33) |
+| **far from crowd (> .12)** | **-11.42 (n=24)** | -1.65 (n=35) | +2.02 (n=31) |
+
+The two marginals are both significant on their own - near 50 scores -2.23/question
+(95% CI [-3.24, -1.25]) and deviating from the crowd by more than 12 points scores -2.99
+([-5.82, -0.03]) - but the table shows they are not independent. **The damage is
+concentrated where we are uncertain and contrarian at the same time**, almost entirely on
+the two count families. Where we are confident, deviating from the crowd *pays*.
+
+**But the obvious fix does not work.** Pulling near-50 answers toward 50 gains +0.02
+RBP/question, 95% CI [-0.12, +0.16], under leave-one-match-out. The reason is arithmetic:
+flattening 0.44 to 0.50 barely moves a Brier score, so the slice identifies *where* the
+loss happens without offering a lever that recovers it. This is the Murphy identity again -
+the loss is resolution, and no monotone transform of our own number can add resolution.
+
+Recorded because the slice is a genuinely useful diagnostic even though the fix failed: it
+says our count models produce near-50 answers precisely when they have no signal, and that
+the honest response is better information, not a different transform of the same
+information.
+
+## Evidence hierarchy, adopted from the Akuna project
+
+That project measured a candidate at t = 2.83, consistent in sign across two independent
+routing rules, with more wins than losses in both and no failures - and it **regressed on
+the real grader**. Their conclusion was that a simulator "may not be used to rank
+candidates, in aggregate or per session, at any significance level".
+
+We reached the same place independently when a historical backtest said to exclude the
+corrupted WTA blocks from the roster and a live re-pricing of settled questions said the
+opposite - and the live test was right. Our working order of evidence:
+
+1. **Replaying our own settled questions.** Scored against the outcomes we are actually
+   paid on.
+2. **Realised outcome data over many events** - the measurement that produced the
+   split-half reliability result and the tiebreak and lopsided calibrations.
+3. **A derivation from the rules** - e.g. a set won 6-0, 6-1 or 6-2 has 6, 7 or 8 games,
+   so the question is exactly "set total games under 8.5", which is a market that exists.
+4. **Historical backtests.** Useful, but they have now been overruled twice by 1 and 2.
+
+Two independent hold-outs remain mandatory: four separate results this week would have
+passed a single hold-out and were false.

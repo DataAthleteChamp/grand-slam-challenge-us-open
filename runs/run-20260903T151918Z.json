@@ -1,0 +1,4363 @@
+{
+  "event": {
+    "id": "0cf0efd1-7e12-4ca9-8068-89eb48466a37",
+    "title": "Grand Slam Challenge"
+  },
+  "generated_at": "20260903T151918Z",
+  "lobby": {
+    "id": "b1419bb4-6dff-4172-9a42-a206b0a24ad9"
+  },
+  "matches": {
+    "03c75888-51a9-400b-a89a-026289930934": {
+      "player_a": "Jiri Lehecka",
+      "player_b": "Stefanos Tsitsipas",
+      "questions": [
+        {
+          "base_rate": 0.3808,
+          "confidence": 0.95,
+          "family": "match_duration",
+          "lane": "honest",
+          "market": null,
+          "market_id": "983a7fcb-7347-4402-b777-c2c6ff515c89",
+          "market_weight": 0.0,
+          "model": 0.5617,
+          "notes": [
+            "total games: simulator 40.1, Pinnacle 40.5, used 40.3 at weight 0.60",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.5526,
+          "submission": 55
+        },
+        {
+          "base_rate": 0.46,
+          "confidence": 1.0,
+          "family": "aces_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "815fbdfc-dc0c-48e1-9b2b-111e80b4db60",
+          "market_weight": 0.0,
+          "model": 0.3761,
+          "notes": [
+            "ace vulnerability: Stefanos Tsitsipas 0.82, Jiri Lehecka 0.93",
+            "exposure 132 service points from 42.3 games",
+            "outcome coupling: P(win)=0.650, delta=+0.60"
+          ],
+          "probability": 0.3761,
+          "submission": 38
+        },
+        {
+          "base_rate": 0.421,
+          "confidence": 1.0,
+          "family": "double_faults_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "dadac2de-186f-4dea-985e-4033f8d7756f",
+          "market_weight": 0.0,
+          "model": 0.4353,
+          "notes": [
+            "exposure 132 service points from 42.3 games"
+          ],
+          "probability": 0.4353,
+          "submission": 44
+        },
+        {
+          "base_rate": 0.5,
+          "confidence": 0.3,
+          "family": "unforced_errors",
+          "lane": "honest",
+          "market": null,
+          "market_id": "fe7a5285-a62b-4f5d-a1ce-8a8f98445641",
+          "market_weight": 0.0,
+          "model": 0.5,
+          "notes": [
+            "threshold family defers to the base rate by policy"
+          ],
+          "probability": 0.5,
+          "submission": 50
+        },
+        {
+          "base_rate": 0.2421,
+          "confidence": 0.41,
+          "family": "first_serve_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "c5764d97-5737-4757-8300-c109108d78fa",
+          "market_weight": 0.0,
+          "model": 0.4047,
+          "notes": [
+            "serve rate: expected 0.694 vs threshold 0.710, sd 0.067 (0.044 sampling + 0.051 form)"
+          ],
+          "probability": 0.3088,
+          "submission": 31
+        },
+        {
+          "base_rate": 0.485,
+          "confidence": 0.75,
+          "family": "winners_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "fdad8a67-b7ec-44f0-871c-d24b58e4c42d",
+          "market_weight": 0.0,
+          "model": 0.7289,
+          "notes": [
+            "exposure 132 service points from 42.3 games"
+          ],
+          "probability": 0.668,
+          "submission": 67
+        },
+        {
+          "base_rate": 0.202,
+          "confidence": 0.95,
+          "family": "deciding_set",
+          "lane": "honest",
+          "market": null,
+          "market_id": "db8659dc-8799-478a-b5ad-46bd528c42ae",
+          "market_weight": 0.0,
+          "model": 0.3335,
+          "notes": [
+            "no usable market quote for this question"
+          ],
+          "probability": 0.3269,
+          "submission": 33
+        },
+        {
+          "base_rate": 0.653,
+          "confidence": 0.95,
+          "family": "lopsided_set",
+          "lane": "honest",
+          "market": null,
+          "market_id": "adb51cc5-e055-4a03-a5b2-198cf4e5a800",
+          "market_weight": 0.0,
+          "model": 0.4485,
+          "notes": [
+            "no usable market quote for this question"
+          ],
+          "probability": 0.4587,
+          "submission": 46
+        },
+        {
+          "base_rate": 0.5,
+          "confidence": 0.85,
+          "family": "match_winner",
+          "lane": "honest",
+          "market": 0.6504,
+          "market_id": "40eb0082-533c-4d95-b344-46f5aed52bc7",
+          "market_weight": 0.95,
+          "model": 0.2878,
+          "notes": [
+            "simulated win probability 0.288",
+            "market consensus 0.650, weight 0.95"
+          ],
+          "probability": 0.6129,
+          "submission": 61
+        },
+        {
+          "base_rate": 0.1326,
+          "confidence": 0.95,
+          "family": "tiebreak",
+          "lane": "honest",
+          "market": null,
+          "market_id": "b22ff6e3-6af1-4bbd-88ff-2b93a3ca401d",
+          "market_weight": 0.0,
+          "model": 0.3023,
+          "notes": [
+            "tiebreak iid correction x0.88 (ATP)",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.2938,
+          "submission": 29
+        }
+      ],
+      "rated_a": true,
+      "rated_b": true,
+      "round": "R128",
+      "tour": "ATP"
+    },
+    "095a0f71-c7e3-400e-86f8-1a0f429dd498": {
+      "player_a": "Cristina Bucsa",
+      "player_b": "Himeno Sakatsume",
+      "questions": [
+        {
+          "base_rate": 0.4504,
+          "confidence": 0.95,
+          "family": "match_duration",
+          "lane": "honest",
+          "market": null,
+          "market_id": "e2825672-e1cd-439e-a3e0-f5a0a39f637a",
+          "market_weight": 0.0,
+          "model": 0.6503,
+          "notes": [
+            "total games: simulator 22.3, Pinnacle 24.0, used 23.3 at weight 0.60",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.6403,
+          "submission": 64
+        },
+        {
+          "base_rate": 0.427,
+          "confidence": 0.45,
+          "family": "aces_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "4b2fa595-18fa-4904-9111-30dc15d24303",
+          "market_weight": 0.0,
+          "model": 0.3614,
+          "notes": [
+            "exposure 77 service points from 23.5 games"
+          ],
+          "probability": 0.3975,
+          "submission": 40
+        },
+        {
+          "base_rate": 0.433,
+          "confidence": 0.45,
+          "family": "double_faults_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "3a1ad1ba-40ad-48a6-8b56-95b3606a9027",
+          "market_weight": 0.0,
+          "model": 0.414,
+          "notes": [
+            "exposure 77 service points from 23.5 games"
+          ],
+          "probability": 0.4244,
+          "submission": 42
+        },
+        {
+          "base_rate": 0.5,
+          "confidence": 0.85,
+          "family": "match_winner",
+          "lane": "honest",
+          "market": 0.6373,
+          "market_id": "90b5f48b-27cf-40e9-9fe9-df15a32160c4",
+          "market_weight": 0.95,
+          "model": 0.4577,
+          "notes": [
+            "simulated win probability 0.458",
+            "market consensus 0.637, weight 0.95"
+          ],
+          "probability": 0.6094,
+          "submission": 61
+        },
+        {
+          "base_rate": 0.225,
+          "confidence": 0.95,
+          "family": "tiebreak",
+          "lane": "honest",
+          "market": null,
+          "market_id": "6bc542f4-ad13-4185-8b4b-bf727604fd33",
+          "market_weight": 0.0,
+          "model": 0.272,
+          "notes": [
+            "no usable market quote for this question"
+          ],
+          "probability": 0.2697,
+          "submission": 27
+        }
+      ],
+      "rated_a": true,
+      "rated_b": true,
+      "round": "R128",
+      "tour": "WTA"
+    },
+    "0a11653a-7f6e-4eec-9ab1-760035bc4a1d": {
+      "player_a": "Gael Monfils",
+      "player_b": "Learner Tien",
+      "questions": [
+        {
+          "base_rate": 0.3808,
+          "confidence": 0.95,
+          "family": "match_duration",
+          "lane": "honest",
+          "market": null,
+          "market_id": "82e56688-7733-4d7d-a948-baa5bd66ea75",
+          "market_weight": 0.0,
+          "model": 0.3742,
+          "notes": [
+            "total games: simulator 37.8, Pinnacle 34.5, used 35.8 at weight 0.60",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.3745,
+          "submission": 37
+        },
+        {
+          "base_rate": 0.46,
+          "confidence": 1.0,
+          "family": "aces_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "d0508e5a-7168-4465-92f4-85c30f6a933c",
+          "market_weight": 0.0,
+          "model": 0.8724,
+          "notes": [
+            "ace vulnerability: Learner Tien 1.04, Gael Monfils 0.59",
+            "exposure 125 service points from 40.0 games",
+            "outcome coupling: P(win)=0.184, delta=+0.60"
+          ],
+          "probability": 0.8724,
+          "submission": 87
+        },
+        {
+          "base_rate": 0.421,
+          "confidence": 1.0,
+          "family": "double_faults_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "97a1f086-1a1a-48c1-b515-4b6b953e1122",
+          "market_weight": 0.0,
+          "model": 0.5636,
+          "notes": [
+            "exposure 125 service points from 40.0 games"
+          ],
+          "probability": 0.5636,
+          "submission": 56
+        },
+        {
+          "base_rate": 0.5,
+          "confidence": 0.85,
+          "family": "match_winner",
+          "lane": "honest",
+          "market": 0.184,
+          "market_id": "521c29a4-8ed3-40dd-bfcc-4877a6c871ea",
+          "market_weight": 0.95,
+          "model": 0.5727,
+          "notes": [
+            "simulated win probability 0.573",
+            "market consensus 0.184, weight 0.95"
+          ],
+          "probability": 0.2431,
+          "submission": 24
+        },
+        {
+          "base_rate": 0.1326,
+          "confidence": 0.95,
+          "family": "tiebreak",
+          "lane": "honest",
+          "market": null,
+          "market_id": "a4a24b8c-b099-4214-8eae-3cdc41a31555",
+          "market_weight": 0.0,
+          "model": 0.119,
+          "notes": [
+            "tiebreak iid correction x0.88 (ATP)",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.1197,
+          "submission": 12
+        }
+      ],
+      "rated_a": true,
+      "rated_b": true,
+      "round": "R128",
+      "tour": "ATP"
+    },
+    "0f3fee5d-2dda-421a-b60c-a7bd8af872b5": {
+      "player_a": "Maria Sakkari",
+      "player_b": "Yuliia Starodubtseva",
+      "questions": [
+        {
+          "base_rate": 0.3194,
+          "confidence": 0.95,
+          "family": "match_duration",
+          "lane": "honest",
+          "market": null,
+          "market_id": "b50ec5ec-2166-4101-93e8-e37f787918e1",
+          "market_weight": 0.0,
+          "model": 0.5052,
+          "notes": [
+            "total games: simulator 21.1, Pinnacle 24.0, used 22.8 at weight 0.60",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.4959,
+          "submission": 50
+        },
+        {
+          "base_rate": 0.427,
+          "confidence": 1.0,
+          "family": "aces_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "3903e313-1cab-4943-9066-79081746eebd",
+          "market_weight": 0.0,
+          "model": 0.5337,
+          "notes": [
+            "exposure 73 service points from 22.4 games"
+          ],
+          "probability": 0.5337,
+          "submission": 53
+        },
+        {
+          "base_rate": 0.433,
+          "confidence": 1.0,
+          "family": "double_faults_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "bbcb901f-c544-432b-a296-9889d7092a56",
+          "market_weight": 0.0,
+          "model": 0.5238,
+          "notes": [
+            "exposure 73 service points from 22.4 games"
+          ],
+          "probability": 0.5238,
+          "submission": 52
+        },
+        {
+          "base_rate": 0.5,
+          "confidence": 0.85,
+          "family": "match_winner",
+          "lane": "honest",
+          "market": 0.6339,
+          "market_id": "d0803aae-adb8-41ae-95ce-929e02f3f7d7",
+          "market_weight": 0.95,
+          "model": 0.7795,
+          "notes": [
+            "simulated win probability 0.779",
+            "market consensus 0.634, weight 0.95"
+          ],
+          "probability": 0.6208,
+          "submission": 62
+        },
+        {
+          "base_rate": 0.225,
+          "confidence": 0.95,
+          "family": "tiebreak",
+          "lane": "honest",
+          "market": null,
+          "market_id": "a8ae3566-8d31-4f07-b95b-00a2e637efe7",
+          "market_weight": 0.0,
+          "model": 0.2298,
+          "notes": [
+            "no usable market quote for this question"
+          ],
+          "probability": 0.2295,
+          "submission": 23
+        }
+      ],
+      "rated_a": true,
+      "rated_b": true,
+      "round": "R128",
+      "tour": "WTA"
+    },
+    "10a4dc58-6ce2-4ac4-b49c-9cf3a95ff67c": {
+      "player_a": "Yunchaokete Bu",
+      "player_b": "Michael Zheng",
+      "questions": [
+        {
+          "base_rate": 0.4821,
+          "confidence": 0.95,
+          "family": "match_duration",
+          "lane": "honest",
+          "market": null,
+          "market_id": "0dbf17e4-cb84-4775-a7b1-198503940218",
+          "market_weight": 0.0,
+          "model": 0.6976,
+          "notes": [
+            "total games: simulator 37.9, Pinnacle 39.0, used 38.6 at weight 0.60"
+          ],
+          "probability": 0.6868,
+          "submission": 69
+        },
+        {
+          "base_rate": 0.46,
+          "confidence": 1.0,
+          "family": "aces_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "740262a0-651b-4c0c-90e7-aa0fb14b17a2",
+          "market_weight": 0.0,
+          "model": 0.4071,
+          "notes": [
+            "ace vulnerability: Michael Zheng 0.99, Yunchaokete Bu 1.16",
+            "exposure 125 service points from 40.2 games",
+            "outcome coupling: P(win)=0.433, delta=+0.60"
+          ],
+          "probability": 0.4071,
+          "submission": 41
+        },
+        {
+          "base_rate": 0.421,
+          "confidence": 1.0,
+          "family": "double_faults_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "0e13aa26-18d7-4abc-8380-c05c1c744b23",
+          "market_weight": 0.0,
+          "model": 0.3578,
+          "notes": [
+            "exposure 125 service points from 40.2 games"
+          ],
+          "probability": 0.3578,
+          "submission": 36
+        },
+        {
+          "base_rate": 0.5,
+          "confidence": 0.7,
+          "family": "match_winner",
+          "lane": "honest",
+          "market": null,
+          "market_id": "e2bc0d62-b1f7-42a3-ba29-c74029f721fd",
+          "market_weight": 0.0,
+          "model": 0.4333,
+          "notes": [
+            "simulated win probability 0.433",
+            "no market quote; this is the family that most needs one"
+          ],
+          "probability": 0.4533,
+          "submission": 45
+        },
+        {
+          "base_rate": 0.487,
+          "confidence": 0.95,
+          "family": "tiebreak",
+          "lane": "honest",
+          "market": null,
+          "market_id": "5779014b-f7c1-45fe-8d3a-d7c70357fe7d",
+          "market_weight": 0.0,
+          "model": 0.4358,
+          "notes": [
+            "tiebreak iid correction x0.88 (ATP)"
+          ],
+          "probability": 0.4384,
+          "submission": 44
+        }
+      ],
+      "rated_a": true,
+      "rated_b": true,
+      "round": "R128",
+      "tour": "ATP"
+    },
+    "1f000c0d-4cd6-4b83-8144-b6698e548c43": {
+      "player_a": "Alexander Blockx",
+      "player_b": "Marco Trungelliti",
+      "questions": [
+        {
+          "base_rate": 0.7179,
+          "confidence": 0.95,
+          "family": "match_duration",
+          "lane": "honest",
+          "market": null,
+          "market_id": "6def4d1d-bbc1-4ba9-a860-3d7117a6c5d8",
+          "market_weight": 0.0,
+          "model": 0.7909,
+          "notes": [
+            "total games: simulator 36.3, Pinnacle 35.0, used 35.5 at weight 0.60",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.7872,
+          "submission": 79
+        },
+        {
+          "base_rate": 0.46,
+          "confidence": 1.0,
+          "family": "aces_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "73503e0b-5d85-4fb8-b279-3abaa75c3b50",
+          "market_weight": 0.0,
+          "model": 0.8016,
+          "notes": [
+            "ace vulnerability: Marco Trungelliti 1.00, Alexander Blockx 0.82",
+            "exposure 120 service points from 38.5 games",
+            "outcome coupling: P(win)=0.835, delta=+0.60"
+          ],
+          "probability": 0.8016,
+          "submission": 80
+        },
+        {
+          "base_rate": 0.421,
+          "confidence": 1.0,
+          "family": "double_faults_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "b0a7e12d-a54a-4ceb-98ea-5f253a859c97",
+          "market_weight": 0.0,
+          "model": 0.2588,
+          "notes": [
+            "exposure 120 service points from 38.5 games"
+          ],
+          "probability": 0.2588,
+          "submission": 26
+        },
+        {
+          "base_rate": 0.5,
+          "confidence": 0.85,
+          "family": "match_winner",
+          "lane": "honest",
+          "market": 0.8345,
+          "market_id": "5b76df1b-5616-4f01-8baa-e135b4926d7f",
+          "market_weight": 0.95,
+          "model": 0.755,
+          "notes": [
+            "simulated win probability 0.755",
+            "market consensus 0.835, weight 0.95"
+          ],
+          "probability": 0.7814,
+          "submission": 78
+        },
+        {
+          "base_rate": 0.487,
+          "confidence": 0.95,
+          "family": "tiebreak",
+          "lane": "honest",
+          "market": null,
+          "market_id": "ececf64f-a1c8-4c03-a755-e62cf7cfd3dd",
+          "market_weight": 0.0,
+          "model": 0.4206,
+          "notes": [
+            "tiebreak iid correction x0.88 (ATP)",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.424,
+          "submission": 42
+        }
+      ],
+      "rated_a": true,
+      "rated_b": true,
+      "round": "R128",
+      "tour": "ATP"
+    },
+    "2395fe71-ca10-40fa-9081-4315c87e7685": {
+      "player_a": "Mirra Andreeva",
+      "player_b": "Eva Lys",
+      "questions": [
+        {
+          "base_rate": 0.6368,
+          "confidence": 0.95,
+          "family": "match_duration",
+          "lane": "honest",
+          "market": null,
+          "market_id": "d13700b0-f793-4bc9-bb0e-78878cefb31b",
+          "market_weight": 0.0,
+          "model": 0.538,
+          "notes": [
+            "total games: simulator 20.7, Pinnacle 18.3, used 19.3 at weight 0.60",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.543,
+          "submission": 54
+        },
+        {
+          "base_rate": 0.427,
+          "confidence": 1.0,
+          "family": "aces_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "309d4a27-68b4-410a-9cad-cb5087949b29",
+          "market_weight": 0.0,
+          "model": 0.6068,
+          "notes": [
+            "exposure 71 service points from 22.0 games"
+          ],
+          "probability": 0.6068,
+          "submission": 61
+        },
+        {
+          "base_rate": 0.433,
+          "confidence": 1.0,
+          "family": "double_faults_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "95978099-de00-4e3b-bb27-504130d23c25",
+          "market_weight": 0.0,
+          "model": 0.4213,
+          "notes": [
+            "exposure 71 service points from 22.0 games"
+          ],
+          "probability": 0.4213,
+          "submission": 42
+        },
+        {
+          "base_rate": 0.5,
+          "confidence": 0.85,
+          "family": "match_winner",
+          "lane": "honest",
+          "market": 0.9029,
+          "market_id": "34771698-6335-4ec7-a0bb-e2325596cc60",
+          "market_weight": 0.95,
+          "model": 0.8045,
+          "notes": [
+            "simulated win probability 0.804",
+            "market consensus 0.903, weight 0.95"
+          ],
+          "probability": 0.8394,
+          "submission": 84
+        },
+        {
+          "base_rate": 0.225,
+          "confidence": 0.95,
+          "family": "tiebreak",
+          "lane": "honest",
+          "market": null,
+          "market_id": "a28381d9-7497-42c6-a7a1-920a1d516573",
+          "market_weight": 0.0,
+          "model": 0.2115,
+          "notes": [
+            "no usable market quote for this question"
+          ],
+          "probability": 0.2122,
+          "submission": 21
+        }
+      ],
+      "rated_a": true,
+      "rated_b": true,
+      "round": "R128",
+      "tour": "WTA"
+    },
+    "2972bfc4-e16a-445e-a889-7a9dbddf8c9c": {
+      "player_a": "Alexei Popyrin",
+      "player_b": "Alejandro Tabilo",
+      "questions": [
+        {
+          "base_rate": 0.4141,
+          "confidence": 0.95,
+          "family": "match_duration",
+          "lane": "honest",
+          "market": null,
+          "market_id": "05f1a5fc-c6b4-43a3-bfc8-1788bb301552",
+          "market_weight": 0.0,
+          "model": 0.6191,
+          "notes": [
+            "total games: simulator 40.3, Pinnacle 40.5, used 40.4 at weight 0.60",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.6088,
+          "submission": 61
+        },
+        {
+          "base_rate": 0.46,
+          "confidence": 1.0,
+          "family": "aces_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "585e7ae7-c9f2-4bb5-80e5-aa49a932688a",
+          "market_weight": 0.0,
+          "model": 0.7519,
+          "notes": [
+            "ace vulnerability: Alejandro Tabilo 1.30, Alexei Popyrin 0.98",
+            "exposure 133 service points from 42.5 games",
+            "outcome coupling: P(win)=0.392, delta=+0.60"
+          ],
+          "probability": 0.7519,
+          "submission": 75
+        },
+        {
+          "base_rate": 0.421,
+          "confidence": 1.0,
+          "family": "double_faults_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "bd5cd2f8-024a-4745-aae2-6501d88edb63",
+          "market_weight": 0.0,
+          "model": 0.5281,
+          "notes": [
+            "exposure 133 service points from 42.5 games"
+          ],
+          "probability": 0.5281,
+          "submission": 53
+        },
+        {
+          "base_rate": 0.5,
+          "confidence": 0.85,
+          "family": "match_winner",
+          "lane": "honest",
+          "market": 0.3916,
+          "market_id": "e7161d71-387c-4e06-855d-6be9d9aa7320",
+          "market_weight": 0.95,
+          "model": 0.5035,
+          "notes": [
+            "simulated win probability 0.503",
+            "market consensus 0.392, weight 0.95"
+          ],
+          "probability": 0.4125,
+          "submission": 41
+        },
+        {
+          "base_rate": 0.1326,
+          "confidence": 0.95,
+          "family": "tiebreak",
+          "lane": "honest",
+          "market": null,
+          "market_id": "5ac9afea-dfb5-4f65-89e9-aec01e551b89",
+          "market_weight": 0.0,
+          "model": 0.2614,
+          "notes": [
+            "tiebreak iid correction x0.88 (ATP)",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.2549,
+          "submission": 25
+        }
+      ],
+      "rated_a": true,
+      "rated_b": true,
+      "round": "R128",
+      "tour": "ATP"
+    },
+    "2d271361-3108-4050-9981-b56a5c616a99": {
+      "player_a": "Zachary Svajda",
+      "player_b": "Arthur Gea",
+      "questions": [
+        {
+          "base_rate": 0.3162,
+          "confidence": 0.95,
+          "family": "match_duration",
+          "lane": "honest",
+          "market": null,
+          "market_id": "134a8cd4-10fa-44d4-bdfe-bc825dc95684",
+          "market_weight": 0.0,
+          "model": 0.4373,
+          "notes": [
+            "total games: simulator 37.7, Pinnacle 39.5, used 38.7 at weight 0.60",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.4312,
+          "submission": 43
+        },
+        {
+          "base_rate": 0.46,
+          "confidence": 1.0,
+          "family": "aces_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "b16d35b6-b4a2-45ae-abb7-450864c67c17",
+          "market_weight": 0.0,
+          "model": 0.579,
+          "notes": [
+            "ace vulnerability: Zachary Svajda 1.08, Arthur Gea 0.87",
+            "exposure 124 service points from 39.8 games",
+            "outcome coupling: P(win)=0.470, delta=+0.60"
+          ],
+          "probability": 0.579,
+          "submission": 58
+        },
+        {
+          "base_rate": 0.421,
+          "confidence": 1.0,
+          "family": "double_faults_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "47fb3c69-eb63-4dbc-926c-08b80ad95a23",
+          "market_weight": 0.0,
+          "model": 0.5866,
+          "notes": [
+            "exposure 124 service points from 39.8 games"
+          ],
+          "probability": 0.5866,
+          "submission": 59
+        },
+        {
+          "base_rate": 0.5,
+          "confidence": 0.85,
+          "family": "match_winner",
+          "lane": "honest",
+          "market": 0.4697,
+          "market_id": "1d566525-244f-456d-a5d4-6a5af4bbfd09",
+          "market_weight": 0.95,
+          "model": 0.4193,
+          "notes": [
+            "simulated win probability 0.419",
+            "market consensus 0.470, weight 0.95"
+          ],
+          "probability": 0.4721,
+          "submission": 47
+        },
+        {
+          "base_rate": 0.1326,
+          "confidence": 0.95,
+          "family": "tiebreak",
+          "lane": "honest",
+          "market": null,
+          "market_id": "3c0caeed-4957-4bec-95f0-2b6d56c0ece7",
+          "market_weight": 0.0,
+          "model": 0.1096,
+          "notes": [
+            "tiebreak iid correction x0.88 (ATP)",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.1107,
+          "submission": 11
+        }
+      ],
+      "rated_a": true,
+      "rated_b": true,
+      "round": "R128",
+      "tour": "ATP"
+    },
+    "2db30852-6cf0-4018-a4da-29a6b2a1d792": {
+      "player_a": "Taylor Townsend",
+      "player_b": "Diana Shnaider",
+      "questions": [
+        {
+          "base_rate": 0.4504,
+          "confidence": 0.95,
+          "family": "match_duration",
+          "lane": "honest",
+          "market": null,
+          "market_id": "c40d06a2-2a93-4ebf-8b13-f7ce1d2b46a1",
+          "market_weight": 0.0,
+          "model": 0.691,
+          "notes": [
+            "total games: simulator 23.0, Pinnacle 24.8, used 24.1 at weight 0.60",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.679,
+          "submission": 68
+        },
+        {
+          "base_rate": 0.427,
+          "confidence": 1.0,
+          "family": "aces_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "e93e7d6d-659a-4d34-a79a-a4fc9eb786d9",
+          "market_weight": 0.0,
+          "model": 0.305,
+          "notes": [
+            "exposure 79 service points from 24.3 games"
+          ],
+          "probability": 0.305,
+          "submission": 30
+        },
+        {
+          "base_rate": 0.433,
+          "confidence": 1.0,
+          "family": "double_faults_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "aa9c900d-e5e3-4237-948c-3f269926a779",
+          "market_weight": 0.0,
+          "model": 0.4173,
+          "notes": [
+            "exposure 79 service points from 24.3 games"
+          ],
+          "probability": 0.4173,
+          "submission": 42
+        },
+        {
+          "base_rate": 0.5,
+          "confidence": 0.3,
+          "family": "unforced_errors",
+          "lane": "honest",
+          "market": null,
+          "market_id": "7c2c0906-94d1-44c1-a4be-c68b2f2c7f6f",
+          "market_weight": 0.0,
+          "model": 0.5,
+          "notes": [
+            "threshold family defers to the base rate by policy"
+          ],
+          "probability": 0.5,
+          "submission": 50
+        },
+        {
+          "base_rate": 0.1114,
+          "confidence": 0.612,
+          "family": "first_serve_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "84d3257b-4921-4357-a10a-a2680c4bca0e",
+          "market_weight": 0.0,
+          "model": 0.1469,
+          "notes": [
+            "serve rate: expected 0.592 vs threshold 0.680, sd 0.084 (0.061 sampling + 0.058 form)"
+          ],
+          "probability": 0.1332,
+          "submission": 13
+        },
+        {
+          "base_rate": 0.484,
+          "confidence": 0.75,
+          "family": "winners_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "bf8d254a-4fbd-45c4-8c0b-051ecd167aa2",
+          "market_weight": 0.0,
+          "model": 0.2187,
+          "notes": [
+            "exposure 79 service points from 24.3 games"
+          ],
+          "probability": 0.285,
+          "submission": 28
+        },
+        {
+          "base_rate": 0.337,
+          "confidence": 0.95,
+          "family": "deciding_set",
+          "lane": "honest",
+          "market": null,
+          "market_id": "dbe6f28f-a26f-469d-af22-04fb0cfe0e11",
+          "market_weight": 0.0,
+          "model": 0.5095,
+          "notes": [
+            "no usable market quote for this question"
+          ],
+          "probability": 0.5009,
+          "submission": 50
+        },
+        {
+          "base_rate": 0.641,
+          "confidence": 0.95,
+          "family": "lopsided_set",
+          "lane": "honest",
+          "market": null,
+          "market_id": "f6d07153-5bfe-419a-8310-81f4e50c133e",
+          "market_weight": 0.0,
+          "model": 0.5693,
+          "notes": [
+            "no usable market quote for this question"
+          ],
+          "probability": 0.5728,
+          "submission": 57
+        },
+        {
+          "base_rate": 0.5,
+          "confidence": 0.85,
+          "family": "match_winner",
+          "lane": "honest",
+          "market": 0.6052,
+          "market_id": "f215ac2a-69d4-4d7b-8af1-7da905355f91",
+          "market_weight": 0.95,
+          "model": 0.5178,
+          "notes": [
+            "simulated win probability 0.518",
+            "market consensus 0.605, weight 0.95"
+          ],
+          "probability": 0.5858,
+          "submission": 59
+        },
+        {
+          "base_rate": 0.225,
+          "confidence": 0.95,
+          "family": "tiebreak",
+          "lane": "honest",
+          "market": null,
+          "market_id": "67677a0f-caf6-4149-8acc-d6a911d2cd21",
+          "market_weight": 0.0,
+          "model": 0.3342,
+          "notes": [
+            "no usable market quote for this question"
+          ],
+          "probability": 0.3288,
+          "submission": 33
+        }
+      ],
+      "rated_a": true,
+      "rated_b": true,
+      "round": "R128",
+      "tour": "WTA"
+    },
+    "33608be0-2f2e-4964-89f1-e472d01ad6d5": {
+      "player_a": "Taylor Fritz",
+      "player_b": "Mattia Bellucci",
+      "questions": [
+        {
+          "base_rate": 0.7179,
+          "confidence": 0.95,
+          "family": "match_duration",
+          "lane": "honest",
+          "market": null,
+          "market_id": "400dabbc-027e-4e1c-b50e-e5d8f2e8a79c",
+          "market_weight": 0.0,
+          "model": 0.7563,
+          "notes": [
+            "total games: simulator 37.3, Pinnacle 33.0, used 34.7 at weight 0.60",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.7544,
+          "submission": 75
+        },
+        {
+          "base_rate": 0.46,
+          "confidence": 1.0,
+          "family": "aces_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "11c47ade-9076-437f-991d-caa59baea236",
+          "market_weight": 0.0,
+          "model": 0.114,
+          "notes": [
+            "ace vulnerability: Taylor Fritz 0.99, Mattia Bellucci 1.06",
+            "exposure 124 service points from 39.8 games",
+            "outcome coupling: P(win)=0.114, delta=+0.60"
+          ],
+          "probability": 0.114,
+          "submission": 11
+        },
+        {
+          "base_rate": 0.421,
+          "confidence": 1.0,
+          "family": "double_faults_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "45cec128-cced-4182-8438-2a959c7b0246",
+          "market_weight": 0.0,
+          "model": 0.5513,
+          "notes": [
+            "exposure 124 service points from 39.8 games"
+          ],
+          "probability": 0.5513,
+          "submission": 55
+        },
+        {
+          "base_rate": 0.5,
+          "confidence": 0.85,
+          "family": "match_winner",
+          "lane": "honest",
+          "market": 0.1139,
+          "market_id": "7b837288-b2f4-4ff2-abec-a6e1cb35c145",
+          "market_weight": 0.95,
+          "model": 0.183,
+          "notes": [
+            "simulated win probability 0.183",
+            "market consensus 0.114, weight 0.95"
+          ],
+          "probability": 0.1742,
+          "submission": 17
+        },
+        {
+          "base_rate": 0.1326,
+          "confidence": 0.95,
+          "family": "tiebreak",
+          "lane": "honest",
+          "market": null,
+          "market_id": "cc5de3fd-3617-46d2-9b71-1091856e89ef",
+          "market_weight": 0.0,
+          "model": 0.2006,
+          "notes": [
+            "tiebreak iid correction x0.88 (ATP)",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.1972,
+          "submission": 20
+        }
+      ],
+      "rated_a": true,
+      "rated_b": true,
+      "round": "R128",
+      "tour": "ATP"
+    },
+    "34b3bb27-07b6-47bb-b6ca-624609d9558d": {
+      "player_a": "Jasmine Paolini",
+      "player_b": "Sorana Cirstea",
+      "questions": [
+        {
+          "base_rate": 0.3511,
+          "confidence": 0.95,
+          "family": "match_duration",
+          "lane": "honest",
+          "market": null,
+          "market_id": "6ccef53d-4a6a-4518-b539-6d437af7b2f8",
+          "market_weight": 0.0,
+          "model": 0.4912,
+          "notes": [
+            "total games: simulator 22.3, Pinnacle 24.0, used 23.3 at weight 0.60",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.4842,
+          "submission": 48
+        },
+        {
+          "base_rate": 0.427,
+          "confidence": 1.0,
+          "family": "aces_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "966e68e3-7542-4cfa-af14-7067e3ec8757",
+          "market_weight": 0.0,
+          "model": 0.6735,
+          "notes": [
+            "exposure 77 service points from 23.5 games"
+          ],
+          "probability": 0.6735,
+          "submission": 67
+        },
+        {
+          "base_rate": 0.433,
+          "confidence": 1.0,
+          "family": "double_faults_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "51ac22bb-b7bf-4dd0-8aba-c2ae6b1907a3",
+          "market_weight": 0.0,
+          "model": 0.505,
+          "notes": [
+            "exposure 77 service points from 23.5 games"
+          ],
+          "probability": 0.505,
+          "submission": 50
+        },
+        {
+          "base_rate": 0.5,
+          "confidence": 0.3,
+          "family": "unforced_errors",
+          "lane": "honest",
+          "market": null,
+          "market_id": "3e5c6489-7bdf-477f-af1e-1a70562b02ae",
+          "market_weight": 0.0,
+          "model": 0.5,
+          "notes": [
+            "threshold family defers to the base rate by policy"
+          ],
+          "probability": 0.5,
+          "submission": 50
+        },
+        {
+          "base_rate": 0.1889,
+          "confidence": 0.618,
+          "family": "first_serve_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "9f1c00c4-a442-4f94-8534-a97375381f21",
+          "market_weight": 0.0,
+          "model": 0.1419,
+          "notes": [
+            "serve rate: expected 0.560 vs threshold 0.650, sd 0.084 (0.062 sampling + 0.058 form)"
+          ],
+          "probability": 0.1599,
+          "submission": 16
+        },
+        {
+          "base_rate": 0.484,
+          "confidence": 0.75,
+          "family": "winners_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "642131e4-9107-4e71-aece-c4dfd675f0ab",
+          "market_weight": 0.0,
+          "model": 0.5197,
+          "notes": [
+            "exposure 77 service points from 23.5 games"
+          ],
+          "probability": 0.5108,
+          "submission": 51
+        },
+        {
+          "base_rate": 0.337,
+          "confidence": 0.95,
+          "family": "deciding_set",
+          "lane": "honest",
+          "market": null,
+          "market_id": "de7d00bc-433c-4370-987e-57ffbd975da9",
+          "market_weight": 0.0,
+          "model": 0.4928,
+          "notes": [
+            "no usable market quote for this question"
+          ],
+          "probability": 0.485,
+          "submission": 48
+        },
+        {
+          "base_rate": 0.641,
+          "confidence": 0.95,
+          "family": "lopsided_set",
+          "lane": "honest",
+          "market": null,
+          "market_id": "3bd020f5-151d-4b06-bade-9cb1db7335a8",
+          "market_weight": 0.0,
+          "model": 0.6388,
+          "notes": [
+            "no usable market quote for this question"
+          ],
+          "probability": 0.6389,
+          "submission": 64
+        },
+        {
+          "base_rate": 0.5,
+          "confidence": 0.85,
+          "family": "match_winner",
+          "lane": "honest",
+          "market": 0.6399,
+          "market_id": "ec4405b6-952d-4bf4-9d37-cd0f631bd4ee",
+          "market_weight": 0.95,
+          "model": 0.6128,
+          "notes": [
+            "simulated win probability 0.613",
+            "market consensus 0.640, weight 0.95"
+          ],
+          "probability": 0.6177,
+          "submission": 62
+        },
+        {
+          "base_rate": 0.225,
+          "confidence": 0.95,
+          "family": "tiebreak",
+          "lane": "honest",
+          "market": null,
+          "market_id": "aaaa3877-924f-4966-ad5d-f0dda186bb65",
+          "market_weight": 0.0,
+          "model": 0.2605,
+          "notes": [
+            "no usable market quote for this question"
+          ],
+          "probability": 0.2587,
+          "submission": 26
+        }
+      ],
+      "rated_a": true,
+      "rated_b": true,
+      "round": "R128",
+      "tour": "WTA"
+    },
+    "39c6e47e-24af-495c-917b-a60ec7e3cb9b": {
+      "player_a": "Oleksandra Oliynykova",
+      "player_b": "Alexandra Eala",
+      "questions": [
+        {
+          "base_rate": 0.5055,
+          "confidence": 0.95,
+          "family": "match_duration",
+          "lane": "honest",
+          "market": null,
+          "market_id": "daa119a0-9aa3-47c9-9381-a9a11ed7d3ee",
+          "market_weight": 0.0,
+          "model": 0.4984,
+          "notes": [
+            "total games: simulator 22.3, Pinnacle 18.3, used 19.9 at weight 0.60",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.4987,
+          "submission": 50
+        },
+        {
+          "base_rate": 0.427,
+          "confidence": 0.45,
+          "family": "aces_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "79aad0dc-1453-4951-bd7b-e62f23e20a02",
+          "market_weight": 0.0,
+          "model": 0.4297,
+          "notes": [
+            "exposure 76 service points from 23.5 games"
+          ],
+          "probability": 0.4282,
+          "submission": 43
+        },
+        {
+          "base_rate": 0.433,
+          "confidence": 0.45,
+          "family": "double_faults_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "c8242bb0-2b29-48f2-8a3c-66bdc57e2d3f",
+          "market_weight": 0.0,
+          "model": 0.4344,
+          "notes": [
+            "exposure 76 service points from 23.5 games"
+          ],
+          "probability": 0.4336,
+          "submission": 43
+        },
+        {
+          "base_rate": 0.5,
+          "confidence": 0.85,
+          "family": "match_winner",
+          "lane": "honest",
+          "market": 0.8831,
+          "market_id": "7dbc8499-e848-4fab-abdb-1f0db8b2084b",
+          "market_weight": 0.95,
+          "model": 0.5715,
+          "notes": [
+            "simulated win probability 0.572",
+            "market consensus 0.883, weight 0.95"
+          ],
+          "probability": 0.8178,
+          "submission": 82
+        },
+        {
+          "base_rate": 0.225,
+          "confidence": 0.95,
+          "family": "tiebreak",
+          "lane": "honest",
+          "market": null,
+          "market_id": "1ef28e16-8763-48e0-a09a-bd6c9e47d0c7",
+          "market_weight": 0.0,
+          "model": 0.2595,
+          "notes": [
+            "no usable market quote for this question"
+          ],
+          "probability": 0.2578,
+          "submission": 26
+        }
+      ],
+      "rated_a": true,
+      "rated_b": true,
+      "round": "R128",
+      "tour": "WTA"
+    },
+    "5fd62ce3-cc04-4add-b912-d9c933528621": {
+      "player_a": "Jessica Bouzas Maneiro",
+      "player_b": "Elena Rybakina",
+      "questions": [
+        {
+          "base_rate": 0.7157,
+          "confidence": 0.95,
+          "family": "match_duration",
+          "lane": "honest",
+          "market": null,
+          "market_id": "a8b831a6-8b29-4d37-bf45-f7d2ad445c76",
+          "market_weight": 0.0,
+          "model": 0.6341,
+          "notes": [
+            "total games: simulator 19.7, Pinnacle 19.9, used 19.8 at weight 0.60",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.6381,
+          "submission": 64
+        },
+        {
+          "base_rate": 0.427,
+          "confidence": 1.0,
+          "family": "aces_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "36f553d7-743e-40bf-acaf-4f531241aa0c",
+          "market_weight": 0.0,
+          "model": 0.1247,
+          "notes": [
+            "exposure 68 service points from 21.0 games"
+          ],
+          "probability": 0.1247,
+          "submission": 12
+        },
+        {
+          "base_rate": 0.433,
+          "confidence": 1.0,
+          "family": "double_faults_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "f3092b0c-78af-4a50-b53b-897216d85fdf",
+          "market_weight": 0.0,
+          "model": 0.4677,
+          "notes": [
+            "exposure 68 service points from 21.0 games"
+          ],
+          "probability": 0.4677,
+          "submission": 47
+        },
+        {
+          "base_rate": 0.5,
+          "confidence": 0.85,
+          "family": "match_winner",
+          "lane": "honest",
+          "market": 0.1566,
+          "market_id": "0437ce62-1923-4605-a902-0b3e1e2b284b",
+          "market_weight": 0.95,
+          "model": 0.0907,
+          "notes": [
+            "simulated win probability 0.091",
+            "market consensus 0.157, weight 0.95"
+          ],
+          "probability": 0.2047,
+          "submission": 20
+        },
+        {
+          "base_rate": 0.225,
+          "confidence": 0.95,
+          "family": "tiebreak",
+          "lane": "honest",
+          "market": null,
+          "market_id": "fd207ff8-2369-4574-ad46-55e873418236",
+          "market_weight": 0.0,
+          "model": 0.1988,
+          "notes": [
+            "no usable market quote for this question"
+          ],
+          "probability": 0.2001,
+          "submission": 20
+        }
+      ],
+      "rated_a": true,
+      "rated_b": true,
+      "round": "R128",
+      "tour": "WTA"
+    },
+    "699783e2-3387-43c5-851d-44a8937de0e2": {
+      "player_a": "Harriet Dart",
+      "player_b": "Marie Bouzkova",
+      "questions": [
+        {
+          "base_rate": 0.5055,
+          "confidence": 0.95,
+          "family": "match_duration",
+          "lane": "honest",
+          "market": null,
+          "market_id": "38b3cb18-6bf2-49f7-bba7-ecb9b75c45e0",
+          "market_weight": 0.0,
+          "model": 0.6272,
+          "notes": [
+            "total games: simulator 21.4, Pinnacle 19.8, used 20.4 at weight 0.60",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.6211,
+          "submission": 62
+        },
+        {
+          "base_rate": 0.427,
+          "confidence": 1.0,
+          "family": "aces_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "f39c2cfc-5b47-47a0-baae-559756e2cbaf",
+          "market_weight": 0.0,
+          "model": 0.4542,
+          "notes": [
+            "exposure 74 service points from 22.7 games"
+          ],
+          "probability": 0.4542,
+          "submission": 45
+        },
+        {
+          "base_rate": 0.433,
+          "confidence": 1.0,
+          "family": "double_faults_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "1121cda9-096f-40a6-8a58-d24d1904ea92",
+          "market_weight": 0.0,
+          "model": 0.3346,
+          "notes": [
+            "exposure 74 service points from 22.7 games"
+          ],
+          "probability": 0.3346,
+          "submission": 33
+        },
+        {
+          "base_rate": 0.5,
+          "confidence": 0.85,
+          "family": "match_winner",
+          "lane": "honest",
+          "market": 0.8348,
+          "market_id": "dc8e1980-2a37-4f87-96bd-7b6a8297e8f7",
+          "market_weight": 0.95,
+          "model": 0.7362,
+          "notes": [
+            "simulated win probability 0.736",
+            "market consensus 0.835, weight 0.95"
+          ],
+          "probability": 0.7811,
+          "submission": 78
+        },
+        {
+          "base_rate": 0.225,
+          "confidence": 0.95,
+          "family": "tiebreak",
+          "lane": "honest",
+          "market": null,
+          "market_id": "fc72dce7-2e4e-46d9-b6a1-9711a813da80",
+          "market_weight": 0.0,
+          "model": 0.2215,
+          "notes": [
+            "no usable market quote for this question"
+          ],
+          "probability": 0.2217,
+          "submission": 22
+        }
+      ],
+      "rated_a": true,
+      "rated_b": true,
+      "round": "R128",
+      "tour": "WTA"
+    },
+    "77603a69-024b-45c5-b388-63d9ec2dc315": {
+      "player_a": "Tristan Schoolkate",
+      "player_b": "Flavio Cobolli",
+      "questions": [
+        {
+          "base_rate": 0.3502,
+          "confidence": 0.95,
+          "family": "match_duration",
+          "lane": "honest",
+          "market": null,
+          "market_id": "7e9c2e6f-0191-4965-b28e-5cedc0538360",
+          "market_weight": 0.0,
+          "model": 0.4513,
+          "notes": [
+            "total games: simulator 38.3, Pinnacle 37.5, used 37.8 at weight 0.60",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.4463,
+          "submission": 45
+        },
+        {
+          "base_rate": 0.46,
+          "confidence": 1.0,
+          "family": "aces_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "fcdae82f-aeb1-43b2-9142-662d3bb219ad",
+          "market_weight": 0.0,
+          "model": 0.4433,
+          "notes": [
+            "ace vulnerability: Tristan Schoolkate 1.07, Flavio Cobolli 0.92",
+            "exposure 127 service points from 40.5 games",
+            "outcome coupling: P(win)=0.801, delta=+0.60"
+          ],
+          "probability": 0.4433,
+          "submission": 44
+        },
+        {
+          "base_rate": 0.421,
+          "confidence": 1.0,
+          "family": "double_faults_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "b5e187f6-18a1-474e-a224-07e24e2141a4",
+          "market_weight": 0.0,
+          "model": 0.3181,
+          "notes": [
+            "exposure 127 service points from 40.5 games"
+          ],
+          "probability": 0.3181,
+          "submission": 32
+        },
+        {
+          "base_rate": 0.5,
+          "confidence": 0.85,
+          "family": "match_winner",
+          "lane": "honest",
+          "market": 0.8012,
+          "market_id": "3dbb25d7-84fd-4557-ab18-9d2d2cb26880",
+          "market_weight": 0.95,
+          "model": 0.4248,
+          "notes": [
+            "simulated win probability 0.425",
+            "market consensus 0.801, weight 0.95"
+          ],
+          "probability": 0.7442,
+          "submission": 74
+        },
+        {
+          "base_rate": 0.487,
+          "confidence": 0.95,
+          "family": "tiebreak",
+          "lane": "honest",
+          "market": null,
+          "market_id": "d48bf6fd-c015-4b0c-a57b-acc7de289a99",
+          "market_weight": 0.0,
+          "model": 0.4871,
+          "notes": [
+            "tiebreak iid correction x0.88 (ATP)",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.4871,
+          "submission": 49
+        }
+      ],
+      "rated_a": true,
+      "rated_b": true,
+      "round": "R128",
+      "tour": "ATP"
+    },
+    "815e3030-3e3c-48b1-ab4e-86911c6a6dae": {
+      "player_a": "Marta Kostyuk",
+      "player_b": "Ekaterina Alexandrova",
+      "questions": [
+        {
+          "base_rate": 0.3994,
+          "confidence": 0.95,
+          "family": "match_duration",
+          "lane": "honest",
+          "market": null,
+          "market_id": "e8d84463-c61b-428d-ae4e-397ee28826ca",
+          "market_weight": 0.0,
+          "model": 0.4781,
+          "notes": [
+            "total games: simulator 22.5, Pinnacle 22.5, used 22.5 at weight 0.60",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.4742,
+          "submission": 47
+        },
+        {
+          "base_rate": 0.427,
+          "confidence": 1.0,
+          "family": "aces_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "781633f3-62db-4348-b1e5-79d6ea7eeec3",
+          "market_weight": 0.0,
+          "model": 0.5354,
+          "notes": [
+            "exposure 77 service points from 23.7 games"
+          ],
+          "probability": 0.5354,
+          "submission": 54
+        },
+        {
+          "base_rate": 0.433,
+          "confidence": 1.0,
+          "family": "double_faults_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "4b85ae66-b02a-4f64-ae7f-e8906c9227d6",
+          "market_weight": 0.0,
+          "model": 0.4586,
+          "notes": [
+            "exposure 77 service points from 23.7 games"
+          ],
+          "probability": 0.4586,
+          "submission": 46
+        },
+        {
+          "base_rate": 0.5,
+          "confidence": 0.3,
+          "family": "unforced_errors",
+          "lane": "honest",
+          "market": null,
+          "market_id": "8b93711a-4651-47ad-8bf5-91d6f3d2427c",
+          "market_weight": 0.0,
+          "model": 0.5,
+          "notes": [
+            "threshold family defers to the base rate by policy"
+          ],
+          "probability": 0.5,
+          "submission": 50
+        },
+        {
+          "base_rate": 0.16,
+          "confidence": 0.622,
+          "family": "first_serve_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "a90a4a49-0b48-4541-963d-bf76b00e2209",
+          "market_weight": 0.0,
+          "model": 0.1385,
+          "notes": [
+            "serve rate: expected 0.569 vs threshold 0.660, sd 0.084 (0.061 sampling + 0.058 form)"
+          ],
+          "probability": 0.1467,
+          "submission": 15
+        },
+        {
+          "base_rate": 0.484,
+          "confidence": 0.75,
+          "family": "winners_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "19ccc2a9-a0d0-4d35-a6d6-c1e2f79af115",
+          "market_weight": 0.0,
+          "model": 0.4705,
+          "notes": [
+            "exposure 77 service points from 23.7 games"
+          ],
+          "probability": 0.4739,
+          "submission": 47
+        },
+        {
+          "base_rate": 0.337,
+          "confidence": 0.95,
+          "family": "deciding_set",
+          "lane": "honest",
+          "market": null,
+          "market_id": "e03d8339-b7fb-489e-be38-0c2171125344",
+          "market_weight": 0.0,
+          "model": 0.5065,
+          "notes": [
+            "no usable market quote for this question"
+          ],
+          "probability": 0.498,
+          "submission": 50
+        },
+        {
+          "base_rate": 0.641,
+          "confidence": 0.95,
+          "family": "lopsided_set",
+          "lane": "honest",
+          "market": null,
+          "market_id": "73bfa023-5b1c-4ab7-88ed-e0bbbf4cdf25",
+          "market_weight": 0.0,
+          "model": 0.6395,
+          "notes": [
+            "no usable market quote for this question"
+          ],
+          "probability": 0.6396,
+          "submission": 64
+        },
+        {
+          "base_rate": 0.5,
+          "confidence": 0.85,
+          "family": "match_winner",
+          "lane": "honest",
+          "market": 0.2751,
+          "market_id": "7af8e268-db2e-428e-96c2-637ae0033b3f",
+          "market_weight": 0.95,
+          "model": 0.5088,
+          "notes": [
+            "simulated win probability 0.509",
+            "market consensus 0.275, weight 0.95"
+          ],
+          "probability": 0.3174,
+          "submission": 32
+        },
+        {
+          "base_rate": 0.225,
+          "confidence": 0.95,
+          "family": "tiebreak",
+          "lane": "honest",
+          "market": null,
+          "market_id": "c7a13851-6c6e-4aaa-8558-a55c2f8a784b",
+          "market_weight": 0.0,
+          "model": 0.276,
+          "notes": [
+            "no usable market quote for this question"
+          ],
+          "probability": 0.2734,
+          "submission": 27
+        }
+      ],
+      "rated_a": true,
+      "rated_b": true,
+      "round": "R128",
+      "tour": "WTA"
+    },
+    "82dcb9c2-ea9e-4c6b-92a6-82c3890d3860": {
+      "player_a": "Emma Navarro",
+      "player_b": "Karolina Muchova",
+      "questions": [
+        {
+          "base_rate": 0.5055,
+          "confidence": 0.95,
+          "family": "match_duration",
+          "lane": "honest",
+          "market": null,
+          "market_id": "26084205-e8ed-4afa-bd91-341e452cf253",
+          "market_weight": 0.0,
+          "model": 0.6244,
+          "notes": [
+            "total games: simulator 22.0, Pinnacle 21.4, used 21.7 at weight 0.60",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.6185,
+          "submission": 62
+        },
+        {
+          "base_rate": 0.427,
+          "confidence": 1.0,
+          "family": "aces_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "0b76aa68-7c71-43cd-afe1-4c23bcb6400a",
+          "market_weight": 0.0,
+          "model": 0.5837,
+          "notes": [
+            "exposure 76 service points from 23.4 games"
+          ],
+          "probability": 0.5837,
+          "submission": 58
+        },
+        {
+          "base_rate": 0.433,
+          "confidence": 1.0,
+          "family": "double_faults_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "1d58322f-096a-4092-914f-5b106d2f90d4",
+          "market_weight": 0.0,
+          "model": 0.4703,
+          "notes": [
+            "exposure 76 service points from 23.4 games"
+          ],
+          "probability": 0.4703,
+          "submission": 47
+        },
+        {
+          "base_rate": 0.5,
+          "confidence": 0.3,
+          "family": "unforced_errors",
+          "lane": "honest",
+          "market": null,
+          "market_id": "f6cd0689-3a24-4638-84b6-a5b7f7f3c1f4",
+          "market_weight": 0.0,
+          "model": 0.5,
+          "notes": [
+            "threshold family defers to the base rate by policy"
+          ],
+          "probability": 0.5,
+          "submission": 50
+        },
+        {
+          "base_rate": 0.2929,
+          "confidence": 0.522,
+          "family": "first_serve_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "4aa1a847-5329-4623-96bc-3d9c957be404",
+          "market_weight": 0.0,
+          "model": 0.2458,
+          "notes": [
+            "serve rate: expected 0.562 vs threshold 0.620, sd 0.084 (0.062 sampling + 0.058 form)"
+          ],
+          "probability": 0.2683,
+          "submission": 27
+        },
+        {
+          "base_rate": 0.484,
+          "confidence": 0.75,
+          "family": "winners_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "5f4c1754-8e34-4a21-b195-b901e8ae4d95",
+          "market_weight": 0.0,
+          "model": 0.5903,
+          "notes": [
+            "exposure 76 service points from 23.4 games"
+          ],
+          "probability": 0.5637,
+          "submission": 56
+        },
+        {
+          "base_rate": 0.337,
+          "confidence": 0.95,
+          "family": "deciding_set",
+          "lane": "honest",
+          "market": null,
+          "market_id": "ca7646cb-815e-43d0-9b17-971b0932ccf0",
+          "market_weight": 0.0,
+          "model": 0.4637,
+          "notes": [
+            "no usable market quote for this question"
+          ],
+          "probability": 0.4574,
+          "submission": 46
+        },
+        {
+          "base_rate": 0.641,
+          "confidence": 0.95,
+          "family": "lopsided_set",
+          "lane": "honest",
+          "market": null,
+          "market_id": "4a2dd34c-3dde-4ea7-8fe9-8677007b3713",
+          "market_weight": 0.0,
+          "model": 0.6228,
+          "notes": [
+            "no usable market quote for this question"
+          ],
+          "probability": 0.6237,
+          "submission": 62
+        },
+        {
+          "base_rate": 0.5,
+          "confidence": 0.85,
+          "family": "match_winner",
+          "lane": "honest",
+          "market": 0.7819,
+          "market_id": "1340edf0-b814-44dc-b043-0103fbafdb25",
+          "market_weight": 0.95,
+          "model": 0.6865,
+          "notes": [
+            "simulated win probability 0.686",
+            "market consensus 0.782, weight 0.95"
+          ],
+          "probability": 0.736,
+          "submission": 74
+        },
+        {
+          "base_rate": 0.225,
+          "confidence": 0.95,
+          "family": "tiebreak",
+          "lane": "honest",
+          "market": null,
+          "market_id": "445fb8ee-562f-4eba-83e9-ca18ef0b9083",
+          "market_weight": 0.0,
+          "model": 0.2742,
+          "notes": [
+            "no usable market quote for this question"
+          ],
+          "probability": 0.2718,
+          "submission": 27
+        }
+      ],
+      "rated_a": true,
+      "rated_b": true,
+      "round": "R128",
+      "tour": "WTA"
+    },
+    "860ea906-15ce-4be9-bd2e-a72bac739e95": {
+      "player_a": "Iva Jovic",
+      "player_b": "Francesca Jones",
+      "questions": [
+        {
+          "base_rate": 0.3511,
+          "confidence": 0.95,
+          "family": "match_duration",
+          "lane": "honest",
+          "market": null,
+          "market_id": "5f4447e6-529b-40e2-b1ca-8386d50cb9c8",
+          "market_weight": 0.0,
+          "model": 0.3388,
+          "notes": [
+            "total games: simulator 21.6, Pinnacle 19.3, used 20.2 at weight 0.60",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.3394,
+          "submission": 34
+        },
+        {
+          "base_rate": 0.427,
+          "confidence": 1.0,
+          "family": "aces_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "d2f6f477-ce31-486b-b07f-66dba39dab55",
+          "market_weight": 0.0,
+          "model": 0.3794,
+          "notes": [
+            "exposure 74 service points from 22.9 games"
+          ],
+          "probability": 0.3794,
+          "submission": 38
+        },
+        {
+          "base_rate": 0.433,
+          "confidence": 1.0,
+          "family": "double_faults_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "69548b17-f559-4e46-9350-11d80c9af47f",
+          "market_weight": 0.0,
+          "model": 0.445,
+          "notes": [
+            "exposure 74 service points from 22.9 games"
+          ],
+          "probability": 0.445,
+          "submission": 45
+        },
+        {
+          "base_rate": 0.5,
+          "confidence": 0.85,
+          "family": "match_winner",
+          "lane": "honest",
+          "market": 0.1476,
+          "market_id": "ac21d042-73af-46a6-8888-414132867324",
+          "market_weight": 0.95,
+          "model": 0.2742,
+          "notes": [
+            "simulated win probability 0.274",
+            "market consensus 0.148, weight 0.95"
+          ],
+          "probability": 0.2047,
+          "submission": 20
+        },
+        {
+          "base_rate": 0.225,
+          "confidence": 0.95,
+          "family": "tiebreak",
+          "lane": "honest",
+          "market": null,
+          "market_id": "97c0dd7b-b230-4554-b528-b7e033ca16c8",
+          "market_weight": 0.0,
+          "model": 0.238,
+          "notes": [
+            "no usable market quote for this question"
+          ],
+          "probability": 0.2373,
+          "submission": 24
+        }
+      ],
+      "rated_a": true,
+      "rated_b": true,
+      "round": "R128",
+      "tour": "WTA"
+    },
+    "8de2b132-b5ac-40fa-aafa-2d7340cb2b6f": {
+      "player_a": "Aryna Sabalenka",
+      "player_b": "Kamilla Rakhimova",
+      "questions": [
+        {
+          "base_rate": 0.6368,
+          "confidence": 0.95,
+          "family": "match_duration",
+          "lane": "honest",
+          "market": null,
+          "market_id": "6e3967c3-9ffb-4ad3-94c6-0b73a7388817",
+          "market_weight": 0.0,
+          "model": 0.5024,
+          "notes": [
+            "total games: simulator 18.7, Pinnacle 18.3, used 18.5 at weight 0.60",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.5091,
+          "submission": 51
+        },
+        {
+          "base_rate": 0.427,
+          "confidence": 1.0,
+          "family": "aces_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "cc479c35-9241-4fb8-900d-014f629eb948",
+          "market_weight": 0.0,
+          "model": 0.1704,
+          "notes": [
+            "exposure 65 service points from 20.2 games"
+          ],
+          "probability": 0.1704,
+          "submission": 17
+        },
+        {
+          "base_rate": 0.433,
+          "confidence": 1.0,
+          "family": "double_faults_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "2396d18a-c2e0-48d0-bc34-7c98089ba1e5",
+          "market_weight": 0.0,
+          "model": 0.2909,
+          "notes": [
+            "exposure 65 service points from 20.2 games"
+          ],
+          "probability": 0.2909,
+          "submission": 29
+        },
+        {
+          "base_rate": 0.5,
+          "confidence": 0.3,
+          "family": "unforced_errors",
+          "lane": "honest",
+          "market": null,
+          "market_id": "ecdf8b6c-7754-42fc-930a-eb71927203ce",
+          "market_weight": 0.0,
+          "model": 0.5,
+          "notes": [
+            "threshold family defers to the base rate by policy"
+          ],
+          "probability": 0.5,
+          "submission": 50
+        },
+        {
+          "base_rate": 0.0129,
+          "confidence": 0.75,
+          "family": "first_serve_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "06f852a4-4e77-456f-bad1-da353222a5b9",
+          "market_weight": 0.0,
+          "model": 0.043,
+          "notes": [
+            "serve rate: expected 0.627 vs threshold 0.770, sd 0.083 (0.060 sampling + 0.058 form)"
+          ],
+          "probability": 0.0355,
+          "submission": 4
+        },
+        {
+          "base_rate": 0.484,
+          "confidence": 0.75,
+          "family": "winners_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "8b3098e1-e52f-4e84-81cd-676d77b36d14",
+          "market_weight": 0.0,
+          "model": 0.4335,
+          "notes": [
+            "exposure 65 service points from 20.2 games"
+          ],
+          "probability": 0.4461,
+          "submission": 45
+        },
+        {
+          "base_rate": 0.337,
+          "confidence": 0.95,
+          "family": "deciding_set",
+          "lane": "honest",
+          "market": null,
+          "market_id": "215898c3-989c-4fdf-a019-78cf43f5377b",
+          "market_weight": 0.0,
+          "model": 0.255,
+          "notes": [
+            "no usable market quote for this question"
+          ],
+          "probability": 0.2591,
+          "submission": 26
+        },
+        {
+          "base_rate": 0.641,
+          "confidence": 0.95,
+          "family": "lopsided_set",
+          "lane": "honest",
+          "market": null,
+          "market_id": "f063ec41-2118-4d3c-a562-af4b691ab919",
+          "market_weight": 0.0,
+          "model": 0.7682,
+          "notes": [
+            "no usable market quote for this question"
+          ],
+          "probability": 0.7619,
+          "submission": 76
+        },
+        {
+          "base_rate": 0.5,
+          "confidence": 0.85,
+          "family": "match_winner",
+          "lane": "honest",
+          "market": 0.0718,
+          "market_id": "9467f37a-f55f-49e5-8083-c2705146fce7",
+          "market_weight": 0.95,
+          "model": 0.0622,
+          "notes": [
+            "simulated win probability 0.062",
+            "market consensus 0.072, weight 0.95"
+          ],
+          "probability": 0.1356,
+          "submission": 14
+        },
+        {
+          "base_rate": 0.225,
+          "confidence": 0.95,
+          "family": "tiebreak",
+          "lane": "honest",
+          "market": null,
+          "market_id": "58a8348a-0698-4367-ad87-baa003daa4ee",
+          "market_weight": 0.0,
+          "model": 0.1673,
+          "notes": [
+            "no usable market quote for this question"
+          ],
+          "probability": 0.1701,
+          "submission": 17
+        }
+      ],
+      "rated_a": true,
+      "rated_b": true,
+      "round": "R128",
+      "tour": "WTA"
+    },
+    "94add2cb-9a47-4dfe-b80f-62b70b2f95fc": {
+      "player_a": "Alexander Zverev",
+      "player_b": "Quentin Halys",
+      "questions": [
+        {
+          "base_rate": 0.5144,
+          "confidence": 0.95,
+          "family": "match_duration",
+          "lane": "honest",
+          "market": null,
+          "market_id": "4c90111f-0d7f-4fc6-b0cd-e9a4ae778dda",
+          "market_weight": 0.0,
+          "model": 0.6293,
+          "notes": [
+            "total games: simulator 38.1, Pinnacle 37.5, used 37.7 at weight 0.60",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.6235,
+          "submission": 62
+        },
+        {
+          "base_rate": 0.46,
+          "confidence": 1.0,
+          "family": "aces_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "ee511096-5f73-44ae-a940-13c78e586036",
+          "market_weight": 0.0,
+          "model": 0.3908,
+          "notes": [
+            "ace vulnerability: Alexander Zverev 0.85, Quentin Halys 0.97",
+            "exposure 127 service points from 40.6 games",
+            "outcome coupling: P(win)=0.160, delta=+0.60"
+          ],
+          "probability": 0.3908,
+          "submission": 39
+        },
+        {
+          "base_rate": 0.421,
+          "confidence": 1.0,
+          "family": "double_faults_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "34078981-a3f6-4425-b906-8e668d3fcd75",
+          "market_weight": 0.0,
+          "model": 0.6426,
+          "notes": [
+            "exposure 127 service points from 40.6 games"
+          ],
+          "probability": 0.6426,
+          "submission": 64
+        },
+        {
+          "base_rate": 0.5,
+          "confidence": 0.85,
+          "family": "match_winner",
+          "lane": "honest",
+          "market": 0.1604,
+          "market_id": "2efe2846-50ad-40bf-8d96-7ba7c29a3fb8",
+          "market_weight": 0.95,
+          "model": 0.1497,
+          "notes": [
+            "simulated win probability 0.150",
+            "market consensus 0.160, weight 0.95"
+          ],
+          "probability": 0.2109,
+          "submission": 21
+        },
+        {
+          "base_rate": 0.1326,
+          "confidence": 0.95,
+          "family": "tiebreak",
+          "lane": "honest",
+          "market": null,
+          "market_id": "315a5c8b-80fe-4976-b803-3d6a1ed7fa38",
+          "market_weight": 0.0,
+          "model": 0.2849,
+          "notes": [
+            "tiebreak iid correction x0.88 (ATP)",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.2773,
+          "submission": 28
+        }
+      ],
+      "rated_a": true,
+      "rated_b": true,
+      "round": "R128",
+      "tour": "ATP"
+    },
+    "98abf9c2-841a-4111-8a65-d88ae3eb87c2": {
+      "player_a": "Naomi Osaka",
+      "player_b": "Katerina Siniakova",
+      "questions": [
+        {
+          "base_rate": 0.3194,
+          "confidence": 0.95,
+          "family": "match_duration",
+          "lane": "honest",
+          "market": null,
+          "market_id": "2bb53b82-307e-426d-a039-31d6c94528bf",
+          "market_weight": 0.0,
+          "model": 0.32,
+          "notes": [
+            "total games: simulator 21.6, Pinnacle 21.5, used 21.5 at weight 0.60",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.32,
+          "submission": 32
+        },
+        {
+          "base_rate": 0.427,
+          "confidence": 1.0,
+          "family": "aces_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "86e2dc1c-b5d8-4c1e-b334-fe4013750d6d",
+          "market_weight": 0.0,
+          "model": 0.7268,
+          "notes": [
+            "exposure 74 service points from 22.8 games"
+          ],
+          "probability": 0.7268,
+          "submission": 73
+        },
+        {
+          "base_rate": 0.433,
+          "confidence": 1.0,
+          "family": "double_faults_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "39482f1b-f46c-431e-8a31-82537480afac",
+          "market_weight": 0.0,
+          "model": 0.3363,
+          "notes": [
+            "exposure 74 service points from 22.8 games"
+          ],
+          "probability": 0.3363,
+          "submission": 34
+        },
+        {
+          "base_rate": 0.5,
+          "confidence": 0.85,
+          "family": "match_winner",
+          "lane": "honest",
+          "market": 0.7845,
+          "market_id": "dec1b81b-432c-4a17-bc41-731064fd58fe",
+          "market_weight": 0.95,
+          "model": 0.761,
+          "notes": [
+            "simulated win probability 0.761",
+            "market consensus 0.785, weight 0.95"
+          ],
+          "probability": 0.7409,
+          "submission": 74
+        },
+        {
+          "base_rate": 0.225,
+          "confidence": 0.95,
+          "family": "tiebreak",
+          "lane": "honest",
+          "market": null,
+          "market_id": "320145bb-59eb-43da-a4bf-24993eb9ab86",
+          "market_weight": 0.0,
+          "model": 0.256,
+          "notes": [
+            "no usable market quote for this question"
+          ],
+          "probability": 0.2545,
+          "submission": 25
+        }
+      ],
+      "rated_a": true,
+      "rated_b": true,
+      "round": "R128",
+      "tour": "WTA"
+    },
+    "9a260e44-0e97-461b-90bb-3464f10ab7be": {
+      "player_a": "Elina Svitolina",
+      "player_b": "Anna Kalinskaya",
+      "questions": [
+        {
+          "base_rate": 0.185,
+          "confidence": 0.95,
+          "family": "match_duration",
+          "lane": "honest",
+          "market": null,
+          "market_id": "433d9ffe-c4ab-4c36-bff3-9594c9b0f368",
+          "market_weight": 0.0,
+          "model": 0.2081,
+          "notes": [
+            "total games: simulator 22.2, Pinnacle 23.0, used 22.7 at weight 0.60",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.2069,
+          "submission": 21
+        },
+        {
+          "base_rate": 0.427,
+          "confidence": 1.0,
+          "family": "aces_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "edaada84-be80-4fde-ae0f-c70f7fbeb8a2",
+          "market_weight": 0.0,
+          "model": 0.3426,
+          "notes": [
+            "exposure 76 service points from 23.4 games"
+          ],
+          "probability": 0.3426,
+          "submission": 34
+        },
+        {
+          "base_rate": 0.433,
+          "confidence": 1.0,
+          "family": "double_faults_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "e78e8893-95d1-443d-a87f-c2d9f07f8704",
+          "market_weight": 0.0,
+          "model": 0.4952,
+          "notes": [
+            "exposure 76 service points from 23.4 games"
+          ],
+          "probability": 0.4952,
+          "submission": 50
+        },
+        {
+          "base_rate": 0.5,
+          "confidence": 0.3,
+          "family": "unforced_errors",
+          "lane": "honest",
+          "market": null,
+          "market_id": "813e962d-26bb-4a91-8360-a768367ca824",
+          "market_weight": 0.0,
+          "model": 0.5,
+          "notes": [
+            "threshold family defers to the base rate by policy"
+          ],
+          "probability": 0.5,
+          "submission": 50
+        },
+        {
+          "base_rate": 0.2207,
+          "confidence": 0.5,
+          "family": "first_serve_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "f9501655-3a3c-4b91-8058-7ec11c1c6f7a",
+          "market_weight": 0.0,
+          "model": 0.2737,
+          "notes": [
+            "serve rate: expected 0.590 vs threshold 0.640, sd 0.084 (0.061 sampling + 0.058 form)"
+          ],
+          "probability": 0.2472,
+          "submission": 25
+        },
+        {
+          "base_rate": 0.484,
+          "confidence": 0.75,
+          "family": "winners_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "dc28e39e-568e-4a84-bcf9-a8221ee8124a",
+          "market_weight": 0.0,
+          "model": 0.4783,
+          "notes": [
+            "exposure 76 service points from 23.4 games"
+          ],
+          "probability": 0.4797,
+          "submission": 48
+        },
+        {
+          "base_rate": 0.337,
+          "confidence": 0.95,
+          "family": "deciding_set",
+          "lane": "honest",
+          "market": null,
+          "market_id": "2d52daab-6d12-4e41-bb5e-8e1d00ad4cba",
+          "market_weight": 0.0,
+          "model": 0.4818,
+          "notes": [
+            "no usable market quote for this question"
+          ],
+          "probability": 0.4745,
+          "submission": 47
+        },
+        {
+          "base_rate": 0.641,
+          "confidence": 0.95,
+          "family": "lopsided_set",
+          "lane": "honest",
+          "market": null,
+          "market_id": "ca031c4c-0f9c-4e42-ac8c-92becaf86cd3",
+          "market_weight": 0.0,
+          "model": 0.6315,
+          "notes": [
+            "no usable market quote for this question"
+          ],
+          "probability": 0.632,
+          "submission": 63
+        },
+        {
+          "base_rate": 0.5,
+          "confidence": 0.85,
+          "family": "match_winner",
+          "lane": "honest",
+          "market": 0.3041,
+          "market_id": "27bc2e23-5b06-468a-94fa-17523c2c1cb8",
+          "market_weight": 0.95,
+          "model": 0.338,
+          "notes": [
+            "simulated win probability 0.338",
+            "market consensus 0.304, weight 0.95"
+          ],
+          "probability": 0.3349,
+          "submission": 33
+        },
+        {
+          "base_rate": 0.225,
+          "confidence": 0.95,
+          "family": "tiebreak",
+          "lane": "honest",
+          "market": null,
+          "market_id": "bf7c64fd-a6b4-48e1-8f06-c16bafa84d4b",
+          "market_weight": 0.0,
+          "model": 0.2627,
+          "notes": [
+            "no usable market quote for this question"
+          ],
+          "probability": 0.2609,
+          "submission": 26
+        }
+      ],
+      "rated_a": true,
+      "rated_b": true,
+      "round": "R128",
+      "tour": "WTA"
+    },
+    "9efa6831-5870-4e03-be6e-220577a2d914": {
+      "player_a": "Nikola Bartunkova",
+      "player_b": "Tatjana Maria",
+      "questions": [
+        {
+          "base_rate": 0.3194,
+          "confidence": 0.95,
+          "family": "match_duration",
+          "lane": "honest",
+          "market": null,
+          "market_id": "5e741d54-7fe0-4395-a4e0-a059ab5786d5",
+          "market_weight": 0.0,
+          "model": 0.456,
+          "notes": [
+            "total games: simulator 22.2, Pinnacle 23.0, used 22.7 at weight 0.60",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.4492,
+          "submission": 45
+        },
+        {
+          "base_rate": 0.427,
+          "confidence": 1.0,
+          "family": "aces_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "87ba9f51-baed-4eb2-8222-5b43cf87c32e",
+          "market_weight": 0.0,
+          "model": 0.3799,
+          "notes": [
+            "exposure 76 service points from 23.5 games"
+          ],
+          "probability": 0.3799,
+          "submission": 38
+        },
+        {
+          "base_rate": 0.433,
+          "confidence": 1.0,
+          "family": "double_faults_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "2c945df9-9a54-4e9b-b7aa-40669e10599b",
+          "market_weight": 0.0,
+          "model": 0.4421,
+          "notes": [
+            "exposure 76 service points from 23.5 games"
+          ],
+          "probability": 0.4421,
+          "submission": 44
+        },
+        {
+          "base_rate": 0.5,
+          "confidence": 0.85,
+          "family": "match_winner",
+          "lane": "honest",
+          "market": 0.6984,
+          "market_id": "22a62a32-5907-4630-908d-6022866e6bd9",
+          "market_weight": 0.95,
+          "model": 0.641,
+          "notes": [
+            "simulated win probability 0.641",
+            "market consensus 0.698, weight 0.95"
+          ],
+          "probability": 0.6663,
+          "submission": 67
+        },
+        {
+          "base_rate": 0.225,
+          "confidence": 0.95,
+          "family": "tiebreak",
+          "lane": "honest",
+          "market": null,
+          "market_id": "af804938-3ef4-48c8-8e6a-690436a0d1e9",
+          "market_weight": 0.0,
+          "model": 0.257,
+          "notes": [
+            "no usable market quote for this question"
+          ],
+          "probability": 0.2554,
+          "submission": 26
+        }
+      ],
+      "rated_a": true,
+      "rated_b": true,
+      "round": "R128",
+      "tour": "WTA"
+    },
+    "a4c21be1-a8ea-4d8a-80d0-3cc7afcc0dfa": {
+      "player_a": "Paula Badosa",
+      "player_b": "Coco Gauff",
+      "questions": [
+        {
+          "base_rate": 0.4504,
+          "confidence": 0.95,
+          "family": "match_duration",
+          "lane": "honest",
+          "market": null,
+          "market_id": "9ace04fa-eb24-47e3-af24-15a413059ee0",
+          "market_weight": 0.0,
+          "model": 0.4481,
+          "notes": [
+            "total games: simulator 22.1, Pinnacle 19.9, used 20.8 at weight 0.60",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.4482,
+          "submission": 45
+        },
+        {
+          "base_rate": 0.427,
+          "confidence": 1.0,
+          "family": "aces_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "43d918eb-89be-4aa4-b88f-3a871eec91e1",
+          "market_weight": 0.0,
+          "model": 0.471,
+          "notes": [
+            "exposure 76 service points from 23.3 games"
+          ],
+          "probability": 0.471,
+          "submission": 47
+        },
+        {
+          "base_rate": 0.433,
+          "confidence": 1.0,
+          "family": "double_faults_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "4b9a0a44-23f7-47d8-83c9-6ae4abb7e489",
+          "market_weight": 0.0,
+          "model": 0.4474,
+          "notes": [
+            "exposure 76 service points from 23.3 games"
+          ],
+          "probability": 0.4474,
+          "submission": 45
+        },
+        {
+          "base_rate": 0.5,
+          "confidence": 0.85,
+          "family": "match_winner",
+          "lane": "honest",
+          "market": 0.1336,
+          "market_id": "25fd2e42-a9cc-4c17-a9bb-69fbae612ce2",
+          "market_weight": 0.95,
+          "model": 0.349,
+          "notes": [
+            "simulated win probability 0.349",
+            "market consensus 0.134, weight 0.95"
+          ],
+          "probability": 0.1948,
+          "submission": 19
+        },
+        {
+          "base_rate": 0.225,
+          "confidence": 0.95,
+          "family": "tiebreak",
+          "lane": "honest",
+          "market": null,
+          "market_id": "69cf3b3d-5310-4f32-9e88-44171d77e36e",
+          "market_weight": 0.0,
+          "model": 0.2605,
+          "notes": [
+            "no usable market quote for this question"
+          ],
+          "probability": 0.2587,
+          "submission": 26
+        }
+      ],
+      "rated_a": true,
+      "rated_b": true,
+      "round": "R128",
+      "tour": "WTA"
+    },
+    "ab824343-d4b6-401a-a62d-6ef39bd701be": {
+      "player_a": "Zizou Bergs",
+      "player_b": "Jesper de Jong",
+      "questions": [
+        {
+          "base_rate": 0.3808,
+          "confidence": 0.95,
+          "family": "match_duration",
+          "lane": "honest",
+          "market": null,
+          "market_id": "a69dcdfb-e96a-423f-893e-6a4f78e3a0e0",
+          "market_weight": 0.0,
+          "model": 0.5339,
+          "notes": [
+            "total games: simulator 38.2, Pinnacle 38.5, used 38.4 at weight 0.60",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.5263,
+          "submission": 53
+        },
+        {
+          "base_rate": 0.46,
+          "confidence": 1.0,
+          "family": "aces_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "cb4c396c-e8f1-40af-902e-f0ceb6127452",
+          "market_weight": 0.0,
+          "model": 0.7807,
+          "notes": [
+            "ace vulnerability: Jesper de Jong 1.17, Zizou Bergs 0.78",
+            "exposure 126 service points from 40.4 games",
+            "outcome coupling: P(win)=0.688, delta=+0.60"
+          ],
+          "probability": 0.7807,
+          "submission": 78
+        },
+        {
+          "base_rate": 0.421,
+          "confidence": 1.0,
+          "family": "double_faults_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "72d858c7-0608-4bc9-af14-21a79a8570ad",
+          "market_weight": 0.0,
+          "model": 0.3909,
+          "notes": [
+            "exposure 126 service points from 40.4 games"
+          ],
+          "probability": 0.3909,
+          "submission": 39
+        },
+        {
+          "base_rate": 0.5,
+          "confidence": 0.85,
+          "family": "match_winner",
+          "lane": "honest",
+          "market": 0.6877,
+          "market_id": "b30d0f75-3abf-4a1e-ab80-30c1691255ae",
+          "market_weight": 0.95,
+          "model": 0.584,
+          "notes": [
+            "simulated win probability 0.584",
+            "market consensus 0.688, weight 0.95"
+          ],
+          "probability": 0.6554,
+          "submission": 66
+        },
+        {
+          "base_rate": 0.487,
+          "confidence": 0.95,
+          "family": "tiebreak",
+          "lane": "honest",
+          "market": null,
+          "market_id": "36522446-2c72-4797-965d-f9b63373d4cd",
+          "market_weight": 0.0,
+          "model": 0.4849,
+          "notes": [
+            "tiebreak iid correction x0.88 (ATP)",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.485,
+          "submission": 48
+        }
+      ],
+      "rated_a": true,
+      "rated_b": true,
+      "round": "R128",
+      "tour": "ATP"
+    },
+    "b72e9869-a662-44a1-b8d6-c24503444327": {
+      "player_a": "Valentin Vacherot",
+      "player_b": "Frances Tiafoe",
+      "questions": [
+        {
+          "base_rate": 0.446,
+          "confidence": 0.95,
+          "family": "match_duration",
+          "lane": "honest",
+          "market": null,
+          "market_id": "8eb1bc58-6338-4690-b719-fde41feb410c",
+          "market_weight": 0.0,
+          "model": 0.6508,
+          "notes": [
+            "total games: simulator 39.9, Pinnacle 40.0, used 40.0 at weight 0.60",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.6406,
+          "submission": 64
+        },
+        {
+          "base_rate": 0.46,
+          "confidence": 1.0,
+          "family": "aces_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "cb8b2328-1ef0-4154-a374-e12b16e8f471",
+          "market_weight": 0.0,
+          "model": 0.2995,
+          "notes": [
+            "ace vulnerability: Valentin Vacherot 1.05, Frances Tiafoe 1.36",
+            "exposure 132 service points from 42.3 games",
+            "outcome coupling: P(win)=0.644, delta=+0.60"
+          ],
+          "probability": 0.2995,
+          "submission": 30
+        },
+        {
+          "base_rate": 0.421,
+          "confidence": 1.0,
+          "family": "double_faults_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "9562a290-bc0a-42e0-9b6d-c3e3ba83c0d1",
+          "market_weight": 0.0,
+          "model": 0.3492,
+          "notes": [
+            "exposure 132 service points from 42.3 games"
+          ],
+          "probability": 0.3492,
+          "submission": 35
+        },
+        {
+          "base_rate": 0.5,
+          "confidence": 0.3,
+          "family": "unforced_errors",
+          "lane": "honest",
+          "market": null,
+          "market_id": "0a04eb40-fa73-4c79-8d88-29407db6f757",
+          "market_weight": 0.0,
+          "model": 0.5,
+          "notes": [
+            "threshold family defers to the base rate by policy"
+          ],
+          "probability": 0.5,
+          "submission": 50
+        },
+        {
+          "base_rate": 0.3637,
+          "confidence": 0.425,
+          "family": "first_serve_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "349eefef-b730-4f98-8543-4413cd0f9a69",
+          "market_weight": 0.0,
+          "model": 0.3827,
+          "notes": [
+            "serve rate: expected 0.660 vs threshold 0.680, sd 0.068 (0.045 sampling + 0.051 form)"
+          ],
+          "probability": 0.3718,
+          "submission": 37
+        },
+        {
+          "base_rate": 0.485,
+          "confidence": 0.75,
+          "family": "winners_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "e84f4a42-1e93-4ead-a9fe-5b56a0de5903",
+          "market_weight": 0.0,
+          "model": 0.3716,
+          "notes": [
+            "exposure 132 service points from 42.3 games"
+          ],
+          "probability": 0.3999,
+          "submission": 40
+        },
+        {
+          "base_rate": 0.202,
+          "confidence": 0.95,
+          "family": "deciding_set",
+          "lane": "honest",
+          "market": null,
+          "market_id": "7accc971-462a-464a-a853-35437c737afe",
+          "market_weight": 0.0,
+          "model": 0.3508,
+          "notes": [
+            "no usable market quote for this question"
+          ],
+          "probability": 0.3433,
+          "submission": 34
+        },
+        {
+          "base_rate": 0.653,
+          "confidence": 0.95,
+          "family": "lopsided_set",
+          "lane": "honest",
+          "market": null,
+          "market_id": "52b47f1b-b131-4ba8-847f-19ae90bbe466",
+          "market_weight": 0.0,
+          "model": 0.4995,
+          "notes": [
+            "no usable market quote for this question"
+          ],
+          "probability": 0.5072,
+          "submission": 51
+        },
+        {
+          "base_rate": 0.5,
+          "confidence": 0.85,
+          "family": "match_winner",
+          "lane": "honest",
+          "market": 0.6438,
+          "market_id": "1172f44e-45f3-4b36-8290-038e50a1bb30",
+          "market_weight": 0.95,
+          "model": 0.5815,
+          "notes": [
+            "simulated win probability 0.582",
+            "market consensus 0.644, weight 0.95"
+          ],
+          "probability": 0.6197,
+          "submission": 62
+        },
+        {
+          "base_rate": 0.1326,
+          "confidence": 0.95,
+          "family": "tiebreak",
+          "lane": "honest",
+          "market": null,
+          "market_id": "3a967ab6-b5df-46fb-9d95-bdbc9ccb6c86",
+          "market_weight": 0.0,
+          "model": 0.2374,
+          "notes": [
+            "tiebreak iid correction x0.88 (ATP)",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.2321,
+          "submission": 23
+        }
+      ],
+      "rated_a": true,
+      "rated_b": true,
+      "round": "R128",
+      "tour": "ATP"
+    },
+    "bdf69522-44d9-4092-8f15-56c87ac71b3d": {
+      "player_a": "Botic van de Zandschulp",
+      "player_b": "Alex de Minaur",
+      "questions": [
+        {
+          "base_rate": 0.5904,
+          "confidence": 0.95,
+          "family": "match_duration",
+          "lane": "honest",
+          "market": null,
+          "market_id": "c4ca865b-c62d-4c04-8c50-e8808df45419",
+          "market_weight": 0.0,
+          "model": 0.7866,
+          "notes": [
+            "total games: simulator 35.9, Pinnacle 38.5, used 37.4 at weight 0.60",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.7768,
+          "submission": 78
+        },
+        {
+          "base_rate": 0.46,
+          "confidence": 1.0,
+          "family": "aces_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "8863e36b-e122-4c54-b7b3-476244cd1484",
+          "market_weight": 0.0,
+          "model": 0.4245,
+          "notes": [
+            "ace vulnerability: Botic van de Zandschulp 0.86, Alex de Minaur 0.78",
+            "exposure 119 service points from 38.1 games",
+            "outcome coupling: P(win)=0.740, delta=+0.60"
+          ],
+          "probability": 0.4245,
+          "submission": 42
+        },
+        {
+          "base_rate": 0.421,
+          "confidence": 1.0,
+          "family": "double_faults_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "81481209-709d-42ae-b0ad-43dde6b81b30",
+          "market_weight": 0.0,
+          "model": 0.2771,
+          "notes": [
+            "exposure 119 service points from 38.1 games"
+          ],
+          "probability": 0.2771,
+          "submission": 28
+        },
+        {
+          "base_rate": 0.5,
+          "confidence": 0.85,
+          "family": "match_winner",
+          "lane": "honest",
+          "market": 0.7397,
+          "market_id": "7993feb6-72fe-4459-8dbb-f54d99b79afd",
+          "market_weight": 0.95,
+          "model": 0.766,
+          "notes": [
+            "simulated win probability 0.766",
+            "market consensus 0.740, weight 0.95"
+          ],
+          "probability": 0.7049,
+          "submission": 70
+        },
+        {
+          "base_rate": 0.487,
+          "confidence": 0.95,
+          "family": "tiebreak",
+          "lane": "honest",
+          "market": null,
+          "market_id": "ae377c25-8d46-4a58-b1f9-aad7460dd3e3",
+          "market_weight": 0.0,
+          "model": 0.3841,
+          "notes": [
+            "tiebreak iid correction x0.88 (ATP)",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.3893,
+          "submission": 39
+        }
+      ],
+      "rated_a": true,
+      "rated_b": true,
+      "round": "R128",
+      "tour": "ATP"
+    },
+    "c2a4f36d-6e6e-4838-a87e-1ae053071b24": {
+      "player_a": "Jessica Pegula",
+      "player_b": "Leylah Fernandez",
+      "questions": [
+        {
+          "base_rate": 0.5685,
+          "confidence": 0.95,
+          "family": "match_duration",
+          "lane": "honest",
+          "market": null,
+          "market_id": "21b60303-6a1a-425b-8300-c81986c08c1a",
+          "market_weight": 0.0,
+          "model": 0.5714,
+          "notes": [
+            "total games: simulator 21.4, Pinnacle 20.5, used 20.8 at weight 0.60",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.5713,
+          "submission": 57
+        },
+        {
+          "base_rate": 0.427,
+          "confidence": 1.0,
+          "family": "aces_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "760acd4b-7bc1-4f3a-aa6b-8c26fdb76875",
+          "market_weight": 0.0,
+          "model": 0.3775,
+          "notes": [
+            "exposure 74 service points from 22.8 games"
+          ],
+          "probability": 0.3775,
+          "submission": 38
+        },
+        {
+          "base_rate": 0.433,
+          "confidence": 1.0,
+          "family": "double_faults_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "f0ee9db8-3a50-4258-a502-e580cd6f7403",
+          "market_weight": 0.0,
+          "model": 0.546,
+          "notes": [
+            "exposure 74 service points from 22.8 games"
+          ],
+          "probability": 0.546,
+          "submission": 55
+        },
+        {
+          "base_rate": 0.5,
+          "confidence": 0.3,
+          "family": "unforced_errors",
+          "lane": "honest",
+          "market": null,
+          "market_id": "32c31a74-cd11-4bc2-81be-95002d5dc011",
+          "market_weight": 0.0,
+          "model": 0.5,
+          "notes": [
+            "threshold family defers to the base rate by policy"
+          ],
+          "probability": 0.5,
+          "submission": 50
+        },
+        {
+          "base_rate": 0.0292,
+          "confidence": 0.75,
+          "family": "first_serve_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "650c1b55-4031-431b-a4d4-5944807dd384",
+          "market_weight": 0.0,
+          "model": 0.055,
+          "notes": [
+            "serve rate: expected 0.607 vs threshold 0.740, sd 0.084 (0.061 sampling + 0.058 form)"
+          ],
+          "probability": 0.0485,
+          "submission": 5
+        },
+        {
+          "base_rate": 0.484,
+          "confidence": 0.75,
+          "family": "winners_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "89bb53cb-0284-47cd-8c7e-a593602881c0",
+          "market_weight": 0.0,
+          "model": 0.691,
+          "notes": [
+            "exposure 74 service points from 22.8 games"
+          ],
+          "probability": 0.6392,
+          "submission": 64
+        },
+        {
+          "base_rate": 0.337,
+          "confidence": 0.95,
+          "family": "deciding_set",
+          "lane": "honest",
+          "market": null,
+          "market_id": "094983e9-a583-4d0c-bb5d-bb927248d162",
+          "market_weight": 0.0,
+          "model": 0.4228,
+          "notes": [
+            "no usable market quote for this question"
+          ],
+          "probability": 0.4185,
+          "submission": 42
+        },
+        {
+          "base_rate": 0.641,
+          "confidence": 0.95,
+          "family": "lopsided_set",
+          "lane": "honest",
+          "market": null,
+          "market_id": "bb1c5ea7-998a-4174-88fa-af7eba555f30",
+          "market_weight": 0.0,
+          "model": 0.6583,
+          "notes": [
+            "no usable market quote for this question"
+          ],
+          "probability": 0.6574,
+          "submission": 66
+        },
+        {
+          "base_rate": 0.5,
+          "confidence": 0.85,
+          "family": "match_winner",
+          "lane": "honest",
+          "market": 0.1633,
+          "market_id": "472f2da6-ea70-46af-a289-c216071e133e",
+          "market_weight": 0.95,
+          "model": 0.2233,
+          "notes": [
+            "simulated win probability 0.223",
+            "market consensus 0.163, weight 0.95"
+          ],
+          "probability": 0.2161,
+          "submission": 22
+        },
+        {
+          "base_rate": 0.225,
+          "confidence": 0.95,
+          "family": "tiebreak",
+          "lane": "honest",
+          "market": null,
+          "market_id": "4a07fc43-dd8d-40f9-8a5e-ac9201866072",
+          "market_weight": 0.0,
+          "model": 0.2582,
+          "notes": [
+            "no usable market quote for this question"
+          ],
+          "probability": 0.2566,
+          "submission": 26
+        }
+      ],
+      "rated_a": true,
+      "rated_b": true,
+      "round": "R128",
+      "tour": "WTA"
+    },
+    "c4cbce93-8cd7-4493-930a-03ac4b0c3f78": {
+      "player_a": "Alex Michelsen",
+      "player_b": "D. Merida Aguilar",
+      "questions": [
+        {
+          "base_rate": 0.6333,
+          "confidence": 0.35,
+          "family": "match_duration",
+          "lane": "honest",
+          "market": null,
+          "market_id": "afc871a5-8e86-420c-b5ef-8d99fcb7599b",
+          "market_weight": 0.0,
+          "model": 0.6333,
+          "notes": [
+            "one or both players unrated; using the base rate as the model",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.6333,
+          "submission": 63
+        },
+        {
+          "base_rate": 0.46,
+          "confidence": 0.3,
+          "family": "aces_comparison",
+          "lane": "honest",
+          "market": 0.0,
+          "market_id": "3c1aad8c-7256-4836-ab91-73bc3caaf1d2",
+          "market_weight": 0.0,
+          "model": null,
+          "notes": [
+            "comparison subject not identified",
+            "question not understood; answering from the base rate"
+          ],
+          "probability": 0.46,
+          "submission": 46
+        },
+        {
+          "base_rate": 0.421,
+          "confidence": 0.3,
+          "family": "double_faults_comparison",
+          "lane": "honest",
+          "market": 0.0,
+          "market_id": "3a9ebb46-8e50-4500-8788-a75a0bba877a",
+          "market_weight": 0.0,
+          "model": null,
+          "notes": [
+            "comparison subject not identified",
+            "question not understood; answering from the base rate"
+          ],
+          "probability": 0.421,
+          "submission": 42
+        },
+        {
+          "base_rate": 0.5,
+          "confidence": 0.3,
+          "family": "unforced_errors",
+          "lane": "honest",
+          "market": null,
+          "market_id": "9f70f3f4-c339-4826-a5d8-9258c7073c66",
+          "market_weight": 0.0,
+          "model": 0.5,
+          "notes": [
+            "threshold family defers to the base rate by policy"
+          ],
+          "probability": 0.5,
+          "submission": 50
+        },
+        {
+          "base_rate": 0.0806,
+          "confidence": 0.3,
+          "family": "first_serve_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "313cb0b7-9ba5-4ea5-ae39-6c514519d7ef",
+          "market_weight": 0.0,
+          "model": 0.0806,
+          "notes": [
+            "missing serve ratings; using the base rate"
+          ],
+          "probability": 0.0806,
+          "submission": 8
+        },
+        {
+          "base_rate": 0.485,
+          "confidence": 0.3,
+          "family": "winners_comparison",
+          "lane": "honest",
+          "market": 0.0,
+          "market_id": "6f2cbeab-5ded-4dab-91fd-4f2e1fea866f",
+          "market_weight": 0.0,
+          "model": null,
+          "notes": [
+            "comparison subject not identified",
+            "question not understood; answering from the base rate"
+          ],
+          "probability": 0.485,
+          "submission": 48
+        },
+        {
+          "base_rate": 0.202,
+          "confidence": 0.35,
+          "family": "deciding_set",
+          "lane": "honest",
+          "market": null,
+          "market_id": "167d5bfd-8070-4957-bce8-6aeaae54300a",
+          "market_weight": 0.0,
+          "model": 0.202,
+          "notes": [
+            "one or both players unrated; using the base rate as the model",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.202,
+          "submission": 20
+        },
+        {
+          "base_rate": 0.653,
+          "confidence": 0.35,
+          "family": "lopsided_set",
+          "lane": "honest",
+          "market": null,
+          "market_id": "881b4aae-1e36-451b-9a9d-dd7e6644d36b",
+          "market_weight": 0.0,
+          "model": 0.653,
+          "notes": [
+            "one or both players unrated; using the base rate as the model",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.653,
+          "submission": 65
+        },
+        {
+          "base_rate": 0.5,
+          "confidence": 0.2,
+          "family": "match_winner",
+          "lane": "honest",
+          "market": null,
+          "market_id": "cf743f32-2b64-455d-9342-1d8c927eed11",
+          "market_weight": 0.0,
+          "model": null,
+          "notes": [
+            "no identifiable subject; cannot tell which player is meant"
+          ],
+          "probability": 0.5,
+          "submission": 50
+        },
+        {
+          "base_rate": 0.487,
+          "confidence": 0.35,
+          "family": "tiebreak",
+          "lane": "honest",
+          "market": null,
+          "market_id": "5ff8cd4f-4d7f-4508-90b9-f804de4f5bd0",
+          "market_weight": 0.0,
+          "model": 0.487,
+          "notes": [
+            "one or both players unrated; using the base rate as the model",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.487,
+          "submission": 49
+        }
+      ],
+      "rated_a": true,
+      "rated_b": false,
+      "round": "R128",
+      "tour": "ATP"
+    },
+    "da8ff9a1-f14b-4ebd-86eb-cf697e2430b0": {
+      "player_a": "Jakub Mensik",
+      "player_b": "Jurij Rodionov",
+      "questions": [
+        {
+          "base_rate": 0.6333,
+          "confidence": 0.95,
+          "family": "match_duration",
+          "lane": "honest",
+          "market": null,
+          "market_id": "89a6baaa-82e9-46b3-b270-4f183236fd9c",
+          "market_weight": 0.0,
+          "model": 0.6561,
+          "notes": [
+            "total games: simulator 37.9, Pinnacle 33.0, used 34.9 at weight 0.60",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.6549,
+          "submission": 65
+        },
+        {
+          "base_rate": 0.46,
+          "confidence": 1.0,
+          "family": "aces_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "6dbb50d4-3a5e-4f2b-87a0-a7dc96e65d61",
+          "market_weight": 0.0,
+          "model": 0.8249,
+          "notes": [
+            "ace vulnerability: Jurij Rodionov 0.93, Jakub Mensik 0.84",
+            "exposure 125 service points from 40.1 games",
+            "outcome coupling: P(win)=0.872, delta=+0.60"
+          ],
+          "probability": 0.8249,
+          "submission": 82
+        },
+        {
+          "base_rate": 0.421,
+          "confidence": 1.0,
+          "family": "double_faults_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "3d3e4e60-5678-4b17-bc97-7c6c0cff7db9",
+          "market_weight": 0.0,
+          "model": 0.5165,
+          "notes": [
+            "exposure 125 service points from 40.1 games"
+          ],
+          "probability": 0.5165,
+          "submission": 52
+        },
+        {
+          "base_rate": 0.5,
+          "confidence": 0.85,
+          "family": "match_winner",
+          "lane": "honest",
+          "market": 0.8724,
+          "market_id": "7f773f07-3eca-43ad-80b3-1734f09a7e9c",
+          "market_weight": 0.95,
+          "model": 0.6647,
+          "notes": [
+            "simulated win probability 0.665",
+            "market consensus 0.872, weight 0.95"
+          ],
+          "probability": 0.8105,
+          "submission": 81
+        },
+        {
+          "base_rate": 0.1326,
+          "confidence": 0.95,
+          "family": "tiebreak",
+          "lane": "honest",
+          "market": null,
+          "market_id": "46c8d46e-f441-4b11-8035-ceffdc5038e0",
+          "market_weight": 0.0,
+          "model": 0.1432,
+          "notes": [
+            "tiebreak iid correction x0.88 (ATP)",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.1427,
+          "submission": 14
+        }
+      ],
+      "rated_a": true,
+      "rated_b": true,
+      "round": "R128",
+      "tour": "ATP"
+    },
+    "df6e8ac7-4982-49af-96a7-73a3488dbe37": {
+      "player_a": "Lilli Tagger",
+      "player_b": "Amanda Anisimova",
+      "questions": [
+        {
+          "base_rate": 0.7157,
+          "confidence": 0.95,
+          "family": "match_duration",
+          "lane": "honest",
+          "market": null,
+          "market_id": "861853b9-d110-44bd-abbc-4ae989518494",
+          "market_weight": 0.0,
+          "model": 0.7135,
+          "notes": [
+            "total games: simulator 22.1, Pinnacle 19.9, used 20.8 at weight 0.60",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.7136,
+          "submission": 71
+        },
+        {
+          "base_rate": 0.427,
+          "confidence": 0.45,
+          "family": "aces_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "549a1b9c-3017-4294-9219-32f1d46b4787",
+          "market_weight": 0.0,
+          "model": 0.4004,
+          "notes": [
+            "exposure 76 service points from 23.4 games"
+          ],
+          "probability": 0.415,
+          "submission": 42
+        },
+        {
+          "base_rate": 0.433,
+          "confidence": 0.45,
+          "family": "double_faults_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "302e77d3-d5ee-49b8-8896-00ce083e45b0",
+          "market_weight": 0.0,
+          "model": 0.4854,
+          "notes": [
+            "exposure 76 service points from 23.4 games"
+          ],
+          "probability": 0.4566,
+          "submission": 46
+        },
+        {
+          "base_rate": 0.5,
+          "confidence": 0.85,
+          "family": "match_winner",
+          "lane": "honest",
+          "market": 0.8249,
+          "market_id": "276cfddd-8d7f-4327-aa60-a8e95f9c0a0c",
+          "market_weight": 0.95,
+          "model": 0.6815,
+          "notes": [
+            "simulated win probability 0.681",
+            "market consensus 0.825, weight 0.95"
+          ],
+          "probability": 0.7713,
+          "submission": 77
+        },
+        {
+          "base_rate": 0.225,
+          "confidence": 0.95,
+          "family": "tiebreak",
+          "lane": "honest",
+          "market": null,
+          "market_id": "ba24f428-7788-4d63-b528-8a8a43f95399",
+          "market_weight": 0.0,
+          "model": 0.2742,
+          "notes": [
+            "no usable market quote for this question"
+          ],
+          "probability": 0.2718,
+          "submission": 27
+        }
+      ],
+      "rated_a": true,
+      "rated_b": true,
+      "round": "R128",
+      "tour": "WTA"
+    },
+    "e1c385ee-f6ed-417d-b88f-93d7e48c9bfd": {
+      "player_a": "Ben Shelton",
+      "player_b": "Denis Shapovalov",
+      "questions": [
+        {
+          "base_rate": 0.2883,
+          "confidence": 0.95,
+          "family": "match_duration",
+          "lane": "honest",
+          "market": null,
+          "market_id": "93da74f0-e2fb-450a-9047-9f3c8ff26498",
+          "market_weight": 0.0,
+          "model": 0.3973,
+          "notes": [
+            "total games: simulator 41.0, Pinnacle 38.5, used 39.5 at weight 0.60",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.3919,
+          "submission": 39
+        },
+        {
+          "base_rate": 0.46,
+          "confidence": 1.0,
+          "family": "aces_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "fd094f26-180a-4f60-8bb4-97efec45870a",
+          "market_weight": 0.0,
+          "model": 0.5114,
+          "notes": [
+            "ace vulnerability: Ben Shelton 0.83, Denis Shapovalov 0.58",
+            "exposure 135 service points from 43.2 games",
+            "outcome coupling: P(win)=0.230, delta=+0.60"
+          ],
+          "probability": 0.5114,
+          "submission": 51
+        },
+        {
+          "base_rate": 0.421,
+          "confidence": 1.0,
+          "family": "double_faults_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "cddf5578-0760-416a-ac1c-13efcba6f270",
+          "market_weight": 0.0,
+          "model": 0.76,
+          "notes": [
+            "exposure 135 service points from 43.2 games"
+          ],
+          "probability": 0.76,
+          "submission": 76
+        },
+        {
+          "base_rate": 0.5,
+          "confidence": 0.3,
+          "family": "unforced_errors",
+          "lane": "honest",
+          "market": null,
+          "market_id": "b9edce2e-5bf0-405f-8d8d-129ae5535359",
+          "market_weight": 0.0,
+          "model": 0.5,
+          "notes": [
+            "threshold family defers to the base rate by policy"
+          ],
+          "probability": 0.5,
+          "submission": 50
+        },
+        {
+          "base_rate": 0.0806,
+          "confidence": 0.703,
+          "family": "first_serve_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "417431c0-f614-45cb-ab54-a6a7d7e3008f",
+          "market_weight": 0.0,
+          "model": 0.0791,
+          "notes": [
+            "serve rate: expected 0.674 vs threshold 0.770, sd 0.068 (0.044 sampling + 0.051 form)"
+          ],
+          "probability": 0.0795,
+          "submission": 8
+        },
+        {
+          "base_rate": 0.485,
+          "confidence": 0.75,
+          "family": "winners_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "3a68358b-107a-4709-b739-834c3e7c25bd",
+          "market_weight": 0.0,
+          "model": 0.7188,
+          "notes": [
+            "exposure 135 service points from 43.2 games"
+          ],
+          "probability": 0.6603,
+          "submission": 66
+        },
+        {
+          "base_rate": 0.202,
+          "confidence": 0.95,
+          "family": "deciding_set",
+          "lane": "honest",
+          "market": null,
+          "market_id": "a575e884-0e69-4366-90ca-eb0f350e0e2e",
+          "market_weight": 0.0,
+          "model": 0.359,
+          "notes": [
+            "no usable market quote for this question"
+          ],
+          "probability": 0.3511,
+          "submission": 35
+        },
+        {
+          "base_rate": 0.653,
+          "confidence": 0.95,
+          "family": "lopsided_set",
+          "lane": "honest",
+          "market": null,
+          "market_id": "08c94ced-2854-44de-94db-b82e87e5bef0",
+          "market_weight": 0.0,
+          "model": 0.429,
+          "notes": [
+            "no usable market quote for this question"
+          ],
+          "probability": 0.4402,
+          "submission": 44
+        },
+        {
+          "base_rate": 0.5,
+          "confidence": 0.85,
+          "family": "match_winner",
+          "lane": "honest",
+          "market": 0.2298,
+          "market_id": "29ccd7de-e601-4d62-ad47-c8230b071466",
+          "market_weight": 0.95,
+          "model": 0.5327,
+          "notes": [
+            "simulated win probability 0.533",
+            "market consensus 0.230, weight 0.95"
+          ],
+          "probability": 0.2806,
+          "submission": 28
+        },
+        {
+          "base_rate": 0.1326,
+          "confidence": 0.95,
+          "family": "tiebreak",
+          "lane": "honest",
+          "market": null,
+          "market_id": "40813ad3-98c6-4d80-9545-e96297d67666",
+          "market_weight": 0.0,
+          "model": 0.3087,
+          "notes": [
+            "tiebreak iid correction x0.88 (ATP)",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.2999,
+          "submission": 30
+        }
+      ],
+      "rated_a": true,
+      "rated_b": true,
+      "round": "R128",
+      "tour": "ATP"
+    },
+    "e3160d44-4348-4976-8b4c-613ff8165c2c": {
+      "player_a": "Daniil Medvedev",
+      "player_b": "Arthur Rinderknech",
+      "questions": [
+        {
+          "base_rate": 0.446,
+          "confidence": 0.95,
+          "family": "match_duration",
+          "lane": "honest",
+          "market": null,
+          "market_id": "c0d77f38-1a4c-41c2-a964-6e72a657dd23",
+          "market_weight": 0.0,
+          "model": 0.5187,
+          "notes": [
+            "total games: simulator 32.9, Pinnacle 38.5, used 36.3 at weight 0.60",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.5151,
+          "submission": 52
+        },
+        {
+          "base_rate": 0.46,
+          "confidence": 1.0,
+          "family": "aces_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "b0b16a4d-cbab-499c-b3ad-66e59ea27bf2",
+          "market_weight": 0.0,
+          "model": 0.7652,
+          "notes": [
+            "ace vulnerability: Arthur Rinderknech 0.97, Daniil Medvedev 0.56",
+            "exposure 109 service points from 35.2 games",
+            "outcome coupling: P(win)=0.720, delta=+0.60"
+          ],
+          "probability": 0.7652,
+          "submission": 77
+        },
+        {
+          "base_rate": 0.421,
+          "confidence": 1.0,
+          "family": "double_faults_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "6c3f1dd4-0153-4ff7-a95a-c8e0d3aa4c9c",
+          "market_weight": 0.0,
+          "model": 0.6882,
+          "notes": [
+            "exposure 109 service points from 35.2 games"
+          ],
+          "probability": 0.6882,
+          "submission": 69
+        },
+        {
+          "base_rate": 0.5,
+          "confidence": 0.3,
+          "family": "unforced_errors",
+          "lane": "honest",
+          "market": null,
+          "market_id": "76244152-b09e-4654-98fb-da5db7aacead",
+          "market_weight": 0.0,
+          "model": 0.5,
+          "notes": [
+            "threshold family defers to the base rate by policy"
+          ],
+          "probability": 0.5,
+          "submission": 50
+        },
+        {
+          "base_rate": 0.2801,
+          "confidence": 0.659,
+          "family": "first_serve_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "7341cdcf-14f3-4eeb-8e37-bd44b69c6942",
+          "market_weight": 0.0,
+          "model": 0.1085,
+          "notes": [
+            "serve rate: expected 0.615 vs threshold 0.700, sd 0.069 (0.046 sampling + 0.051 form)"
+          ],
+          "probability": 0.1671,
+          "submission": 17
+        },
+        {
+          "base_rate": 0.485,
+          "confidence": 0.75,
+          "family": "winners_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "5e7f5180-7050-43f4-bc97-0edf968727d4",
+          "market_weight": 0.0,
+          "model": 0.397,
+          "notes": [
+            "exposure 109 service points from 35.2 games"
+          ],
+          "probability": 0.419,
+          "submission": 42
+        },
+        {
+          "base_rate": 0.202,
+          "confidence": 0.95,
+          "family": "deciding_set",
+          "lane": "honest",
+          "market": null,
+          "market_id": "a6488b97-70e9-4320-856b-ec9338608b09",
+          "market_weight": 0.0,
+          "model": 0.155,
+          "notes": [
+            "no usable market quote for this question"
+          ],
+          "probability": 0.1573,
+          "submission": 16
+        },
+        {
+          "base_rate": 0.653,
+          "confidence": 0.95,
+          "family": "lopsided_set",
+          "lane": "honest",
+          "market": null,
+          "market_id": "27dfe075-618d-428f-9d73-f412a34778a0",
+          "market_weight": 0.0,
+          "model": 0.7055,
+          "notes": [
+            "no usable market quote for this question"
+          ],
+          "probability": 0.7029,
+          "submission": 70
+        },
+        {
+          "base_rate": 0.5,
+          "confidence": 0.85,
+          "family": "match_winner",
+          "lane": "honest",
+          "market": 0.7197,
+          "market_id": "f861a7bf-f018-4794-aaeb-111a6bb71ebe",
+          "market_weight": 0.95,
+          "model": 0.937,
+          "notes": [
+            "simulated win probability 0.937",
+            "market consensus 0.720, weight 0.95"
+          ],
+          "probability": 0.7015,
+          "submission": 70
+        },
+        {
+          "base_rate": 0.1326,
+          "confidence": 0.95,
+          "family": "tiebreak",
+          "lane": "honest",
+          "market": null,
+          "market_id": "33d60013-6523-4bf3-b2f4-e72f772567be",
+          "market_weight": 0.0,
+          "model": 0.1045,
+          "notes": [
+            "tiebreak iid correction x0.88 (ATP)",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.1059,
+          "submission": 11
+        }
+      ],
+      "rated_a": true,
+      "rated_b": true,
+      "round": "R128",
+      "tour": "ATP"
+    },
+    "f4b104d9-41cc-4246-9348-f04b8374ada3": {
+      "player_a": "Tomas Martin Etcheverry",
+      "player_b": "Mariano Navone",
+      "questions": [
+        {
+          "base_rate": 0.2113,
+          "confidence": 0.95,
+          "family": "match_duration",
+          "lane": "honest",
+          "market": null,
+          "market_id": "3b001f4a-e0e1-4891-9722-72e7644ebd97",
+          "market_weight": 0.0,
+          "model": 0.3611,
+          "notes": [
+            "total games: simulator 38.0, Pinnacle 39.5, used 38.9 at weight 0.60",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.3536,
+          "submission": 35
+        },
+        {
+          "base_rate": 0.46,
+          "confidence": 1.0,
+          "family": "aces_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "b3c56011-4554-49d8-b49a-f2c5ca107515",
+          "market_weight": 0.0,
+          "model": 0.6031,
+          "notes": [
+            "ace vulnerability: Mariano Navone 0.78, Tomas Martin Etcheverry 1.03",
+            "exposure 126 service points from 40.2 games",
+            "outcome coupling: P(win)=0.480, delta=+0.60"
+          ],
+          "probability": 0.6031,
+          "submission": 60
+        },
+        {
+          "base_rate": 0.421,
+          "confidence": 1.0,
+          "family": "double_faults_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "524fa57f-188f-437a-878a-10eb5995c15d",
+          "market_weight": 0.0,
+          "model": 0.2816,
+          "notes": [
+            "exposure 126 service points from 40.2 games"
+          ],
+          "probability": 0.2816,
+          "submission": 28
+        },
+        {
+          "base_rate": 0.5,
+          "confidence": 0.3,
+          "family": "unforced_errors",
+          "lane": "honest",
+          "market": null,
+          "market_id": "05d35c98-6464-4603-937d-71c4a4988ae9",
+          "market_weight": 0.0,
+          "model": 0.5,
+          "notes": [
+            "threshold family defers to the base rate by policy"
+          ],
+          "probability": 0.5,
+          "submission": 50
+        },
+        {
+          "base_rate": 0.5934,
+          "confidence": 0.36,
+          "family": "first_serve_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "8df7448e-546d-4170-9f1b-528ebed2138b",
+          "market_weight": 0.0,
+          "model": 0.4833,
+          "notes": [
+            "serve rate: expected 0.627 vs threshold 0.630, sd 0.069 (0.046 sampling + 0.051 form)"
+          ],
+          "probability": 0.5537,
+          "submission": 55
+        },
+        {
+          "base_rate": 0.485,
+          "confidence": 0.75,
+          "family": "winners_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "1bbe0b78-e369-4514-ab12-11bb80214d1b",
+          "market_weight": 0.0,
+          "model": 0.5447,
+          "notes": [
+            "exposure 126 service points from 40.2 games"
+          ],
+          "probability": 0.5298,
+          "submission": 53
+        },
+        {
+          "base_rate": 0.202,
+          "confidence": 0.95,
+          "family": "deciding_set",
+          "lane": "honest",
+          "market": null,
+          "market_id": "317667dc-45a9-41cd-87ca-e1c9262661df",
+          "market_weight": 0.0,
+          "model": 0.3458,
+          "notes": [
+            "no usable market quote for this question"
+          ],
+          "probability": 0.3386,
+          "submission": 34
+        },
+        {
+          "base_rate": 0.653,
+          "confidence": 0.95,
+          "family": "lopsided_set",
+          "lane": "honest",
+          "market": null,
+          "market_id": "9ee5a00d-ba75-4830-88ad-90f94fa4a815",
+          "market_weight": 0.0,
+          "model": 0.6733,
+          "notes": [
+            "no usable market quote for this question"
+          ],
+          "probability": 0.6722,
+          "submission": 67
+        },
+        {
+          "base_rate": 0.5,
+          "confidence": 0.85,
+          "family": "match_winner",
+          "lane": "honest",
+          "market": 0.4799,
+          "market_id": "88e06d0f-f4cb-49fc-beae-bd34e902267a",
+          "market_weight": 0.95,
+          "model": 0.653,
+          "notes": [
+            "simulated win probability 0.653",
+            "market consensus 0.480, weight 0.95"
+          ],
+          "probability": 0.4905,
+          "submission": 49
+        },
+        {
+          "base_rate": 0.487,
+          "confidence": 0.95,
+          "family": "tiebreak",
+          "lane": "honest",
+          "market": null,
+          "market_id": "fe62d358-f5b0-442e-b5fd-55b670dd689d",
+          "market_weight": 0.0,
+          "model": 0.4838,
+          "notes": [
+            "tiebreak iid correction x0.88 (ATP)",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.4839,
+          "submission": 48
+        }
+      ],
+      "rated_a": true,
+      "rated_b": true,
+      "round": "R128",
+      "tour": "ATP"
+    },
+    "f7ed285c-6381-4908-8182-841f049f8749": {
+      "player_a": "Dane Sweeny",
+      "player_b": "Lorenzo Musetti",
+      "questions": [
+        {
+          "base_rate": 0.6333,
+          "confidence": 0.95,
+          "family": "match_duration",
+          "lane": "honest",
+          "market": null,
+          "market_id": "acea4504-88da-4170-9cbd-dd2bd7ab3d9b",
+          "market_weight": 0.0,
+          "model": 0.5645,
+          "notes": [
+            "total games: simulator 35.3, Pinnacle 28.6, used 31.3 at weight 0.60",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.5679,
+          "submission": 57
+        },
+        {
+          "base_rate": 0.46,
+          "confidence": 1.0,
+          "family": "aces_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "d32d951c-36e0-4545-9a04-7a4175cde617",
+          "market_weight": 0.0,
+          "model": 0.8156,
+          "notes": [
+            "ace vulnerability: Dane Sweeny 1.00, Lorenzo Musetti 0.85",
+            "exposure 117 service points from 37.4 games",
+            "outcome coupling: P(win)=0.945, delta=+0.60"
+          ],
+          "probability": 0.8156,
+          "submission": 82
+        },
+        {
+          "base_rate": 0.421,
+          "confidence": 1.0,
+          "family": "double_faults_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "fa33bf47-12a8-44d5-9fd1-35372b150c22",
+          "market_weight": 0.0,
+          "model": 0.2711,
+          "notes": [
+            "exposure 117 service points from 37.4 games"
+          ],
+          "probability": 0.2711,
+          "submission": 27
+        },
+        {
+          "base_rate": 0.5,
+          "confidence": 0.85,
+          "family": "match_winner",
+          "lane": "honest",
+          "market": 0.9452,
+          "market_id": "86c6ce65-d9f2-4c92-a1df-f97d1fd2e204",
+          "market_weight": 0.95,
+          "model": 0.807,
+          "notes": [
+            "simulated win probability 0.807",
+            "market consensus 0.945, weight 0.95"
+          ],
+          "probability": 0.8752,
+          "submission": 88
+        },
+        {
+          "base_rate": 0.487,
+          "confidence": 0.95,
+          "family": "tiebreak",
+          "lane": "honest",
+          "market": null,
+          "market_id": "c79abcf2-1973-4e8e-a372-8d3f9c8293b0",
+          "market_weight": 0.0,
+          "model": 0.3665,
+          "notes": [
+            "tiebreak iid correction x0.88 (ATP)",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.3725,
+          "submission": 37
+        }
+      ],
+      "rated_a": true,
+      "rated_b": true,
+      "round": "R128",
+      "tour": "ATP"
+    },
+    "f99c6da6-ae00-41de-bc04-2c0589ce1b50": {
+      "player_a": "Qinwen Zheng",
+      "player_b": "Yulia Putintseva",
+      "questions": [
+        {
+          "base_rate": 0.3511,
+          "confidence": 0.95,
+          "family": "match_duration",
+          "lane": "honest",
+          "market": null,
+          "market_id": "4542a275-fe06-4c70-a9c3-675d9aadfb39",
+          "market_weight": 0.0,
+          "model": 0.5573,
+          "notes": [
+            "total games: simulator 22.5, Pinnacle 23.4, used 23.1 at weight 0.60",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.547,
+          "submission": 55
+        },
+        {
+          "base_rate": 0.427,
+          "confidence": 1.0,
+          "family": "aces_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "5347c7da-11dc-4df9-acc5-4a0ce6797f65",
+          "market_weight": 0.0,
+          "model": 0.0928,
+          "notes": [
+            "exposure 77 service points from 23.7 games"
+          ],
+          "probability": 0.0928,
+          "submission": 9
+        },
+        {
+          "base_rate": 0.433,
+          "confidence": 1.0,
+          "family": "double_faults_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "e051db28-c8ac-4420-a2f1-6131fd7d9909",
+          "market_weight": 0.0,
+          "model": 0.2187,
+          "notes": [
+            "exposure 77 service points from 23.7 games"
+          ],
+          "probability": 0.2187,
+          "submission": 22
+        },
+        {
+          "base_rate": 0.5,
+          "confidence": 0.85,
+          "family": "match_winner",
+          "lane": "honest",
+          "market": 0.3068,
+          "market_id": "dd790caf-6543-43a9-9288-1b611ac2a933",
+          "market_weight": 0.95,
+          "model": 0.356,
+          "notes": [
+            "simulated win probability 0.356",
+            "market consensus 0.307, weight 0.95"
+          ],
+          "probability": 0.3378,
+          "submission": 34
+        },
+        {
+          "base_rate": 0.225,
+          "confidence": 0.95,
+          "family": "tiebreak",
+          "lane": "honest",
+          "market": null,
+          "market_id": "42a6e78a-c964-44dc-b5de-d21d9f92e212",
+          "market_weight": 0.0,
+          "model": 0.295,
+          "notes": [
+            "no usable market quote for this question"
+          ],
+          "probability": 0.2915,
+          "submission": 29
+        }
+      ],
+      "rated_a": true,
+      "rated_b": true,
+      "round": "R128",
+      "tour": "WTA"
+    },
+    "fa3d9077-66b1-4121-8387-38b89acc09bc": {
+      "player_a": "Benjamin Bonzi",
+      "player_b": "Ignacio Buse",
+      "questions": [
+        {
+          "base_rate": 0.4141,
+          "confidence": 0.95,
+          "family": "match_duration",
+          "lane": "honest",
+          "market": null,
+          "market_id": "d411f218-0273-4e90-94a4-ad2677878ccd",
+          "market_weight": 0.0,
+          "model": 0.5423,
+          "notes": [
+            "total games: simulator 36.3, Pinnacle 39.5, used 38.3 at weight 0.60",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.5359,
+          "submission": 54
+        },
+        {
+          "base_rate": 0.46,
+          "confidence": 1.0,
+          "family": "aces_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "0cce5d6b-4054-45cb-8f00-d8da1b7543b1",
+          "market_weight": 0.0,
+          "model": 0.4386,
+          "notes": [
+            "ace vulnerability: Ignacio Buse 1.00, Benjamin Bonzi 1.16",
+            "exposure 120 service points from 38.6 games",
+            "outcome coupling: P(win)=0.457, delta=+0.60"
+          ],
+          "probability": 0.4386,
+          "submission": 44
+        },
+        {
+          "base_rate": 0.421,
+          "confidence": 1.0,
+          "family": "double_faults_comparison",
+          "lane": "honest",
+          "market": null,
+          "market_id": "a2be7db2-90d4-42b7-b2de-634287f3155e",
+          "market_weight": 0.0,
+          "model": 0.3344,
+          "notes": [
+            "exposure 120 service points from 38.6 games"
+          ],
+          "probability": 0.3344,
+          "submission": 33
+        },
+        {
+          "base_rate": 0.5,
+          "confidence": 0.85,
+          "family": "match_winner",
+          "lane": "honest",
+          "market": 0.457,
+          "market_id": "f0754d35-cb8b-4d46-8c19-5b1e300e0308",
+          "market_weight": 0.95,
+          "model": 0.8005,
+          "notes": [
+            "simulated win probability 0.800",
+            "market consensus 0.457, weight 0.95"
+          ],
+          "probability": 0.48,
+          "submission": 48
+        },
+        {
+          "base_rate": 0.1326,
+          "confidence": 0.95,
+          "family": "tiebreak",
+          "lane": "honest",
+          "market": null,
+          "market_id": "aa44ec99-0fca-45d9-b7d3-6a4436c29ad2",
+          "market_weight": 0.0,
+          "model": 0.1252,
+          "notes": [
+            "tiebreak iid correction x0.88 (ATP)",
+            "no usable market quote for this question"
+          ],
+          "probability": 0.1256,
+          "submission": 13
+        }
+      ],
+      "rated_a": true,
+      "rated_b": true,
+      "round": "R128",
+      "tour": "ATP"
+    }
+  },
+  "n_matches": 38,
+  "n_questions": 255,
+  "roster_misses": [
+    [
+      "Daniel Merida Aguilar",
+      1
+    ],
+    [
+      "D. Merida Aguilar",
+      1
+    ]
+  ],
+  "unparsed": []
+}

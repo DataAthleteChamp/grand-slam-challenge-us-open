@@ -13,18 +13,18 @@
       "market": null,
       "market_id": "62518bf6-1659-49e4-b505-7fc936ecffde",
       "market_weight": 0.0,
-      "model": 0.5515381881351211,
+      "model": 0.5397345962132442,
       "notes": [
-        "total games: simulator 21.3, Pinnacle 21.4, used 21.4 at weight 0.60",
+        "total games: simulator 21.1, Pinnacle 21.4, used 21.3 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.865962+00:00",
-      "probability": 0.5515381881351211,
+      "predicted_at": "2026-09-03T09:35:30.861542+00:00",
+      "probability": 0.5397345962132442,
       "question": "Will the match last longer than 95 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 56
+      "submission": 55
     },
     {
       "base_rate": 0.427,
@@ -37,13 +37,13 @@
       "market": null,
       "market_id": "c710d972-0ed7-4ea8-9a96-1b0b6bf16c43",
       "market_weight": 0.0,
-      "model": 0.3216435277933658,
+      "model": 0.3242111648395381,
       "notes": [
-        "exposure 69 service points from 21.3 games"
+        "exposure 73 service points from 22.4 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.865962+00:00",
-      "probability": 0.37247802563306676,
+      "predicted_at": "2026-09-03T09:35:30.861542+00:00",
+      "probability": 0.3738067778044609,
       "question": "Will L. Jeanjean record more aces than A. Potapova?",
       "rbp": null,
       "settled_at": "",
@@ -60,13 +60,13 @@
       "market": null,
       "market_id": "46638574-b4e4-424a-8235-7aa5976bb485",
       "market_weight": 0.0,
-      "model": 0.35655168485338046,
+      "model": 0.357543962805958,
       "notes": [
-        "exposure 69 service points from 21.3 games"
+        "exposure 73 service points from 22.4 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.865962+00:00",
-      "probability": 0.3934379969116244,
+      "predicted_at": "2026-09-03T09:35:30.861542+00:00",
+      "probability": 0.3939515007520833,
       "question": "Will L. Jeanjean record more double faults than A. Potapova?",
       "rbp": null,
       "settled_at": "",
@@ -80,21 +80,21 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.2351351351318049,
+      "market": 0.23772914406601148,
       "market_id": "fbe4fcce-957d-4d93-a66f-44164014aaee",
       "market_weight": 0.8075,
-      "model": 0.354,
+      "model": 0.28375,
       "notes": [
-        "simulated win probability 0.354",
-        "market consensus 0.235, weight 0.81"
+        "simulated win probability 0.284",
+        "market consensus 0.238, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.865962+00:00",
-      "probability": 0.2612288395358109,
+      "predicted_at": "2026-09-03T09:35:30.861542+00:00",
+      "probability": 0.2518860999982111,
       "question": "Will L. Jeanjean win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 21
+      "submission": 20
     },
     {
       "base_rate": 0.225,
@@ -107,18 +107,18 @@
       "market": null,
       "market_id": "2560c044-7f72-4fb4-9ab7-d1a8f9b18e08",
       "market_weight": 0.0,
-      "model": 0.184,
+      "model": 0.21425,
       "notes": [
         "no usable market quote for this question",
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.865962+00:00",
-      "probability": 0.144,
+      "predicted_at": "2026-09-03T09:35:30.861542+00:00",
+      "probability": 0.17425,
       "question": "Will the match feature at least 1 tiebreak?",
       "rbp": null,
       "settled_at": "",
-      "submission": 10
+      "submission": 13
     }
   ],
   "match_id": "ad808f16-3277-4449-a196-4e585926ea6a",

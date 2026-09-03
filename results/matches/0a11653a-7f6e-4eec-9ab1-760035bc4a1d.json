@@ -1,5 +1,5 @@
 {
-  "closing_time": "2026-09-04T03:00:00.000Z",
+  "closing_time": "2026-09-04T11:00:00.000Z",
   "draw": "mens",
   "entries": [
     {
@@ -19,7 +19,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.856393+00:00",
+      "predicted_at": "2026-09-03T15:32:12.439592+00:00",
       "probability": 0.3618303704424915,
       "question": "Will the match last longer than 170 minutes?",
       "rbp": null,
@@ -37,15 +37,15 @@
       "market": null,
       "market_id": "d0508e5a-7168-4465-92f4-85c30f6a933c",
       "market_weight": 0.0,
-      "model": 0.8721773857041208,
+      "model": 0.8711432686848979,
       "notes": [
         "ace vulnerability: Learner Tien 1.04, Gael Monfils 0.59",
         "exposure 123 service points from 39.3 games",
-        "outcome coupling: P(win)=0.194, delta=+0.60"
+        "outcome coupling: P(win)=0.183, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.856393+00:00",
-      "probability": 0.8721773857041208,
+      "predicted_at": "2026-09-03T15:32:12.439592+00:00",
+      "probability": 0.8711432686848979,
       "question": "Will G. Monfils record more aces than L. Tien?",
       "rbp": null,
       "settled_at": "",
@@ -67,7 +67,7 @@
         "exposure 123 service points from 39.3 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.856393+00:00",
+      "predicted_at": "2026-09-03T15:32:12.439592+00:00",
       "probability": 0.5624575531241961,
       "question": "Will G. Monfils record more double faults than L. Tien?",
       "rbp": null,
@@ -82,21 +82,21 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.19391824527136164,
+      "market": 0.1833333333945075,
       "market_id": "521c29a4-8ed3-40dd-bfcc-4877a6c871ea",
       "market_weight": 0.8075,
       "model": 0.55775,
       "notes": [
         "simulated win probability 0.558",
-        "market consensus 0.194, weight 0.81"
+        "market consensus 0.183, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.856393+00:00",
-      "probability": 0.2543067830941125,
+      "predicted_at": "2026-09-03T15:32:12.439592+00:00",
+      "probability": 0.24424942764336818,
       "question": "Will G. Monfils win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 21
+      "submission": 20
     },
     {
       "base_rate": 0.13263821138211385,
@@ -116,7 +116,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.856393+00:00",
+      "predicted_at": "2026-09-03T15:32:12.439592+00:00",
       "probability": 0.05372,
       "question": "Will the match feature at least 2 tiebreaks?",
       "rbp": null,
@@ -127,7 +127,7 @@
   "match_id": "0a11653a-7f6e-4eec-9ab1-760035bc4a1d",
   "match_name": "G. Monfils vs L. Tien",
   "multiplier": 1,
-  "opening_time": "2026-09-03T15:00:00.000Z",
+  "opening_time": "2026-09-03T22:30:00.000Z",
   "player_a": "Gael Monfils",
   "player_b": "Learner Tien",
   "round_code": "R128"

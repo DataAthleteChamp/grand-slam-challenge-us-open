@@ -1,5 +1,5 @@
 {
-  "closing_time": "2026-09-04T03:00:00.000Z",
+  "closing_time": "2026-09-04T12:10:00.000Z",
   "draw": "mens",
   "entries": [
     {
@@ -13,14 +13,14 @@
       "market": null,
       "market_id": "4c90111f-0d7f-4fc6-b0cd-e9a4ae778dda",
       "market_weight": 0.0,
-      "model": 0.6272924530282606,
+      "model": 0.627812164866045,
       "notes": [
         "total games: simulator 38.0, Pinnacle 37.5, used 37.7 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.854519+00:00",
-      "probability": 0.6272924530282606,
+      "predicted_at": "2026-09-03T15:32:12.440559+00:00",
+      "probability": 0.627812164866045,
       "question": "Will the match last longer than 150 minutes?",
       "rbp": null,
       "settled_at": "",
@@ -37,19 +37,19 @@
       "market": null,
       "market_id": "ee511096-5f73-44ae-a940-13c78e586036",
       "market_weight": 0.0,
-      "model": 0.3932856610391548,
+      "model": 0.39077458764153805,
       "notes": [
         "ace vulnerability: Alexander Zverev 0.85, Quentin Halys 0.97",
         "exposure 127 service points from 40.5 games",
-        "outcome coupling: P(win)=0.169, delta=+0.60"
+        "outcome coupling: P(win)=0.160, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.854519+00:00",
-      "probability": 0.3932856610391548,
+      "predicted_at": "2026-09-03T15:32:12.440559+00:00",
+      "probability": 0.39077458764153805,
       "question": "Will Q. Halys record more aces than A. Zverev?",
       "rbp": null,
       "settled_at": "",
-      "submission": 37
+      "submission": 36
     },
     {
       "base_rate": 0.421,
@@ -67,7 +67,7 @@
         "exposure 127 service points from 40.5 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.854519+00:00",
+      "predicted_at": "2026-09-03T15:32:12.440559+00:00",
       "probability": 0.6425552205857508,
       "question": "Will Q. Halys record more double faults than A. Zverev?",
       "rbp": null,
@@ -82,21 +82,21 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.16896551718510303,
+      "market": 0.16036887082974274,
       "market_id": "2efe2846-50ad-40bf-8d96-7ba7c29a3fb8",
       "market_weight": 0.8075,
       "model": 0.1835,
       "notes": [
         "simulated win probability 0.183",
-        "market consensus 0.169, weight 0.81"
+        "market consensus 0.160, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.854519+00:00",
-      "probability": 0.17907724813569573,
+      "predicted_at": "2026-09-03T15:32:12.440559+00:00",
+      "probability": 0.17217620934852804,
       "question": "Will Q. Halys win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 13
+      "submission": 12
     },
     {
       "base_rate": 0.13263821138211385,
@@ -116,7 +116,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.854519+00:00",
+      "predicted_at": "2026-09-03T15:32:12.440559+00:00",
       "probability": 0.22707999999999998,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,
@@ -127,7 +127,7 @@
   "match_id": "94add2cb-9a47-4dfe-b80f-62b70b2f95fc",
   "match_name": "A. Zverev vs Q. Halys",
   "multiplier": 1,
-  "opening_time": "2026-09-03T15:00:00.000Z",
+  "opening_time": "2026-09-03T22:30:00.000Z",
   "player_a": "Alexander Zverev",
   "player_b": "Quentin Halys",
   "round_code": "R128"

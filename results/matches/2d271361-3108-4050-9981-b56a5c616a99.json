@@ -13,17 +13,18 @@
       "market": null,
       "market_id": "134a8cd4-10fa-44d4-bdfe-bc825dc95684",
       "market_weight": 0.0,
-      "model": 0.36175427066686794,
+      "model": 0.4248671040298472,
       "notes": [
+        "total games: simulator 36.9, Pinnacle 39.5, used 38.5 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.869216+00:00",
-      "probability": 0.36175427066686794,
+      "predicted_at": "2026-09-03T15:32:12.434574+00:00",
+      "probability": 0.4248671040298472,
       "question": "Will the match last longer than 180 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 33
+      "submission": 41
     },
     {
       "base_rate": 0.46,
@@ -36,15 +37,15 @@
       "market": null,
       "market_id": "b16d35b6-b4a2-45ae-abb7-450864c67c17",
       "market_weight": 0.0,
-      "model": 0.5788628271044374,
+      "model": 0.578171536871083,
       "notes": [
         "ace vulnerability: Zachary Svajda 1.08, Arthur Gea 0.87",
         "exposure 122 service points from 39.1 games",
-        "outcome coupling: P(win)=0.472, delta=+0.60"
+        "outcome coupling: P(win)=0.470, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.869216+00:00",
-      "probability": 0.5788628271044374,
+      "predicted_at": "2026-09-03T15:32:12.434574+00:00",
+      "probability": 0.578171536871083,
       "question": "Will A. Gea record more aces than Z. Svajda?",
       "rbp": null,
       "settled_at": "",
@@ -66,7 +67,7 @@
         "exposure 122 service points from 39.1 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.869216+00:00",
+      "predicted_at": "2026-09-03T15:32:12.434574+00:00",
       "probability": 0.5851932172078512,
       "question": "Will A. Gea record more double faults than Z. Svajda?",
       "rbp": null,
@@ -81,17 +82,17 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.4721927654065169,
+      "market": 0.4697469746935518,
       "market_id": "1d566525-244f-456d-a5d4-6a5af4bbfd09",
       "market_weight": 0.8075,
       "model": 0.43725,
       "notes": [
         "simulated win probability 0.437",
-        "market consensus 0.472, weight 0.81"
+        "market consensus 0.470, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.869216+00:00",
-      "probability": 0.4662120178285747,
+      "predicted_at": "2026-09-03T15:32:12.434574+00:00",
+      "probability": 0.46428474072664755,
       "question": "Will A. Gea win?",
       "rbp": null,
       "settled_at": "",
@@ -115,7 +116,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.869216+00:00",
+      "predicted_at": "2026-09-03T15:32:12.434574+00:00",
       "probability": 0.04932000000000001,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,
@@ -126,7 +127,7 @@
   "match_id": "2d271361-3108-4050-9981-b56a5c616a99",
   "match_name": "Z. Svajda vs A. Gea",
   "multiplier": 1,
-  "opening_time": "2026-09-03T20:00:00.000Z",
+  "opening_time": "2026-09-03T19:30:00.000Z",
   "player_a": "Zachary Svajda",
   "player_b": "Arthur Gea",
   "round_code": "R128"

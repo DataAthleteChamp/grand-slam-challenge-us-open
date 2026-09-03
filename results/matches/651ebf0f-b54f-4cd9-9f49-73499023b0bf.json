@@ -13,18 +13,18 @@
       "market": null,
       "market_id": "1e45f6b8-10cb-4c0e-a936-f4dc3b4ba2dc",
       "market_weight": 0.0,
-      "model": 0.6456103928447577,
+      "model": 0.6311538287794539,
       "notes": [
-        "total games: simulator 21.1, Pinnacle 21.9, used 21.6 at weight 0.60",
+        "total games: simulator 20.8, Pinnacle 21.9, used 21.5 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.863522+00:00",
-      "probability": 0.6456103928447577,
+      "predicted_at": "2026-09-03T09:35:30.857985+00:00",
+      "probability": 0.6311538287794539,
       "question": "Will the match last longer than 90 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 68
+      "submission": 66
     },
     {
       "base_rate": 0.427,
@@ -37,13 +37,13 @@
       "market": null,
       "market_id": "9351d2af-ccd7-4521-8033-ef18bd743fec",
       "market_weight": 0.0,
-      "model": 0.677440726890872,
+      "model": 0.6824168607112406,
       "notes": [
-        "exposure 68 service points from 21.2 games"
+        "exposure 71 service points from 22.0 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.863522+00:00",
-      "probability": 0.5566030761660262,
+      "predicted_at": "2026-09-03T09:35:30.857985+00:00",
+      "probability": 0.559178225418067,
       "question": "Will E. Mertens record more aces than M. Timofeeva?",
       "rbp": null,
       "settled_at": "",
@@ -60,13 +60,13 @@
       "market": null,
       "market_id": "7aaaa37a-3ceb-44dd-a62e-909621722c5e",
       "market_weight": 0.0,
-      "model": 0.6492833156994068,
+      "model": 0.6537050998167391,
       "notes": [
-        "exposure 68 service points from 21.2 games"
+        "exposure 71 service points from 22.0 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.863522+00:00",
-      "probability": 0.544926615874443,
+      "predicted_at": "2026-09-03T09:35:30.857985+00:00",
+      "probability": 0.5472148891551625,
       "question": "Will E. Mertens record more double faults than M. Timofeeva?",
       "rbp": null,
       "settled_at": "",
@@ -80,21 +80,21 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.7370509607557129,
+      "market": 0.7375565610662628,
       "market_id": "3a507874-412a-426b-b922-66330d055198",
       "market_weight": 0.8075,
-      "model": 0.672,
+      "model": 0.759,
       "notes": [
-        "simulated win probability 0.672",
-        "market consensus 0.737, weight 0.81"
+        "simulated win probability 0.759",
+        "market consensus 0.738, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.863522+00:00",
-      "probability": 0.7201239124583798,
+      "predicted_at": "2026-09-03T09:35:30.857985+00:00",
+      "probability": 0.73633839971074,
       "question": "Will E. Mertens win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 77
+      "submission": 78
     },
     {
       "base_rate": 0.225,
@@ -107,18 +107,18 @@
       "market": null,
       "market_id": "2d341adc-a674-4f84-8178-68723b7bc92f",
       "market_weight": 0.0,
-      "model": 0.16025,
+      "model": 0.2015,
       "notes": [
         "no usable market quote for this question",
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.863522+00:00",
-      "probability": 0.12025,
+      "predicted_at": "2026-09-03T09:35:30.857985+00:00",
+      "probability": 0.1615,
       "question": "Will the match feature at least 1 tiebreak?",
       "rbp": null,
       "settled_at": "",
-      "submission": 8
+      "submission": 11
     }
   ],
   "match_id": "651ebf0f-b54f-4cd9-9f49-73499023b0bf",

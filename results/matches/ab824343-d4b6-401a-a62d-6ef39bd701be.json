@@ -13,17 +13,18 @@
       "market": null,
       "market_id": "a69dcdfb-e96a-423f-893e-6a4f78e3a0e0",
       "market_weight": 0.0,
-      "model": 0.49234313130552876,
+      "model": 0.5217516472703067,
       "notes": [
+        "total games: simulator 37.4, Pinnacle 38.5, used 38.1 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.868655+00:00",
-      "probability": 0.49234313130552876,
+      "predicted_at": "2026-09-03T15:32:12.436276+00:00",
+      "probability": 0.5217516472703067,
       "question": "Will the match last longer than 170 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 49
+      "submission": 53
     },
     {
       "base_rate": 0.46,
@@ -36,15 +37,15 @@
       "market": null,
       "market_id": "cb4c396c-e8f1-40af-902e-f0ceb6127452",
       "market_weight": 0.0,
-      "model": 0.7850811305293819,
+      "model": 0.7798031817793205,
       "notes": [
         "ace vulnerability: Jesper de Jong 1.17, Zizou Bergs 0.78",
         "exposure 124 service points from 39.7 games",
-        "outcome coupling: P(win)=0.712, delta=+0.60"
+        "outcome coupling: P(win)=0.688, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.868655+00:00",
-      "probability": 0.7850811305293819,
+      "predicted_at": "2026-09-03T15:32:12.436276+00:00",
+      "probability": 0.7798031817793205,
       "question": "Will Z. Bergs record more aces than J. de Jong?",
       "rbp": null,
       "settled_at": "",
@@ -66,7 +67,7 @@
         "exposure 124 service points from 39.7 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.868655+00:00",
+      "predicted_at": "2026-09-03T15:32:12.436276+00:00",
       "probability": 0.39058611928186704,
       "question": "Will Z. Bergs record more double faults than J. de Jong?",
       "rbp": null,
@@ -81,21 +82,21 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.7115042104903235,
+      "market": 0.687651331722603,
       "market_id": "b30d0f75-3abf-4a1e-ab80-30c1691255ae",
       "market_weight": 0.8075,
       "model": 0.5695,
       "notes": [
         "simulated win probability 0.570",
-        "market consensus 0.712, weight 0.81"
+        "market consensus 0.688, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.868655+00:00",
-      "probability": 0.6820907620194034,
+      "predicted_at": "2026-09-03T15:32:12.436276+00:00",
+      "probability": 0.6624744057352998,
       "question": "Will Z. Bergs win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 72
+      "submission": 70
     },
     {
       "base_rate": 0.487,
@@ -115,7 +116,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.868655+00:00",
+      "predicted_at": "2026-09-03T15:32:12.436276+00:00",
       "probability": 0.40396,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
@@ -126,7 +127,7 @@
   "match_id": "ab824343-d4b6-401a-a62d-6ef39bd701be",
   "match_name": "Z. Bergs vs J. De Jong",
   "multiplier": 1,
-  "opening_time": "2026-09-03T20:00:00.000Z",
+  "opening_time": "2026-09-03T19:30:00.000Z",
   "player_a": "Zizou Bergs",
   "player_b": "Jesper de Jong",
   "round_code": "R128"

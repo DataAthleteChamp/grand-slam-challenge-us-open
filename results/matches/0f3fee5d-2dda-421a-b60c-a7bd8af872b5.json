@@ -1,5 +1,5 @@
 {
-  "closing_time": "2026-09-04T03:00:00.000Z",
+  "closing_time": "2026-09-04T02:30:00.000Z",
   "draw": "womens",
   "entries": [
     {
@@ -13,18 +13,18 @@
       "market": null,
       "market_id": "b50ec5ec-2166-4101-93e8-e37f787918e1",
       "market_weight": 0.0,
-      "model": 0.5149065526773126,
+      "model": 0.49932925531438926,
       "notes": [
-        "total games: simulator 21.2, Pinnacle 24.0, used 22.9 at weight 0.60",
+        "total games: simulator 20.9, Pinnacle 24.0, used 22.7 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.856985+00:00",
-      "probability": 0.5149065526773126,
+      "predicted_at": "2026-09-03T15:32:12.431380+00:00",
+      "probability": 0.49932925531438926,
       "question": "Will the match last longer than 110 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 52
+      "submission": 50
     },
     {
       "base_rate": 0.427,
@@ -37,13 +37,13 @@
       "market": null,
       "market_id": "3903e313-1cab-4943-9066-79081746eebd",
       "market_weight": 0.0,
-      "model": 0.5288680288439871,
+      "model": 0.5325214177900344,
       "notes": [
-        "exposure 69 service points from 21.2 games"
+        "exposure 72 service points from 22.1 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.856985+00:00",
-      "probability": 0.5288680288439871,
+      "predicted_at": "2026-09-03T15:32:12.431380+00:00",
+      "probability": 0.5325214177900344,
       "question": "Will M. Sakkari record more aces than Y. Starodubtseva?",
       "rbp": null,
       "settled_at": "",
@@ -60,17 +60,17 @@
       "market": null,
       "market_id": "bbcb901f-c544-432b-a296-9889d7092a56",
       "market_weight": 0.0,
-      "model": 0.5193342319886044,
+      "model": 0.5227132435892128,
       "notes": [
-        "exposure 69 service points from 21.2 games"
+        "exposure 72 service points from 22.1 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.856985+00:00",
-      "probability": 0.5193342319886044,
+      "predicted_at": "2026-09-03T15:32:12.431380+00:00",
+      "probability": 0.5227132435892128,
       "question": "Will M. Sakkari record more double faults than Y. Starodubtseva?",
       "rbp": null,
       "settled_at": "",
-      "submission": 52
+      "submission": 53
     },
     {
       "base_rate": 0.5,
@@ -80,21 +80,21 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.595041764831823,
+      "market": 0.6350473964619264,
       "market_id": "d0803aae-adb8-41ae-95ce-929e02f3f7d7",
       "market_weight": 0.8075,
-      "model": 0.66525,
+      "model": 0.7525,
       "notes": [
-        "simulated win probability 0.665",
-        "market consensus 0.595, weight 0.81"
+        "simulated win probability 0.752",
+        "market consensus 0.635, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.856985+00:00",
-      "probability": 0.6065146146682876,
+      "predicted_at": "2026-09-03T15:32:12.431380+00:00",
+      "probability": 0.6559752366150369,
       "question": "Will M. Sakkari win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 63
+      "submission": 69
     },
     {
       "base_rate": 0.225,
@@ -107,24 +107,24 @@
       "market": null,
       "market_id": "a8ae3566-8d31-4f07-b95b-00a2e637efe7",
       "market_weight": 0.0,
-      "model": 0.1795,
+      "model": 0.21575,
       "notes": [
         "no usable market quote for this question",
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.856985+00:00",
-      "probability": 0.13949999999999999,
+      "predicted_at": "2026-09-03T15:32:12.431380+00:00",
+      "probability": 0.17575,
       "question": "Will the match feature at least 1 tiebreak?",
       "rbp": null,
       "settled_at": "",
-      "submission": 9
+      "submission": 13
     }
   ],
   "match_id": "0f3fee5d-2dda-421a-b60c-a7bd8af872b5",
   "match_name": "M. Sakkari vs Y. Starodubtseva",
   "multiplier": 1,
-  "opening_time": "2026-09-03T15:00:00.000Z",
+  "opening_time": "2026-09-03T14:30:00.000Z",
   "player_a": "Maria Sakkari",
   "player_b": "Yuliia Starodubtseva",
   "round_code": "R128"

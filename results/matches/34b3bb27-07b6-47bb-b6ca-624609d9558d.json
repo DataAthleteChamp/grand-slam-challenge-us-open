@@ -13,17 +13,18 @@
       "market": null,
       "market_id": "6ccef53d-4a6a-4518-b539-6d437af7b2f8",
       "market_weight": 0.0,
-      "model": 0.37294105512933706,
+      "model": 0.47890560686345873,
       "notes": [
+        "total games: simulator 21.8, Pinnacle 24.0, used 23.1 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.871645+00:00",
-      "probability": 0.37294105512933706,
+      "predicted_at": "2026-09-03T15:32:12.451581+00:00",
+      "probability": 0.47890560686345873,
       "question": "Will the match last longer than 105 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 34
+      "submission": 47
     },
     {
       "base_rate": 0.427,
@@ -36,17 +37,17 @@
       "market": null,
       "market_id": "966e68e3-7542-4cfa-af14-7067e3ec8757",
       "market_weight": 0.0,
-      "model": 0.6613735886897467,
+      "model": 0.6702105606041056,
       "notes": [
-        "exposure 70 service points from 21.6 games"
+        "exposure 75 service points from 23.0 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.871645+00:00",
-      "probability": 0.6613735886897467,
+      "predicted_at": "2026-09-03T15:32:12.451581+00:00",
+      "probability": 0.6702105606041056,
       "question": "Will S. Cirstea record more aces than J. Paolini?",
       "rbp": null,
       "settled_at": "",
-      "submission": 70
+      "submission": 71
     },
     {
       "base_rate": 0.433,
@@ -59,13 +60,13 @@
       "market": null,
       "market_id": "51ac22bb-b7bf-4dd0-8aba-c2ae6b1907a3",
       "market_weight": 0.0,
-      "model": 0.49768115688379577,
+      "model": 0.5029923487912602,
       "notes": [
-        "exposure 70 service points from 21.6 games"
+        "exposure 75 service points from 23.0 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.871645+00:00",
-      "probability": 0.49768115688379577,
+      "predicted_at": "2026-09-03T15:32:12.451581+00:00",
+      "probability": 0.5029923487912602,
       "question": "Will S. Cirstea record more double faults than J. Paolini?",
       "rbp": null,
       "settled_at": "",
@@ -87,7 +88,7 @@
         "threshold family defers to the base rate by policy"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.871645+00:00",
+      "predicted_at": "2026-09-03T15:32:12.451581+00:00",
       "probability": 0.5,
       "question": "Will S. Cirstea commit more than 34 unforced errors?",
       "rbp": null,
@@ -110,7 +111,7 @@
         "serve rate: expected 0.560 vs threshold 0.650, sd 0.084 (0.062 sampling + 0.058 form)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.871645+00:00",
+      "predicted_at": "2026-09-03T15:32:12.451581+00:00",
       "probability": 0.15553065640564348,
       "question": "Will J. Paolini win more than 65% of points played on their first serve?",
       "rbp": null,
@@ -128,17 +129,17 @@
       "market": null,
       "market_id": "642131e4-9107-4e71-aece-c4dfd675f0ab",
       "market_weight": 0.0,
-      "model": 0.5147589100674863,
+      "model": 0.5183112236395728,
       "notes": [
-        "exposure 70 service points from 21.6 games"
+        "exposure 75 service points from 23.0 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.871645+00:00",
-      "probability": 0.5105295599332069,
+      "predicted_at": "2026-09-03T15:32:12.451581+00:00",
+      "probability": 0.5135934303891315,
       "question": "Will S. Cirstea hit more winners than J. Paolini?",
       "rbp": null,
       "settled_at": "",
-      "submission": 51
+      "submission": 52
     },
     {
       "base_rate": 0.337,
@@ -151,41 +152,40 @@
       "market": null,
       "market_id": "de7d00bc-433c-4370-987e-57ffbd975da9",
       "market_weight": 0.0,
-      "model": 0.49975,
+      "model": 0.49425,
       "notes": [
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.871645+00:00",
-      "probability": 0.49975,
+      "predicted_at": "2026-09-03T15:32:12.451581+00:00",
+      "probability": 0.49425,
       "question": "Will the match require a deciding set?",
       "rbp": null,
       "settled_at": "",
-      "submission": 50
+      "submission": 49
     },
     {
-      "base_rate": 0.5,
+      "base_rate": 0.641,
       "brier": null,
-      "confidence": 0.3,
+      "confidence": 0.95,
       "crowd": null,
       "crowd_brier": null,
-      "family": "other",
+      "family": "lopsided_set",
       "lane": "scenario",
-      "market": 0.0,
+      "market": null,
       "market_id": "3bd020f5-151d-4b06-bade-9cb1db7335a8",
       "market_weight": 0.0,
-      "model": null,
+      "model": 0.70225,
       "notes": [
-        "unclassified \u2014 will be priced from the base rate",
-        "question not understood; answering from the base rate"
+        "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.871645+00:00",
-      "probability": 0.5,
+      "predicted_at": "2026-09-03T15:32:12.451581+00:00",
+      "probability": 0.70225,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
       "settled_at": "",
-      "submission": 50
+      "submission": 75
     },
     {
       "base_rate": 0.5,
@@ -195,21 +195,21 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.6074323387801505,
+      "market": 0.6398507088850318,
       "market_id": "ec4405b6-952d-4bf4-9d37-cd0f631bd4ee",
       "market_weight": 0.8075,
-      "model": 0.55275,
+      "model": 0.59325,
       "notes": [
-        "simulated win probability 0.553",
-        "market consensus 0.607, weight 0.81"
+        "simulated win probability 0.593",
+        "market consensus 0.640, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.871645+00:00",
-      "probability": 0.5948852655795305,
+      "predicted_at": "2026-09-03T15:32:12.451581+00:00",
+      "probability": 0.6281041512904724,
       "question": "Will S. Cirstea win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 62
+      "submission": 66
     },
     {
       "base_rate": 0.225,
@@ -222,18 +222,18 @@
       "market": null,
       "market_id": "aaaa3877-924f-4966-ad5d-f0dda186bb65",
       "market_weight": 0.0,
-      "model": 0.1865,
+      "model": 0.24,
       "notes": [
         "no usable market quote for this question",
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.871645+00:00",
-      "probability": 0.1465,
+      "predicted_at": "2026-09-03T15:32:12.451581+00:00",
+      "probability": 0.19999999999999998,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 10
+      "submission": 15
     }
   ],
   "match_id": "34b3bb27-07b6-47bb-b6ca-624609d9558d",

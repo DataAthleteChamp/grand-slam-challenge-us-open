@@ -13,15 +13,18 @@
       "market": null,
       "market_id": "9ace04fa-eb24-47e3-af24-15a413059ee0",
       "market_weight": 0.0,
-      "model": 0.509829734988926,
-      "notes": [],
+      "model": 0.43565068479084845,
+      "notes": [
+        "total games: simulator 21.6, Pinnacle 19.9, used 20.6 at weight 0.60",
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.871129+00:00",
-      "probability": 0.509829734988926,
+      "predicted_at": "2026-09-03T15:32:12.439079+00:00",
+      "probability": 0.43565068479084845,
       "question": "Will the match last longer than 95 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 51
+      "submission": 42
     },
     {
       "base_rate": 0.427,
@@ -34,13 +37,13 @@
       "market": null,
       "market_id": "43d918eb-89be-4aa4-b88f-3a871eec91e1",
       "market_weight": 0.0,
-      "model": 0.4666266633573361,
+      "model": 0.4695785828790772,
       "notes": [
-        "exposure 70 service points from 21.6 games"
+        "exposure 74 service points from 22.9 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.871129+00:00",
-      "probability": 0.4666266633573361,
+      "predicted_at": "2026-09-03T15:32:12.439079+00:00",
+      "probability": 0.4695785828790772,
       "question": "Will P. Badosa record more aces than C. Gauff?",
       "rbp": null,
       "settled_at": "",
@@ -57,13 +60,13 @@
       "market": null,
       "market_id": "4b9a0a44-23f7-47d8-83c9-6ae4abb7e489",
       "market_weight": 0.0,
-      "model": 0.44417447798837245,
+      "model": 0.44639231046066086,
       "notes": [
-        "exposure 70 service points from 21.6 games"
+        "exposure 74 service points from 22.9 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.871129+00:00",
-      "probability": 0.44417447798837245,
+      "predicted_at": "2026-09-03T15:32:12.439079+00:00",
+      "probability": 0.44639231046066086,
       "question": "Will P. Badosa record more double faults than C. Gauff?",
       "rbp": null,
       "settled_at": "",
@@ -72,26 +75,26 @@
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.7,
+      "confidence": 0.85,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": null,
+      "market": 0.13357142850889214,
       "market_id": "25fd2e42-a9cc-4c17-a9bb-69fbae612ce2",
-      "market_weight": 0.0,
-      "model": 0.4065,
+      "market_weight": 0.8075,
+      "model": 0.37475,
       "notes": [
-        "simulated win probability 0.406",
-        "no market quote; this is the family that most needs one"
+        "simulated win probability 0.375",
+        "market consensus 0.134, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.871129+00:00",
-      "probability": 0.42473249999999996,
+      "predicted_at": "2026-09-03T15:32:12.439079+00:00",
+      "probability": 0.17431346813488957,
       "question": "Will P. Badosa win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 41
+      "submission": 13
     },
     {
       "base_rate": 0.225,
@@ -104,23 +107,24 @@
       "market": null,
       "market_id": "69cf3b3d-5310-4f32-9e88-44171d77e36e",
       "market_weight": 0.0,
-      "model": 0.18775,
+      "model": 0.2355,
       "notes": [
+        "no usable market quote for this question",
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.871129+00:00",
-      "probability": 0.14775,
+      "predicted_at": "2026-09-03T15:32:12.439079+00:00",
+      "probability": 0.19549999999999998,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 10
+      "submission": 15
     }
   ],
   "match_id": "a4c21be1-a8ea-4d8a-80d0-3cc7afcc0dfa",
   "match_name": "P. Badosa vs C. Gauff",
   "multiplier": 1,
-  "opening_time": "2026-09-03T23:00:00.000Z",
+  "opening_time": "2026-09-03T22:30:00.000Z",
   "player_a": "Paula Badosa",
   "player_b": "Coco Gauff",
   "round_code": "R128"

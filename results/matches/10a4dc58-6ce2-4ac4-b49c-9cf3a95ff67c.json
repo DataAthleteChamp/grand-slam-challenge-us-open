@@ -13,15 +13,17 @@
       "market": null,
       "market_id": "0dbf17e4-cb84-4775-a7b1-198503940218",
       "market_weight": 0.0,
-      "model": 0.6349233817794605,
-      "notes": [],
+      "model": 0.6859658020669699,
+      "notes": [
+        "total games: simulator 37.1, Pinnacle 39.0, used 38.2 at weight 0.60"
+      ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.869751+00:00",
-      "probability": 0.6349233817794605,
+      "predicted_at": "2026-09-03T15:32:12.435028+00:00",
+      "probability": 0.6859658020669699,
       "question": "Will the match last longer than 155 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 67
+      "submission": 73
     },
     {
       "base_rate": 0.46,
@@ -41,7 +43,7 @@
         "outcome coupling: P(win)=0.445, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.869751+00:00",
+      "predicted_at": "2026-09-03T15:32:12.435028+00:00",
       "probability": 0.4102142174782961,
       "question": "Will Y. Bu record more aces than M. Zheng?",
       "rbp": null,
@@ -64,7 +66,7 @@
         "exposure 123 service points from 39.3 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.869751+00:00",
+      "predicted_at": "2026-09-03T15:32:12.435028+00:00",
       "probability": 0.3575808558341793,
       "question": "Will Y. Bu record more double faults than M. Zheng?",
       "rbp": null,
@@ -88,7 +90,7 @@
         "no market quote; this is the family that most needs one"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.869751+00:00",
+      "predicted_at": "2026-09-03T15:32:12.435028+00:00",
       "probability": 0.45552375,
       "question": "Will Y. Bu win?",
       "rbp": null,
@@ -112,7 +114,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.869751+00:00",
+      "predicted_at": "2026-09-03T15:32:12.435028+00:00",
       "probability": 0.36722,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
@@ -123,7 +125,7 @@
   "match_id": "10a4dc58-6ce2-4ac4-b49c-9cf3a95ff67c",
   "match_name": "Y. Bu vs M. Zheng",
   "multiplier": 1,
-  "opening_time": "2026-09-03T20:00:00.000Z",
+  "opening_time": "2026-09-03T19:30:00.000Z",
   "player_a": "Yunchaokete Bu",
   "player_b": "Michael Zheng",
   "round_code": "R128"

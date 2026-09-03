@@ -1,5 +1,5 @@
 {
-  "closing_time": "2026-09-04T03:00:00.000Z",
+  "closing_time": "2026-09-04T02:30:00.000Z",
   "draw": "womens",
   "entries": [
     {
@@ -13,18 +13,18 @@
       "market": null,
       "market_id": "38b3cb18-6bf2-49f7-bba7-ecb9b75c45e0",
       "market_weight": 0.0,
-      "model": 0.6303217575934787,
+      "model": 0.6188954994678725,
       "notes": [
         "total games: simulator 21.1, Pinnacle 19.8, used 20.3 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.864081+00:00",
-      "probability": 0.6303217575934787,
+      "predicted_at": "2026-09-03T15:32:12.430880+00:00",
+      "probability": 0.6188954994678725,
       "question": "Will the match last longer than 90 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 66
+      "submission": 65
     },
     {
       "base_rate": 0.427,
@@ -37,13 +37,13 @@
       "market": null,
       "market_id": "f39c2cfc-5b47-47a0-baae-559756e2cbaf",
       "market_weight": 0.0,
-      "model": 0.44926248116753903,
+      "model": 0.4532887059411786,
       "notes": [
-        "exposure 69 service points from 21.2 games"
+        "exposure 73 service points from 22.4 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.864081+00:00",
-      "probability": 0.44926248116753903,
+      "predicted_at": "2026-09-03T15:32:12.430880+00:00",
+      "probability": 0.4532887059411786,
       "question": "Will M. Bouzkova record more aces than H. Dart?",
       "rbp": null,
       "settled_at": "",
@@ -60,13 +60,13 @@
       "market": null,
       "market_id": "1121cda9-096f-40a6-8a58-d24d1904ea92",
       "market_weight": 0.0,
-      "model": 0.3335783494625126,
+      "model": 0.33437975968254835,
       "notes": [
-        "exposure 69 service points from 21.2 games"
+        "exposure 73 service points from 22.4 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.864081+00:00",
-      "probability": 0.3335783494625126,
+      "predicted_at": "2026-09-03T15:32:12.430880+00:00",
+      "probability": 0.33437975968254835,
       "question": "Will M. Bouzkova record more double faults than H. Dart?",
       "rbp": null,
       "settled_at": "",
@@ -80,21 +80,21 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.8310344828148969,
+      "market": 0.8347826086462169,
       "market_id": "dc8e1980-2a37-4f87-96bd-7b6a8297e8f7",
       "market_weight": 0.8075,
-      "model": 0.63525,
+      "model": 0.70325,
       "notes": [
-        "simulated win probability 0.635",
-        "market consensus 0.831, weight 0.81"
+        "simulated win probability 0.703",
+        "market consensus 0.835, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.864081+00:00",
-      "probability": 0.7943167261981117,
+      "predicted_at": "2026-09-03T15:32:12.430880+00:00",
+      "probability": 0.8066323452112949,
       "question": "Will M. Bouzkova win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 84
+      "submission": 86
     },
     {
       "base_rate": 0.225,
@@ -107,24 +107,24 @@
       "market": null,
       "market_id": "fc72dce7-2e4e-46d9-b6a1-9711a813da80",
       "market_weight": 0.0,
-      "model": 0.15825,
+      "model": 0.20575,
       "notes": [
         "no usable market quote for this question",
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T05:38:06.864081+00:00",
-      "probability": 0.11825,
+      "predicted_at": "2026-09-03T15:32:12.430880+00:00",
+      "probability": 0.16574999999999998,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 8
+      "submission": 12
     }
   ],
   "match_id": "699783e2-3387-43c5-851d-44a8937de0e2",
   "match_name": "H. Dart vs M. Bouzkova",
   "multiplier": 1,
-  "opening_time": "2026-09-03T15:00:00.000Z",
+  "opening_time": "2026-09-03T14:30:00.000Z",
   "player_a": "Harriet Dart",
   "player_b": "Marie Bouzkova",
   "round_code": "R128"
