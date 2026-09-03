@@ -13,14 +13,14 @@
       "market": null,
       "market_id": "acea4504-88da-4170-9cbd-dd2bd7ab3d9b",
       "market_weight": 0.0,
-      "model": 0.5604954269689248,
+      "model": 0.5602045758101127,
       "notes": [
         "total games: simulator 34.9, Pinnacle 28.6, used 31.1 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T22:37:48.465886+00:00",
-      "probability": 0.5604954269689248,
+      "predicted_at": "2026-09-03T05:38:06.859899+00:00",
+      "probability": 0.5602045758101127,
       "question": "Will the match last longer than 135 minutes?",
       "rbp": null,
       "settled_at": "",
@@ -37,15 +37,15 @@
       "market": null,
       "market_id": "d32d951c-36e0-4545-9a04-7a4175cde617",
       "market_weight": 0.0,
-      "model": 0.815138751139766,
+      "model": 0.8148223496916296,
       "notes": [
         "ace vulnerability: Dane Sweeny 1.00, Lorenzo Musetti 0.85",
         "exposure 115 service points from 37.0 games",
-        "outcome coupling: P(win)=0.948, delta=+0.60"
+        "outcome coupling: P(win)=0.946, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T22:37:48.465886+00:00",
-      "probability": 0.815138751139766,
+      "predicted_at": "2026-09-03T05:38:06.859899+00:00",
+      "probability": 0.8148223496916296,
       "question": "Will L. Musetti record more aces than D. Sweeny?",
       "rbp": null,
       "settled_at": "",
@@ -67,7 +67,7 @@
         "exposure 115 service points from 37.0 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T22:37:48.465886+00:00",
+      "predicted_at": "2026-09-03T05:38:06.859899+00:00",
       "probability": 0.2713703756194064,
       "question": "Will L. Musetti record more double faults than D. Sweeny?",
       "rbp": null,
@@ -82,17 +82,17 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.9476190476381016,
+      "market": 0.9462864720932032,
       "market_id": "86c6ce65-d9f2-4c92-a1df-f97d1fd2e204",
       "market_weight": 0.8075,
       "model": 0.7665,
       "notes": [
         "simulated win probability 0.766",
-        "market consensus 0.948, weight 0.81"
+        "market consensus 0.946, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T22:37:48.465886+00:00",
-      "probability": 0.9190522701028379,
+      "predicted_at": "2026-09-03T05:38:06.859899+00:00",
+      "probability": 0.9176528500012247,
       "question": "Will L. Musetti win?",
       "rbp": null,
       "settled_at": "",
@@ -116,7 +116,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T22:37:48.465886+00:00",
+      "predicted_at": "2026-09-03T05:38:06.859899+00:00",
       "probability": 0.3032,
       "question": "Will the match feature at least 1 tiebreak?",
       "rbp": null,

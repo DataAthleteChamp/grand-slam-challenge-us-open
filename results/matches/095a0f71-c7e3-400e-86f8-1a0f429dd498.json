@@ -19,7 +19,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T22:37:48.460966+00:00",
+      "predicted_at": "2026-09-03T05:38:06.855640+00:00",
       "probability": 0.6349472859331073,
       "question": "Will the match last longer than 95 minutes?",
       "rbp": null,
@@ -42,7 +42,7 @@
         "exposure 70 service points from 21.5 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T22:37:48.460966+00:00",
+      "predicted_at": "2026-09-03T05:38:06.855640+00:00",
       "probability": 0.3907227703223649,
       "question": "Will C. Bucsa record more aces than H. Sakatsume?",
       "rbp": null,
@@ -65,7 +65,7 @@
         "exposure 70 service points from 21.5 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T22:37:48.460966+00:00",
+      "predicted_at": "2026-09-03T05:38:06.855640+00:00",
       "probability": 0.42119771192061106,
       "question": "Will C. Bucsa record more double faults than H. Sakatsume?",
       "rbp": null,
@@ -89,7 +89,7 @@
         "market consensus 0.665, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T22:37:48.460966+00:00",
+      "predicted_at": "2026-09-03T05:38:06.855640+00:00",
       "probability": 0.6276425529106844,
       "question": "Will C. Bucsa win?",
       "rbp": null,
@@ -113,7 +113,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T22:37:48.460966+00:00",
+      "predicted_at": "2026-09-03T05:38:06.855640+00:00",
       "probability": 0.13374999999999998,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

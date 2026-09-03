@@ -88,7 +88,11 @@ _RULES: list[tuple[Family, re.Pattern[str], float]] = [
     ),
     (
         Family.LOPSIDED_SET,
-        re.compile(r"\blopsided\b|\bbagel\b|\bbreadstick\b|(?<!\d)6-[012](?!\d)", re.I),
+        re.compile(
+            r"\blopsided\b|\bbagel\b|\bbreadstick\b|(?<!\d)6-[012](?!\d)"
+            r"|\bwin\s+a\s+set\s+6\b",
+            re.I,
+        ),
         0.9,
     ),
     (Family.SET_GAMES, re.compile(r"\bset\b.*\bgames?\b|\bgames?\b.*\bset\b", re.I), 0.8),
@@ -146,9 +150,27 @@ _COMPARISON_DIRECTION = re.compile(r"\b(fewer|less|lower|worse)\b", re.I)
 _UNPARSED: list[str] = []
 
 
+#: Unicode dashes the platform uses interchangeably with a plain hyphen.
+#:
+#: Round 3 introduced "Will either player win a set 6-2, 6-1 or 6-0?" written with
+#: EN DASHES (U+2013), and every scoreline pattern here was written with an ASCII
+#: hyphen.  Nothing matched, so twelve markets fell through to their base rate
+#: while a perfectly good model for them sat unused.  Normalising once at the
+#: entry point protects every pattern rather than the one that happened to break,
+#: which matters because later rounds score at 2x and 3x and the platform is
+#: evidently willing to introduce new question types mid-event.
+_DASHES = str.maketrans({"\u2010": "-", "\u2011": "-", "\u2012": "-", "\u2013": "-",
+                         "\u2014": "-", "\u2015": "-", "\u2212": "-"})
+
+
+def normalise_dashes(text: str) -> str:
+    """Fold every Unicode dash variant onto a plain hyphen."""
+    return text.translate(_DASHES)
+
+
 def parse_question(text: str, *, players: tuple[str, str] | None = None) -> MarketSpec:
     """Classify one market question.  Never raises."""
-    raw = (text or "").strip()
+    raw = normalise_dashes((text or "").strip())
     if not raw:
         return MarketSpec(family=Family.OTHER, raw=raw, notes=("empty question",))
 

@@ -118,7 +118,14 @@ def residual_sd_for(games: float, tour: str, best_of: int) -> float:
 #: fewer games - than an iid simulator produces.  That is a point-level effect
 #: and cannot be fixed by the between-set sigma, which is why the men's draw
 #: still needs an explicit offset while the women's no longer does.
-GAMES_BIAS = {("ATP", 5): -2.24, ("ATP", 3): -1.20, ("WTA", 3): 0.0, ("WTA", 5): 0.0}
+#: The women's offset is back after the between-set sigma was returned to 0.05.
+#: It was zeroed while sigma sat at 0.11, which was itself doing the games
+#: correction; with sigma restored the simulator runs +1.26 games long on WTA
+#: slam hard courts (300 matches, simulated 22.75 against a realised 21.49), so
+#: the offset has to carry that again.  This is the intended division of labour:
+#: sigma is fixed on lopsided sets and tiebreaks, which have no other remedy, and
+#: games is corrected here.
+GAMES_BIAS = {("ATP", 5): -2.24, ("ATP", 3): -1.20, ("WTA", 3): -1.26, ("WTA", 5): -1.26}
 
 
 def correct_games(games: float, tour: str, best_of: int) -> float:

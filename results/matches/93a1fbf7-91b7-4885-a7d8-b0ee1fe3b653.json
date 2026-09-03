@@ -19,7 +19,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T22:37:48.467115+00:00",
+      "predicted_at": "2026-09-03T05:38:06.866775+00:00",
       "probability": 0.2898143410895936,
       "question": "Will the match last longer than 190 minutes?",
       "rbp": null,
@@ -37,15 +37,15 @@
       "market": null,
       "market_id": "75f20eb2-8ec9-423a-8c03-c57e0df0d363",
       "market_weight": 0.0,
-      "model": 0.46827417603199867,
+      "model": 0.4697346746590936,
       "notes": [
         "ace vulnerability: Jan-Lennard Struff 1.22, Francisco Cerundolo 0.75",
         "exposure 124 service points from 39.6 games",
-        "outcome coupling: P(win)=0.610, delta=+0.60"
+        "outcome coupling: P(win)=0.615, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T22:37:48.467115+00:00",
-      "probability": 0.46827417603199867,
+      "predicted_at": "2026-09-03T05:38:06.866775+00:00",
+      "probability": 0.4697346746590936,
       "question": "Will F. Cerundolo record more aces than J. Struff?",
       "rbp": null,
       "settled_at": "",
@@ -67,7 +67,7 @@
         "exposure 124 service points from 39.6 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T22:37:48.467115+00:00",
+      "predicted_at": "2026-09-03T05:38:06.866775+00:00",
       "probability": 0.40689937616859473,
       "question": "Will F. Cerundolo record more double faults than J. Struff?",
       "rbp": null,
@@ -82,17 +82,17 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.6096649395632586,
+      "market": 0.6147515036487431,
       "market_id": "c9a33f7d-8810-493e-8424-cc522b750ed9",
       "market_weight": 0.8075,
       "model": 0.49725,
       "notes": [
         "simulated win probability 0.497",
-        "market consensus 0.610, weight 0.81"
+        "market consensus 0.615, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T22:37:48.467115+00:00",
-      "probability": 0.586551849691682,
+      "predicted_at": "2026-09-03T05:38:06.866775+00:00",
+      "probability": 0.5906408537617986,
       "question": "Will F. Cerundolo win?",
       "rbp": null,
       "settled_at": "",
@@ -116,7 +116,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T22:37:48.467115+00:00",
+      "predicted_at": "2026-09-03T05:38:06.866775+00:00",
       "probability": 0.02,
       "question": "Will the match feature at least 3 tiebreaks?",
       "rbp": null,

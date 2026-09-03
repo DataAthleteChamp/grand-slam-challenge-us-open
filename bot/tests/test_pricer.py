@@ -1087,16 +1087,17 @@ def test_vulnerability_moves_the_ace_price_the_right_way():
 
 
 def test_between_set_sigma_is_fitted_per_tour_not_shared():
-    """The women's draw needs more between-set variation than the men's.
+    """Both tours sit at 0.05, and the women's value must not drift up again.
 
-    Sharing one sigma applied the ATP-fitted 0.05 to the WTA draw, where it
-    over-predicts tiebreaks by +0.073 and total games by +1.91.  Guard the split
-    so a future refactor cannot silently collapse it back to one value.
+    It was briefly 0.11, fitted on a sample whose realised any-tiebreak rate was
+    0.183 where three independent measurements say 0.22-0.25.  At 0.11 the
+    women's lopsided-set rate came out at 0.806 against a realised 0.647
+    (t = 5.6) and tiebreaks at 0.191 against 0.240 (t = -2.3).  The mechanism is
+    per-tour and the table must stay per-tour, but the fitted values now agree.
     """
     pricer = Pricer(lane="honest")
     assert pricer._sim_config_for("ATP").sigma == pytest.approx(0.05)
-    assert pricer._sim_config_for("WTA").sigma == pytest.approx(0.11)
-    assert pricer._sim_config_for("WTA").sigma > pricer._sim_config_for("ATP").sigma
+    assert pricer._sim_config_for("WTA").sigma == pytest.approx(0.05)
 
 
 def test_lane_offset_shifts_sigma_without_discarding_the_tour_fit():
@@ -1104,8 +1105,10 @@ def test_lane_offset_shifts_sigma_without_discarding_the_tour_fit():
     honest = Pricer(lane="honest")
     for tour in ("ATP", "WTA"):
         assert scenario._sim_config_for(tour).sigma > honest._sim_config_for(tour).sigma
-    # The offset must stay small enough that the tour split still dominates it.
-    assert scenario._sim_config_for("WTA").sigma > scenario._sim_config_for("ATP").sigma
+    # The lane offset applies on top of whatever each tour is fitted at.
+    assert scenario._sim_config_for("WTA").sigma == pytest.approx(
+        scenario._sim_config_for("ATP").sigma
+    )
 
 
 def test_explicit_sim_config_still_overrides_the_tour_fit():

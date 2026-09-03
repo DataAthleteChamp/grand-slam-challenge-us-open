@@ -13,14 +13,14 @@
       "market": null,
       "market_id": "62518bf6-1659-49e4-b505-7fc936ecffde",
       "market_weight": 0.0,
-      "model": 0.5510783695697281,
+      "model": 0.5515381881351211,
       "notes": [
         "total games: simulator 21.3, Pinnacle 21.4, used 21.4 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T22:37:48.463125+00:00",
-      "probability": 0.5510783695697281,
+      "predicted_at": "2026-09-03T05:38:06.865962+00:00",
+      "probability": 0.5515381881351211,
       "question": "Will the match last longer than 95 minutes?",
       "rbp": null,
       "settled_at": "",
@@ -42,7 +42,7 @@
         "exposure 69 service points from 21.3 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T22:37:48.463125+00:00",
+      "predicted_at": "2026-09-03T05:38:06.865962+00:00",
       "probability": 0.37247802563306676,
       "question": "Will L. Jeanjean record more aces than A. Potapova?",
       "rbp": null,
@@ -65,7 +65,7 @@
         "exposure 69 service points from 21.3 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T22:37:48.463125+00:00",
+      "predicted_at": "2026-09-03T05:38:06.865962+00:00",
       "probability": 0.3934379969116244,
       "question": "Will L. Jeanjean record more double faults than A. Potapova?",
       "rbp": null,
@@ -80,21 +80,21 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.2372228605199163,
+      "market": 0.2351351351318049,
       "market_id": "fbe4fcce-957d-4d93-a66f-44164014aaee",
       "market_weight": 0.8075,
       "model": 0.354,
       "notes": [
         "simulated win probability 0.354",
-        "market consensus 0.237, weight 0.81"
+        "market consensus 0.235, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T22:37:48.463125+00:00",
-      "probability": 0.26297147561123735,
+      "predicted_at": "2026-09-03T05:38:06.865962+00:00",
+      "probability": 0.2612288395358109,
       "question": "Will L. Jeanjean win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 22
+      "submission": 21
     },
     {
       "base_rate": 0.225,
@@ -113,7 +113,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-02T22:37:48.463125+00:00",
+      "predicted_at": "2026-09-03T05:38:06.865962+00:00",
       "probability": 0.144,
       "question": "Will the match feature at least 1 tiebreak?",
       "rbp": null,

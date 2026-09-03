@@ -54,29 +54,37 @@ SKILL_SCALE = 1.5
 
 #: Between-set form variation, fitted separately per tour.
 #:
-#: ``FITTED_SIGMA`` above was fitted on ATP matches only and was then applied to
-#: both draws.  Re-running the same calibration per tour over 2023-26 slam
-#: hard-court matches (120 matches per tour, both players with 20+ tour matches)
-#: shows the men's value is right and the women's value is badly wrong.  Mean
-#: simulated minus realised, at the current shared sigma = 0.05:
+#: Both tours sit at 0.05.  This value was briefly raised to 0.11 for the women
+#: and that was a mistake, recorded here because the way it went wrong is more
+#: useful than the number.
 #:
-#:            total games   any tiebreak   any lopsided set
-#:   ATP         +1.98         +0.019          -0.041
-#:   WTA         +1.91         +0.073          -0.097
+#: The change was fitted on a sample whose realised any-tiebreak rate was 0.183.
+#: Three independent measurements put the true figure near 0.22-0.25:
+#: TIEBREAK_COUNTS says 0.220 from 2,883 matches, parsing US Open scores directly
+#: gives 0.246, and a fresh calibration on slam hard courts gives 0.240.  That one
+#: sample was unrepresentative, and it was flagged as suspect at the time without
+#: the conclusion being followed through.
 #:
-#: Sweeping sigma moves all three together.  For ATP the error is minimised at
-#: 0.05 (raising it overshoots lopsided sets badly: -0.041 -> +0.070 at 0.08).
-#: For WTA it is minimised at 0.11, where every bias essentially vanishes:
+#: Raising sigma adds between-set variation, which produces more blowout sets and
+#: fewer tiebreaks.  Both errors duly appeared, and both were measured before this
+#: was traced back to its cause:
 #:
-#:   WTA sigma 0.11: games +0.57, tiebreak +0.003, lopsided +0.039
+#: | WTA, slam hard courts | sigma 0.05 | sigma 0.11 | realised |
+#: |---|---|---|---|
+#: | any lopsided set | 0.654 | 0.806 | **0.647** |
+#: | any tiebreak | 0.249 | 0.191 | **0.240** |
+#: | total games | 22.75 | 21.41 | **21.49** |
 #:
-#: The women's game has more between-set swing than the men's, so holding serve
-#: is less persistent across sets; one shared parameter cannot describe both.
-#: This matters because the women's draw is where the live entry bleeds
-#: (-1.37 RBP/question against -0.39 for the men's), and because the simulated
-#: WTA any-tiebreak rate at 0.11 (0.186) matches both the historical rate
-#: (0.183) and the rate realised in this tournament (0.162).
-TOUR_SIGMA = {"ATP": 0.05, "WTA": 0.11}
+#: At 0.05 the lopsided and tiebreak rates are both within a point of reality; at
+#: 0.11 lopsided is out by +0.150 (t = 5.6) and tiebreak by -0.065 (t = -2.3).
+#: Only total games favoured the higher value, and games is the one of the three
+#: that has an explicit downstream correction in GAMES_BIAS - so the tail was
+#: wagging the dog.
+#:
+#: The lesson worth keeping: when one fitted parameter is asked to satisfy three
+#: constraints, fix it on the constraints that have no other remedy, and correct
+#: the rest downstream.
+TOUR_SIGMA = {"ATP": 0.05, "WTA": 0.05}
 
 
 @dataclass(frozen=True)

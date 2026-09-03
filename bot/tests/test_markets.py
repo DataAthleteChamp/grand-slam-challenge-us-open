@@ -300,3 +300,38 @@ def test_enforce_monotone_handles_degenerate_input():
 
 def _is_non_increasing(values):
     return all(values[i] >= values[i + 1] for i in range(len(values) - 1))
+
+
+def test_en_dash_scorelines_are_understood():
+    """Round 3 introduced this question written with EN DASHES, not hyphens.
+
+    Every scoreline pattern in the parser used an ASCII hyphen, so nothing
+    matched and twelve markets fell through to their base rate while a working
+    model for them sat unused.  The ATP lopsided-set model is unbiased against
+    realised outcomes (-0.015, SE 0.026) and beats the flat base rate by about
+    0.78 RBP/question, so this was pure forfeited value - and it would have
+    recurred every round, at 2x and 3x.
+    """
+    from bot.markets.parser import parse_question
+    from bot.markets.taxonomy import Family
+
+    en_dash = "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?"
+    hyphen = "Will either player win a set 6-2, 6-1 or 6-0?"
+    for text in (en_dash, hyphen):
+        spec = parse_question(text, players=("A. Player", "B. Player"))
+        assert spec.family is Family.LOPSIDED_SET, text
+        assert spec.confidence >= 0.85
+
+
+def test_dash_normalisation_does_not_disturb_other_families():
+    from bot.markets.parser import parse_question
+    from bot.markets.taxonomy import Family
+
+    cases = {
+        "Will the match feature at least 2 tiebreak(s)?": Family.TIEBREAK,
+        "Will the match last longer than 150 minutes?": Family.MATCH_DURATION,
+        "Will A. Player record more aces than B. Player?": Family.ACES_COMPARISON,
+        "Will A. Player win?": Family.MATCH_WINNER,
+    }
+    for text, family in cases.items():
+        assert parse_question(text, players=("A. Player", "B. Player")).family is family
