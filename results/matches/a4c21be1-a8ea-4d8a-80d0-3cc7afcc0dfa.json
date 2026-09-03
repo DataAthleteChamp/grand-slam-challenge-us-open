@@ -13,14 +13,14 @@
       "market": null,
       "market_id": "9ace04fa-eb24-47e3-af24-15a413059ee0",
       "market_weight": 0.0,
-      "model": 0.43565068479084845,
+      "model": 0.4360792427417597,
       "notes": [
         "total games: simulator 21.6, Pinnacle 19.9, used 20.6 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.439079+00:00",
-      "probability": 0.43565068479084845,
+      "predicted_at": "2026-09-03T18:32:58.130947+00:00",
+      "probability": 0.4360792427417597,
       "question": "Will the match last longer than 95 minutes?",
       "rbp": null,
       "settled_at": "",
@@ -42,7 +42,7 @@
         "exposure 74 service points from 22.9 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.439079+00:00",
+      "predicted_at": "2026-09-03T18:32:58.130947+00:00",
       "probability": 0.4695785828790772,
       "question": "Will P. Badosa record more aces than C. Gauff?",
       "rbp": null,
@@ -65,7 +65,7 @@
         "exposure 74 service points from 22.9 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.439079+00:00",
+      "predicted_at": "2026-09-03T18:32:58.130947+00:00",
       "probability": 0.44639231046066086,
       "question": "Will P. Badosa record more double faults than C. Gauff?",
       "rbp": null,
@@ -89,7 +89,7 @@
         "market consensus 0.134, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.439079+00:00",
+      "predicted_at": "2026-09-03T18:32:58.130947+00:00",
       "probability": 0.17431346813488957,
       "question": "Will P. Badosa win?",
       "rbp": null,
@@ -113,7 +113,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.439079+00:00",
+      "predicted_at": "2026-09-03T18:32:58.130947+00:00",
       "probability": 0.19549999999999998,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

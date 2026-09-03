@@ -19,7 +19,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.450392+00:00",
+      "predicted_at": "2026-09-03T18:32:58.143131+00:00",
       "probability": 0.34901982266108095,
       "question": "Will the match last longer than 200 minutes?",
       "rbp": null,
@@ -37,15 +37,15 @@
       "market": null,
       "market_id": "b3c56011-4554-49d8-b49a-f2c5ca107515",
       "market_weight": 0.0,
-      "model": 0.6018468851528189,
+      "model": 0.6019653065067088,
       "notes": [
         "ace vulnerability: Mariano Navone 0.78, Tomas Martin Etcheverry 1.03",
         "exposure 123 service points from 39.5 games",
         "outcome coupling: P(win)=0.480, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.450392+00:00",
-      "probability": 0.6018468851528189,
+      "predicted_at": "2026-09-03T18:32:58.143131+00:00",
+      "probability": 0.6019653065067088,
       "question": "Will T. Etcheverry record more aces than M. Navone?",
       "rbp": null,
       "settled_at": "",
@@ -67,7 +67,7 @@
         "exposure 123 service points from 39.5 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.450392+00:00",
+      "predicted_at": "2026-09-03T18:32:58.143131+00:00",
       "probability": 0.28187704452215456,
       "question": "Will T. Etcheverry record more double faults than M. Navone?",
       "rbp": null,
@@ -90,7 +90,7 @@
         "threshold family defers to the base rate by policy"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.450392+00:00",
+      "predicted_at": "2026-09-03T18:32:58.143131+00:00",
       "probability": 0.5,
       "question": "Will T. Etcheverry commit more than 46 unforced errors?",
       "rbp": null,
@@ -113,7 +113,7 @@
         "serve rate: expected 0.627 vs threshold 0.630, sd 0.069 (0.046 sampling + 0.051 form)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.450392+00:00",
+      "predicted_at": "2026-09-03T18:32:58.143131+00:00",
       "probability": 0.5477579064884835,
       "question": "Will M. Navone win more than 63% of points played on their first serve?",
       "rbp": null,
@@ -136,7 +136,7 @@
         "exposure 123 service points from 39.5 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.450392+00:00",
+      "predicted_at": "2026-09-03T18:32:58.143131+00:00",
       "probability": 0.53540442956552,
       "question": "Will T. Etcheverry hit more winners than M. Navone?",
       "rbp": null,
@@ -159,7 +159,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.450392+00:00",
+      "predicted_at": "2026-09-03T18:32:58.143131+00:00",
       "probability": 0.35125,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -182,7 +182,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.450392+00:00",
+      "predicted_at": "2026-09-03T18:32:58.143131+00:00",
       "probability": 0.7415,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -197,7 +197,7 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.4799374015286836,
+      "market": 0.4803640681070189,
       "market_id": "88e06d0f-f4cb-49fc-beae-bd34e902267a",
       "market_weight": 0.8075,
       "model": 0.63,
@@ -206,8 +206,8 @@
         "market consensus 0.480, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.450392+00:00",
-      "probability": 0.5091910165078972,
+      "predicted_at": "2026-09-03T18:32:58.143131+00:00",
+      "probability": 0.5095282056732975,
       "question": "Will T. Etcheverry win?",
       "rbp": null,
       "settled_at": "",
@@ -231,7 +231,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.450392+00:00",
+      "predicted_at": "2026-09-03T18:32:58.143131+00:00",
       "probability": 0.40902,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

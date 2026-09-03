@@ -19,7 +19,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.449081+00:00",
+      "predicted_at": "2026-09-03T18:32:58.141982+00:00",
       "probability": 0.5246883268481445,
       "question": "Will the match last longer than 160 minutes?",
       "rbp": null,
@@ -44,7 +44,7 @@
         "outcome coupling: P(win)=0.720, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.449081+00:00",
+      "predicted_at": "2026-09-03T18:32:58.141982+00:00",
       "probability": 0.7662327786947382,
       "question": "Will D. Medvedev record more aces than A. Rinderknech?",
       "rbp": null,
@@ -67,7 +67,7 @@
         "exposure 111 service points from 35.6 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.449081+00:00",
+      "predicted_at": "2026-09-03T18:32:58.141982+00:00",
       "probability": 0.6902222886957031,
       "question": "Will D. Medvedev record more double faults than A. Rinderknech?",
       "rbp": null,
@@ -90,7 +90,7 @@
         "threshold family defers to the base rate by policy"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.449081+00:00",
+      "predicted_at": "2026-09-03T18:32:58.141982+00:00",
       "probability": 0.5,
       "question": "Will D. Medvedev commit more than 30 unforced errors?",
       "rbp": null,
@@ -113,7 +113,7 @@
         "serve rate: expected 0.615 vs threshold 0.700, sd 0.069 (0.046 sampling + 0.051 form)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.449081+00:00",
+      "predicted_at": "2026-09-03T18:32:58.141982+00:00",
       "probability": 0.15009247270776452,
       "question": "Will A. Rinderknech win more than 70% of points played on their first serve?",
       "rbp": null,
@@ -136,7 +136,7 @@
         "exposure 111 service points from 35.6 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.449081+00:00",
+      "predicted_at": "2026-09-03T18:32:58.141982+00:00",
       "probability": 0.40884321413491215,
       "question": "Will D. Medvedev hit more winners than A. Rinderknech?",
       "rbp": null,
@@ -159,7 +159,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.449081+00:00",
+      "predicted_at": "2026-09-03T18:32:58.141982+00:00",
       "probability": 0.19075,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -182,7 +182,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.449081+00:00",
+      "predicted_at": "2026-09-03T18:32:58.141982+00:00",
       "probability": 0.75725,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -206,7 +206,7 @@
         "market consensus 0.720, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.449081+00:00",
+      "predicted_at": "2026-09-03T18:32:58.141982+00:00",
       "probability": 0.76448247016683,
       "question": "Will D. Medvedev win?",
       "rbp": null,
@@ -231,7 +231,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.449081+00:00",
+      "predicted_at": "2026-09-03T18:32:58.141982+00:00",
       "probability": 0.07175999999999999,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,

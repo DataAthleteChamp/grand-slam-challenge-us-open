@@ -13,18 +13,18 @@
       "market": null,
       "market_id": "4c90111f-0d7f-4fc6-b0cd-e9a4ae778dda",
       "market_weight": 0.0,
-      "model": 0.627812164866045,
+      "model": 0.6142558972571304,
       "notes": [
-        "total games: simulator 38.0, Pinnacle 37.5, used 37.7 at weight 0.60",
+        "total games: simulator 38.0, Pinnacle 37.0, used 37.4 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.440559+00:00",
-      "probability": 0.627812164866045,
+      "predicted_at": "2026-09-03T18:32:58.132410+00:00",
+      "probability": 0.6142558972571304,
       "question": "Will the match last longer than 150 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 66
+      "submission": 64
     },
     {
       "base_rate": 0.46,
@@ -37,15 +37,15 @@
       "market": null,
       "market_id": "ee511096-5f73-44ae-a940-13c78e586036",
       "market_weight": 0.0,
-      "model": 0.39077458764153805,
+      "model": 0.38925670677336316,
       "notes": [
         "ace vulnerability: Alexander Zverev 0.85, Quentin Halys 0.97",
         "exposure 127 service points from 40.5 games",
-        "outcome coupling: P(win)=0.160, delta=+0.60"
+        "outcome coupling: P(win)=0.155, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.440559+00:00",
-      "probability": 0.39077458764153805,
+      "predicted_at": "2026-09-03T18:32:58.132410+00:00",
+      "probability": 0.38925670677336316,
       "question": "Will Q. Halys record more aces than A. Zverev?",
       "rbp": null,
       "settled_at": "",
@@ -67,7 +67,7 @@
         "exposure 127 service points from 40.5 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.440559+00:00",
+      "predicted_at": "2026-09-03T18:32:58.132410+00:00",
       "probability": 0.6425552205857508,
       "question": "Will Q. Halys record more double faults than A. Zverev?",
       "rbp": null,
@@ -82,17 +82,17 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.16036887082974274,
+      "market": 0.15517241379043392,
       "market_id": "2efe2846-50ad-40bf-8d96-7ba7c29a3fb8",
       "market_weight": 0.8075,
       "model": 0.1835,
       "notes": [
         "simulated win probability 0.183",
-        "market consensus 0.160, weight 0.81"
+        "market consensus 0.155, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.440559+00:00",
-      "probability": 0.17217620934852804,
+      "predicted_at": "2026-09-03T18:32:58.132410+00:00",
+      "probability": 0.16797551809961203,
       "question": "Will Q. Halys win?",
       "rbp": null,
       "settled_at": "",
@@ -116,7 +116,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.440559+00:00",
+      "predicted_at": "2026-09-03T18:32:58.132410+00:00",
       "probability": 0.22707999999999998,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,

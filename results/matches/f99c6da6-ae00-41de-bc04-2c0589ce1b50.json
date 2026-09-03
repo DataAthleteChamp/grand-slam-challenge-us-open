@@ -9,22 +9,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "4542a275-fe06-4c70-a9c3-675d9aadfb39",
       "market_weight": 0.0,
-      "model": 0.558202600979755,
+      "model": 0.546577673916034,
       "notes": [
-        "total games: simulator 22.5, Pinnacle 23.5, used 23.1 at weight 0.60",
+        "total games: simulator 22.0, Pinnacle 23.5, used 22.9 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T16:31:48.744816+00:00",
-      "probability": 0.5478474709307672,
+      "predicted_at": "2026-09-03T18:32:58.125717+00:00",
+      "probability": 0.546577673916034,
       "question": "Will the match last longer than 105 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 55
+      "submission": 56
     },
     {
       "base_rate": 0.427,
@@ -33,21 +33,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "5347c7da-11dc-4df9-acc5-4a0ce6797f65",
       "market_weight": 0.0,
-      "model": 0.0928487721609683,
+      "model": 0.09318657193242584,
       "notes": [
-        "exposure 77 service points from 23.7 games"
+        "exposure 76 service points from 23.3 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T16:31:48.744816+00:00",
-      "probability": 0.0928487721609683,
+      "predicted_at": "2026-09-03T18:32:58.125717+00:00",
+      "probability": 0.09318657193242584,
       "question": "Will Y. Putintseva record more aces than Q. Zheng?",
       "rbp": null,
       "settled_at": "",
-      "submission": 9
+      "submission": 5
     },
     {
       "base_rate": 0.433,
@@ -56,21 +56,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "e051db28-c8ac-4420-a2f1-6131fd7d9909",
       "market_weight": 0.0,
-      "model": 0.2186857354660454,
+      "model": 0.2189385560393399,
       "notes": [
-        "exposure 77 service points from 23.7 games"
+        "exposure 76 service points from 23.3 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T16:31:48.744816+00:00",
-      "probability": 0.2186857354660454,
+      "predicted_at": "2026-09-03T18:32:58.125717+00:00",
+      "probability": 0.2189385560393399,
       "question": "Will Y. Putintseva record more double faults than Q. Zheng?",
       "rbp": null,
       "settled_at": "",
-      "submission": 22
+      "submission": 17
     },
     {
       "base_rate": 0.5,
@@ -79,22 +79,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
-      "lane": "honest",
+      "lane": "scenario",
       "market": 0.3071726848485919,
       "market_id": "dd790caf-6543-43a9-9288-1b611ac2a933",
-      "market_weight": 0.95,
-      "model": 0.356,
+      "market_weight": 0.8075,
+      "model": 0.382,
       "notes": [
-        "simulated win probability 0.356",
-        "market consensus 0.307, weight 0.95"
+        "simulated win probability 0.382",
+        "market consensus 0.307, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T16:31:48.744816+00:00",
-      "probability": 0.3380963108161711,
+      "predicted_at": "2026-09-03T18:32:58.125717+00:00",
+      "probability": 0.3249801186806271,
       "question": "Will Y. Putintseva win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 34
+      "submission": 29
     },
     {
       "base_rate": 0.225,
@@ -103,21 +103,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "42a6e78a-c964-44dc-b5de-d21d9f92e212",
       "market_weight": 0.0,
-      "model": 0.295,
+      "model": 0.27625,
       "notes": [
-        "no usable market quote for this question"
+        "no usable market quote for this question",
+        "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T16:31:48.744816+00:00",
-      "probability": 0.2915,
+      "predicted_at": "2026-09-03T18:32:58.125717+00:00",
+      "probability": 0.23625,
       "question": "Will the match feature at least 1 tiebreak?",
       "rbp": null,
       "settled_at": "",
-      "submission": 29
+      "submission": 19
     }
   ],
   "match_id": "f99c6da6-ae00-41de-bc04-2c0589ce1b50",

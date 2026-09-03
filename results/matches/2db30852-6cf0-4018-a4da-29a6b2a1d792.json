@@ -13,18 +13,18 @@
       "market": null,
       "market_id": "c40d06a2-2a93-4ebf-8b13-f7ce1d2b46a1",
       "market_weight": 0.0,
-      "model": 0.6775150335985383,
+      "model": 0.6481466446128102,
       "notes": [
-        "total games: simulator 22.4, Pinnacle 24.8, used 23.9 at weight 0.60",
+        "total games: simulator 22.4, Pinnacle 24.1, used 23.5 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.452160+00:00",
-      "probability": 0.6775150335985383,
+      "predicted_at": "2026-09-03T18:32:58.134037+00:00",
+      "probability": 0.6481466446128102,
       "question": "Will the match last longer than 95 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 72
+      "submission": 68
     },
     {
       "base_rate": 0.427,
@@ -42,7 +42,7 @@
         "exposure 77 service points from 23.7 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.452160+00:00",
+      "predicted_at": "2026-09-03T18:32:58.134037+00:00",
       "probability": 0.30445824349300254,
       "question": "Will D. Shnaider record more aces than T. Townsend?",
       "rbp": null,
@@ -65,7 +65,7 @@
         "exposure 77 service points from 23.7 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.452160+00:00",
+      "predicted_at": "2026-09-03T18:32:58.134037+00:00",
       "probability": 0.41622276066568403,
       "question": "Will D. Shnaider record more double faults than T. Townsend?",
       "rbp": null,
@@ -88,7 +88,7 @@
         "threshold family defers to the base rate by policy"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.452160+00:00",
+      "predicted_at": "2026-09-03T18:32:58.134037+00:00",
       "probability": 0.5,
       "question": "Will D. Shnaider commit more than 30 unforced errors?",
       "rbp": null,
@@ -111,7 +111,7 @@
         "serve rate: expected 0.592 vs threshold 0.680, sd 0.084 (0.061 sampling + 0.058 form)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.452160+00:00",
+      "predicted_at": "2026-09-03T18:32:58.134037+00:00",
       "probability": 0.13642751594350572,
       "question": "Will T. Townsend win more than 68% of points played on their first serve?",
       "rbp": null,
@@ -134,7 +134,7 @@
         "exposure 77 service points from 23.7 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.452160+00:00",
+      "predicted_at": "2026-09-03T18:32:58.134037+00:00",
       "probability": 0.2570251965181456,
       "question": "Will D. Shnaider hit more winners than T. Townsend?",
       "rbp": null,
@@ -157,7 +157,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.452160+00:00",
+      "predicted_at": "2026-09-03T18:32:58.134037+00:00",
       "probability": 0.50375,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -180,7 +180,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.452160+00:00",
+      "predicted_at": "2026-09-03T18:32:58.134037+00:00",
       "probability": 0.6355,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -204,7 +204,7 @@
         "market consensus 0.605, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.452160+00:00",
+      "predicted_at": "2026-09-03T18:32:58.134037+00:00",
       "probability": 0.584603332894905,
       "question": "Will D. Shnaider win?",
       "rbp": null,
@@ -228,7 +228,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.452160+00:00",
+      "predicted_at": "2026-09-03T18:32:58.134037+00:00",
       "probability": 0.25275000000000003,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

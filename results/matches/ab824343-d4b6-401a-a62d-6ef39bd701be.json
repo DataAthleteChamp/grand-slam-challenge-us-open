@@ -19,7 +19,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.436276+00:00",
+      "predicted_at": "2026-09-03T18:32:58.128879+00:00",
       "probability": 0.5217516472703067,
       "question": "Will the match last longer than 170 minutes?",
       "rbp": null,
@@ -44,7 +44,7 @@
         "outcome coupling: P(win)=0.688, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.436276+00:00",
+      "predicted_at": "2026-09-03T18:32:58.128879+00:00",
       "probability": 0.7798031817793205,
       "question": "Will Z. Bergs record more aces than J. de Jong?",
       "rbp": null,
@@ -67,7 +67,7 @@
         "exposure 124 service points from 39.7 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.436276+00:00",
+      "predicted_at": "2026-09-03T18:32:58.128879+00:00",
       "probability": 0.39058611928186704,
       "question": "Will Z. Bergs record more double faults than J. de Jong?",
       "rbp": null,
@@ -91,7 +91,7 @@
         "market consensus 0.688, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.436276+00:00",
+      "predicted_at": "2026-09-03T18:32:58.128879+00:00",
       "probability": 0.6624744057352998,
       "question": "Will Z. Bergs win?",
       "rbp": null,
@@ -116,7 +116,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.436276+00:00",
+      "predicted_at": "2026-09-03T18:32:58.128879+00:00",
       "probability": 0.40396,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

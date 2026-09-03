@@ -13,14 +13,14 @@
       "market": null,
       "market_id": "c4ca865b-c62d-4c04-8c50-e8808df45419",
       "market_weight": 0.0,
-      "model": 0.7839795992397753,
+      "model": 0.7844399239988191,
       "notes": [
         "total games: simulator 35.4, Pinnacle 38.5, used 37.2 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.438528+00:00",
-      "probability": 0.7839795992397753,
+      "predicted_at": "2026-09-03T18:32:58.130374+00:00",
+      "probability": 0.7844399239988191,
       "question": "Will the match last longer than 140 minutes?",
       "rbp": null,
       "settled_at": "",
@@ -37,19 +37,19 @@
       "market": null,
       "market_id": "8863e36b-e122-4c54-b7b3-476244cd1484",
       "market_weight": 0.0,
-      "model": 0.42438518864026936,
+      "model": 0.41967924645908194,
       "notes": [
         "ace vulnerability: Botic van de Zandschulp 0.86, Alex de Minaur 0.78",
         "exposure 117 service points from 37.5 games",
-        "outcome coupling: P(win)=0.740, delta=+0.60"
+        "outcome coupling: P(win)=0.722, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.438528+00:00",
-      "probability": 0.42438518864026936,
+      "predicted_at": "2026-09-03T18:32:58.130374+00:00",
+      "probability": 0.41967924645908194,
       "question": "Will A. de Minaur record more aces than B. van de Zandschulp?",
       "rbp": null,
       "settled_at": "",
-      "submission": 41
+      "submission": 40
     },
     {
       "base_rate": 0.421,
@@ -67,7 +67,7 @@
         "exposure 117 service points from 37.5 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.438528+00:00",
+      "predicted_at": "2026-09-03T18:32:58.130374+00:00",
       "probability": 0.27738076703573006,
       "question": "Will A. de Minaur record more double faults than B. van de Zandschulp?",
       "rbp": null,
@@ -82,21 +82,21 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.7396878484170024,
+      "market": 0.7220936957689974,
       "market_id": "7993feb6-72fe-4459-8dbb-f54d99b79afd",
       "market_weight": 0.8075,
       "model": 0.733,
       "notes": [
         "simulated win probability 0.733",
-        "market consensus 0.740, weight 0.81"
+        "market consensus 0.722, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.438528+00:00",
-      "probability": 0.733044711940102,
+      "predicted_at": "2026-09-03T18:32:58.130374+00:00",
+      "probability": 0.7191695152036066,
       "question": "Will A. de Minaur win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 78
+      "submission": 76
     },
     {
       "base_rate": 0.487,
@@ -116,7 +116,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.438528+00:00",
+      "predicted_at": "2026-09-03T18:32:58.130374+00:00",
       "probability": 0.31816,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

@@ -19,7 +19,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.434574+00:00",
+      "predicted_at": "2026-09-03T18:32:58.128244+00:00",
       "probability": 0.4248671040298472,
       "question": "Will the match last longer than 180 minutes?",
       "rbp": null,
@@ -37,19 +37,19 @@
       "market": null,
       "market_id": "b16d35b6-b4a2-45ae-abb7-450864c67c17",
       "market_weight": 0.0,
-      "model": 0.578171536871083,
+      "model": 0.5759283235040012,
       "notes": [
         "ace vulnerability: Zachary Svajda 1.08, Arthur Gea 0.87",
         "exposure 122 service points from 39.1 games",
-        "outcome coupling: P(win)=0.470, delta=+0.60"
+        "outcome coupling: P(win)=0.462, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.434574+00:00",
-      "probability": 0.578171536871083,
+      "predicted_at": "2026-09-03T18:32:58.128244+00:00",
+      "probability": 0.5759283235040012,
       "question": "Will A. Gea record more aces than Z. Svajda?",
       "rbp": null,
       "settled_at": "",
-      "submission": 60
+      "submission": 59
     },
     {
       "base_rate": 0.421,
@@ -67,7 +67,7 @@
         "exposure 122 service points from 39.1 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.434574+00:00",
+      "predicted_at": "2026-09-03T18:32:58.128244+00:00",
       "probability": 0.5851932172078512,
       "question": "Will A. Gea record more double faults than Z. Svajda?",
       "rbp": null,
@@ -82,21 +82,21 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.4697469746935518,
+      "market": 0.46181046676144094,
       "market_id": "1d566525-244f-456d-a5d4-6a5af4bbfd09",
       "market_weight": 0.8075,
       "model": 0.43725,
       "notes": [
         "simulated win probability 0.437",
-        "market consensus 0.470, weight 0.81"
+        "market consensus 0.462, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.434574+00:00",
-      "probability": 0.46428474072664755,
+      "predicted_at": "2026-09-03T18:32:58.128244+00:00",
+      "probability": 0.45803042977832564,
       "question": "Will A. Gea win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 46
+      "submission": 45
     },
     {
       "base_rate": 0.13263821138211385,
@@ -116,7 +116,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.434574+00:00",
+      "predicted_at": "2026-09-03T18:32:58.128244+00:00",
       "probability": 0.04932000000000001,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,

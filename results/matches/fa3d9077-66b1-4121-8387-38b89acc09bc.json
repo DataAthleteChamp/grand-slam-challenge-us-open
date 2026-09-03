@@ -13,14 +13,14 @@
       "market": null,
       "market_id": "d411f218-0273-4e90-94a4-ad2677878ccd",
       "market_weight": 0.0,
-      "model": 0.5376570249900028,
+      "model": 0.5373876600921605,
       "notes": [
         "total games: simulator 36.0, Pinnacle 39.5, used 38.1 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.435585+00:00",
-      "probability": 0.5376570249900028,
+      "predicted_at": "2026-09-03T18:32:58.127728+00:00",
+      "probability": 0.5373876600921605,
       "question": "Will the match last longer than 165 minutes?",
       "rbp": null,
       "settled_at": "",
@@ -37,19 +37,19 @@
       "market": null,
       "market_id": "0cce5d6b-4054-45cb-8f00-d8da1b7543b1",
       "market_weight": 0.0,
-      "model": 0.43923553590571296,
+      "model": 0.44436855675019904,
       "notes": [
         "ace vulnerability: Ignacio Buse 1.00, Benjamin Bonzi 1.16",
         "exposure 119 service points from 38.2 games",
-        "outcome coupling: P(win)=0.460, delta=+0.60"
+        "outcome coupling: P(win)=0.478, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.435585+00:00",
-      "probability": 0.43923553590571296,
+      "predicted_at": "2026-09-03T18:32:58.127728+00:00",
+      "probability": 0.44436855675019904,
       "question": "Will B. Bonzi record more aces than I. Buse?",
       "rbp": null,
       "settled_at": "",
-      "submission": 42
+      "submission": 43
     },
     {
       "base_rate": 0.421,
@@ -67,7 +67,7 @@
         "exposure 119 service points from 38.2 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.435585+00:00",
+      "predicted_at": "2026-09-03T18:32:58.127728+00:00",
       "probability": 0.3343713548658667,
       "question": "Will B. Bonzi record more double faults than I. Buse?",
       "rbp": null,
@@ -82,21 +82,21 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.4598115299324991,
+      "market": 0.47756401267961446,
       "market_id": "f0754d35-cb8b-4d46-8c19-5b1e300e0308",
       "market_weight": 0.8075,
       "model": 0.7625,
       "notes": [
         "simulated win probability 0.762",
-        "market consensus 0.460, weight 0.81"
+        "market consensus 0.478, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.435585+00:00",
-      "probability": 0.5230639114442519,
+      "predicted_at": "2026-09-03T18:32:58.127728+00:00",
+      "probability": 0.5370789400403451,
       "question": "Will B. Bonzi win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 53
+      "submission": 55
     },
     {
       "base_rate": 0.13263821138211385,
@@ -116,7 +116,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.435585+00:00",
+      "predicted_at": "2026-09-03T18:32:58.127728+00:00",
       "probability": 0.07088,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,

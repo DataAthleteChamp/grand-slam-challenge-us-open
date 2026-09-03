@@ -9,22 +9,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "daa119a0-9aa3-47c9-9381-a9a11ed7d3ee",
       "market_weight": 0.0,
-      "model": 0.4974577776498233,
+      "model": 0.4829797718298985,
       "notes": [
-        "total games: simulator 22.3, Pinnacle 18.2, used 19.8 at weight 0.60",
+        "total games: simulator 21.7, Pinnacle 18.2, used 19.6 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T16:31:48.744063+00:00",
-      "probability": 0.4978598887673321,
+      "predicted_at": "2026-09-03T18:32:58.123187+00:00",
+      "probability": 0.4829797718298985,
       "question": "Will the match last longer than 90 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 50
+      "submission": 48
     },
     {
       "base_rate": 0.427,
@@ -33,22 +33,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "79aad0dc-1453-4951-bd7b-e62f23e20a02",
       "market_weight": 0.0,
-      "model": 0.42972871647258987,
+      "model": 0.4287446908103931,
       "notes": [
-        "exposure 76 service points from 23.5 games",
-        "base-rate pull 0.55 suppressed for aces_comparison"
+        "exposure 75 service points from 23.0 games",
+        "base-rate pull 0.48 suppressed for aces_comparison"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T16:31:48.744063+00:00",
-      "probability": 0.42972871647258987,
+      "predicted_at": "2026-09-03T18:32:58.123187+00:00",
+      "probability": 0.4287446908103931,
       "question": "Will A. Eala record more aces than O. Oliynykova?",
       "rbp": null,
       "settled_at": "",
-      "submission": 43
+      "submission": 41
     },
     {
       "base_rate": 0.433,
@@ -57,22 +57,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "c8242bb0-2b29-48f2-8a3c-66bdc57e2d3f",
       "market_weight": 0.0,
-      "model": 0.4343733001179703,
+      "model": 0.4337910484442806,
       "notes": [
-        "exposure 76 service points from 23.5 games",
-        "base-rate pull 0.55 suppressed for double_faults_comparison"
+        "exposure 75 service points from 23.0 games",
+        "base-rate pull 0.48 suppressed for double_faults_comparison"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T16:31:48.744063+00:00",
-      "probability": 0.4343733001179703,
+      "predicted_at": "2026-09-03T18:32:58.123187+00:00",
+      "probability": 0.4337910484442806,
       "question": "Will A. Eala record more double faults than O. Oliynykova?",
       "rbp": null,
       "settled_at": "",
-      "submission": 43
+      "submission": 42
     },
     {
       "base_rate": 0.5,
@@ -81,22 +81,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
-      "lane": "honest",
-      "market": 0.8831168831598893,
+      "lane": "scenario",
+      "market": 0.8817833097871679,
       "market_id": "7dbc8499-e848-4fab-abdb-1f0db8b2084b",
-      "market_weight": 0.95,
-      "model": 0.5715,
+      "market_weight": 0.8075,
+      "model": 0.558,
       "notes": [
-        "simulated win probability 0.572",
-        "market consensus 0.883, weight 0.95"
+        "simulated win probability 0.558",
+        "market consensus 0.882, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T16:31:48.744063+00:00",
-      "probability": 0.8177847365311703,
+      "predicted_at": "2026-09-03T18:32:58.123187+00:00",
+      "probability": 0.833560914943525,
       "question": "Will A. Eala win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 82
+      "submission": 88
     },
     {
       "base_rate": 0.225,
@@ -105,21 +105,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "1ef28e16-8763-48e0-a09a-bd6c9e47d0c7",
       "market_weight": 0.0,
-      "model": 0.2595,
+      "model": 0.22175,
       "notes": [
-        "no usable market quote for this question"
+        "no usable market quote for this question",
+        "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T16:31:48.744063+00:00",
-      "probability": 0.257775,
+      "predicted_at": "2026-09-03T18:32:58.123187+00:00",
+      "probability": 0.18175,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 26
+      "submission": 13
     }
   ],
   "match_id": "39c6e47e-24af-495c-917b-a60ec7e3cb9b",

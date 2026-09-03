@@ -13,14 +13,14 @@
       "market": null,
       "market_id": "5e741d54-7fe0-4395-a4e0-a059ab5786d5",
       "market_weight": 0.0,
-      "model": 0.4424922254299828,
+      "model": 0.44290276582415344,
       "notes": [
         "total games: simulator 21.7, Pinnacle 23.0, used 22.5 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.434060+00:00",
-      "probability": 0.4424922254299828,
+      "predicted_at": "2026-09-03T18:32:58.127185+00:00",
+      "probability": 0.44290276582415344,
       "question": "Will the match last longer than 110 minutes?",
       "rbp": null,
       "settled_at": "",
@@ -42,7 +42,7 @@
         "exposure 75 service points from 23.0 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.434060+00:00",
+      "predicted_at": "2026-09-03T18:32:58.127185+00:00",
       "probability": 0.37934323300837264,
       "question": "Will N. Bartunkova record more aces than T. Maria?",
       "rbp": null,
@@ -65,7 +65,7 @@
         "exposure 75 service points from 23.0 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.434060+00:00",
+      "predicted_at": "2026-09-03T18:32:58.127185+00:00",
       "probability": 0.44145689509811736,
       "question": "Will N. Bartunkova record more double faults than T. Maria?",
       "rbp": null,
@@ -80,21 +80,21 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.6984219076423517,
+      "market": 0.6904761904490729,
       "market_id": "22a62a32-5907-4630-908d-6022866e6bd9",
       "market_weight": 0.8075,
       "model": 0.62075,
       "notes": [
         "simulated win probability 0.621",
-        "market consensus 0.698, weight 0.81"
+        "market consensus 0.690, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.434060+00:00",
-      "probability": 0.6800225196126592,
+      "predicted_at": "2026-09-03T18:32:58.127185+00:00",
+      "probability": 0.6736000940611553,
       "question": "Will N. Bartunkova win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 72
+      "submission": 71
     },
     {
       "base_rate": 0.225,
@@ -113,7 +113,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.434060+00:00",
+      "predicted_at": "2026-09-03T18:32:58.127185+00:00",
       "probability": 0.20024999999999998,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

@@ -19,7 +19,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.444993+00:00",
+      "predicted_at": "2026-09-03T18:32:58.132921+00:00",
       "probability": 0.5068627499034585,
       "question": "Will the match last longer than 80 minutes?",
       "rbp": null,
@@ -42,7 +42,7 @@
         "exposure 66 service points from 20.4 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.444993+00:00",
+      "predicted_at": "2026-09-03T18:32:58.132921+00:00",
       "probability": 0.17019233878300696,
       "question": "Will K. Rakhimova record more aces than A. Sabalenka?",
       "rbp": null,
@@ -65,7 +65,7 @@
         "exposure 66 service points from 20.4 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.444993+00:00",
+      "predicted_at": "2026-09-03T18:32:58.132921+00:00",
       "probability": 0.29088738304046274,
       "question": "Will K. Rakhimova record more double faults than A. Sabalenka?",
       "rbp": null,
@@ -88,7 +88,7 @@
         "threshold family defers to the base rate by policy"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.444993+00:00",
+      "predicted_at": "2026-09-03T18:32:58.132921+00:00",
       "probability": 0.5,
       "question": "Will K. Rakhimova commit more than 27 unforced errors?",
       "rbp": null,
@@ -111,7 +111,7 @@
         "serve rate: expected 0.627 vs threshold 0.770, sd 0.083 (0.060 sampling + 0.058 form)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.444993+00:00",
+      "predicted_at": "2026-09-03T18:32:58.132921+00:00",
       "probability": 0.03889706014471824,
       "question": "Will A. Sabalenka win more than 77% of points played on their first serve?",
       "rbp": null,
@@ -134,7 +134,7 @@
         "exposure 66 service points from 20.4 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.444993+00:00",
+      "predicted_at": "2026-09-03T18:32:58.132921+00:00",
       "probability": 0.4405301617096615,
       "question": "Will K. Rakhimova hit more winners than A. Sabalenka?",
       "rbp": null,
@@ -157,7 +157,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.444993+00:00",
+      "predicted_at": "2026-09-03T18:32:58.132921+00:00",
       "probability": 0.29825,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -180,7 +180,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.444993+00:00",
+      "predicted_at": "2026-09-03T18:32:58.132921+00:00",
       "probability": 0.791,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -204,7 +204,7 @@
         "market consensus 0.072, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.444993+00:00",
+      "predicted_at": "2026-09-03T18:32:58.132921+00:00",
       "probability": 0.08452294467802254,
       "question": "Will K. Rakhimova win?",
       "rbp": null,
@@ -228,7 +228,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.444993+00:00",
+      "predicted_at": "2026-09-03T18:32:58.132921+00:00",
       "probability": 0.13274999999999998,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

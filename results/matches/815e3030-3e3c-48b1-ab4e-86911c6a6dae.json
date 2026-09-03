@@ -13,14 +13,14 @@
       "market": null,
       "market_id": "e8d84463-c61b-428d-ae4e-397ee28826ca",
       "market_weight": 0.0,
-      "model": 0.46350721418612884,
+      "model": 0.46265562603904903,
       "notes": [
         "total games: simulator 21.9, Pinnacle 22.5, used 22.3 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.450936+00:00",
-      "probability": 0.46350721418612884,
+      "predicted_at": "2026-09-03T18:32:58.135720+00:00",
+      "probability": 0.46265562603904903,
       "question": "Will the match last longer than 100 minutes?",
       "rbp": null,
       "settled_at": "",
@@ -42,7 +42,7 @@
         "exposure 75 service points from 23.2 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.450936+00:00",
+      "predicted_at": "2026-09-03T18:32:58.135720+00:00",
       "probability": 0.5335590161436269,
       "question": "Will E. Alexandrova record more aces than M. Kostyuk?",
       "rbp": null,
@@ -65,7 +65,7 @@
         "exposure 75 service points from 23.2 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.450936+00:00",
+      "predicted_at": "2026-09-03T18:32:58.135720+00:00",
       "probability": 0.4575604470549754,
       "question": "Will E. Alexandrova record more double faults than M. Kostyuk?",
       "rbp": null,
@@ -88,7 +88,7 @@
         "threshold family defers to the base rate by policy"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.450936+00:00",
+      "predicted_at": "2026-09-03T18:32:58.135720+00:00",
       "probability": 0.5,
       "question": "Will E. Alexandrova commit more than 37 unforced errors?",
       "rbp": null,
@@ -111,7 +111,7 @@
         "serve rate: expected 0.569 vs threshold 0.660, sd 0.084 (0.061 sampling + 0.058 form)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.450936+00:00",
+      "predicted_at": "2026-09-03T18:32:58.135720+00:00",
       "probability": 0.14465345688560707,
       "question": "Will M. Kostyuk win more than 66% of points played on their first serve?",
       "rbp": null,
@@ -134,7 +134,7 @@
         "exposure 75 service points from 23.2 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.450936+00:00",
+      "predicted_at": "2026-09-03T18:32:58.135720+00:00",
       "probability": 0.47181034104738373,
       "question": "Will E. Alexandrova hit more winners than M. Kostyuk?",
       "rbp": null,
@@ -157,7 +157,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.450936+00:00",
+      "predicted_at": "2026-09-03T18:32:58.135720+00:00",
       "probability": 0.505,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -180,7 +180,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.450936+00:00",
+      "predicted_at": "2026-09-03T18:32:58.135720+00:00",
       "probability": 0.692,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -195,21 +195,21 @@
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.27505827504555064,
+      "market": 0.2675743420307402,
       "market_id": "7af8e268-db2e-428e-96c2-637ae0033b3f",
       "market_weight": 0.8075,
       "model": 0.4985,
       "notes": [
         "simulated win probability 0.498",
-        "market consensus 0.275, weight 0.81"
+        "market consensus 0.268, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.450936+00:00",
-      "probability": 0.31771663979811177,
+      "predicted_at": "2026-09-03T18:32:58.135720+00:00",
+      "probability": 0.31132243031371803,
       "question": "Will E. Alexandrova win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 28
+      "submission": 27
     },
     {
       "base_rate": 0.225,
@@ -228,7 +228,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.450936+00:00",
+      "predicted_at": "2026-09-03T18:32:58.135720+00:00",
       "probability": 0.19824999999999998,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

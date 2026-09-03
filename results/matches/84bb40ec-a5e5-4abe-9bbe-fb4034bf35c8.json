@@ -13,18 +13,18 @@
       "market": null,
       "market_id": "89887a83-4716-4836-a877-2ff3fc03feb1",
       "market_weight": 0.0,
-      "model": 0.4280164929295488,
+      "model": 0.43932015147872105,
       "notes": [
-        "total games: simulator 36.2, Pinnacle 40.0, used 38.5 at weight 0.60",
+        "total games: simulator 36.2, Pinnacle 40.5, used 38.8 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.447081+00:00",
-      "probability": 0.4280164929295488,
+      "predicted_at": "2026-09-03T18:32:58.137188+00:00",
+      "probability": 0.43932015147872105,
       "question": "Will the match last longer than 175 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 41
+      "submission": 42
     },
     {
       "base_rate": 0.46,
@@ -44,7 +44,7 @@
         "outcome coupling: P(win)=0.377, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.447081+00:00",
+      "predicted_at": "2026-09-03T18:32:58.137188+00:00",
       "probability": 0.6671216526360544,
       "question": "Will A. Bublik record more aces than T. Paul?",
       "rbp": null,
@@ -67,7 +67,7 @@
         "exposure 120 service points from 38.5 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.447081+00:00",
+      "predicted_at": "2026-09-03T18:32:58.137188+00:00",
       "probability": 0.8572215502074751,
       "question": "Will A. Bublik record more double faults than T. Paul?",
       "rbp": null,
@@ -90,7 +90,7 @@
         "threshold family defers to the base rate by policy"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.447081+00:00",
+      "predicted_at": "2026-09-03T18:32:58.137188+00:00",
       "probability": 0.5,
       "question": "Will A. Bublik commit more than 54 unforced errors?",
       "rbp": null,
@@ -113,7 +113,7 @@
         "serve rate: expected 0.668 vs threshold 0.720, sd 0.068 (0.045 sampling + 0.051 form)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.447081+00:00",
+      "predicted_at": "2026-09-03T18:32:58.137188+00:00",
       "probability": 0.21573846166617594,
       "question": "Will T. Paul win more than 72% of points played on their first serve?",
       "rbp": null,
@@ -136,7 +136,7 @@
         "exposure 120 service points from 38.5 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.447081+00:00",
+      "predicted_at": "2026-09-03T18:32:58.137188+00:00",
       "probability": 0.6181576697847948,
       "question": "Will A. Bublik hit more winners than T. Paul?",
       "rbp": null,
@@ -159,7 +159,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.447081+00:00",
+      "predicted_at": "2026-09-03T18:32:58.137188+00:00",
       "probability": 0.30825,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -182,7 +182,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.447081+00:00",
+      "predicted_at": "2026-09-03T18:32:58.137188+00:00",
       "probability": 0.74325,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -206,7 +206,7 @@
         "market consensus 0.377, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.447081+00:00",
+      "predicted_at": "2026-09-03T18:32:58.137188+00:00",
       "probability": 0.34980317653219467,
       "question": "Will A. Bublik win?",
       "rbp": null,
@@ -231,7 +231,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.447081+00:00",
+      "predicted_at": "2026-09-03T18:32:58.137188+00:00",
       "probability": 0.07836000000000001,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,

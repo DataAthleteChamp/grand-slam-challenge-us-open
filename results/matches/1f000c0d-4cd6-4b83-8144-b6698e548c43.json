@@ -9,22 +9,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "6def4d1d-bbc1-4ba9-a860-3d7117a6c5d8",
       "market_weight": 0.0,
-      "model": 0.7911238062069557,
+      "model": 0.7885362545199045,
       "notes": [
-        "total games: simulator 36.3, Pinnacle 35.0, used 35.5 at weight 0.60",
+        "total games: simulator 35.8, Pinnacle 35.0, used 35.3 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T16:31:48.739565+00:00",
-      "probability": 0.7874626158966078,
+      "predicted_at": "2026-09-03T18:32:58.126278+00:00",
+      "probability": 0.7885362545199045,
       "question": "Will the match last longer than 125 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 79
+      "submission": 84
     },
     {
       "base_rate": 0.46,
@@ -33,23 +33,23 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "73503e0b-5d85-4fb8-b279-3abaa75c3b50",
       "market_weight": 0.0,
-      "model": 0.8016846756064958,
+      "model": 0.8013431719269205,
       "notes": [
         "ace vulnerability: Marco Trungelliti 1.00, Alexander Blockx 0.82",
-        "exposure 120 service points from 38.5 games",
+        "exposure 119 service points from 38.0 games",
         "outcome coupling: P(win)=0.835, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T16:31:48.739565+00:00",
-      "probability": 0.8016846756064958,
+      "predicted_at": "2026-09-03T18:32:58.126278+00:00",
+      "probability": 0.8013431719269205,
       "question": "Will A. Blockx record more aces than M. Trungelliti?",
       "rbp": null,
       "settled_at": "",
-      "submission": 80
+      "submission": 85
     },
     {
       "base_rate": 0.421,
@@ -58,21 +58,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "b0a7e12d-a54a-4ceb-98ea-5f253a859c97",
       "market_weight": 0.0,
-      "model": 0.2588483080868718,
+      "model": 0.25902778860877684,
       "notes": [
-        "exposure 120 service points from 38.5 games"
+        "exposure 119 service points from 38.0 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T16:31:48.739565+00:00",
-      "probability": 0.2588483080868718,
+      "predicted_at": "2026-09-03T18:32:58.126278+00:00",
+      "probability": 0.25902778860877684,
       "question": "Will A. Blockx record more double faults than M. Trungelliti?",
       "rbp": null,
       "settled_at": "",
-      "submission": 26
+      "submission": 21
     },
     {
       "base_rate": 0.5,
@@ -81,22 +81,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
-      "lane": "honest",
-      "market": 0.8348316226312231,
+      "lane": "scenario",
+      "market": 0.8353385120546908,
       "market_id": "5b76df1b-5616-4f01-8baa-e135b4926d7f",
-      "market_weight": 0.95,
-      "model": 0.755,
+      "market_weight": 0.8075,
+      "model": 0.72175,
       "notes": [
-        "simulated win probability 0.755",
-        "market consensus 0.835, weight 0.95"
+        "simulated win probability 0.722",
+        "market consensus 0.835, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T16:31:48.739565+00:00",
-      "probability": 0.7816831365375454,
+      "predicted_at": "2026-09-03T18:32:58.126278+00:00",
+      "probability": 0.8096724481456192,
       "question": "Will A. Blockx win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 78
+      "submission": 86
     },
     {
       "base_rate": 0.487,
@@ -105,22 +105,23 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "ececf64f-a1c8-4c03-a755-e62cf7cfd3dd",
       "market_weight": 0.0,
-      "model": 0.42063999999999996,
+      "model": 0.39182,
       "notes": [
         "tiebreak iid correction x0.88 (ATP)",
-        "no usable market quote for this question"
+        "no usable market quote for this question",
+        "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T16:31:48.739565+00:00",
-      "probability": 0.423958,
+      "predicted_at": "2026-09-03T18:32:58.126278+00:00",
+      "probability": 0.35182,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 42
+      "submission": 32
     }
   ],
   "match_id": "1f000c0d-4cd6-4b83-8144-b6698e548c43",

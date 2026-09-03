@@ -9,22 +9,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "e2825672-e1cd-439e-a3e0-f5a0a39f637a",
       "market_weight": 0.0,
-      "model": 0.6503112826595869,
+      "model": 0.6390835355177826,
       "notes": [
-        "total games: simulator 22.3, Pinnacle 24.0, used 23.3 at weight 0.60",
+        "total games: simulator 21.8, Pinnacle 24.0, used 23.1 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T16:31:48.738773+00:00",
-      "probability": 0.6403157185266075,
+      "predicted_at": "2026-09-03T18:32:58.122501+00:00",
+      "probability": 0.6390835355177826,
       "question": "Will the match last longer than 95 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 64
+      "submission": 67
     },
     {
       "base_rate": 0.427,
@@ -33,22 +33,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "4b2fa595-18fa-4904-9111-30dc15d24303",
       "market_weight": 0.0,
-      "model": 0.36135572686014517,
+      "model": 0.3601605395807348,
       "notes": [
-        "exposure 77 service points from 23.5 games",
-        "base-rate pull 0.55 suppressed for aces_comparison"
+        "exposure 75 service points from 23.0 games",
+        "base-rate pull 0.48 suppressed for aces_comparison"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T16:31:48.738773+00:00",
-      "probability": 0.36135572686014517,
+      "predicted_at": "2026-09-03T18:32:58.122501+00:00",
+      "probability": 0.3601605395807348,
       "question": "Will C. Bucsa record more aces than H. Sakatsume?",
       "rbp": null,
       "settled_at": "",
-      "submission": 36
+      "submission": 33
     },
     {
       "base_rate": 0.433,
@@ -57,22 +57,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "3a1ad1ba-40ad-48a6-8b56-95b3606a9027",
       "market_weight": 0.0,
-      "model": 0.413985758596676,
+      "model": 0.4129633040767246,
       "notes": [
-        "exposure 77 service points from 23.5 games",
-        "base-rate pull 0.55 suppressed for double_faults_comparison"
+        "exposure 75 service points from 23.0 games",
+        "base-rate pull 0.48 suppressed for double_faults_comparison"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T16:31:48.738773+00:00",
-      "probability": 0.413985758596676,
+      "predicted_at": "2026-09-03T18:32:58.122501+00:00",
+      "probability": 0.4129633040767246,
       "question": "Will C. Bucsa record more double faults than H. Sakatsume?",
       "rbp": null,
       "settled_at": "",
-      "submission": 41
+      "submission": 39
     },
     {
       "base_rate": 0.5,
@@ -81,22 +81,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
-      "lane": "honest",
-      "market": 0.6367053998609467,
+      "lane": "scenario",
+      "market": 0.6333333333364904,
       "market_id": "90b5f48b-27cf-40e9-9fe9-df15a32160c4",
-      "market_weight": 0.95,
-      "model": 0.45775,
+      "market_weight": 0.8075,
+      "model": 0.463,
       "notes": [
-        "simulated win probability 0.458",
-        "market consensus 0.637, weight 0.95"
+        "simulated win probability 0.463",
+        "market consensus 0.633, weight 0.81"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T16:31:48.738773+00:00",
-      "probability": 0.6089830299160257,
+      "predicted_at": "2026-09-03T18:32:58.122501+00:00",
+      "probability": 0.5994675916602499,
       "question": "Will C. Bucsa win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 61
+      "submission": 62
     },
     {
       "base_rate": 0.225,
@@ -105,21 +105,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "6bc542f4-ad13-4185-8b4b-bf727604fd33",
       "market_weight": 0.0,
-      "model": 0.272,
+      "model": 0.2245,
       "notes": [
-        "no usable market quote for this question"
+        "no usable market quote for this question",
+        "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T16:31:48.738773+00:00",
-      "probability": 0.26965000000000006,
+      "predicted_at": "2026-09-03T18:32:58.122501+00:00",
+      "probability": 0.1845,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 27
+      "submission": 13
     }
   ],
   "match_id": "095a0f71-c7e3-400e-86f8-1a0f429dd498",
