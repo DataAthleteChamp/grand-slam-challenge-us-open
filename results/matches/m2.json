@@ -18,7 +18,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T16:39:58.422863+00:00",
+      "predicted_at": "2026-09-03T19:05:40.842587+00:00",
       "probability": 0.0993865871998326,
       "question": "Will the match last longer than 150 minutes?",
       "rbp": null,
@@ -41,7 +41,7 @@
         "exposure 76 service points from 23.4 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T16:39:58.422863+00:00",
+      "predicted_at": "2026-09-03T19:05:40.842587+00:00",
       "probability": 0.24881701518232827,
       "question": "Will Iga Swiatek record more aces than Aryna Sabalenka?",
       "rbp": null,
@@ -64,7 +64,7 @@
         "exposure 76 service points from 23.4 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T16:39:58.422863+00:00",
+      "predicted_at": "2026-09-03T19:05:40.842587+00:00",
       "probability": 0.2375909018705327,
       "question": "Will Iga Swiatek record more double faults than Aryna Sabalenka?",
       "rbp": null,
@@ -85,15 +85,16 @@
       "model": 0.6825,
       "notes": [
         "simulated win probability 0.682",
-        "market consensus 0.548, weight 0.95"
+        "market consensus 0.548, weight 0.95",
+        "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T16:39:58.422863+00:00",
-      "probability": 0.5465133702024261,
+      "predicted_at": "2026-09-03T19:05:40.842587+00:00",
+      "probability": 0.5626442308194171,
       "question": "Will Iga Swiatek win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 55
+      "submission": 56
     },
     {
       "base_rate": 0.02463636363636364,
@@ -111,7 +112,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T16:39:58.422863+00:00",
+      "predicted_at": "2026-09-03T19:05:40.842587+00:00",
       "probability": 0.021419318181818185,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,
