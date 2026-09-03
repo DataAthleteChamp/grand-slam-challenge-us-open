@@ -9,21 +9,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
-      "lane": "scenario",
+      "lane": "honest",
       "market": null,
       "market_id": "a8b831a6-8b29-4d37-bf45-f7d2ad445c76",
       "market_weight": 0.0,
-      "model": 0.621698831912527,
+      "model": 0.6350208417041285,
       "notes": [
-        "total games: simulator 19.8, Pinnacle 19.9, used 19.9 at weight 0.60"
+        "total games: simulator 20.1, Pinnacle 19.9, used 20.0 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T20:41:25.632733+00:00",
-      "probability": 0.621698831912527,
+      "predicted_at": "2026-09-03T23:08:08.914375+00:00",
+      "probability": 0.6390547996189222,
       "question": "Will the match last longer than 75 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 65
+      "submission": 64
     },
     {
       "base_rate": 0.427,
@@ -32,21 +32,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
-      "lane": "scenario",
+      "lane": "honest",
       "market": null,
       "market_id": "36f553d7-743e-40bf-acaf-4f531241aa0c",
       "market_weight": 0.0,
-      "model": 0.1260028953999022,
+      "model": 0.1255679914300123,
       "notes": [
-        "exposure 65 service points from 20.2 games"
+        "exposure 66 service points from 20.5 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T20:41:25.632733+00:00",
-      "probability": 0.1260028953999022,
+      "predicted_at": "2026-09-03T23:08:08.914375+00:00",
+      "probability": 0.1255679914300123,
       "question": "Will J. Bouzas Maneiro record more aces than E. Rybakina?",
       "rbp": null,
       "settled_at": "",
-      "submission": 8
+      "submission": 13
     },
     {
       "base_rate": 0.433,
@@ -55,21 +55,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
-      "lane": "scenario",
+      "lane": "honest",
       "market": null,
       "market_id": "f3092b0c-78af-4a50-b53b-897216d85fdf",
       "market_weight": 0.0,
-      "model": 0.46497517192311205,
+      "model": 0.46589456525399464,
       "notes": [
-        "exposure 65 service points from 20.2 games"
+        "exposure 66 service points from 20.5 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T20:41:25.632733+00:00",
-      "probability": 0.46497517192311205,
+      "predicted_at": "2026-09-03T23:08:08.914375+00:00",
+      "probability": 0.46589456525399464,
       "question": "Will J. Bouzas Maneiro record more double faults than E. Rybakina?",
       "rbp": null,
       "settled_at": "",
-      "submission": 46
+      "submission": 47
     },
     {
       "base_rate": 0.5,
@@ -78,23 +78,23 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
-      "lane": "scenario",
+      "lane": "honest",
       "market": null,
       "market_id": "0437ce62-1923-4605-a902-0b3e1e2b284b",
       "market_weight": 0.0,
-      "model": 0.1895,
+      "model": 0.132,
       "notes": [
-        "simulated win probability 0.190",
+        "simulated win probability 0.132",
         "no market quote; this is the family that most needs one",
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T20:41:25.632733+00:00",
-      "probability": 0.1850071885780496,
+      "predicted_at": "2026-09-03T23:08:08.914375+00:00",
+      "probability": 0.17676587973096095,
       "question": "Will J. Bouzas Maneiro win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 14
+      "submission": 18
     },
     {
       "base_rate": 0.225,
@@ -103,22 +103,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
-      "lane": "scenario",
+      "lane": "honest",
       "market": null,
       "market_id": "fd207ff8-2369-4574-ad46-55e873418236",
       "market_weight": 0.0,
-      "model": 0.2006595,
+      "model": 0.20662225,
       "notes": [
-        "tiebreak iid correction x1.04 (WTA)",
-        "scenario lane: experimental tiebreak shift -0.040"
+        "tiebreak iid correction x1.04 (WTA)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T20:41:25.632733+00:00",
-      "probability": 0.16065949999999998,
+      "predicted_at": "2026-09-03T23:08:08.914375+00:00",
+      "probability": 0.2075411375,
       "question": "Will the match feature at least 1 tiebreak?",
       "rbp": null,
       "settled_at": "",
-      "submission": 11
+      "submission": 21
     }
   ],
   "match_id": "5fd62ce3-cc04-4add-b912-d9c933528621",

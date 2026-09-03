@@ -146,10 +146,31 @@ def test_apply_lane_preserves_non_round_numbers():
     assert apply_lane(0.73, Family.TIEBREAK, "honest") == 73
 
 
-def test_unforced_errors_are_pinned_to_the_base_rate():
-    """The noisiest family must ignore a confident model."""
-    value = apply_lane(0.90, Family.UNFORCED_ERRORS, "scenario", base_rate=0.50)
-    assert 50 <= value <= 60, "an over-confident UE call must be pulled back"
+def test_unforced_errors_are_never_sharpened_by_the_experimental_lane():
+    """The noisiest family must not be made more confident by the second entry.
+
+    The pull toward the base rate now happens in the pricer, as an explicit
+    UNFORCED_MODEL_WEIGHT, because the official point feed showed the count is
+    genuinely driven by match length. What must still hold is that the
+    experimental lane cannot sharpen a model we have chosen to half-trust.
+    """
+    scenario = apply_lane(0.90, Family.UNFORCED_ERRORS, "scenario", base_rate=0.50)
+    honest = apply_lane(0.90, Family.UNFORCED_ERRORS, "honest", base_rate=0.50)
+    assert scenario == honest, "the experimental lane must not sharpen unforced errors"
+    assert scenario <= 90, "an unforced-error call must never be pushed past the model"
+
+
+def test_unforced_error_model_is_only_half_trusted():
+    """The pricer, not the lane, now carries the caution for this family."""
+    from bot.pricer import UNFORCED_MODEL_WEIGHT
+
+    assert 0.0 < UNFORCED_MODEL_WEIGHT <= 0.6, (
+        "unforced errors must stay majority-weighted toward the base rate until "
+        "a question in the family has actually settled"
+    )
+    base, model = 0.50, 0.90
+    shrunk = base + UNFORCED_MODEL_WEIGHT * (model - base)
+    assert abs(shrunk - base) <= abs(model - base) / 2
 
 
 def test_effective_entries_rewards_decorrelation():

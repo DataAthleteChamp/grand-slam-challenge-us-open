@@ -13,13 +13,13 @@
       "market": null,
       "market_id": "c4ca865b-c62d-4c04-8c50-e8808df45419",
       "market_weight": 0.0,
-      "model": 0.7542915139956766,
+      "model": 0.754522401783795,
       "notes": [
         "total games: simulator 34.9, Pinnacle 38.5, used 37.0 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T20:41:25.631428+00:00",
-      "probability": 0.7542915139956766,
+      "predicted_at": "2026-09-03T21:35:38.957643+00:00",
+      "probability": 0.754522401783795,
       "question": "Will the match last longer than 140 minutes?",
       "rbp": null,
       "settled_at": "",
@@ -43,7 +43,7 @@
         "outcome coupling: P(win)=0.693, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T20:41:25.631428+00:00",
+      "predicted_at": "2026-09-03T21:35:38.957643+00:00",
       "probability": 0.41153723909771545,
       "question": "Will A. de Minaur record more aces than B. van de Zandschulp?",
       "rbp": null,
@@ -66,7 +66,7 @@
         "exposure 111 service points from 35.6 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T20:41:25.631428+00:00",
+      "predicted_at": "2026-09-03T21:35:38.957643+00:00",
       "probability": 0.2782896637094085,
       "question": "Will A. de Minaur record more double faults than B. van de Zandschulp?",
       "rbp": null,
@@ -91,7 +91,7 @@
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T20:41:25.631428+00:00",
+      "predicted_at": "2026-09-03T21:35:38.957643+00:00",
       "probability": 0.7042572478883249,
       "question": "Will A. de Minaur win?",
       "rbp": null,
@@ -115,7 +115,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T20:41:25.631428+00:00",
+      "predicted_at": "2026-09-03T21:35:38.957643+00:00",
       "probability": 0.31139600000000006,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

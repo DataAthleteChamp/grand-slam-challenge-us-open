@@ -155,6 +155,11 @@ def shrink_to_base(probability: float, base_rate: float, weight: float) -> float
     return (1.0 - w) * float(probability) + w * float(base_rate)
 
 
+#: Families the experimental lane must never sharpen, because the pricer has
+#: already decided to trust their model only partially.
+NEVER_SHARPEN = frozenset({Family.UNFORCED_ERRORS})
+
+
 def apply_lane(
     probability: float,
     family: Family,
@@ -181,6 +186,12 @@ def apply_lane(
     if stat in DEFER_TO_BASE_RATE and base_rate is not None:
         p = shrink_to_base(p, base_rate, weight=0.85)
         lane = "honest"  # never sharpen a market we have chosen not to model
+
+    if family in NEVER_SHARPEN:
+        # The unforced-error model is deliberately only half trusted (see
+        # UNFORCED_MODEL_WEIGHT). Letting the experimental lane sharpen it on top
+        # would undo that caution on the noisiest family we price.
+        lane = "honest"
 
     temperature = LANE_TEMPERATURE.get(lane, 1.0)
     p = sharpen(p, temperature)

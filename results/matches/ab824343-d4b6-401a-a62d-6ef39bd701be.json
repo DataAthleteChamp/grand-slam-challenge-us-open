@@ -13,17 +13,17 @@
       "market": null,
       "market_id": "a69dcdfb-e96a-423f-893e-6a4f78e3a0e0",
       "market_weight": 0.0,
-      "model": 0.495312692646945,
+      "model": 0.5062770201743663,
       "notes": [
-        "total games: simulator 36.4, Pinnacle 38.5, used 37.7 at weight 0.60"
+        "total games: simulator 36.4, Pinnacle 38.9, used 37.9 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T20:41:25.630210+00:00",
-      "probability": 0.495312692646945,
+      "predicted_at": "2026-09-03T21:35:38.953941+00:00",
+      "probability": 0.5062770201743663,
       "question": "Will the match last longer than 170 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 49
+      "submission": 51
     },
     {
       "base_rate": 0.46,
@@ -43,7 +43,7 @@
         "outcome coupling: P(win)=0.570, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T20:41:25.630210+00:00",
+      "predicted_at": "2026-09-03T21:35:38.953941+00:00",
       "probability": 0.750020846702016,
       "question": "Will Z. Bergs record more aces than J. de Jong?",
       "rbp": null,
@@ -66,7 +66,7 @@
         "exposure 117 service points from 37.4 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T20:41:25.630210+00:00",
+      "predicted_at": "2026-09-03T21:35:38.953941+00:00",
       "probability": 0.3894666370232965,
       "question": "Will Z. Bergs record more double faults than J. de Jong?",
       "rbp": null,
@@ -91,7 +91,7 @@
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T20:41:25.630210+00:00",
+      "predicted_at": "2026-09-03T21:35:38.953941+00:00",
       "probability": 0.5752702729438547,
       "question": "Will Z. Bergs win?",
       "rbp": null,
@@ -115,7 +115,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T20:41:25.630210+00:00",
+      "predicted_at": "2026-09-03T21:35:38.953941+00:00",
       "probability": 0.39470500000000003,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

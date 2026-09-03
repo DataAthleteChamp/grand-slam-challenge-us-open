@@ -9,21 +9,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
-      "lane": "scenario",
+      "lane": "honest",
       "market": null,
       "market_id": "9ace04fa-eb24-47e3-af24-15a413059ee0",
       "market_weight": 0.0,
-      "model": 0.41019699699603235,
+      "model": 0.4389849227048307,
       "notes": [
-        "total games: simulator 21.0, Pinnacle 19.9, used 20.3 at weight 0.60"
+        "total games: simulator 21.9, Pinnacle 19.9, used 20.7 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T20:41:25.633099+00:00",
-      "probability": 0.41019699699603235,
+      "predicted_at": "2026-09-03T23:08:08.913723+00:00",
+      "probability": 0.43955567656958916,
       "question": "Will the match last longer than 95 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 39
+      "submission": 44
     },
     {
       "base_rate": 0.427,
@@ -32,21 +32,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
-      "lane": "scenario",
+      "lane": "honest",
       "market": null,
       "market_id": "43d918eb-89be-4aa4-b88f-3a871eec91e1",
       "market_weight": 0.0,
-      "model": 0.46584631152582545,
+      "model": 0.46813531833651284,
       "notes": [
-        "exposure 69 service points from 21.3 games"
+        "exposure 72 service points from 22.3 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T20:41:25.633099+00:00",
-      "probability": 0.46584631152582545,
+      "predicted_at": "2026-09-03T23:08:08.913723+00:00",
+      "probability": 0.46813531833651284,
       "question": "Will P. Badosa record more aces than C. Gauff?",
       "rbp": null,
       "settled_at": "",
-      "submission": 46
+      "submission": 47
     },
     {
       "base_rate": 0.433,
@@ -55,21 +55,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
-      "lane": "scenario",
+      "lane": "honest",
       "market": null,
       "market_id": "4b9a0a44-23f7-47d8-83c9-6ae4abb7e489",
       "market_weight": 0.0,
-      "model": 0.4435889877367134,
+      "model": 0.4453073475600961,
       "notes": [
-        "exposure 69 service points from 21.3 games"
+        "exposure 72 service points from 22.3 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T20:41:25.633099+00:00",
-      "probability": 0.4435889877367134,
+      "predicted_at": "2026-09-03T23:08:08.913723+00:00",
+      "probability": 0.4453073475600961,
       "question": "Will P. Badosa record more double faults than C. Gauff?",
       "rbp": null,
       "settled_at": "",
-      "submission": 43
+      "submission": 45
     },
     {
       "base_rate": 0.5,
@@ -78,23 +78,23 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
-      "lane": "scenario",
+      "lane": "honest",
       "market": null,
       "market_id": "25fd2e42-a9cc-4c17-a9bb-69fbae612ce2",
       "market_weight": 0.0,
-      "model": 0.406,
+      "model": 0.38275,
       "notes": [
-        "simulated win probability 0.406",
+        "simulated win probability 0.383",
         "no market quote; this is the family that most needs one",
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T20:41:25.633099+00:00",
-      "probability": 0.3984850951668306,
+      "predicted_at": "2026-09-03T23:08:08.913723+00:00",
+      "probability": 0.39001447465541594,
       "question": "Will P. Badosa win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 37
+      "submission": 39
     },
     {
       "base_rate": 0.225,
@@ -103,22 +103,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
-      "lane": "scenario",
+      "lane": "honest",
       "market": null,
       "market_id": "69cf3b3d-5310-4f32-9e88-44171d77e36e",
       "market_weight": 0.0,
-      "model": 0.23254724999999998,
+      "model": 0.27221249999999997,
       "notes": [
-        "tiebreak iid correction x1.04 (WTA)",
-        "scenario lane: experimental tiebreak shift -0.040"
+        "tiebreak iid correction x1.04 (WTA)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T20:41:25.633099+00:00",
-      "probability": 0.19254724999999998,
+      "predicted_at": "2026-09-03T23:08:08.913723+00:00",
+      "probability": 0.26985187499999996,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 14
+      "submission": 27
     }
   ],
   "match_id": "a4c21be1-a8ea-4d8a-80d0-3cc7afcc0dfa",

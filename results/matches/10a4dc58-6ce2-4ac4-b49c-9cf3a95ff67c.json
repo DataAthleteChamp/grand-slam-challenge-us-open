@@ -9,17 +9,17 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
-      "lane": "scenario",
+      "lane": "honest",
       "market": null,
       "market_id": "0dbf17e4-cb84-4775-a7b1-198503940218",
       "market_weight": 0.0,
-      "model": 0.6389049428184914,
+      "model": 0.6780710403988012,
       "notes": [
-        "total games: simulator 36.2, Pinnacle 38.5, used 37.6 at weight 0.60"
+        "total games: simulator 37.7, Pinnacle 39.0, used 38.5 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T20:41:25.628307+00:00",
-      "probability": 0.6389049428184914,
+      "predicted_at": "2026-09-03T23:08:08.912217+00:00",
+      "probability": 0.6682724883788611,
       "question": "Will the match last longer than 155 minutes?",
       "rbp": null,
       "settled_at": "",
@@ -32,23 +32,23 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
-      "lane": "scenario",
+      "lane": "honest",
       "market": null,
       "market_id": "740262a0-651b-4c0c-90e7-aa0fb14b17a2",
       "market_weight": 0.0,
-      "model": 0.4145193618373223,
+      "model": 0.4114326747328151,
       "notes": [
         "ace vulnerability: Michael Zheng 0.99, Yunchaokete Bu 1.16",
-        "exposure 116 service points from 37.2 games",
-        "outcome coupling: P(win)=0.463, delta=+0.60"
+        "exposure 121 service points from 38.7 games",
+        "outcome coupling: P(win)=0.450, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T20:41:25.628307+00:00",
-      "probability": 0.4145193618373223,
+      "predicted_at": "2026-09-03T23:08:08.912217+00:00",
+      "probability": 0.4114326747328151,
       "question": "Will Y. Bu record more aces than M. Zheng?",
       "rbp": null,
       "settled_at": "",
-      "submission": 39
+      "submission": 41
     },
     {
       "base_rate": 0.421,
@@ -57,21 +57,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
-      "lane": "scenario",
+      "lane": "honest",
       "market": null,
       "market_id": "0e13aa26-18d7-4abc-8380-c05c1c744b23",
       "market_weight": 0.0,
-      "model": 0.35657364197096186,
+      "model": 0.35730754816678784,
       "notes": [
-        "exposure 116 service points from 37.2 games"
+        "exposure 121 service points from 38.7 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T20:41:25.628307+00:00",
-      "probability": 0.35657364197096186,
+      "predicted_at": "2026-09-03T23:08:08.912217+00:00",
+      "probability": 0.35730754816678784,
       "question": "Will Y. Bu record more double faults than M. Zheng?",
       "rbp": null,
       "settled_at": "",
-      "submission": 32
+      "submission": 36
     },
     {
       "base_rate": 0.5,
@@ -80,19 +80,19 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
-      "lane": "scenario",
+      "lane": "honest",
       "market": null,
       "market_id": "e2bc0d62-b1f7-42a3-ba29-c74029f721fd",
       "market_weight": 0.0,
-      "model": 0.4625,
+      "model": 0.44975,
       "notes": [
-        "simulated win probability 0.463",
+        "simulated win probability 0.450",
         "no market quote; this is the family that most needs one",
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T20:41:25.628307+00:00",
-      "probability": 0.45928758357129407,
+      "predicted_at": "2026-09-03T23:08:08.912217+00:00",
+      "probability": 0.4525781422893757,
       "question": "Will Y. Bu win?",
       "rbp": null,
       "settled_at": "",
@@ -105,22 +105,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
-      "lane": "scenario",
+      "lane": "honest",
       "market": null,
       "market_id": "5779014b-f7c1-45fe-8d3a-d7c70357fe7d",
       "market_weight": 0.0,
-      "model": 0.416545,
+      "model": 0.448098,
       "notes": [
-        "tiebreak iid correction x0.91 (ATP)",
-        "scenario lane: experimental tiebreak shift -0.040"
+        "tiebreak iid correction x0.91 (ATP)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T20:41:25.628307+00:00",
-      "probability": 0.376545,
+      "predicted_at": "2026-09-03T23:08:08.912217+00:00",
+      "probability": 0.45004310000000003,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 35
+      "submission": 45
     }
   ],
   "match_id": "10a4dc58-6ce2-4ac4-b49c-9cf3a95ff67c",

@@ -171,3 +171,40 @@ RBP for it, so instead we checked the model's *predictive distribution* against 
 real player-matches. A family whose simulated spread matches reality and whose level is
 unbiased will beat a crowd that is anchoring on round numbers; one that does not, will not.
 That check is available before a single question settles.
+
+## Unforced errors: the defer policy was right about the player, wrong about the match
+
+The question is *"Will X commit more than N unforced errors?"* — a per-player count threshold.
+We were answering **50 to every one of them**, which guarantees zero skill on 16 live
+questions at 2x. The policy existed because the forced/unforced call is subjective.
+
+Measured on the **official US Open point feed** (`data/raw/pointbypoint`, 1,254 matches /
+2,508 player-matches, 2019–24) — the same source these questions settle on:
+
+| finding | value | reading |
+|---|---|---|
+| errors per point, official | 0.1768 | vs 0.175–0.195 volunteer-charted, only **4.4% apart**, so the roster's rates are usable |
+| corr(points in match, errors) | **0.715** | the count is driven by match length, which we forecast |
+| player's own error rate, ICC | **0.178** | barely repeatable — the subjectivity argument is correct about the *player* |
+| AUC from realised points | 0.854 | an oracle: we never know realised points |
+| sd of realised points | 69 | against a simulator sd of ~57 (ATP) for a *fixed* matchup |
+
+So the length term is real and the player term is not, and the oracle AUC overstates the
+usable edge because most length variation is irreducible. The model therefore ships at
+**half weight** (`UNFORCED_MODEL_WEIGHT = 0.50`) and the experimental lane is forbidden from
+sharpening it (`NEVER_SHARPEN`). Live prices move to roughly 37–63 rather than a flat 50.
+
+Two double-shrink bugs were caught while doing this, both of which would have silently
+undone the change: `DEFER_TO_BASE_RATE` stacking an 0.85 pull on top (leaving 7% of the
+model) and the confidence pull stacking a further 0.45 (leaving 22%). There is now exactly
+one knob.
+
+**Revisit the moment any unforced-error question settles** — this is the least-validated
+thing we ship, and 0.50 was chosen as a risk posture, not measured.
+
+## Also confirmed for the winners family
+
+Official feed: P(winners tie) = **3.1%** and P(unforced tie) = 2.4%, against 15.8% for double
+faults. Tie handling therefore barely matters for "more winners than", unlike the count
+families where it moves the fair price by ~8 points. P(player 1 has more winners) = 0.4896,
+so there is no orientation bias to correct.

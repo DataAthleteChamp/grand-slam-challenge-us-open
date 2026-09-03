@@ -13,17 +13,17 @@
       "market": null,
       "market_id": "21b60303-6a1a-425b-8300-c81986c08c1a",
       "market_weight": 0.0,
-      "model": 0.543854216286845,
+      "model": 0.5442960306959297,
       "notes": [
         "total games: simulator 20.7, Pinnacle 20.5, used 20.6 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T20:41:25.639180+00:00",
-      "probability": 0.543854216286845,
+      "predicted_at": "2026-09-03T21:35:38.960054+00:00",
+      "probability": 0.5442960306959297,
       "question": "Will the match last longer than 85 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 55
+      "submission": 56
     },
     {
       "base_rate": 0.427,
@@ -41,7 +41,7 @@
         "exposure 69 service points from 21.3 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T20:41:25.639180+00:00",
+      "predicted_at": "2026-09-03T21:35:38.960054+00:00",
       "probability": 0.37447676072232,
       "question": "Will L. Fernandez record more aces than J. Pegula?",
       "rbp": null,
@@ -64,7 +64,7 @@
         "exposure 69 service points from 21.3 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T20:41:25.639180+00:00",
+      "predicted_at": "2026-09-03T21:35:38.960054+00:00",
       "probability": 0.5404116517359493,
       "question": "Will L. Fernandez record more double faults than J. Pegula?",
       "rbp": null,
@@ -87,7 +87,7 @@
         "threshold family defers to the base rate by policy"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T20:41:25.639180+00:00",
+      "predicted_at": "2026-09-03T21:35:38.960054+00:00",
       "probability": 0.5,
       "question": "Will L. Fernandez commit more than 19 unforced errors?",
       "rbp": null,
@@ -97,7 +97,7 @@
     {
       "base_rate": 0.02916175542788558,
       "brier": null,
-      "confidence": 0.749509537326889,
+      "confidence": 0.48741553886597566,
       "crowd": null,
       "crowd_brier": null,
       "family": "first_serve_comparison",
@@ -105,17 +105,17 @@
       "market": null,
       "market_id": "650c1b55-4031-431b-a4d4-5944807dd384",
       "market_weight": 0.0,
-      "model": 0.055017243568441065,
+      "model": 0.29127555925880766,
       "notes": [
-        "serve rate: expected 0.607 vs threshold 0.740, sd 0.084 (0.061 sampling + 0.058 form)"
+        "first-serve rate: expected 0.689 vs threshold 0.740, sd 0.093 (0.073 sampling on 40 first serves + 0.058 form)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T20:41:25.639180+00:00",
-      "probability": 0.051447530624512475,
+      "predicted_at": "2026-09-03T21:35:38.960054+00:00",
+      "probability": 0.17608384750711403,
       "question": "Will J. Pegula win more than 74% of points played on their first serve?",
       "rbp": null,
       "settled_at": "",
-      "submission": 3
+      "submission": 13
     },
     {
       "base_rate": 0.484,
@@ -133,7 +133,7 @@
         "exposure 69 service points from 21.3 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T20:41:25.639180+00:00",
+      "predicted_at": "2026-09-03T21:35:38.960054+00:00",
       "probability": 0.6549712389755652,
       "question": "Will L. Fernandez hit more winners than J. Pegula?",
       "rbp": null,
@@ -154,7 +154,7 @@
       "model": 0.27975,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-03T20:41:25.639180+00:00",
+      "predicted_at": "2026-09-03T21:35:38.960054+00:00",
       "probability": 0.27975,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -175,7 +175,7 @@
       "model": 0.655,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-03T20:41:25.639180+00:00",
+      "predicted_at": "2026-09-03T21:35:38.960054+00:00",
       "probability": 0.655,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -200,7 +200,7 @@
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T20:41:25.639180+00:00",
+      "predicted_at": "2026-09-03T21:35:38.960054+00:00",
       "probability": 0.2914914365489887,
       "question": "Will L. Fernandez win?",
       "rbp": null,
@@ -224,7 +224,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T20:41:25.639180+00:00",
+      "predicted_at": "2026-09-03T21:35:38.960054+00:00",
       "probability": 0.192288,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

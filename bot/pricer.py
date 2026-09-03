@@ -195,7 +195,14 @@ MARKET_WEIGHT = {
 # The blanket version of this change is NOT safe: pooled over all families it
 # scores -0.52 [-1.31,+0.28], because match winner dominates the pool.
 NO_BASE_RATE_PULL = frozenset(
-    {Family.ACES_COMPARISON, Family.DOUBLE_FAULTS_COMPARISON}
+    {
+        Family.ACES_COMPARISON,
+        Family.DOUBLE_FAULTS_COMPARISON,
+        # Unforced errors carry their own explicit shrink, UNFORCED_MODEL_WEIGHT.
+        # Letting the confidence pull apply as well stacked two shrinks and left
+        # only 22% of the model, rather than the 50% that constant advertises.
+        Family.UNFORCED_ERRORS,
+    }
 )
 
 
@@ -229,6 +236,32 @@ NO_BASE_RATE_PULL = frozenset(
 # of them significantly: double faults -1.05 [-2.02,-0.13] and duration -1.25 [-2.40,-0.10].
 # Those models are not blended with a sharp market, so they are not under-confident.
 EXTREMISE_ALPHA = {Family.MATCH_WINNER: 1.35}
+
+#: Unforced-error count model, all measured on the OFFICIAL US Open point feed
+#: (data/raw/pointbypoint, 1,254 matches / 2,508 player-matches, 2019-2024) -
+#: the same source these questions settle on, not volunteer charting.
+#:
+#: Residual sd of the error COUNT once match length and the player's own rate are
+#: known. Errors per point is 0.1768 officially, against 0.175-0.195 in the Match
+#: Charting Project, so the volunteer-charted rates in the roster are usable.
+UNFORCED_RESIDUAL_SD = {"ATP": 8.86, "WTA": 8.14}
+
+#: Our simulator's own sd of total games for a fixed matchup, i.e. the part of
+#: match length that is irreducible rather than forecastable.
+UNFORCED_GAMES_SD = {"ATP": 8.7, "WTA": 5.6}
+
+#: Points per game, for converting a games forecast into a points forecast.
+POINTS_PER_GAME = 6.6
+
+#: How much of the model to actually use. corr(points, errors) is 0.715 on the
+#: official feed so the length signal is real, but a player's own error rate has
+#: an ICC of only 0.178, and the oracle AUC of 0.854 is computed from REALISED
+#: points, which we never know - most of the length variation is irreducible.
+#: Nothing in this family has settled yet, so half weight is the honest posture:
+#: it keeps the direction of a measured effect while bounding the damage if the
+#: subjectivity argument turns out to dominate after all.
+UNFORCED_MODEL_WEIGHT = 0.50
+
 
 
 @dataclass
@@ -586,16 +619,56 @@ class Pricer:
         return probability, min(0.75, 0.35 + 0.25 * margin)
 
     def _price_threshold(self, spec, context, base, market_id, notes) -> PricedQuestion:
-        """Threshold questions, currently only unforced errors.
+        """Unforced-error count thresholds, e.g. 'more than 30 unforced errors'.
 
-        The family defers to the base rate by policy rather than by weakness of
-        the model: the forced/unforced call is a subjective human judgement with
-        roughly three-or-four-in-ten inter-rater agreement, so the classification
-        noise swamps any real signal.  This is the tennis analogue of the foul
-        markets that finished 125 relative points down in the predecessor event.
+        Historically this family answered the base rate outright, because the
+        forced/unforced call is a subjective judgement with roughly three-or-four
+        in ten inter-rater agreement - the tennis analogue of the foul markets
+        that finished 125 relative points down in the predecessor event.
+
+        That reasoning is right about the PLAYER but wrong about the MATCH. Two
+        things are now measured on the official US Open point feed, which is the
+        source the questions actually settle on:
+
+        * the count scales with match length, corr(points, errors) = 0.715 over
+          2,508 player-matches, and we already forecast match length;
+        * a player's own error RATE is barely repeatable, ICC 0.178, exactly as
+          the subjectivity argument predicts.
+
+        So the length term is used and the player term is shrunk hard. The result
+        is then pulled most of the way back to the base rate by
+        UNFORCED_MODEL_WEIGHT, because none of this has been validated against a
+        settled question yet.
         """
-        notes.append("threshold family defers to the base rate by policy")
-        return self._finalise(spec, base, base, base, None, 0.0, market_id, notes, context, 0.3)
+        threshold = spec.threshold
+        subject, _ = self._orient(spec, context)
+        points = context.expected_service_points * 2.0
+        rate = getattr(subject, "unforced_rate", None) if subject is not None else None
+
+        if threshold is None or subject is None or not rate or points <= 0:
+            notes.append("no usable error rate or threshold; deferring to the base rate")
+            return self._finalise(
+                spec, base, base, base, None, 0.0, market_id, notes, context, 0.3
+            )
+
+        tour = context.tour if context.tour in UNFORCED_RESIDUAL_SD else "ATP"
+        expected = rate * points
+        # Two sources of error: how many points the match runs to, and how many
+        # mistakes the player makes in them. Both measured on the official feed.
+        length_sd = rate * UNFORCED_GAMES_SD.get(tour, 8.0) * POINTS_PER_GAME
+        sd = math.sqrt(UNFORCED_RESIDUAL_SD[tour] ** 2 + length_sd**2)
+
+        # Continuity correction: "more than N" on an integer count.
+        model = 1.0 - _normal_cdf((float(threshold) + 0.5 - expected) / sd)
+        probability = base + UNFORCED_MODEL_WEIGHT * (model - base)
+        notes.append(
+            f"unforced: rate {rate:.4f} x {points:.0f} points = {expected:.1f} "
+            f"vs threshold {threshold}, sd {sd:.1f}, model {model:.3f} "
+            f"shrunk {UNFORCED_MODEL_WEIGHT:.0%} toward the base rate"
+        )
+        return self._finalise(
+            spec, probability, base, model, None, 0.0, market_id, notes, context, 0.45
+        )
 
     # ----------------------------------------------------------------- helpers
 

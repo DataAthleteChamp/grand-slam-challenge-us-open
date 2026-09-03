@@ -133,7 +133,15 @@ FATIGUE_ACE_DELTA = {
 #: on the forced/unforced call only three or four times in ten, so the classification
 #: noise swamps any real signal.  This is the tennis analogue of the fouls market
 #: that cost 125 relative points in the Probability Cup.
-DEFER_TO_BASE_RATE = frozenset({"unforced_errors"})
+#: Families pinned near their base rate because measurement noise dominates.
+#:
+#: Unforced errors USED to be here. It was removed once the official US Open
+#: point feed showed the count is driven by match length (corr 0.715) even though
+#: the player's own rate is barely repeatable (ICC 0.178). The caution is still
+#: applied, but as a single explicit knob, UNFORCED_MODEL_WEIGHT in the pricer,
+#: rather than as a second shrink here - stacking both left only 7% of the model.
+DEFER_TO_BASE_RATE: frozenset[str] = frozenset()
+
 
 
 def structural(tour: str, matchup: str = "all") -> StructuralRates:

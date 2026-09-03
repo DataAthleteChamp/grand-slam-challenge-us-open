@@ -13,13 +13,13 @@
       "market": null,
       "market_id": "c40d06a2-2a93-4ebf-8b13-f7ce1d2b46a1",
       "market_weight": 0.0,
-      "model": 0.6134217580309141,
+      "model": 0.6129957592493639,
       "notes": [
         "total games: simulator 21.5, Pinnacle 24.1, used 23.1 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T20:41:25.636029+00:00",
-      "probability": 0.6134217580309141,
+      "predicted_at": "2026-09-03T21:35:38.965240+00:00",
+      "probability": 0.6129957592493639,
       "question": "Will the match last longer than 95 minutes?",
       "rbp": null,
       "settled_at": "",
@@ -41,7 +41,7 @@
         "exposure 71 service points from 21.9 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T20:41:25.636029+00:00",
+      "predicted_at": "2026-09-03T21:35:38.965240+00:00",
       "probability": 0.302698791224842,
       "question": "Will D. Shnaider record more aces than T. Townsend?",
       "rbp": null,
@@ -64,7 +64,7 @@
         "exposure 71 service points from 21.9 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T20:41:25.636029+00:00",
+      "predicted_at": "2026-09-03T21:35:38.965240+00:00",
       "probability": 0.41280296850393994,
       "question": "Will D. Shnaider record more double faults than T. Townsend?",
       "rbp": null,
@@ -87,7 +87,7 @@
         "threshold family defers to the base rate by policy"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T20:41:25.636029+00:00",
+      "predicted_at": "2026-09-03T21:35:38.965240+00:00",
       "probability": 0.5,
       "question": "Will D. Shnaider commit more than 30 unforced errors?",
       "rbp": null,
@@ -97,7 +97,7 @@
     {
       "base_rate": 0.11140290675105195,
       "brier": null,
-      "confidence": 0.6124173171622438,
+      "confidence": 0.37461788593301976,
       "crowd": null,
       "crowd_brier": null,
       "family": "first_serve_comparison",
@@ -105,17 +105,17 @@
       "market": null,
       "market_id": "84d3257b-4921-4357-a10a-a2680c4bca0e",
       "market_weight": 0.0,
-      "model": 0.14693509880825928,
+      "model": 0.46077893346593035,
       "notes": [
-        "serve rate: expected 0.592 vs threshold 0.680, sd 0.084 (0.061 sampling + 0.058 form)"
+        "first-serve rate: expected 0.671 vs threshold 0.680, sd 0.094 (0.074 sampling on 40 first serves + 0.058 form)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T20:41:25.636029+00:00",
-      "probability": 0.13642751594350572,
+      "predicted_at": "2026-09-03T21:35:38.965240+00:00",
+      "probability": 0.26191779155319883,
       "question": "Will T. Townsend win more than 68% of points played on their first serve?",
       "rbp": null,
       "settled_at": "",
-      "submission": 9
+      "submission": 22
     },
     {
       "base_rate": 0.484,
@@ -133,7 +133,7 @@
         "exposure 71 service points from 21.9 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T20:41:25.636029+00:00",
+      "predicted_at": "2026-09-03T21:35:38.965240+00:00",
       "probability": 0.26284541693562563,
       "question": "Will D. Shnaider hit more winners than T. Townsend?",
       "rbp": null,
@@ -154,7 +154,7 @@
       "model": 0.3045,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-03T20:41:25.636029+00:00",
+      "predicted_at": "2026-09-03T21:35:38.965240+00:00",
       "probability": 0.3045,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -175,7 +175,7 @@
       "model": 0.5875,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-03T20:41:25.636029+00:00",
+      "predicted_at": "2026-09-03T21:35:38.965240+00:00",
       "probability": 0.5875,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -200,7 +200,7 @@
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T20:41:25.636029+00:00",
+      "predicted_at": "2026-09-03T21:35:38.965240+00:00",
       "probability": 0.5081502991845497,
       "question": "Will D. Shnaider win?",
       "rbp": null,
@@ -224,7 +224,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T20:41:25.636029+00:00",
+      "predicted_at": "2026-09-03T21:35:38.965240+00:00",
       "probability": 0.23506424999999995,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
