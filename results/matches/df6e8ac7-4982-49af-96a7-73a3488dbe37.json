@@ -9,22 +9,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
-      "lane": "scenario",
+      "lane": "honest",
       "market": null,
       "market_id": "861853b9-d110-44bd-abbc-4ae989518494",
       "market_weight": 0.0,
-      "model": 0.7024320905154492,
+      "model": 0.7134597589595297,
       "notes": [
-        "total games: simulator 21.8, Pinnacle 19.9, used 20.6 at weight 0.60",
+        "total games: simulator 22.1, Pinnacle 19.9, used 20.8 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.426868+00:00",
-      "probability": 0.7024320905154492,
+      "predicted_at": "2026-09-03T16:31:48.743571+00:00",
+      "probability": 0.7135717710115533,
       "question": "Will the match last longer than 75 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 75
+      "submission": 71
     },
     {
       "base_rate": 0.427,
@@ -33,21 +33,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
-      "lane": "scenario",
+      "lane": "honest",
       "market": null,
       "market_id": "549a1b9c-3017-4294-9219-32f1d46b4787",
       "market_weight": 0.0,
-      "model": 0.39985655237019097,
+      "model": 0.4003645905243303,
       "notes": [
-        "exposure 75 service points from 23.0 games"
+        "exposure 76 service points from 23.4 games",
+        "base-rate pull 0.55 suppressed for aces_comparison"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.426868+00:00",
-      "probability": 0.41295326585157377,
+      "predicted_at": "2026-09-03T16:31:48.743571+00:00",
+      "probability": 0.4003645905243303,
       "question": "Will A. Anisimova record more aces than L. Tagger?",
       "rbp": null,
       "settled_at": "",
-      "submission": 39
+      "submission": 40
     },
     {
       "base_rate": 0.433,
@@ -56,21 +57,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
-      "lane": "scenario",
+      "lane": "honest",
       "market": null,
       "market_id": "302e77d3-d5ee-49b8-8896-00ce083e45b0",
       "market_weight": 0.0,
-      "model": 0.48465672692237327,
+      "model": 0.4854175307688055,
       "notes": [
-        "exposure 75 service points from 23.0 games"
+        "exposure 76 service points from 23.4 games",
+        "base-rate pull 0.55 suppressed for double_faults_comparison"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.426868+00:00",
-      "probability": 0.45973235618232816,
+      "predicted_at": "2026-09-03T16:31:48.743571+00:00",
+      "probability": 0.4854175307688055,
       "question": "Will A. Anisimova record more double faults than L. Tagger?",
       "rbp": null,
       "settled_at": "",
-      "submission": 45
+      "submission": 49
     },
     {
       "base_rate": 0.5,
@@ -79,22 +81,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
-      "lane": "scenario",
-      "market": 0.8256895978541405,
+      "lane": "honest",
+      "market": 0.8273504274087227,
       "market_id": "276cfddd-8d7f-4327-aa60-a8e95f9c0a0c",
-      "market_weight": 0.8075,
-      "model": 0.6565,
+      "market_weight": 0.95,
+      "model": 0.6815,
       "notes": [
-        "simulated win probability 0.656",
-        "market consensus 0.826, weight 0.81"
+        "simulated win probability 0.681",
+        "market consensus 0.827, weight 0.95"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.426868+00:00",
-      "probability": 0.792367215495497,
+      "predicted_at": "2026-09-03T16:31:48.743571+00:00",
+      "probability": 0.7732882768340028,
       "question": "Will A. Anisimova win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 84
+      "submission": 77
     },
     {
       "base_rate": 0.225,
@@ -103,22 +105,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
-      "lane": "scenario",
+      "lane": "honest",
       "market": null,
       "market_id": "ba24f428-7788-4d63-b528-8a8a43f95399",
       "market_weight": 0.0,
-      "model": 0.25725,
+      "model": 0.27425,
       "notes": [
-        "no usable market quote for this question",
-        "scenario lane: experimental tiebreak shift -0.040"
+        "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.426868+00:00",
-      "probability": 0.21724999999999997,
+      "predicted_at": "2026-09-03T16:31:48.743571+00:00",
+      "probability": 0.27178749999999996,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 17
+      "submission": 27
     }
   ],
   "match_id": "df6e8ac7-4982-49af-96a7-73a3488dbe37",

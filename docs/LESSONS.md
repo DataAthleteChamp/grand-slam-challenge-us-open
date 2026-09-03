@@ -406,3 +406,38 @@ opposite - and the live test was right. Our working order of evidence:
 
 Two independent hold-outs remain mandatory: four separate results this week would have
 passed a single hold-out and were false.
+
+## Shrinking toward a base rate is only safe when the base rate knows something
+
+The pricer pulled every low-confidence answer toward the population base rate, on the
+reasonable-sounding principle that the system should get less opinionated as it gets less
+informed. Replaying settled questions against their own unshrunk models shows that principle
+is wrong as stated. What matters is not how confident the model is, but **whether the thing
+you fall back to carries information the model lacks.**
+
+| fallback | de-shrinking is worth |
+|---|---|
+| de-vigged match-winner market | **−5.12** [−7.48,−2.72] — the market is better than us, keep the pull |
+| population base rate, thin record (conf 0.45) | **+2.28** [+0.47,+4.01] |
+| population base rate, mild pull (conf 0.75–0.90) | **+0.90** [+0.42,+1.40] |
+| pooled over all families | −0.52 [−1.31,+0.28] — **the aggregate hides both effects** |
+
+This is the Murphy decomposition again: we are already better calibrated than the crowd on
+the count families, so a pull toward an uninformative constant buys no calibration and spends
+resolution. Against a *market* quote the pull is not a shrink at all — it is an ensemble with
+a better forecaster, and it earns its place.
+
+Two process points, both of which nearly cost us:
+
+- **The pooled number was meaningless.** De-shrinking scores −0.52 overall and +2.28 on the
+  slice that matters. Had we tested only the blanket version we would have concluded the idea
+  was dead. Always split by *mechanism*, not just by family.
+- **Do not claim a gain twice.** The first pooled estimate (+1.88/q) was inflated because it
+  included `conf=0.10` rows whose pull had already been removed by setting `COUNT_CONFIDENCE`
+  to 1.00. Netting that out cut the honest estimate to ~+1.4/q on affected rows, roughly
+  +110 to +215 RBP over the remaining draw. When several fixes touch the same code path,
+  attribute each one only to the rows it is the first to change.
+
+Also confirmed while chasing this: **the API exposes `crowd_value` only on settled markets.**
+Open markets return no consensus field at all, so deferring to the crowd is not merely against
+the rules of thumb, it is impossible. The honest-probability rule costs us nothing.

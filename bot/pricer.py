@@ -167,6 +167,35 @@ MARKET_WEIGHT = {
 }
 
 
+# Families exempt from the low-confidence pull toward the base rate.
+#
+# The pull is right when the fallback carries information the model lacks: for
+# match winner the "base" is a de-vigged market quote, and de-shrinking there
+# costs -5.12 RBP/q [-7.48,-2.72] because it discards the market. For the count
+# comparisons the fallback is only the population base rate, so the pull buys no
+# calibration and spends resolution - what the Murphy decomposition predicts,
+# since we are already better calibrated than the crowd on this family.
+#
+# Measured by replaying each settled submission against its own unshrunk model.
+# Reported per pull size, because the conf=0.10 pulls were already removed by
+# setting COUNT_CONFIDENCE to 1.00 and their +5.01 must NOT be claimed here:
+#   conf 0.45 (thin record, <20 matches)  +2.28 [+0.47,+4.01]   n=26  <- new
+#   conf 0.75-0.90                        +0.90 [+0.42,+1.40]   n=49  <- new
+#   conf 0.10 (already banked elsewhere)  +5.01 [+1.91,+8.24]   n=23
+# Hold-outs on the conf=0.45 slice are all positive but only half significant:
+#   time  EARLY +3.61 [+1.29,+5.80]   LATE +0.95 [-1.75,+3.40]
+#   family aces +4.42 [+2.10,+6.38]   dfs  +0.14 [-2.21,+2.52]
+#   lane  scenario replication +2.90 [+1.08,+4.81]
+# So the direction is consistent across every split and the mechanism is
+# understood, but the effect size is uncertain; treat +1.4/q as the estimate.
+#
+# The blanket version of this change is NOT safe: pooled over all families it
+# scores -0.52 [-1.31,+0.28], because match winner dominates the pool.
+NO_BASE_RATE_PULL = frozenset(
+    {Family.ACES_COMPARISON, Family.DOUBLE_FAULTS_COMPARISON}
+)
+
+
 @dataclass
 class PlayerProfile:
     """Everything the pricer needs about one player."""
@@ -891,9 +920,16 @@ class Pricer:
             notes.append(f"complemented for comparator {spec.comparator!r}")
 
         # Low confidence pulls the answer toward the base rate. The system should
-        # get less opinionated as it gets less informed.
+        # get less opinionated as it gets less informed - but only where the base
+        # rate knows something the model does not. See NO_BASE_RATE_PULL.
         scaled = confidence * LANE_CONFIDENCE_SCALE.get(self.lane, 1.0)
         pull = 1.0 - min(max(scaled, 0.0), 1.0)
+        if spec.family in NO_BASE_RATE_PULL:
+            if pull > 0.0:
+                notes.append(
+                    f"base-rate pull {pull:.2f} suppressed for {spec.family.value}"
+                )
+            pull = 0.0
         probability = (1.0 - pull) * probability + pull * base
 
         # Experimental per-family shift, second bot only. See LANE_FAMILY_SHIFT:

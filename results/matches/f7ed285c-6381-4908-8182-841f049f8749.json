@@ -9,22 +9,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
-      "lane": "scenario",
+      "lane": "honest",
       "market": null,
       "market_id": "acea4504-88da-4170-9cbd-dd2bd7ab3d9b",
       "market_weight": 0.0,
-      "model": 0.5602045758101127,
+      "model": 0.5644782209599549,
       "notes": [
-        "total games: simulator 34.9, Pinnacle 28.6, used 31.1 at weight 0.60",
+        "total games: simulator 35.3, Pinnacle 28.6, used 31.3 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.427499+00:00",
-      "probability": 0.5602045758101127,
+      "predicted_at": "2026-09-03T16:31:48.740221+00:00",
+      "probability": 0.5679193099119572,
       "question": "Will the match last longer than 135 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 58
+      "submission": 57
     },
     {
       "base_rate": 0.46,
@@ -33,23 +33,23 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
-      "lane": "scenario",
+      "lane": "honest",
       "market": null,
       "market_id": "d32d951c-36e0-4545-9a04-7a4175cde617",
       "market_weight": 0.0,
-      "model": 0.8143966758590007,
+      "model": 0.8153745680215208,
       "notes": [
         "ace vulnerability: Dane Sweeny 1.00, Lorenzo Musetti 0.85",
-        "exposure 115 service points from 37.0 games",
+        "exposure 117 service points from 37.4 games",
         "outcome coupling: P(win)=0.944, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.427499+00:00",
-      "probability": 0.8143966758590007,
+      "predicted_at": "2026-09-03T16:31:48.740221+00:00",
+      "probability": 0.8153745680215208,
       "question": "Will L. Musetti record more aces than D. Sweeny?",
       "rbp": null,
       "settled_at": "",
-      "submission": 86
+      "submission": 82
     },
     {
       "base_rate": 0.421,
@@ -58,21 +58,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
-      "lane": "scenario",
+      "lane": "honest",
       "market": null,
       "market_id": "fa33bf47-12a8-44d5-9fd1-35372b150c22",
       "market_weight": 0.0,
-      "model": 0.2713703756194064,
+      "model": 0.2710744407799655,
       "notes": [
-        "exposure 115 service points from 37.0 games"
+        "exposure 117 service points from 37.4 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.427499+00:00",
-      "probability": 0.2713703756194064,
+      "predicted_at": "2026-09-03T16:31:48.740221+00:00",
+      "probability": 0.2710744407799655,
       "question": "Will L. Musetti record more double faults than D. Sweeny?",
       "rbp": null,
       "settled_at": "",
-      "submission": 23
+      "submission": 27
     },
     {
       "base_rate": 0.5,
@@ -81,22 +81,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
-      "lane": "scenario",
+      "lane": "honest",
       "market": 0.9444936783408173,
       "market_id": "86c6ce65-d9f2-4c92-a1df-f97d1fd2e204",
-      "market_weight": 0.8075,
-      "model": 0.7665,
+      "market_weight": 0.95,
+      "model": 0.807,
       "notes": [
-        "simulated win probability 0.766",
-        "market consensus 0.944, weight 0.81"
+        "simulated win probability 0.807",
+        "market consensus 0.944, weight 0.95"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.427499+00:00",
-      "probability": 0.9157817796621548,
+      "predicted_at": "2026-09-03T16:31:48.740221+00:00",
+      "probability": 0.8745931589463374,
       "question": "Will L. Musetti win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 95
+      "submission": 87
     },
     {
       "base_rate": 0.487,
@@ -105,23 +105,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
-      "lane": "scenario",
+      "lane": "honest",
       "market": null,
       "market_id": "c79abcf2-1973-4e8e-a372-8d3f9c8293b0",
       "market_weight": 0.0,
-      "model": 0.3432,
+      "model": 0.36652,
       "notes": [
         "tiebreak iid correction x0.88 (ATP)",
-        "no usable market quote for this question",
-        "scenario lane: experimental tiebreak shift -0.040"
+        "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.427499+00:00",
-      "probability": 0.3032,
+      "predicted_at": "2026-09-03T16:31:48.740221+00:00",
+      "probability": 0.37254400000000004,
       "question": "Will the match feature at least 1 tiebreak?",
       "rbp": null,
       "settled_at": "",
-      "submission": 26
+      "submission": 37
     }
   ],
   "match_id": "f7ed285c-6381-4908-8182-841f049f8749",

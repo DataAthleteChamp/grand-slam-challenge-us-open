@@ -9,18 +9,18 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
-      "lane": "scenario",
+      "lane": "honest",
       "market": null,
       "market_id": "b50ec5ec-2166-4101-93e8-e37f787918e1",
       "market_weight": 0.0,
-      "model": 0.49932925531438926,
+      "model": 0.5056619418454347,
       "notes": [
-        "total games: simulator 20.9, Pinnacle 24.0, used 22.7 at weight 0.60",
+        "total games: simulator 21.1, Pinnacle 24.0, used 22.8 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.431380+00:00",
-      "probability": 0.49932925531438926,
+      "predicted_at": "2026-09-03T16:31:48.740711+00:00",
+      "probability": 0.49634884475316293,
       "question": "Will the match last longer than 110 minutes?",
       "rbp": null,
       "settled_at": "",
@@ -33,21 +33,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
-      "lane": "scenario",
+      "lane": "honest",
       "market": null,
       "market_id": "3903e313-1cab-4943-9066-79081746eebd",
       "market_weight": 0.0,
-      "model": 0.5325214177900344,
+      "model": 0.533686678281316,
       "notes": [
-        "exposure 72 service points from 22.1 games"
+        "exposure 73 service points from 22.4 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.431380+00:00",
-      "probability": 0.5325214177900344,
+      "predicted_at": "2026-09-03T16:31:48.740711+00:00",
+      "probability": 0.533686678281316,
       "question": "Will M. Sakkari record more aces than Y. Starodubtseva?",
       "rbp": null,
       "settled_at": "",
-      "submission": 54
+      "submission": 53
     },
     {
       "base_rate": 0.433,
@@ -56,21 +56,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
-      "lane": "scenario",
+      "lane": "honest",
       "market": null,
       "market_id": "bbcb901f-c544-432b-a296-9889d7092a56",
       "market_weight": 0.0,
-      "model": 0.5227132435892128,
+      "model": 0.5237950281589528,
       "notes": [
-        "exposure 72 service points from 22.1 games"
+        "exposure 73 service points from 22.4 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.431380+00:00",
-      "probability": 0.5227132435892128,
+      "predicted_at": "2026-09-03T16:31:48.740711+00:00",
+      "probability": 0.5237950281589528,
       "question": "Will M. Sakkari record more double faults than Y. Starodubtseva?",
       "rbp": null,
       "settled_at": "",
-      "submission": 53
+      "submission": 52
     },
     {
       "base_rate": 0.5,
@@ -79,22 +79,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
-      "lane": "scenario",
-      "market": 0.6350473964619264,
+      "lane": "honest",
+      "market": 0.638031068684434,
       "market_id": "d0803aae-adb8-41ae-95ce-929e02f3f7d7",
-      "market_weight": 0.8075,
-      "model": 0.7525,
+      "market_weight": 0.95,
+      "model": 0.7795,
       "notes": [
-        "simulated win probability 0.752",
-        "market consensus 0.635, weight 0.81"
+        "simulated win probability 0.779",
+        "market consensus 0.638, weight 0.95"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.431380+00:00",
-      "probability": 0.6559752366150369,
+      "predicted_at": "2026-09-03T16:31:48.740711+00:00",
+      "probability": 0.6241237773452828,
       "question": "Will M. Sakkari win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 69
+      "submission": 62
     },
     {
       "base_rate": 0.225,
@@ -103,22 +103,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
-      "lane": "scenario",
+      "lane": "honest",
       "market": null,
       "market_id": "a8ae3566-8d31-4f07-b95b-00a2e637efe7",
       "market_weight": 0.0,
-      "model": 0.21575,
+      "model": 0.22975,
       "notes": [
-        "no usable market quote for this question",
-        "scenario lane: experimental tiebreak shift -0.040"
+        "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.431380+00:00",
-      "probability": 0.17575,
+      "predicted_at": "2026-09-03T16:31:48.740711+00:00",
+      "probability": 0.2295125,
       "question": "Will the match feature at least 1 tiebreak?",
       "rbp": null,
       "settled_at": "",
-      "submission": 13
+      "submission": 23
     }
   ],
   "match_id": "0f3fee5d-2dda-421a-b60c-a7bd8af872b5",

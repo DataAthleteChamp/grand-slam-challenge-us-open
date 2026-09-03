@@ -9,22 +9,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
-      "lane": "scenario",
+      "lane": "honest",
       "market": null,
       "market_id": "7e9c2e6f-0191-4965-b28e-5cedc0538360",
       "market_weight": 0.0,
-      "model": 0.4394636263565599,
+      "model": 0.45160215998846526,
       "notes": [
-        "total games: simulator 37.6, Pinnacle 37.5, used 37.5 at weight 0.60",
+        "total games: simulator 38.3, Pinnacle 37.5, used 37.8 at weight 0.60",
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.430256+00:00",
-      "probability": 0.4394636263565599,
+      "predicted_at": "2026-09-03T16:31:48.735871+00:00",
+      "probability": 0.446532051989042,
       "question": "Will the match last longer than 175 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 42
+      "submission": 45
     },
     {
       "base_rate": 0.46,
@@ -33,23 +33,23 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
-      "lane": "scenario",
+      "lane": "honest",
       "market": null,
       "market_id": "fcdae82f-aeb1-43b2-9142-662d3bb219ad",
       "market_weight": 0.0,
-      "model": 0.44328022094833724,
+      "model": 0.4432967176241214,
       "notes": [
         "ace vulnerability: Tristan Schoolkate 1.07, Flavio Cobolli 0.92",
-        "exposure 124 service points from 39.7 games",
+        "exposure 127 service points from 40.5 games",
         "outcome coupling: P(win)=0.801, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.430256+00:00",
-      "probability": 0.44328022094833724,
+      "predicted_at": "2026-09-03T16:31:48.735871+00:00",
+      "probability": 0.4432967176241214,
       "question": "Will F. Cobolli record more aces than T. Schoolkate?",
       "rbp": null,
       "settled_at": "",
-      "submission": 43
+      "submission": 44
     },
     {
       "base_rate": 0.421,
@@ -58,21 +58,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
-      "lane": "scenario",
+      "lane": "honest",
       "market": null,
       "market_id": "b5e187f6-18a1-474e-a224-07e24e2141a4",
       "market_weight": 0.0,
-      "model": 0.318320324164133,
+      "model": 0.31811675614177676,
       "notes": [
-        "exposure 124 service points from 39.7 games"
+        "exposure 127 service points from 40.5 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.430256+00:00",
-      "probability": 0.318320324164133,
+      "predicted_at": "2026-09-03T16:31:48.735871+00:00",
+      "probability": 0.31811675614177676,
       "question": "Will F. Cobolli record more double faults than T. Schoolkate?",
       "rbp": null,
       "settled_at": "",
-      "submission": 28
+      "submission": 32
     },
     {
       "base_rate": 0.5,
@@ -81,22 +81,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
-      "lane": "scenario",
-      "market": 0.8011932255367226,
+      "lane": "honest",
+      "market": 0.8011891078069471,
       "market_id": "3dbb25d7-84fd-4557-ab18-9d2d2cb26880",
-      "market_weight": 0.8075,
-      "model": 0.44075,
+      "market_weight": 0.95,
+      "model": 0.42475,
       "notes": [
-        "simulated win probability 0.441",
-        "market consensus 0.801, weight 0.81"
+        "simulated win probability 0.425",
+        "market consensus 0.801, weight 0.95"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.430256+00:00",
-      "probability": 0.7408794971357315,
+      "predicted_at": "2026-09-03T16:31:48.735871+00:00",
+      "probability": 0.7442283332082475,
       "question": "Will F. Cobolli win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 79
+      "submission": 74
     },
     {
       "base_rate": 0.487,
@@ -105,23 +105,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
-      "lane": "scenario",
+      "lane": "honest",
       "market": null,
       "market_id": "d48bf6fd-c015-4b0c-a57b-acc7de289a99",
       "market_weight": 0.0,
-      "model": 0.44902,
+      "model": 0.48708,
       "notes": [
         "tiebreak iid correction x0.88 (ATP)",
-        "no usable market quote for this question",
-        "scenario lane: experimental tiebreak shift -0.040"
+        "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T15:32:12.430256+00:00",
-      "probability": 0.40902,
+      "predicted_at": "2026-09-03T16:31:48.735871+00:00",
+      "probability": 0.487076,
       "question": "Will the match feature at least 1 tiebreak?",
       "rbp": null,
       "settled_at": "",
-      "submission": 39
+      "submission": 49
     }
   ],
   "match_id": "77603a69-024b-45c5-b388-63d9ec2dc315",

@@ -332,6 +332,10 @@ more usefully: shrinkage is not what is holding us back, so stop looking there.
    remaining idea for our worst family.
 3. **Multi-task learning across tours.** Our women's models are weaker and the two tours share
    structure. Borrowing strength from the men's fit is standard hierarchical modelling.
-4. **Selective prediction / learning to defer.** Identify questions where our model is
-   unreliable and fall back to the base rate only there. Requires a usable uncertainty
-   estimate, which we do not currently produce.
+4. **Selective prediction / learning to defer.** ~~Identify questions where our model is
+   unreliable and fall back to the base rate only there.~~ **Answered, and the sign is the
+   opposite of what this item assumed.** We already deferred to the base rate on low-confidence
+   count questions, and that deferral was *costing* points: removing it is worth +2.28 RBP/q on
+   the thin-record slice and +0.90 on the mild-pull slice. Deferring only helps where the
+   fallback carries information the model lacks — true for the match-winner market (de-shrinking
+   there costs −5.12), false for a population base rate. See `NO_BASE_RATE_PULL` in `bot/pricer.py`.
