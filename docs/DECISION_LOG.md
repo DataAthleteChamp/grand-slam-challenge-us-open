@@ -134,3 +134,40 @@ Deliberately scoped so only deciding-set and straight-sets change. Those familie
 unsettled, so there is no settled-RBP evidence yet; this ships on tier-2 evidence (realised
 outcomes over 1,222 matches) plus a derivation, and the families it could have disturbed are
 held fixed by construction.
+
+## The first-serve family was priced in the wrong space (live bug, caught before settlement)
+
+The question is *"Will X win more than T% of points played on their **first serve**?"* Our
+serve ratings predict the share of **all** service points won. Those are different
+quantities and we were using one for the other.
+
+| hard courts, 2022-26 | all service points | first serve only |
+|---|---|---|
+| ATP population | 0.646 | **0.728** |
+| WTA population | 0.570 | **0.644** |
+
+The model was therefore about **8 points too low on every question in the family**, which is
+why it was submitting numbers as extreme as 2. Two compounding errors:
+
+1. **Wrong level.** Fixed with a per-player regression of first-serve-won on all-serve-won
+   (192 ATP / 198 WTA players, >=15 matches): `ATP fs = 1.104*all + 0.015` (r=0.892),
+   `WTA fs = 1.241*all - 0.064` (r=0.865). A slope above 1 is expected — first-serve
+   outcomes amplify serve skill.
+2. **Wrong denominator.** The binomial trials are first serves that land *in*, not all
+   service points. The measured first-serve-in rate is 0.626/0.619, so the old denominator
+   was ~1.6x too large and understated sampling error by a factor of 1.27.
+
+Both corrections together reproduce the realised spread almost exactly:
+
+| | model sd | measured sd |
+|---|---|---|
+| ATP | 0.0867 | 0.0859 |
+| WTA | 0.0936 | 0.0934 |
+
+Effect on a live question, a big server against a 77% threshold: **10.7 -> 46.4**.
+
+**This is the template for pricing a new family we cannot yet score.** There is no settled
+RBP for it, so instead we checked the model's *predictive distribution* against ~28,000
+real player-matches. A family whose simulated spread matches reality and whose level is
+unbiased will beat a crowd that is anchoring on round numbers; one that does not, will not.
+That check is available before a single question settles.

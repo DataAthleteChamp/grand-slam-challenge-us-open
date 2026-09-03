@@ -18,7 +18,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T20:21:40.592377+00:00",
+      "predicted_at": "2026-09-03T21:16:20.329725+00:00",
       "probability": 0.10501264314036642,
       "question": "Will the match last longer than 150 minutes?",
       "rbp": null,
@@ -41,7 +41,7 @@
         "exposure 72 service points from 22.2 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T20:21:40.592377+00:00",
+      "predicted_at": "2026-09-03T21:16:20.329725+00:00",
       "probability": 0.24911660272924374,
       "question": "Will Iga Swiatek record more aces than Aryna Sabalenka?",
       "rbp": null,
@@ -64,7 +64,7 @@
         "exposure 72 service points from 22.2 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T20:21:40.592377+00:00",
+      "predicted_at": "2026-09-03T21:16:20.329725+00:00",
       "probability": 0.23857730864889667,
       "question": "Will Iga Swiatek record more double faults than Aryna Sabalenka?",
       "rbp": null,
@@ -89,7 +89,7 @@
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T20:21:40.592377+00:00",
+      "predicted_at": "2026-09-03T21:16:20.329725+00:00",
       "probability": 0.5602456481878023,
       "question": "Will Iga Swiatek win?",
       "rbp": null,
@@ -113,7 +113,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T20:21:40.592377+00:00",
+      "predicted_at": "2026-09-03T21:16:20.329725+00:00",
       "probability": 0.031771468181818176,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,

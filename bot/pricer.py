@@ -34,8 +34,10 @@ from .data.baserates import (
     COUNT_RATE_PRIOR,
     DEFER_TO_BASE_RATE,
     DURATION_SURVIVAL,
+    FIRST_SERVE_FORM_SD,
+    FIRST_SERVE_IN_RATE,
+    FIRST_SERVE_MAP,
     SERVE_RATE_BIAS,
-    SERVE_RATE_FORM_SD,
     SERVE_RATE_MARGINAL,
     classify_matchup,
     count_confidence,
@@ -558,16 +560,25 @@ class Pricer:
         )
         expected = min(max(expected, 0.30), 0.90)
 
-        points = max(context.expected_service_points, 20)
-        binomial_var = expected * (1.0 - expected) / points
-        form_var = SERVE_RATE_FORM_SD.get(tour, 0.052) ** 2
+        # The ratings above predict ALL service points won; the question asks for
+        # FIRST-serve points won, which is a different and higher quantity. See
+        # FIRST_SERVE_MAP.
+        slope, intercept = FIRST_SERVE_MAP.get(tour, (1.0, 0.0))
+        expected = min(max(slope * expected + intercept, 0.30), 0.95)
+
+        # Only first serves that land in are trials for this question.
+        first_serves = max(
+            context.expected_service_points * FIRST_SERVE_IN_RATE.get(tour, 0.62), 12
+        )
+        binomial_var = expected * (1.0 - expected) / first_serves
+        form_var = FIRST_SERVE_FORM_SD.get(tour, 0.057) ** 2
         sd = math.sqrt(binomial_var + form_var)
 
         probability = 1.0 - _normal_cdf((threshold - expected) / sd)
         notes.append(
-            f"serve rate: expected {expected:.3f} vs threshold {threshold:.3f}, "
-            f"sd {sd:.3f} ({math.sqrt(binomial_var):.3f} sampling + "
-            f"{math.sqrt(form_var):.3f} form)"
+            f"first-serve rate: expected {expected:.3f} vs threshold {threshold:.3f}, "
+            f"sd {sd:.3f} ({math.sqrt(binomial_var):.3f} sampling on "
+            f"{first_serves:.0f} first serves + {math.sqrt(form_var):.3f} form)"
         )
         # Confidence falls away as the threshold approaches the expectation,
         # where the answer is a coin flip that no amount of rating quality fixes.

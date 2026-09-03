@@ -175,6 +175,34 @@ def classify_matchup(rank_a: float | None, rank_b: float | None) -> str:
 #: costs the most.
 SERVE_RATE_FORM_SD = {"ATP": 0.0515, "WTA": 0.0575}
 
+#: The "points played on their first serve" questions live in a DIFFERENT space
+#: from our serve ratings, and conflating the two made this family badly wrong.
+#:
+#: Our ratings predict the share of ALL service points won (population 0.646 ATP,
+#: 0.570 WTA). The question asks for the share of FIRST-serve points won, whose
+#: population value is 0.728 and 0.644. Pricing the second with the first made
+#: every answer about 8 points too low and produced submissions as extreme as 2.
+#:
+#: Per-player regression of first-serve-won on all-serve-won, hard courts
+#: 2022-26, 192 ATP and 198 WTA players with at least 15 matches:
+#:     ATP  fs = 1.104 * all + 0.015   (r=0.892)
+#:     WTA  fs = 1.241 * all - 0.064   (r=0.865)
+#: The slope above 1 is expected: first-serve outcomes amplify serve skill.
+FIRST_SERVE_MAP = {"ATP": (1.104, 0.015), "WTA": (1.241, -0.064)}
+
+#: Fraction of service points that are first serves landing in, so the binomial
+#: denominator counts the trials the question actually refers to. Using all
+#: service points inflated the denominator by about 1.6x and understated the
+#: sampling error by a factor of 1.27.
+FIRST_SERVE_IN_RATE = {"ATP": 0.6257, "WTA": 0.6188}
+
+#: Match-to-match form sd of first-serve points won, after removing binomial
+#: sampling. With the two terms above these reproduce the realised spread
+#: exactly: sqrt(0.0649^2 + 0.0562^2) = 0.0859 against a measured 0.0859 (ATP),
+#: and sqrt(0.0730^2 + 0.0582^2) = 0.0934 against a measured 0.0934 (WTA).
+FIRST_SERVE_FORM_SD = {"ATP": 0.0562, "WTA": 0.0582}
+
+
 #: The opponent-adjusted prediction runs 0.7pp low on ATP hard courts and is
 #: unbiased on WTA.  Small, but free to correct.
 SERVE_RATE_BIAS = {"ATP": 0.0070, "WTA": 0.0004}
