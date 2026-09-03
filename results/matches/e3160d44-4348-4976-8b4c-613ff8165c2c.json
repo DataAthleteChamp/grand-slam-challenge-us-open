@@ -18,7 +18,7 @@
         "total games: simulator 33.7, Pinnacle 38.5, used 36.6 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T21:35:38.963005+00:00",
+      "predicted_at": "2026-09-03T23:28:37.666517+00:00",
       "probability": 0.5235027101673511,
       "question": "Will the match last longer than 160 minutes?",
       "rbp": null,
@@ -43,7 +43,7 @@
         "outcome coupling: P(win)=0.852, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T21:35:38.963005+00:00",
+      "predicted_at": "2026-09-03T23:28:37.666517+00:00",
       "probability": 0.7957682588485033,
       "question": "Will D. Medvedev record more aces than A. Rinderknech?",
       "rbp": null,
@@ -66,7 +66,7 @@
         "exposure 108 service points from 34.7 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T21:35:38.963005+00:00",
+      "predicted_at": "2026-09-03T23:28:37.666517+00:00",
       "probability": 0.6871128208478587,
       "question": "Will D. Medvedev record more double faults than A. Rinderknech?",
       "rbp": null,
@@ -76,7 +76,7 @@
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.3,
+      "confidence": 0.45,
       "crowd": null,
       "crowd_brier": null,
       "family": "unforced_errors",
@@ -84,17 +84,18 @@
       "market": null,
       "market_id": "76244152-b09e-4654-98fb-da5db7aacead",
       "market_weight": 0.0,
-      "model": 0.5,
+      "model": 0.6532580656410102,
       "notes": [
-        "threshold family defers to the base rate by policy"
+        "unforced: rate 0.1585 x 224 points = 35.5 vs threshold 30.0, sd 12.7, model 0.653 shrunk 50% toward the base rate",
+        "base-rate pull 0.48 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T21:35:38.963005+00:00",
-      "probability": 0.5,
+      "predicted_at": "2026-09-03T23:28:37.666517+00:00",
+      "probability": 0.576629032820505,
       "question": "Will D. Medvedev commit more than 30 unforced errors?",
       "rbp": null,
       "settled_at": "",
-      "submission": 50
+      "submission": 58
     },
     {
       "base_rate": 0.2801297380680893,
@@ -112,7 +113,7 @@
         "first-serve rate: expected 0.694 vs threshold 0.700, sd 0.079 (0.055 sampling on 70 first serves + 0.056 form)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T21:35:38.963005+00:00",
+      "predicted_at": "2026-09-03T23:28:37.666517+00:00",
       "probability": 0.3600874048616729,
       "question": "Will A. Rinderknech win more than 70% of points played on their first serve?",
       "rbp": null,
@@ -135,7 +136,7 @@
         "exposure 108 service points from 34.7 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T21:35:38.963005+00:00",
+      "predicted_at": "2026-09-03T23:28:37.666517+00:00",
       "probability": 0.40925428861040336,
       "question": "Will D. Medvedev hit more winners than A. Rinderknech?",
       "rbp": null,
@@ -156,7 +157,7 @@
       "model": 0.15975,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-03T21:35:38.963005+00:00",
+      "predicted_at": "2026-09-03T23:28:37.666517+00:00",
       "probability": 0.15975,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -177,7 +178,7 @@
       "model": 0.69875,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-03T21:35:38.963005+00:00",
+      "predicted_at": "2026-09-03T23:28:37.666517+00:00",
       "probability": 0.69875,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -202,7 +203,7 @@
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T21:35:38.963005+00:00",
+      "predicted_at": "2026-09-03T23:28:37.666517+00:00",
       "probability": 0.8500801409860613,
       "question": "Will D. Medvedev win?",
       "rbp": null,
@@ -226,7 +227,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T21:35:38.963005+00:00",
+      "predicted_at": "2026-09-03T23:28:37.666517+00:00",
       "probability": 0.08621200000000001,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,

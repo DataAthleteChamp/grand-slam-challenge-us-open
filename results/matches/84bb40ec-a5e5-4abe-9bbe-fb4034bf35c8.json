@@ -9,17 +9,17 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_duration",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "89887a83-4716-4836-a877-2ff3fc03feb1",
       "market_weight": 0.0,
-      "model": 0.44653930676413933,
+      "model": 0.4541487602334253,
       "notes": [
-        "total games: simulator 36.8, Pinnacle 40.5, used 39.0 at weight 0.60"
+        "total games: simulator 35.8, Pinnacle 41.5, used 39.2 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:08:08.916135+00:00",
-      "probability": 0.44172234142593236,
+      "predicted_at": "2026-09-03T23:28:37.660299+00:00",
+      "probability": 0.4541487602334253,
       "question": "Will the match last longer than 175 minutes?",
       "rbp": null,
       "settled_at": "",
@@ -32,23 +32,23 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "aces_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "21c8141f-04dc-48e0-becb-dafbbf1c9443",
       "market_weight": 0.0,
-      "model": 0.6309363317525983,
+      "model": 0.6410142645263537,
       "notes": [
         "ace vulnerability: Tommy Paul 0.74, Alexander Bublik 0.88",
-        "exposure 118 service points from 37.8 games",
-        "outcome coupling: P(win)=0.234, delta=+0.60"
+        "exposure 115 service points from 36.8 games",
+        "outcome coupling: P(win)=0.282, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:08:08.916135+00:00",
-      "probability": 0.6309363317525983,
+      "predicted_at": "2026-09-03T23:28:37.660299+00:00",
+      "probability": 0.6410142645263537,
       "question": "Will A. Bublik record more aces than T. Paul?",
       "rbp": null,
       "settled_at": "",
-      "submission": 63
+      "submission": 67
     },
     {
       "base_rate": 0.421,
@@ -57,21 +57,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "double_faults_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "6e670dd1-27b6-44fd-b00d-a7e941f9e660",
       "market_weight": 0.0,
-      "model": 0.8553788004350417,
+      "model": 0.852517925409518,
       "notes": [
-        "exposure 118 service points from 37.8 games"
+        "exposure 115 service points from 36.8 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:08:08.916135+00:00",
-      "probability": 0.8553788004350417,
+      "predicted_at": "2026-09-03T23:28:37.660299+00:00",
+      "probability": 0.852517925409518,
       "question": "Will A. Bublik record more double faults than T. Paul?",
       "rbp": null,
       "settled_at": "",
-      "submission": 86
+      "submission": 90
     },
     {
       "base_rate": 0.5,
@@ -80,17 +80,17 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "unforced_errors",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "f6ab23c3-41c9-4b3e-9813-639cebf8c621",
       "market_weight": 0.0,
       "model": 0.30712786615823495,
       "notes": [
         "unforced: rate 0.2097 x 224 points = 47.0 vs threshold 54.0, sd 14.9, model 0.307 shrunk 50% toward the base rate",
-        "base-rate pull 0.55 suppressed for unforced_errors"
+        "base-rate pull 0.48 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:08:08.916135+00:00",
+      "predicted_at": "2026-09-03T23:28:37.660299+00:00",
       "probability": 0.4035639330791175,
       "question": "Will A. Bublik commit more than 54 unforced errors?",
       "rbp": null,
@@ -104,7 +104,7 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "first_serve_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "1b41bd04-9603-4b91-bf4e-f514d586333b",
       "market_weight": 0.0,
@@ -113,12 +113,12 @@
         "first-serve rate: expected 0.752 vs threshold 0.720, sd 0.076 (0.052 sampling on 70 first serves + 0.056 form)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:08:08.916135+00:00",
-      "probability": 0.4146194077920619,
+      "predicted_at": "2026-09-03T23:28:37.660299+00:00",
+      "probability": 0.44574086081634046,
       "question": "Will T. Paul win more than 72% of points played on their first serve?",
       "rbp": null,
       "settled_at": "",
-      "submission": 41
+      "submission": 43
     },
     {
       "base_rate": 0.485,
@@ -127,21 +127,21 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "winners_comparison",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "5014d44e-39ef-40ac-b145-6bed3f015f5b",
       "market_weight": 0.0,
-      "model": 0.6377737425855537,
+      "model": 0.6353171713911776,
       "notes": [
-        "exposure 118 service points from 37.8 games"
+        "exposure 115 service points from 36.8 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:08:08.916135+00:00",
-      "probability": 0.5995803069391653,
+      "predicted_at": "2026-09-03T23:28:37.660299+00:00",
+      "probability": 0.6146485603248907,
       "question": "Will A. Bublik hit more winners than T. Paul?",
       "rbp": null,
       "settled_at": "",
-      "submission": 60
+      "submission": 64
     },
     {
       "base_rate": 0.202,
@@ -150,19 +150,19 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "deciding_set",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "2075b58d-3dea-4dd7-98df-6080653f911a",
       "market_weight": 0.0,
-      "model": 0.241,
+      "model": 0.2335,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:08:08.916135+00:00",
-      "probability": 0.23904999999999998,
+      "predicted_at": "2026-09-03T23:28:37.660299+00:00",
+      "probability": 0.2335,
       "question": "Will the match require a deciding set?",
       "rbp": null,
       "settled_at": "",
-      "submission": 24
+      "submission": 18
     },
     {
       "base_rate": 0.653,
@@ -171,19 +171,19 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "lopsided_set",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "63be8c60-7fa1-45d8-a0c0-94f5f79a4ca0",
       "market_weight": 0.0,
-      "model": 0.647,
+      "model": 0.7025,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:08:08.916135+00:00",
-      "probability": 0.6473000000000001,
+      "predicted_at": "2026-09-03T23:28:37.660299+00:00",
+      "probability": 0.7025,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
       "settled_at": "",
-      "submission": 65
+      "submission": 75
     },
     {
       "base_rate": 0.5,
@@ -192,23 +192,23 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "6bfb97a4-1873-4fd7-8937-e1ba5699cac2",
       "market_weight": 0.0,
-      "model": 0.2335,
+      "model": 0.282,
       "notes": [
-        "simulated win probability 0.234",
+        "simulated win probability 0.282",
         "no market quote; this is the family that most needs one",
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:08:08.916135+00:00",
-      "probability": 0.25760521518688967,
+      "predicted_at": "2026-09-03T23:28:37.660299+00:00",
+      "probability": 0.27096843312384716,
       "question": "Will A. Bublik win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 26
+      "submission": 22
     },
     {
       "base_rate": 0.13263821138211385,
@@ -217,21 +217,22 @@
       "crowd": null,
       "crowd_brier": null,
       "family": "tiebreak",
-      "lane": "honest",
+      "lane": "scenario",
       "market": null,
       "market_id": "61fad8ce-f8e7-4f7c-a12f-0a3f46fe15fb",
       "market_weight": 0.0,
-      "model": 0.139151,
+      "model": 0.11645100000000001,
       "notes": [
-        "tiebreak iid correction x0.91 (ATP)"
+        "tiebreak iid correction x0.91 (ATP)",
+        "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:08:08.916135+00:00",
-      "probability": 0.1388253605691057,
+      "predicted_at": "2026-09-03T23:28:37.660299+00:00",
+      "probability": 0.07645100000000002,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 14
+      "submission": 4
     }
   ],
   "match_id": "84bb40ec-a5e5-4abe-9bbe-fb4034bf35c8",

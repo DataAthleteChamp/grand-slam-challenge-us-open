@@ -74,24 +74,31 @@ TIEBREAK_BY_SET = {
 #: between two identical players — emphatically not 50.
 #:
 #: Splitting matters more than it looks.  Women hit less than half as many aces
-#: per match as men (2.9 against 7.0), so ace ties are nearly twice as common:
-#: P(tie) 0.145 against 0.080, moving an even matchup from 0.460 to 0.427.
-#: Applying the men's constant to the women's draw would have mispriced every ace
-#: comparison in half the event by more than three points, invisibly.
+#: per match as men, so ace ties are far more common, which moves the fair price
+#: on an even matchup by several points.  Applying the men's constant to the
+#: women's draw would have mispriced every ace comparison in half the event.
 #:
-#: Measured over 7,545 charted men's and 4,070 charted women's matches.
+#: Measured on the OFFICIAL US Open point feed (data/raw/pointbypoint, 625 men's
+#: and 622 women's matches, 2019-2024) — the same source the questions settle on.
+#: These replace values taken from charted matches across all tournaments, which
+#: mixed best-of-3 events with slams and so understated every men's count badly:
+#: aces 7.0 against a true 9.8, double faults 2.9 against 5.2, winners 29.1
+#: against 37.1. Because men play best-of-five here, more service games means
+#: higher counts and rarer ties, and three of the old tie rates sat outside the
+#: official 95% interval — ATP aces 0.080 against [0.029,0.061], ATP double
+#: faults 0.158 against [0.077,0.126], WTA unforced 0.036 against [0.008,0.029].
 COUNT_STATS = {
     "ATP": {
-        "aces": {"mean_per_player": 7.0, "p_tie": 0.080, "even_p_a_greater": 0.460},
-        "double_faults": {"mean_per_player": 2.9, "p_tie": 0.158, "even_p_a_greater": 0.421},
-        "winners": {"mean_per_player": 29.1, "p_tie": 0.029, "even_p_a_greater": 0.485},
-        "unforced_errors": {"mean_per_player": 29.0, "p_tie": 0.030, "even_p_a_greater": 0.485},
+        "aces": {"mean_per_player": 9.8, "p_tie": 0.0432, "even_p_a_greater": 0.4784},
+        "double_faults": {"mean_per_player": 5.2, "p_tie": 0.1008, "even_p_a_greater": 0.4496},
+        "winners": {"mean_per_player": 37.1, "p_tie": 0.0192, "even_p_a_greater": 0.4904},
+        "unforced_errors": {"mean_per_player": 38.4, "p_tie": 0.0304, "even_p_a_greater": 0.4848},
     },
     "WTA": {
-        "aces": {"mean_per_player": 2.9, "p_tie": 0.145, "even_p_a_greater": 0.427},
-        "double_faults": {"mean_per_player": 3.4, "p_tie": 0.134, "even_p_a_greater": 0.433},
-        "winners": {"mean_per_player": 20.7, "p_tie": 0.031, "even_p_a_greater": 0.484},
-        "unforced_errors": {"mean_per_player": 27.3, "p_tie": 0.036, "even_p_a_greater": 0.482},
+        "aces": {"mean_per_player": 3.3, "p_tie": 0.1286, "even_p_a_greater": 0.4357},
+        "double_faults": {"mean_per_player": 3.9, "p_tie": 0.1141, "even_p_a_greater": 0.4429},
+        "winners": {"mean_per_player": 21.0, "p_tie": 0.0418, "even_p_a_greater": 0.4791},
+        "unforced_errors": {"mean_per_player": 26.8, "p_tie": 0.0177, "even_p_a_greater": 0.4912},
     },
 }
 
