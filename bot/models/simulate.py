@@ -86,6 +86,35 @@ SKILL_SCALE = 1.5
 #: the rest downstream.
 TOUR_SIGMA = {"ATP": 0.05, "WTA": 0.05}
 
+#: Fraction of the form shock that is a property of the MATCH rather than of each
+#: individual set.
+#:
+#: The shocks used to be redrawn independently for every set, which makes set
+#: results conditionally independent and therefore maximises the chance the sets
+#: split. That showed up as a large, measurable error on deciding sets. Against
+#: 602 ATP and 620 WTA completed US Open matches from 2021-26:
+#:
+#:     P(deciding set)        measured (close matchups)   simulated (share 0)
+#:     ATP                    0.274-0.302                 0.374
+#:     WTA                    0.323-0.376                 0.501
+#:
+#: Raising sigma cannot fix this - with an independent draw per set the split
+#: probability is pinned no matter how large the shock is. Only a component that
+#: PERSISTS across sets can, which is also the physically right story: a player
+#: serving well in the first set tends to still be serving well in the second.
+#:
+#: Values chosen to hit the measured deciding-set rate while disturbing the
+#: tiebreak family least, since that is our best-scoring family. At these values
+#: P(any tiebreak) moves by only -0.025 (ATP) and -0.012 (WTA), and mean total
+#: games moves toward its measured value on both tours.
+#:
+#: TIEBREAK_SIM_SCALE and GAMES_BIAS were partly compensating for this bug and
+#: have been re-derived so their outputs are unchanged; the ATP best-of-3 games
+#: bias falls to +0.04, i.e. essentially nothing left to correct, which is the
+#: clearest sign the correction was standing in for this missing term.
+TOUR_MATCH_SHARE = {"ATP": 0.55, "WTA": 1.0}
+
+
 
 @dataclass(frozen=True)
 class SimulationConfig:
@@ -93,6 +122,7 @@ class SimulationConfig:
 
     sigma: float = FITTED_SIGMA
     rho: float = FITTED_RHO
+    match_share: float = 0.0
     n_sims: int = 20_000
     seed: int = 0
     final_set_tiebreak_to: int = 10
@@ -287,8 +317,22 @@ def _draw_shocks(
 
     rho = float(np.clip(cfg.rho, -0.99, 0.99))
     cov = np.array([[1.0, rho], [rho, 1.0]]) * cfg.sigma**2
-    draws = rng.multivariate_normal([0.0, 0.0], cov, size=(cfg.n_sims, best_of))
-    return draws[:, :, 0], draws[:, :, 1]
+    share = float(np.clip(cfg.match_share, 0.0, 1.0))
+    if share <= 0.0:
+        draws = rng.multivariate_normal([0.0, 0.0], cov, size=(cfg.n_sims, best_of))
+        return draws[:, :, 0], draws[:, :, 1]
+
+    # Split the form shock into a component drawn once per match and a component
+    # redrawn per set. Variances add, so the total stays cfg.sigma**2 and only
+    # the correlation between sets changes. See TOUR_MATCH_SHARE.
+    per_match = rng.multivariate_normal([0.0, 0.0], cov * share, size=cfg.n_sims)
+    per_set = rng.multivariate_normal(
+        [0.0, 0.0], cov * (1.0 - share), size=(cfg.n_sims, best_of)
+    )
+    return (
+        per_set[:, :, 0] + per_match[:, None, 0],
+        per_set[:, :, 1] + per_match[:, None, 1],
+    )
 
 
 def matchup_probabilities(

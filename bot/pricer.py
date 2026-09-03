@@ -70,6 +70,7 @@ from .models.lanes import (
 from .models.shrink import CREDIBILITY_K, height_prior_ace_rate, shrink
 from .models.simulate import (
     FITTED_SIGMA,
+    TOUR_MATCH_SHARE,
     TOUR_SIGMA,
     SimulationConfig,
     matchup_probabilities,
@@ -673,7 +674,8 @@ class Pricer:
         if self._sim_config_override is not None:
             return self._sim_config_override
         sigma = TOUR_SIGMA.get(tour, FITTED_SIGMA) + LANE_SIGMA_OFFSET.get(self.lane, 0.0)
-        return replace(self.sim_config, sigma=sigma)
+        share = TOUR_MATCH_SHARE.get(tour, 0.0)
+        return replace(self.sim_config, sigma=sigma, match_share=share)
 
     def _read_simulation(self, spec, simulation, base, notes, context) -> float:
         """Read one question off a simulated match."""

@@ -301,23 +301,26 @@ def test_simulator_games_bias_is_corrected():
     mismatches where the opposite was expected."""
     from bot.models.duration import correct_games
 
-    assert correct_games(39.18, "ATP", 5) == pytest.approx(36.94, abs=0.05)
+    assert correct_games(37.94, "ATP", 5) == pytest.approx(36.94, abs=0.05)
 
 
-def test_womens_games_offset_is_restored_after_the_sigma_revert():
-    """The women's offset was zeroed only while sigma was doing the same job.
+def test_womens_games_offset_survives_the_match_share_change():
+    """The realised target is unchanged; only how much of it the simulator now
+    gets right by itself has changed.
 
-    With sigma back at 0.05 - fixed on lopsided sets and tiebreaks, which have no
-    other correction - the simulator runs +1.26 games long on WTA slam hard
-    courts (simulated 22.75 against a realised 21.49 over 300 matches), so the
-    offset carries that again.
+    Before TOUR_MATCH_SHARE the simulator had no persistent within-match form and
+    ran +1.26 games long on WTA slam hard courts (22.75 simulated against 21.49
+    realised over 300 matches). The match-level shock removes 0.90 of that on its
+    own, so the same matchup now simulates 21.85 and the offset only has to carry
+    the remaining 0.36. The corrected answer still lands on the realised 21.49,
+    which is the whole point of re-deriving the offset rather than dropping it.
     """
     from bot.models.duration import correct_games
 
-    assert correct_games(22.75, "WTA", 3) == pytest.approx(21.49, abs=0.05)
+    assert correct_games(21.85, "WTA", 3) == pytest.approx(21.49, abs=0.05)
     # The men's draw still needs its offset: that residual is a point-level iid
     # effect (Klaassen & Magnus 2001) which the between-set sigma cannot reach.
-    assert correct_games(39.18, "ATP", 5) < 39.18
+    assert correct_games(37.94, "ATP", 5) < 37.94
 
 
 def test_games_correction_cannot_produce_an_impossible_match():

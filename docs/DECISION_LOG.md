@@ -98,3 +98,39 @@ The 09-02 cohort is the first settled under the repaired count models and is pos
 count families, but n=3 per family — this is a hint, not evidence. The honest read is that
 **most settled data predates the fixes**, so the -289 total understates the current model.
 Do not claim the fixes have worked until a full 2x round settles.
+
+## The simulator had no persistent within-match form (structural bug, fixed)
+
+Form shocks were redrawn independently for every set. `rho` correlates the two
+*players* within a set; nothing correlated a player with **himself across sets**. That
+makes set results conditionally independent, which maximises the chance the sets split,
+which over-predicts deciding sets.
+
+Measured on 602 ATP and 620 WTA completed US Open matches, 2021-26:
+
+| P(deciding set) | measured, close matchups | simulated before | simulated after |
+|---|---|---|---|
+| ATP | 0.274–0.302 | 0.374 | 0.251 |
+| WTA | 0.323–0.376 | 0.501 | 0.342 |
+
+Raising `sigma` could never have fixed this: with an independent draw per set the split
+probability is pinned no matter how large the shock is. Verified directly — sweeping sigma
+from 0.05 to 0.20 left P(deciding set) at 0.374/0.501 to three decimals. **That also explains
+why the earlier WTA sigma=0.11 experiment failed**: it was the only knob available, and it
+was the wrong one.
+
+`TOUR_MATCH_SHARE = {"ATP": 0.55, "WTA": 1.0}` splits the shock into a per-match and a
+per-set component. Variances add, so total shock size is unchanged and only the
+between-set correlation moves.
+
+**`GAMES_BIAS` and `TIEBREAK_SIM_SCALE` were partly standing in for this bug**, so both were
+re-derived over a realistic spread of matchups to hold their delivered outputs constant.
+Verified end to end: tiebreak drift ±0.0000, mean-games drift -0.003. The ATP best-of-3 games
+offset falls from -1.20 to +0.04 — essentially nothing left to correct, which is the clearest
+evidence the correction was masking this term. Delivered games now sit at 37.01 against a
+measured 36.60 (ATP) and 21.60 against 21.62 (WTA).
+
+Deliberately scoped so only deciding-set and straight-sets change. Those families are live and
+unsettled, so there is no settled-RBP evidence yet; this ships on tier-2 evidence (realised
+outcomes over 1,222 matches) plus a derivation, and the families it could have disturbed are
+held fixed by construction.

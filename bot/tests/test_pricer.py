@@ -1192,8 +1192,16 @@ def test_tiebreak_iid_correction_is_mens_only():
     """
     from bot.data.baserates import tiebreak_sim_scale
 
-    assert tiebreak_sim_scale("ATP") < 1.0
-    assert tiebreak_sim_scale("WTA") == 1.0
+    # Both scales now also absorb the ~3.5% drop in raw simulated tiebreak
+    # probability caused by TOUR_MATCH_SHARE. Dividing that compensation out
+    # recovers the iid correction itself, which is still men's-only: 0.88 and 1.0.
+    compensation_only = {"ATP": 1.0 / 0.9692, "WTA": 1.0 / 0.9642}
+    assert tiebreak_sim_scale("ATP") / compensation_only["ATP"] == pytest.approx(
+        0.88, abs=0.005
+    )
+    assert tiebreak_sim_scale("WTA") / compensation_only["WTA"] == pytest.approx(
+        1.0, abs=0.005
+    )
     assert tiebreak_sim_scale("UNKNOWN") == 1.0
 
 

@@ -259,7 +259,12 @@ TIEBREAK_COUNTS = {
 #: probability below zero, and so it carries over to the "at least two"
 #: question: the simulated ratio of P(>=2) to P(>=1) is 0.333 against a realised
 #: 0.336, so the count structure is already right and only the level is wrong.
-TIEBREAK_SIM_SCALE = {"ATP": 0.88, "WTA": 1.0}
+#: Re-derived alongside TOUR_MATCH_SHARE, which lowers the simulator's raw
+#: tiebreak probability by about 3.5% on both tours. These values hold the
+#: delivered tiebreak probability unchanged, because tiebreak is our best-scoring
+#: family and this change was not meant to touch it. Previously ATP 0.88, WTA 1.0.
+TIEBREAK_SIM_SCALE = {"ATP": 0.908, "WTA": 1.037}
+
 
 
 def tiebreak_sim_scale(tour: str) -> float:

@@ -125,7 +125,13 @@ def residual_sd_for(games: float, tour: str, best_of: int) -> float:
 #: the offset has to carry that again.  This is the intended division of labour:
 #: sigma is fixed on lopsided sets and tiebreaks, which have no other remedy, and
 #: games is corrected here.
-GAMES_BIAS = {("ATP", 5): -2.24, ("ATP", 3): -1.20, ("WTA", 3): -1.26, ("WTA", 5): -1.26}
+#: Re-derived after TOUR_MATCH_SHARE gave the simulator a match-level form term.
+#: Much of this "bias" was the simulator having no persistent within-match form,
+#: which inflated total games; the ATP best-of-3 offset is now +0.04, i.e. there
+#: is essentially nothing left to correct. Measured over a realistic spread of
+#: matchups so the compensation is not an even-matchup artefact.
+#: Previously: {("ATP",5): -2.24, ("ATP",3): -1.20, ("WTA",3): -1.26, ("WTA",5): -1.26}
+GAMES_BIAS = {("ATP", 5): -1.00, ("ATP", 3): 0.04, ("WTA", 3): -0.36, ("WTA", 5): -0.36}
 
 
 def correct_games(games: float, tour: str, best_of: int) -> float:
