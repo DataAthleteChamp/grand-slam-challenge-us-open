@@ -13,18 +13,17 @@
       "market": null,
       "market_id": "433d9ffe-c4ab-4c36-bff3-9594c9b0f368",
       "market_weight": 0.0,
-      "model": 0.19924157038603357,
+      "model": 0.19263896382702467,
       "notes": [
-        "total games: simulator 21.7, Pinnacle 23.0, used 22.5 at weight 0.60",
-        "no usable market quote for this question"
+        "total games: simulator 20.9, Pinnacle 23.0, used 22.2 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.138325+00:00",
-      "probability": 0.19924157038603357,
+      "predicted_at": "2026-09-03T20:41:25.635510+00:00",
+      "probability": 0.19263896382702467,
       "question": "Will the match last longer than 130 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 15
+      "submission": 14
     },
     {
       "base_rate": 0.427,
@@ -37,17 +36,17 @@
       "market": null,
       "market_id": "edaada84-be80-4fde-ae0f-c70f7fbeb8a2",
       "market_weight": 0.0,
-      "model": 0.3421277266388741,
+      "model": 0.33932057817160133,
       "notes": [
-        "exposure 75 service points from 23.0 games"
+        "exposure 69 service points from 21.4 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.138325+00:00",
-      "probability": 0.3421277266388741,
+      "predicted_at": "2026-09-03T20:41:25.635510+00:00",
+      "probability": 0.33932057817160133,
       "question": "Will A. Kalinskaya record more aces than E. Svitolina?",
       "rbp": null,
       "settled_at": "",
-      "submission": 31
+      "submission": 30
     },
     {
       "base_rate": 0.433,
@@ -60,13 +59,13 @@
       "market": null,
       "market_id": "e78e8893-95d1-443d-a87f-c2d9f07f8704",
       "market_weight": 0.0,
-      "model": 0.4943512397107534,
+      "model": 0.48900785187322976,
       "notes": [
-        "exposure 75 service points from 23.0 games"
+        "exposure 69 service points from 21.4 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.138325+00:00",
-      "probability": 0.4943512397107534,
+      "predicted_at": "2026-09-03T20:41:25.635510+00:00",
+      "probability": 0.48900785187322976,
       "question": "Will A. Kalinskaya record more double faults than E. Svitolina?",
       "rbp": null,
       "settled_at": "",
@@ -88,7 +87,7 @@
         "threshold family defers to the base rate by policy"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.138325+00:00",
+      "predicted_at": "2026-09-03T20:41:25.635510+00:00",
       "probability": 0.5,
       "question": "Will A. Kalinskaya commit more than 29 unforced errors?",
       "rbp": null,
@@ -111,7 +110,7 @@
         "serve rate: expected 0.590 vs threshold 0.640, sd 0.084 (0.061 sampling + 0.058 form)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.138325+00:00",
+      "predicted_at": "2026-09-03T20:41:25.635510+00:00",
       "probability": 0.251206412749589,
       "question": "Will E. Svitolina win more than 64% of points played on their first serve?",
       "rbp": null,
@@ -129,13 +128,13 @@
       "market": null,
       "market_id": "dc28e39e-568e-4a84-bcf9-a8221ee8124a",
       "market_weight": 0.0,
-      "model": 0.4778983840929788,
+      "model": 0.4753042518615002,
       "notes": [
-        "exposure 75 service points from 23.0 games"
+        "exposure 69 service points from 21.4 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.138325+00:00",
-      "probability": 0.4787373562801942,
+      "predicted_at": "2026-09-03T20:41:25.635510+00:00",
+      "probability": 0.47649991723054397,
       "question": "Will A. Kalinskaya hit more winners than E. Svitolina?",
       "rbp": null,
       "settled_at": "",
@@ -152,17 +151,15 @@
       "market": null,
       "market_id": "2d52daab-6d12-4e41-bb5e-8e1d00ad4cba",
       "market_weight": 0.0,
-      "model": 0.48375,
-      "notes": [
-        "no usable market quote for this question"
-      ],
+      "model": 0.294,
+      "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.138325+00:00",
-      "probability": 0.48375,
+      "predicted_at": "2026-09-03T20:41:25.635510+00:00",
+      "probability": 0.294,
       "question": "Will the match require a deciding set?",
       "rbp": null,
       "settled_at": "",
-      "submission": 48
+      "submission": 25
     },
     {
       "base_rate": 0.641,
@@ -175,41 +172,40 @@
       "market": null,
       "market_id": "ca031c4c-0f9c-4e42-ac8c-92becaf86cd3",
       "market_weight": 0.0,
-      "model": 0.69475,
-      "notes": [
-        "no usable market quote for this question"
-      ],
+      "model": 0.64525,
+      "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.138325+00:00",
-      "probability": 0.69475,
+      "predicted_at": "2026-09-03T20:41:25.635510+00:00",
+      "probability": 0.64525,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
       "settled_at": "",
-      "submission": 74
+      "submission": 68
     },
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.85,
+      "confidence": 0.7,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.2990179285405115,
+      "market": null,
       "market_id": "27bc2e23-5b06-468a-94fa-17523c2c1cb8",
-      "market_weight": 0.8075,
-      "model": 0.35825,
+      "market_weight": 0.0,
+      "model": 0.393,
       "notes": [
-        "simulated win probability 0.358",
-        "market consensus 0.299, weight 0.81"
+        "simulated win probability 0.393",
+        "no market quote; this is the family that most needs one",
+        "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.138325+00:00",
-      "probability": 0.3142593489122147,
+      "predicted_at": "2026-09-03T20:41:25.635510+00:00",
+      "probability": 0.38466028921768625,
       "question": "Will A. Kalinskaya win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 27
+      "submission": 36
     },
     {
       "base_rate": 0.225,
@@ -222,18 +218,18 @@
       "market": null,
       "market_id": "bf7c64fd-a6b4-48e1-8f06-c16bafa84d4b",
       "market_weight": 0.0,
-      "model": 0.2485,
+      "model": 0.23202874999999998,
       "notes": [
-        "no usable market quote for this question",
+        "tiebreak iid correction x1.04 (WTA)",
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.138325+00:00",
-      "probability": 0.2085,
+      "predicted_at": "2026-09-03T20:41:25.635510+00:00",
+      "probability": 0.19202874999999997,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 16
+      "submission": 14
     }
   ],
   "match_id": "9a260e44-0e97-461b-90bb-3464f10ab7be",

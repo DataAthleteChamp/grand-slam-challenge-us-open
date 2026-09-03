@@ -13,17 +13,17 @@
       "market": null,
       "market_id": "aa083bc9-d265-4016-94f2-cae109a9c025",
       "market_weight": 0.0,
-      "model": 0.5623902439096546,
+      "model": 0.5528832650801867,
       "notes": [
-        "total games: simulator 33.7, Pinnacle 32.4, used 33.0 at weight 0.60"
+        "total games: simulator 33.7, Pinnacle 32.4, used 32.9 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.142575+00:00",
-      "probability": 0.5623902439096546,
+      "predicted_at": "2026-09-03T20:41:25.641633+00:00",
+      "probability": 0.5528832650801867,
       "question": "Will the match last longer than 140 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 58
+      "submission": 57
     },
     {
       "base_rate": 0.46,
@@ -36,19 +36,19 @@
       "market": null,
       "market_id": "83af0cb9-96f1-43fb-aade-cfba6f193f0d",
       "market_weight": 0.0,
-      "model": 0.785812147261845,
+      "model": 0.7687864543073094,
       "notes": [
         "ace vulnerability: Yibing Wu 1.14, Carlos Alcaraz 0.66",
-        "exposure 111 service points from 35.6 games",
-        "outcome coupling: P(win)=0.868, delta=+0.60"
+        "exposure 107 service points from 34.6 games",
+        "outcome coupling: P(win)=0.807, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.142575+00:00",
-      "probability": 0.785812147261845,
+      "predicted_at": "2026-09-03T20:41:25.641633+00:00",
+      "probability": 0.7687864543073094,
       "question": "Will C. Alcaraz record more aces than Y. Wu?",
       "rbp": null,
       "settled_at": "",
-      "submission": 84
+      "submission": 82
     },
     {
       "base_rate": 0.421,
@@ -61,13 +61,13 @@
       "market": null,
       "market_id": "0c26f808-2924-4d0d-9d32-87f513f18f8a",
       "market_weight": 0.0,
-      "model": 0.40697977253092255,
+      "model": 0.4056563834336732,
       "notes": [
-        "exposure 111 service points from 35.6 games"
+        "exposure 107 service points from 34.6 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.142575+00:00",
-      "probability": 0.40697977253092255,
+      "predicted_at": "2026-09-03T20:41:25.641633+00:00",
+      "probability": 0.4056563834336732,
       "question": "Will C. Alcaraz record more double faults than Y. Wu?",
       "rbp": null,
       "settled_at": "",
@@ -89,7 +89,7 @@
         "threshold family defers to the base rate by policy"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.142575+00:00",
+      "predicted_at": "2026-09-03T20:41:25.641633+00:00",
       "probability": 0.5,
       "question": "Will C. Alcaraz commit more than 36 unforced errors?",
       "rbp": null,
@@ -112,7 +112,7 @@
         "serve rate: expected 0.597 vs threshold 0.660, sd 0.069 (0.046 sampling + 0.051 form)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.142575+00:00",
+      "predicted_at": "2026-09-03T20:41:25.641633+00:00",
       "probability": 0.27479239026305996,
       "question": "Will Y. Wu win more than 66% of points played on their first serve?",
       "rbp": null,
@@ -130,13 +130,13 @@
       "market": null,
       "market_id": "2c57e8cc-0565-4b69-9ea1-f8798d28082d",
       "market_weight": 0.0,
-      "model": 0.5795901902097729,
+      "model": 0.5769807514718062,
       "notes": [
-        "exposure 111 service points from 35.6 games"
+        "exposure 107 service points from 34.6 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.142575+00:00",
-      "probability": 0.5665840390559291,
+      "predicted_at": "2026-09-03T20:41:25.641633+00:00",
+      "probability": 0.5643333981444328,
       "question": "Will C. Alcaraz hit more winners than Y. Wu?",
       "rbp": null,
       "settled_at": "",
@@ -153,15 +153,15 @@
       "market": null,
       "market_id": "280d8913-5527-4a7c-8449-d899f054d72b",
       "market_weight": 0.0,
-      "model": 0.24575,
+      "model": 0.18825,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.142575+00:00",
-      "probability": 0.24575,
+      "predicted_at": "2026-09-03T20:41:25.641633+00:00",
+      "probability": 0.18825,
       "question": "Will the match require a deciding set?",
       "rbp": null,
       "settled_at": "",
-      "submission": 20
+      "submission": 14
     },
     {
       "base_rate": 0.768,
@@ -174,15 +174,15 @@
       "market": null,
       "market_id": "45979ed7-18ec-484e-b865-5db11e8f95fc",
       "market_weight": 0.0,
-      "model": 0.81825,
+      "model": 0.7785,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.142575+00:00",
-      "probability": 0.81825,
+      "predicted_at": "2026-09-03T20:41:25.641633+00:00",
+      "probability": 0.7785,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
       "settled_at": "",
-      "submission": 87
+      "submission": 83
     },
     {
       "base_rate": 0.5,
@@ -195,18 +195,19 @@
       "market": null,
       "market_id": "1c3bcdfd-1c61-4775-a6fd-123c382f79e2",
       "market_weight": 0.0,
-      "model": 0.86775,
+      "model": 0.807,
       "notes": [
-        "simulated win probability 0.868",
-        "no market quote; this is the family that most needs one"
+        "simulated win probability 0.807",
+        "no market quote; this is the family that most needs one",
+        "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.142575+00:00",
-      "probability": 0.79603875,
+      "predicted_at": "2026-09-03T20:41:25.641633+00:00",
+      "probability": 0.8119264567924309,
       "question": "Will C. Alcaraz win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 85
+      "submission": 86
     },
     {
       "base_rate": 0.377,
@@ -219,14 +220,14 @@
       "market": null,
       "market_id": "6191d114-613b-4d0e-9d72-cfb159196d66",
       "market_weight": 0.0,
-      "model": 0.35442,
+      "model": 0.353893,
       "notes": [
-        "tiebreak iid correction x0.88 (ATP)",
+        "tiebreak iid correction x0.91 (ATP)",
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.142575+00:00",
-      "probability": 0.31442000000000003,
+      "predicted_at": "2026-09-03T20:41:25.641633+00:00",
+      "probability": 0.31389300000000003,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",

@@ -13,18 +13,17 @@
       "market": null,
       "market_id": "a69dcdfb-e96a-423f-893e-6a4f78e3a0e0",
       "market_weight": 0.0,
-      "model": 0.5217516472703067,
+      "model": 0.495312692646945,
       "notes": [
-        "total games: simulator 37.4, Pinnacle 38.5, used 38.1 at weight 0.60",
-        "no usable market quote for this question"
+        "total games: simulator 36.4, Pinnacle 38.5, used 37.7 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.128879+00:00",
-      "probability": 0.5217516472703067,
+      "predicted_at": "2026-09-03T20:41:25.630210+00:00",
+      "probability": 0.495312692646945,
       "question": "Will the match last longer than 170 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 53
+      "submission": 49
     },
     {
       "base_rate": 0.46,
@@ -37,19 +36,19 @@
       "market": null,
       "market_id": "cb4c396c-e8f1-40af-902e-f0ceb6127452",
       "market_weight": 0.0,
-      "model": 0.7798031817793205,
+      "model": 0.750020846702016,
       "notes": [
         "ace vulnerability: Jesper de Jong 1.17, Zizou Bergs 0.78",
-        "exposure 124 service points from 39.7 games",
-        "outcome coupling: P(win)=0.688, delta=+0.60"
+        "exposure 117 service points from 37.4 games",
+        "outcome coupling: P(win)=0.570, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.128879+00:00",
-      "probability": 0.7798031817793205,
+      "predicted_at": "2026-09-03T20:41:25.630210+00:00",
+      "probability": 0.750020846702016,
       "question": "Will Z. Bergs record more aces than J. de Jong?",
       "rbp": null,
       "settled_at": "",
-      "submission": 83
+      "submission": 80
     },
     {
       "base_rate": 0.421,
@@ -62,13 +61,13 @@
       "market": null,
       "market_id": "72d858c7-0608-4bc9-af14-21a79a8570ad",
       "market_weight": 0.0,
-      "model": 0.39058611928186704,
+      "model": 0.3894666370232965,
       "notes": [
-        "exposure 124 service points from 39.7 games"
+        "exposure 117 service points from 37.4 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.128879+00:00",
-      "probability": 0.39058611928186704,
+      "predicted_at": "2026-09-03T20:41:25.630210+00:00",
+      "probability": 0.3894666370232965,
       "question": "Will Z. Bergs record more double faults than J. de Jong?",
       "rbp": null,
       "settled_at": "",
@@ -77,26 +76,27 @@
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.85,
+      "confidence": 0.7,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.687651331722603,
+      "market": null,
       "market_id": "b30d0f75-3abf-4a1e-ab80-30c1691255ae",
-      "market_weight": 0.8075,
+      "market_weight": 0.0,
       "model": 0.5695,
       "notes": [
         "simulated win probability 0.570",
-        "market consensus 0.688, weight 0.81"
+        "no market quote; this is the family that most needs one",
+        "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.128879+00:00",
-      "probability": 0.6624744057352998,
+      "predicted_at": "2026-09-03T20:41:25.630210+00:00",
+      "probability": 0.5752702729438547,
       "question": "Will Z. Bergs win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 70
+      "submission": 59
     },
     {
       "base_rate": 0.487,
@@ -109,19 +109,18 @@
       "market": null,
       "market_id": "36522446-2c72-4797-965d-f9b63373d4cd",
       "market_weight": 0.0,
-      "model": 0.44395999999999997,
+      "model": 0.434705,
       "notes": [
-        "tiebreak iid correction x0.88 (ATP)",
-        "no usable market quote for this question",
+        "tiebreak iid correction x0.91 (ATP)",
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.128879+00:00",
-      "probability": 0.40396,
+      "predicted_at": "2026-09-03T20:41:25.630210+00:00",
+      "probability": 0.39470500000000003,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 38
+      "submission": 37
     }
   ],
   "match_id": "ab824343-d4b6-401a-a62d-6ef39bd701be",

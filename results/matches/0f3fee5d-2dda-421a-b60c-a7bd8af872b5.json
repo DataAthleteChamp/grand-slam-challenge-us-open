@@ -13,18 +13,17 @@
       "market": null,
       "market_id": "b50ec5ec-2166-4101-93e8-e37f787918e1",
       "market_weight": 0.0,
-      "model": 0.49932925531438926,
+      "model": 0.48212396457176054,
       "notes": [
-        "total games: simulator 20.9, Pinnacle 24.0, used 22.7 at weight 0.60",
-        "no usable market quote for this question"
+        "total games: simulator 20.4, Pinnacle 24.0, used 22.6 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.124825+00:00",
-      "probability": 0.49932925531438926,
+      "predicted_at": "2026-09-03T20:41:25.626280+00:00",
+      "probability": 0.48212396457176054,
       "question": "Will the match last longer than 110 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 50
+      "submission": 48
     },
     {
       "base_rate": 0.427,
@@ -37,17 +36,17 @@
       "market": null,
       "market_id": "3903e313-1cab-4943-9066-79081746eebd",
       "market_weight": 0.0,
-      "model": 0.5325214177900344,
+      "model": 0.5262914427215134,
       "notes": [
-        "exposure 72 service points from 22.1 games"
+        "exposure 67 service points from 20.8 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.124825+00:00",
-      "probability": 0.5325214177900344,
+      "predicted_at": "2026-09-03T20:41:25.626280+00:00",
+      "probability": 0.5262914427215134,
       "question": "Will M. Sakkari record more aces than Y. Starodubtseva?",
       "rbp": null,
       "settled_at": "",
-      "submission": 54
+      "submission": 53
     },
     {
       "base_rate": 0.433,
@@ -60,41 +59,42 @@
       "market": null,
       "market_id": "bbcb901f-c544-432b-a296-9889d7092a56",
       "market_weight": 0.0,
-      "model": 0.5227132435892128,
+      "model": 0.5169622833733782,
       "notes": [
-        "exposure 72 service points from 22.1 games"
+        "exposure 67 service points from 20.8 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.124825+00:00",
-      "probability": 0.5227132435892128,
+      "predicted_at": "2026-09-03T20:41:25.626280+00:00",
+      "probability": 0.5169622833733782,
       "question": "Will M. Sakkari record more double faults than Y. Starodubtseva?",
       "rbp": null,
       "settled_at": "",
-      "submission": 53
+      "submission": 52
     },
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.85,
+      "confidence": 0.7,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.6394910889567251,
+      "market": null,
       "market_id": "d0803aae-adb8-41ae-95ce-929e02f3f7d7",
-      "market_weight": 0.8075,
-      "model": 0.7525,
+      "market_weight": 0.0,
+      "model": 0.68625,
       "notes": [
-        "simulated win probability 0.752",
-        "market consensus 0.639, weight 0.81"
+        "simulated win probability 0.686",
+        "no market quote; this is the family that most needs one",
+        "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.124825+00:00",
-      "probability": 0.6593739024688783,
+      "predicted_at": "2026-09-03T20:41:25.626280+00:00",
+      "probability": 0.6974733606532202,
       "question": "Will M. Sakkari win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 70
+      "submission": 74
     },
     {
       "base_rate": 0.225,
@@ -107,18 +107,18 @@
       "market": null,
       "market_id": "a8ae3566-8d31-4f07-b95b-00a2e637efe7",
       "market_weight": 0.0,
-      "model": 0.21575,
+      "model": 0.2068815,
       "notes": [
-        "no usable market quote for this question",
+        "tiebreak iid correction x1.04 (WTA)",
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.124825+00:00",
-      "probability": 0.17575,
+      "predicted_at": "2026-09-03T20:41:25.626280+00:00",
+      "probability": 0.1668815,
       "question": "Will the match feature at least 1 tiebreak?",
       "rbp": null,
       "settled_at": "",
-      "submission": 13
+      "submission": 12
     }
   ],
   "match_id": "0f3fee5d-2dda-421a-b60c-a7bd8af872b5",

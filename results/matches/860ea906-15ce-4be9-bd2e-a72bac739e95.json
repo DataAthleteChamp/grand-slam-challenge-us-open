@@ -13,18 +13,17 @@
       "market": null,
       "market_id": "5f4447e6-529b-40e2-b1ca-8386d50cb9c8",
       "market_weight": 0.0,
-      "model": 0.3302948355428488,
+      "model": 0.3157630163499665,
       "notes": [
-        "total games: simulator 21.3, Pinnacle 19.3, used 20.1 at weight 0.60",
-        "no usable market quote for this question"
+        "total games: simulator 20.6, Pinnacle 19.2, used 19.8 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.129898+00:00",
-      "probability": 0.3302948355428488,
+      "predicted_at": "2026-09-03T20:41:25.627747+00:00",
+      "probability": 0.3157630163499665,
       "question": "Will the match last longer than 105 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 29
+      "submission": 28
     },
     {
       "base_rate": 0.427,
@@ -37,13 +36,13 @@
       "market": null,
       "market_id": "d2f6f477-ce31-486b-b07f-66dba39dab55",
       "market_weight": 0.0,
-      "model": 0.37879288572601827,
+      "model": 0.3752912116485011,
       "notes": [
-        "exposure 73 service points from 22.6 games"
+        "exposure 68 service points from 21.1 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.129898+00:00",
-      "probability": 0.37879288572601827,
+      "predicted_at": "2026-09-03T20:41:25.627747+00:00",
+      "probability": 0.3752912116485011,
       "question": "Will F. Jones record more aces than I. Jovic?",
       "rbp": null,
       "settled_at": "",
@@ -60,13 +59,13 @@
       "market": null,
       "market_id": "69548b17-f559-4e46-9350-11d80c9af47f",
       "market_weight": 0.0,
-      "model": 0.44433802826180835,
+      "model": 0.44069623035986416,
       "notes": [
-        "exposure 73 service points from 22.6 games"
+        "exposure 68 service points from 21.1 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.129898+00:00",
-      "probability": 0.44433802826180835,
+      "predicted_at": "2026-09-03T20:41:25.627747+00:00",
+      "probability": 0.44069623035986416,
       "question": "Will F. Jones record more double faults than I. Jovic?",
       "rbp": null,
       "settled_at": "",
@@ -75,26 +74,27 @@
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.85,
+      "confidence": 0.7,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.1476104053787552,
+      "market": null,
       "market_id": "ac21d042-73af-46a6-8888-414132867324",
-      "market_weight": 0.8075,
-      "model": 0.3015,
+      "market_weight": 0.0,
+      "model": 0.3525,
       "notes": [
-        "simulated win probability 0.301",
-        "market consensus 0.148, weight 0.81"
+        "simulated win probability 0.352",
+        "no market quote; this is the family that most needs one",
+        "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.129898+00:00",
-      "probability": 0.178527245426029,
+      "predicted_at": "2026-09-03T20:41:25.627747+00:00",
+      "probability": 0.3421651162957197,
       "question": "Will F. Jones win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 13
+      "submission": 31
     },
     {
       "base_rate": 0.225,
@@ -107,18 +107,18 @@
       "market": null,
       "market_id": "97c0dd7b-b230-4554-b528-b7e033ca16c8",
       "market_weight": 0.0,
-      "model": 0.2225,
+      "model": 0.20973325,
       "notes": [
-        "no usable market quote for this question",
+        "tiebreak iid correction x1.04 (WTA)",
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.129898+00:00",
-      "probability": 0.1825,
+      "predicted_at": "2026-09-03T20:41:25.627747+00:00",
+      "probability": 0.16973325,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 13
+      "submission": 12
     }
   ],
   "match_id": "860ea906-15ce-4be9-bd2e-a72bac739e95",

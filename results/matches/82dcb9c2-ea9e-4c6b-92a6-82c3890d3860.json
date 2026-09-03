@@ -13,18 +13,17 @@
       "market": null,
       "market_id": "26084205-e8ed-4afa-bd91-341e452cf253",
       "market_weight": 0.0,
-      "model": 0.6140025926261206,
+      "model": 0.5808997511912688,
       "notes": [
-        "total games: simulator 21.8, Pinnacle 21.4, used 21.5 at weight 0.60",
-        "no usable market quote for this question"
+        "total games: simulator 21.1, Pinnacle 21.4, used 21.3 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.136462+00:00",
-      "probability": 0.6140025926261206,
+      "predicted_at": "2026-09-03T20:41:25.633560+00:00",
+      "probability": 0.5808997511912688,
       "question": "Will the match last longer than 90 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 64
+      "submission": 60
     },
     {
       "base_rate": 0.427,
@@ -37,17 +36,17 @@
       "market": null,
       "market_id": "0b76aa68-7c71-43cd-afe1-4c23bcb6400a",
       "market_weight": 0.0,
-      "model": 0.5823843691811285,
+      "model": 0.5741045242820879,
       "notes": [
-        "exposure 75 service points from 23.0 games"
+        "exposure 69 service points from 21.3 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.136462+00:00",
-      "probability": 0.5823843691811285,
+      "predicted_at": "2026-09-03T20:41:25.633560+00:00",
+      "probability": 0.5741045242820879,
       "question": "Will K. Muchova record more aces than E. Navarro?",
       "rbp": null,
       "settled_at": "",
-      "submission": 60
+      "submission": 59
     },
     {
       "base_rate": 0.433,
@@ -60,13 +59,13 @@
       "market": null,
       "market_id": "1d58322f-096a-4092-914f-5b106d2f90d4",
       "market_weight": 0.0,
-      "model": 0.46952037391846674,
+      "model": 0.46446072483862266,
       "notes": [
-        "exposure 75 service points from 23.0 games"
+        "exposure 69 service points from 21.3 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.136462+00:00",
-      "probability": 0.46952037391846674,
+      "predicted_at": "2026-09-03T20:41:25.633560+00:00",
+      "probability": 0.46446072483862266,
       "question": "Will K. Muchova record more double faults than E. Navarro?",
       "rbp": null,
       "settled_at": "",
@@ -88,7 +87,7 @@
         "threshold family defers to the base rate by policy"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.136462+00:00",
+      "predicted_at": "2026-09-03T20:41:25.633560+00:00",
       "probability": 0.5,
       "question": "Will K. Muchova commit more than 31 unforced errors?",
       "rbp": null,
@@ -111,7 +110,7 @@
         "serve rate: expected 0.562 vs threshold 0.620, sd 0.084 (0.062 sampling + 0.058 form)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.136462+00:00",
+      "predicted_at": "2026-09-03T20:41:25.633560+00:00",
       "probability": 0.2646134608433918,
       "question": "Will E. Navarro win more than 62% of points played on their first serve?",
       "rbp": null,
@@ -129,13 +128,13 @@
       "market": null,
       "market_id": "5f4c1754-8e34-4a21-b195-b901e8ae4d95",
       "market_weight": 0.0,
-      "model": 0.5891844682411034,
+      "model": 0.5822729169803025,
       "notes": [
-        "exposure 75 service points from 23.0 games"
+        "exposure 69 service points from 21.3 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.136462+00:00",
-      "probability": 0.5747216038579516,
+      "predicted_at": "2026-09-03T20:41:25.633560+00:00",
+      "probability": 0.5687603908955109,
       "question": "Will K. Muchova hit more winners than E. Navarro?",
       "rbp": null,
       "settled_at": "",
@@ -152,17 +151,15 @@
       "market": null,
       "market_id": "ca7646cb-815e-43d0-9b17-971b0932ccf0",
       "market_weight": 0.0,
-      "model": 0.48225,
-      "notes": [
-        "no usable market quote for this question"
-      ],
+      "model": 0.30175,
+      "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.136462+00:00",
-      "probability": 0.48225,
+      "predicted_at": "2026-09-03T20:41:25.633560+00:00",
+      "probability": 0.30175,
       "question": "Will the match require a deciding set?",
       "rbp": null,
       "settled_at": "",
-      "submission": 48
+      "submission": 26
     },
     {
       "base_rate": 0.641,
@@ -175,41 +172,40 @@
       "market": null,
       "market_id": "4a2dd34c-3dde-4ea7-8fe9-8677007b3713",
       "market_weight": 0.0,
-      "model": 0.6905,
-      "notes": [
-        "no usable market quote for this question"
-      ],
+      "model": 0.634,
+      "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.136462+00:00",
-      "probability": 0.6905,
+      "predicted_at": "2026-09-03T20:41:25.633560+00:00",
+      "probability": 0.634,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
       "settled_at": "",
-      "submission": 73
+      "submission": 67
     },
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.85,
+      "confidence": 0.7,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.7821259556047723,
+      "market": null,
       "market_id": "1340edf0-b814-44dc-b043-0103fbafdb25",
-      "market_weight": 0.8075,
-      "model": 0.66175,
+      "market_weight": 0.0,
+      "model": 0.61725,
       "notes": [
-        "simulated win probability 0.662",
-        "market consensus 0.782, weight 0.81"
+        "simulated win probability 0.617",
+        "no market quote; this is the family that most needs one",
+        "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.136462+00:00",
-      "probability": 0.7556750195481416,
+      "predicted_at": "2026-09-03T20:41:25.633560+00:00",
+      "probability": 0.6261821862602441,
       "question": "Will K. Muchova win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 80
+      "submission": 66
     },
     {
       "base_rate": 0.225,
@@ -222,18 +218,18 @@
       "market": null,
       "market_id": "445fb8ee-562f-4eba-83e9-ca18ef0b9083",
       "market_weight": 0.0,
-      "model": 0.2585,
+      "model": 0.24887999999999996,
       "notes": [
-        "no usable market quote for this question",
+        "tiebreak iid correction x1.04 (WTA)",
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.136462+00:00",
-      "probability": 0.2185,
+      "predicted_at": "2026-09-03T20:41:25.633560+00:00",
+      "probability": 0.20887999999999995,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 17
+      "submission": 16
     }
   ],
   "match_id": "82dcb9c2-ea9e-4c6b-92a6-82c3890d3860",

@@ -13,18 +13,17 @@
       "market": null,
       "market_id": "d411f218-0273-4e90-94a4-ad2677878ccd",
       "market_weight": 0.0,
-      "model": 0.5373876600921605,
+      "model": 0.5185407815396073,
       "notes": [
-        "total games: simulator 36.0, Pinnacle 39.5, used 38.1 at weight 0.60",
-        "no usable market quote for this question"
+        "total games: simulator 35.4, Pinnacle 39.5, used 37.9 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.127728+00:00",
-      "probability": 0.5373876600921605,
+      "predicted_at": "2026-09-03T20:41:25.629691+00:00",
+      "probability": 0.5185407815396073,
       "question": "Will the match last longer than 165 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 55
+      "submission": 52
     },
     {
       "base_rate": 0.46,
@@ -37,19 +36,19 @@
       "market": null,
       "market_id": "0cce5d6b-4054-45cb-8f00-d8da1b7543b1",
       "market_weight": 0.0,
-      "model": 0.44436855675019904,
+      "model": 0.5124991180556575,
       "notes": [
         "ace vulnerability: Ignacio Buse 1.00, Benjamin Bonzi 1.16",
-        "exposure 119 service points from 38.2 games",
-        "outcome coupling: P(win)=0.478, delta=+0.60"
+        "exposure 113 service points from 36.4 games",
+        "outcome coupling: P(win)=0.717, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.127728+00:00",
-      "probability": 0.44436855675019904,
+      "predicted_at": "2026-09-03T20:41:25.629691+00:00",
+      "probability": 0.5124991180556575,
       "question": "Will B. Bonzi record more aces than I. Buse?",
       "rbp": null,
       "settled_at": "",
-      "submission": 43
+      "submission": 52
     },
     {
       "base_rate": 0.421,
@@ -62,13 +61,13 @@
       "market": null,
       "market_id": "a2be7db2-90d4-42b7-b2de-634287f3155e",
       "market_weight": 0.0,
-      "model": 0.3343713548658667,
+      "model": 0.3341153370354256,
       "notes": [
-        "exposure 119 service points from 38.2 games"
+        "exposure 113 service points from 36.4 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.127728+00:00",
-      "probability": 0.3343713548658667,
+      "predicted_at": "2026-09-03T20:41:25.629691+00:00",
+      "probability": 0.3341153370354256,
       "question": "Will B. Bonzi record more double faults than I. Buse?",
       "rbp": null,
       "settled_at": "",
@@ -77,26 +76,27 @@
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.85,
+      "confidence": 0.7,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.47756401267961446,
+      "market": null,
       "market_id": "f0754d35-cb8b-4d46-8c19-5b1e300e0308",
-      "market_weight": 0.8075,
-      "model": 0.7625,
+      "market_weight": 0.0,
+      "model": 0.71675,
       "notes": [
-        "simulated win probability 0.762",
-        "market consensus 0.478, weight 0.81"
+        "simulated win probability 0.717",
+        "no market quote; this is the family that most needs one",
+        "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.127728+00:00",
-      "probability": 0.5370789400403451,
+      "predicted_at": "2026-09-03T20:41:25.629691+00:00",
+      "probability": 0.727806601836003,
       "question": "Will B. Bonzi win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 55
+      "submission": 77
     },
     {
       "base_rate": 0.13263821138211385,
@@ -109,15 +109,14 @@
       "market": null,
       "market_id": "aa44ec99-0fca-45d9-b7d3-6a4436c29ad2",
       "market_weight": 0.0,
-      "model": 0.11088,
+      "model": 0.115543,
       "notes": [
-        "tiebreak iid correction x0.88 (ATP)",
-        "no usable market quote for this question",
+        "tiebreak iid correction x0.91 (ATP)",
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.127728+00:00",
-      "probability": 0.07088,
+      "predicted_at": "2026-09-03T20:41:25.629691+00:00",
+      "probability": 0.075543,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",

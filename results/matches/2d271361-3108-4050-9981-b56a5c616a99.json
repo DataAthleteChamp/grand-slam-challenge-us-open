@@ -13,18 +13,17 @@
       "market": null,
       "market_id": "134a8cd4-10fa-44d4-bdfe-bc825dc95684",
       "market_weight": 0.0,
-      "model": 0.4248671040298472,
+      "model": 0.4067603229458828,
       "notes": [
-        "total games: simulator 36.9, Pinnacle 39.5, used 38.5 at weight 0.60",
-        "no usable market quote for this question"
+        "total games: simulator 35.9, Pinnacle 39.5, used 38.0 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.128244+00:00",
-      "probability": 0.4248671040298472,
+      "predicted_at": "2026-09-03T20:41:25.629092+00:00",
+      "probability": 0.4067603229458828,
       "question": "Will the match last longer than 180 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 41
+      "submission": 38
     },
     {
       "base_rate": 0.46,
@@ -37,15 +36,15 @@
       "market": null,
       "market_id": "b16d35b6-b4a2-45ae-abb7-450864c67c17",
       "market_weight": 0.0,
-      "model": 0.5759283235040012,
+      "model": 0.5702307944031835,
       "notes": [
         "ace vulnerability: Zachary Svajda 1.08, Arthur Gea 0.87",
-        "exposure 122 service points from 39.1 games",
-        "outcome coupling: P(win)=0.462, delta=+0.60"
+        "exposure 115 service points from 36.9 games",
+        "outcome coupling: P(win)=0.452, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.128244+00:00",
-      "probability": 0.5759283235040012,
+      "predicted_at": "2026-09-03T20:41:25.629092+00:00",
+      "probability": 0.5702307944031835,
       "question": "Will A. Gea record more aces than Z. Svajda?",
       "rbp": null,
       "settled_at": "",
@@ -62,41 +61,42 @@
       "market": null,
       "market_id": "47fb3c69-eb63-4dbc-926c-08b80ad95a23",
       "market_weight": 0.0,
-      "model": 0.5851932172078512,
+      "model": 0.5801455241723977,
       "notes": [
-        "exposure 122 service points from 39.1 games"
+        "exposure 115 service points from 36.9 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.128244+00:00",
-      "probability": 0.5851932172078512,
+      "predicted_at": "2026-09-03T20:41:25.629092+00:00",
+      "probability": 0.5801455241723977,
       "question": "Will A. Gea record more double faults than Z. Svajda?",
       "rbp": null,
       "settled_at": "",
-      "submission": 61
+      "submission": 60
     },
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.85,
+      "confidence": 0.7,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.46181046676144094,
+      "market": null,
       "market_id": "1d566525-244f-456d-a5d4-6a5af4bbfd09",
-      "market_weight": 0.8075,
-      "model": 0.43725,
+      "market_weight": 0.0,
+      "model": 0.452,
       "notes": [
-        "simulated win probability 0.437",
-        "market consensus 0.462, weight 0.81"
+        "simulated win probability 0.452",
+        "no market quote; this is the family that most needs one",
+        "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.128244+00:00",
-      "probability": 0.45803042977832564,
+      "predicted_at": "2026-09-03T20:41:25.629092+00:00",
+      "probability": 0.44792134651054544,
       "question": "Will A. Gea win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 45
+      "submission": 44
     },
     {
       "base_rate": 0.13263821138211385,
@@ -109,19 +109,18 @@
       "market": null,
       "market_id": "3c0caeed-4957-4bec-95f0-2b6d56c0ece7",
       "market_weight": 0.0,
-      "model": 0.08932000000000001,
+      "model": 0.09397799999999999,
       "notes": [
-        "tiebreak iid correction x0.88 (ATP)",
-        "no usable market quote for this question",
+        "tiebreak iid correction x0.91 (ATP)",
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.128244+00:00",
-      "probability": 0.04932000000000001,
+      "predicted_at": "2026-09-03T20:41:25.629092+00:00",
+      "probability": 0.05397799999999999,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 2
+      "submission": 3
     }
   ],
   "match_id": "2d271361-3108-4050-9981-b56a5c616a99",

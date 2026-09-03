@@ -13,18 +13,17 @@
       "market": null,
       "market_id": "4c90111f-0d7f-4fc6-b0cd-e9a4ae778dda",
       "market_weight": 0.0,
-      "model": 0.6142558972571304,
+      "model": 0.5957165056728402,
       "notes": [
-        "total games: simulator 38.0, Pinnacle 37.0, used 37.4 at weight 0.60",
-        "no usable market quote for this question"
+        "total games: simulator 37.7, Pinnacle 37.0, used 37.3 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.132410+00:00",
-      "probability": 0.6142558972571304,
+      "predicted_at": "2026-09-03T20:41:25.631831+00:00",
+      "probability": 0.5957165056728402,
       "question": "Will the match last longer than 150 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 64
+      "submission": 62
     },
     {
       "base_rate": 0.46,
@@ -37,19 +36,19 @@
       "market": null,
       "market_id": "ee511096-5f73-44ae-a940-13c78e586036",
       "market_weight": 0.0,
-      "model": 0.38925670677336316,
+      "model": 0.41246391510864255,
       "notes": [
         "ace vulnerability: Alexander Zverev 0.85, Quentin Halys 0.97",
-        "exposure 127 service points from 40.5 games",
-        "outcome coupling: P(win)=0.155, delta=+0.60"
+        "exposure 122 service points from 39.1 games",
+        "outcome coupling: P(win)=0.237, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.132410+00:00",
-      "probability": 0.38925670677336316,
+      "predicted_at": "2026-09-03T20:41:25.631831+00:00",
+      "probability": 0.41246391510864255,
       "question": "Will Q. Halys record more aces than A. Zverev?",
       "rbp": null,
       "settled_at": "",
-      "submission": 36
+      "submission": 39
     },
     {
       "base_rate": 0.421,
@@ -62,41 +61,42 @@
       "market": null,
       "market_id": "34078981-a3f6-4425-b906-8e668d3fcd75",
       "market_weight": 0.0,
-      "model": 0.6425552205857508,
+      "model": 0.6386733137023352,
       "notes": [
-        "exposure 127 service points from 40.5 games"
+        "exposure 122 service points from 39.1 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.132410+00:00",
-      "probability": 0.6425552205857508,
+      "predicted_at": "2026-09-03T20:41:25.631831+00:00",
+      "probability": 0.6386733137023352,
       "question": "Will Q. Halys record more double faults than A. Zverev?",
       "rbp": null,
       "settled_at": "",
-      "submission": 68
+      "submission": 67
     },
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.85,
+      "confidence": 0.7,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.15517241379043392,
+      "market": null,
       "market_id": "2efe2846-50ad-40bf-8d96-7ba7c29a3fb8",
-      "market_weight": 0.8075,
-      "model": 0.1835,
+      "market_weight": 0.0,
+      "model": 0.2375,
       "notes": [
-        "simulated win probability 0.183",
-        "market consensus 0.155, weight 0.81"
+        "simulated win probability 0.237",
+        "no market quote; this is the family that most needs one",
+        "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.132410+00:00",
-      "probability": 0.16797551809961203,
+      "predicted_at": "2026-09-03T20:41:25.631831+00:00",
+      "probability": 0.22839687416261856,
       "question": "Will Q. Halys win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 12
+      "submission": 18
     },
     {
       "base_rate": 0.13263821138211385,
@@ -109,15 +109,14 @@
       "market": null,
       "market_id": "315a5c8b-80fe-4976-b803-3d6a1ed7fa38",
       "market_weight": 0.0,
-      "model": 0.26708,
+      "model": 0.2724,
       "notes": [
-        "tiebreak iid correction x0.88 (ATP)",
-        "no usable market quote for this question",
+        "tiebreak iid correction x0.91 (ATP)",
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.132410+00:00",
-      "probability": 0.22707999999999998,
+      "predicted_at": "2026-09-03T20:41:25.631831+00:00",
+      "probability": 0.23239999999999997,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",

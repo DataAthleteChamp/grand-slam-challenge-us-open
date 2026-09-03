@@ -13,18 +13,17 @@
       "market": null,
       "market_id": "d13700b0-f793-4bc9-bb0e-78878cefb31b",
       "market_weight": 0.0,
-      "model": 0.5335964007481406,
+      "model": 0.512421568151343,
       "notes": [
-        "total games: simulator 20.6, Pinnacle 18.3, used 19.2 at weight 0.60",
-        "no usable market quote for this question"
+        "total games: simulator 20.2, Pinnacle 18.2, used 19.0 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.126718+00:00",
-      "probability": 0.5335964007481406,
+      "predicted_at": "2026-09-03T20:41:25.627022+00:00",
+      "probability": 0.512421568151343,
       "question": "Will the match last longer than 80 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 54
+      "submission": 52
     },
     {
       "base_rate": 0.427,
@@ -37,17 +36,17 @@
       "market": null,
       "market_id": "309d4a27-68b4-410a-9cad-cb5087949b29",
       "market_weight": 0.0,
-      "model": 0.6068048661650195,
+      "model": 0.5977848110723455,
       "notes": [
-        "exposure 71 service points from 21.9 games"
+        "exposure 66 service points from 20.5 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.126718+00:00",
-      "probability": 0.6068048661650195,
+      "predicted_at": "2026-09-03T20:41:25.627022+00:00",
+      "probability": 0.5977848110723455,
       "question": "Will M. Andreeva record more aces than E. Lys?",
       "rbp": null,
       "settled_at": "",
-      "submission": 63
+      "submission": 62
     },
     {
       "base_rate": 0.433,
@@ -60,13 +59,13 @@
       "market": null,
       "market_id": "95978099-de00-4e3b-bb27-504130d23c25",
       "market_weight": 0.0,
-      "model": 0.4213118032291035,
+      "model": 0.41800785919582034,
       "notes": [
-        "exposure 71 service points from 21.9 games"
+        "exposure 66 service points from 20.5 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.126718+00:00",
-      "probability": 0.4213118032291035,
+      "predicted_at": "2026-09-03T20:41:25.627022+00:00",
+      "probability": 0.41800785919582034,
       "question": "Will M. Andreeva record more double faults than E. Lys?",
       "rbp": null,
       "settled_at": "",
@@ -75,26 +74,27 @@
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.85,
+      "confidence": 0.7,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.903998580344814,
+      "market": null,
       "market_id": "34771698-6335-4ec7-a0bb-e2325596cc60",
-      "market_weight": 0.8075,
-      "model": 0.77375,
+      "market_weight": 0.0,
+      "model": 0.703,
       "notes": [
-        "simulated win probability 0.774",
-        "market consensus 0.904, weight 0.81"
+        "simulated win probability 0.703",
+        "no market quote; this is the family that most needs one",
+        "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.126718+00:00",
-      "probability": 0.8770156341658979,
+      "predicted_at": "2026-09-03T20:41:25.627022+00:00",
+      "probability": 0.7142350574162658,
       "question": "Will M. Andreeva win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 92
+      "submission": 76
     },
     {
       "base_rate": 0.225,
@@ -107,18 +107,18 @@
       "market": null,
       "market_id": "a28381d9-7497-42c6-a7a1-920a1d516573",
       "market_weight": 0.0,
-      "model": 0.19525,
+      "model": 0.18666,
       "notes": [
-        "no usable market quote for this question",
+        "tiebreak iid correction x1.04 (WTA)",
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.126718+00:00",
-      "probability": 0.15525,
+      "predicted_at": "2026-09-03T20:41:25.627022+00:00",
+      "probability": 0.14665999999999998,
       "question": "Will the match feature at least 1 tiebreak?",
       "rbp": null,
       "settled_at": "",
-      "submission": 11
+      "submission": 10
     }
   ],
   "match_id": "2395fe71-ca10-40fa-9081-4315c87e7685",

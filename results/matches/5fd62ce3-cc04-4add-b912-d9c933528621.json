@@ -13,18 +13,17 @@
       "market": null,
       "market_id": "a8b831a6-8b29-4d37-bf45-f7d2ad445c76",
       "market_weight": 0.0,
-      "model": 0.633980899037293,
+      "model": 0.621698831912527,
       "notes": [
-        "total games: simulator 19.8, Pinnacle 19.9, used 19.8 at weight 0.60",
-        "no usable market quote for this question"
+        "total games: simulator 19.8, Pinnacle 19.9, used 19.9 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.131929+00:00",
-      "probability": 0.633980899037293,
+      "predicted_at": "2026-09-03T20:41:25.632733+00:00",
+      "probability": 0.621698831912527,
       "question": "Will the match last longer than 75 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 67
+      "submission": 65
     },
     {
       "base_rate": 0.427,
@@ -37,13 +36,13 @@
       "market": null,
       "market_id": "36f553d7-743e-40bf-acaf-4f531241aa0c",
       "market_weight": 0.0,
-      "model": 0.1247163563466654,
+      "model": 0.1260028953999022,
       "notes": [
-        "exposure 68 service points from 21.1 games"
+        "exposure 65 service points from 20.2 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.131929+00:00",
-      "probability": 0.1247163563466654,
+      "predicted_at": "2026-09-03T20:41:25.632733+00:00",
+      "probability": 0.1260028953999022,
       "question": "Will J. Bouzas Maneiro record more aces than E. Rybakina?",
       "rbp": null,
       "settled_at": "",
@@ -60,13 +59,13 @@
       "market": null,
       "market_id": "f3092b0c-78af-4a50-b53b-897216d85fdf",
       "market_weight": 0.0,
-      "model": 0.4676724916285573,
+      "model": 0.46497517192311205,
       "notes": [
-        "exposure 68 service points from 21.1 games"
+        "exposure 65 service points from 20.2 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.131929+00:00",
-      "probability": 0.4676724916285573,
+      "predicted_at": "2026-09-03T20:41:25.632733+00:00",
+      "probability": 0.46497517192311205,
       "question": "Will J. Bouzas Maneiro record more double faults than E. Rybakina?",
       "rbp": null,
       "settled_at": "",
@@ -75,26 +74,27 @@
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.85,
+      "confidence": 0.7,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.15664160397066565,
+      "market": null,
       "market_id": "0437ce62-1923-4605-a902-0b3e1e2b284b",
-      "market_weight": 0.8075,
-      "model": 0.12675,
+      "market_weight": 0.0,
+      "model": 0.1895,
       "notes": [
-        "simulated win probability 0.127",
-        "market consensus 0.157, weight 0.81"
+        "simulated win probability 0.190",
+        "no market quote; this is the family that most needs one",
+        "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.131929+00:00",
-      "probability": 0.1583372372832262,
+      "predicted_at": "2026-09-03T20:41:25.632733+00:00",
+      "probability": 0.1850071885780496,
       "question": "Will J. Bouzas Maneiro win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 11
+      "submission": 14
     },
     {
       "base_rate": 0.225,
@@ -107,18 +107,18 @@
       "market": null,
       "market_id": "fd207ff8-2369-4574-ad46-55e873418236",
       "market_weight": 0.0,
-      "model": 0.18925,
+      "model": 0.2006595,
       "notes": [
-        "no usable market quote for this question",
+        "tiebreak iid correction x1.04 (WTA)",
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.131929+00:00",
-      "probability": 0.14925,
+      "predicted_at": "2026-09-03T20:41:25.632733+00:00",
+      "probability": 0.16065949999999998,
       "question": "Will the match feature at least 1 tiebreak?",
       "rbp": null,
       "settled_at": "",
-      "submission": 10
+      "submission": 11
     }
   ],
   "match_id": "5fd62ce3-cc04-4add-b912-d9c933528621",

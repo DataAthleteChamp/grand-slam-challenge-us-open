@@ -33,7 +33,22 @@ from bot.sportspredict.config import Config  # noqa: E402
 OUT = Path(__file__).resolve().parent.parent / "data" / "manual" / "NUMBERS.txt"
 
 #: Log-odds temperature applied to every family except tiebreak.
-SHARPEN = 1.15
+#: Per-family log-odds sharpening for the hand-entered third account, measured on
+#: settled questions by replaying each submission against its sharpened self,
+#: pooled over both bot lanes for power (n>=212 per family):
+#:
+#:   aces           +0.23 [+0.03,+0.43]  SIG   -> sharpen
+#:   match winner   +0.52 [+0.30,+0.71]  SIG   -> but the bot ALREADY sharpens this
+#:                                                at 1.35, so sharpening again here
+#:                                                would compound to about 1.55
+#:   double faults  -0.41 [-0.65,-0.17]  SIG   -> do NOT sharpen
+#:   duration       -0.34 [-0.62,-0.07]  SIG   -> do NOT sharpen
+#:   tiebreak       +0.04 [-0.21,+0.28]        -> nothing to gain
+#:
+#: Sharpening only helps where the number is under-confident. Double faults and
+#: duration are not, and blanket sharpening was quietly costing this account
+#: points on two of its five families.
+SHARPEN_BY_TOKEN = {"aces": 1.15}
 
 #: Questions are listed in this order within a match, which is how the website
 #: presents them; it keeps hand-entry aligned with the screen.
@@ -69,18 +84,24 @@ def build(lane: str = "honest") -> str:
 
     lines = [
         f"MANUAL NUMBERS - {len(live)} questions across {len(by_match)} matches",
-        f"Sharpened x{SHARPEN} in log-odds on winner/aces/double faults/duration.",
-        "Tiebreak is left AT the bot number: sharpening it cost 5.95 RBP/question",
-        "on the settled sample, because it pushes an already-high number higher.",
+        f"Sharpened x{SHARPEN_BY_TOKEN.get('aces')} in log-odds on ACES ONLY.",
+        "Everything else is left AT the bot number. Sharpening double faults cost",
+        "0.41 RBP/question on the settled sample and duration 0.34, both significant;",
+        "the winner number is already sharpened inside the bot, so doing it again here",
+        "would compound. See SHARPEN_BY_TOKEN for the per-family measurements.",
         "",
     ]
     for (name, opening), questions in sorted(by_match.items(), key=lambda kv: kv[0][1]):
         lines.append(f"--- {name}   (starts {opening[:16].replace('T', ' ')}Z)")
         for question, value in sorted(questions, key=lambda q: question_rank(q[0])):
-            if "tiebreak" in question.lower():
+            lowered = question.lower()
+            alpha = next(
+                (a for token, a in SHARPEN_BY_TOKEN.items() if token in lowered), None
+            )
+            if alpha is None:
                 manual = int(round(value))
             else:
-                manual = max(4, min(96, round(sharpen(value / 100.0, 1 / SHARPEN) * 100)))
+                manual = max(4, min(96, round(sharpen(value / 100.0, 1 / alpha) * 100)))
             lines.append(f"     bot {value:3.0f}  ->  MANUAL {manual:3.0f}   {question}")
         lines.append("")
     return "\n".join(lines)

@@ -13,18 +13,17 @@
       "market": null,
       "market_id": "9ace04fa-eb24-47e3-af24-15a413059ee0",
       "market_weight": 0.0,
-      "model": 0.4360792427417597,
+      "model": 0.41019699699603235,
       "notes": [
-        "total games: simulator 21.6, Pinnacle 19.9, used 20.6 at weight 0.60",
-        "no usable market quote for this question"
+        "total games: simulator 21.0, Pinnacle 19.9, used 20.3 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.130947+00:00",
-      "probability": 0.4360792427417597,
+      "predicted_at": "2026-09-03T20:41:25.633099+00:00",
+      "probability": 0.41019699699603235,
       "question": "Will the match last longer than 95 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 42
+      "submission": 39
     },
     {
       "base_rate": 0.427,
@@ -37,13 +36,13 @@
       "market": null,
       "market_id": "43d918eb-89be-4aa4-b88f-3a871eec91e1",
       "market_weight": 0.0,
-      "model": 0.4695785828790772,
+      "model": 0.46584631152582545,
       "notes": [
-        "exposure 74 service points from 22.9 games"
+        "exposure 69 service points from 21.3 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.130947+00:00",
-      "probability": 0.4695785828790772,
+      "predicted_at": "2026-09-03T20:41:25.633099+00:00",
+      "probability": 0.46584631152582545,
       "question": "Will P. Badosa record more aces than C. Gauff?",
       "rbp": null,
       "settled_at": "",
@@ -60,13 +59,13 @@
       "market": null,
       "market_id": "4b9a0a44-23f7-47d8-83c9-6ae4abb7e489",
       "market_weight": 0.0,
-      "model": 0.44639231046066086,
+      "model": 0.4435889877367134,
       "notes": [
-        "exposure 74 service points from 22.9 games"
+        "exposure 69 service points from 21.3 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.130947+00:00",
-      "probability": 0.44639231046066086,
+      "predicted_at": "2026-09-03T20:41:25.633099+00:00",
+      "probability": 0.4435889877367134,
       "question": "Will P. Badosa record more double faults than C. Gauff?",
       "rbp": null,
       "settled_at": "",
@@ -75,26 +74,27 @@
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.85,
+      "confidence": 0.7,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.13357142850889214,
+      "market": null,
       "market_id": "25fd2e42-a9cc-4c17-a9bb-69fbae612ce2",
-      "market_weight": 0.8075,
-      "model": 0.37475,
+      "market_weight": 0.0,
+      "model": 0.406,
       "notes": [
-        "simulated win probability 0.375",
-        "market consensus 0.134, weight 0.81"
+        "simulated win probability 0.406",
+        "no market quote; this is the family that most needs one",
+        "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.130947+00:00",
-      "probability": 0.17431346813488957,
+      "predicted_at": "2026-09-03T20:41:25.633099+00:00",
+      "probability": 0.3984850951668306,
       "question": "Will P. Badosa win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 13
+      "submission": 37
     },
     {
       "base_rate": 0.225,
@@ -107,18 +107,18 @@
       "market": null,
       "market_id": "69cf3b3d-5310-4f32-9e88-44171d77e36e",
       "market_weight": 0.0,
-      "model": 0.2355,
+      "model": 0.23254724999999998,
       "notes": [
-        "no usable market quote for this question",
+        "tiebreak iid correction x1.04 (WTA)",
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.130947+00:00",
-      "probability": 0.19549999999999998,
+      "predicted_at": "2026-09-03T20:41:25.633099+00:00",
+      "probability": 0.19254724999999998,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 15
+      "submission": 14
     }
   ],
   "match_id": "a4c21be1-a8ea-4d8a-80d0-3cc7afcc0dfa",

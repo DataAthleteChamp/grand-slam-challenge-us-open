@@ -13,17 +13,17 @@
       "market": null,
       "market_id": "f6c7c6f1-6b36-43c2-81f1-b2ac52677768",
       "market_weight": 0.0,
-      "model": 0.43497369404640646,
+      "model": 0.4155292952092705,
       "notes": [
-        "no usable market quote for this question"
+        "total games: simulator 21.7, Pinnacle 22.5, used 22.2 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.138913+00:00",
-      "probability": 0.43497369404640646,
+      "predicted_at": "2026-09-03T20:41:25.636568+00:00",
+      "probability": 0.4155292952092705,
       "question": "Will the match last longer than 100 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 42
+      "submission": 39
     },
     {
       "base_rate": 0.427,
@@ -36,13 +36,13 @@
       "market": null,
       "market_id": "f305a211-e96c-403d-b9cb-c4310ffdc0a6",
       "market_weight": 0.0,
-      "model": 0.2903264253767192,
+      "model": 0.28953475050457406,
       "notes": [
-        "exposure 77 service points from 23.7 games"
+        "exposure 71 service points from 22.0 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.138913+00:00",
-      "probability": 0.2903264253767192,
+      "predicted_at": "2026-09-03T20:41:25.636568+00:00",
+      "probability": 0.28953475050457406,
       "question": "Will A. Li record more aces than L. Noskova?",
       "rbp": null,
       "settled_at": "",
@@ -59,13 +59,13 @@
       "market": null,
       "market_id": "c0aa57e4-6b30-441a-8883-c54043a50d9b",
       "market_weight": 0.0,
-      "model": 0.33100533562354806,
+      "model": 0.33026669464965286,
       "notes": [
-        "exposure 77 service points from 23.7 games"
+        "exposure 71 service points from 22.0 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.138913+00:00",
-      "probability": 0.33100533562354806,
+      "predicted_at": "2026-09-03T20:41:25.636568+00:00",
+      "probability": 0.33026669464965286,
       "question": "Will A. Li record more double faults than L. Noskova?",
       "rbp": null,
       "settled_at": "",
@@ -87,7 +87,7 @@
         "threshold family defers to the base rate by policy"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.138913+00:00",
+      "predicted_at": "2026-09-03T20:41:25.636568+00:00",
       "probability": 0.5,
       "question": "Will A. Li commit more than 25 unforced errors?",
       "rbp": null,
@@ -110,7 +110,7 @@
         "serve rate: expected 0.587 vs threshold 0.710, sd 0.084 (0.061 sampling + 0.058 form)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.138913+00:00",
+      "predicted_at": "2026-09-03T20:41:25.636568+00:00",
       "probability": 0.06881803192302133,
       "question": "Will L. Noskova win more than 71% of points played on their first serve?",
       "rbp": null,
@@ -128,17 +128,17 @@
       "market": null,
       "market_id": "4b32c817-eb72-4b4e-b19e-6be586e8e2da",
       "market_weight": 0.0,
-      "model": 0.2855661228270589,
+      "model": 0.2904900673388895,
       "notes": [
-        "exposure 77 service points from 23.7 games"
+        "exposure 71 service points from 22.0 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.138913+00:00",
-      "probability": 0.3128507809383383,
+      "predicted_at": "2026-09-03T20:41:25.636568+00:00",
+      "probability": 0.31709768307979225,
       "question": "Will A. Li hit more winners than L. Noskova?",
       "rbp": null,
       "settled_at": "",
-      "submission": 27
+      "submission": 28
     },
     {
       "base_rate": 0.337,
@@ -151,17 +151,15 @@
       "market": null,
       "market_id": "6339ab4f-59f4-44d8-95a3-ddfa5732a626",
       "market_weight": 0.0,
-      "model": 0.49725,
-      "notes": [
-        "no usable market quote for this question"
-      ],
+      "model": 0.31225,
+      "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.138913+00:00",
-      "probability": 0.49725,
+      "predicted_at": "2026-09-03T20:41:25.636568+00:00",
+      "probability": 0.31225,
       "question": "Will the match require a deciding set?",
       "rbp": null,
       "settled_at": "",
-      "submission": 50
+      "submission": 27
     },
     {
       "base_rate": 0.641,
@@ -174,41 +172,40 @@
       "market": null,
       "market_id": "74506938-fa88-41e4-af45-dcc867ac5ed0",
       "market_weight": 0.0,
-      "model": 0.63275,
-      "notes": [
-        "no usable market quote for this question"
-      ],
+      "model": 0.5765,
+      "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.138913+00:00",
-      "probability": 0.63275,
+      "predicted_at": "2026-09-03T20:41:25.636568+00:00",
+      "probability": 0.5765,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
       "settled_at": "",
-      "submission": 66
+      "submission": 60
     },
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.85,
+      "confidence": 0.7,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.25427350422615647,
+      "market": null,
       "market_id": "0c9e02d5-aa45-421d-95a2-022b1113bda3",
-      "market_weight": 0.8075,
-      "model": 0.42475,
+      "market_weight": 0.0,
+      "model": 0.44975,
       "notes": [
-        "simulated win probability 0.425",
-        "market consensus 0.254, weight 0.81"
+        "simulated win probability 0.450",
+        "no market quote; this is the family that most needs one",
+        "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.138913+00:00",
-      "probability": 0.28836167040122934,
+      "predicted_at": "2026-09-03T20:41:25.636568+00:00",
+      "probability": 0.44548872502980796,
       "question": "Will A. Li win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 24
+      "submission": 43
     },
     {
       "base_rate": 0.225,
@@ -221,18 +218,18 @@
       "market": null,
       "market_id": "37d04a97-f9eb-4183-bda6-3d3f8b121d29",
       "market_weight": 0.0,
-      "model": 0.303,
+      "model": 0.282064,
       "notes": [
-        "no usable market quote for this question",
+        "tiebreak iid correction x1.04 (WTA)",
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.138913+00:00",
-      "probability": 0.263,
+      "predicted_at": "2026-09-03T20:41:25.636568+00:00",
+      "probability": 0.24206399999999997,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 22
+      "submission": 19
     }
   ],
   "match_id": "a83581f8-1182-40ec-a2f6-64a8cea363ae",

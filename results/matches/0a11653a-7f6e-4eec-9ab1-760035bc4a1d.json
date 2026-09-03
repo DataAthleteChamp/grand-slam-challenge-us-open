@@ -13,18 +13,17 @@
       "market": null,
       "market_id": "82e56688-7733-4d7d-a948-baa5bd66ea75",
       "market_weight": 0.0,
-      "model": 0.350498488813062,
+      "model": 0.33815471180903645,
       "notes": [
-        "total games: simulator 37.1, Pinnacle 34.0, used 35.2 at weight 0.60",
-        "no usable market quote for this question"
+        "total games: simulator 36.0, Pinnacle 34.0, used 34.8 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.131437+00:00",
-      "probability": 0.350498488813062,
+      "predicted_at": "2026-09-03T20:41:25.632329+00:00",
+      "probability": 0.33815471180903645,
       "question": "Will the match last longer than 170 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 32
+      "submission": 30
     },
     {
       "base_rate": 0.46,
@@ -37,19 +36,19 @@
       "market": null,
       "market_id": "d0508e5a-7168-4465-92f4-85c30f6a933c",
       "market_weight": 0.0,
-      "model": 0.8709517054003333,
+      "model": 0.9042007960316863,
       "notes": [
         "ace vulnerability: Learner Tien 1.04, Gael Monfils 0.59",
-        "exposure 123 service points from 39.3 games",
-        "outcome coupling: P(win)=0.181, delta=+0.60"
+        "exposure 115 service points from 37.0 games",
+        "outcome coupling: P(win)=0.561, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.131437+00:00",
-      "probability": 0.8709517054003333,
+      "predicted_at": "2026-09-03T20:41:25.632329+00:00",
+      "probability": 0.9042007960316863,
       "question": "Will G. Monfils record more aces than L. Tien?",
       "rbp": null,
       "settled_at": "",
-      "submission": 92
+      "submission": 94
     },
     {
       "base_rate": 0.421,
@@ -62,41 +61,42 @@
       "market": null,
       "market_id": "97a1f086-1a1a-48c1-b515-4b6b953e1122",
       "market_weight": 0.0,
-      "model": 0.5624575531241961,
+      "model": 0.5576512793456497,
       "notes": [
-        "exposure 123 service points from 39.3 games"
+        "exposure 115 service points from 37.0 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.131437+00:00",
-      "probability": 0.5624575531241961,
+      "predicted_at": "2026-09-03T20:41:25.632329+00:00",
+      "probability": 0.5576512793456497,
       "question": "Will G. Monfils record more double faults than L. Tien?",
       "rbp": null,
       "settled_at": "",
-      "submission": 58
+      "submission": 57
     },
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.85,
+      "confidence": 0.7,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.1813725490265245,
+      "market": null,
       "market_id": "521c29a4-8ed3-40dd-bfcc-4877a6c871ea",
-      "market_weight": 0.8075,
-      "model": 0.55775,
+      "market_weight": 0.0,
+      "model": 0.561,
       "notes": [
-        "simulated win probability 0.558",
-        "market consensus 0.181, weight 0.81"
+        "simulated win probability 0.561",
+        "no market quote; this is the family that most needs one",
+        "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.131437+00:00",
-      "probability": 0.24237014868043294,
+      "predicted_at": "2026-09-03T20:41:25.632329+00:00",
+      "probability": 0.5661166658882458,
       "question": "Will G. Monfils win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 19
+      "submission": 58
     },
     {
       "base_rate": 0.13263821138211385,
@@ -109,15 +109,14 @@
       "market": null,
       "market_id": "a4a24b8c-b099-4214-8eae-3cdc41a31555",
       "market_weight": 0.0,
-      "model": 0.09372,
+      "model": 0.10101500000000001,
       "notes": [
-        "tiebreak iid correction x0.88 (ATP)",
-        "no usable market quote for this question",
+        "tiebreak iid correction x0.91 (ATP)",
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.131437+00:00",
-      "probability": 0.05372,
+      "predicted_at": "2026-09-03T20:41:25.632329+00:00",
+      "probability": 0.06101500000000001,
       "question": "Will the match feature at least 2 tiebreaks?",
       "rbp": null,
       "settled_at": "",

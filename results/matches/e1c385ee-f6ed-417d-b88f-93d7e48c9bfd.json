@@ -13,14 +13,13 @@
       "market": null,
       "market_id": "93da74f0-e2fb-450a-9047-9f3c8ff26498",
       "market_weight": 0.0,
-      "model": 0.3837163767152989,
+      "model": 0.38389695878314445,
       "notes": [
-        "total games: simulator 40.2, Pinnacle 38.5, used 39.2 at weight 0.60",
-        "no usable market quote for this question"
+        "total games: simulator 39.4, Pinnacle 39.0, used 39.2 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.141439+00:00",
-      "probability": 0.3837163767152989,
+      "predicted_at": "2026-09-03T20:41:25.640304+00:00",
+      "probability": 0.38389695878314445,
       "question": "Will the match last longer than 185 minutes?",
       "rbp": null,
       "settled_at": "",
@@ -37,19 +36,19 @@
       "market": null,
       "market_id": "fd094f26-180a-4f60-8bb4-97efec45870a",
       "market_weight": 0.0,
-      "model": 0.5103334567060906,
+      "model": 0.594252825619242,
       "notes": [
         "ace vulnerability: Ben Shelton 0.83, Denis Shapovalov 0.58",
-        "exposure 133 service points from 42.5 games",
-        "outcome coupling: P(win)=0.228, delta=+0.60"
+        "exposure 126 service points from 40.3 games",
+        "outcome coupling: P(win)=0.533, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.141439+00:00",
-      "probability": 0.5103334567060906,
+      "predicted_at": "2026-09-03T20:41:25.640304+00:00",
+      "probability": 0.594252825619242,
       "question": "Will D. Shapovalov record more aces than B. Shelton?",
       "rbp": null,
       "settled_at": "",
-      "submission": 51
+      "submission": 62
     },
     {
       "base_rate": 0.421,
@@ -62,17 +61,17 @@
       "market": null,
       "market_id": "cddf5578-0760-416a-ac1c-13efcba6f270",
       "market_weight": 0.0,
-      "model": 0.7583759532190906,
+      "model": 0.7525840528969487,
       "notes": [
-        "exposure 133 service points from 42.5 games"
+        "exposure 126 service points from 40.3 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.141439+00:00",
-      "probability": 0.7583759532190906,
+      "predicted_at": "2026-09-03T20:41:25.640304+00:00",
+      "probability": 0.7525840528969487,
       "question": "Will D. Shapovalov record more double faults than B. Shelton?",
       "rbp": null,
       "settled_at": "",
-      "submission": 81
+      "submission": 80
     },
     {
       "base_rate": 0.5,
@@ -90,7 +89,7 @@
         "threshold family defers to the base rate by policy"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.141439+00:00",
+      "predicted_at": "2026-09-03T20:41:25.640304+00:00",
       "probability": 0.5,
       "question": "Will D. Shapovalov commit more than 51 unforced errors?",
       "rbp": null,
@@ -113,7 +112,7 @@
         "serve rate: expected 0.674 vs threshold 0.770, sd 0.068 (0.044 sampling + 0.051 form)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.141439+00:00",
+      "predicted_at": "2026-09-03T20:41:25.640304+00:00",
       "probability": 0.07936779910156337,
       "question": "Will B. Shelton win more than 77% of points played on their first serve?",
       "rbp": null,
@@ -131,17 +130,17 @@
       "market": null,
       "market_id": "3a68358b-107a-4709-b739-834c3e7c25bd",
       "market_weight": 0.0,
-      "model": 0.7169673974833815,
+      "model": 0.7103991985749517,
       "notes": [
-        "exposure 133 service points from 42.5 games"
+        "exposure 126 service points from 40.3 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.141439+00:00",
-      "probability": 0.6850718803294165,
+      "predicted_at": "2026-09-03T20:41:25.640304+00:00",
+      "probability": 0.6794068087708958,
       "question": "Will D. Shapovalov hit more winners than B. Shelton?",
       "rbp": null,
       "settled_at": "",
-      "submission": 73
+      "submission": 72
     },
     {
       "base_rate": 0.202,
@@ -154,17 +153,15 @@
       "market": null,
       "market_id": "a575e884-0e69-4366-90ca-eb0f350e0e2e",
       "market_weight": 0.0,
-      "model": 0.35725,
-      "notes": [
-        "no usable market quote for this question"
-      ],
+      "model": 0.271,
+      "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.141439+00:00",
-      "probability": 0.35725,
+      "predicted_at": "2026-09-03T20:41:25.640304+00:00",
+      "probability": 0.271,
       "question": "Will the match require a deciding set?",
       "rbp": null,
       "settled_at": "",
-      "submission": 32
+      "submission": 22
     },
     {
       "base_rate": 0.653,
@@ -177,41 +174,40 @@
       "market": null,
       "market_id": "08c94ced-2854-44de-94db-b82e87e5bef0",
       "market_weight": 0.0,
-      "model": 0.531,
-      "notes": [
-        "no usable market quote for this question"
-      ],
+      "model": 0.4975,
+      "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.141439+00:00",
-      "probability": 0.531,
+      "predicted_at": "2026-09-03T20:41:25.640304+00:00",
+      "probability": 0.4975,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
       "settled_at": "",
-      "submission": 54
+      "submission": 50
     },
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.85,
+      "confidence": 0.7,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.2282051282100326,
+      "market": null,
       "market_id": "29ccd7de-e601-4d62-ad47-c8230b071466",
-      "market_weight": 0.8075,
-      "model": 0.5245,
+      "market_weight": 0.0,
+      "model": 0.5335,
       "notes": [
-        "simulated win probability 0.524",
-        "market consensus 0.228, weight 0.81"
+        "simulated win probability 0.533",
+        "no market quote; this is the family that most needs one",
+        "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.141439+00:00",
-      "probability": 0.28091363654642226,
+      "predicted_at": "2026-09-03T20:41:25.640304+00:00",
+      "probability": 0.536377100306579,
       "question": "Will D. Shapovalov win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 24
+      "submission": 55
     },
     {
       "base_rate": 0.13263821138211385,
@@ -224,19 +220,18 @@
       "market": null,
       "market_id": "40813ad3-98c6-4d80-9545-e96297d67666",
       "market_weight": 0.0,
-      "model": 0.28622,
+      "model": 0.27625900000000003,
       "notes": [
-        "tiebreak iid correction x0.88 (ATP)",
-        "no usable market quote for this question",
+        "tiebreak iid correction x0.91 (ATP)",
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.141439+00:00",
-      "probability": 0.24621999999999997,
+      "predicted_at": "2026-09-03T20:41:25.640304+00:00",
+      "probability": 0.23625900000000002,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
-      "submission": 20
+      "submission": 19
     }
   ],
   "match_id": "e1c385ee-f6ed-417d-b88f-93d7e48c9bfd",

@@ -13,14 +13,13 @@
       "market": null,
       "market_id": "6e3967c3-9ffb-4ad3-94c6-0b73a7388817",
       "market_weight": 0.0,
-      "model": 0.5068627499034585,
+      "model": 0.5095023618606295,
       "notes": [
-        "total games: simulator 18.9, Pinnacle 18.3, used 18.5 at weight 0.60",
-        "no usable market quote for this question"
+        "total games: simulator 19.3, Pinnacle 18.3, used 18.7 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.132921+00:00",
-      "probability": 0.5068627499034585,
+      "predicted_at": "2026-09-03T20:41:25.634215+00:00",
+      "probability": 0.5095023618606295,
       "question": "Will the match last longer than 80 minutes?",
       "rbp": null,
       "settled_at": "",
@@ -37,13 +36,13 @@
       "market": null,
       "market_id": "cc479c35-9241-4fb8-900d-014f629eb948",
       "market_weight": 0.0,
-      "model": 0.17019233878300696,
+      "model": 0.17096611232520295,
       "notes": [
-        "exposure 66 service points from 20.4 games"
+        "exposure 63 service points from 19.6 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.132921+00:00",
-      "probability": 0.17019233878300696,
+      "predicted_at": "2026-09-03T20:41:25.634215+00:00",
+      "probability": 0.17096611232520295,
       "question": "Will K. Rakhimova record more aces than A. Sabalenka?",
       "rbp": null,
       "settled_at": "",
@@ -60,13 +59,13 @@
       "market": null,
       "market_id": "2396d18a-c2e0-48d0-bc34-7c98089ba1e5",
       "market_weight": 0.0,
-      "model": 0.29088738304046274,
+      "model": 0.29102132562400007,
       "notes": [
-        "exposure 66 service points from 20.4 games"
+        "exposure 63 service points from 19.6 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.132921+00:00",
-      "probability": 0.29088738304046274,
+      "predicted_at": "2026-09-03T20:41:25.634215+00:00",
+      "probability": 0.29102132562400007,
       "question": "Will K. Rakhimova record more double faults than A. Sabalenka?",
       "rbp": null,
       "settled_at": "",
@@ -88,7 +87,7 @@
         "threshold family defers to the base rate by policy"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.132921+00:00",
+      "predicted_at": "2026-09-03T20:41:25.634215+00:00",
       "probability": 0.5,
       "question": "Will K. Rakhimova commit more than 27 unforced errors?",
       "rbp": null,
@@ -111,7 +110,7 @@
         "serve rate: expected 0.627 vs threshold 0.770, sd 0.083 (0.060 sampling + 0.058 form)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.132921+00:00",
+      "predicted_at": "2026-09-03T20:41:25.634215+00:00",
       "probability": 0.03889706014471824,
       "question": "Will A. Sabalenka win more than 77% of points played on their first serve?",
       "rbp": null,
@@ -129,13 +128,13 @@
       "market": null,
       "market_id": "8b3098e1-e52f-4e84-81cd-676d77b36d14",
       "market_weight": 0.0,
-      "model": 0.4336001874894626,
+      "model": 0.43317285195909855,
       "notes": [
-        "exposure 66 service points from 20.4 games"
+        "exposure 63 service points from 19.6 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.132921+00:00",
-      "probability": 0.4405301617096615,
+      "predicted_at": "2026-09-03T20:41:25.634215+00:00",
+      "probability": 0.44016158481472245,
       "question": "Will K. Rakhimova hit more winners than A. Sabalenka?",
       "rbp": null,
       "settled_at": "",
@@ -152,17 +151,15 @@
       "market": null,
       "market_id": "215898c3-989c-4fdf-a019-78cf43f5377b",
       "market_weight": 0.0,
-      "model": 0.29825,
-      "notes": [
-        "no usable market quote for this question"
-      ],
+      "model": 0.21875,
+      "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.132921+00:00",
-      "probability": 0.29825,
+      "predicted_at": "2026-09-03T20:41:25.634215+00:00",
+      "probability": 0.21875,
       "question": "Will the match require a deciding set?",
       "rbp": null,
       "settled_at": "",
-      "submission": 26
+      "submission": 17
     },
     {
       "base_rate": 0.641,
@@ -175,41 +172,40 @@
       "market": null,
       "market_id": "f063ec41-2118-4d3c-a562-af4b691ab919",
       "market_weight": 0.0,
-      "model": 0.791,
-      "notes": [
-        "no usable market quote for this question"
-      ],
+      "model": 0.7335,
+      "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.132921+00:00",
-      "probability": 0.791,
+      "predicted_at": "2026-09-03T20:41:25.634215+00:00",
+      "probability": 0.7335,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
       "settled_at": "",
-      "submission": 84
+      "submission": 78
     },
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.85,
+      "confidence": 0.7,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.07178014769690108,
+      "market": null,
       "market_id": "9467f37a-f55f-49e5-8083-c2705146fce7",
-      "market_weight": 0.8075,
-      "model": 0.08975,
+      "market_weight": 0.0,
+      "model": 0.15425,
       "notes": [
-        "simulated win probability 0.090",
-        "market consensus 0.072, weight 0.81"
+        "simulated win probability 0.154",
+        "no market quote; this is the family that most needs one",
+        "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.132921+00:00",
-      "probability": 0.08452294467802254,
+      "predicted_at": "2026-09-03T20:41:25.634215+00:00",
+      "probability": 0.15504901699324308,
       "question": "Will K. Rakhimova win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 5
+      "submission": 11
     },
     {
       "base_rate": 0.225,
@@ -222,14 +218,14 @@
       "market": null,
       "market_id": "58a8348a-0698-4367-ad87-baa003daa4ee",
       "market_weight": 0.0,
-      "model": 0.17275,
+      "model": 0.17188275,
       "notes": [
-        "no usable market quote for this question",
+        "tiebreak iid correction x1.04 (WTA)",
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.132921+00:00",
-      "probability": 0.13274999999999998,
+      "predicted_at": "2026-09-03T20:41:25.634215+00:00",
+      "probability": 0.13188275,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",

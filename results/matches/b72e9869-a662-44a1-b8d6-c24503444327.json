@@ -13,18 +13,17 @@
       "market": null,
       "market_id": "8eb1bc58-6338-4690-b719-fde41feb410c",
       "market_weight": 0.0,
-      "model": 0.6420351255852299,
+      "model": 0.6099141546722774,
       "notes": [
-        "total games: simulator 39.3, Pinnacle 40.0, used 39.7 at weight 0.60",
-        "no usable market quote for this question"
+        "total games: simulator 38.5, Pinnacle 40.0, used 39.4 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.139651+00:00",
-      "probability": 0.6420351255852299,
+      "predicted_at": "2026-09-03T20:41:25.637885+00:00",
+      "probability": 0.6099141546722774,
       "question": "Will the match last longer than 160 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 67
+      "submission": 64
     },
     {
       "base_rate": 0.46,
@@ -37,19 +36,19 @@
       "market": null,
       "market_id": "cb8b2328-1ef0-4154-a374-e12b16e8f471",
       "market_weight": 0.0,
-      "model": 0.30042195904143626,
+      "model": 0.2849678401693816,
       "notes": [
         "ace vulnerability: Valentin Vacherot 1.05, Frances Tiafoe 1.36",
-        "exposure 130 service points from 41.6 games",
-        "outcome coupling: P(win)=0.646, delta=+0.60"
+        "exposure 123 service points from 39.3 games",
+        "outcome coupling: P(win)=0.573, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.139651+00:00",
-      "probability": 0.30042195904143626,
+      "predicted_at": "2026-09-03T20:41:25.637885+00:00",
+      "probability": 0.2849678401693816,
       "question": "Will F. Tiafoe record more aces than V. Vacherot?",
       "rbp": null,
       "settled_at": "",
-      "submission": 26
+      "submission": 24
     },
     {
       "base_rate": 0.421,
@@ -62,13 +61,13 @@
       "market": null,
       "market_id": "9562a290-bc0a-42e0-9b6d-c3e3ba83c0d1",
       "market_weight": 0.0,
-      "model": 0.34910617873767313,
+      "model": 0.3486460603936939,
       "notes": [
-        "exposure 130 service points from 41.6 games"
+        "exposure 123 service points from 39.3 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.139651+00:00",
-      "probability": 0.34910617873767313,
+      "predicted_at": "2026-09-03T20:41:25.637885+00:00",
+      "probability": 0.3486460603936939,
       "question": "Will F. Tiafoe record more double faults than V. Vacherot?",
       "rbp": null,
       "settled_at": "",
@@ -90,7 +89,7 @@
         "threshold family defers to the base rate by policy"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.139651+00:00",
+      "predicted_at": "2026-09-03T20:41:25.637885+00:00",
       "probability": 0.5,
       "question": "Will F. Tiafoe commit more than 44 unforced errors?",
       "rbp": null,
@@ -113,7 +112,7 @@
         "serve rate: expected 0.660 vs threshold 0.680, sd 0.068 (0.045 sampling + 0.051 form)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.139651+00:00",
+      "predicted_at": "2026-09-03T20:41:25.637885+00:00",
       "probability": 0.3729682504111386,
       "question": "Will V. Vacherot win more than 68% of points played on their first serve?",
       "rbp": null,
@@ -131,13 +130,13 @@
       "market": null,
       "market_id": "e84f4a42-1e93-4ead-a9fe-5b56a0de5903",
       "market_weight": 0.0,
-      "model": 0.37208051424786764,
+      "model": 0.37379766123205865,
       "notes": [
-        "exposure 130 service points from 41.6 games"
+        "exposure 123 service points from 39.3 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.139651+00:00",
-      "probability": 0.38760694353878583,
+      "predicted_at": "2026-09-03T20:41:25.637885+00:00",
+      "probability": 0.38908798281265056,
       "question": "Will F. Tiafoe hit more winners than V. Vacherot?",
       "rbp": null,
       "settled_at": "",
@@ -154,17 +153,15 @@
       "market": null,
       "market_id": "7accc971-462a-464a-a853-35437c737afe",
       "market_weight": 0.0,
-      "model": 0.35575,
-      "notes": [
-        "no usable market quote for this question"
-      ],
+      "model": 0.26875,
+      "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.139651+00:00",
-      "probability": 0.35575,
+      "predicted_at": "2026-09-03T20:41:25.637885+00:00",
+      "probability": 0.26875,
       "question": "Will the match require a deciding set?",
       "rbp": null,
       "settled_at": "",
-      "submission": 32
+      "submission": 22
     },
     {
       "base_rate": 0.653,
@@ -177,41 +174,40 @@
       "market": null,
       "market_id": "52b47f1b-b131-4ba8-847f-19ae90bbe466",
       "market_weight": 0.0,
-      "model": 0.6,
-      "notes": [
-        "no usable market quote for this question"
-      ],
+      "model": 0.565,
+      "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.139651+00:00",
-      "probability": 0.6,
+      "predicted_at": "2026-09-03T20:41:25.637885+00:00",
+      "probability": 0.565,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
       "settled_at": "",
-      "submission": 62
+      "submission": 58
     },
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.85,
+      "confidence": 0.7,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": 0.6462968357754746,
+      "market": null,
       "market_id": "1172f44e-45f3-4b36-8290-038e50a1bb30",
-      "market_weight": 0.8075,
-      "model": 0.56925,
+      "market_weight": 0.0,
+      "model": 0.5725,
       "notes": [
-        "simulated win probability 0.569",
-        "market consensus 0.646, weight 0.81"
+        "simulated win probability 0.573",
+        "no market quote; this is the family that most needs one",
+        "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.139651+00:00",
-      "probability": 0.628944210310173,
+      "predicted_at": "2026-09-03T20:41:25.637885+00:00",
+      "probability": 0.5784955763194582,
       "question": "Will F. Tiafoe win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 66
+      "submission": 60
     },
     {
       "base_rate": 0.13263821138211385,
@@ -224,15 +220,14 @@
       "market": null,
       "market_id": "3a967ab6-b5df-46fb-9d95-bdbc9ccb6c86",
       "market_weight": 0.0,
-      "model": 0.21868,
+      "model": 0.21792,
       "notes": [
-        "tiebreak iid correction x0.88 (ATP)",
-        "no usable market quote for this question",
+        "tiebreak iid correction x0.91 (ATP)",
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T18:32:58.139651+00:00",
-      "probability": 0.17868,
+      "predicted_at": "2026-09-03T20:41:25.637885+00:00",
+      "probability": 0.17792,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,
       "settled_at": "",
