@@ -13,20 +13,20 @@
       "market": null,
       "market_id": "aa083bc9-d265-4016-94f2-cae109a9c025",
       "market_weight": 0.0,
-      "model": 0.5526122852301901,
+      "model": 0.5385293321934884,
       "notes": [
-        "total games: simulator 33.7, Pinnacle 32.4, used 32.9 at weight 0.60"
+        "total games: simulator 33.7, Pinnacle 31.9, used 32.6 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:28:37.667178+00:00",
-      "probability": 0.5526122852301901,
+      "predicted_at": "2026-09-04T09:25:49.011804+00:00",
+      "probability": 0.5385293321934884,
       "question": "Will the match last longer than 140 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 57
+      "submission": 55
     },
     {
-      "base_rate": 0.46,
+      "base_rate": 0.4784,
       "brier": null,
       "confidence": 1.0,
       "crowd": null,
@@ -43,7 +43,7 @@
         "outcome coupling: P(win)=0.807, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:28:37.667178+00:00",
+      "predicted_at": "2026-09-04T09:25:49.011804+00:00",
       "probability": 0.7687864543073094,
       "question": "Will C. Alcaraz record more aces than Y. Wu?",
       "rbp": null,
@@ -51,7 +51,7 @@
       "submission": 82
     },
     {
-      "base_rate": 0.421,
+      "base_rate": 0.4496,
       "brier": null,
       "confidence": 1.0,
       "crowd": null,
@@ -66,7 +66,7 @@
         "exposure 107 service points from 34.6 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:28:37.667178+00:00",
+      "predicted_at": "2026-09-04T09:25:49.011804+00:00",
       "probability": 0.4056563834336732,
       "question": "Will C. Alcaraz record more double faults than Y. Wu?",
       "rbp": null,
@@ -90,7 +90,7 @@
         "base-rate pull 0.48 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:28:37.667178+00:00",
+      "predicted_at": "2026-09-04T09:25:49.011804+00:00",
       "probability": 0.5397427447509066,
       "question": "Will C. Alcaraz commit more than 36 unforced errors?",
       "rbp": null,
@@ -113,7 +113,7 @@
         "first-serve rate: expected 0.675 vs threshold 0.660, sd 0.079 (0.056 sampling on 70 first serves + 0.056 form)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:28:37.667178+00:00",
+      "predicted_at": "2026-09-04T09:25:49.011804+00:00",
       "probability": 0.5082787022335633,
       "question": "Will Y. Wu win more than 66% of points played on their first serve?",
       "rbp": null,
@@ -121,7 +121,7 @@
       "submission": 51
     },
     {
-      "base_rate": 0.485,
+      "base_rate": 0.4904,
       "brier": null,
       "confidence": 0.75,
       "crowd": null,
@@ -131,17 +131,17 @@
       "market": null,
       "market_id": "2c57e8cc-0565-4b69-9ea1-f8798d28082d",
       "market_weight": 0.0,
-      "model": 0.5769807514718062,
+      "model": 0.5065073720525698,
       "notes": [
         "exposure 107 service points from 34.6 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:28:37.667178+00:00",
-      "probability": 0.5643333981444328,
+      "predicted_at": "2026-09-04T09:25:49.011804+00:00",
+      "probability": 0.5042926083953414,
       "question": "Will C. Alcaraz hit more winners than Y. Wu?",
       "rbp": null,
       "settled_at": "",
-      "submission": 58
+      "submission": 51
     },
     {
       "base_rate": 0.101,
@@ -157,7 +157,7 @@
       "model": 0.18825,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:28:37.667178+00:00",
+      "predicted_at": "2026-09-04T09:25:49.011804+00:00",
       "probability": 0.18825,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -178,7 +178,7 @@
       "model": 0.7785,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:28:37.667178+00:00",
+      "predicted_at": "2026-09-04T09:25:49.011804+00:00",
       "probability": 0.7785,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -203,7 +203,7 @@
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:28:37.667178+00:00",
+      "predicted_at": "2026-09-04T09:25:49.011804+00:00",
       "probability": 0.8119264567924309,
       "question": "Will C. Alcaraz win?",
       "rbp": null,
@@ -227,7 +227,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:28:37.667178+00:00",
+      "predicted_at": "2026-09-04T09:25:49.011804+00:00",
       "probability": 0.31389300000000003,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

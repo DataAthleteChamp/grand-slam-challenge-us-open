@@ -13,20 +13,20 @@
       "market": null,
       "market_id": "f6c7c6f1-6b36-43c2-81f1-b2ac52677768",
       "market_weight": 0.0,
-      "model": 0.4155292952092705,
+      "model": 0.4174613589831415,
       "notes": [
-        "total games: simulator 21.7, Pinnacle 22.5, used 22.2 at weight 0.60"
+        "total games: simulator 21.7, Pinnacle 22.6, used 22.2 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:28:37.662857+00:00",
-      "probability": 0.4155292952092705,
+      "predicted_at": "2026-09-04T09:25:49.007190+00:00",
+      "probability": 0.4174613589831415,
       "question": "Will the match last longer than 100 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 39
+      "submission": 40
     },
     {
-      "base_rate": 0.427,
+      "base_rate": 0.4357,
       "brier": null,
       "confidence": 1.0,
       "crowd": null,
@@ -41,7 +41,7 @@
         "exposure 71 service points from 22.0 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:28:37.662857+00:00",
+      "predicted_at": "2026-09-04T09:25:49.007190+00:00",
       "probability": 0.28953475050457406,
       "question": "Will A. Li record more aces than L. Noskova?",
       "rbp": null,
@@ -49,7 +49,7 @@
       "submission": 25
     },
     {
-      "base_rate": 0.433,
+      "base_rate": 0.4429,
       "brier": null,
       "confidence": 1.0,
       "crowd": null,
@@ -64,7 +64,7 @@
         "exposure 71 service points from 22.0 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:28:37.662857+00:00",
+      "predicted_at": "2026-09-04T09:25:49.007190+00:00",
       "probability": 0.33026669464965286,
       "question": "Will A. Li record more double faults than L. Noskova?",
       "rbp": null,
@@ -88,7 +88,7 @@
         "base-rate pull 0.48 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:28:37.662857+00:00",
+      "predicted_at": "2026-09-04T09:25:49.007190+00:00",
       "probability": 0.5062094760751769,
       "question": "Will A. Li commit more than 25 unforced errors?",
       "rbp": null,
@@ -111,7 +111,7 @@
         "first-serve rate: expected 0.664 vs threshold 0.710, sd 0.095 (0.074 sampling on 40 first serves + 0.058 form)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:28:37.662857+00:00",
+      "predicted_at": "2026-09-04T09:25:49.007190+00:00",
       "probability": 0.19732908929300666,
       "question": "Will L. Noskova win more than 71% of points played on their first serve?",
       "rbp": null,
@@ -119,7 +119,7 @@
       "submission": 15
     },
     {
-      "base_rate": 0.484,
+      "base_rate": 0.4791,
       "brier": null,
       "confidence": 0.75,
       "crowd": null,
@@ -129,13 +129,13 @@
       "market": null,
       "market_id": "4b32c817-eb72-4b4e-b19e-6be586e8e2da",
       "market_weight": 0.0,
-      "model": 0.2904900673388895,
+      "model": 0.2915894906547272,
       "notes": [
         "exposure 71 service points from 22.0 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:28:37.662857+00:00",
-      "probability": 0.31709768307979225,
+      "predicted_at": "2026-09-04T09:25:49.007190+00:00",
+      "probability": 0.3173721856897022,
       "question": "Will A. Li hit more winners than L. Noskova?",
       "rbp": null,
       "settled_at": "",
@@ -155,7 +155,7 @@
       "model": 0.31225,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:28:37.662857+00:00",
+      "predicted_at": "2026-09-04T09:25:49.007190+00:00",
       "probability": 0.31225,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -176,7 +176,7 @@
       "model": 0.5765,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:28:37.662857+00:00",
+      "predicted_at": "2026-09-04T09:25:49.007190+00:00",
       "probability": 0.5765,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -201,7 +201,7 @@
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:28:37.662857+00:00",
+      "predicted_at": "2026-09-04T09:25:49.007190+00:00",
       "probability": 0.44548872502980796,
       "question": "Will A. Li win?",
       "rbp": null,
@@ -225,7 +225,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:28:37.662857+00:00",
+      "predicted_at": "2026-09-04T09:25:49.007190+00:00",
       "probability": 0.24206399999999997,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

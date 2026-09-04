@@ -18,7 +18,7 @@
         "one or both players unrated; using the base rate as the model"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:28:37.665119+00:00",
+      "predicted_at": "2026-09-04T09:25:49.009371+00:00",
       "probability": 0.6333,
       "question": "Will the match last longer than 135 minutes?",
       "rbp": null,
@@ -26,7 +26,7 @@
       "submission": 66
     },
     {
-      "base_rate": 0.46,
+      "base_rate": 0.4784,
       "brier": null,
       "confidence": 0.3,
       "crowd": null,
@@ -43,15 +43,15 @@
         "base-rate pull 0.66 suppressed for aces_comparison"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:28:37.665119+00:00",
-      "probability": 0.46,
+      "predicted_at": "2026-09-04T09:25:49.009371+00:00",
+      "probability": 0.4784,
       "question": "Will D. Merida record more aces than A. Michelsen?",
       "rbp": null,
       "settled_at": "",
-      "submission": 45
+      "submission": 47
     },
     {
-      "base_rate": 0.421,
+      "base_rate": 0.4496,
       "brier": null,
       "confidence": 0.3,
       "crowd": null,
@@ -68,12 +68,12 @@
         "base-rate pull 0.66 suppressed for double_faults_comparison"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:28:37.665119+00:00",
-      "probability": 0.421,
+      "predicted_at": "2026-09-04T09:25:49.009371+00:00",
+      "probability": 0.4496,
       "question": "Will D. Merida record more double faults than A. Michelsen?",
       "rbp": null,
       "settled_at": "",
-      "submission": 40
+      "submission": 44
     },
     {
       "base_rate": 0.5,
@@ -92,7 +92,7 @@
         "base-rate pull 0.66 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:28:37.665119+00:00",
+      "predicted_at": "2026-09-04T09:25:49.009371+00:00",
       "probability": 0.5,
       "question": "Will D. Merida commit more than 34 unforced errors?",
       "rbp": null,
@@ -115,7 +115,7 @@
         "missing serve ratings; using the base rate"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:28:37.665119+00:00",
+      "predicted_at": "2026-09-04T09:25:49.009371+00:00",
       "probability": 0.08058168272554742,
       "question": "Will A. Michelsen win more than 77% of points played on their first serve?",
       "rbp": null,
@@ -123,7 +123,7 @@
       "submission": 5
     },
     {
-      "base_rate": 0.485,
+      "base_rate": 0.4904,
       "brier": null,
       "confidence": 0.3,
       "crowd": null,
@@ -139,12 +139,12 @@
         "question not understood; answering from the base rate"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:28:37.665119+00:00",
-      "probability": 0.485,
+      "predicted_at": "2026-09-04T09:25:49.009371+00:00",
+      "probability": 0.49039999999999995,
       "question": "Will D. Merida hit more winners than A. Michelsen?",
       "rbp": null,
       "settled_at": "",
-      "submission": 48
+      "submission": 49
     },
     {
       "base_rate": 0.202,
@@ -162,7 +162,7 @@
         "one or both players unrated; using the base rate as the model"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:28:37.665119+00:00",
+      "predicted_at": "2026-09-04T09:25:49.009371+00:00",
       "probability": 0.202,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -185,7 +185,7 @@
         "one or both players unrated; using the base rate as the model"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:28:37.665119+00:00",
+      "predicted_at": "2026-09-04T09:25:49.009371+00:00",
       "probability": 0.653,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -209,7 +209,7 @@
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:28:37.665119+00:00",
+      "predicted_at": "2026-09-04T09:25:49.009371+00:00",
       "probability": 0.5,
       "question": "Will D. Merida win?",
       "rbp": null,
@@ -233,7 +233,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:28:37.665119+00:00",
+      "predicted_at": "2026-09-04T09:25:49.009371+00:00",
       "probability": 0.447,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

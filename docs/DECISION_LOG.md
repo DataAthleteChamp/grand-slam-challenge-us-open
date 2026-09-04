@@ -208,3 +208,54 @@ Official feed: P(winners tie) = **3.1%** and P(unforced tie) = 2.4%, against 15.
 faults. Tie handling therefore barely matters for "more winners than", unlike the count
 families where it moves the fair price by ~8 points. P(player 1 has more winners) = 0.4896,
 so there is no orientation bias to correct.
+
+## First live read on the fixes (2026-09-04)
+
+**`settled_at` in the tidy table is the market CREATION date, not settlement.** Splitting on
+it puts every question in the "before" bucket and silently answers the wrong question. True
+cohorts have to be reconstructed from the timestamped files in `data/history/raw/`, taking the
+first archive in which each result appears.
+
+Done properly, 84 of 635 settled questions were first priced by the repaired model:
+
+| | honest | scenario |
+|---|---|---|
+| before (n=551) | -0.50 | -0.50 |
+| after (n=84) | **+0.83** | **+0.84** |
+| difference | +1.33 [-0.28,+2.88] | +1.35 [-1.09,+3.56] |
+
+**Not significant**, but the two independent lanes agree to within 0.02 RBP/q, and the families
+that moved are exactly the ones that were changed:
+
+| family | before | after | change |
+|---|---|---|---|
+| aces | -1.11 | **+3.78** [+0.96,+6.51] SIG | **+4.89** |
+| double faults | -2.86 | +0.82 | +3.68 |
+| duration | -0.06 | +1.35 | +1.41 |
+| tiebreak | +1.22 | +0.57 | -0.65 |
+| match winner | +0.29 | -2.38 | -2.67 |
+
+### Match winner went backwards — but not because of the sharpening
+
+The obvious reading is that the 1.35 log-odds sharpening backfired. Decomposing it says the
+opposite. Inverting the transform recovers what we would have submitted without it:
+
+| on the after cohort, both lanes (n=34) | skill/q |
+|---|---|
+| as submitted, alpha 1.35 | -2.09 |
+| unsharpened, alpha 1.00 | **-2.94** [-5.57,-0.32] SIG |
+| **gain from sharpening** | **+0.85** |
+
+and the alpha sweep is monotone: 1.00 → -2.94, 1.15 → -2.51, 1.35 → -2.09, 1.50 → -1.87.
+On the 551 older questions, sharpening would have gained +0.98 [+0.53,+1.39] SIG. The family
+simply met a round of upsets; the change made a bad round less bad.
+
+**Method worth repeating: to judge a shipped change, reconstruct the counterfactual submission
+and difference it, rather than reading the family total.** The family total would have
+condemned a change that was helping.
+
+### Still no read at all on
+
+Unforced errors, first serve, winners, deciding set and lopsided set have **not settled a
+single question**, and every settled question so far is 1x. The 300 questions now live are all
+2x, so the next cohort carries double weight and will be the first real test of those five.

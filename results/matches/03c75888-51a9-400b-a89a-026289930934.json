@@ -13,20 +13,20 @@
       "market": null,
       "market_id": "983a7fcb-7347-4402-b777-c2c6ff515c89",
       "market_weight": 0.0,
-      "model": 0.5338093536859495,
+      "model": 0.5228919944462599,
       "notes": [
-        "total games: simulator 39.0, Pinnacle 40.5, used 39.9 at weight 0.60"
+        "total games: simulator 39.0, Pinnacle 40.0, used 39.6 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:28:37.667685+00:00",
-      "probability": 0.5338093536859495,
+      "predicted_at": "2026-09-04T09:25:49.000678+00:00",
+      "probability": 0.5228919944462599,
       "question": "Will the match last longer than 170 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 54
+      "submission": 53
     },
     {
-      "base_rate": 0.46,
+      "base_rate": 0.4784,
       "brier": null,
       "confidence": 1.0,
       "crowd": null,
@@ -43,7 +43,7 @@
         "outcome coupling: P(win)=0.349, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:28:37.667685+00:00",
+      "predicted_at": "2026-09-04T09:25:49.000678+00:00",
       "probability": 0.29837689518470545,
       "question": "Will J. Lehecka record more aces than S. Tsitsipas?",
       "rbp": null,
@@ -51,7 +51,7 @@
       "submission": 26
     },
     {
-      "base_rate": 0.421,
+      "base_rate": 0.4496,
       "brier": null,
       "confidence": 1.0,
       "crowd": null,
@@ -66,7 +66,7 @@
         "exposure 125 service points from 40.0 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:28:37.667685+00:00",
+      "predicted_at": "2026-09-04T09:25:49.000678+00:00",
       "probability": 0.4330993960563309,
       "question": "Will J. Lehecka record more double faults than S. Tsitsipas?",
       "rbp": null,
@@ -90,7 +90,7 @@
         "base-rate pull 0.48 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:28:37.667685+00:00",
+      "predicted_at": "2026-09-04T09:25:49.000678+00:00",
       "probability": 0.5297970819988616,
       "question": "Will J. Lehecka commit more than 41 unforced errors?",
       "rbp": null,
@@ -113,7 +113,7 @@
         "first-serve rate: expected 0.781 vs threshold 0.710, sd 0.075 (0.049 sampling on 70 first serves + 0.056 form)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:28:37.667685+00:00",
+      "predicted_at": "2026-09-04T09:25:49.000678+00:00",
       "probability": 0.6376271235151806,
       "question": "Will S. Tsitsipas win more than 71% of points played on their first serve?",
       "rbp": null,
@@ -121,7 +121,7 @@
       "submission": 67
     },
     {
-      "base_rate": 0.485,
+      "base_rate": 0.4904,
       "brier": null,
       "confidence": 0.75,
       "crowd": null,
@@ -131,13 +131,13 @@
       "market": null,
       "market_id": "fdad8a67-b7ec-44f0-871c-d24b58e4c42d",
       "market_weight": 0.0,
-      "model": 0.7221143202893443,
+      "model": 0.7238617923790363,
       "notes": [
         "exposure 125 service points from 40.0 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:28:37.667685+00:00",
-      "probability": 0.6895111012495594,
+      "predicted_at": "2026-09-04T09:25:49.000678+00:00",
+      "probability": 0.6917607959269187,
       "question": "Will J. Lehecka hit more winners than S. Tsitsipas?",
       "rbp": null,
       "settled_at": "",
@@ -157,7 +157,7 @@
       "model": 0.2645,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:28:37.667685+00:00",
+      "predicted_at": "2026-09-04T09:25:49.000678+00:00",
       "probability": 0.2645,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -178,7 +178,7 @@
       "model": 0.4985,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:28:37.667685+00:00",
+      "predicted_at": "2026-09-04T09:25:49.000678+00:00",
       "probability": 0.4985,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -203,7 +203,7 @@
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:28:37.667685+00:00",
+      "predicted_at": "2026-09-04T09:25:49.000678+00:00",
       "probability": 0.33879862653323545,
       "question": "Will J. Lehecka win?",
       "rbp": null,
@@ -227,7 +227,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:28:37.667685+00:00",
+      "predicted_at": "2026-09-04T09:25:49.000678+00:00",
       "probability": 0.23716700000000004,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,

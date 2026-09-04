@@ -13,20 +13,20 @@
       "market": null,
       "market_id": "93da74f0-e2fb-450a-9047-9f3c8ff26498",
       "market_weight": 0.0,
-      "model": 0.3834609349049566,
+      "model": 0.3832430117208321,
       "notes": [
         "total games: simulator 39.4, Pinnacle 39.0, used 39.1 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:28:37.665675+00:00",
-      "probability": 0.3834609349049566,
+      "predicted_at": "2026-09-04T09:25:49.010148+00:00",
+      "probability": 0.3832430117208321,
       "question": "Will the match last longer than 185 minutes?",
       "rbp": null,
       "settled_at": "",
       "submission": 36
     },
     {
-      "base_rate": 0.46,
+      "base_rate": 0.4784,
       "brier": null,
       "confidence": 1.0,
       "crowd": null,
@@ -43,7 +43,7 @@
         "outcome coupling: P(win)=0.533, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:28:37.665675+00:00",
+      "predicted_at": "2026-09-04T09:25:49.010148+00:00",
       "probability": 0.594252825619242,
       "question": "Will D. Shapovalov record more aces than B. Shelton?",
       "rbp": null,
@@ -51,7 +51,7 @@
       "submission": 62
     },
     {
-      "base_rate": 0.421,
+      "base_rate": 0.4496,
       "brier": null,
       "confidence": 1.0,
       "crowd": null,
@@ -66,7 +66,7 @@
         "exposure 126 service points from 40.3 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:28:37.665675+00:00",
+      "predicted_at": "2026-09-04T09:25:49.010148+00:00",
       "probability": 0.7525840528969487,
       "question": "Will D. Shapovalov record more double faults than B. Shelton?",
       "rbp": null,
@@ -90,7 +90,7 @@
         "base-rate pull 0.48 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:28:37.665675+00:00",
+      "predicted_at": "2026-09-04T09:25:49.010148+00:00",
       "probability": 0.4438078725911684,
       "question": "Will D. Shapovalov commit more than 51 unforced errors?",
       "rbp": null,
@@ -113,7 +113,7 @@
         "first-serve rate: expected 0.759 vs threshold 0.770, sd 0.076 (0.051 sampling on 70 first serves + 0.056 form)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:28:37.665675+00:00",
+      "predicted_at": "2026-09-04T09:25:49.010148+00:00",
       "probability": 0.24152178790428447,
       "question": "Will B. Shelton win more than 77% of points played on their first serve?",
       "rbp": null,
@@ -121,7 +121,7 @@
       "submission": 19
     },
     {
-      "base_rate": 0.485,
+      "base_rate": 0.4904,
       "brier": null,
       "confidence": 0.75,
       "crowd": null,
@@ -131,13 +131,13 @@
       "market": null,
       "market_id": "3a68358b-107a-4709-b739-834c3e7c25bd",
       "market_weight": 0.0,
-      "model": 0.7103991985749517,
+      "model": 0.711168508922121,
       "notes": [
         "exposure 126 service points from 40.3 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:28:37.665675+00:00",
-      "probability": 0.6794068087708958,
+      "predicted_at": "2026-09-04T09:25:49.010148+00:00",
+      "probability": 0.6808128389453293,
       "question": "Will D. Shapovalov hit more winners than B. Shelton?",
       "rbp": null,
       "settled_at": "",
@@ -157,7 +157,7 @@
       "model": 0.271,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:28:37.665675+00:00",
+      "predicted_at": "2026-09-04T09:25:49.010148+00:00",
       "probability": 0.271,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -178,7 +178,7 @@
       "model": 0.4975,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:28:37.665675+00:00",
+      "predicted_at": "2026-09-04T09:25:49.010148+00:00",
       "probability": 0.4975,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -203,7 +203,7 @@
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:28:37.665675+00:00",
+      "predicted_at": "2026-09-04T09:25:49.010148+00:00",
       "probability": 0.536377100306579,
       "question": "Will D. Shapovalov win?",
       "rbp": null,
@@ -227,7 +227,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-03T23:28:37.665675+00:00",
+      "predicted_at": "2026-09-04T09:25:49.010148+00:00",
       "probability": 0.23625900000000002,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,
