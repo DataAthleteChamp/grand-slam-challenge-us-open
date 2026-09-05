@@ -13,13 +13,13 @@
       "market": null,
       "market_id": "cd16fe6a-9795-47b4-922a-abb1f24a294d",
       "market_weight": 0.0,
-      "model": 0.3423819377587098,
+      "model": 0.3425784332179409,
       "notes": [
         "total games: simulator 40.9, Pinnacle 41.0, used 40.9 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-05T15:31:35.813353+00:00",
-      "probability": 0.3423819377587098,
+      "predicted_at": "2026-09-05T19:24:40.470113+00:00",
+      "probability": 0.3425784332179409,
       "question": "Will the match last longer than 200 minutes?",
       "rbp": null,
       "settled_at": "",
@@ -33,22 +33,23 @@
       "crowd_brier": null,
       "family": "aces_comparison",
       "lane": "scenario",
-      "market": null,
+      "market": 0.6338,
       "market_id": "144fa03c-9bd8-4972-b473-72295b426b9b",
-      "market_weight": 0.0,
-      "model": 0.508399130957344,
+      "market_weight": 0.35,
+      "model": 0.5522894351222736,
       "notes": [
         "ace vulnerability: Stefanos Tsitsipas 0.82, Ben Shelton 0.83",
         "exposure 131 service points from 41.9 games",
-        "outcome coupling: P(win)=0.420, delta=+0.60"
+        "outcome coupling: P(win)=0.420, delta=+0.60",
+        "bovada aces line 0.634 blended at 35%"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-05T15:31:35.813353+00:00",
-      "probability": 0.508399130957344,
+      "predicted_at": "2026-09-05T19:24:40.470113+00:00",
+      "probability": 0.5522894351222736,
       "question": "Will B. Shelton record more aces than S. Tsitsipas?",
       "rbp": null,
       "settled_at": "",
-      "submission": 51
+      "submission": 57
     },
     {
       "base_rate": 0.4496,
@@ -58,20 +59,21 @@
       "crowd_brier": null,
       "family": "double_faults_comparison",
       "lane": "scenario",
-      "market": null,
+      "market": 0.3045,
       "market_id": "c492189f-ca97-4e20-aa2e-88d8613db7e2",
-      "market_weight": 0.0,
-      "model": 0.5423703185077351,
+      "market_weight": 0.35,
+      "model": 0.4591157070300278,
       "notes": [
-        "exposure 131 service points from 41.9 games"
+        "exposure 131 service points from 41.9 games",
+        "bovada double_faults line 0.304 blended at 35%"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-05T15:31:35.813353+00:00",
-      "probability": 0.5423703185077351,
+      "predicted_at": "2026-09-05T19:24:40.470113+00:00",
+      "probability": 0.4591157070300278,
       "question": "Will B. Shelton record more double faults than S. Tsitsipas?",
       "rbp": null,
       "settled_at": "",
-      "submission": 55
+      "submission": 45
     },
     {
       "base_rate": 0.5,
@@ -90,7 +92,7 @@
         "base-rate pull 0.48 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-05T15:31:35.813353+00:00",
+      "predicted_at": "2026-09-05T19:24:40.470113+00:00",
       "probability": 0.568021943894778,
       "question": "Will B. Shelton commit more than 38 unforced errors?",
       "rbp": null,
@@ -115,7 +117,7 @@
         "base-rate pull 0.23 suppressed for first_serve_comparison"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-05T15:31:35.813353+00:00",
+      "predicted_at": "2026-09-05T19:24:40.470113+00:00",
       "probability": 0.7426265465875203,
       "question": "Will S. Tsitsipas win more than 70% of points played on their first serve?",
       "rbp": null,
@@ -138,7 +140,7 @@
         "exposure 131 service points from 41.9 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-05T15:31:35.813353+00:00",
+      "predicted_at": "2026-09-05T19:24:40.470113+00:00",
       "probability": 0.5110593948128869,
       "question": "Will B. Shelton hit more winners than S. Tsitsipas?",
       "rbp": null,
@@ -159,7 +161,7 @@
       "model": 0.27325,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-05T15:31:35.813353+00:00",
+      "predicted_at": "2026-09-05T19:24:40.470113+00:00",
       "probability": 0.27325,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -180,7 +182,7 @@
       "model": 0.37675,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-05T15:31:35.813353+00:00",
+      "predicted_at": "2026-09-05T19:24:40.470113+00:00",
       "probability": 0.37675,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -205,7 +207,7 @@
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-05T15:31:35.813353+00:00",
+      "predicted_at": "2026-09-05T19:24:40.470113+00:00",
       "probability": 0.4131866035782197,
       "question": "Will B. Shelton win?",
       "rbp": null,
@@ -229,7 +231,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-05T15:31:35.813353+00:00",
+      "predicted_at": "2026-09-05T19:24:40.470113+00:00",
       "probability": 0.362471,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,

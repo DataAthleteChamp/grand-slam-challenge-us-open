@@ -581,6 +581,43 @@ def count_overdispersion(stat: str, tour: str) -> float:
 #: That shrinkage is the honest number and the reason the others are omitted.
 OUTCOME_COUPLING = {
     ("ATP", "aces"): 0.602,
+    # Measured on the OFFICIAL US Open point feed, 1,247 completed matches
+    # 2019-2024, as half the log-odds gap between P(out-counts | won the match)
+    # and P(out-counts | lost it):
+    #
+    #   stat            tour  P(more|won)  P(more|lost)  shift
+    #   winners         ATP      0.676        0.303      +0.785
+    #   winners         WTA      0.698        0.262      +0.938
+    #   aces            WTA      0.613        0.257      +0.762
+    #   double faults   ATP      0.377        0.522      -0.297
+    #   double faults   WTA      0.363        0.523      -0.328
+    #
+    # The ATP ace value above was fitted independently and earlier at 0.602; this
+    # method reproduces it at 0.571, which is the cross-check that the rest can be
+    # trusted. The original value is kept so a validated constant is not disturbed.
+    #
+    # Only ATP aces was ever modelled, so every other count question ignored the
+    # match result entirely. That is why we kept predicting the underdog to
+    # out-hit: winners has the STRONGEST coupling of any statistic (+0.79 / +0.94)
+    # and had none at all. Settled examples, ours against the crowd, all resolving
+    # NO: Bucsa v Gauff 59/35, Fernandez v Pegula 64/44, Lehecka v Tsitsipas 67/52.
+    #
+    # Replaying settled questions with these values:
+    #   winners        +2.88 [-0.13,+5.77]   women +4.97 [+1.47,+8.67] SIG
+    #   aces           +0.94 [+0.13,+1.71] SIG  women +1.88 [+0.26,+3.40] SIG
+    #   double faults  +0.48 [-0.09,+1.02]   women +0.77 [-0.11,+1.65]
+    # The gains concentrate on the women's draw, which is where the entire
+    # remaining deficit sits (-1.86 RBP/question against +0.12 for men).
+    ("WTA", "aces"): 0.762,
+    ("ATP", "winners"): 0.785,
+    ("WTA", "winners"): 0.938,
+    # Double faults are deliberately left OUT despite measuring -0.297 / -0.328.
+    # An earlier out-of-sample test found the WTA double-fault coupling actively
+    # harmful, -2.9% Brier with a CI of [-0.0125,-0.0040] that excludes zero, and
+    # our own settled-question replay puts it at only +0.77 [-0.11,+1.65], which
+    # does not exclude zero. Two tests disagreeing with neither decisive is not
+    # grounds to move the family we already score worst on. Revisit if the
+    # settled sample grows and stays positive.
 }
 
 

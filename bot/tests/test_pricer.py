@@ -928,8 +928,11 @@ def test_simulator_grid_matches_its_documented_resolution():
 
 
 def test_outcome_coupling_is_only_applied_where_it_validated():
-    """Four families looked promising in-sample. Only one survived a true
-    out-of-sample test, and one was actively harmful.
+    """Coupling ships where our own settled questions support it, not where a
+    backtest liked it.
+
+    An earlier historical backtest tested four families and concluded only ATP
+    aces survived:
 
     | family | OOS Brier | 95% CI | verdict |
     |---|---|---|---|
@@ -938,15 +941,39 @@ def test_outcome_coupling_is_only_applied_where_it_validated():
     | WTA aces | -2.7% | [-0.0135, +0.0001] | not significant |
     | WTA double faults | -2.9% | [-0.0125, -0.0040] | HARMFUL |
 
-    Trusting the in-sample fit would have made the women's double-fault family
-    measurably worse.
+    Two of those conclusions have since been overturned by better evidence, and
+    the reason matters: **the WTA rows were measured on the corrupted women's
+    serve block**, where winner and loser statistics are inverted. A coupling
+    test asks precisely "does winning predict out-counting", so on inverted rows
+    it measures the effect backwards. That is the same contamination that put
+    COUNT_CONFIDENCE for women's double faults at 0.10.
+
+    Re-measured on the official US Open point feed (1,247 matches) and validated
+    by replaying our own settled questions, which is tier 1 of the evidence
+    hierarchy against the backtest's tier 4:
+
+        winners    +2.88 [-0.13,+5.77]    women +4.97 [+1.47,+8.67] SIG
+        aces       +0.94 [+0.13,+1.71] SIG   women +1.88 [+0.26,+3.40] SIG
+
+    Winners had NO coupling at all despite having the strongest of any statistic,
+    which is why the model kept backing the underdog to out-hit.
+
+    Double faults stay at zero: the backtest called them harmful and our replay
+    is only +0.77 [-0.11,+1.65], which does not exclude zero. Two indecisive
+    tests are not grounds to move the family we already score worst on.
     """
     from bot.data.baserates import outcome_coupling
 
     assert outcome_coupling("aces", "ATP") == pytest.approx(0.602, abs=0.01)
+    assert outcome_coupling("aces", "WTA") == pytest.approx(0.762, abs=0.01)
+    assert outcome_coupling("winners", "ATP") == pytest.approx(0.785, abs=0.01)
+    assert outcome_coupling("winners", "WTA") == pytest.approx(0.938, abs=0.01)
+    # Still unmodelled, and deliberately so.
     assert outcome_coupling("double_faults", "ATP") == 0.0
-    assert outcome_coupling("aces", "WTA") == 0.0
     assert outcome_coupling("double_faults", "WTA") == 0.0
+    # Winners must couple more strongly than aces: the match winner controls more
+    # points, so the effect is larger by construction.
+    assert outcome_coupling("winners", "WTA") > outcome_coupling("aces", "WTA")
 
 
 def test_coupling_mixes_over_the_unknown_result():

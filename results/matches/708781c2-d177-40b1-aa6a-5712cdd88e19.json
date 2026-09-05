@@ -13,13 +13,13 @@
       "market": null,
       "market_id": "163bd021-8cf6-445e-9816-0685bea122b1",
       "market_weight": 0.0,
-      "model": 0.4108528945543143,
+      "model": 0.41108964218579835,
       "notes": [
         "total games: simulator 36.4, Pinnacle 38.5, used 37.7 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-05T15:31:35.809078+00:00",
-      "probability": 0.4108528945543143,
+      "predicted_at": "2026-09-05T19:24:40.466776+00:00",
+      "probability": 0.41108964218579835,
       "question": "Will the match last longer than 180 minutes?",
       "rbp": null,
       "settled_at": "",
@@ -43,7 +43,7 @@
         "outcome coupling: P(win)=0.459, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-05T15:31:35.809078+00:00",
+      "predicted_at": "2026-09-05T19:24:40.466776+00:00",
       "probability": 0.5033025682625506,
       "question": "Will Z. Bergs record more aces than B. van de Zandschulp?",
       "rbp": null,
@@ -66,7 +66,7 @@
         "exposure 117 service points from 37.4 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-05T15:31:35.809078+00:00",
+      "predicted_at": "2026-09-05T19:24:40.466776+00:00",
       "probability": 0.3239501729036586,
       "question": "Will Z. Bergs record more double faults than B. van de Zandschulp?",
       "rbp": null,
@@ -90,7 +90,7 @@
         "base-rate pull 0.48 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-05T15:31:35.809078+00:00",
+      "predicted_at": "2026-09-05T19:24:40.466776+00:00",
       "probability": 0.4484930149567318,
       "question": "Will Z. Bergs commit more than 45 unforced errors?",
       "rbp": null,
@@ -115,7 +115,7 @@
         "base-rate pull 0.56 suppressed for first_serve_comparison"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-05T15:31:35.809078+00:00",
+      "predicted_at": "2026-09-05T19:24:40.466776+00:00",
       "probability": 0.4780258123685965,
       "question": "Will B. van de Zandschulp win more than 71% of points played on their first serve?",
       "rbp": null,
@@ -138,7 +138,7 @@
         "missing winners rates; using the measured even-matchup price"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-05T15:31:35.809078+00:00",
+      "predicted_at": "2026-09-05T19:24:40.466776+00:00",
       "probability": 0.49039999999999995,
       "question": "Will Z. Bergs hit more winners than B. van de Zandschulp?",
       "rbp": null,
@@ -159,7 +159,7 @@
       "model": 0.2635,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-05T15:31:35.809078+00:00",
+      "predicted_at": "2026-09-05T19:24:40.466776+00:00",
       "probability": 0.2635,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -180,7 +180,7 @@
       "model": 0.711,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-05T15:31:35.809078+00:00",
+      "predicted_at": "2026-09-05T19:24:40.466776+00:00",
       "probability": 0.711,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -205,7 +205,7 @@
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-05T15:31:35.809078+00:00",
+      "predicted_at": "2026-09-05T19:24:40.466776+00:00",
       "probability": 0.45576716966798086,
       "question": "Will Z. Bergs win?",
       "rbp": null,
@@ -229,7 +229,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-05T15:31:35.809078+00:00",
+      "predicted_at": "2026-09-05T19:24:40.466776+00:00",
       "probability": 0.069187,
       "question": "Will the match feature at least 2 tiebreaks?",
       "rbp": null,
