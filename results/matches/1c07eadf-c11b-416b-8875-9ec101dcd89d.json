@@ -1,5 +1,5 @@
 {
-  "closing_time": "2026-09-06T03:00:00.000Z",
+  "closing_time": "2026-09-06T12:10:00.000Z",
   "draw": "mens",
   "entries": [
     {
@@ -13,13 +13,13 @@
       "market": null,
       "market_id": "11d84fdd-67db-4823-9b64-60349c136fba",
       "market_weight": 0.0,
-      "model": 0.254740101791902,
+      "model": 0.2550930515822888,
       "notes": [
         "total games: simulator 36.3, Pinnacle 39.5, used 38.2 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T15:15:16.279627+00:00",
-      "probability": 0.254740101791902,
+      "predicted_at": "2026-09-05T14:15:04.639652+00:00",
+      "probability": 0.2550930515822888,
       "question": "Will the match last longer than 200 minutes?",
       "rbp": null,
       "settled_at": "",
@@ -43,7 +43,7 @@
         "outcome coupling: P(win)=0.512, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T15:15:16.279627+00:00",
+      "predicted_at": "2026-09-05T14:15:04.639652+00:00",
       "probability": 0.882098287252933,
       "question": "Will J. Mensik record more aces than L. Tien?",
       "rbp": null,
@@ -66,7 +66,7 @@
         "exposure 116 service points from 37.3 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T15:15:16.279627+00:00",
+      "predicted_at": "2026-09-05T14:15:04.639652+00:00",
       "probability": 0.4518830264495192,
       "question": "Will J. Mensik record more double faults than L. Tien?",
       "rbp": null,
@@ -90,7 +90,7 @@
         "base-rate pull 0.48 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T15:15:16.279627+00:00",
+      "predicted_at": "2026-09-05T14:15:04.639652+00:00",
       "probability": 0.6356014856605732,
       "question": "Will J. Mensik commit more than 32 unforced errors?",
       "rbp": null,
@@ -108,17 +108,19 @@
       "market": null,
       "market_id": "a254ddf7-1bee-459f-b945-5041b1b5869c",
       "market_weight": 0.0,
-      "model": 0.6987521919203599,
+      "model": 0.6261722765164068,
       "notes": [
-        "first-serve rate: expected 0.711 vs threshold 0.670, sd 0.078 (0.054 sampling on 70 first serves + 0.056 form)"
+        "first-serve rate: expected 0.711 vs threshold 0.670, sd 0.078 (0.054 sampling on 70 first serves + 0.056 form)",
+        "model weighted 75% against the base rate 0.408 instead of the confidence pull",
+        "base-rate pull 0.45 suppressed for first_serve_comparison"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T15:15:16.279627+00:00",
-      "probability": 0.56875701342142,
+      "predicted_at": "2026-09-05T14:15:04.639652+00:00",
+      "probability": 0.6261722765164068,
       "question": "Will L. Tien win more than 67% of points played on their first serve?",
       "rbp": null,
       "settled_at": "",
-      "submission": 59
+      "submission": 66
     },
     {
       "base_rate": 0.4904,
@@ -131,17 +133,17 @@
       "market": null,
       "market_id": "5cbed60b-e053-4e0c-af8a-1e9876b750e7",
       "market_weight": 0.0,
-      "model": 0.6034998787456574,
+      "model": 0.5752719825006734,
       "notes": [
         "exposure 116 service points from 37.3 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T15:15:16.279627+00:00",
-      "probability": 0.5879486454181294,
+      "predicted_at": "2026-09-05T14:15:04.639652+00:00",
+      "probability": 0.5636020849068307,
       "question": "Will J. Mensik hit more winners than L. Tien?",
       "rbp": null,
       "settled_at": "",
-      "submission": 61
+      "submission": 58
     },
     {
       "base_rate": 0.202,
@@ -157,7 +159,7 @@
       "model": 0.26675,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-04T15:15:16.279627+00:00",
+      "predicted_at": "2026-09-05T14:15:04.639652+00:00",
       "probability": 0.26675,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -178,7 +180,7 @@
       "model": 0.729,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-04T15:15:16.279627+00:00",
+      "predicted_at": "2026-09-05T14:15:04.639652+00:00",
       "probability": 0.729,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -203,7 +205,7 @@
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T15:15:16.279627+00:00",
+      "predicted_at": "2026-09-05T14:15:04.639652+00:00",
       "probability": 0.5127680596773245,
       "question": "Will J. Mensik win?",
       "rbp": null,
@@ -227,7 +229,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T15:15:16.279627+00:00",
+      "predicted_at": "2026-09-05T14:15:04.639652+00:00",
       "probability": 0.058745,
       "question": "Will the match feature at least 2 tiebreaks?",
       "rbp": null,
@@ -238,7 +240,7 @@
   "match_id": "1c07eadf-c11b-416b-8875-9ec101dcd89d",
   "match_name": "J. Mensik vs L. Tien",
   "multiplier": 2,
-  "opening_time": "2026-09-05T15:00:00.000Z",
+  "opening_time": "2026-09-06T00:10:00.000Z",
   "player_a": "Jakub Mensik",
   "player_b": "Learner Tien",
   "round_code": "R128"

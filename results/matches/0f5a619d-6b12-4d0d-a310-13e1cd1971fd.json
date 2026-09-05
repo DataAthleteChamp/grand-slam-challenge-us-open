@@ -1,5 +1,5 @@
 {
-  "closing_time": "2026-09-06T03:00:00.000Z",
+  "closing_time": "2026-09-06T05:20:00.000Z",
   "draw": "mens",
   "entries": [
     {
@@ -13,13 +13,13 @@
       "market": null,
       "market_id": "5880eab7-d949-40c3-80b3-3c240d64fbff",
       "market_weight": 0.0,
-      "model": 0.29916891028939774,
+      "model": 0.29956706441959147,
       "notes": [
         "total games: simulator 35.7, Pinnacle 38.5, used 37.4 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T15:15:16.280422+00:00",
-      "probability": 0.29916891028939774,
+      "predicted_at": "2026-09-05T14:15:04.632110+00:00",
+      "probability": 0.29956706441959147,
       "question": "Will the match last longer than 195 minutes?",
       "rbp": null,
       "settled_at": "",
@@ -43,7 +43,7 @@
         "outcome coupling: P(win)=0.446, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T15:15:16.280422+00:00",
+      "predicted_at": "2026-09-05T14:15:04.632110+00:00",
       "probability": 0.44310239991959316,
       "question": "Will A. Gea record more aces than M. Zheng?",
       "rbp": null,
@@ -66,7 +66,7 @@
         "exposure 115 service points from 36.8 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T15:15:16.280422+00:00",
+      "predicted_at": "2026-09-05T14:15:04.632110+00:00",
       "probability": 0.5700247746708388,
       "question": "Will A. Gea record more double faults than M. Zheng?",
       "rbp": null,
@@ -90,7 +90,7 @@
         "base-rate pull 0.66 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T15:15:16.280422+00:00",
+      "predicted_at": "2026-09-05T14:15:04.632110+00:00",
       "probability": 0.5,
       "question": "Will A. Gea commit more than 43 unforced errors?",
       "rbp": null,
@@ -108,17 +108,19 @@
       "market": null,
       "market_id": "ccee81a0-9a2c-4061-b600-cb0f4c3f9e73",
       "market_weight": 0.0,
-      "model": 0.6365582033378692,
+      "model": 0.5683481740055657,
       "notes": [
-        "first-serve rate: expected 0.707 vs threshold 0.680, sd 0.078 (0.054 sampling on 70 first serves + 0.056 form)"
+        "first-serve rate: expected 0.707 vs threshold 0.680, sd 0.078 (0.054 sampling on 70 first serves + 0.056 form)",
+        "model weighted 75% against the base rate 0.364 instead of the confidence pull",
+        "base-rate pull 0.50 suppressed for first_serve_comparison"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T15:15:16.280422+00:00",
-      "probability": 0.500933823836448,
+      "predicted_at": "2026-09-05T14:15:04.632110+00:00",
+      "probability": 0.5683481740055657,
       "question": "Will M. Zheng win more than 68% of points played on their first serve?",
       "rbp": null,
       "settled_at": "",
-      "submission": 50
+      "submission": 59
     },
     {
       "base_rate": 0.4904,
@@ -136,7 +138,7 @@
         "missing winners rates; using the measured even-matchup price"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T15:15:16.280422+00:00",
+      "predicted_at": "2026-09-05T14:15:04.632110+00:00",
       "probability": 0.49039999999999995,
       "question": "Will A. Gea hit more winners than M. Zheng?",
       "rbp": null,
@@ -157,7 +159,7 @@
       "model": 0.2615,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-04T15:15:16.280422+00:00",
+      "predicted_at": "2026-09-05T14:15:04.632110+00:00",
       "probability": 0.2615,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -178,7 +180,7 @@
       "model": 0.76625,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-04T15:15:16.280422+00:00",
+      "predicted_at": "2026-09-05T14:15:04.632110+00:00",
       "probability": 0.76625,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -203,7 +205,7 @@
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T15:15:16.280422+00:00",
+      "predicted_at": "2026-09-05T14:15:04.632110+00:00",
       "probability": 0.44170700295430176,
       "question": "Will A. Gea win?",
       "rbp": null,
@@ -227,7 +229,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T15:15:16.280422+00:00",
+      "predicted_at": "2026-09-05T14:15:04.632110+00:00",
       "probability": 0.34090600000000004,
       "question": "Will the match feature at least 1 tiebreak?",
       "rbp": null,
@@ -238,7 +240,7 @@
   "match_id": "0f5a619d-6b12-4d0d-a310-13e1cd1971fd",
   "match_name": "M. Zheng vs A. Gea",
   "multiplier": 2,
-  "opening_time": "2026-09-05T15:00:00.000Z",
+  "opening_time": "2026-09-05T14:30:00.000Z",
   "player_a": "Michael Zheng",
   "player_b": "Arthur Gea",
   "round_code": "R128"

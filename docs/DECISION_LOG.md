@@ -313,3 +313,57 @@ ATP at rho=0 is genuinely overconfident and the sweep bottoms out near 0.008; WT
 calibrated and its sweep is monotone increasing, so no positive value helps. Shipping the
 measured value on both tours would have been net negative — another case where the pooled
 answer is worse than either tour-specific one.
+
+## Blending an independent rate source into the roster (the women's count fix)
+
+Priority was set by (skill deficit) x (weighted questions remaining). Only **two cells are
+statistically significant losses**; everything else spans zero:
+
+| cell | skill/q | CI |
+|---|---|---|
+| women's double faults | **-4.40** | [-6.54,-2.34] |
+| women's aces | **-2.99** | [-4.91,-1.05] |
+| men's aces | **+2.70** | [+0.66,+4.82] |
+
+The same model wins on men and loses on women, so the fault is not the model structure.
+Confirmed directly: on charted history the rate-difference AUC is **the same on both tours** —
+ATP aces 0.793 vs WTA aces 0.786, ATP dfs 0.715 vs WTA dfs 0.716. The signal is there for
+women; we were not delivering it.
+
+The cause is the **input data**, not the model. Correlation of our roster rate with the
+independent charting career rate:
+
+| | ATP | WTA |
+|---|---|---|
+| ace_rate | 0.886 | 0.894 |
+| df_rate | 0.874 | **0.676** |
+
+Every cell agrees at ~0.88 except WTA double faults — exactly the worst-scoring family. The
+roster is built from Sackmann files that include the corrupted 2025 WTA season and 2026
+women's hard-court block; those rows are deliberately kept because dropping them removes 78
+players, but they degrade the rates. The Match Charting Project is independent and hand-charted.
+
+Credibility-blending the two (`scripts/blend_charting_rates.py`, K=10) is significant in
+**both lanes at every K**, with all hold-outs positive:
+
+| split | gain |
+|---|---|
+| pooled honest, K=10 | **+1.29** [+0.33,+2.31] |
+| pooled scenario, K=10 | **+1.29** [+0.29,+2.30] |
+| time EARLY / LATE | +1.89 [+0.58,+3.25] / +0.69 |
+| tour WTA / ATP | +1.83 [+0.13,+3.57] / +0.68 |
+| family df / ace | +1.72 [+0.16,+3.35] / +0.87 |
+
+AUC moves WTA aces 0.782 -> 0.840 and WTA dfs 0.609 -> 0.727. Roster rate spread rises 29% on
+women's aces, which is the resolution we were missing.
+
+**ATP aces is excluded**: it is the one cell where the roster is better (AUC 0.863 vs 0.813),
+it is where the ATP-only ace-vulnerability model is tuned, and it is our best family.
+
+Two traps avoided:
+- **Leakage.** Charting stops 2026-05-21/24, before the event on 2026-08-27. The script
+  asserts this rather than trusting it.
+- **My own analysis bug.** `player_a` in the settled table is NOT the question subject
+  ("Will N. Podoroska record more DFs than I. Swiatek?" has player_a = Swiatek). Matching on
+  player_a first flipped orientation and produced sub-0.5 AUC, which looked like a catastrophic
+  model failure. The subject is whoever is named first in the question text.

@@ -1,5 +1,5 @@
 {
-  "closing_time": "2026-09-06T03:00:00.000Z",
+  "closing_time": "2026-09-06T05:20:00.000Z",
   "draw": "mens",
   "entries": [
     {
@@ -13,13 +13,13 @@
       "market": null,
       "market_id": "7f855026-c38f-4a41-945f-14aacf96d3de",
       "market_weight": 0.0,
-      "model": 0.29884796727687174,
+      "model": 0.29944961678728854,
       "notes": [
-        "total games: simulator 35.9, Pinnacle 35.5, used 35.6 at weight 0.60"
+        "total games: simulator 35.9, Pinnacle 35.5, used 35.7 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T15:15:16.283213+00:00",
-      "probability": 0.29884796727687174,
+      "predicted_at": "2026-09-05T14:15:04.634933+00:00",
+      "probability": 0.29944961678728854,
       "question": "Will the match last longer than 185 minutes?",
       "rbp": null,
       "settled_at": "",
@@ -43,7 +43,7 @@
         "outcome coupling: P(win)=0.457, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T15:15:16.283213+00:00",
+      "predicted_at": "2026-09-05T14:15:04.634933+00:00",
       "probability": 0.6256891857882199,
       "question": "Will L. Darderi record more aces than D. Sweeny?",
       "rbp": null,
@@ -66,7 +66,7 @@
         "exposure 115 service points from 36.9 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T15:15:16.283213+00:00",
+      "predicted_at": "2026-09-05T14:15:04.634933+00:00",
       "probability": 0.3860495307483817,
       "question": "Will L. Darderi record more double faults than D. Sweeny?",
       "rbp": null,
@@ -90,7 +90,7 @@
         "base-rate pull 0.48 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T15:15:16.283213+00:00",
+      "predicted_at": "2026-09-05T14:15:04.634933+00:00",
       "probability": 0.4854592319444974,
       "question": "Will L. Darderi commit more than 37 unforced errors?",
       "rbp": null,
@@ -108,17 +108,19 @@
       "market": null,
       "market_id": "0a48a597-30cd-4df3-94c9-e407135aa39d",
       "market_weight": 0.0,
-      "model": 0.7756366603794709,
+      "model": 0.7069607946510252,
       "notes": [
-        "first-serve rate: expected 0.709 vs threshold 0.650, sd 0.078 (0.054 sampling on 70 first serves + 0.056 form)"
+        "first-serve rate: expected 0.709 vs threshold 0.650, sd 0.078 (0.054 sampling on 70 first serves + 0.056 form)",
+        "model weighted 75% against the base rate 0.501 instead of the confidence pull",
+        "base-rate pull 0.38 suppressed for first_serve_comparison"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T15:15:16.283213+00:00",
-      "probability": 0.6713297285438611,
+      "predicted_at": "2026-09-05T14:15:04.634933+00:00",
+      "probability": 0.7069607946510252,
       "question": "Will D. Sweeny win more than 65% of points played on their first serve?",
       "rbp": null,
       "settled_at": "",
-      "submission": 71
+      "submission": 75
     },
     {
       "base_rate": 0.4904,
@@ -136,7 +138,7 @@
         "missing winners rates; using the measured even-matchup price"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T15:15:16.283213+00:00",
+      "predicted_at": "2026-09-05T14:15:04.634933+00:00",
       "probability": 0.49039999999999995,
       "question": "Will L. Darderi hit more winners than D. Sweeny?",
       "rbp": null,
@@ -157,7 +159,7 @@
       "model": 0.26125,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-04T15:15:16.283213+00:00",
+      "predicted_at": "2026-09-05T14:15:04.634933+00:00",
       "probability": 0.26125,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -178,7 +180,7 @@
       "model": 0.75325,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-04T15:15:16.283213+00:00",
+      "predicted_at": "2026-09-05T14:15:04.634933+00:00",
       "probability": 0.75325,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -203,7 +205,7 @@
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T15:15:16.283213+00:00",
+      "predicted_at": "2026-09-05T14:15:04.634933+00:00",
       "probability": 0.453060505410111,
       "question": "Will L. Darderi win?",
       "rbp": null,
@@ -227,7 +229,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T15:15:16.283213+00:00",
+      "predicted_at": "2026-09-05T14:15:04.634933+00:00",
       "probability": 0.35066700000000006,
       "question": "Will the match feature at least 1 tiebreak?",
       "rbp": null,
@@ -238,7 +240,7 @@
   "match_id": "630210ff-c89f-4e9a-b369-69d58718aedc",
   "match_name": "L. Darderi vs D. Sweeny",
   "multiplier": 2,
-  "opening_time": "2026-09-05T15:00:00.000Z",
+  "opening_time": "2026-09-05T14:30:00.000Z",
   "player_a": "Luciano Darderi",
   "player_b": "Dane Sweeny",
   "round_code": "R128"

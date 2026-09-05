@@ -1,5 +1,5 @@
 {
-  "closing_time": "2026-09-06T03:00:00.000Z",
+  "closing_time": "2026-09-06T11:00:00.000Z",
   "draw": "womens",
   "entries": [
     {
@@ -13,17 +13,17 @@
       "market": null,
       "market_id": "c0c53a17-f73b-49ea-8944-67d2f10adc99",
       "market_weight": 0.0,
-      "model": 0.3363541304904825,
+      "model": 0.32012586209405514,
       "notes": [
-        "total games: simulator 21.4, Pinnacle 23.0, used 22.3 at weight 0.60"
+        "total games: simulator 21.4, Pinnacle 22.5, used 22.0 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T15:15:16.281165+00:00",
-      "probability": 0.3363541304904825,
+      "predicted_at": "2026-09-05T14:15:04.638654+00:00",
+      "probability": 0.32012586209405514,
       "question": "Will the match last longer than 115 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 30
+      "submission": 28
     },
     {
       "base_rate": 0.4357,
@@ -41,7 +41,7 @@
         "exposure 71 service points from 21.8 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T15:15:16.281165+00:00",
+      "predicted_at": "2026-09-05T14:15:04.638654+00:00",
       "probability": 0.36054070156965745,
       "question": "Will E. Mertens record more aces than N. Osaka?",
       "rbp": null,
@@ -64,7 +64,7 @@
         "exposure 71 service points from 21.8 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T15:15:16.281165+00:00",
+      "predicted_at": "2026-09-05T14:15:04.638654+00:00",
       "probability": 0.6193703723751985,
       "question": "Will E. Mertens record more double faults than N. Osaka?",
       "rbp": null,
@@ -88,7 +88,7 @@
         "base-rate pull 0.48 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T15:15:16.281165+00:00",
+      "predicted_at": "2026-09-05T14:15:04.638654+00:00",
       "probability": 0.5139124832748885,
       "question": "Will E. Mertens commit more than 24 unforced errors?",
       "rbp": null,
@@ -106,17 +106,19 @@
       "market": null,
       "market_id": "ac48345f-6e9d-4ab8-9fa6-5e1fd579d7af",
       "market_weight": 0.0,
-      "model": 0.43519574873725797,
+      "model": 0.349276496121961,
       "notes": [
-        "first-serve rate: expected 0.675 vs threshold 0.690, sd 0.094 (0.074 sampling on 40 first serves + 0.058 form)"
+        "first-serve rate: expected 0.675 vs threshold 0.690, sd 0.094 (0.074 sampling on 40 first serves + 0.058 form)",
+        "model weighted 75% against the base rate 0.092 instead of the confidence pull",
+        "base-rate pull 0.55 suppressed for first_serve_comparison"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T15:15:16.281165+00:00",
-      "probability": 0.2459702287606594,
+      "predicted_at": "2026-09-05T14:15:04.638654+00:00",
+      "probability": 0.349276496121961,
       "question": "Will N. Osaka win more than 69% of points played on their first serve?",
       "rbp": null,
       "settled_at": "",
-      "submission": 20
+      "submission": 31
     },
     {
       "base_rate": 0.4791,
@@ -134,7 +136,7 @@
         "exposure 71 service points from 21.8 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T15:15:16.281165+00:00",
+      "predicted_at": "2026-09-05T14:15:04.638654+00:00",
       "probability": 0.2740570704379526,
       "question": "Will E. Mertens hit more winners than N. Osaka?",
       "rbp": null,
@@ -155,7 +157,7 @@
       "model": 0.30175,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-04T15:15:16.281165+00:00",
+      "predicted_at": "2026-09-05T14:15:04.638654+00:00",
       "probability": 0.30175,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -176,7 +178,7 @@
       "model": 0.60375,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-04T15:15:16.281165+00:00",
+      "predicted_at": "2026-09-05T14:15:04.638654+00:00",
       "probability": 0.60375,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -201,7 +203,7 @@
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T15:15:16.281165+00:00",
+      "predicted_at": "2026-09-05T14:15:04.638654+00:00",
       "probability": 0.45414302514340654,
       "question": "Will E. Mertens win?",
       "rbp": null,
@@ -225,7 +227,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T15:15:16.281165+00:00",
+      "predicted_at": "2026-09-05T14:15:04.638654+00:00",
       "probability": 0.02,
       "question": "Will the match feature at least 2 tiebreaks?",
       "rbp": null,
@@ -236,7 +238,7 @@
   "match_id": "719cd2d6-f92f-4dda-adfb-989b33db9651",
   "match_name": "N. Osaka vs E. Mertens",
   "multiplier": 2,
-  "opening_time": "2026-09-05T15:00:00.000Z",
+  "opening_time": "2026-09-05T23:00:00.000Z",
   "player_a": "Naomi Osaka",
   "player_b": "Elise Mertens",
   "round_code": "R128"

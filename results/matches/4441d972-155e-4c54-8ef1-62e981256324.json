@@ -1,5 +1,5 @@
 {
-  "closing_time": "2026-09-06T03:00:00.000Z",
+  "closing_time": "2026-09-06T09:00:00.000Z",
   "draw": "womens",
   "entries": [
     {
@@ -13,13 +13,13 @@
       "market": null,
       "market_id": "b7aee7d1-66b5-4637-9018-1033fc655289",
       "market_weight": 0.0,
-      "model": 0.5240460090736353,
+      "model": 0.5262711904460806,
       "notes": [
-        "total games: simulator 20.0, Pinnacle 18.8, used 19.3 at weight 0.60"
+        "total games: simulator 20.0, Pinnacle 18.9, used 19.3 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T15:15:16.275153+00:00",
-      "probability": 0.5240460090736353,
+      "predicted_at": "2026-09-05T14:15:04.638134+00:00",
+      "probability": 0.5262711904460806,
       "question": "Will the match last longer than 85 minutes?",
       "rbp": null,
       "settled_at": "",
@@ -41,7 +41,7 @@
         "exposure 65 service points from 20.3 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T15:15:16.275153+00:00",
+      "predicted_at": "2026-09-05T14:15:04.638134+00:00",
       "probability": 0.7729544589601928,
       "question": "Will E. Rybakina record more aces than Y. Starodubtseva?",
       "rbp": null,
@@ -64,7 +64,7 @@
         "exposure 65 service points from 20.3 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T15:15:16.275153+00:00",
+      "predicted_at": "2026-09-05T14:15:04.638134+00:00",
       "probability": 0.4988870614752358,
       "question": "Will E. Rybakina record more double faults than Y. Starodubtseva?",
       "rbp": null,
@@ -88,7 +88,7 @@
         "base-rate pull 0.48 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T15:15:16.275153+00:00",
+      "predicted_at": "2026-09-05T14:15:04.638134+00:00",
       "probability": 0.4864289420374142,
       "question": "Will E. Rybakina commit more than 23 unforced errors?",
       "rbp": null,
@@ -106,17 +106,19 @@
       "market": null,
       "market_id": "eb41af3e-2e53-439a-99a0-6fba746d8a3a",
       "market_weight": 0.0,
-      "model": 0.6768115035026504,
+      "model": 0.6342894846253516,
       "notes": [
-        "first-serve rate: expected 0.614 vs threshold 0.570, sd 0.096 (0.077 sampling on 40 first serves + 0.058 form)"
+        "first-serve rate: expected 0.614 vs threshold 0.570, sd 0.096 (0.077 sampling on 40 first serves + 0.058 form)",
+        "model weighted 75% against the base rate 0.507 instead of the confidence pull",
+        "base-rate pull 0.47 suppressed for first_serve_comparison"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T15:15:16.275153+00:00",
-      "probability": 0.5976194005781591,
+      "predicted_at": "2026-09-05T14:15:04.638134+00:00",
+      "probability": 0.6342894846253516,
       "question": "Will Y. Starodubtseva win more than 57% of points played on their first serve?",
       "rbp": null,
       "settled_at": "",
-      "submission": 62
+      "submission": 67
     },
     {
       "base_rate": 0.4791,
@@ -134,7 +136,7 @@
         "exposure 65 service points from 20.3 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T15:15:16.275153+00:00",
+      "predicted_at": "2026-09-05T14:15:04.638134+00:00",
       "probability": 0.3873916158514307,
       "question": "Will E. Rybakina hit more winners than Y. Starodubtseva?",
       "rbp": null,
@@ -155,7 +157,7 @@
       "model": 0.233,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-04T15:15:16.275153+00:00",
+      "predicted_at": "2026-09-05T14:15:04.638134+00:00",
       "probability": 0.233,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -176,7 +178,7 @@
       "model": 0.68125,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-04T15:15:16.275153+00:00",
+      "predicted_at": "2026-09-05T14:15:04.638134+00:00",
       "probability": 0.68125,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -201,7 +203,7 @@
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T15:15:16.275153+00:00",
+      "predicted_at": "2026-09-05T14:15:04.638134+00:00",
       "probability": 0.8154295507050112,
       "question": "Will E. Rybakina win?",
       "rbp": null,
@@ -225,7 +227,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T15:15:16.275153+00:00",
+      "predicted_at": "2026-09-05T14:15:04.638134+00:00",
       "probability": 0.17414049999999998,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
@@ -236,7 +238,7 @@
   "match_id": "4441d972-155e-4c54-8ef1-62e981256324",
   "match_name": "Y. Starodubtseva vs E. Rybakina",
   "multiplier": 2,
-  "opening_time": "2026-09-05T15:00:00.000Z",
+  "opening_time": "2026-09-05T21:00:00.000Z",
   "player_a": "Yuliia Starodubtseva",
   "player_b": "Elena Rybakina",
   "round_code": "R128"
