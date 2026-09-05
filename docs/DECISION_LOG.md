@@ -367,3 +367,46 @@ Two traps avoided:
   ("Will N. Podoroska record more DFs than I. Swiatek?" has player_a = Swiatek). Matching on
   player_a first flipped orientation and produced sub-0.5 AUC, which looked like a catastrophic
   model failure. The subject is whoever is named first in the question text.
+
+## Kalshi: a second independent market, and what it validates
+
+Verified live and unauthenticated at `https://api.elections.kalshi.com/trade-api/v2/`. It
+carries a full US Open suite that Pinnacle does not: `KXATPMATCH`, `KXATPTOTALSETS`,
+`KXATPEXACTMATCH`, `KXATPSETWINNER`, `KXATPGSPREAD`, `KXATPSSPREAD` and WTA equivalents.
+
+**"Over 4.5 total sets" is exactly our deciding-set question** for a best-of-five match, and
+the exact-scoreline market prices it independently (P(3-2) as the sum of the two 3-2 legs).
+On one match the two agreed at 0.28 and 0.265 — a useful internal cross-check.
+
+**Two traps, both of which nearly produced a wrong conclusion:**
+
+1. **Most Kalshi tennis books are empty.** Of 12 ATP total-sets markets, 8 had spreads of
+   0.01–0.05 and 4 had spreads of 0.72–0.98, where the "mid" is just (0+0.98)/2 = 0.49 and
+   means nothing. Alcaraz vs Paul quoted bid 0.22 / ask 0.94. **Any use of Kalshi must filter
+   on spread**; a mid without a spread check is noise.
+
+2. **Compare against the right lane.** The scenario lane sharpens at temperature 0.80 by
+   design, so its deciding-set numbers sit ~6 points below the model. Comparing it to Kalshi
+   produced an apparent 6.3-point systematic bias on 8 of 8 matches, which looked like strong
+   evidence that `TOUR_MATCH_SHARE` had overshot.
+
+Against the **honest** lane the picture is the opposite and reassuring:
+
+| | value |
+|---|---|
+| mean difference vs Kalshi | **+0.2 points** |
+| mean absolute difference | 2.9 points |
+| sign split | 4 above, 4 below |
+
+So the deciding-set model is already calibrated to an independent sharp market, and the
+`TOUR_MATCH_SHARE` fix landed correctly — at share 0.55 an even ATP matchup prices at 0.2963
+against a measured close-matchup rate of 0.274–0.302. **No change made.**
+
+Still worth having: Kalshi is a genuine second market for match winner, set winner and game
+spread, and its `KXATPACES` series (per-player ace totals) ran at Wimbledon 2026 and may open
+at the US Open — that would be the first sharp market ever available for our ace family.
+
+Other verified sources: Polymarket has outright-winner markets only (gamma + CLOB, no auth).
+**The `tennis_atp`, `tennis_wta` and `tennis_slam_pointbypoint` repos now return 404** — only
+`tennis_MatchChartingProject` survives publicly, which is the source we just blended in.
+Our local copies are therefore irreplaceable; do not delete `data/raw/`.
