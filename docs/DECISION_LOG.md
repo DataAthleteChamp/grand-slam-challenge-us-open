@@ -479,3 +479,34 @@ Other survey results: no source anywhere prices winners, unforced errors or firs
 Kalshi has aces but zero open US Open events and no WTA series ever. Betfair has the deepest
 tennis liquidity and free historical files but needs a free application key. Smarkets and SX
 Bet work unauthenticated but carry no props.
+
+### Orientation-correct comparison, and why nothing is blended yet
+
+Resolving the subject from the question text (never from a positional player field) gives 12
+matched pairs against the live book:
+
+| | correlation with Bovada | mean signed diff |
+|---|---|---|
+| aces | **+0.797** | +7.9 pts |
+| double faults | **+0.434** | +4.1 pts |
+| pooled | +0.653 | +6.0 pts, mean absolute 13.9 |
+
+The correlation confirms we are reading the same quantity, so this is not a parsing error. But
+the agreement is far weaker on double faults — our worst family — and the four largest
+disagreements, all 23 to 27 points, are **women's matches**:
+
+    Sabalenka v Townsend  aces  ours 60  market 36.4
+    Kalinskaya v Navarro  aces  ours 45  market 21.0
+    Sabalenka v Townsend  dfs   ours 61  market 36.7
+    Kalinskaya v Navarro  dfs   ours 52  market 78.7
+
+That is exactly the cell where we lose 4.40 RBP/question, and a bookmaker is taking the other
+side by 25 points.
+
+**Deliberately not blended yet.** There are no historical Bovada prices anywhere, so this input
+cannot be replayed against settled questions — tier 1 of our evidence hierarchy is simply
+unavailable, and every time this project shipped on weaker evidence it later had to be undone
+(the WTA sigma change, four separate double-shrinks). `scripts/fetch_bovada.py` therefore
+snapshots the quotes with a UTC timestamp so the history builds itself. Once the captured
+matches settle we can measure whether Bovada beats us rather than assuming it, and blend at a
+weight the measurement supports.
