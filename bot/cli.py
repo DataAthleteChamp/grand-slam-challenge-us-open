@@ -63,6 +63,28 @@ class RunResult:
         return {q.market_id: q.submission for q in self.priced if q.market_id}
 
 
+def build_count_book() -> dict[tuple[str, str], float]:
+    """Bookmaker head-to-head ace / double-fault lines, newest snapshot wins.
+
+    Reads whatever ``scripts/fetch_bovada.py`` has captured. Absent or stale
+    snapshots simply yield an empty book, which prices exactly as before.
+    """
+    folder = RUNS_DIR.parent / "data/markets/bovada"
+    files = sorted(folder.glob("bovada-*.json")) if folder.exists() else []
+    if not files:
+        return {}
+    try:
+        records = json.loads(files[-1].read_text())
+    except Exception:  # noqa: BLE001 - a bad snapshot must not stop pricing
+        return {}
+    book: dict[tuple[str, str], float] = {}
+    for record in records:
+        key = (record.get("family"), record.get("player_key"))
+        if key[0] and key[1] and record.get("p_more") is not None:
+            book[key] = float(record["p_more"])
+    return book
+
+
 def build_games_book(roster: Roster, event_filter: str = "US Open") -> dict[frozenset[str], float]:
     """Map each match to Pinnacle's expected total games.
 
@@ -320,7 +342,10 @@ def run(argv: Sequence[str] | None = None) -> int:
         return 2
 
     client = SportsPredictClient(config)
-    pricer = Pricer(lane=args.lane)
+    count_book = build_count_book()
+    if count_book:
+        print(f"counts   {len(count_book)} bookmaker ace/double-fault lines loaded")
+    pricer = Pricer(lane=args.lane, count_book=count_book)
     roster = Roster.load()
     if not roster.profiles:
         print(

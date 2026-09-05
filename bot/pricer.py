@@ -258,6 +258,37 @@ FIRST_SERVE_MODEL_WEIGHT = 0.75
 # Those models are not blended with a sharp market, so they are not under-confident.
 EXTREMISE_ALPHA = {Family.MATCH_WINNER: 1.35}
 
+#: Weight given to a bookmaker's head-to-head count line over our own model.
+#:
+#: Bovada is the only public book found that prices "Most Aces" and "Most Double
+#: Faults" head to head, and it prices them three-way with an explicit Draw, so a
+#: proportional de-vig yields P(A more) with the tie already priced - exactly the
+#: question we are asked. See scripts/fetch_bovada.py.
+#:
+#: 0.35 rather than the 0.85-0.95 we give the match-winner market, for one
+#: measured reason: **Bovada charges 1.7x more margin on these props than on its
+#: own moneyline.** In the same feed the ace and double-fault markets run an
+#: overround of 1.100 while the moneyline runs 1.059. A book widening that far is
+#: protecting itself on a line it is less confident in, so this is retail-grade
+#: pricing, not sharp. On our own scale that places it below match duration
+#: (0.45) and tiebreak (0.55).
+#:
+#: What supports using it at all:
+#:   * it prices the two families where we lose - women's double faults score
+#:     -4.40 RBP/question and women's aces -2.99;
+#:   * its de-vigged tie mass independently reproduces our measured constants,
+#:     0.1107 against our 0.1008 ATP / 0.1141 WTA on double faults;
+#:   * correlation with our own model is +0.797 on aces and +0.434 on double
+#:     faults, so we are reading the same quantity but disagree most exactly
+#:     where we score worst.
+#:
+#: What does NOT yet support it: there are no historical Bovada prices anywhere,
+#: so this input cannot be replayed against settled questions. The weight is a
+#: risk posture, not a measurement. scripts/fetch_bovada.py snapshots quotes with
+#: a UTC timestamp so that history accumulates; re-fit this the moment the
+#: captured matches settle.
+COUNT_MARKET_WEIGHT = 0.35
+
 #: Unforced-error count model, all measured on the OFFICIAL US Open point feed
 #: (data/raw/pointbypoint, 1,254 matches / 2,508 player-matches, 2019-2024) -
 #: the same source these questions settle on, not volunteer charting.
@@ -373,10 +404,14 @@ class Pricer:
         lane: str = "honest",
         sim_config: SimulationConfig | None = None,
         market_weights: dict[Family, float] | None = None,
+        count_book: dict[tuple[str, str], float] | None = None,
     ) -> None:
         self.lane = lane
         self._sim_config_override = sim_config
         self.sim_config = sim_config or SimulationConfig(n_sims=4000)
+        # Bookmaker head-to-head count lines, keyed by (stat, player surname).
+        # See COUNT_MARKET_WEIGHT and scripts/fetch_bovada.py.
+        self.count_book = count_book or {}
         # Scaling the market weight by lane is what makes the second entry a
         # genuinely different model rather than a louder copy of the first.
         scale = LANE_MARKET_SCALE.get(lane, 1.0)
@@ -584,8 +619,22 @@ class Pricer:
                 stat, subject, opponent, context, base, notes, expected_games, win_probability
             )
 
+        # Blend a bookmaker's head-to-head line where one exists. Only aces and
+        # double faults are quoted anywhere; see COUNT_MARKET_WEIGHT for why the
+        # weight is low and what still has to be measured.
+        quote = self.count_book.get((stat, _surname(subject.name)))
+        market = None
+        weight = 0.0
+        if quote is not None:
+            market = float(quote)
+            weight = COUNT_MARKET_WEIGHT
+            model = (1.0 - weight) * model + weight * market
+            notes.append(
+                f"bovada {stat} line {market:.3f} blended at {weight:.0%}"
+            )
+
         return self._finalise(
-            spec, model, base, model, None, 0.0, market_id, notes, context, confidence
+            spec, model, base, model, market, weight, market_id, notes, context, confidence
         )
 
     def _serve_rate_threshold(self, spec, subject, opponent, context, base, notes):
@@ -1187,3 +1236,10 @@ def _mix_over_outcome(model: float, win_probability: float, delta: float) -> flo
     lost = 1.0 / (1.0 + math.exp(-(logit - delta)))
     w = min(max(float(win_probability), 0.0), 1.0)
     return w * won + (1.0 - w) * lost
+
+
+def _surname(name: str) -> str:
+    """Last name, accent-stripped and lowercased, for matching bookmaker feeds."""
+    text = strip_accents(str(name)).lower()
+    parts = [p for p in text.replace("-", " ").split() if p.isalpha()]
+    return parts[-1] if parts else ""
