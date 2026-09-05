@@ -419,9 +419,14 @@ sharp market that would ever have priced our ace family. Tested directly and **i
 as a price source**:
 
 - **Zero open events** for the US Open. All 50 settled events are from Wimbledon (July).
-- **The books were never traded.** A representative market shows `liquidity_dollars: 0.0000`,
-  `no_bid 0.0000 / no_ask 1.0000`, `volume: None`, `open_interest_fp: 38.64`. The
-  `last_price_dollars` of 0.50 is the initial listing, not a trade.
+- **The books carry no pre-match price.** A representative market shows `liquidity_dollars:
+  0.0000`, `no_bid 0.0000 / no_ask 1.0000` and `open_interest_fp: 38.64` at settlement.
+  *Correction to an earlier reading of this:* the `/markets/trades` endpoint shows the markets
+  **did** trade — 5, 1 and 1 trades on three sampled markets, in sizes of 25 to 555 contracts.
+  But every trade lands at **0.98-0.99 in the last hour before expiry**, i.e. in-play once the
+  ace count was already near-certain. Timestamps of 12:07-12:12 against a 13:00 expiry make
+  this unambiguous. So the markets were traded, just never as a pre-match forecast, which is
+  the only thing we could have used.
 - The settled `last_price` values are 0.00 or 0.99 almost everywhere and are **settlement
   artefacts, not forecasts** — one market shows `last=0.0000` with `result=yes`.
 - **No WTA ace series has ever existed**, and the women's draw is where we actually lose points.
