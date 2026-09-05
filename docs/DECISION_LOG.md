@@ -444,3 +444,38 @@ Its value is nevertheless limited by the saturation result: the draw median is 1
 (men) and 103 (women) against a learning curve that flattens at ~20, so extra volume buys
 almost nothing. It is worth harvesting only for the 9 players below saturation, 8 of whom are
 women — not as a general data expansion.
+
+## Bovada prices our two worst families directly (the find of the survey)
+
+`https://www.bovada.lv/services/sports/event/coupon/events/A/description/tennis?lang=en&eventsLimit=50`
+returns 1.37 MB of JSON, **no auth, no geo-block, no API key**, and carries two markets nobody
+else in the world offers:
+
+* **"Most Aces"** — head to head, with an explicit **Draw** outcome
+* **"Most Double Faults"** — same structure
+
+Those are exactly the two families where we lose points, and the three-way structure means a
+proportional de-vig yields P(A more) with the tie already priced, which is the precise quantity
+our question asks for. Six matches each at the time of testing.
+
+**Immediate orientation-independent result: the market confirms our tie constants.**
+
+| | Bovada, de-vigged | our measured (official feed) |
+|---|---|---|
+| double-fault ties | **0.1107** | ATP 0.1008 / WTA 0.1141 |
+| ace ties | **0.0806** | ATP 0.0432 / WTA 0.1286 |
+
+An independent bookmaker, pricing with its own money, agrees with the tie structure we derived
+from the official point feed. That is meaningful confirmation of `COUNT_STATS`, and it is safe
+to state because a tie probability does not depend on which player the question names first.
+
+**Not yet acted on, deliberately.** The per-match gaps between our submissions and this market
+look large in places, but our submission is oriented to the *question's subject*, which is not
+always `player_a` — the exact trap that produced sub-0.5 AUC earlier in this session. Anyone
+building on this must resolve the subject from the question text before comparing, and should
+re-read the orientation note in the charting-blend entry above.
+
+Other survey results: no source anywhere prices winners, unforced errors or first-serve %.
+Kalshi has aces but zero open US Open events and no WTA series ever. Betfair has the deepest
+tennis liquidity and free historical files but needs a free application key. Smarkets and SX
+Bet work unauthenticated but carry no props.
