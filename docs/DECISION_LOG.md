@@ -410,3 +410,32 @@ Other verified sources: Polymarket has outright-winner markets only (gamma + CLO
 **The `tennis_atp`, `tennis_wta` and `tennis_slam_pointbypoint` repos now return 404** — only
 `tennis_MatchChartingProject` survives publicly, which is the source we just blended in.
 Our local copies are therefore irreplaceable; do not delete `data/raw/`.
+
+
+## Kalshi ace markets: closed as a price source, opened as a data source
+
+`KXATPACES` ("ATP Tennis Aces") was the last high-expected-value lead on the board — the first
+sharp market that would ever have priced our ace family. Tested directly and **it does not work
+as a price source**:
+
+- **Zero open events** for the US Open. All 50 settled events are from Wimbledon (July).
+- **The books were never traded.** A representative market shows `liquidity_dollars: 0.0000`,
+  `no_bid 0.0000 / no_ask 1.0000`, `volume: None`, `open_interest_fp: 38.64`. The
+  `last_price_dollars` of 0.50 is the initial listing, not a trade.
+- The settled `last_price` values are 0.00 or 0.99 almost everywhere and are **settlement
+  artefacts, not forecasts** — one market shows `last=0.0000` with `result=yes`.
+- **No WTA ace series has ever existed**, and the women's draw is where we actually lose points.
+
+So there is no ace market to reconcile against, and polling for one is not worth the cost.
+This closes the last large lead cleanly.
+
+**However** the same endpoint yields something we do lack. Settled markets expose
+`expiration_value`, e.g. `p1=31 p2=10` — the **actual ace counts for both players**, together
+with `rules_primary` naming the match and tournament. Since `tennis_atp`, `tennis_wta` and
+`tennis_slam_pointbypoint` all now return 404, and Sofascore is Cloudflare-blocked, this is one
+of the few remaining public routes to real per-match serve statistics.
+
+Its value is nevertheless limited by the saturation result: the draw median is 162 matches
+(men) and 103 (women) against a learning curve that flattens at ~20, so extra volume buys
+almost nothing. It is worth harvesting only for the 9 players below saturation, 8 of whom are
+women — not as a general data expansion.
