@@ -1,5 +1,5 @@
 {
-  "closing_time": "2026-09-05T03:00:00.000Z",
+  "closing_time": "2026-09-05T02:30:00.000Z",
   "draw": "womens",
   "entries": [
     {
@@ -13,13 +13,13 @@
       "market": null,
       "market_id": "6ccef53d-4a6a-4518-b539-6d437af7b2f8",
       "market_weight": 0.0,
-      "model": 0.45316760977751913,
+      "model": 0.4539681700879057,
       "notes": [
         "total games: simulator 21.0, Pinnacle 24.1, used 22.8 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.002350+00:00",
-      "probability": 0.45316760977751913,
+      "predicted_at": "2026-09-04T15:15:16.260340+00:00",
+      "probability": 0.4539681700879057,
       "question": "Will the match last longer than 105 minutes?",
       "rbp": null,
       "settled_at": "",
@@ -41,7 +41,7 @@
         "exposure 69 service points from 21.3 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.002350+00:00",
+      "predicted_at": "2026-09-04T15:15:16.260340+00:00",
       "probability": 0.659482737463081,
       "question": "Will S. Cirstea record more aces than J. Paolini?",
       "rbp": null,
@@ -64,7 +64,7 @@
         "exposure 69 service points from 21.3 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.002350+00:00",
+      "predicted_at": "2026-09-04T15:15:16.260340+00:00",
       "probability": 0.49655145180238647,
       "question": "Will S. Cirstea record more double faults than J. Paolini?",
       "rbp": null,
@@ -88,7 +88,7 @@
         "base-rate pull 0.48 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.002350+00:00",
+      "predicted_at": "2026-09-04T15:15:16.260340+00:00",
       "probability": 0.2796236370790457,
       "question": "Will S. Cirstea commit more than 34 unforced errors?",
       "rbp": null,
@@ -111,7 +111,7 @@
         "first-serve rate: expected 0.631 vs threshold 0.650, sd 0.096 (0.076 sampling on 40 first serves + 0.058 form)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.002350+00:00",
+      "predicted_at": "2026-09-04T15:15:16.260340+00:00",
       "probability": 0.2952688251382609,
       "question": "Will J. Paolini win more than 65% of points played on their first serve?",
       "rbp": null,
@@ -134,7 +134,7 @@
         "exposure 69 service points from 21.3 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.002350+00:00",
+      "predicted_at": "2026-09-04T15:15:16.260340+00:00",
       "probability": 0.5096297350567802,
       "question": "Will S. Cirstea hit more winners than J. Paolini?",
       "rbp": null,
@@ -155,7 +155,7 @@
       "model": 0.305,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.002350+00:00",
+      "predicted_at": "2026-09-04T15:15:16.260340+00:00",
       "probability": 0.305,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -176,7 +176,7 @@
       "model": 0.648,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.002350+00:00",
+      "predicted_at": "2026-09-04T15:15:16.260340+00:00",
       "probability": 0.648,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -201,7 +201,7 @@
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.002350+00:00",
+      "predicted_at": "2026-09-04T15:15:16.260340+00:00",
       "probability": 0.5731184614038443,
       "question": "Will S. Cirstea win?",
       "rbp": null,
@@ -225,7 +225,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.002350+00:00",
+      "predicted_at": "2026-09-04T15:15:16.260340+00:00",
       "probability": 0.18684374999999998,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
@@ -236,7 +236,7 @@
   "match_id": "34b3bb27-07b6-47bb-b6ca-624609d9558d",
   "match_name": "J. Paolini vs S. Cirstea",
   "multiplier": 2,
-  "opening_time": "2026-09-04T15:00:00.000Z",
+  "opening_time": "2026-09-04T14:30:00.000Z",
   "player_a": "Jasmine Paolini",
   "player_b": "Sorana Cirstea",
   "round_code": "R128"

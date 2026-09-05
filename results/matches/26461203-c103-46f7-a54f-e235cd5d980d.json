@@ -3,7 +3,7 @@
   "draw": "womens",
   "entries": [
     {
-      "base_rate": 0.9864,
+      "base_rate": 0.185,
       "brier": null,
       "confidence": 0.95,
       "crowd": null,
@@ -13,17 +13,17 @@
       "market": null,
       "market_id": "552ab59f-d05a-4757-8d25-bdf00d7420f5",
       "market_weight": 0.0,
-      "model": 1.0,
+      "model": 0.2718212190977962,
       "notes": [
         "total games: simulator 21.6, Pinnacle 24.9, used 23.6 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.016924+00:00",
-      "probability": 1.0,
-      "question": "Will the match last longer than 2 hours 10 minutes?",
+      "predicted_at": "2026-09-04T15:15:16.276393+00:00",
+      "probability": 0.2718212190977962,
+      "question": "Will the match last longer than 130 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 98
+      "submission": 23
     },
     {
       "base_rate": 0.4357,
@@ -41,7 +41,7 @@
         "exposure 71 service points from 22.0 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.016924+00:00",
+      "predicted_at": "2026-09-04T15:15:16.276393+00:00",
       "probability": 0.29124441657313854,
       "question": "Will M. Keys record more aces than Q. Zheng?",
       "rbp": null,
@@ -64,7 +64,7 @@
         "exposure 71 service points from 22.0 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.016924+00:00",
+      "predicted_at": "2026-09-04T15:15:16.276393+00:00",
       "probability": 0.33322147895698323,
       "question": "Will M. Keys record more double faults than Q. Zheng?",
       "rbp": null,
@@ -88,7 +88,7 @@
         "base-rate pull 0.48 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.016924+00:00",
+      "predicted_at": "2026-09-04T15:15:16.276393+00:00",
       "probability": 0.30248741275591373,
       "question": "Will M. Keys commit more than 43 unforced errors?",
       "rbp": null,
@@ -111,7 +111,7 @@
         "first-serve rate: expected 0.674 vs threshold 0.610, sd 0.094 (0.074 sampling on 40 first serves + 0.058 form)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.016924+00:00",
+      "predicted_at": "2026-09-04T15:15:16.276393+00:00",
       "probability": 0.5838268971085451,
       "question": "Will Q. Zheng win more than 61% of points played on their first serve?",
       "rbp": null,
@@ -134,7 +134,7 @@
         "exposure 71 service points from 22.0 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.016924+00:00",
+      "predicted_at": "2026-09-04T15:15:16.276393+00:00",
       "probability": 0.5694981017076906,
       "question": "Will M. Keys hit more winners than Q. Zheng?",
       "rbp": null,
@@ -155,7 +155,7 @@
       "model": 0.30525,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.016924+00:00",
+      "predicted_at": "2026-09-04T15:15:16.276393+00:00",
       "probability": 0.30525,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -176,7 +176,7 @@
       "model": 0.57575,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.016924+00:00",
+      "predicted_at": "2026-09-04T15:15:16.276393+00:00",
       "probability": 0.57575,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -201,7 +201,7 @@
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.016924+00:00",
+      "predicted_at": "2026-09-04T15:15:16.276393+00:00",
       "probability": 0.5209144289860116,
       "question": "Will M. Keys win?",
       "rbp": null,
@@ -225,7 +225,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.016924+00:00",
+      "predicted_at": "2026-09-04T15:15:16.276393+00:00",
       "probability": 0.24750824999999996,
       "question": "Will the match feature at least 1 tiebreak?",
       "rbp": null,

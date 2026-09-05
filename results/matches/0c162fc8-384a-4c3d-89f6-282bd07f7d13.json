@@ -3,7 +3,7 @@
   "draw": "womens",
   "entries": [
     {
-      "base_rate": 0.9864,
+      "base_rate": 0.3994,
       "brier": null,
       "confidence": 0.95,
       "crowd": null,
@@ -13,17 +13,17 @@
       "market": null,
       "market_id": "2199204c-9501-423d-923a-36f5533b066f",
       "market_weight": 0.0,
-      "model": 1.0,
+      "model": 0.32465391675896527,
       "notes": [
         "total games: simulator 20.7, Pinnacle 19.9, used 20.2 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.014231+00:00",
-      "probability": 1.0,
-      "question": "Will the match last longer than 1 hour 40 minutes?",
+      "predicted_at": "2026-09-04T15:15:16.281849+00:00",
+      "probability": 0.32465391675896527,
+      "question": "Will the match last longer than 100 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 98
+      "submission": 29
     },
     {
       "base_rate": 0.4357,
@@ -41,7 +41,7 @@
         "exposure 68 service points from 21.0 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.014231+00:00",
+      "predicted_at": "2026-09-04T15:15:16.281849+00:00",
       "probability": 0.5189589801738689,
       "question": "Will A. Anisimova record more aces than A. Potapova?",
       "rbp": null,
@@ -64,7 +64,7 @@
         "exposure 68 service points from 21.0 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.014231+00:00",
+      "predicted_at": "2026-09-04T15:15:16.281849+00:00",
       "probability": 0.4110411664653888,
       "question": "Will A. Anisimova record more double faults than A. Potapova?",
       "rbp": null,
@@ -88,7 +88,7 @@
         "base-rate pull 0.48 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.014231+00:00",
+      "predicted_at": "2026-09-04T15:15:16.281849+00:00",
       "probability": 0.37245277862613224,
       "question": "Will A. Anisimova commit more than 37 unforced errors?",
       "rbp": null,
@@ -111,7 +111,7 @@
         "first-serve rate: expected 0.609 vs threshold 0.580, sd 0.096 (0.077 sampling on 40 first serves + 0.058 form)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.014231+00:00",
+      "predicted_at": "2026-09-04T15:15:16.281849+00:00",
       "probability": 0.5389346721820345,
       "question": "Will A. Potapova win more than 58% of points played on their first serve?",
       "rbp": null,
@@ -134,7 +134,7 @@
         "exposure 68 service points from 21.0 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.014231+00:00",
+      "predicted_at": "2026-09-04T15:15:16.281849+00:00",
       "probability": 0.6534598471598638,
       "question": "Will A. Anisimova hit more winners than A. Potapova?",
       "rbp": null,
@@ -155,7 +155,7 @@
       "model": 0.298,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.014231+00:00",
+      "predicted_at": "2026-09-04T15:15:16.281849+00:00",
       "probability": 0.298,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -176,7 +176,7 @@
       "model": 0.67675,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.014231+00:00",
+      "predicted_at": "2026-09-04T15:15:16.281849+00:00",
       "probability": 0.67675,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -201,7 +201,7 @@
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.014231+00:00",
+      "predicted_at": "2026-09-04T15:15:16.281849+00:00",
       "probability": 0.6369684326695915,
       "question": "Will A. Anisimova win?",
       "rbp": null,
@@ -225,7 +225,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.014231+00:00",
+      "predicted_at": "2026-09-04T15:15:16.281849+00:00",
       "probability": 0.18399199999999996,
       "question": "Will the match feature at least 1 tiebreak?",
       "rbp": null,

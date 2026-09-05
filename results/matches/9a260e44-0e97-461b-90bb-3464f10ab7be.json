@@ -1,5 +1,5 @@
 {
-  "closing_time": "2026-09-05T03:00:00.000Z",
+  "closing_time": "2026-09-05T10:30:00.000Z",
   "draw": "womens",
   "entries": [
     {
@@ -18,7 +18,7 @@
         "total games: simulator 20.9, Pinnacle 23.0, used 22.2 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.006577+00:00",
+      "predicted_at": "2026-09-04T15:15:16.270378+00:00",
       "probability": 0.19263896382702467,
       "question": "Will the match last longer than 130 minutes?",
       "rbp": null,
@@ -41,7 +41,7 @@
         "exposure 69 service points from 21.4 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.006577+00:00",
+      "predicted_at": "2026-09-04T15:15:16.270378+00:00",
       "probability": 0.33932057817160133,
       "question": "Will A. Kalinskaya record more aces than E. Svitolina?",
       "rbp": null,
@@ -64,7 +64,7 @@
         "exposure 69 service points from 21.4 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.006577+00:00",
+      "predicted_at": "2026-09-04T15:15:16.270378+00:00",
       "probability": 0.48900785187322976,
       "question": "Will A. Kalinskaya record more double faults than E. Svitolina?",
       "rbp": null,
@@ -88,7 +88,7 @@
         "base-rate pull 0.48 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.006577+00:00",
+      "predicted_at": "2026-09-04T15:15:16.270378+00:00",
       "probability": 0.3704417307877212,
       "question": "Will A. Kalinskaya commit more than 29 unforced errors?",
       "rbp": null,
@@ -111,7 +111,7 @@
         "first-serve rate: expected 0.668 vs threshold 0.640, sd 0.094 (0.074 sampling on 40 first serves + 0.058 form)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.006577+00:00",
+      "predicted_at": "2026-09-04T15:15:16.270378+00:00",
       "probability": 0.41271047686542806,
       "question": "Will E. Svitolina win more than 64% of points played on their first serve?",
       "rbp": null,
@@ -134,7 +134,7 @@
         "exposure 69 service points from 21.4 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.006577+00:00",
+      "predicted_at": "2026-09-04T15:15:16.270378+00:00",
       "probability": 0.47542305090946707,
       "question": "Will A. Kalinskaya hit more winners than E. Svitolina?",
       "rbp": null,
@@ -155,7 +155,7 @@
       "model": 0.294,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.006577+00:00",
+      "predicted_at": "2026-09-04T15:15:16.270378+00:00",
       "probability": 0.294,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -176,7 +176,7 @@
       "model": 0.64525,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.006577+00:00",
+      "predicted_at": "2026-09-04T15:15:16.270378+00:00",
       "probability": 0.64525,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -201,7 +201,7 @@
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.006577+00:00",
+      "predicted_at": "2026-09-04T15:15:16.270378+00:00",
       "probability": 0.38466028921768625,
       "question": "Will A. Kalinskaya win?",
       "rbp": null,
@@ -225,7 +225,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.006577+00:00",
+      "predicted_at": "2026-09-04T15:15:16.270378+00:00",
       "probability": 0.19202874999999997,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
@@ -236,7 +236,7 @@
   "match_id": "9a260e44-0e97-461b-90bb-3464f10ab7be",
   "match_name": "E. Svitolina vs A. Kalinskaya",
   "multiplier": 2,
-  "opening_time": "2026-09-04T15:00:00.000Z",
+  "opening_time": "2026-09-04T22:30:00.000Z",
   "player_a": "Elina Svitolina",
   "player_b": "Anna Kalinskaya",
   "round_code": "R128"

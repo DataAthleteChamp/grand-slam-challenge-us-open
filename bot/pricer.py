@@ -205,6 +205,27 @@ NO_BASE_RATE_PULL = frozenset(
     }
 )
 
+#: Weight on the model for first-serve thresholds, replacing the confidence pull.
+#:
+#: The "base rate" for this family is how often an ARBITRARY player clears the
+#: threshold, which deliberately ignores who is serving - it is uninformative in
+#: exactly the way that made the pull wrong for the count families. Pulling a
+#: per-player model toward it was creating a large low bias:
+#:
+#:     submitted 0.346   model 0.503   realised 0.562   (16 settled questions)
+#:
+#: so the model was nearly unbiased and the pull supplied all of the error. On the
+#: first settled cohort, replacing the pull with a fixed weight scores, on the
+#: honest lane and independently on the scenario lane:
+#:     weight 0.6  +1.90 [-0.43,+4.36]   /  +1.48 [-1.63,+4.80]
+#:     weight 0.8  +4.13 [-0.69,+9.03]   /  +3.71 [-1.54,+9.12]
+#:     weight 1.0  +5.53 [-1.81,+12.89]  /  +5.12 [-2.67,+12.82]
+#: Every value is positive in both lanes but none is significant at n=16, and the
+#: raw model's AUC of 0.794 still trails the crowd's 0.825, so the family is not
+#: yet a demonstrated edge. 0.75 keeps most of the measured gain while leaving a
+#: quarter of the pull in place against the chance that n=16 is flattering it.
+FIRST_SERVE_MODEL_WEIGHT = 0.75
+
 
 # Families whose final probability is sharpened on the logit scale, p -> sig(a*logit(p)).
 #
@@ -613,8 +634,17 @@ class Pricer:
             f"sd {sd:.3f} ({math.sqrt(binomial_var):.3f} sampling on "
             f"{first_serves:.0f} first serves + {math.sqrt(form_var):.3f} form)"
         )
-        # Confidence falls away as the threshold approaches the expectation,
-        # where the answer is a coin flip that no amount of rating quality fixes.
+        # A fixed weight rather than the confidence pull. The pull dragged a
+        # per-player model toward a base rate that ignores which player is
+        # serving, and supplied all of this family's low bias. See
+        # FIRST_SERVE_MODEL_WEIGHT.
+        probability = base + FIRST_SERVE_MODEL_WEIGHT * (probability - base)
+        notes.append(
+            f"model weighted {FIRST_SERVE_MODEL_WEIGHT:.0%} against the base rate "
+            f"{base:.3f} instead of the confidence pull"
+        )
+        # Confidence is still reported for the ledger, but the pull itself is
+        # suppressed for this family, so it no longer shrinks the answer twice.
         margin = abs(expected - threshold) / sd
         return probability, min(0.75, 0.35 + 0.25 * margin)
 
@@ -1042,7 +1072,9 @@ class Pricer:
         # rate knows something the model does not. See NO_BASE_RATE_PULL.
         scaled = confidence * LANE_CONFIDENCE_SCALE.get(self.lane, 1.0)
         pull = 1.0 - min(max(scaled, 0.0), 1.0)
-        if spec.family in NO_BASE_RATE_PULL:
+        if spec.family in NO_BASE_RATE_PULL or (
+            spec.family is Family.FIRST_SERVE_COMPARISON and _is_rate_threshold(spec)
+        ):
             if pull > 0.0:
                 notes.append(
                     f"base-rate pull {pull:.2f} suppressed for {spec.family.value}"

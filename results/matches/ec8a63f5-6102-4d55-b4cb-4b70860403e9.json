@@ -1,5 +1,5 @@
 {
-  "closing_time": "2026-09-05T03:00:00.000Z",
+  "closing_time": "2026-09-05T04:30:00.000Z",
   "draw": "mens",
   "entries": [
     {
@@ -13,17 +13,17 @@
       "market": null,
       "market_id": "aa083bc9-d265-4016-94f2-cae109a9c025",
       "market_weight": 0.0,
-      "model": 0.5385293321934884,
+      "model": 0.552070335906761,
       "notes": [
-        "total games: simulator 33.7, Pinnacle 31.9, used 32.6 at weight 0.60"
+        "total games: simulator 33.7, Pinnacle 32.4, used 32.9 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.011804+00:00",
-      "probability": 0.5385293321934884,
+      "predicted_at": "2026-09-04T15:15:16.264831+00:00",
+      "probability": 0.552070335906761,
       "question": "Will the match last longer than 140 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 55
+      "submission": 56
     },
     {
       "base_rate": 0.4784,
@@ -43,7 +43,7 @@
         "outcome coupling: P(win)=0.807, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.011804+00:00",
+      "predicted_at": "2026-09-04T15:15:16.264831+00:00",
       "probability": 0.7687864543073094,
       "question": "Will C. Alcaraz record more aces than Y. Wu?",
       "rbp": null,
@@ -66,7 +66,7 @@
         "exposure 107 service points from 34.6 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.011804+00:00",
+      "predicted_at": "2026-09-04T15:15:16.264831+00:00",
       "probability": 0.4056563834336732,
       "question": "Will C. Alcaraz record more double faults than Y. Wu?",
       "rbp": null,
@@ -90,7 +90,7 @@
         "base-rate pull 0.48 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.011804+00:00",
+      "predicted_at": "2026-09-04T15:15:16.264831+00:00",
       "probability": 0.5397427447509066,
       "question": "Will C. Alcaraz commit more than 36 unforced errors?",
       "rbp": null,
@@ -113,7 +113,7 @@
         "first-serve rate: expected 0.675 vs threshold 0.660, sd 0.079 (0.056 sampling on 70 first serves + 0.056 form)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.011804+00:00",
+      "predicted_at": "2026-09-04T15:15:16.264831+00:00",
       "probability": 0.5082787022335633,
       "question": "Will Y. Wu win more than 66% of points played on their first serve?",
       "rbp": null,
@@ -136,7 +136,7 @@
         "exposure 107 service points from 34.6 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.011804+00:00",
+      "predicted_at": "2026-09-04T15:15:16.264831+00:00",
       "probability": 0.5042926083953414,
       "question": "Will C. Alcaraz hit more winners than Y. Wu?",
       "rbp": null,
@@ -157,7 +157,7 @@
       "model": 0.18825,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.011804+00:00",
+      "predicted_at": "2026-09-04T15:15:16.264831+00:00",
       "probability": 0.18825,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -178,7 +178,7 @@
       "model": 0.7785,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.011804+00:00",
+      "predicted_at": "2026-09-04T15:15:16.264831+00:00",
       "probability": 0.7785,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -203,7 +203,7 @@
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.011804+00:00",
+      "predicted_at": "2026-09-04T15:15:16.264831+00:00",
       "probability": 0.8119264567924309,
       "question": "Will C. Alcaraz win?",
       "rbp": null,
@@ -227,7 +227,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.011804+00:00",
+      "predicted_at": "2026-09-04T15:15:16.264831+00:00",
       "probability": 0.31389300000000003,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
@@ -238,7 +238,7 @@
   "match_id": "ec8a63f5-6102-4d55-b4cb-4b70860403e9",
   "match_name": "Y. Wu vs C. Alcaraz",
   "multiplier": 2,
-  "opening_time": "2026-09-04T15:00:00.000Z",
+  "opening_time": "2026-09-04T16:30:00.000Z",
   "player_a": "Yibing Wu",
   "player_b": "Carlos Alcaraz",
   "round_code": "R128"

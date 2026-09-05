@@ -3,7 +3,7 @@
   "draw": "womens",
   "entries": [
     {
-      "base_rate": 0.9864,
+      "base_rate": 0.4504,
       "brier": null,
       "confidence": 0.95,
       "crowd": null,
@@ -13,17 +13,17 @@
       "market": null,
       "market_id": "4fc2d1cc-5a7c-45c9-8bb2-a2ed00aa7b59",
       "market_weight": 0.0,
-      "model": 1.0,
+      "model": 0.4902500955699875,
       "notes": [
         "total games: simulator 19.3, Pinnacle 19.9, used 19.7 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.017583+00:00",
-      "probability": 1.0,
-      "question": "Will the match last longer than 1 hour 35 minutes?",
+      "predicted_at": "2026-09-04T15:15:16.272944+00:00",
+      "probability": 0.4902500955699875,
+      "question": "Will the match last longer than 95 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 98
+      "submission": 49
     },
     {
       "base_rate": 0.4357,
@@ -41,7 +41,7 @@
         "exposure 63 service points from 19.7 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.017583+00:00",
+      "predicted_at": "2026-09-04T15:15:16.272944+00:00",
       "probability": 0.3977262490872843,
       "question": "Will M. Bouzkova record more aces than I. Swiatek?",
       "rbp": null,
@@ -64,7 +64,7 @@
         "exposure 63 service points from 19.7 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.017583+00:00",
+      "predicted_at": "2026-09-04T15:15:16.272944+00:00",
       "probability": 0.43859159916923224,
       "question": "Will M. Bouzkova record more double faults than I. Swiatek?",
       "rbp": null,
@@ -88,7 +88,7 @@
         "base-rate pull 0.48 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.017583+00:00",
+      "predicted_at": "2026-09-04T15:15:16.272944+00:00",
       "probability": 0.5291250743842493,
       "question": "Will M. Bouzkova commit more than 21 unforced errors?",
       "rbp": null,
@@ -111,7 +111,7 @@
         "first-serve rate: expected 0.688 vs threshold 0.710, sd 0.093 (0.073 sampling on 40 first serves + 0.058 form)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.017583+00:00",
+      "predicted_at": "2026-09-04T15:15:16.272944+00:00",
       "probability": 0.2226863144244831,
       "question": "Will I. Swiatek win more than 71% of points played on their first serve?",
       "rbp": null,
@@ -134,7 +134,7 @@
         "exposure 63 service points from 19.7 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.017583+00:00",
+      "predicted_at": "2026-09-04T15:15:16.272944+00:00",
       "probability": 0.36291857204003414,
       "question": "Will M. Bouzkova hit more winners than I. Swiatek?",
       "rbp": null,
@@ -155,7 +155,7 @@
       "model": 0.23625,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.017583+00:00",
+      "predicted_at": "2026-09-04T15:15:16.272944+00:00",
       "probability": 0.23625,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -176,7 +176,7 @@
       "model": 0.74475,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.017583+00:00",
+      "predicted_at": "2026-09-04T15:15:16.272944+00:00",
       "probability": 0.74475,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -201,7 +201,7 @@
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.017583+00:00",
+      "predicted_at": "2026-09-04T15:15:16.272944+00:00",
       "probability": 0.1791391332957044,
       "question": "Will M. Bouzkova win?",
       "rbp": null,
@@ -225,7 +225,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.017583+00:00",
+      "predicted_at": "2026-09-04T15:15:16.272944+00:00",
       "probability": 0.12306824999999999,
       "question": "Will the match feature at least 1 tiebreak?",
       "rbp": null,

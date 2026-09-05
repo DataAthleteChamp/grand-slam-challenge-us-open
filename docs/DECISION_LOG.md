@@ -259,3 +259,57 @@ condemned a change that was helping.
 Unforced errors, first serve, winners, deciding set and lopsided set have **not settled a
 single question**, and every settled question so far is 1x. The 300 questions now live are all
 2x, so the next cohort carries double weight and will be the first real test of those five.
+
+## First settled cohort for the five new families (2026-09-05)
+
+160 questions settled at **2x**, including the first 16 of every new family. Old families all
+improved at 2x (tiebreak +2.04, match winner +0.76, aces +0.50, duration +0.34); the new ones
+scored winners -4.51, first serve -3.24, lopsided -1.61, unforced -1.21, deciding +0.20.
+
+**Every one of those CIs spans zero at n=16.** The correct response is to check each family
+against large-sample data rather than to react to the live number.
+
+### First serve: a real bug, fixed
+
+The confidence pull was dragging a per-player model toward a base rate that ignores which
+player is serving — model 0.888 submitted as 78, model 0.212 as 10.
+
+| | value |
+|---|---|
+| submitted mean | 0.346 |
+| model mean | 0.503 |
+| realised | 0.562 |
+
+The model was nearly unbiased and **the pull supplied all of the error**. Replacing it with a
+fixed weight scores, on the honest lane and independently on the scenario lane:
+weight 0.6 → +1.90 / +1.48, weight 0.8 → +4.13 / +3.71, weight 1.0 → +5.53 / +5.12. All
+positive in both lanes, none significant at n=16, so `FIRST_SERVE_MODEL_WEIGHT = 0.75` keeps
+most of the gain while leaving some pull in place. This is the fourth double-shrink of the
+same shape: **when a family gets its own explicit weight, the confidence pull must be
+suppressed for it.**
+
+### Winners: the model is good, the live number was luck
+
+Live AUC was 0.567 against a crowd 0.833, which looks broken. It is not. On 9,144 charted
+matches, using each player's career rate from their *other* matches, our actual count model
+scores **AUC 0.743 (ATP) and 0.820 (WTA)**, with Brier 0.2102 and 0.1731 against 0.25 for a
+flat 50. The family has real signal and the pipeline delivers it; 16 questions is simply too
+few. **No change made.** Player-level winners repeatability is only ICC 0.27/0.21, but that
+does not matter here because both players share the match, so length cancels in a
+head-to-head.
+
+### Winners overdispersion: missing, and tour-specific
+
+Winners were absent from `COUNT_OVERDISPERSION` and defaulted to a pure binomial draw, though
+the realised count is ~3x as variable (ATP 2.98x, WTA 2.70x) — an inflation of confidence of
+about 1.7x. But the fix is **men's only**:
+
+| | rho=0 | measured rho | gain |
+|---|---|---|---|
+| ATP | Brier 0.2078, buckets off by +0.100 and +0.114 | 0.2042 | **+0.360** [+0.137,+0.603] |
+| WTA | Brier 0.1760, buckets off by -0.002, +0.027 | 0.1830 | **-0.703** [-0.912,-0.485] |
+
+ATP at rho=0 is genuinely overconfident and the sweep bottoms out near 0.008; WTA is already
+calibrated and its sweep is monotone increasing, so no positive value helps. Shipping the
+measured value on both tours would have been net negative — another case where the pooled
+answer is worse than either tour-specific one.

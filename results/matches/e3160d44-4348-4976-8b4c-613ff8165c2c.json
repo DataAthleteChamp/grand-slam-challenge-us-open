@@ -1,5 +1,5 @@
 {
-  "closing_time": "2026-09-05T03:00:00.000Z",
+  "closing_time": "2026-09-05T02:30:00.000Z",
   "draw": "mens",
   "entries": [
     {
@@ -13,17 +13,17 @@
       "market": null,
       "market_id": "c0d77f38-1a4c-41c2-a964-6e72a657dd23",
       "market_weight": 0.0,
-      "model": 0.5232457707759265,
+      "model": 0.5363659292635916,
       "notes": [
-        "total games: simulator 33.7, Pinnacle 38.5, used 36.6 at weight 0.60"
+        "total games: simulator 33.7, Pinnacle 39.0, used 36.9 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.011139+00:00",
-      "probability": 0.5232457707759265,
+      "predicted_at": "2026-09-04T15:15:16.259609+00:00",
+      "probability": 0.5363659292635916,
       "question": "Will the match last longer than 160 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 53
+      "submission": 55
     },
     {
       "base_rate": 0.4784,
@@ -43,7 +43,7 @@
         "outcome coupling: P(win)=0.852, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.011139+00:00",
+      "predicted_at": "2026-09-04T15:15:16.259609+00:00",
       "probability": 0.7957682588485033,
       "question": "Will D. Medvedev record more aces than A. Rinderknech?",
       "rbp": null,
@@ -66,7 +66,7 @@
         "exposure 108 service points from 34.7 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.011139+00:00",
+      "predicted_at": "2026-09-04T15:15:16.259609+00:00",
       "probability": 0.6871128208478587,
       "question": "Will D. Medvedev record more double faults than A. Rinderknech?",
       "rbp": null,
@@ -90,7 +90,7 @@
         "base-rate pull 0.48 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.011139+00:00",
+      "predicted_at": "2026-09-04T15:15:16.259609+00:00",
       "probability": 0.576629032820505,
       "question": "Will D. Medvedev commit more than 30 unforced errors?",
       "rbp": null,
@@ -113,7 +113,7 @@
         "first-serve rate: expected 0.694 vs threshold 0.700, sd 0.079 (0.055 sampling on 70 first serves + 0.056 form)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.011139+00:00",
+      "predicted_at": "2026-09-04T15:15:16.259609+00:00",
       "probability": 0.3600874048616729,
       "question": "Will A. Rinderknech win more than 70% of points played on their first serve?",
       "rbp": null,
@@ -136,7 +136,7 @@
         "exposure 108 service points from 34.7 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.011139+00:00",
+      "predicted_at": "2026-09-04T15:15:16.259609+00:00",
       "probability": 0.39601988178611325,
       "question": "Will D. Medvedev hit more winners than A. Rinderknech?",
       "rbp": null,
@@ -157,7 +157,7 @@
       "model": 0.15975,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.011139+00:00",
+      "predicted_at": "2026-09-04T15:15:16.259609+00:00",
       "probability": 0.15975,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -178,7 +178,7 @@
       "model": 0.69875,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.011139+00:00",
+      "predicted_at": "2026-09-04T15:15:16.259609+00:00",
       "probability": 0.69875,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -203,7 +203,7 @@
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.011139+00:00",
+      "predicted_at": "2026-09-04T15:15:16.259609+00:00",
       "probability": 0.8500801409860613,
       "question": "Will D. Medvedev win?",
       "rbp": null,
@@ -227,7 +227,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.011139+00:00",
+      "predicted_at": "2026-09-04T15:15:16.259609+00:00",
       "probability": 0.08621200000000001,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,
@@ -238,7 +238,7 @@
   "match_id": "e3160d44-4348-4976-8b4c-613ff8165c2c",
   "match_name": "D. Medvedev vs A. Rinderknech",
   "multiplier": 2,
-  "opening_time": "2026-09-04T15:00:00.000Z",
+  "opening_time": "2026-09-04T14:30:00.000Z",
   "player_a": "Daniil Medvedev",
   "player_b": "Arthur Rinderknech",
   "round_code": "R128"

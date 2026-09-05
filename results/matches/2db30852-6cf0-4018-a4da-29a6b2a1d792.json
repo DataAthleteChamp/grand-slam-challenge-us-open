@@ -1,5 +1,5 @@
 {
-  "closing_time": "2026-09-05T03:00:00.000Z",
+  "closing_time": "2026-09-05T04:30:00.000Z",
   "draw": "womens",
   "entries": [
     {
@@ -13,13 +13,13 @@
       "market": null,
       "market_id": "c40d06a2-2a93-4ebf-8b13-f7ce1d2b46a1",
       "market_weight": 0.0,
-      "model": 0.6434539345398713,
+      "model": 0.64387340904335,
       "notes": [
         "total games: simulator 21.5, Pinnacle 24.9, used 23.5 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.013412+00:00",
-      "probability": 0.6434539345398713,
+      "predicted_at": "2026-09-04T15:15:16.264086+00:00",
+      "probability": 0.64387340904335,
       "question": "Will the match last longer than 95 minutes?",
       "rbp": null,
       "settled_at": "",
@@ -41,7 +41,7 @@
         "exposure 71 service points from 21.9 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.013412+00:00",
+      "predicted_at": "2026-09-04T15:15:16.264086+00:00",
       "probability": 0.302698791224842,
       "question": "Will D. Shnaider record more aces than T. Townsend?",
       "rbp": null,
@@ -64,7 +64,7 @@
         "exposure 71 service points from 21.9 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.013412+00:00",
+      "predicted_at": "2026-09-04T15:15:16.264086+00:00",
       "probability": 0.41280296850393994,
       "question": "Will D. Shnaider record more double faults than T. Townsend?",
       "rbp": null,
@@ -88,7 +88,7 @@
         "base-rate pull 0.48 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.013412+00:00",
+      "predicted_at": "2026-09-04T15:15:16.264086+00:00",
       "probability": 0.4074684359179116,
       "question": "Will D. Shnaider commit more than 30 unforced errors?",
       "rbp": null,
@@ -111,7 +111,7 @@
         "first-serve rate: expected 0.671 vs threshold 0.680, sd 0.094 (0.074 sampling on 40 first serves + 0.058 form)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.013412+00:00",
+      "predicted_at": "2026-09-04T15:15:16.264086+00:00",
       "probability": 0.26191779155319883,
       "question": "Will T. Townsend win more than 68% of points played on their first serve?",
       "rbp": null,
@@ -134,7 +134,7 @@
         "exposure 71 service points from 21.9 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.013412+00:00",
+      "predicted_at": "2026-09-04T15:15:16.264086+00:00",
       "probability": 0.26073767447426877,
       "question": "Will D. Shnaider hit more winners than T. Townsend?",
       "rbp": null,
@@ -155,7 +155,7 @@
       "model": 0.3045,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.013412+00:00",
+      "predicted_at": "2026-09-04T15:15:16.264086+00:00",
       "probability": 0.3045,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -176,7 +176,7 @@
       "model": 0.5875,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.013412+00:00",
+      "predicted_at": "2026-09-04T15:15:16.264086+00:00",
       "probability": 0.5875,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -201,7 +201,7 @@
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.013412+00:00",
+      "predicted_at": "2026-09-04T15:15:16.264086+00:00",
       "probability": 0.5081502991845497,
       "question": "Will D. Shnaider win?",
       "rbp": null,
@@ -225,7 +225,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.013412+00:00",
+      "predicted_at": "2026-09-04T15:15:16.264086+00:00",
       "probability": 0.23506424999999995,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
@@ -236,7 +236,7 @@
   "match_id": "2db30852-6cf0-4018-a4da-29a6b2a1d792",
   "match_name": "T. Townsend vs D. Shnaider",
   "multiplier": 2,
-  "opening_time": "2026-09-04T15:00:00.000Z",
+  "opening_time": "2026-09-04T16:30:00.000Z",
   "player_a": "Taylor Townsend",
   "player_b": "Diana Shnaider",
   "round_code": "R128"

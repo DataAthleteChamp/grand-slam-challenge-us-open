@@ -1,5 +1,5 @@
 {
-  "closing_time": "2026-09-05T03:00:00.000Z",
+  "closing_time": "2026-09-05T02:30:00.000Z",
   "draw": "womens",
   "entries": [
     {
@@ -13,17 +13,17 @@
       "market": null,
       "market_id": "26084205-e8ed-4afa-bd91-341e452cf253",
       "market_weight": 0.0,
-      "model": 0.5608878849282096,
+      "model": 0.5600175206913288,
       "notes": [
         "total games: simulator 21.1, Pinnacle 20.9, used 21.0 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.004261+00:00",
-      "probability": 0.5608878849282096,
+      "predicted_at": "2026-09-04T15:15:16.262638+00:00",
+      "probability": 0.5600175206913288,
       "question": "Will the match last longer than 90 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 58
+      "submission": 57
     },
     {
       "base_rate": 0.4357,
@@ -41,7 +41,7 @@
         "exposure 69 service points from 21.3 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.004261+00:00",
+      "predicted_at": "2026-09-04T15:15:16.262638+00:00",
       "probability": 0.5741045242820879,
       "question": "Will K. Muchova record more aces than E. Navarro?",
       "rbp": null,
@@ -64,7 +64,7 @@
         "exposure 69 service points from 21.3 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.004261+00:00",
+      "predicted_at": "2026-09-04T15:15:16.262638+00:00",
       "probability": 0.46446072483862266,
       "question": "Will K. Muchova record more double faults than E. Navarro?",
       "rbp": null,
@@ -88,7 +88,7 @@
         "base-rate pull 0.48 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.004261+00:00",
+      "predicted_at": "2026-09-04T15:15:16.262638+00:00",
       "probability": 0.3544042148729929,
       "question": "Will K. Muchova commit more than 31 unforced errors?",
       "rbp": null,
@@ -111,7 +111,7 @@
         "first-serve rate: expected 0.634 vs threshold 0.620, sd 0.096 (0.076 sampling on 40 first serves + 0.058 form)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.004261+00:00",
+      "predicted_at": "2026-09-04T15:15:16.262638+00:00",
       "probability": 0.4095800561974846,
       "question": "Will E. Navarro win more than 62% of points played on their first serve?",
       "rbp": null,
@@ -134,7 +134,7 @@
         "exposure 69 service points from 21.3 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.004261+00:00",
+      "predicted_at": "2026-09-04T15:15:16.262638+00:00",
       "probability": 0.5667653769117347,
       "question": "Will K. Muchova hit more winners than E. Navarro?",
       "rbp": null,
@@ -155,7 +155,7 @@
       "model": 0.30175,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.004261+00:00",
+      "predicted_at": "2026-09-04T15:15:16.262638+00:00",
       "probability": 0.30175,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -176,7 +176,7 @@
       "model": 0.634,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.004261+00:00",
+      "predicted_at": "2026-09-04T15:15:16.262638+00:00",
       "probability": 0.634,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -201,7 +201,7 @@
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.004261+00:00",
+      "predicted_at": "2026-09-04T15:15:16.262638+00:00",
       "probability": 0.6261821862602441,
       "question": "Will K. Muchova win?",
       "rbp": null,
@@ -225,7 +225,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.004261+00:00",
+      "predicted_at": "2026-09-04T15:15:16.262638+00:00",
       "probability": 0.20887999999999995,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
@@ -236,7 +236,7 @@
   "match_id": "82dcb9c2-ea9e-4c6b-92a6-82c3890d3860",
   "match_name": "E. Navarro vs K. Muchova",
   "multiplier": 2,
-  "opening_time": "2026-09-04T15:00:00.000Z",
+  "opening_time": "2026-09-04T14:30:00.000Z",
   "player_a": "Emma Navarro",
   "player_b": "Karolina Muchova",
   "round_code": "R128"

@@ -3,7 +3,7 @@
   "draw": "mens",
   "entries": [
     {
-      "base_rate": 0.9948,
+      "base_rate": 0.2113,
       "brier": null,
       "confidence": 0.95,
       "crowd": null,
@@ -13,17 +13,17 @@
       "market": null,
       "market_id": "11d84fdd-67db-4823-9b64-60349c136fba",
       "market_weight": 0.0,
-      "model": 1.0,
+      "model": 0.254740101791902,
       "notes": [
         "total games: simulator 36.3, Pinnacle 39.5, used 38.2 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.016153+00:00",
-      "probability": 1.0,
-      "question": "Will the match last longer than 3 hours 20 minutes?",
+      "predicted_at": "2026-09-04T15:15:16.279627+00:00",
+      "probability": 0.254740101791902,
+      "question": "Will the match last longer than 200 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 98
+      "submission": 21
     },
     {
       "base_rate": 0.4784,
@@ -43,7 +43,7 @@
         "outcome coupling: P(win)=0.512, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.016153+00:00",
+      "predicted_at": "2026-09-04T15:15:16.279627+00:00",
       "probability": 0.882098287252933,
       "question": "Will J. Mensik record more aces than L. Tien?",
       "rbp": null,
@@ -66,7 +66,7 @@
         "exposure 116 service points from 37.3 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.016153+00:00",
+      "predicted_at": "2026-09-04T15:15:16.279627+00:00",
       "probability": 0.4518830264495192,
       "question": "Will J. Mensik record more double faults than L. Tien?",
       "rbp": null,
@@ -90,7 +90,7 @@
         "base-rate pull 0.48 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.016153+00:00",
+      "predicted_at": "2026-09-04T15:15:16.279627+00:00",
       "probability": 0.6356014856605732,
       "question": "Will J. Mensik commit more than 32 unforced errors?",
       "rbp": null,
@@ -113,7 +113,7 @@
         "first-serve rate: expected 0.711 vs threshold 0.670, sd 0.078 (0.054 sampling on 70 first serves + 0.056 form)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.016153+00:00",
+      "predicted_at": "2026-09-04T15:15:16.279627+00:00",
       "probability": 0.56875701342142,
       "question": "Will L. Tien win more than 67% of points played on their first serve?",
       "rbp": null,
@@ -136,7 +136,7 @@
         "exposure 116 service points from 37.3 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.016153+00:00",
+      "predicted_at": "2026-09-04T15:15:16.279627+00:00",
       "probability": 0.5879486454181294,
       "question": "Will J. Mensik hit more winners than L. Tien?",
       "rbp": null,
@@ -157,7 +157,7 @@
       "model": 0.26675,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.016153+00:00",
+      "predicted_at": "2026-09-04T15:15:16.279627+00:00",
       "probability": 0.26675,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -178,7 +178,7 @@
       "model": 0.729,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.016153+00:00",
+      "predicted_at": "2026-09-04T15:15:16.279627+00:00",
       "probability": 0.729,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -203,7 +203,7 @@
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.016153+00:00",
+      "predicted_at": "2026-09-04T15:15:16.279627+00:00",
       "probability": 0.5127680596773245,
       "question": "Will J. Mensik win?",
       "rbp": null,
@@ -227,7 +227,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.016153+00:00",
+      "predicted_at": "2026-09-04T15:15:16.279627+00:00",
       "probability": 0.058745,
       "question": "Will the match feature at least 2 tiebreaks?",
       "rbp": null,

@@ -1,5 +1,5 @@
 {
-  "closing_time": "2026-09-05T03:00:00.000Z",
+  "closing_time": "2026-09-05T02:30:00.000Z",
   "draw": "womens",
   "entries": [
     {
@@ -13,13 +13,13 @@
       "market": null,
       "market_id": "6e3967c3-9ffb-4ad3-94c6-0b73a7388817",
       "market_weight": 0.0,
-      "model": 0.5099550356045508,
+      "model": 0.5081448191927821,
       "notes": [
         "total games: simulator 19.3, Pinnacle 18.3, used 18.7 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.005688+00:00",
-      "probability": 0.5099550356045508,
+      "predicted_at": "2026-09-04T15:15:16.261284+00:00",
+      "probability": 0.5081448191927821,
       "question": "Will the match last longer than 80 minutes?",
       "rbp": null,
       "settled_at": "",
@@ -41,7 +41,7 @@
         "exposure 63 service points from 19.6 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.005688+00:00",
+      "predicted_at": "2026-09-04T15:15:16.261284+00:00",
       "probability": 0.17096611232520295,
       "question": "Will K. Rakhimova record more aces than A. Sabalenka?",
       "rbp": null,
@@ -64,7 +64,7 @@
         "exposure 63 service points from 19.6 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.005688+00:00",
+      "predicted_at": "2026-09-04T15:15:16.261284+00:00",
       "probability": 0.29102132562400007,
       "question": "Will K. Rakhimova record more double faults than A. Sabalenka?",
       "rbp": null,
@@ -88,7 +88,7 @@
         "base-rate pull 0.48 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.005688+00:00",
+      "predicted_at": "2026-09-04T15:15:16.261284+00:00",
       "probability": 0.49942883365403085,
       "question": "Will K. Rakhimova commit more than 27 unforced errors?",
       "rbp": null,
@@ -111,7 +111,7 @@
         "first-serve rate: expected 0.715 vs threshold 0.770, sd 0.092 (0.071 sampling on 40 first serves + 0.058 form)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.005688+00:00",
+      "predicted_at": "2026-09-04T15:15:16.261284+00:00",
       "probability": 0.16288707683335768,
       "question": "Will A. Sabalenka win more than 77% of points played on their first serve?",
       "rbp": null,
@@ -134,7 +134,7 @@
         "exposure 63 service points from 19.6 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.005688+00:00",
+      "predicted_at": "2026-09-04T15:15:16.261284+00:00",
       "probability": 0.4443407852010137,
       "question": "Will K. Rakhimova hit more winners than A. Sabalenka?",
       "rbp": null,
@@ -155,7 +155,7 @@
       "model": 0.21875,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.005688+00:00",
+      "predicted_at": "2026-09-04T15:15:16.261284+00:00",
       "probability": 0.21875,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -176,7 +176,7 @@
       "model": 0.7335,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.005688+00:00",
+      "predicted_at": "2026-09-04T15:15:16.261284+00:00",
       "probability": 0.7335,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -201,7 +201,7 @@
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.005688+00:00",
+      "predicted_at": "2026-09-04T15:15:16.261284+00:00",
       "probability": 0.15504901699324308,
       "question": "Will K. Rakhimova win?",
       "rbp": null,
@@ -225,7 +225,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.005688+00:00",
+      "predicted_at": "2026-09-04T15:15:16.261284+00:00",
       "probability": 0.13188275,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
@@ -236,7 +236,7 @@
   "match_id": "8de2b132-b5ac-40fa-aafa-2d7340cb2b6f",
   "match_name": "A. Sabalenka vs K. Rakhimova",
   "multiplier": 2,
-  "opening_time": "2026-09-04T15:00:00.000Z",
+  "opening_time": "2026-09-04T14:30:00.000Z",
   "player_a": "Aryna Sabalenka",
   "player_b": "Kamilla Rakhimova",
   "round_code": "R128"

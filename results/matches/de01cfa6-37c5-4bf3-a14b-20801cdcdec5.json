@@ -3,7 +3,7 @@
   "draw": "womens",
   "entries": [
     {
-      "base_rate": 0.9864,
+      "base_rate": 0.2193,
       "brier": null,
       "confidence": 0.95,
       "crowd": null,
@@ -13,17 +13,17 @@
       "market": null,
       "market_id": "e1c2abc0-6d3c-4a6a-9e22-b613a7c4c29c",
       "market_weight": 0.0,
-      "model": 1.0,
+      "model": 0.32819104865646054,
       "notes": [
         "total games: simulator 20.7, Pinnacle 24.8, used 23.1 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.023237+00:00",
-      "probability": 1.0,
-      "question": "Will the match last longer than 2 hours 5 minutes?",
+      "predicted_at": "2026-09-04T15:15:16.278962+00:00",
+      "probability": 0.32819104865646054,
+      "question": "Will the match last longer than 125 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 98
+      "submission": 29
     },
     {
       "base_rate": 0.4357,
@@ -41,7 +41,7 @@
         "exposure 68 service points from 21.2 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.023237+00:00",
+      "predicted_at": "2026-09-04T15:15:16.278962+00:00",
       "probability": 0.3436146997214656,
       "question": "Will A. Eala record more aces than I. Jovic?",
       "rbp": null,
@@ -64,7 +64,7 @@
         "exposure 68 service points from 21.2 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.023237+00:00",
+      "predicted_at": "2026-09-04T15:15:16.278962+00:00",
       "probability": 0.451022933803131,
       "question": "Will A. Eala record more double faults than I. Jovic?",
       "rbp": null,
@@ -88,7 +88,7 @@
         "base-rate pull 0.48 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.023237+00:00",
+      "predicted_at": "2026-09-04T15:15:16.278962+00:00",
       "probability": 0.3342788505666096,
       "question": "Will A. Eala commit more than 29 unforced errors?",
       "rbp": null,
@@ -111,7 +111,7 @@
         "first-serve rate: expected 0.642 vs threshold 0.620, sd 0.095 (0.076 sampling on 40 first serves + 0.058 form)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.023237+00:00",
+      "predicted_at": "2026-09-04T15:15:16.278962+00:00",
       "probability": 0.43145136800923833,
       "question": "Will I. Jovic win more than 62% of points played on their first serve?",
       "rbp": null,
@@ -134,7 +134,7 @@
         "exposure 68 service points from 21.2 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.023237+00:00",
+      "predicted_at": "2026-09-04T15:15:16.278962+00:00",
       "probability": 0.4035687517989887,
       "question": "Will A. Eala hit more winners than I. Jovic?",
       "rbp": null,
@@ -155,7 +155,7 @@
       "model": 0.29225,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.023237+00:00",
+      "predicted_at": "2026-09-04T15:15:16.278962+00:00",
       "probability": 0.29225,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -176,7 +176,7 @@
       "model": 0.67325,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.023237+00:00",
+      "predicted_at": "2026-09-04T15:15:16.278962+00:00",
       "probability": 0.67325,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -201,7 +201,7 @@
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.023237+00:00",
+      "predicted_at": "2026-09-04T15:15:16.278962+00:00",
       "probability": 0.42634346757971076,
       "question": "Will A. Eala win?",
       "rbp": null,
@@ -225,7 +225,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.023237+00:00",
+      "predicted_at": "2026-09-04T15:15:16.278962+00:00",
       "probability": 0.16636299999999998,
       "question": "Will the match feature at least 1 tiebreak?",
       "rbp": null,

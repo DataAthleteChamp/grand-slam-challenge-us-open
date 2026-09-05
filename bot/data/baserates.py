@@ -501,6 +501,26 @@ COUNT_OVERDISPERSION = {
     ("ATP", "double_faults"): 0.00426,
     ("WTA", "aces"): 0.01337,
     ("WTA", "double_faults"): 0.00861,
+    # Winners were missing from this table and silently defaulted to zero, i.e.
+    # a pure binomial draw. The realised count is about three times as variable
+    # as binomial on both tours (ATP 2.98x, WTA 2.70x), which inflated our
+    # confidence by roughly 1.7x.
+    #
+    # Only the men's correction ships. Checked against the realised outcome on
+    # 4,000 ATP and 3,076 WTA charted matches, using each player's career rate
+    # from their OTHER matches:
+    #
+    #   ATP at rho=0 is badly overconfident - forecasts of 0.102 come in at
+    #   0.202 and 0.278 at 0.392 - and adding rho gains +0.360 Brier points
+    #   [+0.137,+0.603]. The sweep bottoms out near 0.008 rather than at the
+    #   variance-implied 0.0117, so the smaller fitted value is used.
+    #
+    #   WTA at rho=0 is already calibrated, with bucket gaps of -0.002, +0.027
+    #   and +0.012, and adding rho makes it worse by -0.703 [-0.912,-0.485].
+    #   Its sweep is monotone increasing, so no positive value helps.
+    #
+    # Applying the measured value to both tours would have been net negative.
+    ("ATP", "winners"): 0.008,
 }
 
 #: Service points per player as a linear function of total games, measured on

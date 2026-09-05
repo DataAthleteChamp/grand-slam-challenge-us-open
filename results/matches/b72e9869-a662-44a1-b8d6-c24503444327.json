@@ -1,5 +1,5 @@
 {
-  "closing_time": "2026-09-05T03:00:00.000Z",
+  "closing_time": "2026-09-05T10:30:00.000Z",
   "draw": "mens",
   "entries": [
     {
@@ -13,17 +13,17 @@
       "market": null,
       "market_id": "8eb1bc58-6338-4690-b719-fde41feb410c",
       "market_weight": 0.0,
-      "model": 0.6231497269539958,
+      "model": 0.6353090963609995,
       "notes": [
-        "total games: simulator 38.5, Pinnacle 40.5, used 39.7 at weight 0.60"
+        "total games: simulator 38.5, Pinnacle 41.0, used 40.0 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.007812+00:00",
-      "probability": 0.6231497269539958,
+      "predicted_at": "2026-09-04T15:15:16.269543+00:00",
+      "probability": 0.6353090963609995,
       "question": "Will the match last longer than 160 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 65
+      "submission": 67
     },
     {
       "base_rate": 0.4784,
@@ -43,7 +43,7 @@
         "outcome coupling: P(win)=0.573, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.007812+00:00",
+      "predicted_at": "2026-09-04T15:15:16.269543+00:00",
       "probability": 0.2849678401693816,
       "question": "Will F. Tiafoe record more aces than V. Vacherot?",
       "rbp": null,
@@ -66,7 +66,7 @@
         "exposure 123 service points from 39.3 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.007812+00:00",
+      "predicted_at": "2026-09-04T15:15:16.269543+00:00",
       "probability": 0.3486460603936939,
       "question": "Will F. Tiafoe record more double faults than V. Vacherot?",
       "rbp": null,
@@ -90,7 +90,7 @@
         "base-rate pull 0.48 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.007812+00:00",
+      "predicted_at": "2026-09-04T15:15:16.269543+00:00",
       "probability": 0.40128265465159574,
       "question": "Will F. Tiafoe commit more than 44 unforced errors?",
       "rbp": null,
@@ -113,7 +113,7 @@
         "first-serve rate: expected 0.743 vs threshold 0.680, sd 0.077 (0.052 sampling on 70 first serves + 0.056 form)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.007812+00:00",
+      "predicted_at": "2026-09-04T15:15:16.269543+00:00",
       "probability": 0.6396479797391156,
       "question": "Will V. Vacherot win more than 68% of points played on their first serve?",
       "rbp": null,
@@ -136,7 +136,7 @@
         "exposure 123 service points from 39.3 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.007812+00:00",
+      "predicted_at": "2026-09-04T15:15:16.269543+00:00",
       "probability": 0.31642524770800484,
       "question": "Will F. Tiafoe hit more winners than V. Vacherot?",
       "rbp": null,
@@ -157,7 +157,7 @@
       "model": 0.26875,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.007812+00:00",
+      "predicted_at": "2026-09-04T15:15:16.269543+00:00",
       "probability": 0.26875,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -178,7 +178,7 @@
       "model": 0.565,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.007812+00:00",
+      "predicted_at": "2026-09-04T15:15:16.269543+00:00",
       "probability": 0.565,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -203,7 +203,7 @@
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.007812+00:00",
+      "predicted_at": "2026-09-04T15:15:16.269543+00:00",
       "probability": 0.5784955763194582,
       "question": "Will F. Tiafoe win?",
       "rbp": null,
@@ -227,7 +227,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-04T09:25:49.007812+00:00",
+      "predicted_at": "2026-09-04T15:15:16.269543+00:00",
       "probability": 0.17792,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,
@@ -238,7 +238,7 @@
   "match_id": "b72e9869-a662-44a1-b8d6-c24503444327",
   "match_name": "V. Vacherot vs F. Tiafoe",
   "multiplier": 2,
-  "opening_time": "2026-09-04T15:00:00.000Z",
+  "opening_time": "2026-09-04T22:30:00.000Z",
   "player_a": "Valentin Vacherot",
   "player_b": "Frances Tiafoe",
   "round_code": "R128"
