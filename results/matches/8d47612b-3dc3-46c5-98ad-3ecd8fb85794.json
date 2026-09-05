@@ -1,5 +1,5 @@
 {
-  "closing_time": "2026-09-06T05:20:00.000Z",
+  "closing_time": "2026-09-06T02:30:00.000Z",
   "draw": "mens",
   "entries": [
     {
@@ -13,13 +13,13 @@
       "market": null,
       "market_id": "c2456004-e45e-456a-87a1-4793848a5478",
       "market_weight": 0.0,
-      "model": 0.6262796683712616,
+      "model": 0.6260256955038555,
       "notes": [
         "total games: simulator 37.3, Pinnacle 39.5, used 38.6 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-05T14:15:04.633251+00:00",
-      "probability": 0.6262796683712616,
+      "predicted_at": "2026-09-05T15:31:35.806519+00:00",
+      "probability": 0.6260256955038555,
       "question": "Will the match last longer than 155 minutes?",
       "rbp": null,
       "settled_at": "",
@@ -43,7 +43,7 @@
         "outcome coupling: P(win)=0.403, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-05T14:15:04.633251+00:00",
+      "predicted_at": "2026-09-05T15:31:35.806519+00:00",
       "probability": 0.2467373485957105,
       "question": "Will B. Bonzi record more aces than K. Khachanov?",
       "rbp": null,
@@ -66,7 +66,7 @@
         "exposure 120 service points from 38.6 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-05T14:15:04.633251+00:00",
+      "predicted_at": "2026-09-05T15:31:35.806519+00:00",
       "probability": 0.4551154012270542,
       "question": "Will B. Bonzi record more double faults than K. Khachanov?",
       "rbp": null,
@@ -90,7 +90,7 @@
         "base-rate pull 0.48 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-05T14:15:04.633251+00:00",
+      "predicted_at": "2026-09-05T15:31:35.806519+00:00",
       "probability": 0.6596634226420395,
       "question": "Will B. Bonzi commit more than 25 unforced errors?",
       "rbp": null,
@@ -115,7 +115,7 @@
         "base-rate pull 0.52 suppressed for first_serve_comparison"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-05T14:15:04.633251+00:00",
+      "predicted_at": "2026-09-05T15:31:35.806519+00:00",
       "probability": 0.3143451642149292,
       "question": "Will K. Khachanov win more than 77% of points played on their first serve?",
       "rbp": null,
@@ -138,7 +138,7 @@
         "exposure 120 service points from 38.6 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-05T14:15:04.633251+00:00",
+      "predicted_at": "2026-09-05T15:31:35.806519+00:00",
       "probability": 0.35766746257848137,
       "question": "Will B. Bonzi hit more winners than K. Khachanov?",
       "rbp": null,
@@ -159,7 +159,7 @@
       "model": 0.26,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-05T14:15:04.633251+00:00",
+      "predicted_at": "2026-09-05T15:31:35.806519+00:00",
       "probability": 0.26,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -180,7 +180,7 @@
       "model": 0.63075,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-05T14:15:04.633251+00:00",
+      "predicted_at": "2026-09-05T15:31:35.806519+00:00",
       "probability": 0.63075,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -205,7 +205,7 @@
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-05T14:15:04.633251+00:00",
+      "predicted_at": "2026-09-05T15:31:35.806519+00:00",
       "probability": 0.3947554497980681,
       "question": "Will B. Bonzi win?",
       "rbp": null,
@@ -229,7 +229,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-05T14:15:04.633251+00:00",
+      "predicted_at": "2026-09-05T15:31:35.806519+00:00",
       "probability": 0.46848000000000006,
       "question": "Will the match feature at least 1 tiebreak?",
       "rbp": null,

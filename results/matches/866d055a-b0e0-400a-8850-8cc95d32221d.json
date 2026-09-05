@@ -13,13 +13,13 @@
       "market": null,
       "market_id": "4ee59791-de9b-4694-bd35-29428f02385a",
       "market_weight": 0.0,
-      "model": 0.308258420262003,
+      "model": 0.30805908184379727,
       "notes": [
         "total games: simulator 35.2, Pinnacle 34.0, used 34.5 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-05T14:15:04.636366+00:00",
-      "probability": 0.308258420262003,
+      "predicted_at": "2026-09-05T15:31:35.807869+00:00",
+      "probability": 0.30805908184379727,
       "question": "Will the match last longer than 175 minutes?",
       "rbp": null,
       "settled_at": "",
@@ -43,7 +43,7 @@
         "outcome coupling: P(win)=0.248, delta=+0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-05T14:15:04.636366+00:00",
+      "predicted_at": "2026-09-05T15:31:35.807869+00:00",
       "probability": 0.2053188535369222,
       "question": "Will F. Cerundolo record more aces than T. Fritz?",
       "rbp": null,
@@ -66,7 +66,7 @@
         "exposure 114 service points from 36.6 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-05T14:15:04.636366+00:00",
+      "predicted_at": "2026-09-05T15:31:35.807869+00:00",
       "probability": 0.553842227579713,
       "question": "Will F. Cerundolo record more double faults than T. Fritz?",
       "rbp": null,
@@ -90,7 +90,7 @@
         "base-rate pull 0.48 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-05T14:15:04.636366+00:00",
+      "predicted_at": "2026-09-05T15:31:35.807869+00:00",
       "probability": 0.591400528440423,
       "question": "Will F. Cerundolo commit more than 39 unforced errors?",
       "rbp": null,
@@ -115,7 +115,7 @@
         "base-rate pull 0.37 suppressed for first_serve_comparison"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-05T14:15:04.636366+00:00",
+      "predicted_at": "2026-09-05T15:31:35.807869+00:00",
       "probability": 0.16459507964042397,
       "question": "Will T. Fritz win more than 82% of points played on their first serve?",
       "rbp": null,
@@ -138,7 +138,7 @@
         "exposure 114 service points from 36.6 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-05T14:15:04.636366+00:00",
+      "predicted_at": "2026-09-05T15:31:35.807869+00:00",
       "probability": 0.48221535129639526,
       "question": "Will F. Cerundolo hit more winners than T. Fritz?",
       "rbp": null,
@@ -159,7 +159,7 @@
       "model": 0.2175,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-05T14:15:04.636366+00:00",
+      "predicted_at": "2026-09-05T15:31:35.807869+00:00",
       "probability": 0.2175,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -180,7 +180,7 @@
       "model": 0.7025,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-05T14:15:04.636366+00:00",
+      "predicted_at": "2026-09-05T15:31:35.807869+00:00",
       "probability": 0.7025,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -205,7 +205,7 @@
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-05T14:15:04.636366+00:00",
+      "predicted_at": "2026-09-05T15:31:35.807869+00:00",
       "probability": 0.23848786214862744,
       "question": "Will F. Cerundolo win?",
       "rbp": null,
@@ -229,7 +229,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-05T14:15:04.636366+00:00",
+      "predicted_at": "2026-09-05T15:31:35.807869+00:00",
       "probability": 0.38744100000000004,
       "question": "Will the match feature at least 1 tiebreak?",
       "rbp": null,

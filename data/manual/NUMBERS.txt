@@ -1,4 +1,4 @@
-MANUAL NUMBERS - 220 questions across 22 matches
+MANUAL NUMBERS - 210 questions across 21 matches
 Sharpened x1.15 in log-odds on ACES ONLY.
 Everything else is left AT the bot number. Sharpening double faults cost
 0.41 RBP/question on the settled sample and duration 0.34, both significant;
@@ -65,18 +65,6 @@ would compound. See SHARPEN_BY_TOKEN for the per-family measurements.
      bot  28  ->  MANUAL  28   Will the match require a deciding set?
      bot  50  ->  MANUAL  50   Will A. Gea commit more than 43 unforced errors?
 
---- A. Potapova vs A. Anisimova   (starts 2026-09-05 14:30Z)
-     bot  63  ->  MANUAL  63   Will A. Anisimova hit more winners than A. Potapova?
-     bot  58  ->  MANUAL  58   Will A. Potapova win more than 58% of points played on their first serve?
-     bot  63  ->  MANUAL  63   Will either player win a set 6–2, 6–1 or 6–0?
-     bot  65  ->  MANUAL  65   Will A. Anisimova win?
-     bot  52  ->  MANUAL  52   Will A. Anisimova record more aces than A. Potapova?
-     bot  41  ->  MANUAL  41   Will A. Anisimova record more double faults than A. Potapova?
-     bot  25  ->  MANUAL  25   Will the match feature at least 1 tiebreak?
-     bot  35  ->  MANUAL  35   Will the match last longer than 100 minutes?
-     bot  35  ->  MANUAL  35   Will the match require a deciding set?
-     bot  37  ->  MANUAL  37   Will A. Anisimova commit more than 37 unforced errors?
-
 --- I. Swiatek vs M. Bouzkova   (starts 2026-09-05 14:30Z)
      bot  17  ->  MANUAL  17   Will M. Bouzkova win?
      bot  32  ->  MANUAL  32   Will I. Swiatek win more than 71% of points played on their first serve?
@@ -85,33 +73,9 @@ would compound. See SHARPEN_BY_TOKEN for the per-family measurements.
      bot  40  ->  MANUAL  39   Will M. Bouzkova record more aces than I. Swiatek?
      bot  44  ->  MANUAL  44   Will M. Bouzkova record more double faults than I. Swiatek?
      bot  17  ->  MANUAL  17   Will the match feature at least 1 tiebreak?
-     bot  50  ->  MANUAL  50   Will the match last longer than 95 minutes?
+     bot  49  ->  MANUAL  49   Will the match last longer than 95 minutes?
      bot  53  ->  MANUAL  53   Will M. Bouzkova commit more than 21 unforced errors?
      bot  25  ->  MANUAL  25   Will the match require a deciding set?
-
---- M. Keys vs Q. Zheng   (starts 2026-09-05 14:30Z)
-     bot  53  ->  MANUAL  53   Will either player win a set 6–2, 6–1 or 6–0?
-     bot  56  ->  MANUAL  56   Will M. Keys hit more winners than Q. Zheng?
-     bot  52  ->  MANUAL  52   Will M. Keys win?
-     bot  65  ->  MANUAL  65   Will Q. Zheng win more than 61% of points played on their first serve?
-     bot  29  ->  MANUAL  26   Will M. Keys record more aces than Q. Zheng?
-     bot  33  ->  MANUAL  33   Will M. Keys record more double faults than Q. Zheng?
-     bot  33  ->  MANUAL  33   Will the match feature at least 1 tiebreak?
-     bot  29  ->  MANUAL  29   Will the match last longer than 130 minutes?
-     bot  37  ->  MANUAL  37   Will the match require a deciding set?
-     bot  30  ->  MANUAL  30   Will M. Keys commit more than 43 unforced errors?
-
---- T. Fritz vs F. Cerundolo   (starts 2026-09-05 15:00Z)
-     bot  48  ->  MANUAL  48   Will F. Cerundolo hit more winners than T. Fritz?
-     bot  16  ->  MANUAL  16   Will T. Fritz win more than 82% of points played on their first serve?
-     bot  23  ->  MANUAL  23   Will F. Cerundolo win?
-     bot  65  ->  MANUAL  65   Will either player win a set 6–2, 6–1 or 6–0?
-     bot  19  ->  MANUAL  16   Will F. Cerundolo record more aces than T. Fritz?
-     bot  56  ->  MANUAL  56   Will F. Cerundolo record more double faults than T. Fritz?
-     bot  45  ->  MANUAL  45   Will the match feature at least 1 tiebreak?
-     bot  32  ->  MANUAL  32   Will the match last longer than 175 minutes?
-     bot  59  ->  MANUAL  59   Will F. Cerundolo commit more than 39 unforced errors?
-     bot  22  ->  MANUAL  22   Will the match require a deciding set?
 
 --- C. Bucsa vs C. Gauff   (starts 2026-09-05 17:00Z)
      bot  72  ->  MANUAL  72   Will either player win a set 6–2, 6–1 or 6–0?
@@ -197,6 +161,30 @@ would compound. See SHARPEN_BY_TOKEN for the per-family measurements.
      bot  64  ->  MANUAL  64   Will J. Mensik commit more than 32 unforced errors?
      bot  29  ->  MANUAL  29   Will the match require a deciding set?
 
+--- B. Shelton vs S. Tsitsipas   (starts 2026-09-06 15:00Z)
+     bot  74  ->  MANUAL  74   Will S. Tsitsipas win more than 70% of points played on their first serve?
+     bot  51  ->  MANUAL  51   Will B. Shelton hit more winners than S. Tsitsipas?
+     bot  32  ->  MANUAL  32   Will either player win a set 6–2, 6–1 or 6–0?
+     bot  41  ->  MANUAL  41   Will B. Shelton win?
+     bot  50  ->  MANUAL  50   Will B. Shelton record more aces than S. Tsitsipas?
+     bot  55  ->  MANUAL  55   Will B. Shelton record more double faults than S. Tsitsipas?
+     bot  44  ->  MANUAL  44   Will the match feature at least 2 tiebreak(s)?
+     bot  36  ->  MANUAL  36   Will the match last longer than 200 minutes?
+     bot  57  ->  MANUAL  57   Will B. Shelton commit more than 38 unforced errors?
+     bot  30  ->  MANUAL  30   Will the match require a deciding set?
+
+--- A. Kalinskaya vs E. Navarro   (starts 2026-09-06 15:00Z)
+     bot  60  ->  MANUAL  60   Will either player win a set 6–2, 6–1 or 6–0?
+     bot  49  ->  MANUAL  49   Will A. Kalinskaya win?
+     bot  48  ->  MANUAL  48   Will E. Navarro win more than 63% of points played on their first serve?
+     bot  46  ->  MANUAL  46   Will A. Kalinskaya hit more winners than E. Navarro?
+     bot  45  ->  MANUAL  44   Will A. Kalinskaya record more aces than E. Navarro?
+     bot  52  ->  MANUAL  52   Will A. Kalinskaya record more double faults than E. Navarro?
+     bot  25  ->  MANUAL  25   Will the match feature at least 1 tiebreak(s)?
+     bot  26  ->  MANUAL  26   Will the match last longer than 130 minutes?
+     bot  33  ->  MANUAL  33   Will A. Kalinskaya commit more than 32 unforced errors?
+     bot  36  ->  MANUAL  36   Will the match require a deciding set?
+
 --- M. Kostyuk vs L. Noskova   (starts 2026-09-06 15:00Z)
      bot  38  ->  MANUAL  38   Will L. Noskova win more than 67% of points played on their first serve?
      bot  37  ->  MANUAL  37   Will M. Kostyuk hit more winners than L. Noskova?
@@ -253,7 +241,7 @@ would compound. See SHARPEN_BY_TOKEN for the per-family measurements.
      bot  53  ->  MANUAL  53   Will C. Alcaraz record more aces than T. Paul?
      bot  45  ->  MANUAL  45   Will C. Alcaraz record more double faults than T. Paul?
      bot  41  ->  MANUAL  41   Will the match feature at least 1 tiebreak(s)?
-     bot  80  ->  MANUAL  80   Will the match last longer than 130 minutes?
+     bot  78  ->  MANUAL  78   Will the match last longer than 130 minutes?
      bot  24  ->  MANUAL  24   Will the match require a deciding set?
      bot  42  ->  MANUAL  42   Will C. Alcaraz commit more than 44 unforced errors?
 
