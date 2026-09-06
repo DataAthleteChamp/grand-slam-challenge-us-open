@@ -18,7 +18,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-05T23:24:51.586171+00:00",
+      "predicted_at": "2026-09-06T09:18:10.475583+00:00",
       "probability": 0.10501264314036642,
       "question": "Will the match last longer than 150 minutes?",
       "rbp": null,
@@ -33,21 +33,22 @@
       "crowd_brier": null,
       "family": "aces_comparison",
       "lane": "honest",
-      "market": null,
+      "market": 0.0826,
       "market_id": "m2-m1",
-      "market_weight": 0.0,
-      "model": 0.288185015473247,
+      "market_weight": 0.35,
+      "model": 0.21623026005761053,
       "notes": [
         "exposure 72 service points from 22.2 games",
-        "outcome coupling: P(win)=0.548, delta=+0.76"
+        "outcome coupling: P(win)=0.548, delta=+0.76",
+        "bovada aces line 0.083 blended at 35%"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-05T23:24:51.586171+00:00",
-      "probability": 0.288185015473247,
+      "predicted_at": "2026-09-06T09:18:10.475583+00:00",
+      "probability": 0.21623026005761053,
       "question": "Will Iga Swiatek record more aces than Aryna Sabalenka?",
       "rbp": null,
       "settled_at": "",
-      "submission": 29
+      "submission": 22
     },
     {
       "base_rate": 0.4429,
@@ -57,16 +58,17 @@
       "crowd_brier": null,
       "family": "double_faults_comparison",
       "lane": "honest",
-      "market": null,
+      "market": 0.2442,
       "market_id": "m2-m2",
-      "market_weight": 0.0,
-      "model": 0.23857730864889667,
+      "market_weight": 0.35,
+      "model": 0.24054525062178284,
       "notes": [
-        "exposure 72 service points from 22.2 games"
+        "exposure 72 service points from 22.2 games",
+        "bovada double_faults line 0.244 blended at 35%"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-05T23:24:51.586171+00:00",
-      "probability": 0.23857730864889667,
+      "predicted_at": "2026-09-06T09:18:10.475583+00:00",
+      "probability": 0.24054525062178284,
       "question": "Will Iga Swiatek record more double faults than Aryna Sabalenka?",
       "rbp": null,
       "settled_at": "",
@@ -90,7 +92,7 @@
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-05T23:24:51.586171+00:00",
+      "predicted_at": "2026-09-06T09:18:10.475583+00:00",
       "probability": 0.5602456481878023,
       "question": "Will Iga Swiatek win?",
       "rbp": null,
@@ -114,7 +116,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-05T23:24:51.586171+00:00",
+      "predicted_at": "2026-09-06T09:18:10.475583+00:00",
       "probability": 0.031771468181818176,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,

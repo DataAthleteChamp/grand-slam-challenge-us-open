@@ -13,13 +13,13 @@
       "market": null,
       "market_id": "f4e36c7f-8b43-4810-bd0c-cc8d507140b2",
       "market_weight": 0.0,
-      "model": 0.2462099379796054,
+      "model": 0.24566397562352404,
       "notes": [
-        "total games: simulator 21.0, Pinnacle 24.9, used 23.3 at weight 0.60"
+        "total games: simulator 21.0, Pinnacle 24.8, used 23.3 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-05T19:24:40.472114+00:00",
-      "probability": 0.2462099379796054,
+      "predicted_at": "2026-09-06T07:40:27.584000+00:00",
+      "probability": 0.24566397562352404,
       "question": "Will the match last longer than 130 minutes?",
       "rbp": null,
       "settled_at": "",
@@ -36,14 +36,15 @@
       "market": 0.21,
       "market_id": "54e29989-c6ff-44be-8e1f-753c10b82789",
       "market_weight": 0.35,
-      "model": 0.36343463363770767,
+      "model": 0.3661514643833151,
       "notes": [
         "exposure 69 service points from 21.4 games",
+        "outcome coupling: P(win)=0.492, delta=+0.76",
         "bovada aces line 0.210 blended at 35%"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-05T19:24:40.472114+00:00",
-      "probability": 0.36343463363770767,
+      "predicted_at": "2026-09-06T07:40:27.584000+00:00",
+      "probability": 0.3661514643833151,
       "question": "Will A. Kalinskaya record more aces than E. Navarro?",
       "rbp": null,
       "settled_at": "",
@@ -66,7 +67,7 @@
         "bovada double_faults line 0.787 blended at 35%"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-05T19:24:40.472114+00:00",
+      "predicted_at": "2026-09-06T07:40:27.584000+00:00",
       "probability": 0.6135951550399641,
       "question": "Will A. Kalinskaya record more double faults than E. Navarro?",
       "rbp": null,
@@ -90,7 +91,7 @@
         "base-rate pull 0.48 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-05T19:24:40.472114+00:00",
+      "predicted_at": "2026-09-06T07:40:27.584000+00:00",
       "probability": 0.3299973527423552,
       "question": "Will A. Kalinskaya commit more than 32 unforced errors?",
       "rbp": null,
@@ -115,7 +116,7 @@
         "base-rate pull 0.56 suppressed for first_serve_comparison"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-05T19:24:40.472114+00:00",
+      "predicted_at": "2026-09-06T07:40:27.584000+00:00",
       "probability": 0.4792175697368979,
       "question": "Will E. Navarro win more than 63% of points played on their first serve?",
       "rbp": null,
@@ -133,13 +134,14 @@
       "market": null,
       "market_id": "7c557891-8288-4b97-a281-55cea1fdbda0",
       "market_weight": 0.0,
-      "model": 0.4563337998436708,
+      "model": 0.4611585040417952,
       "notes": [
-        "exposure 69 service points from 21.4 games"
+        "exposure 69 service points from 21.4 games",
+        "outcome coupling: P(win)=0.492, delta=+0.94"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-05T19:24:40.472114+00:00",
-      "probability": 0.459464152365166,
+      "predicted_at": "2026-09-06T07:40:27.584000+00:00",
+      "probability": 0.46362545973604835,
       "question": "Will A. Kalinskaya hit more winners than E. Navarro?",
       "rbp": null,
       "settled_at": "",
@@ -159,7 +161,7 @@
       "model": 0.30275,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-05T19:24:40.472114+00:00",
+      "predicted_at": "2026-09-06T07:40:27.584000+00:00",
       "probability": 0.30275,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -180,7 +182,7 @@
       "model": 0.649,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-05T19:24:40.472114+00:00",
+      "predicted_at": "2026-09-06T07:40:27.584000+00:00",
       "probability": 0.649,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -205,7 +207,7 @@
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-05T19:24:40.472114+00:00",
+      "predicted_at": "2026-09-06T07:40:27.584000+00:00",
       "probability": 0.4913063954182596,
       "question": "Will A. Kalinskaya win?",
       "rbp": null,
@@ -229,7 +231,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-05T19:24:40.472114+00:00",
+      "predicted_at": "2026-09-06T07:40:27.584000+00:00",
       "probability": 0.17776999999999996,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

@@ -207,24 +207,27 @@ NO_BASE_RATE_PULL = frozenset(
 
 #: Weight on the model for first-serve thresholds, replacing the confidence pull.
 #:
-#: The "base rate" for this family is how often an ARBITRARY player clears the
-#: threshold, which deliberately ignores who is serving - it is uninformative in
-#: exactly the way that made the pull wrong for the count families. Pulling a
-#: per-player model toward it was creating a large low bias:
+#: **1.00 - the base rate is not merely uninformative here, it is wrong.** It
+#: measures how often an ARBITRARY player clears the threshold, but the platform
+#: sets each threshold near that particular player's own expectation. Measured on
+#: 32 settled questions the base rate averages **0.248 against a realised 0.531**,
+#: so every point of weight on it is a systematic drag.
 #:
-#:     submitted 0.346   model 0.503   realised 0.562   (16 settled questions)
+#: That drag was visible in the results before it was understood. On the last 16
+#: settled first-serve questions we averaged 0.427 against a realised 0.500 and a
+#: crowd of 0.531, while being more than twice as confident as the crowd
+#: (mean |p-0.5| of 15.5 against 6.8). The family bled -4.01 RBP/question.
 #:
-#: so the model was nearly unbiased and the pull supplied all of the error. On the
-#: first settled cohort, replacing the pull with a fixed weight scores, on the
-#: honest lane and independently on the scenario lane:
-#:     weight 0.6  +1.90 [-0.43,+4.36]   /  +1.48 [-1.63,+4.80]
-#:     weight 0.8  +4.13 [-0.69,+9.03]   /  +3.71 [-1.54,+9.12]
-#:     weight 1.0  +5.53 [-1.81,+12.89]  /  +5.12 [-2.67,+12.82]
-#: Every value is positive in both lanes but none is significant at n=16, and the
-#: raw model's AUC of 0.794 still trails the crowd's 0.825, so the family is not
-#: yet a demonstrated edge. 0.75 keeps most of the measured gain while leaving a
-#: quarter of the pull in place against the chance that n=16 is flattering it.
-FIRST_SERVE_MODEL_WEIGHT = 0.75
+#: This constant was 0.75 for exactly one round, chosen as a hedge when the family
+#: had no settled data. The hedge is what caused the bias: at 0.75 the delivered
+#: mean is 0.425, and removing the pull entirely lifts it to 0.484. Sweeping the
+#: weight on settled questions is monotone in favour of dropping it:
+#:     w=0.85  +0.55 [-0.29,+1.40]
+#:     w=0.95  +0.96 [-0.77,+2.63]
+#:     w=1.00  +1.11 [-1.04,+3.18]
+#: None is significant at n=32, but the direction is consistent and the mechanism
+#: is understood, which is a stronger basis than the original hedge had.
+FIRST_SERVE_MODEL_WEIGHT = 1.00
 
 
 # Families whose final probability is sharpened on the logit scale, p -> sig(a*logit(p)).

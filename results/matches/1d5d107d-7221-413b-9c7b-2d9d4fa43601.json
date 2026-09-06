@@ -13,13 +13,13 @@
       "market": null,
       "market_id": "466ec840-29dd-4e28-b664-6f6ac58c252c",
       "market_weight": 0.0,
-      "model": 0.6735438147722146,
+      "model": 0.673295608911018,
       "notes": [
         "total games: simulator 36.9, Pinnacle 39.0, used 38.2 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-05T19:24:40.470626+00:00",
-      "probability": 0.6735438147722146,
+      "predicted_at": "2026-09-06T07:40:27.582562+00:00",
+      "probability": 0.673295608911018,
       "question": "Will the match last longer than 155 minutes?",
       "rbp": null,
       "settled_at": "",
@@ -44,7 +44,7 @@
         "bovada aces line 0.525 blended at 35%"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-05T19:24:40.470626+00:00",
+      "predicted_at": "2026-09-06T07:40:27.582562+00:00",
       "probability": 0.5212510965397226,
       "question": "Will T. Etcheverry record more aces than A. Michelsen?",
       "rbp": null,
@@ -68,7 +68,7 @@
         "bovada double_faults line 0.256 blended at 35%"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-05T19:24:40.470626+00:00",
+      "predicted_at": "2026-09-06T07:40:27.582562+00:00",
       "probability": 0.3084534253672744,
       "question": "Will T. Etcheverry record more double faults than A. Michelsen?",
       "rbp": null,
@@ -92,7 +92,7 @@
         "base-rate pull 0.48 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-05T19:24:40.470626+00:00",
+      "predicted_at": "2026-09-06T07:40:27.582562+00:00",
       "probability": 0.2648993619841182,
       "question": "Will T. Etcheverry commit more than 57 unforced errors?",
       "rbp": null,
@@ -117,7 +117,7 @@
         "base-rate pull 0.59 suppressed for first_serve_comparison"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-05T19:24:40.470626+00:00",
+      "predicted_at": "2026-09-06T07:40:27.582562+00:00",
       "probability": 0.42236184509613517,
       "question": "Will A. Michelsen win more than 74% of points played on their first serve?",
       "rbp": null,
@@ -135,17 +135,18 @@
       "market": null,
       "market_id": "776f20ca-a717-4872-876a-a8670a2d3925",
       "market_weight": 0.0,
-      "model": 0.4634362165609162,
+      "model": 0.4314274299769406,
       "notes": [
-        "exposure 119 service points from 38.2 games"
+        "exposure 119 service points from 38.2 games",
+        "outcome coupling: P(win)=0.400, delta=+0.79"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-05T19:24:40.470626+00:00",
-      "probability": 0.46714373678379023,
+      "predicted_at": "2026-09-06T07:40:27.582562+00:00",
+      "probability": 0.4395361583551113,
       "question": "Will T. Etcheverry hit more winners than A. Michelsen?",
       "rbp": null,
       "settled_at": "",
-      "submission": 46
+      "submission": 42
     },
     {
       "base_rate": 0.202,
@@ -161,7 +162,7 @@
       "model": 0.2585,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-05T19:24:40.470626+00:00",
+      "predicted_at": "2026-09-06T07:40:27.582562+00:00",
       "probability": 0.2585,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -182,7 +183,7 @@
       "model": 0.66375,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-05T19:24:40.470626+00:00",
+      "predicted_at": "2026-09-06T07:40:27.582562+00:00",
       "probability": 0.66375,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -207,7 +208,7 @@
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-05T19:24:40.470626+00:00",
+      "predicted_at": "2026-09-06T07:40:27.582562+00:00",
       "probability": 0.3923607007434761,
       "question": "Will T. Etcheverry win?",
       "rbp": null,
@@ -231,7 +232,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-05T19:24:40.470626+00:00",
+      "predicted_at": "2026-09-06T07:40:27.582562+00:00",
       "probability": 0.109593,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,
