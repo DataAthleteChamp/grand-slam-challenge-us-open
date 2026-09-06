@@ -18,7 +18,7 @@
         "total games: simulator 20.2, Pinnacle 20.4, used 20.3 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T13:51:10.583959+00:00",
+      "predicted_at": "2026-09-06T15:15:18.318085+00:00",
       "probability": 0.24433597946561775,
       "question": "Will the match last longer than 120 minutes?",
       "rbp": null,
@@ -43,7 +43,7 @@
         "bovada aces line 0.083 blended at 35%"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T13:51:10.583959+00:00",
+      "predicted_at": "2026-09-06T15:15:18.318085+00:00",
       "probability": 0.22392420510196223,
       "question": "Will I. Swiatek record more aces than Q. Zheng?",
       "rbp": null,
@@ -60,19 +60,19 @@
       "lane": "scenario",
       "market": 0.2442,
       "market_id": "5e9edfe4-33af-4937-8f34-2f35d74c329c",
-      "market_weight": 0.35,
-      "model": 0.2664741913451605,
+      "market_weight": 0.75,
+      "model": 0.2527669966712156,
       "notes": [
         "exposure 66 service points from 20.6 games",
-        "bovada double_faults line 0.244 blended at 35%"
+        "bovada double_faults line 0.244 blended at 75%"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T13:51:10.583959+00:00",
-      "probability": 0.2664741913451605,
+      "predicted_at": "2026-09-06T15:15:18.318085+00:00",
+      "probability": 0.2527669966712156,
       "question": "Will I. Swiatek record more double faults than Q. Zheng?",
       "rbp": null,
       "settled_at": "",
-      "submission": 22
+      "submission": 21
     },
     {
       "base_rate": 0.5,
@@ -91,7 +91,7 @@
         "base-rate pull 0.48 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T13:51:10.583959+00:00",
+      "predicted_at": "2026-09-06T15:15:18.318085+00:00",
       "probability": 0.39391803067762354,
       "question": "Will I. Swiatek commit more than 31 unforced errors?",
       "rbp": null,
@@ -116,7 +116,7 @@
         "base-rate pull 0.58 suppressed for first_serve_comparison"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T13:51:10.583959+00:00",
+      "predicted_at": "2026-09-06T15:15:18.318085+00:00",
       "probability": 0.5251806775447578,
       "question": "Will Q. Zheng win more than 61% of points played on their first serve?",
       "rbp": null,
@@ -140,7 +140,7 @@
         "outcome coupling: P(win)=0.760, delta=+0.94"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T13:51:10.583959+00:00",
+      "predicted_at": "2026-09-06T15:15:18.318085+00:00",
       "probability": 0.5121127145359372,
       "question": "Will I. Swiatek hit more winners than Q. Zheng?",
       "rbp": null,
@@ -161,7 +161,7 @@
       "model": 0.2545,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-06T13:51:10.583959+00:00",
+      "predicted_at": "2026-09-06T15:15:18.318085+00:00",
       "probability": 0.2545,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -182,7 +182,7 @@
       "model": 0.673,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-06T13:51:10.583959+00:00",
+      "predicted_at": "2026-09-06T15:15:18.318085+00:00",
       "probability": 0.673,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -207,7 +207,7 @@
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T13:51:10.583959+00:00",
+      "predicted_at": "2026-09-06T15:15:18.318085+00:00",
       "probability": 0.7695017628678584,
       "question": "Will I. Swiatek win?",
       "rbp": null,
@@ -231,7 +231,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T13:51:10.583959+00:00",
+      "predicted_at": "2026-09-06T15:15:18.318085+00:00",
       "probability": 0.18243649999999997,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

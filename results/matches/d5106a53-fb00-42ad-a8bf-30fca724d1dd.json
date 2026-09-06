@@ -13,17 +13,17 @@
       "market": null,
       "market_id": "629b0df7-6024-47dc-ab2b-d1928c1f1d2a",
       "market_weight": 0.0,
-      "model": 0.7704150545859071,
+      "model": 0.7825543544449638,
       "notes": [
-        "total games: simulator 35.1, Pinnacle 36.0, used 35.6 at weight 0.60"
+        "total games: simulator 35.1, Pinnacle 36.5, used 36.0 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T13:51:10.576683+00:00",
-      "probability": 0.7704150545859071,
+      "predicted_at": "2026-09-06T15:15:18.311677+00:00",
+      "probability": 0.7825543544449638,
       "question": "Will the match last longer than 130 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 82
+      "submission": 83
     },
     {
       "base_rate": 0.4784,
@@ -44,7 +44,7 @@
         "bovada aces line 0.429 blended at 35%"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T13:51:10.576683+00:00",
+      "predicted_at": "2026-09-06T15:15:18.311677+00:00",
       "probability": 0.4859547019249558,
       "question": "Will C. Alcaraz record more aces than T. Paul?",
       "rbp": null,
@@ -68,7 +68,7 @@
         "bovada double_faults line 0.506 blended at 35%"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T13:51:10.576683+00:00",
+      "predicted_at": "2026-09-06T15:15:18.311677+00:00",
       "probability": 0.47098099374386093,
       "question": "Will C. Alcaraz record more double faults than T. Paul?",
       "rbp": null,
@@ -92,7 +92,7 @@
         "base-rate pull 0.48 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T13:51:10.576683+00:00",
+      "predicted_at": "2026-09-06T15:15:18.311677+00:00",
       "probability": 0.4228973330973369,
       "question": "Will C. Alcaraz commit more than 44 unforced errors?",
       "rbp": null,
@@ -117,7 +117,7 @@
         "base-rate pull 0.51 suppressed for first_serve_comparison"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T13:51:10.576683+00:00",
+      "predicted_at": "2026-09-06T15:15:18.311677+00:00",
       "probability": 0.6161766711823358,
       "question": "Will T. Paul win more than 66% of points played on their first serve?",
       "rbp": null,
@@ -141,7 +141,7 @@
         "outcome coupling: P(win)=0.714, delta=+0.79"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T13:51:10.576683+00:00",
+      "predicted_at": "2026-09-06T15:15:18.311677+00:00",
       "probability": 0.6104597562628156,
       "question": "Will C. Alcaraz hit more winners than T. Paul?",
       "rbp": null,
@@ -162,7 +162,7 @@
       "model": 0.24,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-06T13:51:10.576683+00:00",
+      "predicted_at": "2026-09-06T15:15:18.311677+00:00",
       "probability": 0.24,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -183,7 +183,7 @@
       "model": 0.76975,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-06T13:51:10.576683+00:00",
+      "predicted_at": "2026-09-06T15:15:18.311677+00:00",
       "probability": 0.76975,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -208,7 +208,7 @@
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T13:51:10.576683+00:00",
+      "predicted_at": "2026-09-06T15:15:18.311677+00:00",
       "probability": 0.7246147162175722,
       "question": "Will C. Alcaraz win?",
       "rbp": null,
@@ -232,7 +232,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T13:51:10.576683+00:00",
+      "predicted_at": "2026-09-06T15:15:18.311677+00:00",
       "probability": 0.333869,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

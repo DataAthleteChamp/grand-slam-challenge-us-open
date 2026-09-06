@@ -510,3 +510,42 @@ unavailable, and every time this project shipped on weaker evidence it later had
 snapshots the quotes with a UTC timestamp so the history builds itself. Once the captured
 matches settle we can measure whether Bovada beats us rather than assuming it, and blend at a
 weight the measurement supports.
+
+## Is the Bovada blend a gamble? Three checks that do not need settlement
+
+A fair challenge: blending an unvalidated retail line into our worst families could be
+gambling rather than modelling. Only 4 Bovada-priced questions have settled, far too few to
+answer directly, so here are the checks that ARE available now, on 56 quotes across 14 matches.
+
+**1. The line tracks real skill, not noise.** Comparing each match's two players by the gap in
+their career rates against the gap in Bovada's prices:
+
+| family | correlation |
+|---|---|
+| aces | **+0.763** |
+| double faults | **+0.601** |
+
+Bovada is pricing the same underlying quantity we model. A near-zero correlation would have
+meant we were blending in something arbitrary; this is not that.
+
+**2. The margin is professionally maintained.** Overround averages 1.1026 on aces and 1.1007
+on double faults with a standard deviation of only 0.008-0.010 across every snapshot. A book
+that keeps its margin that tight is running a real pricing process.
+
+**3. The tie mass independently reproduces our own constants.** Bovada's de-vigged draw
+probability is 0.0815 on aces and 0.1066 on double faults, against our measured 0.043 ATP /
+0.129 WTA and 0.101 ATP / 0.114 WTA. The snapshots mix tours, so those are the right ballpark.
+
+**What this does and does not justify.** It justifies blending at all. It does not justify any
+particular weight. The 0.75 on women's double faults rests on a separate measurement - that
+replacing our answers there with the base rate scores -0.00 RBP/question, so the incumbent is
+provably worth nothing - not on any belief that Bovada is excellent.
+
+**What is still unmeasured.** Whether Bovada beats us on the questions where we disagree. The
+correlations of 0.60-0.76 mean substantial disagreement, and that disagreement is either
+information we lack or noise we are importing. Only settled outcomes can separate the two.
+
+**No second book exists.** Bovada's endpoint pattern was tested against its Bodog-family
+sister sites: sports.bovada.lv is the same book, BetOnline and SportsBetting.ag return 403,
+bodog.eu does not resolve. A multi-book consensus, which would be the statistically preferable
+design, is not currently available for these two families.

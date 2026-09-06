@@ -11,7 +11,7 @@ would compound. See SHARPEN_BY_TOKEN for the per-family measurements.
      bot  48  ->  MANUAL  48   Will A. Sabalenka hit more winners than T. Townsend?
      bot  58  ->  MANUAL  58   Will either player win a set 6–2, 6–1 or 6–0?
      bot  57  ->  MANUAL  58   Will A. Sabalenka record more aces than T. Townsend?
-     bot  52  ->  MANUAL  52   Will A. Sabalenka record more double faults than T. Townsend?
+     bot  43  ->  MANUAL  43   Will A. Sabalenka record more double faults than T. Townsend?
      bot  29  ->  MANUAL  29   Will the match feature at least 1 tiebreak(s)?
      bot  59  ->  MANUAL  59   Will the match last longer than 85 minutes?
      bot  31  ->  MANUAL  31   Will the match require a deciding set?
@@ -37,7 +37,7 @@ would compound. See SHARPEN_BY_TOKEN for the per-family measurements.
      bot  50  ->  MANUAL  50   Will C. Alcaraz record more aces than T. Paul?
      bot  47  ->  MANUAL  47   Will C. Alcaraz record more double faults than T. Paul?
      bot  41  ->  MANUAL  41   Will the match feature at least 1 tiebreak(s)?
-     bot  78  ->  MANUAL  78   Will the match last longer than 130 minutes?
+     bot  79  ->  MANUAL  79   Will the match last longer than 130 minutes?
      bot  24  ->  MANUAL  24   Will the match require a deciding set?
      bot  42  ->  MANUAL  42   Will C. Alcaraz commit more than 44 unforced errors?
 
@@ -73,7 +73,7 @@ would compound. See SHARPEN_BY_TOKEN for the per-family measurements.
      bot  39  ->  MANUAL  37   Will S. Cirstea record more aces than J. Pegula?
      bot  43  ->  MANUAL  43   Will S. Cirstea record more double faults than J. Pegula?
      bot  25  ->  MANUAL  25   Will the match feature at least 1 tiebreak(s)?
-     bot  54  ->  MANUAL  54   Will the match last longer than 95 minutes?
+     bot  53  ->  MANUAL  53   Will the match last longer than 95 minutes?
      bot  33  ->  MANUAL  33   Will the match require a deciding set?
      bot  28  ->  MANUAL  28   Will S. Cirstea commit more than 34 unforced errors?
 
@@ -95,7 +95,7 @@ would compound. See SHARPEN_BY_TOKEN for the per-family measurements.
      bot  55  ->  MANUAL  55   Will E. Navarro win more than 63% of points played on their first serve?
      bot  46  ->  MANUAL  46   Will A. Kalinskaya hit more winners than E. Navarro?
      bot  37  ->  MANUAL  35   Will A. Kalinskaya record more aces than E. Navarro?
-     bot  62  ->  MANUAL  62   Will A. Kalinskaya record more double faults than E. Navarro?
+     bot  72  ->  MANUAL  72   Will A. Kalinskaya record more double faults than E. Navarro?
      bot  25  ->  MANUAL  25   Will the match feature at least 1 tiebreak(s)?
      bot  26  ->  MANUAL  26   Will the match last longer than 130 minutes?
      bot  33  ->  MANUAL  33   Will A. Kalinskaya commit more than 32 unforced errors?
@@ -119,7 +119,7 @@ would compound. See SHARPEN_BY_TOKEN for the per-family measurements.
      bot  42  ->  MANUAL  42   Will either player win a set 6–2, 6–1 or 6–0?
      bot  31  ->  MANUAL  31   Will E. Rybakina win more than 77% of points played on their first serve?
      bot  41  ->  MANUAL  40   Will N. Osaka record more aces than E. Rybakina?
-     bot  44  ->  MANUAL  44   Will N. Osaka record more double faults than E. Rybakina?
+     bot  42  ->  MANUAL  42   Will N. Osaka record more double faults than E. Rybakina?
      bot   8  ->  MANUAL   8   Will the match feature at least 2 tiebreak(s)?
      bot  64  ->  MANUAL  64   Will the match last longer than 95 minutes?
      bot  36  ->  MANUAL  36   Will the match require a deciding set?
@@ -131,7 +131,7 @@ would compound. See SHARPEN_BY_TOKEN for the per-family measurements.
      bot  54  ->  MANUAL  54   Will I. Jovic win more than 60% of points played on their first serve?
      bot  31  ->  MANUAL  31   Will C. Gauff hit more winners than I. Jovic?
      bot  62  ->  MANUAL  64   Will C. Gauff record more aces than I. Jovic?
-     bot  63  ->  MANUAL  63   Will C. Gauff record more double faults than I. Jovic?
+     bot  69  ->  MANUAL  69   Will C. Gauff record more double faults than I. Jovic?
      bot  24  ->  MANUAL  24   Will the match feature at least 1 tiebreak(s)?
      bot  32  ->  MANUAL  32   Will the match last longer than 120 minutes?
      bot  33  ->  MANUAL  33   Will the match require a deciding set?
@@ -167,7 +167,7 @@ would compound. See SHARPEN_BY_TOKEN for the per-family measurements.
      bot  65  ->  MANUAL  65   Will either player win a set 6–2, 6–1 or 6–0?
      bot  52  ->  MANUAL  52   Will I. Swiatek hit more winners than Q. Zheng?
      bot  23  ->  MANUAL  20   Will I. Swiatek record more aces than Q. Zheng?
-     bot  27  ->  MANUAL  27   Will I. Swiatek record more double faults than Q. Zheng?
+     bot  25  ->  MANUAL  25   Will I. Swiatek record more double faults than Q. Zheng?
      bot  23  ->  MANUAL  23   Will the match feature at least 1 tiebreak(s)?
      bot  25  ->  MANUAL  25   Will the match last longer than 120 minutes?
      bot  39  ->  MANUAL  39   Will I. Swiatek commit more than 31 unforced errors?
@@ -191,7 +191,7 @@ would compound. See SHARPEN_BY_TOKEN for the per-family measurements.
      bot  66  ->  MANUAL  66   Will M. Andreeva hit more winners than A. Potapova?
      bot  67  ->  MANUAL  67   Will either player win a set 6–2, 6–1 or 6–0?
      bot  54  ->  MANUAL  55   Will M. Andreeva record more aces than A. Potapova?
-     bot  31  ->  MANUAL  31   Will M. Andreeva record more double faults than A. Potapova?
+     bot  28  ->  MANUAL  28   Will M. Andreeva record more double faults than A. Potapova?
      bot  21  ->  MANUAL  21   Will the match feature at least 1 tiebreak(s)?
      bot  42  ->  MANUAL  42   Will the match last longer than 95 minutes?
      bot  49  ->  MANUAL  49   Will M. Andreeva commit more than 25 unforced errors?

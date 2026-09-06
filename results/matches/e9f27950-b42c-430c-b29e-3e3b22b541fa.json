@@ -18,7 +18,7 @@
         "total games: simulator 36.1, Pinnacle 39.0, used 37.8 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T13:51:10.584616+00:00",
+      "predicted_at": "2026-09-06T15:15:18.318696+00:00",
       "probability": 0.4305372218299661,
       "question": "Will the match last longer than 175 minutes?",
       "rbp": null,
@@ -44,7 +44,7 @@
         "bovada aces line 0.758 blended at 35%"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T13:51:10.584616+00:00",
+      "predicted_at": "2026-09-06T15:15:18.318696+00:00",
       "probability": 0.6350727803940638,
       "question": "Will A. Blockx record more aces than F. Cerundolo?",
       "rbp": null,
@@ -68,7 +68,7 @@
         "bovada double_faults line 0.327 blended at 35%"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T13:51:10.584616+00:00",
+      "predicted_at": "2026-09-06T15:15:18.318696+00:00",
       "probability": 0.3268683935165094,
       "question": "Will A. Blockx record more double faults than F. Cerundolo?",
       "rbp": null,
@@ -92,7 +92,7 @@
         "base-rate pull 0.48 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T13:51:10.584616+00:00",
+      "predicted_at": "2026-09-06T15:15:18.318696+00:00",
       "probability": 0.3944608873884239,
       "question": "Will A. Blockx commit more than 55 unforced errors?",
       "rbp": null,
@@ -117,7 +117,7 @@
         "base-rate pull 0.46 suppressed for first_serve_comparison"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T13:51:10.584616+00:00",
+      "predicted_at": "2026-09-06T15:15:18.318696+00:00",
       "probability": 0.6851209812725894,
       "question": "Will F. Cerundolo win more than 67% of points played on their first serve?",
       "rbp": null,
@@ -141,7 +141,7 @@
         "outcome coupling: P(win)=0.498, delta=+0.79"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T13:51:10.584616+00:00",
+      "predicted_at": "2026-09-06T15:15:18.318696+00:00",
       "probability": 0.5115651845327026,
       "question": "Will A. Blockx hit more winners than F. Cerundolo?",
       "rbp": null,
@@ -162,7 +162,7 @@
       "model": 0.26575,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-06T13:51:10.584616+00:00",
+      "predicted_at": "2026-09-06T15:15:18.318696+00:00",
       "probability": 0.26575,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -183,7 +183,7 @@
       "model": 0.74275,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-06T13:51:10.584616+00:00",
+      "predicted_at": "2026-09-06T15:15:18.318696+00:00",
       "probability": 0.74275,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -208,7 +208,7 @@
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T13:51:10.584616+00:00",
+      "predicted_at": "2026-09-06T15:15:18.318696+00:00",
       "probability": 0.4983698776065707,
       "question": "Will A. Blockx win?",
       "rbp": null,
@@ -232,7 +232,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T13:51:10.584616+00:00",
+      "predicted_at": "2026-09-06T15:15:18.318696+00:00",
       "probability": 0.357704,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

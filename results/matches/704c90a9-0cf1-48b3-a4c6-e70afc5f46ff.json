@@ -18,7 +18,7 @@
         "total games: simulator 20.3, Pinnacle 19.9, used 20.0 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T13:51:10.581382+00:00",
+      "predicted_at": "2026-09-06T15:15:18.315724+00:00",
       "probability": 0.3955786442725856,
       "question": "Will the match last longer than 95 minutes?",
       "rbp": null,
@@ -43,7 +43,7 @@
         "bovada aces line 0.486 blended at 35%"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T13:51:10.581382+00:00",
+      "predicted_at": "2026-09-06T15:15:18.315724+00:00",
       "probability": 0.5326875176263043,
       "question": "Will M. Andreeva record more aces than A. Potapova?",
       "rbp": null,
@@ -60,19 +60,19 @@
       "lane": "scenario",
       "market": 0.268,
       "market_id": "4b7996a6-a8c7-4bae-a5a1-e7a84c56903a",
-      "market_weight": 0.35,
-      "model": 0.3113191252455576,
+      "market_weight": 0.75,
+      "model": 0.28466120201752215,
       "notes": [
         "exposure 67 service points from 20.6 games",
-        "bovada double_faults line 0.268 blended at 35%"
+        "bovada double_faults line 0.268 blended at 75%"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T13:51:10.581382+00:00",
-      "probability": 0.3113191252455576,
+      "predicted_at": "2026-09-06T15:15:18.315724+00:00",
+      "probability": 0.28466120201752215,
       "question": "Will M. Andreeva record more double faults than A. Potapova?",
       "rbp": null,
       "settled_at": "",
-      "submission": 27
+      "submission": 24
     },
     {
       "base_rate": 0.5,
@@ -91,7 +91,7 @@
         "base-rate pull 0.48 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T13:51:10.581382+00:00",
+      "predicted_at": "2026-09-06T15:15:18.315724+00:00",
       "probability": 0.4853163481709436,
       "question": "Will M. Andreeva commit more than 25 unforced errors?",
       "rbp": null,
@@ -116,7 +116,7 @@
         "base-rate pull 0.58 suppressed for first_serve_comparison"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T13:51:10.581382+00:00",
+      "predicted_at": "2026-09-06T15:15:18.315724+00:00",
       "probability": 0.4704816066486307,
       "question": "Will A. Potapova win more than 60% of points played on their first serve?",
       "rbp": null,
@@ -140,7 +140,7 @@
         "outcome coupling: P(win)=0.683, delta=+0.94"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T13:51:10.581382+00:00",
+      "predicted_at": "2026-09-06T15:15:18.315724+00:00",
       "probability": 0.6660889738575928,
       "question": "Will M. Andreeva hit more winners than A. Potapova?",
       "rbp": null,
@@ -161,7 +161,7 @@
       "model": 0.276,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-06T13:51:10.581382+00:00",
+      "predicted_at": "2026-09-06T15:15:18.315724+00:00",
       "probability": 0.276,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -182,7 +182,7 @@
       "model": 0.705,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-06T13:51:10.581382+00:00",
+      "predicted_at": "2026-09-06T15:15:18.315724+00:00",
       "probability": 0.705,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -207,7 +207,7 @@
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T13:51:10.581382+00:00",
+      "predicted_at": "2026-09-06T15:15:18.315724+00:00",
       "probability": 0.694446055945213,
       "question": "Will M. Andreeva win?",
       "rbp": null,
@@ -231,7 +231,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T13:51:10.581382+00:00",
+      "predicted_at": "2026-09-06T15:15:18.315724+00:00",
       "probability": 0.15573374999999998,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
