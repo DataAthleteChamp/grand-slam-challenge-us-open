@@ -1,0 +1,442 @@
+[
+ {
+  "match": "Tommy Paul vs Carlos Alcaraz\u00a0",
+  "start_time": 1788717600000,
+  "family": "aces",
+  "player": "Tommy Paul",
+  "player_key": "paul",
+  "p_more": 0.4714,
+  "p_tie": 0.1,
+  "overround": 1.1111
+ },
+ {
+  "match": "Tommy Paul vs Carlos Alcaraz\u00a0",
+  "start_time": 1788717600000,
+  "family": "aces",
+  "player": "Carlos Alcaraz\u00a0",
+  "player_key": "alcaraz",
+  "p_more": 0.4286,
+  "p_tie": 0.1,
+  "overround": 1.1111
+ },
+ {
+  "match": "Tommy Paul vs Carlos Alcaraz\u00a0",
+  "start_time": 1788717600000,
+  "family": "double_faults",
+  "player": "Tommy Paul",
+  "player_key": "paul",
+  "p_more": 0.3642,
+  "p_tie": 0.1301,
+  "overround": 1.0984
+ },
+ {
+  "match": "Tommy Paul vs Carlos Alcaraz\u00a0",
+  "start_time": 1788717600000,
+  "family": "double_faults",
+  "player": "Carlos Alcaraz\u00a0",
+  "player_key": "alcaraz",
+  "p_more": 0.5058,
+  "p_tie": 0.1301,
+  "overround": 1.0984
+ },
+ {
+  "match": "Alex Michelsen vs Tomas Martin Etcheverry",
+  "start_time": 1788719400000,
+  "family": "aces",
+  "player": "Alex Michelsen",
+  "player_key": "michelsen",
+  "p_more": 0.4,
+  "p_tie": 0.075,
+  "overround": 1.1111
+ },
+ {
+  "match": "Alex Michelsen vs Tomas Martin Etcheverry",
+  "start_time": 1788719400000,
+  "family": "aces",
+  "player": "Tomas Martin Etcheverry",
+  "player_key": "etcheverry",
+  "p_more": 0.525,
+  "p_tie": 0.075,
+  "overround": 1.1111
+ },
+ {
+  "match": "Alex Michelsen vs Tomas Martin Etcheverry",
+  "start_time": 1788719400000,
+  "family": "double_faults",
+  "player": "Alex Michelsen",
+  "player_key": "michelsen",
+  "p_more": 0.6391,
+  "p_tie": 0.1053,
+  "overround": 1.1176
+ },
+ {
+  "match": "Alex Michelsen vs Tomas Martin Etcheverry",
+  "start_time": 1788719400000,
+  "family": "double_faults",
+  "player": "Tomas Martin Etcheverry",
+  "player_key": "etcheverry",
+  "p_more": 0.2556,
+  "p_tie": 0.1053,
+  "overround": 1.1176
+ },
+ {
+  "match": "Daniil Medvedev vs Frances Tiafoe",
+  "start_time": 1788721200000,
+  "family": "aces",
+  "player": "Daniil Medvedev",
+  "player_key": "medvedev",
+  "p_more": 0.9072,
+  "p_tie": 0.0441,
+  "overround": 1.0806
+ },
+ {
+  "match": "Daniil Medvedev vs Frances Tiafoe",
+  "start_time": 1788721200000,
+  "family": "aces",
+  "player": "Frances Tiafoe",
+  "player_key": "tiafoe",
+  "p_more": 0.0487,
+  "p_tie": 0.0441,
+  "overround": 1.0806
+ },
+ {
+  "match": "Daniil Medvedev vs Frances Tiafoe",
+  "start_time": 1788721200000,
+  "family": "double_faults",
+  "player": "Daniil Medvedev",
+  "player_key": "medvedev",
+  "p_more": 0.6848,
+  "p_tie": 0.087,
+  "overround": 1.0952
+ },
+ {
+  "match": "Daniil Medvedev vs Frances Tiafoe",
+  "start_time": 1788721200000,
+  "family": "double_faults",
+  "player": "Frances Tiafoe",
+  "player_key": "tiafoe",
+  "p_more": 0.2283,
+  "p_tie": 0.087,
+  "overround": 1.0952
+ },
+ {
+  "match": "Ben Shelton vs Stefanos Tsitsipas",
+  "start_time": 1788735600000,
+  "family": "aces",
+  "player": "Ben Shelton",
+  "player_key": "shelton",
+  "p_more": 0.6338,
+  "p_tie": 0.061,
+  "overround": 1.0923
+ },
+ {
+  "match": "Ben Shelton vs Stefanos Tsitsipas",
+  "start_time": 1788735600000,
+  "family": "aces",
+  "player": "Stefanos Tsitsipas",
+  "player_key": "tsitsipas",
+  "p_more": 0.3052,
+  "p_tie": 0.061,
+  "overround": 1.0923
+ },
+ {
+  "match": "Ben Shelton vs Stefanos Tsitsipas",
+  "start_time": 1788735600000,
+  "family": "double_faults",
+  "player": "Ben Shelton",
+  "player_key": "shelton",
+  "p_more": 0.3045,
+  "p_tie": 0.1142,
+  "overround": 1.0947
+ },
+ {
+  "match": "Ben Shelton vs Stefanos Tsitsipas",
+  "start_time": 1788735600000,
+  "family": "double_faults",
+  "player": "Stefanos Tsitsipas",
+  "player_key": "tsitsipas",
+  "p_more": 0.5813,
+  "p_tie": 0.1142,
+  "overround": 1.0947
+ },
+ {
+  "match": "Francisco Cerundolo vs Alexander Blockx",
+  "start_time": 1788793200000,
+  "family": "aces",
+  "player": "Francisco Cerundolo",
+  "player_key": "cerundolo",
+  "p_more": 0.1818,
+  "p_tie": 0.0606,
+  "overround": 1.1
+ },
+ {
+  "match": "Francisco Cerundolo vs Alexander Blockx",
+  "start_time": 1788793200000,
+  "family": "aces",
+  "player": "Alexander Blockx",
+  "player_key": "blockx",
+  "p_more": 0.7576,
+  "p_tie": 0.0606,
+  "overround": 1.1
+ },
+ {
+  "match": "Francisco Cerundolo vs Alexander Blockx",
+  "start_time": 1788793200000,
+  "family": "double_faults",
+  "player": "Francisco Cerundolo",
+  "player_key": "cerundolo",
+  "p_more": 0.5727,
+  "p_tie": 0.1,
+  "overround": 1.1111
+ },
+ {
+  "match": "Francisco Cerundolo vs Alexander Blockx",
+  "start_time": 1788793200000,
+  "family": "double_faults",
+  "player": "Alexander Blockx",
+  "player_key": "blockx",
+  "p_more": 0.3273,
+  "p_tie": 0.1,
+  "overround": 1.1111
+ },
+ {
+  "match": "Aryna Sabalenka vs Taylor Townsend",
+  "start_time": 1788708600000,
+  "family": "aces",
+  "player": "Aryna Sabalenka",
+  "player_key": "sabalenka",
+  "p_more": 0.3636,
+  "p_tie": 0.0909,
+  "overround": 1.1
+ },
+ {
+  "match": "Aryna Sabalenka vs Taylor Townsend",
+  "start_time": 1788708600000,
+  "family": "aces",
+  "player": "Taylor Townsend",
+  "player_key": "townsend",
+  "p_more": 0.5455,
+  "p_tie": 0.0909,
+  "overround": 1.1
+ },
+ {
+  "match": "Aryna Sabalenka vs Taylor Townsend",
+  "start_time": 1788708600000,
+  "family": "double_faults",
+  "player": "Aryna Sabalenka",
+  "player_key": "sabalenka",
+  "p_more": 0.3668,
+  "p_tie": 0.1528,
+  "overround": 1.0905
+ },
+ {
+  "match": "Aryna Sabalenka vs Taylor Townsend",
+  "start_time": 1788708600000,
+  "family": "double_faults",
+  "player": "Taylor Townsend",
+  "player_key": "townsend",
+  "p_more": 0.4803,
+  "p_tie": 0.1528,
+  "overround": 1.0905
+ },
+ {
+  "match": "Anna Kalinskaya vs Emma Navarro",
+  "start_time": 1788741600000,
+  "family": "aces",
+  "player": "Anna Kalinskaya",
+  "player_key": "kalinskaya",
+  "p_more": 0.21,
+  "p_tie": 0.1129,
+  "overround": 1.1076
+ },
+ {
+  "match": "Anna Kalinskaya vs Emma Navarro",
+  "start_time": 1788741600000,
+  "family": "aces",
+  "player": "Emma Navarro",
+  "player_key": "navarro",
+  "p_more": 0.6772,
+  "p_tie": 0.1129,
+  "overround": 1.1076
+ },
+ {
+  "match": "Anna Kalinskaya vs Emma Navarro",
+  "start_time": 1788741600000,
+  "family": "double_faults",
+  "player": "Anna Kalinskaya",
+  "player_key": "kalinskaya",
+  "p_more": 0.7867,
+  "p_tie": 0.0749,
+  "overround": 1.1122
+ },
+ {
+  "match": "Anna Kalinskaya vs Emma Navarro",
+  "start_time": 1788741600000,
+  "family": "double_faults",
+  "player": "Emma Navarro",
+  "player_key": "navarro",
+  "p_more": 0.1383,
+  "p_tie": 0.0749,
+  "overround": 1.1122
+ },
+ {
+  "match": "Iga Swiatek vs Qinwen Zheng",
+  "start_time": 1788793200000,
+  "family": "aces",
+  "player": "Iga Swiatek",
+  "player_key": "swiatek",
+  "p_more": 0.0826,
+  "p_tie": 0.0699,
+  "overround": 1.1012
+ },
+ {
+  "match": "Iga Swiatek vs Qinwen Zheng",
+  "start_time": 1788793200000,
+  "family": "aces",
+  "player": "Qinwen Zheng",
+  "player_key": "zheng",
+  "p_more": 0.8476,
+  "p_tie": 0.0699,
+  "overround": 1.1012
+ },
+ {
+  "match": "Iga Swiatek vs Qinwen Zheng",
+  "start_time": 1788793200000,
+  "family": "double_faults",
+  "player": "Iga Swiatek",
+  "player_key": "swiatek",
+  "p_more": 0.2442,
+  "p_tie": 0.1017,
+  "overround": 1.0921
+ },
+ {
+  "match": "Iga Swiatek vs Qinwen Zheng",
+  "start_time": 1788793200000,
+  "family": "double_faults",
+  "player": "Qinwen Zheng",
+  "player_key": "zheng",
+  "p_more": 0.6541,
+  "p_tie": 0.1017,
+  "overround": 1.0921
+ },
+ {
+  "match": "Iva Jovic vs Cori Gauff",
+  "start_time": 1788793200000,
+  "family": "aces",
+  "player": "Iva Jovic",
+  "player_key": "jovic",
+  "p_more": 0.2411,
+  "p_tie": 0.113,
+  "overround": 1.106
+ },
+ {
+  "match": "Iva Jovic vs Cori Gauff",
+  "start_time": 1788793200000,
+  "family": "aces",
+  "player": "Coco Gauff",
+  "player_key": "gauff",
+  "p_more": 0.6459,
+  "p_tie": 0.113,
+  "overround": 1.106
+ },
+ {
+  "match": "Iva Jovic vs Cori Gauff",
+  "start_time": 1788793200000,
+  "family": "double_faults",
+  "player": "Iva Jovic",
+  "player_key": "jovic",
+  "p_more": 0.18,
+  "p_tie": 0.1,
+  "overround": 1.1111
+ },
+ {
+  "match": "Iva Jovic vs Cori Gauff",
+  "start_time": 1788793200000,
+  "family": "double_faults",
+  "player": "Coco Gauff",
+  "player_key": "gauff",
+  "p_more": 0.72,
+  "p_tie": 0.1,
+  "overround": 1.1111
+ },
+ {
+  "match": "Mirra Andreeva vs Anastasia Potapova",
+  "start_time": 1788793200000,
+  "family": "aces",
+  "player": "Mirra Andreeva",
+  "player_key": "andreeva",
+  "p_more": 0.4856,
+  "p_tie": 0.1651,
+  "overround": 1.1012
+ },
+ {
+  "match": "Mirra Andreeva vs Anastasia Potapova",
+  "start_time": 1788793200000,
+  "family": "aces",
+  "player": "Anastasia Potapova",
+  "player_key": "potapova",
+  "p_more": 0.3493,
+  "p_tie": 0.1651,
+  "overround": 1.1012
+ },
+ {
+  "match": "Mirra Andreeva vs Anastasia Potapova",
+  "start_time": 1788793200000,
+  "family": "double_faults",
+  "player": "Mirra Andreeva",
+  "player_key": "andreeva",
+  "p_more": 0.268,
+  "p_tie": 0.1012,
+  "overround": 1.0975
+ },
+ {
+  "match": "Mirra Andreeva vs Anastasia Potapova",
+  "start_time": 1788793200000,
+  "family": "double_faults",
+  "player": "Anastasia Potapova",
+  "player_key": "potapova",
+  "p_more": 0.6308,
+  "p_tie": 0.1012,
+  "overround": 1.0975
+ },
+ {
+  "match": "Naomi Osaka vs Elena Rybakina",
+  "start_time": 1788793200000,
+  "family": "aces",
+  "player": "Naomi Osaka",
+  "player_key": "osaka",
+  "p_more": 0.5411,
+  "p_tie": 0.0752,
+  "overround": 1.1089
+ },
+ {
+  "match": "Naomi Osaka vs Elena Rybakina",
+  "start_time": 1788793200000,
+  "family": "aces",
+  "player": "Elena Rybakina",
+  "player_key": "rybakina",
+  "p_more": 0.3838,
+  "p_tie": 0.0752,
+  "overround": 1.1089
+ },
+ {
+  "match": "Naomi Osaka vs Elena Rybakina",
+  "start_time": 1788793200000,
+  "family": "double_faults",
+  "player": "Naomi Osaka",
+  "player_key": "osaka",
+  "p_more": 0.4,
+  "p_tie": 0.15,
+  "overround": 1.1111
+ },
+ {
+  "match": "Naomi Osaka vs Elena Rybakina",
+  "start_time": 1788793200000,
+  "family": "double_faults",
+  "player": "Elena Rybakina",
+  "player_key": "rybakina",
+  "p_more": 0.45,
+  "p_tie": 0.15,
+  "overround": 1.1111
+ }
+]
