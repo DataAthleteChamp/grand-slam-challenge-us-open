@@ -18,7 +18,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T09:18:10.475583+00:00",
+      "predicted_at": "2026-09-06T14:39:15.464375+00:00",
       "probability": 0.10501264314036642,
       "question": "Will the match last longer than 150 minutes?",
       "rbp": null,
@@ -43,7 +43,7 @@
         "bovada aces line 0.083 blended at 35%"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T09:18:10.475583+00:00",
+      "predicted_at": "2026-09-06T14:39:15.464375+00:00",
       "probability": 0.21623026005761053,
       "question": "Will Iga Swiatek record more aces than Aryna Sabalenka?",
       "rbp": null,
@@ -60,15 +60,15 @@
       "lane": "honest",
       "market": 0.2442,
       "market_id": "m2-m2",
-      "market_weight": 0.35,
-      "model": 0.24054525062178284,
+      "market_weight": 0.75,
+      "model": 0.24279432716222418,
       "notes": [
         "exposure 72 service points from 22.2 games",
-        "bovada double_faults line 0.244 blended at 35%"
+        "bovada double_faults line 0.244 blended at 75%"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T09:18:10.475583+00:00",
-      "probability": 0.24054525062178284,
+      "predicted_at": "2026-09-06T14:39:15.464375+00:00",
+      "probability": 0.24279432716222418,
       "question": "Will Iga Swiatek record more double faults than Aryna Sabalenka?",
       "rbp": null,
       "settled_at": "",
@@ -92,7 +92,7 @@
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T09:18:10.475583+00:00",
+      "predicted_at": "2026-09-06T14:39:15.464375+00:00",
       "probability": 0.5602456481878023,
       "question": "Will Iga Swiatek win?",
       "rbp": null,
@@ -116,7 +116,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T09:18:10.475583+00:00",
+      "predicted_at": "2026-09-06T14:39:15.464375+00:00",
       "probability": 0.031771468181818176,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,

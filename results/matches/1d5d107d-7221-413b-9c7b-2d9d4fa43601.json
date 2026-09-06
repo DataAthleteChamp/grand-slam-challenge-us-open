@@ -1,5 +1,5 @@
 {
-  "closing_time": "2026-09-07T03:00:00.000Z",
+  "closing_time": "2026-09-07T06:30:00.000Z",
   "draw": "mens",
   "entries": [
     {
@@ -13,13 +13,13 @@
       "market": null,
       "market_id": "466ec840-29dd-4e28-b664-6f6ac58c252c",
       "market_weight": 0.0,
-      "model": 0.673295608911018,
+      "model": 0.6725506472930198,
       "notes": [
         "total games: simulator 36.9, Pinnacle 39.0, used 38.2 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T07:40:27.582562+00:00",
-      "probability": 0.673295608911018,
+      "predicted_at": "2026-09-06T13:51:10.577383+00:00",
+      "probability": 0.6725506472930198,
       "question": "Will the match last longer than 155 minutes?",
       "rbp": null,
       "settled_at": "",
@@ -44,7 +44,7 @@
         "bovada aces line 0.525 blended at 35%"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T07:40:27.582562+00:00",
+      "predicted_at": "2026-09-06T13:51:10.577383+00:00",
       "probability": 0.5212510965397226,
       "question": "Will T. Etcheverry record more aces than A. Michelsen?",
       "rbp": null,
@@ -68,7 +68,7 @@
         "bovada double_faults line 0.256 blended at 35%"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T07:40:27.582562+00:00",
+      "predicted_at": "2026-09-06T13:51:10.577383+00:00",
       "probability": 0.3084534253672744,
       "question": "Will T. Etcheverry record more double faults than A. Michelsen?",
       "rbp": null,
@@ -92,7 +92,7 @@
         "base-rate pull 0.48 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T07:40:27.582562+00:00",
+      "predicted_at": "2026-09-06T13:51:10.577383+00:00",
       "probability": 0.2648993619841182,
       "question": "Will T. Etcheverry commit more than 57 unforced errors?",
       "rbp": null,
@@ -110,19 +110,19 @@
       "market": null,
       "market_id": "f11c5ad9-2d58-4bbe-9e7d-6f83f03a925e",
       "market_weight": 0.0,
-      "model": 0.42236184509613517,
+      "model": 0.5142185102301813,
       "notes": [
         "first-serve rate: expected 0.743 vs threshold 0.740, sd 0.077 (0.052 sampling on 70 first serves + 0.056 form)",
-        "model weighted 75% against the base rate 0.147 instead of the confidence pull",
+        "model weighted 100% against the base rate 0.147 instead of the confidence pull",
         "base-rate pull 0.59 suppressed for first_serve_comparison"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T07:40:27.582562+00:00",
-      "probability": 0.42236184509613517,
+      "predicted_at": "2026-09-06T13:51:10.577383+00:00",
+      "probability": 0.5142185102301813,
       "question": "Will A. Michelsen win more than 74% of points played on their first serve?",
       "rbp": null,
       "settled_at": "",
-      "submission": 40
+      "submission": 52
     },
     {
       "base_rate": 0.4904,
@@ -141,7 +141,7 @@
         "outcome coupling: P(win)=0.400, delta=+0.79"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T07:40:27.582562+00:00",
+      "predicted_at": "2026-09-06T13:51:10.577383+00:00",
       "probability": 0.4395361583551113,
       "question": "Will T. Etcheverry hit more winners than A. Michelsen?",
       "rbp": null,
@@ -162,7 +162,7 @@
       "model": 0.2585,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-06T07:40:27.582562+00:00",
+      "predicted_at": "2026-09-06T13:51:10.577383+00:00",
       "probability": 0.2585,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -183,7 +183,7 @@
       "model": 0.66375,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-06T07:40:27.582562+00:00",
+      "predicted_at": "2026-09-06T13:51:10.577383+00:00",
       "probability": 0.66375,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -208,7 +208,7 @@
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T07:40:27.582562+00:00",
+      "predicted_at": "2026-09-06T13:51:10.577383+00:00",
       "probability": 0.3923607007434761,
       "question": "Will T. Etcheverry win?",
       "rbp": null,
@@ -232,7 +232,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T07:40:27.582562+00:00",
+      "predicted_at": "2026-09-06T13:51:10.577383+00:00",
       "probability": 0.109593,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,
@@ -243,7 +243,7 @@
   "match_id": "1d5d107d-7221-413b-9c7b-2d9d4fa43601",
   "match_name": "A. Michelsen vs T. Etcheverry",
   "multiplier": 2,
-  "opening_time": "2026-09-06T15:00:00.000Z",
+  "opening_time": "2026-09-06T18:00:00.000Z",
   "player_a": "Alex Michelsen",
   "player_b": "Tomas Martin Etcheverry",
   "round_code": "R128"

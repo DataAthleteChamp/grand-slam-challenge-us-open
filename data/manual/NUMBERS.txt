@@ -1,36 +1,24 @@
-MANUAL NUMBERS - 110 questions across 11 matches
+MANUAL NUMBERS - 160 questions across 16 matches
 Sharpened x1.15 in log-odds on ACES ONLY.
 Everything else is left AT the bot number. Sharpening double faults cost
 0.41 RBP/question on the settled sample and duration 0.34, both significant;
 the winner number is already sharpened inside the bot, so doing it again here
 would compound. See SHARPEN_BY_TOKEN for the per-family measurements.
 
---- B. Shelton vs S. Tsitsipas   (starts 2026-09-06 15:00Z)
-     bot  74  ->  MANUAL  74   Will S. Tsitsipas win more than 70% of points played on their first serve?
-     bot  48  ->  MANUAL  48   Will B. Shelton hit more winners than S. Tsitsipas?
-     bot  32  ->  MANUAL  32   Will either player win a set 6–2, 6–1 or 6–0?
-     bot  41  ->  MANUAL  41   Will B. Shelton win?
-     bot  55  ->  MANUAL  56   Will B. Shelton record more aces than S. Tsitsipas?
-     bot  46  ->  MANUAL  46   Will B. Shelton record more double faults than S. Tsitsipas?
-     bot  44  ->  MANUAL  44   Will the match feature at least 2 tiebreak(s)?
-     bot  36  ->  MANUAL  36   Will the match last longer than 200 minutes?
-     bot  57  ->  MANUAL  57   Will B. Shelton commit more than 38 unforced errors?
-     bot  30  ->  MANUAL  30   Will the match require a deciding set?
+--- A. Sabalenka vs T. Townsend   (starts 2026-09-06 15:00Z)
+     bot  74  ->  MANUAL  74   Will A. Sabalenka win?
+     bot  55  ->  MANUAL  55   Will T. Townsend win more than 63% of points played on their first serve?
+     bot  48  ->  MANUAL  48   Will A. Sabalenka hit more winners than T. Townsend?
+     bot  58  ->  MANUAL  58   Will either player win a set 6–2, 6–1 or 6–0?
+     bot  57  ->  MANUAL  58   Will A. Sabalenka record more aces than T. Townsend?
+     bot  52  ->  MANUAL  52   Will A. Sabalenka record more double faults than T. Townsend?
+     bot  29  ->  MANUAL  29   Will the match feature at least 1 tiebreak(s)?
+     bot  59  ->  MANUAL  59   Will the match last longer than 85 minutes?
+     bot  31  ->  MANUAL  31   Will the match require a deciding set?
+     bot  33  ->  MANUAL  33   Will A. Sabalenka commit more than 31 unforced errors?
 
---- A. Kalinskaya vs E. Navarro   (starts 2026-09-06 15:00Z)
-     bot  60  ->  MANUAL  60   Will either player win a set 6–2, 6–1 or 6–0?
-     bot  49  ->  MANUAL  49   Will A. Kalinskaya win?
-     bot  48  ->  MANUAL  48   Will E. Navarro win more than 63% of points played on their first serve?
-     bot  46  ->  MANUAL  46   Will A. Kalinskaya hit more winners than E. Navarro?
-     bot  37  ->  MANUAL  35   Will A. Kalinskaya record more aces than E. Navarro?
-     bot  62  ->  MANUAL  62   Will A. Kalinskaya record more double faults than E. Navarro?
-     bot  25  ->  MANUAL  25   Will the match feature at least 1 tiebreak(s)?
-     bot  26  ->  MANUAL  26   Will the match last longer than 130 minutes?
-     bot  33  ->  MANUAL  33   Will A. Kalinskaya commit more than 32 unforced errors?
-     bot  36  ->  MANUAL  36   Will the match require a deciding set?
-
---- M. Kostyuk vs L. Noskova   (starts 2026-09-06 15:00Z)
-     bot  38  ->  MANUAL  38   Will L. Noskova win more than 67% of points played on their first serve?
+--- M. Kostyuk vs L. Noskova   (starts 2026-09-06 16:00Z)
+     bot  46  ->  MANUAL  46   Will L. Noskova win more than 67% of points played on their first serve?
      bot  38  ->  MANUAL  38   Will M. Kostyuk hit more winners than L. Noskova?
      bot  49  ->  MANUAL  49   Will M. Kostyuk win?
      bot  57  ->  MANUAL  57   Will either player win a set 6–2, 6–1 or 6–0?
@@ -41,45 +29,9 @@ would compound. See SHARPEN_BY_TOKEN for the per-family measurements.
      bot  37  ->  MANUAL  37   Will the match require a deciding set?
      bot  40  ->  MANUAL  40   Will M. Kostyuk commit more than 32 unforced errors?
 
---- D. Medvedev vs F. Tiafoe   (starts 2026-09-06 15:00Z)
-     bot  81  ->  MANUAL  81   Will D. Medvedev win?
-     bot  43  ->  MANUAL  43   Will F. Tiafoe win more than 69% of points played on their first serve?
-     bot  59  ->  MANUAL  59   Will D. Medvedev hit more winners than F. Tiafoe?
+--- T. Paul vs C. Alcaraz   (starts 2026-09-06 17:30Z)
      bot  71  ->  MANUAL  71   Will either player win a set 6–2, 6–1 or 6–0?
-     bot  94  ->  MANUAL  96   Will D. Medvedev record more aces than F. Tiafoe?
-     bot  68  ->  MANUAL  68   Will D. Medvedev record more double faults than F. Tiafoe?
-     bot  40  ->  MANUAL  40   Will the match feature at least 1 tiebreak(s)?
-     bot  52  ->  MANUAL  52   Will the match last longer than 165 minutes?
-     bot  35  ->  MANUAL  35   Will D. Medvedev commit more than 46 unforced errors?
-     bot  19  ->  MANUAL  19   Will the match require a deciding set?
-
---- J. Pegula vs S. Cirstea   (starts 2026-09-06 15:00Z)
-     bot  22  ->  MANUAL  22   Will J. Pegula win more than 73% of points played on their first serve?
-     bot  31  ->  MANUAL  31   Will S. Cirstea win?
-     bot  50  ->  MANUAL  50   Will S. Cirstea hit more winners than J. Pegula?
-     bot  61  ->  MANUAL  61   Will either player win a set 6–2, 6–1 or 6–0?
-     bot  39  ->  MANUAL  37   Will S. Cirstea record more aces than J. Pegula?
-     bot  43  ->  MANUAL  43   Will S. Cirstea record more double faults than J. Pegula?
-     bot  25  ->  MANUAL  25   Will the match feature at least 1 tiebreak(s)?
-     bot  52  ->  MANUAL  52   Will the match last longer than 95 minutes?
-     bot  33  ->  MANUAL  33   Will the match require a deciding set?
-     bot  28  ->  MANUAL  28   Will S. Cirstea commit more than 34 unforced errors?
-
---- A. Sabalenka vs T. Townsend   (starts 2026-09-06 15:00Z)
-     bot  74  ->  MANUAL  74   Will A. Sabalenka win?
-     bot  48  ->  MANUAL  48   Will T. Townsend win more than 63% of points played on their first serve?
-     bot  48  ->  MANUAL  48   Will A. Sabalenka hit more winners than T. Townsend?
-     bot  58  ->  MANUAL  58   Will either player win a set 6–2, 6–1 or 6–0?
-     bot  57  ->  MANUAL  58   Will A. Sabalenka record more aces than T. Townsend?
-     bot  52  ->  MANUAL  52   Will A. Sabalenka record more double faults than T. Townsend?
-     bot  29  ->  MANUAL  29   Will the match feature at least 1 tiebreak(s)?
-     bot  61  ->  MANUAL  61   Will the match last longer than 85 minutes?
-     bot  31  ->  MANUAL  31   Will the match require a deciding set?
-     bot  33  ->  MANUAL  33   Will A. Sabalenka commit more than 31 unforced errors?
-
---- T. Paul vs C. Alcaraz   (starts 2026-09-06 15:00Z)
-     bot  71  ->  MANUAL  71   Will either player win a set 6–2, 6–1 or 6–0?
-     bot  58  ->  MANUAL  58   Will T. Paul win more than 66% of points played on their first serve?
+     bot  62  ->  MANUAL  62   Will T. Paul win more than 66% of points played on their first serve?
      bot  61  ->  MANUAL  61   Will C. Alcaraz hit more winners than T. Paul?
      bot  74  ->  MANUAL  74   Will C. Alcaraz win?
      bot  50  ->  MANUAL  50   Will C. Alcaraz record more aces than T. Paul?
@@ -89,8 +41,8 @@ would compound. See SHARPEN_BY_TOKEN for the per-family measurements.
      bot  24  ->  MANUAL  24   Will the match require a deciding set?
      bot  42  ->  MANUAL  42   Will C. Alcaraz commit more than 44 unforced errors?
 
---- A. Michelsen vs T. Etcheverry   (starts 2026-09-06 15:00Z)
-     bot  42  ->  MANUAL  42   Will A. Michelsen win more than 74% of points played on their first serve?
+--- A. Michelsen vs T. Etcheverry   (starts 2026-09-06 18:00Z)
+     bot  51  ->  MANUAL  51   Will A. Michelsen win more than 74% of points played on their first serve?
      bot  39  ->  MANUAL  39   Will T. Etcheverry win?
      bot  44  ->  MANUAL  44   Will T. Etcheverry hit more winners than A. Michelsen?
      bot  61  ->  MANUAL  61   Will either player win a set 6–2, 6–1 or 6–0?
@@ -101,9 +53,117 @@ would compound. See SHARPEN_BY_TOKEN for the per-family measurements.
      bot  26  ->  MANUAL  26   Will T. Etcheverry commit more than 57 unforced errors?
      bot  28  ->  MANUAL  28   Will the match require a deciding set?
 
+--- D. Medvedev vs F. Tiafoe   (starts 2026-09-06 18:30Z)
+     bot  81  ->  MANUAL  81   Will D. Medvedev win?
+     bot  47  ->  MANUAL  47   Will F. Tiafoe win more than 69% of points played on their first serve?
+     bot  59  ->  MANUAL  59   Will D. Medvedev hit more winners than F. Tiafoe?
+     bot  71  ->  MANUAL  71   Will either player win a set 6–2, 6–1 or 6–0?
+     bot  94  ->  MANUAL  96   Will D. Medvedev record more aces than F. Tiafoe?
+     bot  68  ->  MANUAL  68   Will D. Medvedev record more double faults than F. Tiafoe?
+     bot  40  ->  MANUAL  40   Will the match feature at least 1 tiebreak(s)?
+     bot  52  ->  MANUAL  52   Will the match last longer than 165 minutes?
+     bot  35  ->  MANUAL  35   Will D. Medvedev commit more than 46 unforced errors?
+     bot  19  ->  MANUAL  19   Will the match require a deciding set?
+
+--- J. Pegula vs S. Cirstea   (starts 2026-09-06 18:30Z)
+     bot  29  ->  MANUAL  29   Will J. Pegula win more than 73% of points played on their first serve?
+     bot  31  ->  MANUAL  31   Will S. Cirstea win?
+     bot  50  ->  MANUAL  50   Will S. Cirstea hit more winners than J. Pegula?
+     bot  61  ->  MANUAL  61   Will either player win a set 6–2, 6–1 or 6–0?
+     bot  39  ->  MANUAL  37   Will S. Cirstea record more aces than J. Pegula?
+     bot  43  ->  MANUAL  43   Will S. Cirstea record more double faults than J. Pegula?
+     bot  25  ->  MANUAL  25   Will the match feature at least 1 tiebreak(s)?
+     bot  54  ->  MANUAL  54   Will the match last longer than 95 minutes?
+     bot  33  ->  MANUAL  33   Will the match require a deciding set?
+     bot  28  ->  MANUAL  28   Will S. Cirstea commit more than 34 unforced errors?
+
+--- B. Shelton vs S. Tsitsipas   (starts 2026-09-06 22:30Z)
+     bot  90  ->  MANUAL  90   Will S. Tsitsipas win more than 70% of points played on their first serve?
+     bot  48  ->  MANUAL  48   Will B. Shelton hit more winners than S. Tsitsipas?
+     bot  32  ->  MANUAL  32   Will either player win a set 6–2, 6–1 or 6–0?
+     bot  41  ->  MANUAL  41   Will B. Shelton win?
+     bot  55  ->  MANUAL  56   Will B. Shelton record more aces than S. Tsitsipas?
+     bot  46  ->  MANUAL  46   Will B. Shelton record more double faults than S. Tsitsipas?
+     bot  44  ->  MANUAL  44   Will the match feature at least 2 tiebreak(s)?
+     bot  34  ->  MANUAL  34   Will the match last longer than 200 minutes?
+     bot  57  ->  MANUAL  57   Will B. Shelton commit more than 38 unforced errors?
+     bot  30  ->  MANUAL  30   Will the match require a deciding set?
+
+--- A. Kalinskaya vs E. Navarro   (starts 2026-09-06 22:30Z)
+     bot  60  ->  MANUAL  60   Will either player win a set 6–2, 6–1 or 6–0?
+     bot  49  ->  MANUAL  49   Will A. Kalinskaya win?
+     bot  55  ->  MANUAL  55   Will E. Navarro win more than 63% of points played on their first serve?
+     bot  46  ->  MANUAL  46   Will A. Kalinskaya hit more winners than E. Navarro?
+     bot  37  ->  MANUAL  35   Will A. Kalinskaya record more aces than E. Navarro?
+     bot  62  ->  MANUAL  62   Will A. Kalinskaya record more double faults than E. Navarro?
+     bot  25  ->  MANUAL  25   Will the match feature at least 1 tiebreak(s)?
+     bot  26  ->  MANUAL  26   Will the match last longer than 130 minutes?
+     bot  33  ->  MANUAL  33   Will A. Kalinskaya commit more than 32 unforced errors?
+     bot  36  ->  MANUAL  36   Will the match require a deciding set?
+
+--- A. Zverev vs L. Darderi   (starts 2026-09-07 15:00Z)
+     bot  80  ->  MANUAL  80   Will A. Zverev win more than 75% of points played on their first serve?
+     bot  48  ->  MANUAL  48   Will L. Darderi hit more winners than A. Zverev?
+     bot  70  ->  MANUAL  70   Will either player win a set 6–2, 6–1 or 6–0?
+     bot  11  ->  MANUAL  11   Will L. Darderi win?
+     bot   8  ->  MANUAL   6   Will L. Darderi record more aces than A. Zverev?
+     bot  61  ->  MANUAL  61   Will L. Darderi record more double faults than A. Zverev?
+     bot  10  ->  MANUAL  10   Will the match feature at least 2 tiebreak(s)?
+     bot  19  ->  MANUAL  19   Will the match last longer than 185 minutes?
+     bot  50  ->  MANUAL  50   Will L. Darderi commit more than 36 unforced errors?
+     bot   9  ->  MANUAL   9   Will the match require a deciding set?
+
+--- N. Osaka vs E. Rybakina   (starts 2026-09-07 15:00Z)
+     bot  40  ->  MANUAL  40   Will N. Osaka win?
+     bot  46  ->  MANUAL  46   Will N. Osaka hit more winners than E. Rybakina?
+     bot  42  ->  MANUAL  42   Will either player win a set 6–2, 6–1 or 6–0?
+     bot  31  ->  MANUAL  31   Will E. Rybakina win more than 77% of points played on their first serve?
+     bot  41  ->  MANUAL  40   Will N. Osaka record more aces than E. Rybakina?
+     bot  44  ->  MANUAL  44   Will N. Osaka record more double faults than E. Rybakina?
+     bot   8  ->  MANUAL   8   Will the match feature at least 2 tiebreak(s)?
+     bot  64  ->  MANUAL  64   Will the match last longer than 95 minutes?
+     bot  36  ->  MANUAL  36   Will the match require a deciding set?
+     bot  47  ->  MANUAL  47   Will N. Osaka commit more than 27 unforced errors?
+
+--- I. Jović vs C. Gauff   (starts 2026-09-07 15:00Z)
+     bot  69  ->  MANUAL  69   Will C. Gauff win?
+     bot  64  ->  MANUAL  64   Will either player win a set 6–2, 6–1 or 6–0?
+     bot  54  ->  MANUAL  54   Will I. Jovic win more than 60% of points played on their first serve?
+     bot  31  ->  MANUAL  31   Will C. Gauff hit more winners than I. Jovic?
+     bot  62  ->  MANUAL  64   Will C. Gauff record more aces than I. Jovic?
+     bot  63  ->  MANUAL  63   Will C. Gauff record more double faults than I. Jovic?
+     bot  24  ->  MANUAL  24   Will the match feature at least 1 tiebreak(s)?
+     bot  32  ->  MANUAL  32   Will the match last longer than 120 minutes?
+     bot  33  ->  MANUAL  33   Will the match require a deciding set?
+     bot  36  ->  MANUAL  36   Will C. Gauff commit more than 32 unforced errors?
+
+--- A. Gea vs B. Van De Zandschulp   (starts 2026-09-07 15:00Z)
+     bot  63  ->  MANUAL  63   Will B. van de Zandschulp win more than 69% of points played on their first serve?
+     bot  69  ->  MANUAL  69   Will either player win a set 6–2, 6–1 or 6–0?
+     bot  42  ->  MANUAL  42   Will A. Gea win?
+     bot  49  ->  MANUAL  49   Will A. Gea hit more winners than B. van de Zandschulp?
+     bot  30  ->  MANUAL  27   Will A. Gea record more aces than B. van de Zandschulp?
+     bot  35  ->  MANUAL  35   Will A. Gea record more double faults than B. van de Zandschulp?
+     bot  12  ->  MANUAL  12   Will the match feature at least 2 tiebreak(s)?
+     bot  50  ->  MANUAL  50   Will the match last longer than 175 minutes?
+     bot  50  ->  MANUAL  50   Will A. Gea commit more than 46 unforced errors?
+     bot  29  ->  MANUAL  29   Will the match require a deciding set?
+
+--- K. Khachanov vs L. Tien   (starts 2026-09-07 15:00Z)
+     bot  73  ->  MANUAL  73   Will L. Tien win more than 66% of points played on their first serve?
+     bot  66  ->  MANUAL  66   Will either player win a set 6–2, 6–1 or 6–0?
+     bot  62  ->  MANUAL  62   Will K. Khachanov win?
+     bot  51  ->  MANUAL  51   Will K. Khachanov hit more winners than L. Tien?
+     bot  77  ->  MANUAL  80   Will K. Khachanov record more aces than L. Tien?
+     bot  29  ->  MANUAL  29   Will K. Khachanov record more double faults than L. Tien?
+     bot  47  ->  MANUAL  47   Will the match feature at least 1 tiebreak(s)?
+     bot  25  ->  MANUAL  25   Will the match last longer than 205 minutes?
+     bot  39  ->  MANUAL  39   Will K. Khachanov commit more than 45 unforced errors?
+     bot  28  ->  MANUAL  28   Will the match require a deciding set?
+
 --- I. Swiatek vs Q. Zheng   (starts 2026-09-07 15:00Z)
      bot  78  ->  MANUAL  78   Will I. Swiatek win?
-     bot  48  ->  MANUAL  48   Will Q. Zheng win more than 61% of points played on their first serve?
+     bot  53  ->  MANUAL  53   Will Q. Zheng win more than 61% of points played on their first serve?
      bot  65  ->  MANUAL  65   Will either player win a set 6–2, 6–1 or 6–0?
      bot  52  ->  MANUAL  52   Will I. Swiatek hit more winners than Q. Zheng?
      bot  23  ->  MANUAL  20   Will I. Swiatek record more aces than Q. Zheng?
@@ -117,7 +177,7 @@ would compound. See SHARPEN_BY_TOKEN for the per-family measurements.
      bot  69  ->  MANUAL  69   Will either player win a set 6–2, 6–1 or 6–0?
      bot  50  ->  MANUAL  50   Will A. Blockx win?
      bot  51  ->  MANUAL  51   Will A. Blockx hit more winners than F. Cerundolo?
-     bot  62  ->  MANUAL  62   Will F. Cerundolo win more than 67% of points played on their first serve?
+     bot  69  ->  MANUAL  69   Will F. Cerundolo win more than 67% of points played on their first serve?
      bot  64  ->  MANUAL  66   Will A. Blockx record more aces than F. Cerundolo?
      bot  33  ->  MANUAL  33   Will A. Blockx record more double faults than F. Cerundolo?
      bot  45  ->  MANUAL  45   Will the match feature at least 1 tiebreak(s)?
@@ -127,7 +187,7 @@ would compound. See SHARPEN_BY_TOKEN for the per-family measurements.
 
 --- M. Andreeva vs A. Potapova   (starts 2026-09-07 15:00Z)
      bot  71  ->  MANUAL  71   Will M. Andreeva win?
-     bot  45  ->  MANUAL  45   Will A. Potapova win more than 60% of points played on their first serve?
+     bot  47  ->  MANUAL  47   Will A. Potapova win more than 60% of points played on their first serve?
      bot  66  ->  MANUAL  66   Will M. Andreeva hit more winners than A. Potapova?
      bot  67  ->  MANUAL  67   Will either player win a set 6–2, 6–1 or 6–0?
      bot  54  ->  MANUAL  55   Will M. Andreeva record more aces than A. Potapova?

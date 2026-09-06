@@ -1,5 +1,5 @@
 {
-  "closing_time": "2026-09-07T03:00:00.000Z",
+  "closing_time": "2026-09-07T06:30:00.000Z",
   "draw": "womens",
   "entries": [
     {
@@ -13,17 +13,17 @@
       "market": null,
       "market_id": "0e6f4182-b8ca-41a9-9b34-b31b9e44a5f5",
       "market_weight": 0.0,
-      "model": 0.503723735373998,
+      "model": 0.5241586768103094,
       "notes": [
-        "total games: simulator 20.7, Pinnacle 23.0, used 22.1 at weight 0.60"
+        "total games: simulator 20.7, Pinnacle 23.5, used 22.4 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T07:40:27.581303+00:00",
-      "probability": 0.503723735373998,
+      "predicted_at": "2026-09-06T13:51:10.578009+00:00",
+      "probability": 0.5241586768103094,
       "question": "Will the match last longer than 95 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 50
+      "submission": 53
     },
     {
       "base_rate": 0.4357,
@@ -42,7 +42,7 @@
         "outcome coupling: P(win)=0.338, delta=+0.76"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T07:40:27.581303+00:00",
+      "predicted_at": "2026-09-06T13:51:10.578009+00:00",
       "probability": 0.40379325920300646,
       "question": "Will S. Cirstea record more aces than J. Pegula?",
       "rbp": null,
@@ -65,7 +65,7 @@
         "exposure 69 service points from 21.3 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T07:40:27.581303+00:00",
+      "predicted_at": "2026-09-06T13:51:10.578009+00:00",
       "probability": 0.4273444350693708,
       "question": "Will S. Cirstea record more double faults than J. Pegula?",
       "rbp": null,
@@ -89,7 +89,7 @@
         "base-rate pull 0.48 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T07:40:27.581303+00:00",
+      "predicted_at": "2026-09-06T13:51:10.578009+00:00",
       "probability": 0.2796236370790457,
       "question": "Will S. Cirstea commit more than 34 unforced errors?",
       "rbp": null,
@@ -107,19 +107,19 @@
       "market": null,
       "market_id": "83b2998d-d784-40ea-9c02-20283729f0d2",
       "market_weight": 0.0,
-      "model": 0.22330924435879873,
+      "model": 0.28525749710759374,
       "notes": [
         "first-serve rate: expected 0.677 vs threshold 0.730, sd 0.094 (0.074 sampling on 40 first serves + 0.058 form)",
-        "model weighted 75% against the base rate 0.037 instead of the confidence pull",
+        "model weighted 100% against the base rate 0.037 instead of the confidence pull",
         "base-rate pull 0.43 suppressed for first_serve_comparison"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T07:40:27.581303+00:00",
-      "probability": 0.22330924435879873,
+      "predicted_at": "2026-09-06T13:51:10.578009+00:00",
+      "probability": 0.28525749710759374,
       "question": "Will J. Pegula win more than 73% of points played on their first serve?",
       "rbp": null,
       "settled_at": "",
-      "submission": 17
+      "submission": 24
     },
     {
       "base_rate": 0.4791,
@@ -138,7 +138,7 @@
         "outcome coupling: P(win)=0.338, delta=+0.94"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T07:40:27.581303+00:00",
+      "predicted_at": "2026-09-06T13:51:10.578009+00:00",
       "probability": 0.5175262272587438,
       "question": "Will S. Cirstea hit more winners than J. Pegula?",
       "rbp": null,
@@ -159,7 +159,7 @@
       "model": 0.2855,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-06T07:40:27.581303+00:00",
+      "predicted_at": "2026-09-06T13:51:10.578009+00:00",
       "probability": 0.2855,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -180,7 +180,7 @@
       "model": 0.6585,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-06T07:40:27.581303+00:00",
+      "predicted_at": "2026-09-06T13:51:10.578009+00:00",
       "probability": 0.6585,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -205,7 +205,7 @@
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T07:40:27.581303+00:00",
+      "predicted_at": "2026-09-06T13:51:10.578009+00:00",
       "probability": 0.3274586484085224,
       "question": "Will S. Cirstea win?",
       "rbp": null,
@@ -229,7 +229,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T07:40:27.581303+00:00",
+      "predicted_at": "2026-09-06T13:51:10.578009+00:00",
       "probability": 0.18762149999999997,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
@@ -240,7 +240,7 @@
   "match_id": "d6adf8a9-8e75-4d62-a446-55d2b89af469",
   "match_name": "J. Pegula vs S. Cirstea",
   "multiplier": 2,
-  "opening_time": "2026-09-06T15:00:00.000Z",
+  "opening_time": "2026-09-06T18:30:00.000Z",
   "player_a": "Jessica Pegula",
   "player_b": "Sorana Cirstea",
   "round_code": "R128"

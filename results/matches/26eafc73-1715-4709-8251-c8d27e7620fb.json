@@ -13,17 +13,17 @@
       "market": null,
       "market_id": "2b05725c-c2fa-4847-acf0-8010e9e9da5d",
       "market_weight": 0.0,
-      "model": 0.5902548751940933,
+      "model": 0.5666028942069017,
       "notes": [
-        "total games: simulator 21.0, Pinnacle 21.0, used 21.0 at weight 0.60"
+        "total games: simulator 21.0, Pinnacle 20.4, used 20.7 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T07:40:27.580778+00:00",
-      "probability": 0.5902548751940933,
+      "predicted_at": "2026-09-06T13:51:10.575118+00:00",
+      "probability": 0.5666028942069017,
       "question": "Will the match last longer than 85 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 61
+      "submission": 58
     },
     {
       "base_rate": 0.4357,
@@ -43,7 +43,7 @@
         "bovada aces line 0.364 blended at 35%"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T07:40:27.580778+00:00",
+      "predicted_at": "2026-09-06T13:51:10.575118+00:00",
       "probability": 0.5555249763664394,
       "question": "Will A. Sabalenka record more aces than T. Townsend?",
       "rbp": null,
@@ -67,7 +67,7 @@
         "bovada double_faults line 0.367 blended at 35%"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T07:40:27.580778+00:00",
+      "predicted_at": "2026-09-06T13:51:10.575118+00:00",
       "probability": 0.5200642299663457,
       "question": "Will A. Sabalenka record more double faults than T. Townsend?",
       "rbp": null,
@@ -91,7 +91,7 @@
         "base-rate pull 0.48 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T07:40:27.580778+00:00",
+      "predicted_at": "2026-09-06T13:51:10.575118+00:00",
       "probability": 0.33495854248627066,
       "question": "Will A. Sabalenka commit more than 31 unforced errors?",
       "rbp": null,
@@ -109,19 +109,19 @@
       "market": null,
       "market_id": "007d9664-e148-4df6-93ec-100a0d6ca222",
       "market_weight": 0.0,
-      "model": 0.47917879467943003,
+      "model": 0.5537407479855778,
       "notes": [
         "first-serve rate: expected 0.643 vs threshold 0.630, sd 0.095 (0.076 sampling on 40 first serves + 0.058 form)",
-        "model weighted 75% against the base rate 0.255 instead of the confidence pull",
+        "model weighted 100% against the base rate 0.255 instead of the confidence pull",
         "base-rate pull 0.56 suppressed for first_serve_comparison"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T07:40:27.580778+00:00",
-      "probability": 0.47917879467943003,
+      "predicted_at": "2026-09-06T13:51:10.575118+00:00",
+      "probability": 0.5537407479855778,
       "question": "Will T. Townsend win more than 63% of points played on their first serve?",
       "rbp": null,
       "settled_at": "",
-      "submission": 47
+      "submission": 57
     },
     {
       "base_rate": 0.4791,
@@ -140,7 +140,7 @@
         "outcome coupling: P(win)=0.717, delta=+0.94"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T07:40:27.580778+00:00",
+      "predicted_at": "2026-09-06T13:51:10.575118+00:00",
       "probability": 0.45871660151471344,
       "question": "Will A. Sabalenka hit more winners than T. Townsend?",
       "rbp": null,
@@ -161,7 +161,7 @@
       "model": 0.27575,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-06T07:40:27.580778+00:00",
+      "predicted_at": "2026-09-06T13:51:10.575118+00:00",
       "probability": 0.27575,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -182,7 +182,7 @@
       "model": 0.614,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-06T07:40:27.580778+00:00",
+      "predicted_at": "2026-09-06T13:51:10.575118+00:00",
       "probability": 0.614,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -207,7 +207,7 @@
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T07:40:27.580778+00:00",
+      "predicted_at": "2026-09-06T13:51:10.575118+00:00",
       "probability": 0.7280517146873535,
       "question": "Will A. Sabalenka win?",
       "rbp": null,
@@ -231,7 +231,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T07:40:27.580778+00:00",
+      "predicted_at": "2026-09-06T13:51:10.575118+00:00",
       "probability": 0.22599049999999996,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

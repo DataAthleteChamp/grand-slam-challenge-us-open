@@ -1,5 +1,5 @@
 {
-  "closing_time": "2026-09-07T03:00:00.000Z",
+  "closing_time": "2026-09-07T04:00:00.000Z",
   "draw": "womens",
   "entries": [
     {
@@ -18,7 +18,7 @@
         "total games: simulator 21.3, Pinnacle 24.9, used 23.5 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T07:40:27.583284+00:00",
+      "predicted_at": "2026-09-06T13:51:10.575993+00:00",
       "probability": 0.462403964604183,
       "question": "Will the match last longer than 105 minutes?",
       "rbp": null,
@@ -42,7 +42,7 @@
         "outcome coupling: P(win)=0.490, delta=+0.76"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T07:40:27.583284+00:00",
+      "predicted_at": "2026-09-06T13:51:10.575993+00:00",
       "probability": 0.36048568681907167,
       "question": "Will M. Kostyuk record more aces than L. Noskova?",
       "rbp": null,
@@ -65,7 +65,7 @@
         "exposure 70 service points from 21.7 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T07:40:27.583284+00:00",
+      "predicted_at": "2026-09-06T13:51:10.575993+00:00",
       "probability": 0.511588838238685,
       "question": "Will M. Kostyuk record more double faults than L. Noskova?",
       "rbp": null,
@@ -89,7 +89,7 @@
         "base-rate pull 0.48 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T07:40:27.583284+00:00",
+      "predicted_at": "2026-09-06T13:51:10.575993+00:00",
       "probability": 0.3979027043362416,
       "question": "Will M. Kostyuk commit more than 32 unforced errors?",
       "rbp": null,
@@ -107,19 +107,19 @@
       "market": null,
       "market_id": "30a9f3e8-6cf0-4fc3-8c31-014c28f999d8",
       "market_weight": 0.0,
-      "model": 0.3822584989145011,
+      "model": 0.46494371927661937,
       "notes": [
         "first-serve rate: expected 0.662 vs threshold 0.670, sd 0.095 (0.075 sampling on 40 first serves + 0.058 form)",
-        "model weighted 75% against the base rate 0.134 instead of the confidence pull",
+        "model weighted 100% against the base rate 0.134 instead of the confidence pull",
         "base-rate pull 0.57 suppressed for first_serve_comparison"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T07:40:27.583284+00:00",
-      "probability": 0.3822584989145011,
+      "predicted_at": "2026-09-06T13:51:10.575993+00:00",
+      "probability": 0.46494371927661937,
       "question": "Will L. Noskova win more than 67% of points played on their first serve?",
       "rbp": null,
       "settled_at": "",
-      "submission": 35
+      "submission": 46
     },
     {
       "base_rate": 0.4791,
@@ -138,7 +138,7 @@
         "outcome coupling: P(win)=0.490, delta=+0.94"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T07:40:27.583284+00:00",
+      "predicted_at": "2026-09-06T13:51:10.575993+00:00",
       "probability": 0.37256909772413405,
       "question": "Will M. Kostyuk hit more winners than L. Noskova?",
       "rbp": null,
@@ -159,7 +159,7 @@
       "model": 0.30425,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-06T07:40:27.583284+00:00",
+      "predicted_at": "2026-09-06T13:51:10.575993+00:00",
       "probability": 0.30425,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -180,7 +180,7 @@
       "model": 0.613,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-06T07:40:27.583284+00:00",
+      "predicted_at": "2026-09-06T13:51:10.575993+00:00",
       "probability": 0.613,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -205,7 +205,7 @@
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T07:40:27.583284+00:00",
+      "predicted_at": "2026-09-06T13:51:10.575993+00:00",
       "probability": 0.48967653714600556,
       "question": "Will M. Kostyuk win?",
       "rbp": null,
@@ -229,7 +229,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T07:40:27.583284+00:00",
+      "predicted_at": "2026-09-06T13:51:10.575993+00:00",
       "probability": 0.21536124999999998,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
@@ -240,7 +240,7 @@
   "match_id": "b1049ab4-684a-4b9e-9e65-01778e2b413b",
   "match_name": "M. Kostyuk vs L. Noskova",
   "multiplier": 2,
-  "opening_time": "2026-09-06T15:00:00.000Z",
+  "opening_time": "2026-09-06T16:00:00.000Z",
   "player_a": "Marta Kostyuk",
   "player_b": "Linda Noskova",
   "round_code": "R128"

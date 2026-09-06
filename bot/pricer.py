@@ -292,6 +292,37 @@ EXTREMISE_ALPHA = {Family.MATCH_WINNER: 1.35}
 #: captured matches settle.
 COUNT_MARKET_WEIGHT = 0.35
 
+#: Per-cell override of COUNT_MARKET_WEIGHT.
+#:
+#: The blanket 0.35 is right where our own model demonstrably carries signal. It
+#: is far too timid where it does not, and there is one cell where we can show it
+#: carries none at all.
+#:
+#: Replacing every women's double-fault answer with its own base rate scores
+#: **-0.00 RBP/question, CI [-1.40,+1.45]** across 72 settled questions. That is
+#: not a small edge, it is the absence of one: our model and a constant are
+#: indistinguishable there. The family is also our single largest skill drain at
+#: -281 points, with an AUC of 0.669 against the crowd's 0.904.
+#:
+#: When the incumbent is worth nothing, the usual argument for caution inverts.
+#: Deferring most of the way to a bookmaker that prices this exact question with
+#: its own money risks very little, because there is no signal being displaced.
+#: Bovada's de-vigged tie mass already reproduces our measured constants (0.1107
+#: against 0.1008 ATP and 0.1141 WTA), so its distributional shape is sane.
+#:
+#: Still capped below 1.0: no Bovada-priced question has settled yet, the market
+#: carries a 1.100 overround against 1.059 on its own moneyline, and our model
+#: being useless on average does not prove it is useless on every question.
+#: Re-fit the moment the captured snapshots settle.
+COUNT_MARKET_WEIGHT_BY_CELL = {
+    ("WTA", "double_faults"): 0.75,
+}
+
+
+def count_market_weight(tour: str, stat: str) -> float:
+    """Weight for a bookmaker count line, per tour and statistic."""
+    return COUNT_MARKET_WEIGHT_BY_CELL.get((tour, stat), COUNT_MARKET_WEIGHT)
+
 #: Unforced-error count model, all measured on the OFFICIAL US Open point feed
 #: (data/raw/pointbypoint, 1,254 matches / 2,508 player-matches, 2019-2024) -
 #: the same source these questions settle on, not volunteer charting.
@@ -630,7 +661,7 @@ class Pricer:
         weight = 0.0
         if quote is not None:
             market = float(quote)
-            weight = COUNT_MARKET_WEIGHT
+            weight = count_market_weight(context.tour, stat)
             model = (1.0 - weight) * model + weight * market
             notes.append(
                 f"bovada {stat} line {market:.3f} blended at {weight:.0%}"

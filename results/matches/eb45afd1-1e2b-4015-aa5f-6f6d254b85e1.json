@@ -1,5 +1,5 @@
 {
-  "closing_time": "2026-09-07T03:00:00.000Z",
+  "closing_time": "2026-09-07T06:30:00.000Z",
   "draw": "mens",
   "entries": [
     {
@@ -13,13 +13,13 @@
       "market": null,
       "market_id": "675ba9d1-d8e4-41ab-8028-8d9b142cb920",
       "market_weight": 0.0,
-      "model": 0.5161155699904629,
+      "model": 0.5158620814384554,
       "notes": [
         "total games: simulator 34.1, Pinnacle 40.0, used 37.6 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T07:40:27.581812+00:00",
-      "probability": 0.5161155699904629,
+      "predicted_at": "2026-09-06T13:51:10.578916+00:00",
+      "probability": 0.5158620814384554,
       "question": "Will the match last longer than 165 minutes?",
       "rbp": null,
       "settled_at": "",
@@ -44,7 +44,7 @@
         "bovada aces line 0.907 blended at 35%"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T07:40:27.581812+00:00",
+      "predicted_at": "2026-09-06T13:51:10.578916+00:00",
       "probability": 0.9344105189946983,
       "question": "Will D. Medvedev record more aces than F. Tiafoe?",
       "rbp": null,
@@ -68,7 +68,7 @@
         "bovada double_faults line 0.685 blended at 35%"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T07:40:27.581812+00:00",
+      "predicted_at": "2026-09-06T13:51:10.578916+00:00",
       "probability": 0.6784553989268127,
       "question": "Will D. Medvedev record more double faults than F. Tiafoe?",
       "rbp": null,
@@ -92,7 +92,7 @@
         "base-rate pull 0.48 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T07:40:27.581812+00:00",
+      "predicted_at": "2026-09-06T13:51:10.578916+00:00",
       "probability": 0.346688701407032,
       "question": "Will D. Medvedev commit more than 46 unforced errors?",
       "rbp": null,
@@ -110,19 +110,19 @@
       "market": null,
       "market_id": "bd633914-7fc9-429e-846f-63dbb0d517d6",
       "market_weight": 0.0,
-      "model": 0.4339188822254176,
+      "model": 0.47162925457477956,
       "notes": [
         "first-serve rate: expected 0.684 vs threshold 0.690, sd 0.079 (0.056 sampling on 70 first serves + 0.056 form)",
-        "model weighted 75% against the base rate 0.321 instead of the confidence pull",
+        "model weighted 100% against the base rate 0.321 instead of the confidence pull",
         "base-rate pull 0.58 suppressed for first_serve_comparison"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T07:40:27.581812+00:00",
-      "probability": 0.4339188822254176,
+      "predicted_at": "2026-09-06T13:51:10.578916+00:00",
+      "probability": 0.47162925457477956,
       "question": "Will F. Tiafoe win more than 69% of points played on their first serve?",
       "rbp": null,
       "settled_at": "",
-      "submission": 42
+      "submission": 46
     },
     {
       "base_rate": 0.4904,
@@ -141,7 +141,7 @@
         "outcome coupling: P(win)=0.802, delta=+0.79"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T07:40:27.581812+00:00",
+      "predicted_at": "2026-09-06T13:51:10.578916+00:00",
       "probability": 0.5849795320718875,
       "question": "Will D. Medvedev hit more winners than F. Tiafoe?",
       "rbp": null,
@@ -162,7 +162,7 @@
       "model": 0.19525,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-06T07:40:27.581812+00:00",
+      "predicted_at": "2026-09-06T13:51:10.578916+00:00",
       "probability": 0.19525,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -183,7 +183,7 @@
       "model": 0.7535,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-06T07:40:27.581812+00:00",
+      "predicted_at": "2026-09-06T13:51:10.578916+00:00",
       "probability": 0.7535,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -208,7 +208,7 @@
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T07:40:27.581812+00:00",
+      "predicted_at": "2026-09-06T13:51:10.578916+00:00",
       "probability": 0.8072970634180158,
       "question": "Will D. Medvedev win?",
       "rbp": null,
@@ -232,7 +232,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T07:40:27.581812+00:00",
+      "predicted_at": "2026-09-06T13:51:10.578916+00:00",
       "probability": 0.328421,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
@@ -243,7 +243,7 @@
   "match_id": "eb45afd1-1e2b-4015-aa5f-6f6d254b85e1",
   "match_name": "D. Medvedev vs F. Tiafoe",
   "multiplier": 2,
-  "opening_time": "2026-09-06T15:00:00.000Z",
+  "opening_time": "2026-09-06T18:30:00.000Z",
   "player_a": "Daniil Medvedev",
   "player_b": "Frances Tiafoe",
   "round_code": "R128"
