@@ -1,5 +1,5 @@
 {
-  "closing_time": "2026-09-08T03:00:00.000Z",
+  "closing_time": "2026-09-08T07:30:00.000Z",
   "draw": "mens",
   "entries": [
     {
@@ -13,13 +13,13 @@
       "market": null,
       "market_id": "c9d9d991-6b1f-4ce2-a56b-98161870ae64",
       "market_weight": 0.0,
-      "model": 0.23836977923481933,
+      "model": 0.2392069919759589,
       "notes": [
         "total games: simulator 36.3, Pinnacle 39.5, used 38.2 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T15:15:18.317550+00:00",
-      "probability": 0.23836977923481933,
+      "predicted_at": "2026-09-07T16:12:43.783333+00:00",
+      "probability": 0.2392069919759589,
       "question": "Will the match last longer than 205 minutes?",
       "rbp": null,
       "settled_at": "",
@@ -44,7 +44,7 @@
         "bovada aces line 0.776 blended at 35%"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T15:15:18.317550+00:00",
+      "predicted_at": "2026-09-07T16:12:43.783333+00:00",
       "probability": 0.7670282705896989,
       "question": "Will K. Khachanov record more aces than L. Tien?",
       "rbp": null,
@@ -68,7 +68,7 @@
         "bovada double_faults line 0.307 blended at 35%"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T15:15:18.317550+00:00",
+      "predicted_at": "2026-09-07T16:12:43.783333+00:00",
       "probability": 0.29002240388744244,
       "question": "Will K. Khachanov record more double faults than L. Tien?",
       "rbp": null,
@@ -92,7 +92,7 @@
         "base-rate pull 0.48 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T15:15:18.317550+00:00",
+      "predicted_at": "2026-09-07T16:12:43.783333+00:00",
       "probability": 0.394087767420933,
       "question": "Will K. Khachanov commit more than 45 unforced errors?",
       "rbp": null,
@@ -117,7 +117,7 @@
         "base-rate pull 0.43 suppressed for first_serve_comparison"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T15:15:18.317550+00:00",
+      "predicted_at": "2026-09-07T16:12:43.783333+00:00",
       "probability": 0.7257084827045519,
       "question": "Will L. Tien win more than 66% of points played on their first serve?",
       "rbp": null,
@@ -141,7 +141,7 @@
         "outcome coupling: P(win)=0.600, delta=+0.79"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T15:15:18.317550+00:00",
+      "predicted_at": "2026-09-07T16:12:43.783333+00:00",
       "probability": 0.5098423028268775,
       "question": "Will K. Khachanov hit more winners than L. Tien?",
       "rbp": null,
@@ -162,7 +162,7 @@
       "model": 0.25975,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-06T15:15:18.317550+00:00",
+      "predicted_at": "2026-09-07T16:12:43.783333+00:00",
       "probability": 0.25975,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -183,7 +183,7 @@
       "model": 0.7145,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-06T15:15:18.317550+00:00",
+      "predicted_at": "2026-09-07T16:12:43.783333+00:00",
       "probability": 0.7145,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -208,7 +208,7 @@
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T15:15:18.317550+00:00",
+      "predicted_at": "2026-09-07T16:12:43.783333+00:00",
       "probability": 0.6081711531831822,
       "question": "Will K. Khachanov win?",
       "rbp": null,
@@ -232,7 +232,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T15:15:18.317550+00:00",
+      "predicted_at": "2026-09-07T16:12:43.783333+00:00",
       "probability": 0.387214,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
@@ -243,7 +243,7 @@
   "match_id": "a3671003-5f2d-4834-a4d7-e909d7b977d1",
   "match_name": "K. Khachanov vs L. Tien",
   "multiplier": 2,
-  "opening_time": "2026-09-07T15:00:00.000Z",
+  "opening_time": "2026-09-07T19:30:00.000Z",
   "player_a": "Karen Khachanov",
   "player_b": "Learner Tien",
   "round_code": "R128"

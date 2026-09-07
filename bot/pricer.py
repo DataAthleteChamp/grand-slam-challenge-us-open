@@ -290,34 +290,38 @@ EXTREMISE_ALPHA = {Family.MATCH_WINNER: 1.35}
 #: risk posture, not a measurement. scripts/fetch_bovada.py snapshots quotes with
 #: a UTC timestamp so that history accumulates; re-fit this the moment the
 #: captured matches settle.
-COUNT_MARKET_WEIGHT = 0.35
+COUNT_MARKET_WEIGHT = 0.85
 
-#: Per-cell override of COUNT_MARKET_WEIGHT.
+#: **Now measured, no longer a risk posture.** Twenty Bovada-priced ace and
+#: double-fault questions have settled, and the line beats both us and the crowd:
 #:
-#: The blanket 0.35 is right where our own model demonstrably carries signal. It
-#: is far too timid where it does not, and there is one cell where we can show it
-#: carries none at all.
+#:     AUC   Bovada 0.808   crowd 0.737   ours 0.717
 #:
-#: Replacing every women's double-fault answer with its own base rate scores
-#: **-0.00 RBP/question, CI [-1.40,+1.45]** across 72 settled questions. That is
-#: not a small edge, it is the absence of one: our model and a constant are
-#: indistinguishable there. The family is also our single largest skill drain at
-#: -281 points, with an AUC of 0.669 against the crowd's 0.904.
+#: Replaying those questions at a range of weights is monotone increasing and
+#: agrees across the two independent lanes:
 #:
-#: When the incumbent is worth nothing, the usual argument for caution inverts.
-#: Deferring most of the way to a bookmaker that prices this exact question with
-#: its own money risks very little, because there is no signal being displaced.
-#: Bovada's de-vigged tie mass already reproduces our measured constants (0.1107
-#: against 0.1008 ATP and 0.1141 WTA), so its distributional shape is sane.
+#:     weight   honest gain              scenario gain
+#:     0.35     -0.55 [-1.89,+0.52]      -0.62 [-1.62,+0.13]
+#:     0.65     +1.58 [+0.20,+3.01] SIG  +1.27 [-0.01,+2.68]
+#:     0.80     +2.46 [+0.56,+4.43] SIG  +2.09 [+0.28,+3.98] SIG
+#:     0.90     +2.98 [+0.71,+5.29] SIG  +2.59 [+0.40,+4.90] SIG
+#:     1.00     +3.44 [+0.74,+6.17] SIG  +3.05 [+0.40,+5.76] SIG
 #:
-#: Still capped below 1.0: no Bovada-priced question has settled yet, the market
-#: carries a 1.100 overround against 1.059 on its own moneyline, and our model
-#: being useless on average does not prove it is useless on every question.
-#: Re-fit the moment the captured snapshots settle.
-COUNT_MARKET_WEIGHT_BY_CELL = {
-    ("WTA", "double_faults"): 0.75,
+#: The previous 0.35 was measurably too timid - it is the only weight tested that
+#: is negative in both lanes. It was chosen when nothing had settled, on the
+#: reasoning that a 1.100 overround meant retail-grade pricing. That reasoning was
+#: wrong: the margin says how much Bovada charges, not how well it forecasts.
+#:
+#: 0.85 rather than 1.00 because the point estimate keeps rising to the edge of
+#: the grid on n=20, and a weight of exactly 1.0 would discard our own model
+#: entirely - leaving nothing behind a stale or mispulled quote. The remaining
+#: 15% is insurance, not conviction.
+
+COUNT_MARKET_WEIGHT_BY_CELL: dict[tuple[str, str], float] = {
+    # The women's double-fault override is retired: the blanket weight is now
+    # higher than the 0.75 it used to carry, and the settled evidence covers both
+    # tours rather than the one cell where our model was known to be worthless.
 }
-
 
 def count_market_weight(tour: str, stat: str) -> float:
     """Weight for a bookmaker count line, per tour and statistic."""

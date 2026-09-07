@@ -1,5 +1,5 @@
 {
-  "closing_time": "2026-09-08T03:00:00.000Z",
+  "closing_time": "2026-09-08T10:30:00.000Z",
   "draw": "mens",
   "entries": [
     {
@@ -13,13 +13,13 @@
       "market": null,
       "market_id": "1cf00dd3-8a4c-4a14-9376-f563b9cde215",
       "market_weight": 0.0,
-      "model": 0.2028781330900784,
+      "model": 0.20257281925334358,
       "notes": [
         "total games: simulator 31.9, Pinnacle 33.0, used 32.6 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T15:15:18.316952+00:00",
-      "probability": 0.2028781330900784,
+      "predicted_at": "2026-09-07T16:12:43.784661+00:00",
+      "probability": 0.20257281925334358,
       "question": "Will the match last longer than 185 minutes?",
       "rbp": null,
       "settled_at": "",
@@ -44,7 +44,7 @@
         "bovada aces line 0.165 blended at 35%"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T15:15:18.316952+00:00",
+      "predicted_at": "2026-09-07T16:12:43.784661+00:00",
       "probability": 0.08683197085562738,
       "question": "Will L. Darderi record more aces than A. Zverev?",
       "rbp": null,
@@ -68,7 +68,7 @@
         "bovada double_faults line 0.744 blended at 35%"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T15:15:18.316952+00:00",
+      "predicted_at": "2026-09-07T16:12:43.784661+00:00",
       "probability": 0.607305984481745,
       "question": "Will L. Darderi record more double faults than A. Zverev?",
       "rbp": null,
@@ -92,7 +92,7 @@
         "base-rate pull 0.48 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T15:15:18.316952+00:00",
+      "predicted_at": "2026-09-07T16:12:43.784661+00:00",
       "probability": 0.5009131585647919,
       "question": "Will L. Darderi commit more than 36 unforced errors?",
       "rbp": null,
@@ -117,7 +117,7 @@
         "base-rate pull 0.35 suppressed for first_serve_comparison"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T15:15:18.316952+00:00",
+      "predicted_at": "2026-09-07T16:12:43.784661+00:00",
       "probability": 0.8005993607348983,
       "question": "Will A. Zverev win more than 75% of points played on their first serve?",
       "rbp": null,
@@ -141,7 +141,7 @@
         "outcome coupling: P(win)=0.083, delta=+0.79"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T15:15:18.316952+00:00",
+      "predicted_at": "2026-09-07T16:12:43.784661+00:00",
       "probability": 0.4886007096238496,
       "question": "Will L. Darderi hit more winners than A. Zverev?",
       "rbp": null,
@@ -162,7 +162,7 @@
       "model": 0.1125,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-06T15:15:18.316952+00:00",
+      "predicted_at": "2026-09-07T16:12:43.784661+00:00",
       "probability": 0.1125,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -183,7 +183,7 @@
       "model": 0.7285,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-06T15:15:18.316952+00:00",
+      "predicted_at": "2026-09-07T16:12:43.784661+00:00",
       "probability": 0.7285,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -208,7 +208,7 @@
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T15:15:18.316952+00:00",
+      "predicted_at": "2026-09-07T16:12:43.784661+00:00",
       "probability": 0.10031295815236148,
       "question": "Will L. Darderi win?",
       "rbp": null,
@@ -232,7 +232,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T15:15:18.316952+00:00",
+      "predicted_at": "2026-09-07T16:12:43.784661+00:00",
       "probability": 0.070549,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,
@@ -243,7 +243,7 @@
   "match_id": "92d0158a-33bf-4c65-8466-a46cfee5b613",
   "match_name": "A. Zverev vs L. Darderi",
   "multiplier": 2,
-  "opening_time": "2026-09-07T15:00:00.000Z",
+  "opening_time": "2026-09-07T22:30:00.000Z",
   "player_a": "Alexander Zverev",
   "player_b": "Luciano Darderi",
   "round_code": "R128"

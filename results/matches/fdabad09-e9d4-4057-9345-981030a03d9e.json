@@ -1,5 +1,5 @@
 {
-  "closing_time": "2026-09-08T03:00:00.000Z",
+  "closing_time": "2026-09-08T08:00:00.000Z",
   "draw": "mens",
   "entries": [
     {
@@ -13,17 +13,17 @@
       "market": null,
       "market_id": "0744ffb8-30a6-4c8f-83ef-432f4ee248e4",
       "market_weight": 0.0,
-      "model": 0.4785856775963236,
+      "model": 0.48963528643510623,
       "notes": [
-        "total games: simulator 36.1, Pinnacle 39.0, used 37.9 at weight 0.60"
+        "total games: simulator 36.1, Pinnacle 39.5, used 38.1 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T15:15:18.315139+00:00",
-      "probability": 0.4785856775963236,
+      "predicted_at": "2026-09-07T16:12:43.783983+00:00",
+      "probability": 0.48963528643510623,
       "question": "Will the match last longer than 175 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 47
+      "submission": 49
     },
     {
       "base_rate": 0.4784,
@@ -44,7 +44,7 @@
         "bovada aces line 0.259 blended at 35%"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T15:15:18.315139+00:00",
+      "predicted_at": "2026-09-07T16:12:43.783983+00:00",
       "probability": 0.3029877548415831,
       "question": "Will A. Gea record more aces than B. van de Zandschulp?",
       "rbp": null,
@@ -68,7 +68,7 @@
         "bovada double_faults line 0.269 blended at 35%"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T15:15:18.315139+00:00",
+      "predicted_at": "2026-09-07T16:12:43.783983+00:00",
       "probability": 0.34744674188135866,
       "question": "Will A. Gea record more double faults than B. van de Zandschulp?",
       "rbp": null,
@@ -92,7 +92,7 @@
         "base-rate pull 0.66 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T15:15:18.315139+00:00",
+      "predicted_at": "2026-09-07T16:12:43.783983+00:00",
       "probability": 0.5,
       "question": "Will A. Gea commit more than 46 unforced errors?",
       "rbp": null,
@@ -117,7 +117,7 @@
         "base-rate pull 0.50 suppressed for first_serve_comparison"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T15:15:18.315139+00:00",
+      "predicted_at": "2026-09-07T16:12:43.783983+00:00",
       "probability": 0.6264968932203745,
       "question": "Will B. van de Zandschulp win more than 69% of points played on their first serve?",
       "rbp": null,
@@ -140,7 +140,7 @@
         "missing winners rates; using the measured even-matchup price"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T15:15:18.315139+00:00",
+      "predicted_at": "2026-09-07T16:12:43.783983+00:00",
       "probability": 0.49039999999999995,
       "question": "Will A. Gea hit more winners than B. van de Zandschulp?",
       "rbp": null,
@@ -161,7 +161,7 @@
       "model": 0.26725,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-06T15:15:18.315139+00:00",
+      "predicted_at": "2026-09-07T16:12:43.783983+00:00",
       "probability": 0.26725,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -182,7 +182,7 @@
       "model": 0.74675,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-06T15:15:18.315139+00:00",
+      "predicted_at": "2026-09-07T16:12:43.783983+00:00",
       "probability": 0.74675,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -207,7 +207,7 @@
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T15:15:18.315139+00:00",
+      "predicted_at": "2026-09-07T16:12:43.783983+00:00",
       "probability": 0.42365429951383304,
       "question": "Will A. Gea win?",
       "rbp": null,
@@ -231,7 +231,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-06T15:15:18.315139+00:00",
+      "predicted_at": "2026-09-07T16:12:43.783983+00:00",
       "probability": 0.054886,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,
@@ -242,7 +242,7 @@
   "match_id": "fdabad09-e9d4-4057-9345-981030a03d9e",
   "match_name": "A. Gea vs B. Van De Zandschulp",
   "multiplier": 2,
-  "opening_time": "2026-09-07T15:00:00.000Z",
+  "opening_time": "2026-09-07T20:00:00.000Z",
   "player_a": "Arthur Gea",
   "player_b": "Botic van de Zandschulp",
   "round_code": "R128"
