@@ -18,7 +18,7 @@
         "total games: simulator 37.3, Pinnacle 40.0, used 38.9 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-07T16:12:43.786695+00:00",
+      "predicted_at": "2026-09-07T22:43:43.272372+00:00",
       "probability": 0.46817819536420685,
       "question": "Will the match last longer than 175 minutes?",
       "rbp": null,
@@ -35,21 +35,21 @@
       "lane": "scenario",
       "market": 0.6279,
       "market_id": "183eb96e-0462-41e2-ba16-6096c47f9622",
-      "market_weight": 0.35,
-      "model": 0.5991829702406591,
+      "market_weight": 0.85,
+      "model": 0.6212729931324599,
       "notes": [
         "ace vulnerability: Frances Tiafoe 1.36, Alex Michelsen 0.96",
         "exposure 119 service points from 38.2 games",
         "outcome coupling: P(win)=0.518, delta=+0.60",
-        "bovada aces line 0.628 blended at 35%"
+        "bovada aces line 0.628 blended at 85%"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-07T16:12:43.786695+00:00",
-      "probability": 0.5991829702406591,
+      "predicted_at": "2026-09-07T22:43:43.272372+00:00",
+      "probability": 0.6212729931324599,
       "question": "Will A. Michelsen record more aces than F. Tiafoe?",
       "rbp": null,
       "settled_at": "",
-      "submission": 62
+      "submission": 65
     },
     {
       "base_rate": 0.4496,
@@ -61,19 +61,19 @@
       "lane": "scenario",
       "market": 0.6064,
       "market_id": "10bbcfdd-d4f0-49e4-95a0-53b38b98e36c",
-      "market_weight": 0.35,
-      "model": 0.5132672955157781,
+      "market_weight": 0.85,
+      "model": 0.584907837426718,
       "notes": [
         "exposure 119 service points from 38.2 games",
-        "bovada double_faults line 0.606 blended at 35%"
+        "bovada double_faults line 0.606 blended at 85%"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-07T16:12:43.786695+00:00",
-      "probability": 0.5132672955157781,
+      "predicted_at": "2026-09-07T22:43:43.272372+00:00",
+      "probability": 0.584907837426718,
       "question": "Will A. Michelsen record more double faults than F. Tiafoe?",
       "rbp": null,
       "settled_at": "",
-      "submission": 52
+      "submission": 61
     },
     {
       "base_rate": 0.5,
@@ -92,7 +92,7 @@
         "base-rate pull 0.48 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-07T16:12:43.786695+00:00",
+      "predicted_at": "2026-09-07T22:43:43.272372+00:00",
       "probability": 0.48473983406234367,
       "question": "Will A. Michelsen commit more than 35 unforced errors?",
       "rbp": null,
@@ -117,7 +117,7 @@
         "base-rate pull 0.56 suppressed for first_serve_comparison"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-07T16:12:43.786695+00:00",
+      "predicted_at": "2026-09-07T22:43:43.272372+00:00",
       "probability": 0.5463401264504277,
       "question": "Will F. Tiafoe win more than 72% of points played on their first serve?",
       "rbp": null,
@@ -141,7 +141,7 @@
         "outcome coupling: P(win)=0.518, delta=+0.79"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-07T16:12:43.786695+00:00",
+      "predicted_at": "2026-09-07T22:43:43.272372+00:00",
       "probability": 0.5493097199790334,
       "question": "Will A. Michelsen hit more winners than F. Tiafoe?",
       "rbp": null,
@@ -162,7 +162,7 @@
       "model": 0.26775,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-07T16:12:43.786695+00:00",
+      "predicted_at": "2026-09-07T22:43:43.272372+00:00",
       "probability": 0.26775,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -183,7 +183,7 @@
       "model": 0.65075,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-07T16:12:43.786695+00:00",
+      "predicted_at": "2026-09-07T22:43:43.272372+00:00",
       "probability": 0.65075,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -208,7 +208,7 @@
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-07T16:12:43.786695+00:00",
+      "predicted_at": "2026-09-07T22:43:43.272372+00:00",
       "probability": 0.5200999855326593,
       "question": "Will A. Michelsen win?",
       "rbp": null,
@@ -232,7 +232,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-07T16:12:43.786695+00:00",
+      "predicted_at": "2026-09-07T22:43:43.272372+00:00",
       "probability": 0.105734,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,

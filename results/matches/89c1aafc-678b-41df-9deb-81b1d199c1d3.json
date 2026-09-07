@@ -13,17 +13,17 @@
       "market": null,
       "market_id": "e26586fb-1981-47b2-8e02-838ef61c6d10",
       "market_weight": 0.0,
-      "model": 0.28965974519420906,
+      "model": 0.274601211440003,
       "notes": [
-        "total games: simulator 20.7, Pinnacle 23.0, used 22.0 at weight 0.60"
+        "total games: simulator 20.7, Pinnacle 22.5, used 21.7 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-07T16:12:43.785314+00:00",
-      "probability": 0.28965974519420906,
+      "predicted_at": "2026-09-07T22:43:43.269812+00:00",
+      "probability": 0.274601211440003,
       "question": "Will the match last longer than 120 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 25
+      "submission": 23
     },
     {
       "base_rate": 0.4357,
@@ -35,20 +35,20 @@
       "lane": "scenario",
       "market": 0.6459,
       "market_id": "b2257e40-5ff4-4d1b-9c01-9dfe49dd8667",
-      "market_weight": 0.35,
-      "model": 0.6134005488948931,
+      "market_weight": 0.85,
+      "model": 0.6384001266680523,
       "notes": [
         "exposure 67 service points from 20.8 games",
         "outcome coupling: P(win)=0.662, delta=+0.76",
-        "bovada aces line 0.646 blended at 35%"
+        "bovada aces line 0.646 blended at 85%"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-07T16:12:43.785314+00:00",
-      "probability": 0.6134005488948931,
+      "predicted_at": "2026-09-07T22:43:43.269812+00:00",
+      "probability": 0.6384001266680523,
       "question": "Will C. Gauff record more aces than I. Jovic?",
       "rbp": null,
       "settled_at": "",
-      "submission": 64
+      "submission": 67
     },
     {
       "base_rate": 0.4429,
@@ -60,19 +60,19 @@
       "lane": "scenario",
       "market": 0.72,
       "market_id": "3dad126d-bd95-40bc-8c47-7894791f7ff2",
-      "market_weight": 0.75,
-      "model": 0.684530996949991,
+      "market_weight": 0.85,
+      "model": 0.6987185981699946,
       "notes": [
         "exposure 67 service points from 20.8 games",
-        "bovada double_faults line 0.720 blended at 75%"
+        "bovada double_faults line 0.720 blended at 85%"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-07T16:12:43.785314+00:00",
-      "probability": 0.684530996949991,
+      "predicted_at": "2026-09-07T22:43:43.269812+00:00",
+      "probability": 0.6987185981699946,
       "question": "Will C. Gauff record more double faults than I. Jovic?",
       "rbp": null,
       "settled_at": "",
-      "submission": 72
+      "submission": 74
     },
     {
       "base_rate": 0.5,
@@ -91,7 +91,7 @@
         "base-rate pull 0.48 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-07T16:12:43.785314+00:00",
+      "predicted_at": "2026-09-07T22:43:43.269812+00:00",
       "probability": 0.3644302280403994,
       "question": "Will C. Gauff commit more than 32 unforced errors?",
       "rbp": null,
@@ -116,7 +116,7 @@
         "base-rate pull 0.57 suppressed for first_serve_comparison"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-07T16:12:43.785314+00:00",
+      "predicted_at": "2026-09-07T22:43:43.269812+00:00",
       "probability": 0.5409808632843816,
       "question": "Will I. Jovic win more than 60% of points played on their first serve?",
       "rbp": null,
@@ -140,7 +140,7 @@
         "outcome coupling: P(win)=0.662, delta=+0.94"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-07T16:12:43.785314+00:00",
+      "predicted_at": "2026-09-07T22:43:43.269812+00:00",
       "probability": 0.28105569735863223,
       "question": "Will C. Gauff hit more winners than I. Jovic?",
       "rbp": null,
@@ -161,7 +161,7 @@
       "model": 0.29175,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-07T16:12:43.785314+00:00",
+      "predicted_at": "2026-09-07T22:43:43.269812+00:00",
       "probability": 0.29175,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -182,7 +182,7 @@
       "model": 0.67625,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-07T16:12:43.785314+00:00",
+      "predicted_at": "2026-09-07T22:43:43.269812+00:00",
       "probability": 0.67625,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -207,7 +207,7 @@
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-07T16:12:43.785314+00:00",
+      "predicted_at": "2026-09-07T22:43:43.269812+00:00",
       "probability": 0.6727980750234155,
       "question": "Will C. Gauff win?",
       "rbp": null,
@@ -231,7 +231,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-07T16:12:43.785314+00:00",
+      "predicted_at": "2026-09-07T22:43:43.269812+00:00",
       "probability": 0.17699224999999996,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

@@ -259,6 +259,38 @@ FIRST_SERVE_MODEL_WEIGHT = 1.00
 # Scoped to match winner ONLY. At the same alpha the other families are flat or worse, two
 # of them significantly: double faults -1.05 [-2.02,-0.13] and duration -1.25 [-2.40,-0.10].
 # Those models are not blended with a sharp market, so they are not under-confident.
+#: Families pulled toward an even-money answer because the model has no usable
+#: discrimination and the level is measurably wrong.
+#:
+#: Lopsided set is the only member. Over 44 settled questions we submitted a mean
+#: of 0.615 against a realised 0.455, while being more than twice as confident as
+#: the crowd (mean |p-0.5| of 0.132 against 0.057). Worse, our AUC is **0.302** -
+#: below 0.5, so higher predictions were associated with the event NOT happening.
+#: The crowd is equally lost at 0.308, which suggests the question resolves on
+#: something neither of us models rather than that we are uniquely bad at it.
+#:
+#: Two independent things went wrong and both point the same way:
+#:   * the 2026 rate really has shifted. The realised 0.455 has a bootstrap
+#:     interval of [0.318,0.614], and the historical rates this model was built
+#:     on - ATP 0.667 and WTA 0.625, measured on 1,247 matches from 2019-24 -
+#:     sit OUTSIDE it;
+#:   * with AUC below 0.5 there is no ordering left to preserve, so the usual
+#:     Murphy argument against shrinking does not apply. Shrinking normally costs
+#:     resolution; here there is none to lose.
+#:
+#: Shrinking toward 0.5 is monotone and significant on both lanes:
+#:     weight   honest                   scenario
+#:     0.30     +2.35 [+1.03,+3.69] SIG  +3.85 [+1.92,+5.79] SIG
+#:     0.70     +4.88 [+1.82,+7.83] SIG  +7.68 [+3.14,+12.14] SIG
+#:     0.85     +5.66 [+2.00,+9.36] SIG  +8.73 [+3.27,+14.16] SIG
+#:     1.00     +6.34 [+2.12,+10.47] SIG +9.58 [+3.12,+15.88] SIG
+#:
+#: 0.85 rather than 1.00: a full shrink submits exactly 50 every time, which is
+#: both a round number the crowd clusters on and a bet that 44 questions have
+#: settled the matter. The residual 15% keeps the answers off 50 and leaves a
+#: little model in place if the sample is simply unlucky.
+SHRINK_TO_EVEN = {Family.LOPSIDED_SET: 0.85}
+
 EXTREMISE_ALPHA = {Family.MATCH_WINNER: 1.35}
 
 #: Weight given to a bookmaker's head-to-head count line over our own model.
@@ -1168,6 +1200,11 @@ class Pricer:
                 )
             pull = 0.0
         probability = (1.0 - pull) * probability + pull * base
+
+        pull_even = SHRINK_TO_EVEN.get(spec.family)
+        if pull_even:
+            probability = (1.0 - pull_even) * probability + pull_even * 0.5
+            notes.append(f"shrunk {pull_even:.0%} toward even money (no usable AUC)")
 
         # Undo the under-sharpening the market blend introduces. See EXTREMISE_ALPHA.
         alpha = EXTREMISE_ALPHA.get(spec.family)

@@ -13,13 +13,13 @@
       "market": null,
       "market_id": "1cf00dd3-8a4c-4a14-9376-f563b9cde215",
       "market_weight": 0.0,
-      "model": 0.20257281925334358,
+      "model": 0.2018111347177129,
       "notes": [
-        "total games: simulator 31.9, Pinnacle 33.0, used 32.6 at weight 0.60"
+        "total games: simulator 31.9, Pinnacle 32.9, used 32.5 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-07T16:12:43.784661+00:00",
-      "probability": 0.20257281925334358,
+      "predicted_at": "2026-09-07T22:43:43.270591+00:00",
+      "probability": 0.2018111347177129,
       "question": "Will the match last longer than 185 minutes?",
       "rbp": null,
       "settled_at": "",
@@ -33,23 +33,23 @@
       "crowd_brier": null,
       "family": "aces_comparison",
       "lane": "scenario",
-      "market": 0.1649,
+      "market": 0.1141,
       "market_id": "159c4436-fe3e-45aa-ba0c-89febd903637",
-      "market_weight": 0.35,
-      "model": 0.08683197085562738,
+      "market_weight": 0.85,
+      "model": 0.10370430096668323,
       "notes": [
         "ace vulnerability: Alexander Zverev 0.85, Luciano Darderi 1.37",
         "exposure 104 service points from 33.3 games",
         "outcome coupling: P(win)=0.083, delta=+0.60",
-        "bovada aces line 0.165 blended at 35%"
+        "bovada aces line 0.114 blended at 85%"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-07T16:12:43.784661+00:00",
-      "probability": 0.08683197085562738,
+      "predicted_at": "2026-09-07T22:43:43.270591+00:00",
+      "probability": 0.10370430096668323,
       "question": "Will L. Darderi record more aces than A. Zverev?",
       "rbp": null,
       "settled_at": "",
-      "submission": 5
+      "submission": 6
     },
     {
       "base_rate": 0.4496,
@@ -59,21 +59,21 @@
       "crowd_brier": null,
       "family": "double_faults_comparison",
       "lane": "scenario",
-      "market": 0.7438,
+      "market": 0.5813,
       "market_id": "128e87b7-f7d7-48eb-8f76-7bc47051d2f8",
-      "market_weight": 0.35,
-      "model": 0.607305984481745,
+      "market_weight": 0.85,
+      "model": 0.5741763810342488,
       "notes": [
         "exposure 104 service points from 33.3 games",
-        "bovada double_faults line 0.744 blended at 35%"
+        "bovada double_faults line 0.581 blended at 85%"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-07T16:12:43.784661+00:00",
-      "probability": 0.607305984481745,
+      "predicted_at": "2026-09-07T22:43:43.270591+00:00",
+      "probability": 0.5741763810342488,
       "question": "Will L. Darderi record more double faults than A. Zverev?",
       "rbp": null,
       "settled_at": "",
-      "submission": 63
+      "submission": 59
     },
     {
       "base_rate": 0.5,
@@ -92,7 +92,7 @@
         "base-rate pull 0.48 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-07T16:12:43.784661+00:00",
+      "predicted_at": "2026-09-07T22:43:43.270591+00:00",
       "probability": 0.5009131585647919,
       "question": "Will L. Darderi commit more than 36 unforced errors?",
       "rbp": null,
@@ -117,7 +117,7 @@
         "base-rate pull 0.35 suppressed for first_serve_comparison"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-07T16:12:43.784661+00:00",
+      "predicted_at": "2026-09-07T22:43:43.270591+00:00",
       "probability": 0.8005993607348983,
       "question": "Will A. Zverev win more than 75% of points played on their first serve?",
       "rbp": null,
@@ -141,7 +141,7 @@
         "outcome coupling: P(win)=0.083, delta=+0.79"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-07T16:12:43.784661+00:00",
+      "predicted_at": "2026-09-07T22:43:43.270591+00:00",
       "probability": 0.4886007096238496,
       "question": "Will L. Darderi hit more winners than A. Zverev?",
       "rbp": null,
@@ -162,7 +162,7 @@
       "model": 0.1125,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-07T16:12:43.784661+00:00",
+      "predicted_at": "2026-09-07T22:43:43.270591+00:00",
       "probability": 0.1125,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -183,7 +183,7 @@
       "model": 0.7285,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-07T16:12:43.784661+00:00",
+      "predicted_at": "2026-09-07T22:43:43.270591+00:00",
       "probability": 0.7285,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -208,7 +208,7 @@
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-07T16:12:43.784661+00:00",
+      "predicted_at": "2026-09-07T22:43:43.270591+00:00",
       "probability": 0.10031295815236148,
       "question": "Will L. Darderi win?",
       "rbp": null,
@@ -232,7 +232,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-07T16:12:43.784661+00:00",
+      "predicted_at": "2026-09-07T22:43:43.270591+00:00",
       "probability": 0.070549,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,

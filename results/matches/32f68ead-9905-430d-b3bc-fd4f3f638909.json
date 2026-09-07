@@ -13,13 +13,13 @@
       "market": null,
       "market_id": "e80f977b-5196-4508-b924-e44c63304ea9",
       "market_weight": 0.0,
-      "model": 0.3707808054107278,
+      "model": 0.37056625515712416,
       "notes": [
         "total games: simulator 36.5, Pinnacle 39.0, used 38.0 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-07T16:12:43.788017+00:00",
-      "probability": 0.3707808054107278,
+      "predicted_at": "2026-09-07T22:43:43.271213+00:00",
+      "probability": 0.37056625515712416,
       "question": "Will the match last longer than 185 minutes?",
       "rbp": null,
       "settled_at": "",
@@ -35,21 +35,21 @@
       "lane": "scenario",
       "market": 0.1826,
       "market_id": "a7c357b8-c017-439a-b4b3-a7f615d2777d",
-      "market_weight": 0.35,
-      "model": 0.3260303332040895,
+      "market_weight": 0.85,
+      "model": 0.21569930766248221,
       "notes": [
         "ace vulnerability: Ben Shelton 0.83, Carlos Alcaraz 0.66",
         "exposure 116 service points from 37.2 games",
         "outcome coupling: P(win)=0.777, delta=+0.60",
-        "bovada aces line 0.183 blended at 35%"
+        "bovada aces line 0.183 blended at 85%"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-07T16:12:43.788017+00:00",
-      "probability": 0.3260303332040895,
+      "predicted_at": "2026-09-07T22:43:43.271213+00:00",
+      "probability": 0.21569930766248221,
       "question": "Will C. Alcaraz record more aces than B. Shelton?",
       "rbp": null,
       "settled_at": "",
-      "submission": 29
+      "submission": 17
     },
     {
       "base_rate": 0.4496,
@@ -61,19 +61,19 @@
       "lane": "scenario",
       "market": 0.3419,
       "market_id": "9573f957-11de-402c-927d-7fdd30f7b0db",
-      "market_weight": 0.35,
-      "model": 0.3395177193212968,
+      "market_weight": 0.85,
+      "model": 0.34135024292029925,
       "notes": [
         "exposure 116 service points from 37.2 games",
-        "bovada double_faults line 0.342 blended at 35%"
+        "bovada double_faults line 0.342 blended at 85%"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-07T16:12:43.788017+00:00",
-      "probability": 0.3395177193212968,
+      "predicted_at": "2026-09-07T22:43:43.271213+00:00",
+      "probability": 0.34135024292029925,
       "question": "Will C. Alcaraz record more double faults than B. Shelton?",
       "rbp": null,
       "settled_at": "",
-      "submission": 30
+      "submission": 31
     },
     {
       "base_rate": 0.5,
@@ -92,7 +92,7 @@
         "base-rate pull 0.48 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-07T16:12:43.788017+00:00",
+      "predicted_at": "2026-09-07T22:43:43.271213+00:00",
       "probability": 0.43685567874284625,
       "question": "Will C. Alcaraz commit more than 43 unforced errors?",
       "rbp": null,
@@ -117,7 +117,7 @@
         "base-rate pull 0.47 suppressed for first_serve_comparison"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-07T16:12:43.788017+00:00",
+      "predicted_at": "2026-09-07T22:43:43.271213+00:00",
       "probability": 0.33380873352896856,
       "question": "Will B. Shelton win more than 75% of points played on their first serve?",
       "rbp": null,
@@ -141,7 +141,7 @@
         "outcome coupling: P(win)=0.777, delta=+0.79"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-07T16:12:43.788017+00:00",
+      "predicted_at": "2026-09-07T22:43:43.271213+00:00",
       "probability": 0.6355920946337613,
       "question": "Will C. Alcaraz hit more winners than B. Shelton?",
       "rbp": null,
@@ -162,7 +162,7 @@
       "model": 0.215,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-07T16:12:43.788017+00:00",
+      "predicted_at": "2026-09-07T22:43:43.271213+00:00",
       "probability": 0.215,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -183,7 +183,7 @@
       "model": 0.60125,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-07T16:12:43.788017+00:00",
+      "predicted_at": "2026-09-07T22:43:43.271213+00:00",
       "probability": 0.60125,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -208,7 +208,7 @@
         "logit-sharpened at alpha=1.35"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-07T16:12:43.788017+00:00",
+      "predicted_at": "2026-09-07T22:43:43.271213+00:00",
       "probability": 0.7854631508811345,
       "question": "Will C. Alcaraz win?",
       "rbp": null,
@@ -232,7 +232,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-07T16:12:43.788017+00:00",
+      "predicted_at": "2026-09-07T22:43:43.271213+00:00",
       "probability": 0.4693880000000001,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,
