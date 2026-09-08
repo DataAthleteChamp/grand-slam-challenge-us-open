@@ -1,5 +1,5 @@
 {
-  "closing_time": "2026-09-09T03:30:00.000Z",
+  "closing_time": "2026-09-09T10:30:00.000Z",
   "draw": "womens",
   "entries": [
     {
@@ -13,17 +13,17 @@
       "market": null,
       "market_id": "e6ef4143-1c4d-4dd4-9f2e-623dbd7edffd",
       "market_weight": 0.0,
-      "model": 0.27935631967869373,
+      "model": 0.29592194526948756,
       "notes": [
-        "total games: simulator 20.4, Pinnacle 21.5, used 21.0 at weight 0.60"
+        "total games: simulator 20.4, Pinnacle 22.0, used 21.3 at weight 0.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-07T22:43:43.271813+00:00",
-      "probability": 0.27935631967869373,
+      "predicted_at": "2026-09-08T23:49:30.608312+00:00",
+      "probability": 0.29592194526948756,
       "question": "Will the match last longer than 110 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 23
+      "submission": 25
     },
     {
       "base_rate": 0.4357,
@@ -40,15 +40,16 @@
       "notes": [
         "exposure 68 service points from 20.9 games",
         "outcome coupling: P(win)=0.298, delta=+0.76",
-        "bovada aces line 0.404 blended at 85%"
+        "bovada aces line 0.404 blended at 85%",
+        "logit-sharpened at alpha=1.40"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-07T22:43:43.271813+00:00",
-      "probability": 0.3832403612055742,
+      "predicted_at": "2026-09-08T23:49:30.608312+00:00",
+      "probability": 0.3393608403743621,
       "question": "Will E. Navarro record more aces than J. Pegula?",
       "rbp": null,
       "settled_at": "",
-      "submission": 36
+      "submission": 30
     },
     {
       "base_rate": 0.4429,
@@ -67,7 +68,7 @@
         "bovada double_faults line 0.121 blended at 85%"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-07T22:43:43.271813+00:00",
+      "predicted_at": "2026-09-08T23:49:30.608312+00:00",
       "probability": 0.16647173918989186,
       "question": "Will E. Navarro record more double faults than J. Pegula?",
       "rbp": null,
@@ -91,7 +92,7 @@
         "base-rate pull 0.48 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-07T22:43:43.271813+00:00",
+      "predicted_at": "2026-09-08T23:49:30.608312+00:00",
       "probability": 0.490769586058722,
       "question": "Will E. Navarro commit more than 22 unforced errors?",
       "rbp": null,
@@ -116,7 +117,7 @@
         "base-rate pull 0.57 suppressed for first_serve_comparison"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-07T22:43:43.271813+00:00",
+      "predicted_at": "2026-09-08T23:49:30.608312+00:00",
       "probability": 0.5438282400504697,
       "question": "Will J. Pegula win more than 66% of points played on their first serve?",
       "rbp": null,
@@ -140,7 +141,7 @@
         "outcome coupling: P(win)=0.298, delta=+0.94"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-07T22:43:43.271813+00:00",
+      "predicted_at": "2026-09-08T23:49:30.608312+00:00",
       "probability": 0.5174641845338781,
       "question": "Will E. Navarro hit more winners than J. Pegula?",
       "rbp": null,
@@ -161,7 +162,7 @@
       "model": 0.2735,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-07T22:43:43.271813+00:00",
+      "predicted_at": "2026-09-08T23:49:30.608312+00:00",
       "probability": 0.2735,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -180,14 +181,16 @@
       "market_id": "f933bfb2-3b6a-4153-aaaf-beb270f91ef5",
       "market_weight": 0.0,
       "model": 0.68625,
-      "notes": [],
+      "notes": [
+        "shrunk 85% toward even money (no usable AUC)"
+      ],
       "outcome": null,
-      "predicted_at": "2026-09-07T22:43:43.271813+00:00",
-      "probability": 0.68625,
+      "predicted_at": "2026-09-08T23:49:30.608312+00:00",
+      "probability": 0.5279375,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
       "settled_at": "",
-      "submission": 73
+      "submission": 53
     },
     {
       "base_rate": 0.5,
@@ -204,15 +207,15 @@
       "notes": [
         "simulated win probability 0.298",
         "no market quote; this is the family that most needs one",
-        "logit-sharpened at alpha=1.35"
+        "logit-sharpened at alpha=1.75"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-07T22:43:43.271813+00:00",
-      "probability": 0.2867587365124476,
+      "predicted_at": "2026-09-08T23:49:30.608312+00:00",
+      "probability": 0.23484416751193365,
       "question": "Will E. Navarro win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 24
+      "submission": 19
     },
     {
       "base_rate": 0.225,
@@ -231,7 +234,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-07T22:43:43.271813+00:00",
+      "predicted_at": "2026-09-08T23:49:30.608312+00:00",
       "probability": 0.16325199999999998,
       "question": "Will the match feature at least 1 tiebreak?",
       "rbp": null,
@@ -242,7 +245,7 @@
   "match_id": "4ad14a69-df15-4086-a922-f54d96e3c09f",
   "match_name": "J. Pegula vs E. Navarro",
   "multiplier": 3,
-  "opening_time": "2026-09-08T15:30:00.000Z",
+  "opening_time": "2026-09-08T22:30:00.000Z",
   "player_a": "Jessica Pegula",
   "player_b": "Emma Navarro",
   "round_code": "R128"

@@ -35,9 +35,29 @@ LESSONS_FILE = Path(__file__).resolve().parent.parent / "docs" / "LESSONS.md"
 
 #: Field names the API might use, most specific first.  Probed rather than
 #: assumed because the payload shape was not observable when this was written.
+#:
+#: `result_value` and `crowd_value` were added by the API partway through the
+#: event and are integers on a 0-100 scale.  They must be probed before `result`,
+#: which is a display string like "NO (0)" that no outcome parser will recognise:
+#: while it was probed first every settled row was silently discarded and the
+#: ledger reported "nothing settled yet" for the whole tournament.
 _MARKET_KEYS = ("market_id", "marketId", "market", "question_id", "id")
-_OUTCOME_KEYS = ("outcome", "result", "settled_outcome", "resolution", "answer")
-_CROWD_KEYS = ("crowd_probability", "crowd", "consensus", "average_probability", "mean_probability")
+_OUTCOME_KEYS = (
+    "result_value",
+    "outcome",
+    "result",
+    "settled_outcome",
+    "resolution",
+    "answer",
+)
+_CROWD_KEYS = (
+    "crowd_value",
+    "crowd_probability",
+    "crowd",
+    "consensus",
+    "average_probability",
+    "mean_probability",
+)
 
 
 def _first(payload: dict[str, Any], keys: tuple[str, ...]) -> Any:
@@ -48,11 +68,19 @@ def _first(payload: dict[str, Any], keys: tuple[str, ...]) -> Any:
 
 
 def _as_outcome(value: Any) -> int | None:
-    """Map whatever 'it happened' looks like onto 1 or 0."""
+    """Map whatever 'it happened' looks like onto 1 or 0.
+
+    The API reports `result_value` on a 0-100 scale rather than 0/1, so 100 has
+    to count as "it happened" alongside the usual spellings.
+    """
     if isinstance(value, bool):
         return int(value)
     if isinstance(value, (int, float)):
-        return int(value) if value in (0, 1) else None
+        if value in (0, 1):
+            return int(value)
+        if value == 100:
+            return 1
+        return None
     if isinstance(value, str):
         text = value.strip().lower()
         if text in {"yes", "true", "won", "win", "1", "hit"}:

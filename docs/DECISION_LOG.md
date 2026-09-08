@@ -549,3 +549,83 @@ information we lack or noise we are importing. Only settled outcomes can separat
 sister sites: sports.bovada.lv is the same book, BetOnline and SportsBetting.ag return 403,
 bodog.eu does not resolve. A multi-book consensus, which would be the statistically preferable
 design, is not currently available for these two families.
+
+## 2026-09-09 — the settlement feed was silently broken, and we are under-confident
+
+### The bug that hid everything
+
+`scripts/settle.py` probed `result` before `result_value`. The API added
+`result_value` (0-100), `crowd_value` and a per-question `rbp` partway through the
+event, and left `result` as a display string — `"NO (0)"`. No outcome parser
+recognises that, so every settled row was discarded and the ledger reported
+"nothing settled yet" for the entire tournament. 1135 questions of tier-1
+evidence were sitting unread behind a key-ordering mistake.
+
+Fixed by probing `result_value`/`crowd_value` first and accepting 100 as "it
+happened". The ledger now settles 1155 records.
+
+### Where the points actually go
+
+    total RBP  +1913.4 over 1135 questions  (+1.686/q)
+      free term  +2675.5  (+2.357/q)   paid to everyone who answers
+      skill term  -762.1  (-0.671/q)   the only part we control
+
+| family | n | skill | our AUC | crowd AUC | our mean | realised |
+|---|---|---|---|---|---|---|
+| double_faults | 177 | −289.1 | 0.638 | 0.718 | 0.442 | 0.508 |
+| winners | 50 | −204.5 | 0.600 | 0.820 | 0.486 | 0.540 |
+| lopsided_set | 50 | −181.8 | 0.322 | 0.345 | 0.609 | 0.460 |
+| first_serve | 50 | −123.2 | 0.600 | 0.651 | 0.471 | 0.540 |
+| match_winner | 177 | −49.1 | 0.875 | 0.881 | 0.523 | 0.475 |
+| aces | 177 | −37.3 | 0.816 | 0.842 | 0.484 | 0.469 |
+| tiebreak | 177 | **+149.5** | 0.674 | 0.644 | 0.262 | 0.209 |
+
+Four families account for −798, more than the whole −762 deficit; everything else
+nets positive.
+
+### Adopted: logit sharpening where the ranking is good
+
+Calibration bins showed severe under-confidence, not bias. On match winner we
+submitted 28% where the truth was 7%, and 44% where it was 27%, while ranking
+matches well (AUC 0.875). A compressed but correctly ordered forecast is exactly
+what sharpening repairs.
+
+| family | alpha | skill delta | recent-only | early-only | time split |
+|---|---|---|---|---|---|
+| aces | 1.40 | +123.5 [+28,+216] SIG | +64.2 SIG | +59.3 | +88.1 |
+| match_winner | 1.30 on top of 1.35 | +137.0 [+54,+213] SIG | +22.0 | +114.9 SIG | +11.4 |
+
+Positive in every subsample and in a fit-on-first-60%/score-on-last-40% split.
+Chosen below the split's own optimum (1.75 and 2.00): after sharpening at these
+values we are still short of the realised rate in every calibration bin, so this
+corrects under-confidence without overshooting. `EXTREMISE_ALPHA` is now
+`{MATCH_WINNER: 1.75, ACES_COMPARISON: 1.40}` — sharpening composes
+multiplicatively, so 1.35 × 1.30 = 1.75.
+
+### Rejected
+
+| change | why |
+|---|---|
+| sharpen winners | AUC 0.600 against a crowd on 0.820. −25.6 at alpha 1.50. Sharpening amplifies a forecast pointing the wrong way. |
+| sharpen double faults | AUC 0.638 against 0.718. −100.4 at alpha 1.50, −248.5 SIG at 2.00. |
+| shrink double faults | grid +11.3 not significant, held-out −50.0. |
+| shrink tiebreak | grid +56.3 not significant, held-out −53.5. It is our only strongly positive family; leave it alone. |
+| shrink unforced | grid SIG at 1.25 but held-out −24.3. Conflict, so no. |
+| shrink/shift first_serve, duration | positive in both tests but not significant in either. Four changes are already live and unmeasured; not stacking more. |
+
+### Confirmed already-shipped
+
+`SHRINK_TO_EVEN[LOPSIDED_SET] = 0.85` is right and lands hard: the grid gives
++242.2 [+4,+481] SIG at full shrink and the held-out split +83.8. The −181.8 in
+the table predates it — it only reached submissions on 09-07.
+
+`FIRST_SERVE_MODEL_WEIGHT = 1.00` is working: first serve went −51.8, −64.1,
+−13.2, +10.8 by day. Aces turned positive from 09-02 (+109.9 since) after the WTA
+coupling fix.
+
+### Still open
+
+Winners (−204.5) and double faults (−289.1) are discrimination failures, not
+calibration failures. No transform of our own number helps, because the crowd
+genuinely knows more. Neither is fixable by re-weighting; both need a better
+signal or an admission that we do not have one.

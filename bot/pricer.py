@@ -291,7 +291,35 @@ FIRST_SERVE_MODEL_WEIGHT = 1.00
 #: little model in place if the sample is simply unlucky.
 SHRINK_TO_EVEN = {Family.LOPSIDED_SET: 0.85}
 
-EXTREMISE_ALPHA = {Family.MATCH_WINNER: 1.35}
+#: Logit sharpening, p -> sigmoid(alpha * logit(p)).  Sharpening composes
+#: multiplicatively, so an alpha measured on top of a live alpha multiplies it.
+#:
+#: Measured by replaying 1135 settled questions, where the API returns the
+#: realised outcome and the crowd probability per question, so the counterfactual
+#: only moves our own submission and leaves the crowd fixed.  Both families were
+#: badly under-confident: on match winner we submitted 28% where the truth was 7%
+#: and 44% where it was 27%, while still ranking matches well (AUC 0.875).  That
+#: is the signature of a compressed but correctly ordered forecast, which is
+#: exactly what sharpening repairs.
+#:
+#:                     alpha   skill delta        recent-only    early-only
+#:     aces             1.40  +123.5 [+28,+216]   +64.2 SIG      +59.3
+#:     match_winner     1.30  +137.0 [+54,+213]   +22.0          +114.9 SIG
+#:
+#: Both are positive in every subsample and in a time split that fits alpha on
+#: the first 60% of questions and scores it on the last 40% (aces +88.1,
+#: match winner +11.4).  Chosen below the split's own optimum (1.75 and 2.00):
+#: after sharpening at these values we are still short of the realised rate in
+#: every calibration bin, so this corrects under-confidence without overshooting.
+#:
+#: Deliberately NOT applied to winners or double faults.  Sharpening is only
+#: right where the ranking is good, and there it is not: winners AUC 0.600 and
+#: double faults 0.638 against a crowd on 0.820 and 0.718.  Sharpening both was
+#: negative at every alpha tested (winners -25.6 at 1.50, double faults -100.4).
+EXTREMISE_ALPHA = {
+    Family.MATCH_WINNER: 1.75,  # 1.35 already live, times the 1.30 measured on top
+    Family.ACES_COMPARISON: 1.40,
+}
 
 #: Weight given to a bookmaker's head-to-head count line over our own model.
 #:

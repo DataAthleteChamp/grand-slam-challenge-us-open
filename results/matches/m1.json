@@ -18,7 +18,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-07T22:52:25.395650+00:00",
+      "predicted_at": "2026-09-08T23:39:10.714569+00:00",
       "probability": 0.7094315601820564,
       "question": "Will the match last longer than 150 minutes?",
       "rbp": null,
@@ -40,15 +40,16 @@
       "notes": [
         "ace vulnerability: Carlos Alcaraz 0.66, Jannik Sinner 0.85",
         "exposure 121 service points from 38.8 games",
-        "outcome coupling: P(win)=0.396, delta=+0.60"
+        "outcome coupling: P(win)=0.396, delta=+0.60",
+        "logit-sharpened at alpha=1.40"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-07T22:52:25.395650+00:00",
-      "probability": 0.47489316613467053,
+      "predicted_at": "2026-09-08T23:39:10.714569+00:00",
+      "probability": 0.4648787799399506,
       "question": "Will Jannik Sinner record more aces than Carlos Alcaraz?",
       "rbp": null,
       "settled_at": "",
-      "submission": 47
+      "submission": 46
     },
     {
       "base_rate": 0.4496,
@@ -66,7 +67,7 @@
         "exposure 121 service points from 38.8 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-07T22:52:25.395650+00:00",
+      "predicted_at": "2026-09-08T23:39:10.714569+00:00",
       "probability": 0.37508313266776844,
       "question": "Will Jannik Sinner record more double faults than Carlos Alcaraz?",
       "rbp": null,
@@ -88,15 +89,15 @@
       "notes": [
         "simulated win probability 0.588",
         "market consensus 0.396, weight 0.95",
-        "logit-sharpened at alpha=1.35"
+        "logit-sharpened at alpha=1.75"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-07T22:52:25.395650+00:00",
-      "probability": 0.3919382818966403,
+      "predicted_at": "2026-09-08T23:39:10.714569+00:00",
+      "probability": 0.3613990446266933,
       "question": "Will Jannik Sinner win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 39
+      "submission": 36
     },
     {
       "base_rate": 0.1361788617886179,
@@ -115,7 +116,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-07T22:52:25.395650+00:00",
+      "predicted_at": "2026-09-08T23:39:10.714569+00:00",
       "probability": 0.1372771930894309,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,

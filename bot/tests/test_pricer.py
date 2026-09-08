@@ -1300,3 +1300,36 @@ def test_extreme_or_missing_quotes_fall_back_to_the_plain_simulation():
     plain = pricer._simulate(context)
     for junk in ({}, {"someone else": 0.6}, {context.player_a.name: 0.995}):
         assert pricer._simulate(context, junk).p_a_wins_match == plain.p_a_wins_match
+
+
+def test_logit_sharpening_is_only_applied_where_the_ranking_is_good():
+    """Sharpening repairs under-confidence; it cannot repair bad discrimination.
+
+    Replaying 1135 settled questions showed match winner and aces rank matches
+    well (AUC 0.875 and 0.816) but submit compressed probabilities, so sharpening
+    them gained +137.0 [+54,+213] and +123.5 [+28,+216] skill points.  Winners and
+    double faults rank badly (AUC 0.600 and 0.638 against a crowd on 0.820 and
+    0.718), and sharpening them was negative at every alpha tested.  Adding them
+    here would amplify a forecast that points the wrong way.
+    """
+    from bot.pricer import EXTREMISE_ALPHA
+
+    assert set(EXTREMISE_ALPHA) == {Family.MATCH_WINNER, Family.ACES_COMPARISON}
+    for family, alpha in EXTREMISE_ALPHA.items():
+        assert 1.0 < alpha <= 2.0, f"{family} alpha {alpha} outside the measured range"
+    assert Family.WINNERS_COMPARISON not in EXTREMISE_ALPHA
+    assert Family.DOUBLE_FAULTS_COMPARISON not in EXTREMISE_ALPHA
+
+
+def test_sharpening_moves_probabilities_away_from_even_money():
+    """Guard the direction: alpha > 1 must push away from 0.5, never toward it."""
+    import math
+
+    from bot.pricer import EXTREMISE_ALPHA
+
+    for alpha in EXTREMISE_ALPHA.values():
+        for probability in (0.20, 0.35, 0.65, 0.80):
+            odds = math.log(probability / (1 - probability))
+            sharpened = 1.0 / (1.0 + math.exp(-alpha * odds))
+            assert abs(sharpened - 0.5) > abs(probability - 0.5)
+            assert 0.0 < sharpened < 1.0
