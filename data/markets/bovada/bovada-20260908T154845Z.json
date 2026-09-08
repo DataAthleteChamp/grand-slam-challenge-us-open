@@ -1,0 +1,322 @@
+[
+ {
+  "match": "Frances Tiafoe vs Alex Michelsen",
+  "start_time": 1788886800000,
+  "family": "aces",
+  "player": "Frances Tiafoe",
+  "player_key": "tiafoe",
+  "p_more": 0.3023,
+  "p_tie": 0.0698,
+  "overround": 1.1026
+ },
+ {
+  "match": "Frances Tiafoe vs Alex Michelsen",
+  "start_time": 1788886800000,
+  "family": "aces",
+  "player": "Alex Michelsen",
+  "player_key": "michelsen",
+  "p_more": 0.6279,
+  "p_tie": 0.0698,
+  "overround": 1.1026
+ },
+ {
+  "match": "Frances Tiafoe vs Alex Michelsen",
+  "start_time": 1788886800000,
+  "family": "double_faults",
+  "player": "Frances Tiafoe",
+  "player_key": "tiafoe",
+  "p_more": 0.2799,
+  "p_tie": 0.1137,
+  "overround": 1.0994
+ },
+ {
+  "match": "Frances Tiafoe vs Alex Michelsen",
+  "start_time": 1788886800000,
+  "family": "double_faults",
+  "player": "Alex Michelsen",
+  "player_key": "michelsen",
+  "p_more": 0.6064,
+  "p_tie": 0.1137,
+  "overround": 1.0994
+ },
+ {
+  "match": "Ben Shelton vs Carlos Alcaraz\u00a0",
+  "start_time": 1788912600000,
+  "family": "aces",
+  "player": "Ben Shelton",
+  "player_key": "shelton",
+  "p_more": 0.7471,
+  "p_tie": 0.0702,
+  "overround": 1.0951
+ },
+ {
+  "match": "Ben Shelton vs Carlos Alcaraz\u00a0",
+  "start_time": 1788912600000,
+  "family": "aces",
+  "player": "Carlos Alcaraz\u00a0",
+  "player_key": "alcaraz",
+  "p_more": 0.1826,
+  "p_tie": 0.0702,
+  "overround": 1.0951
+ },
+ {
+  "match": "Ben Shelton vs Carlos Alcaraz\u00a0",
+  "start_time": 1788912600000,
+  "family": "double_faults",
+  "player": "Ben Shelton",
+  "player_key": "shelton",
+  "p_more": 0.5286,
+  "p_tie": 0.1295,
+  "overround": 1.1035
+ },
+ {
+  "match": "Ben Shelton vs Carlos Alcaraz\u00a0",
+  "start_time": 1788912600000,
+  "family": "double_faults",
+  "player": "Carlos Alcaraz\u00a0",
+  "player_key": "alcaraz",
+  "p_more": 0.3419,
+  "p_tie": 0.1295,
+  "overround": 1.1035
+ },
+ {
+  "match": "Alexander Zverev vs Botic van de Zandschulp",
+  "start_time": 1788967800000,
+  "family": "aces",
+  "player": "Alexander Zverev",
+  "player_key": "zverev",
+  "p_more": 0.5921,
+  "p_tie": 0.0603,
+  "overround": 1.1065
+ },
+ {
+  "match": "Alexander Zverev vs Botic van de Zandschulp",
+  "start_time": 1788967800000,
+  "family": "aces",
+  "player": "Botic van de Zandschulp",
+  "player_key": "zandschulp",
+  "p_more": 0.3476,
+  "p_tie": 0.0603,
+  "overround": 1.1065
+ },
+ {
+  "match": "Alexander Zverev vs Botic van de Zandschulp",
+  "start_time": 1788967800000,
+  "family": "double_faults",
+  "player": "Alexander Zverev",
+  "player_key": "zverev",
+  "p_more": 0.0909,
+  "p_tie": 0.0606,
+  "overround": 1.1
+ },
+ {
+  "match": "Alexander Zverev vs Botic van de Zandschulp",
+  "start_time": 1788967800000,
+  "family": "double_faults",
+  "player": "Botic van de Zandschulp",
+  "player_key": "zandschulp",
+  "p_more": 0.8485,
+  "p_tie": 0.0606,
+  "overround": 1.1
+ },
+ {
+  "match": "Karen Khachanov vs Alexander Blockx",
+  "start_time": 1788967800000,
+  "family": "aces",
+  "player": "Karen Khachanov",
+  "player_key": "khachanov",
+  "p_more": 0.1792,
+  "p_tie": 0.0527,
+  "overround": 1.116
+ },
+ {
+  "match": "Karen Khachanov vs Alexander Blockx",
+  "start_time": 1788967800000,
+  "family": "aces",
+  "player": "Alexander Blockx",
+  "player_key": "blockx",
+  "p_more": 0.7681,
+  "p_tie": 0.0527,
+  "overround": 1.116
+ },
+ {
+  "match": "Karen Khachanov vs Alexander Blockx",
+  "start_time": 1788967800000,
+  "family": "double_faults",
+  "player": "Karen Khachanov",
+  "player_key": "khachanov",
+  "p_more": 0.2818,
+  "p_tie": 0.1077,
+  "overround": 1.092
+ },
+ {
+  "match": "Karen Khachanov vs Alexander Blockx",
+  "start_time": 1788967800000,
+  "family": "double_faults",
+  "player": "Alexander Blockx",
+  "player_key": "blockx",
+  "p_more": 0.6105,
+  "p_tie": 0.1077,
+  "overround": 1.092
+ },
+ {
+  "match": "Aryna Sabalenka vs Linda Noskova",
+  "start_time": 1788882000000,
+  "family": "aces",
+  "player": "Aryna Sabalenka",
+  "player_key": "sabalenka",
+  "p_more": 0.5859,
+  "p_tie": 0.086,
+  "overround": 1.108
+ },
+ {
+  "match": "Aryna Sabalenka vs Linda Noskova",
+  "start_time": 1788882000000,
+  "family": "aces",
+  "player": "Linda Noskova",
+  "player_key": "noskova",
+  "p_more": 0.3282,
+  "p_tie": 0.086,
+  "overround": 1.108
+ },
+ {
+  "match": "Aryna Sabalenka vs Linda Noskova",
+  "start_time": 1788882000000,
+  "family": "double_faults",
+  "player": "Aryna Sabalenka",
+  "player_key": "sabalenka",
+  "p_more": 0.18,
+  "p_tie": 0.1,
+  "overround": 1.1111
+ },
+ {
+  "match": "Aryna Sabalenka vs Linda Noskova",
+  "start_time": 1788882000000,
+  "family": "double_faults",
+  "player": "Linda Noskova",
+  "player_key": "noskova",
+  "p_more": 0.72,
+  "p_tie": 0.1,
+  "overround": 1.1111
+ },
+ {
+  "match": "Jessica Pegula vs Emma Navarro",
+  "start_time": 1788909000000,
+  "family": "aces",
+  "player": "Jessica Pegula",
+  "player_key": "pegula",
+  "p_more": 0.4755,
+  "p_tie": 0.121,
+  "overround": 1.1016
+ },
+ {
+  "match": "Jessica Pegula vs Emma Navarro",
+  "start_time": 1788909000000,
+  "family": "aces",
+  "player": "Emma Navarro",
+  "player_key": "navarro",
+  "p_more": 0.4035,
+  "p_tie": 0.121,
+  "overround": 1.1016
+ },
+ {
+  "match": "Jessica Pegula vs Emma Navarro",
+  "start_time": 1788909000000,
+  "family": "double_faults",
+  "player": "Jessica Pegula",
+  "player_key": "pegula",
+  "p_more": 0.2278,
+  "p_tie": 0.6508,
+  "overround": 1.0976
+ },
+ {
+  "match": "Jessica Pegula vs Emma Navarro",
+  "start_time": 1788909000000,
+  "family": "double_faults",
+  "player": "Emma Navarro",
+  "player_key": "navarro",
+  "p_more": 0.1215,
+  "p_tie": 0.6508,
+  "overround": 1.0976
+ },
+ {
+  "match": "Mirra Andreeva vs Cori Gauff",
+  "start_time": 1788967800000,
+  "family": "aces",
+  "player": "Mirra Andreeva",
+  "player_key": "andreeva",
+  "p_more": 0.347,
+  "p_tie": 0.1804,
+  "overround": 1.1084
+ },
+ {
+  "match": "Mirra Andreeva vs Cori Gauff",
+  "start_time": 1788967800000,
+  "family": "aces",
+  "player": "Coco Gauff",
+  "player_key": "gauff",
+  "p_more": 0.4726,
+  "p_tie": 0.1804,
+  "overround": 1.1084
+ },
+ {
+  "match": "Mirra Andreeva vs Cori Gauff",
+  "start_time": 1788967800000,
+  "family": "double_faults",
+  "player": "Mirra Andreeva",
+  "player_key": "andreeva",
+  "p_more": 0.4076,
+  "p_tie": 0.1019,
+  "overround": 1.0903
+ },
+ {
+  "match": "Mirra Andreeva vs Cori Gauff",
+  "start_time": 1788967800000,
+  "family": "double_faults",
+  "player": "Coco Gauff",
+  "player_key": "gauff",
+  "p_more": 0.4905,
+  "p_tie": 0.1019,
+  "overround": 1.0903
+ },
+ {
+  "match": "Qinwen Zheng vs Elena Rybakina",
+  "start_time": 1788967800000,
+  "family": "aces",
+  "player": "Qinwen Zheng",
+  "player_key": "zheng",
+  "p_more": 0.3348,
+  "p_tie": 0.0921,
+  "overround": 1.0863
+ },
+ {
+  "match": "Qinwen Zheng vs Elena Rybakina",
+  "start_time": 1788967800000,
+  "family": "aces",
+  "player": "Elena Rybakina",
+  "player_key": "rybakina",
+  "p_more": 0.5732,
+  "p_tie": 0.0921,
+  "overround": 1.0863
+ },
+ {
+  "match": "Qinwen Zheng vs Elena Rybakina",
+  "start_time": 1788967800000,
+  "family": "double_faults",
+  "player": "Qinwen Zheng",
+  "player_key": "zheng",
+  "p_more": 0.71,
+  "p_tie": 0.1074,
+  "overround": 1.0954
+ },
+ {
+  "match": "Qinwen Zheng vs Elena Rybakina",
+  "start_time": 1788967800000,
+  "family": "double_faults",
+  "player": "Elena Rybakina",
+  "player_key": "rybakina",
+  "p_more": 0.1826,
+  "p_tie": 0.1074,
+  "overround": 1.0954
+ }
+]
