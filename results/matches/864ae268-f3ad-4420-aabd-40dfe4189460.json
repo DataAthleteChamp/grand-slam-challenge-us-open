@@ -14,14 +14,16 @@
       "market_id": "c373c489-6e12-4cc7-a891-e06799233cab",
       "market_weight": 0.0,
       "model": 0.24220706020190808,
-      "notes": [],
+      "notes": [
+        "shrunk 20% toward even money (no usable AUC)"
+      ],
       "outcome": null,
-      "predicted_at": "2026-09-09T22:15:17.362928+00:00",
-      "probability": 0.24220706020190808,
+      "predicted_at": "2026-09-09T22:40:24.857200+00:00",
+      "probability": 0.2937656481615265,
       "question": "Will the match last longer than 210 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 19
+      "submission": 25
     },
     {
       "base_rate": 0.4784,
@@ -31,23 +33,24 @@
       "crowd_brier": null,
       "family": "aces_comparison",
       "lane": "scenario",
-      "market": null,
+      "market": 0.9072,
       "market_id": "0a78262b-6df2-4d86-8201-6b495db12049",
-      "market_weight": 0.0,
-      "model": 0.8530321465640592,
+      "market_weight": 0.85,
+      "model": 0.899074821984609,
       "notes": [
         "ace vulnerability: Frances Tiafoe 1.36, Ben Shelton 0.83",
         "exposure 127 service points from 40.6 games",
         "outcome coupling: P(win)=0.552, delta=+0.60",
+        "bovada aces line 0.907 blended at 85%",
         "logit-sharpened at alpha=1.40"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-09T22:15:17.362928+00:00",
-      "probability": 0.9214357794101669,
+      "predicted_at": "2026-09-09T22:40:24.857200+00:00",
+      "probability": 0.9552884534413221,
       "question": "Will B. Shelton record more aces than F. Tiafoe?",
       "rbp": null,
       "settled_at": "",
-      "submission": 96
+      "submission": 98
     },
     {
       "base_rate": 0.4496,
@@ -57,20 +60,21 @@
       "crowd_brier": null,
       "family": "double_faults_comparison",
       "lane": "scenario",
-      "market": null,
+      "market": 0.4339,
       "market_id": "8316e0f6-d2de-46a1-b805-a9f45d32dab5",
-      "market_weight": 0.0,
-      "model": 0.5438963497236086,
+      "market_weight": 0.85,
+      "model": 0.4503994524585413,
       "notes": [
-        "exposure 127 service points from 40.6 games"
+        "exposure 127 service points from 40.6 games",
+        "bovada double_faults line 0.434 blended at 85%"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-09T22:15:17.362928+00:00",
-      "probability": 0.5438963497236086,
+      "predicted_at": "2026-09-09T22:40:24.857200+00:00",
+      "probability": 0.4503994524585413,
       "question": "Will B. Shelton record more double faults than F. Tiafoe?",
       "rbp": null,
       "settled_at": "",
-      "submission": 55
+      "submission": 44
     },
     {
       "base_rate": 0.5,
@@ -89,7 +93,7 @@
         "base-rate pull 0.48 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-09T22:15:17.362928+00:00",
+      "predicted_at": "2026-09-09T22:40:24.857200+00:00",
       "probability": 0.5936883621027853,
       "question": "Will B. Shelton commit more than 36 unforced errors?",
       "rbp": null,
@@ -111,15 +115,16 @@
       "notes": [
         "first-serve rate: expected 0.761 vs threshold 0.700, sd 0.076 (0.051 sampling on 70 first serves + 0.056 form)",
         "model weighted 100% against the base rate 0.280 instead of the confidence pull",
-        "base-rate pull 0.37 suppressed for first_serve_comparison"
+        "base-rate pull 0.37 suppressed for first_serve_comparison",
+        "shrunk 15% toward even money (no usable AUC)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-09T22:15:17.362928+00:00",
-      "probability": 0.7894200561700169,
+      "predicted_at": "2026-09-09T22:40:24.857200+00:00",
+      "probability": 0.7460070477445143,
       "question": "Will F. Tiafoe win more than 70% of points played on their first serve?",
       "rbp": null,
       "settled_at": "",
-      "submission": 84
+      "submission": 79
     },
     {
       "base_rate": 0.4904,
@@ -138,7 +143,7 @@
         "outcome coupling: P(win)=0.552, delta=+0.79"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-09T22:15:17.362928+00:00",
+      "predicted_at": "2026-09-09T22:40:24.857200+00:00",
       "probability": 0.560186392651048,
       "question": "Will B. Shelton hit more winners than F. Tiafoe?",
       "rbp": null,
@@ -159,7 +164,7 @@
       "model": 0.27175,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-09T22:15:17.362928+00:00",
+      "predicted_at": "2026-09-09T22:40:24.857200+00:00",
       "probability": 0.27175,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -182,7 +187,7 @@
         "shrunk 85% toward even money (no usable AUC)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-09T22:15:17.362928+00:00",
+      "predicted_at": "2026-09-09T22:40:24.857200+00:00",
       "probability": 0.49655,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -207,7 +212,7 @@
         "logit-sharpened at alpha=1.75"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-09T22:15:17.362928+00:00",
+      "predicted_at": "2026-09-09T22:40:24.857200+00:00",
       "probability": 0.5732506535385742,
       "question": "Will B. Shelton win?",
       "rbp": null,
@@ -231,7 +236,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-09T22:15:17.362928+00:00",
+      "predicted_at": "2026-09-09T22:40:24.857200+00:00",
       "probability": 0.258959,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,

@@ -289,7 +289,32 @@ FIRST_SERVE_MODEL_WEIGHT = 1.00
 #: both a round number the crowd clusters on and a bet that 44 questions have
 #: settled the matter. The residual 15% keeps the answers off 50 and leaves a
 #: little model in place if the sample is simply unlucky.
-SHRINK_TO_EVEN = {Family.LOPSIDED_SET: 0.85}
+#:
+#: Match duration and first serve were added after replaying 1176 settled
+#: questions. Both rank badly - duration AUC 0.581, first serve 0.622 - and both
+#: gained from shrinking at every factor tested, in both a bootstrap grid and a
+#: time split that fits the factor on the first 60% of questions and scores it on
+#: the last 40%:
+#:
+#:     pull     duration                    first serve
+#:     10%      +42.6 [+2.2,+85.4] SIG      +17.3 [-7.6,+44.0]
+#:     20%      +73.0 [-8.1,+158.8]         +30.8 [-19.0,+84.1]
+#:     40%      +97.3 [-65.8,+271.5]        +46.6 [-52.1,+152.3]
+#:     split    +60.5 held out              +10.3 held out
+#:
+#: Both are set well below their measured optimum (40% pull) because only the
+#: 10% duration cell is individually significant; the case rests on the estimate
+#: being positive at every factor in four independent checks rather than on any
+#: single one clearing the bar.
+#:
+#: Winners is deliberately absent despite an equally poor AUC of 0.617. Shrinking
+#: it is worth between -5.6 and +2.3 across the whole range and -5.0 held out:
+#: the crowd is on 0.828 there, so no repositioning of our own number helps.
+SHRINK_TO_EVEN = {
+    Family.LOPSIDED_SET: 0.85,
+    Family.MATCH_DURATION: 0.20,
+    Family.FIRST_SERVE_COMPARISON: 0.15,
+}
 
 #: Logit sharpening, p -> sigmoid(alpha * logit(p)).  Sharpening composes
 #: multiplicatively, so an alpha measured on top of a live alpha multiplies it.

@@ -6,14 +6,14 @@ the winner number is already sharpened inside the bot, so doing it again here
 would compound. See SHARPEN_BY_TOKEN for the per-family measurements.
 
 --- A. Zverev vs B. Van De Zandschulp   (starts 2026-09-09 23:00Z)
-     bot  60  ->  MANUAL  60   Will A. Zverev win more than 75% of points played on their first serve?
+     bot  58  ->  MANUAL  58   Will A. Zverev win more than 75% of points played on their first serve?
      bot  52  ->  MANUAL  52   Will either player win a set 6–2, 6–1 or 6–0?
      bot  16  ->  MANUAL  16   Will B. van de Zandschulp win?
      bot  49  ->  MANUAL  49   Will B. van de Zandschulp hit more winners than A. Zverev?
      bot  27  ->  MANUAL  24   Will B. van de Zandschulp record more aces than A. Zverev?
      bot  82  ->  MANUAL  82   Will B. van de Zandschulp record more double faults than A. Zverev?
      bot  14  ->  MANUAL  14   Will the match feature at least 2 tiebreak(s)?
-     bot  56  ->  MANUAL  56   Will the match last longer than 155 minutes?
+     bot  55  ->  MANUAL  55   Will the match last longer than 155 minutes?
      bot  20  ->  MANUAL  20   Will the match require a deciding set?
      bot  50  ->  MANUAL  50   Will B. van de Zandschulp commit more than 35 unforced errors?
 
@@ -21,22 +21,22 @@ would compound. See SHARPEN_BY_TOKEN for the per-family measurements.
      bot  51  ->  MANUAL  51   Will either player win a set 6–2, 6–1 or 6–0?
      bot  25  ->  MANUAL  25   Will J. Pegula hit more winners than A. Sabalenka?
      bot  46  ->  MANUAL  46   Will J. Pegula win?
-     bot  24  ->  MANUAL  24   Will A. Sabalenka win more than 73% of points played on their first serve?
+     bot  28  ->  MANUAL  28   Will A. Sabalenka win more than 73% of points played on their first serve?
      bot  23  ->  MANUAL  20   Will J. Pegula record more aces than A. Sabalenka?
      bot  49  ->  MANUAL  49   Will J. Pegula record more double faults than A. Sabalenka?
      bot  29  ->  MANUAL  29   Will the match feature at least 1 tiebreak(s)?
-     bot  22  ->  MANUAL  22   Will the match last longer than 125 minutes?
+     bot  28  ->  MANUAL  28   Will the match last longer than 125 minutes?
      bot  40  ->  MANUAL  40   Will J. Pegula commit more than 25 unforced errors?
      bot  37  ->  MANUAL  37   Will the match require a deciding set?
 
 --- F. Tiafoe vs B. Shelton   (starts 2026-09-11 19:00Z)
-     bot  79  ->  MANUAL  79   Will F. Tiafoe win more than 70% of points played on their first serve?
+     bot  75  ->  MANUAL  75   Will F. Tiafoe win more than 70% of points played on their first serve?
      bot  49  ->  MANUAL  49   Will either player win a set 6–2, 6–1 or 6–0?
      bot  58  ->  MANUAL  58   Will B. Shelton win?
      bot  55  ->  MANUAL  55   Will B. Shelton hit more winners than F. Tiafoe?
-     bot  92  ->  MANUAL  94   Will B. Shelton record more aces than F. Tiafoe?
-     bot  55  ->  MANUAL  55   Will B. Shelton record more double faults than F. Tiafoe?
+     bot  96  ->  MANUAL  96   Will B. Shelton record more aces than F. Tiafoe?
+     bot  45  ->  MANUAL  45   Will B. Shelton record more double faults than F. Tiafoe?
      bot  33  ->  MANUAL  33   Will the match feature at least 2 tiebreak(s)?
-     bot  28  ->  MANUAL  28   Will the match last longer than 210 minutes?
+     bot  32  ->  MANUAL  32   Will the match last longer than 210 minutes?
      bot  30  ->  MANUAL  30   Will the match require a deciding set?
      bot  59  ->  MANUAL  59   Will B. Shelton commit more than 36 unforced errors?

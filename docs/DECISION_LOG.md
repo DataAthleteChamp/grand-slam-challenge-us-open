@@ -629,3 +629,57 @@ Winners (−204.5) and double faults (−289.1) are discrimination failures, not
 calibration failures. No transform of our own number helps, because the crowd
 genuinely knows more. Neither is fixable by re-weighting; both need a better
 signal or an admission that we do not have one.
+
+## 2026-09-10 — final lock, on 1176 settled questions
+
+Thirty questions remain, all at the 3x multiplier, so this is the last chance to
+correct anything. Every family was re-tested on the updated sample.
+
+### Checked and cleared
+
+**Does sharpening aces double-count the Bovada blend?** Raised because our ace
+numbers sit 7-10 points below Bovada on the two finals it prices (Zandschulp 27
+against 34.8, Pegula 23 against 30.3), which is the new sharpening pushing a
+market price further from even. Reconstructed the Bovada weight actually used for
+every settled question from the run archives: only 20 ace questions ever had a
+Bovada line, and 159 were priced at weight 0.00. So alpha 1.40 was measured on
+essentially pure-model numbers, and on the 20 blended ones sharpening is still
+positive (+5.1). No double-counting. Kept.
+
+**First serve arithmetic.** Spot-checked against the run notes: Tiafoe expected
+0.761 against a 0.700 threshold with sd 0.076 gives z = 0.80 and p = 0.789, which
+is what was submitted. The model is doing the right calculation.
+
+### Adopted: shrink the two remaining low-AUC families
+
+| pull | duration | first serve |
+|---|---|---|
+| 10% | +42.6 [+2.2,+85.4] **SIG** | +17.3 [−7.6,+44.0] |
+| 20% | +73.0 [−8.1,+158.8] | +30.8 [−19.0,+84.1] |
+| 40% | +97.3 [−65.8,+271.5] | +46.6 [−52.1,+152.3] |
+| time split | **+60.5** held out | **+10.3** held out |
+
+Set at 20% and 15%, well below the 40% optimum. Only the 10% duration cell is
+individually significant; the case rests on the estimate being positive at every
+factor across four independent checks, not on any single one clearing the bar.
+This completes the rule the guard tests now enforce: sharpen where the ranking is
+good (match winner 0.875, aces 0.816), shrink where it is poor (lopsided set
+0.322, duration 0.581, first serve 0.622).
+
+### Rejected again, with more data
+
+| change | why |
+|---|---|
+| shrink winners | AUC 0.617, but worth between −5.6 and +2.3 across the whole range and −5.0 held out. The crowd is on 0.828; no repositioning of our own number reaches that. It stays our worst family and we have no fix. |
+| shrink double faults | grid +21.8 at 25% pull, held-out −32.9. Conflict, so no. |
+| shrink unforced | significantly **negative** at every factor (−29.8 to −162.6 SIG). Actively harmful. |
+
+### Reading the 41 questions that settled under the new model
+
+−94.3 skill looks alarming and means almost nothing: it is 4 matches, not 41
+independent questions. The Alcaraz upset alone accounts for about −63 of it,
+cascading through his match (winner −22.1, over 110 minutes −15.1, deciding set
+−14.8, a tiebreak −11.4). Sharpening buys exactly that tail risk in exchange for
+the +137 measured over 177 questions. Four matches cannot overturn it, and
+reverting on this evidence would be the overreaction the earlier lessons warn
+about. Encouraging at n=4 each: lopsided set +10.0, aces +3.7, winners +2.4.

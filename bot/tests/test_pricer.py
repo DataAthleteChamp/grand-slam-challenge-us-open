@@ -1333,3 +1333,37 @@ def test_sharpening_moves_probabilities_away_from_even_money():
             sharpened = 1.0 / (1.0 + math.exp(-alpha * odds))
             assert abs(sharpened - 0.5) > abs(probability - 0.5)
             assert 0.0 < sharpened < 1.0
+
+
+def test_shrunk_families_are_the_ones_that_rank_badly():
+    """Shrink where discrimination is poor, sharpen where it is good.
+
+    Replaying 1176 settled questions: lopsided set AUC 0.322, duration 0.581 and
+    first serve 0.622 all gained from shrinking, while match winner 0.875 and aces
+    0.816 gained from sharpening.  No family may appear in both maps, which would
+    pull a number toward even money and then push it back out again.
+    """
+    from bot.pricer import EXTREMISE_ALPHA, SHRINK_TO_EVEN
+
+    assert set(SHRINK_TO_EVEN) == {
+        Family.LOPSIDED_SET,
+        Family.MATCH_DURATION,
+        Family.FIRST_SERVE_COMPARISON,
+    }
+    assert not set(SHRINK_TO_EVEN) & set(EXTREMISE_ALPHA)
+    for family, pull in SHRINK_TO_EVEN.items():
+        assert 0.0 < pull <= 1.0, f"{family} pull {pull} is not a fraction"
+    # Winners ranks as badly as the shrunk families but shrinking it is worth
+    # nothing, because the crowd is on 0.828 and we cannot reposition into that.
+    assert Family.WINNERS_COMPARISON not in SHRINK_TO_EVEN
+
+
+def test_shrinking_moves_probabilities_toward_even_money():
+    """Guard the direction, and that a partial pull never overshoots past 0.5."""
+    from bot.pricer import SHRINK_TO_EVEN
+
+    for pull in SHRINK_TO_EVEN.values():
+        for probability in (0.14, 0.30, 0.70, 0.92):
+            shrunk = (1.0 - pull) * probability + pull * 0.5
+            assert abs(shrunk - 0.5) <= abs(probability - 0.5)
+            assert (probability - 0.5) * (shrunk - 0.5) >= 0.0

@@ -14,14 +14,16 @@
       "market_id": "7f8f2c8f-9e31-4f9a-9f7e-5e040696b507",
       "market_weight": 0.0,
       "model": 0.1755711547393145,
-      "notes": [],
+      "notes": [
+        "shrunk 20% toward even money (no usable AUC)"
+      ],
       "outcome": null,
-      "predicted_at": "2026-09-09T22:15:17.362221+00:00",
-      "probability": 0.1755711547393145,
+      "predicted_at": "2026-09-09T22:40:24.856343+00:00",
+      "probability": 0.24045692379145162,
       "question": "Will the match last longer than 125 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 13
+      "submission": 19
     },
     {
       "base_rate": 0.4357,
@@ -42,7 +44,7 @@
         "logit-sharpened at alpha=1.40"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-09T22:15:17.362221+00:00",
+      "predicted_at": "2026-09-09T22:40:24.856343+00:00",
       "probability": 0.23437118148121752,
       "question": "Will J. Pegula record more aces than A. Sabalenka?",
       "rbp": null,
@@ -66,7 +68,7 @@
         "bovada double_faults line 0.526 blended at 85%"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-09T22:15:17.362221+00:00",
+      "predicted_at": "2026-09-09T22:40:24.856343+00:00",
       "probability": 0.48683552500813143,
       "question": "Will J. Pegula record more double faults than A. Sabalenka?",
       "rbp": null,
@@ -90,7 +92,7 @@
         "base-rate pull 0.48 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-09T22:15:17.362221+00:00",
+      "predicted_at": "2026-09-09T22:40:24.856343+00:00",
       "probability": 0.3953586564191722,
       "question": "Will J. Pegula commit more than 25 unforced errors?",
       "rbp": null,
@@ -112,15 +114,16 @@
       "notes": [
         "first-serve rate: expected 0.663 vs threshold 0.730, sd 0.095 (0.075 sampling on 40 first serves + 0.058 form)",
         "model weighted 100% against the base rate 0.037 instead of the confidence pull",
-        "base-rate pull 0.39 suppressed for first_serve_comparison"
+        "base-rate pull 0.39 suppressed for first_serve_comparison",
+        "shrunk 15% toward even money (no usable AUC)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-09T22:15:17.362221+00:00",
-      "probability": 0.23979335126977674,
+      "predicted_at": "2026-09-09T22:40:24.856343+00:00",
+      "probability": 0.2788243485793102,
       "question": "Will A. Sabalenka win more than 73% of points played on their first serve?",
       "rbp": null,
       "settled_at": "",
-      "submission": 19
+      "submission": 23
     },
     {
       "base_rate": 0.4791,
@@ -139,7 +142,7 @@
         "outcome coupling: P(win)=0.474, delta=+0.94"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-09T22:15:17.362221+00:00",
+      "predicted_at": "2026-09-09T22:40:24.856343+00:00",
       "probability": 0.22564994600494237,
       "question": "Will J. Pegula hit more winners than A. Sabalenka?",
       "rbp": null,
@@ -160,7 +163,7 @@
       "model": 0.299,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-09T22:15:17.362221+00:00",
+      "predicted_at": "2026-09-09T22:40:24.856343+00:00",
       "probability": 0.299,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -183,7 +186,7 @@
         "shrunk 85% toward even money (no usable AUC)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-09T22:15:17.362221+00:00",
+      "predicted_at": "2026-09-09T22:40:24.856343+00:00",
       "probability": 0.5183,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -208,7 +211,7 @@
         "logit-sharpened at alpha=1.75"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-09T22:15:17.362221+00:00",
+      "predicted_at": "2026-09-09T22:40:24.856343+00:00",
       "probability": 0.46306567132318427,
       "question": "Will J. Pegula win?",
       "rbp": null,
@@ -232,7 +235,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-09T22:15:17.362221+00:00",
+      "predicted_at": "2026-09-09T22:40:24.856343+00:00",
       "probability": 0.21095399999999995,
       "question": "Will the match feature at least 1 tiebreak(s)?",
       "rbp": null,

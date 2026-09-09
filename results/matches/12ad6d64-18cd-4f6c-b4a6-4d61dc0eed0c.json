@@ -14,14 +14,16 @@
       "market_id": "12ff9f2d-67db-4ec5-8e72-344e9b9982e3",
       "market_weight": 0.0,
       "model": 0.5399856152557847,
-      "notes": [],
+      "notes": [
+        "shrunk 20% toward even money (no usable AUC)"
+      ],
       "outcome": null,
-      "predicted_at": "2026-09-09T22:15:17.361272+00:00",
-      "probability": 0.5399856152557847,
+      "predicted_at": "2026-09-09T22:40:24.855251+00:00",
+      "probability": 0.5319884922046277,
       "question": "Will the match last longer than 155 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 55
+      "submission": 54
     },
     {
       "base_rate": 0.4784,
@@ -43,7 +45,7 @@
         "logit-sharpened at alpha=1.40"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-09T22:15:17.361272+00:00",
+      "predicted_at": "2026-09-09T22:40:24.855251+00:00",
       "probability": 0.2717377216691304,
       "question": "Will B. van de Zandschulp record more aces than A. Zverev?",
       "rbp": null,
@@ -67,7 +69,7 @@
         "bovada double_faults line 0.849 blended at 85%"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-09T22:15:17.361272+00:00",
+      "predicted_at": "2026-09-09T22:40:24.855251+00:00",
       "probability": 0.8172915172394609,
       "question": "Will B. van de Zandschulp record more double faults than A. Zverev?",
       "rbp": null,
@@ -91,7 +93,7 @@
         "base-rate pull 0.66 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-09T22:15:17.361272+00:00",
+      "predicted_at": "2026-09-09T22:40:24.855251+00:00",
       "probability": 0.5,
       "question": "Will B. van de Zandschulp commit more than 35 unforced errors?",
       "rbp": null,
@@ -113,15 +115,16 @@
       "notes": [
         "first-serve rate: expected 0.769 vs threshold 0.750, sd 0.075 (0.050 sampling on 70 first serves + 0.056 form)",
         "model weighted 100% against the base rate 0.122 instead of the confidence pull",
-        "base-rate pull 0.53 suppressed for first_serve_comparison"
+        "base-rate pull 0.53 suppressed for first_serve_comparison",
+        "shrunk 15% toward even money (no usable AUC)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-09T22:15:17.361272+00:00",
-      "probability": 0.5993999025112658,
+      "predicted_at": "2026-09-09T22:40:24.855251+00:00",
+      "probability": 0.5844899171345759,
       "question": "Will A. Zverev win more than 75% of points played on their first serve?",
       "rbp": null,
       "settled_at": "",
-      "submission": 62
+      "submission": 61
     },
     {
       "base_rate": 0.4904,
@@ -139,7 +142,7 @@
         "missing winners rates; using the measured even-matchup price"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-09T22:15:17.361272+00:00",
+      "predicted_at": "2026-09-09T22:40:24.855251+00:00",
       "probability": 0.49039999999999995,
       "question": "Will B. van de Zandschulp hit more winners than A. Zverev?",
       "rbp": null,
@@ -160,7 +163,7 @@
       "model": 0.21125,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-09T22:15:17.361272+00:00",
+      "predicted_at": "2026-09-09T22:40:24.855251+00:00",
       "probability": 0.21125,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -183,7 +186,7 @@
         "shrunk 85% toward even money (no usable AUC)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-09T22:15:17.361272+00:00",
+      "predicted_at": "2026-09-09T22:40:24.855251+00:00",
       "probability": 0.527,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -208,7 +211,7 @@
         "logit-sharpened at alpha=1.75"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-09T22:15:17.361272+00:00",
+      "predicted_at": "2026-09-09T22:40:24.855251+00:00",
       "probability": 0.1602983263079562,
       "question": "Will B. van de Zandschulp win?",
       "rbp": null,
@@ -232,7 +235,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-09T22:15:17.361272+00:00",
+      "predicted_at": "2026-09-09T22:40:24.855251+00:00",
       "probability": 0.090525,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,
