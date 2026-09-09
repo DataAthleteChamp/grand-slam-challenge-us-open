@@ -39,8 +39,9 @@ OUT = Path(__file__).resolve().parent.parent / "data" / "manual" / "NUMBERS.txt"
 #:
 #:   aces           +0.23 [+0.03,+0.43]  SIG   -> sharpen
 #:   match winner   +0.52 [+0.30,+0.71]  SIG   -> but the bot ALREADY sharpens this
-#:                                                at 1.35, so sharpening again here
-#:                                                would compound to about 1.55
+#:                                                at 1.75, so sharpening again here
+#:                                                would compound well past the
+#:                                                measured range
 #:   double faults  -0.41 [-0.65,-0.17]  SIG   -> do NOT sharpen
 #:   duration       -0.34 [-0.62,-0.07]  SIG   -> do NOT sharpen
 #:   tiebreak       +0.04 [-0.21,+0.28]        -> nothing to gain
@@ -48,6 +49,15 @@ OUT = Path(__file__).resolve().parent.parent / "data" / "manual" / "NUMBERS.txt"
 #: Sharpening only helps where the number is under-confident. Double faults and
 #: duration are not, and blanket sharpening was quietly costing this account
 #: points on two of its five families.
+#:
+#: NOTE ON COMPOUNDING: the bot now applies EXTREMISE_ALPHA 1.40 to aces itself,
+#: so this 1.15 lands on top of it and the hand-entered account effectively runs
+#: aces at 1.61. That is deliberate rather than an oversight. Replaying 1135
+#: settled questions found ace sharpening significantly positive at every alpha
+#: from 1.10 to 1.60 (+41.6 to +151.3 skill points), with the point estimate still
+#: rising at 1.80, so 1.61 sits inside the measured range. Holding the two bots at
+#: the conservative 1.40 and this account at 1.61 spreads the three entries across
+#: that range instead of betting all of them on one end of it.
 SHARPEN_BY_TOKEN = {"aces": 1.15}
 
 #: Questions are listed in this order within a match, which is how the website

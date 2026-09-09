@@ -1,5 +1,5 @@
 {
-  "closing_time": "2026-09-10T03:30:00.000Z",
+  "closing_time": "2026-09-10T11:00:00.000Z",
   "draw": "mens",
   "entries": [
     {
@@ -13,17 +13,15 @@
       "market": null,
       "market_id": "12ff9f2d-67db-4ec5-8e72-344e9b9982e3",
       "market_weight": 0.0,
-      "model": 0.4934399176154085,
-      "notes": [
-        "total games: simulator 35.3, Pinnacle 33.5, used 34.2 at weight 0.60"
-      ],
+      "model": 0.5399856152557847,
+      "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-08T23:49:30.609193+00:00",
-      "probability": 0.4934399176154085,
+      "predicted_at": "2026-09-09T22:15:17.361272+00:00",
+      "probability": 0.5399856152557847,
       "question": "Will the match last longer than 155 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 49
+      "submission": 55
     },
     {
       "base_rate": 0.4784,
@@ -45,7 +43,7 @@
         "logit-sharpened at alpha=1.40"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-08T23:49:30.609193+00:00",
+      "predicted_at": "2026-09-09T22:15:17.361272+00:00",
       "probability": 0.2717377216691304,
       "question": "Will B. van de Zandschulp record more aces than A. Zverev?",
       "rbp": null,
@@ -69,7 +67,7 @@
         "bovada double_faults line 0.849 blended at 85%"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-08T23:49:30.609193+00:00",
+      "predicted_at": "2026-09-09T22:15:17.361272+00:00",
       "probability": 0.8172915172394609,
       "question": "Will B. van de Zandschulp record more double faults than A. Zverev?",
       "rbp": null,
@@ -93,7 +91,7 @@
         "base-rate pull 0.66 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-08T23:49:30.609193+00:00",
+      "predicted_at": "2026-09-09T22:15:17.361272+00:00",
       "probability": 0.5,
       "question": "Will B. van de Zandschulp commit more than 35 unforced errors?",
       "rbp": null,
@@ -118,7 +116,7 @@
         "base-rate pull 0.53 suppressed for first_serve_comparison"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-08T23:49:30.609193+00:00",
+      "predicted_at": "2026-09-09T22:15:17.361272+00:00",
       "probability": 0.5993999025112658,
       "question": "Will A. Zverev win more than 75% of points played on their first serve?",
       "rbp": null,
@@ -141,7 +139,7 @@
         "missing winners rates; using the measured even-matchup price"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-08T23:49:30.609193+00:00",
+      "predicted_at": "2026-09-09T22:15:17.361272+00:00",
       "probability": 0.49039999999999995,
       "question": "Will B. van de Zandschulp hit more winners than A. Zverev?",
       "rbp": null,
@@ -162,7 +160,7 @@
       "model": 0.21125,
       "notes": [],
       "outcome": null,
-      "predicted_at": "2026-09-08T23:49:30.609193+00:00",
+      "predicted_at": "2026-09-09T22:15:17.361272+00:00",
       "probability": 0.21125,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -185,7 +183,7 @@
         "shrunk 85% toward even money (no usable AUC)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-08T23:49:30.609193+00:00",
+      "predicted_at": "2026-09-09T22:15:17.361272+00:00",
       "probability": 0.527,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -210,7 +208,7 @@
         "logit-sharpened at alpha=1.75"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-08T23:49:30.609193+00:00",
+      "predicted_at": "2026-09-09T22:15:17.361272+00:00",
       "probability": 0.1602983263079562,
       "question": "Will B. van de Zandschulp win?",
       "rbp": null,
@@ -234,7 +232,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-08T23:49:30.609193+00:00",
+      "predicted_at": "2026-09-09T22:15:17.361272+00:00",
       "probability": 0.090525,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,
@@ -245,7 +243,7 @@
   "match_id": "12ad6d64-18cd-4f6c-b4a6-4d61dc0eed0c",
   "match_name": "A. Zverev vs B. Van De Zandschulp",
   "multiplier": 3,
-  "opening_time": "2026-09-09T15:30:00.000Z",
+  "opening_time": "2026-09-09T23:00:00.000Z",
   "player_a": "Alexander Zverev",
   "player_b": "Botic van de Zandschulp",
   "round_code": "R128"
