@@ -327,23 +327,39 @@ SHRINK_TO_EVEN = {
 #: is the signature of a compressed but correctly ordered forecast, which is
 #: exactly what sharpening repairs.
 #:
-#:                     alpha   skill delta        recent-only    early-only
-#:     aces             1.40  +123.5 [+28,+216]   +64.2 SIG      +59.3
-#:     match_winner     1.30  +137.0 [+54,+213]   +22.0          +114.9 SIG
+#: Raised a second time on 1187 settled questions.  The first pass to 1.40 and
+#: 1.75 did not go far enough: both families are STILL under-confident in five of
+#: six calibration bins at those values.  Match winner submits 28% where the
+#: realised rate is 6.9%, and aces submits 71% where it is 100%.
 #:
-#: Both are positive in every subsample and in a time split that fits alpha on
-#: the first 60% of questions and scores it on the last 40% (aces +88.1,
-#: match winner +11.4).  Chosen below the split's own optimum (1.75 and 2.00):
-#: after sharpening at these values we are still short of the realised rate in
-#: every calibration bin, so this corrects under-confidence without overshooting.
+#:                    total alpha   skill delta
+#:     aces               1.47      +21.6 [+8.4,+33.7]   SIG
+#:     aces               1.61      +58.3 [+19.6,+93.7]  SIG
+#:     match_winner       1.84      +30.0 [+14.6,+44.8]  SIG
+#:     match_winner       2.01      +80.9 [+35.7,+123.5] SIG
+#:
+#: A time split that fits the extra alpha on the earlier questions and scores it
+#: on the later ones is positive at all three train fractions tried for both
+#: families (aces +75.9/+74.3/+44.8, match winner +51.7/+15.0/+12.5).  That split
+#: wants 2.24 and 2.80, but it hits the top of the search grid, so the optimum is
+#: unidentified rather than measured.  1.60 and 1.95 are deliberately short of it:
+#: both stay inside the significant range, both leave every calibration bin still
+#: under-confident, and neither bets the last few 3x questions on a monotone
+#: extrapolation.
+#:
+#: Sharpening is NOT a substitute for the market blend and does not become
+#: redundant once one is applied.  Splitting the ace questions by whether a Bovada
+#: line was actually available, sharpening helps in both halves - dropping to
+#: alpha 1.00 costs -18.1 on the 21 questions that had a line and -157.5 SIG on
+#: the 159 that did not.  The two corrections are independent.
 #:
 #: Deliberately NOT applied to winners or double faults.  Sharpening is only
-#: right where the ranking is good, and there it is not: winners AUC 0.600 and
-#: double faults 0.638 against a crowd on 0.820 and 0.718.  Sharpening both was
+#: right where the ranking is good, and there it is not: winners AUC 0.617 and
+#: double faults 0.633 against a crowd on 0.828 and 0.705.  Sharpening both was
 #: negative at every alpha tested (winners -25.6 at 1.50, double faults -100.4).
 EXTREMISE_ALPHA = {
-    Family.MATCH_WINNER: 1.75,  # 1.35 already live, times the 1.30 measured on top
-    Family.ACES_COMPARISON: 1.40,
+    Family.MATCH_WINNER: 1.95,
+    Family.ACES_COMPARISON: 1.60,
 }
 
 #: Weight given to a bookmaker's head-to-head count line over our own model.

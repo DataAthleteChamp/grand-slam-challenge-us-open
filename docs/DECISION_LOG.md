@@ -683,3 +683,69 @@ cascading through his match (winner −22.1, over 110 minutes −15.1, deciding 
 the +137 measured over 177 questions. Four matches cannot overturn it, and
 reverting on this evidence would be the overreaction the earlier lessons warn
 about. Encouraging at n=4 each: lopsided set +10.0, aces +3.7, winners +2.4.
+
+## 2026-09-10 — the Zverev match, and sharpening was still too timid
+
+Eleven questions settled under the locked-in model: **+90.2 RBP, +2.2 skill, 7 of
+11 beat the crowd**. The first clearly positive cohort. Three lessons.
+
+### 1. Bovada is excellent at aces and mediocre at double faults
+
+The one large loss was Zandschulp to record more double faults: we submitted 82,
+the crowd 66, and the answer was NO, for −23.68. Bovada had that at 84.85 and we
+followed it at weight 0.85. Meanwhile the ace question went the other way — our
+27 against Bovada's 34.8 and the crowd's 30, answer NO, +1.71.
+
+Separating the two families on the 42 settled questions where a Bovada line was
+actually used:
+
+| | our Brier | crowd Brier | Bovada Brier | our AUC | crowd AUC | Bovada AUC |
+|---|---|---|---|---|---|---|
+| aces | 0.1771 | 0.1838 | **0.1529** | 0.841 | 0.827 | **0.875** |
+| double faults | 0.2520 | **0.2426** | 0.2480 | 0.663 | 0.620 | 0.692 |
+
+On aces Bovada beats everyone and moving further toward it is significant
+(+21.3 at 0.35, +36.5 at 0.65). On double faults **the crowd beats Bovada**, and
+moving toward Bovada is worth at most +8.4 and never significant. The 0.85 weight
+was set from a pooled test that the ace half carried. Left in place for now
+because it is not measurably harmful either, but it is not evidence-backed for
+double faults and should not be cited as if it were.
+
+### 2. A hypothesis I tested and had to abandon
+
+Our ace numbers sit below Bovada because sharpening pushes them away from even,
+which suggested sharpening might be double-counting a blend that is already
+sharp. Splitting the ace questions by whether a line existed refutes it: dropping
+to alpha 1.00 costs −18.1 on the 21 questions that had a line and −157.5 SIG on
+the 159 that did not. The market blend and the sharpening correct different
+things and neither substitutes for the other.
+
+### 3. The first sharpening pass was too conservative
+
+At alpha 1.40 and 1.75 both families remain under-confident in five of six
+calibration bins — match winner submits 28% where the realised rate is **6.9%**,
+aces submits 71% where it is **100%**.
+
+| total alpha | skill delta |
+|---|---|
+| aces 1.47 | +21.6 [+8.4,+33.7] SIG |
+| aces 1.61 | +58.3 [+19.6,+93.7] SIG |
+| match winner 1.84 | +30.0 [+14.6,+44.8] SIG |
+| match winner 2.01 | +80.9 [+35.7,+123.5] SIG |
+
+A time split fitting the extra alpha on earlier questions and scoring on later
+ones is positive at all three train fractions for both families (aces
++75.9/+74.3/+44.8, match winner +51.7/+15.0/+12.5). Raised to **1.60** and
+**1.95** — short of the 2.24 and 2.80 the split wants, because the split hits the
+top of the search grid, so its optimum is unidentified rather than measured. Both
+chosen values stay inside the significant range and leave every calibration bin
+still under-confident.
+
+Sharpening matters least where it is riskiest: the remaining matches are late
+rounds where our numbers sit near even, and 55 sharpens only to 60.
+
+### Also worth recording
+
+Winners returned **+14.95** on the single question in this batch, our best of the
+cohort, in the family the previous entry called unfixable. One question proves
+nothing, but the family is not uniformly hopeless.
