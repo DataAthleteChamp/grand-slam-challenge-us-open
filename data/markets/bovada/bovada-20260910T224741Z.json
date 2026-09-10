@@ -1,0 +1,122 @@
+[
+ {
+  "match": "Frances Tiafoe vs Ben Shelton",
+  "start_time": 1789167600000,
+  "family": "aces",
+  "player": "Frances Tiafoe",
+  "player_key": "tiafoe",
+  "p_more": 0.0487,
+  "p_tie": 0.0441,
+  "overround": 1.0806
+ },
+ {
+  "match": "Frances Tiafoe vs Ben Shelton",
+  "start_time": 1789167600000,
+  "family": "aces",
+  "player": "Ben Shelton",
+  "player_key": "shelton",
+  "p_more": 0.9072,
+  "p_tie": 0.0441,
+  "overround": 1.0806
+ },
+ {
+  "match": "Frances Tiafoe vs Ben Shelton",
+  "start_time": 1789167600000,
+  "family": "double_faults",
+  "player": "Frances Tiafoe",
+  "player_key": "tiafoe",
+  "p_more": 0.4142,
+  "p_tie": 0.1519,
+  "overround": 1.0974
+ },
+ {
+  "match": "Frances Tiafoe vs Ben Shelton",
+  "start_time": 1789167600000,
+  "family": "double_faults",
+  "player": "Ben Shelton",
+  "player_key": "shelton",
+  "p_more": 0.4339,
+  "p_tie": 0.1519,
+  "overround": 1.0974
+ },
+ {
+  "match": "Aryna Sabalenka vs Jessica Pegula",
+  "start_time": 1789081200000,
+  "family": "aces",
+  "player": "Aryna Sabalenka",
+  "player_key": "sabalenka",
+  "p_more": 0.6308,
+  "p_tie": 0.1012,
+  "overround": 1.0975
+ },
+ {
+  "match": "Aryna Sabalenka vs Jessica Pegula",
+  "start_time": 1789081200000,
+  "family": "aces",
+  "player": "Jessica Pegula",
+  "player_key": "pegula",
+  "p_more": 0.268,
+  "p_tie": 0.1012,
+  "overround": 1.0975
+ },
+ {
+  "match": "Aryna Sabalenka vs Jessica Pegula",
+  "start_time": 1789081200000,
+  "family": "double_faults",
+  "player": "Aryna Sabalenka",
+  "player_key": "sabalenka",
+  "p_more": 0.4694,
+  "p_tie": 0.1493,
+  "overround": 1.116
+ },
+ {
+  "match": "Aryna Sabalenka vs Jessica Pegula",
+  "start_time": 1789081200000,
+  "family": "double_faults",
+  "player": "Jessica Pegula",
+  "player_key": "pegula",
+  "p_more": 0.3813,
+  "p_tie": 0.1493,
+  "overround": 1.116
+ },
+ {
+  "match": "Cori Gauff vs Elena Rybakina",
+  "start_time": 1789085400000,
+  "family": "aces",
+  "player": "Coco Gauff",
+  "player_key": "gauff",
+  "p_more": 0.2014,
+  "p_tie": 0.1007,
+  "overround": 1.1034
+ },
+ {
+  "match": "Cori Gauff vs Elena Rybakina",
+  "start_time": 1789085400000,
+  "family": "aces",
+  "player": "Elena Rybakina",
+  "player_key": "rybakina",
+  "p_more": 0.6979,
+  "p_tie": 0.1007,
+  "overround": 1.1034
+ },
+ {
+  "match": "Cori Gauff vs Elena Rybakina",
+  "start_time": 1789085400000,
+  "family": "double_faults",
+  "player": "Coco Gauff",
+  "player_key": "gauff",
+  "p_more": 0.7709,
+  "p_tie": 0.0809,
+  "overround": 1.1242
+ },
+ {
+  "match": "Cori Gauff vs Elena Rybakina",
+  "start_time": 1789085400000,
+  "family": "double_faults",
+  "player": "Elena Rybakina",
+  "player_key": "rybakina",
+  "p_more": 0.1482,
+  "p_tie": 0.0809,
+  "overround": 1.1242
+ }
+]
