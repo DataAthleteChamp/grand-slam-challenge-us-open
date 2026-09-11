@@ -749,3 +749,61 @@ rounds where our numbers sit near even, and 55 sharpens only to 60.
 Winners returned **+14.95** on the single question in this batch, our best of the
 cohort, in the family the previous entry called unfixable. One question proves
 nothing, but the family is not uniformly hopeless.
+
+## 2026-09-11 — the final asks ten questions no earlier round asked
+
+`QUESTIONS_PER_MATCH["F"] = 20` was in the taxonomy from the start, but the
+parser only knew the ten wordings the earlier rounds used. When the final's
+markets opened, **seven questions fell through to `Family.OTHER` and were
+answered with a flat 50 at the 3x multiplier**. The coverage guard reported zero
+unanswered the whole time, because they *were* answered — just not with anything.
+
+| question | was | now |
+|---|---|---|
+| Will both players win at least one set? | 50 | **37** |
+| Will any player win 2 sets in a row? | 50 | **81** |
+| Will the match end with E. Rybakina winning 2:1? | 50 | **18** |
+| Will E. Rybakina win more than 73 total points? | 50 | **49** |
+| Will A. Sabalenka win more than 75 total points? | 50 | **48** |
+| Will X cover more than N feet? (x2) | 50 | 50, deliberately |
+
+### The first one was not a modelling error, it was a contradiction
+
+"Both players win at least one set" and "the match requires a deciding set" are
+the **same event** in a best-of-three: the loser takes a set exactly when the
+winner fails to sweep. We were answering 37 to one and 50 to the other about the
+same match. Both are now read off `p_deciding_set`, and a test asserts they are
+submitted identically so they can never diverge again.
+
+### Two sets in a row was the largest single error
+
+Every straight-sets win contains two consecutive sets, and so does every
+three-setter where the winner lost the opener. That is `p_straight_sets` plus
+about half of `p_deciding_set` — 0.81 here, not 0.50. A flat 50 was **31 points**
+wrong on a 3x question.
+
+### Total points: why the mean is the wrong summary
+
+Expected points for Rybakina are 76.7 against a threshold of 73, which sounds
+like a comfortable yes. Taking a mean and a standard deviation gives about 70.
+The correct answer is **49**, because match length is strongly bimodal: a
+straight-sets win is ~139 total points (subject ~69, below the line) and a
+three-setter ~205 (subject ~102, far above it), with little mass between. The
+answer is essentially `P(three sets)` plus a small tail, not a tail probability
+around the mean. So the tail is evaluated run by run over the simulated games
+and then averaged. Using the mean would have been 21 points wrong.
+
+### Distance covered is left alone, on purpose
+
+No source this entry can reach publishes metres covered — not the official feed,
+not Flashscore, not any book. It is now *classified* so it stops counting as a
+parse failure, and explicitly priced at the base rate with a note saying why.
+Deriving it from match length would be a guess wearing a model's clothes.
+
+### The existing tests caught a regression mid-change
+
+The first version of the exact-scoreline rule matched a bare `N-N` and silently
+stole "Will a set end 6-0, 6-1 or 6-2?" from the lopsided-set family. A guard
+test that had been in the suite for weeks failed immediately. The rule now
+requires match-level context ("winning 2:1", "the match ends 2:1"), and that
+exact string is pinned in the new test.

@@ -1367,3 +1367,126 @@ def test_shrinking_moves_probabilities_toward_even_money():
             shrunk = (1.0 - pull) * probability + pull * 0.5
             assert abs(shrunk - 0.5) <= abs(probability - 0.5)
             assert (probability - 0.5) * (shrunk - 0.5) >= 0.0
+
+
+def test_final_only_question_types_all_parse():
+    """The final carries twenty questions, ten of them in wordings no earlier
+    round used.  Every one of these fell through to OTHER and was answered with
+    a flat 50 at the 3x multiplier until they were added."""
+    from bot.markets.parser import parse_question
+
+    cases = {
+        "Will any player win 2 sets in a row?": Family.SETS_IN_A_ROW,
+        "Will both players win at least one set?": Family.BOTH_WIN_SET,
+        "Will the match end with E. Rybakina winning 2:1?": Family.EXACT_SCORELINE,
+        "Will E. Rybakina win more than 73 total points?": Family.TOTAL_POINTS,
+        "Will E. Rybakina cover more than 5400 feet?": Family.DISTANCE_COVERED,
+    }
+    for question, expected in cases.items():
+        spec = parse_question(question, players=("A. Sabalenka", "E. Rybakina"))
+        assert spec.family is expected, f"{question!r} parsed as {spec.family}"
+        assert spec.is_understood, f"{question!r} was not understood"
+
+
+def test_the_new_wordings_do_not_steal_existing_questions():
+    """The new rules sit above the generic ones and mention 'set', 'win' and
+    'points', so guard that they did not capture anything that already worked."""
+    from bot.markets.parser import parse_question
+
+    unchanged = {
+        "Will either player win a set 6-2, 6-1 or 6-0?": Family.LOPSIDED_SET,
+        # A bare "N-N" is a SET score, not a match scoreline.  An earlier version
+        # of the exact-scoreline rule matched this and silently stole it.
+        "Will a set end 6-0, 6-1 or 6-2?": Family.LOPSIDED_SET,
+        "Will a set end in a lopsided score?": Family.LOPSIDED_SET,
+        "Will the match require a deciding set?": Family.DECIDING_SET,
+        "Will the final set played include a tiebreak?": Family.TIEBREAK,
+        "Will E. Rybakina win?": Family.MATCH_WINNER,
+        "Will the match last longer than 105 minutes?": Family.MATCH_DURATION,
+        "Will A. Sabalenka commit more than 33 unforced errors?": Family.UNFORCED_ERRORS,
+        "Will E. Rybakina record more aces than A. Sabalenka?": Family.ACES_COMPARISON,
+        "Will A. Sabalenka win more than 70% of points played on their first serve?": (
+            Family.FIRST_SERVE_COMPARISON
+        ),
+    }
+    for question, expected in unchanged.items():
+        spec = parse_question(question, players=("A. Sabalenka", "E. Rybakina"))
+        assert spec.family is expected, f"{question!r} now parses as {spec.family}"
+
+
+def test_exact_scoreline_is_extracted_and_oriented():
+    from bot.markets.parser import parse_question
+
+    spec = parse_question(
+        "Will the match end with E. Rybakina winning 2:1?",
+        players=("A. Sabalenka", "E. Rybakina"),
+    )
+    assert spec.scoreline == (2, 1)
+    assert spec.subject == "E. Rybakina"
+
+
+def test_simulated_set_sequence_obeys_its_identities():
+    """Every new structural answer is a function of the same set sequence, so
+    they must agree with the answers already derived from it."""
+    from bot.models.simulate import SimulationConfig, simulate_match
+
+    for pa, pb in ((0.60, 0.58), (0.70, 0.55), (0.52, 0.62)):
+        sim = simulate_match(pa, pb, best_of=3, config=SimulationConfig(n_sims=4000))
+        assert sim.p_straight_sets + sim.p_deciding_set == pytest.approx(1.0, abs=1e-9)
+        # A straight-sets win is two in a row by definition, so the event is a
+        # superset and can never be less likely.
+        assert sim.p_two_sets_in_a_row >= sim.p_straight_sets
+        assert sum(sim.p_scoreline.values()) == pytest.approx(1.0, abs=1e-9)
+        # Best-of-three: the only three-set results are 2-1 and 1-2.
+        three_set = sim.probability_scoreline(2, 1) + sim.probability_scoreline(1, 2)
+        assert three_set == pytest.approx(sim.p_deciding_set, abs=1e-9)
+        straight = sim.probability_scoreline(2, 0) + sim.probability_scoreline(0, 2)
+        assert straight == pytest.approx(sim.p_straight_sets, abs=1e-9)
+
+
+def test_both_win_a_set_is_priced_identically_to_a_deciding_set():
+    """They are the same event.  Pricing them apart would let the entry submit
+    two contradictory answers about one match."""
+    from bot.markets.parser import parse_question
+    from bot.roster import Roster
+
+    roster, pricer = Roster.load(), Pricer(lane="honest")
+    context = roster.context("A. Sabalenka", "E. Rybakina", tour="WTA")
+    if not (context.player_a.has_ratings and context.player_b.has_ratings):
+        pytest.skip("players missing from roster")
+
+    both = pricer.price(
+        parse_question(
+            "Will both players win at least one set?",
+            players=("A. Sabalenka", "E. Rybakina"),
+        ),
+        context,
+        market_id="a",
+    )
+    decider = pricer.price(
+        parse_question(
+            "Will the match require a deciding set?",
+            players=("A. Sabalenka", "E. Rybakina"),
+        ),
+        context,
+        market_id="b",
+    )
+    assert both.submission == decider.submission
+
+
+def test_distance_covered_is_recognised_but_deliberately_unmodelled():
+    """No public source publishes distance covered.  The question must be
+    classified so it stops counting as a parse failure, and must still answer
+    the base rate rather than a number invented from match length."""
+    from bot.markets.parser import parse_question
+    from bot.roster import Roster
+
+    roster, pricer = Roster.load(), Pricer(lane="honest")
+    context = roster.context("A. Sabalenka", "E. Rybakina", tour="WTA")
+    spec = parse_question(
+        "Will E. Rybakina cover more than 5400 feet?",
+        players=("A. Sabalenka", "E. Rybakina"),
+    )
+    priced = pricer.price(spec, context, market_id="c")
+    assert priced.submission == 50
+    assert any("unmodellable" in note for note in priced.notes)

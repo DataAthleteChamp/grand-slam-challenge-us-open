@@ -38,6 +38,15 @@ class Family(StrEnum):
     WINNERS_COMPARISON = "winners_comparison"
     FIRST_SERVE_COMPARISON = "first_serve_comparison"
     UNFORCED_ERRORS = "unforced_errors"
+    #: Final-only question types.  The final carries twenty questions rather than
+    #: ten, and the extra ten introduced wordings no earlier round used.  Until
+    #: these were added every one of them fell through to OTHER and was answered
+    #: with a flat 50 at the 3x multiplier.
+    SETS_IN_A_ROW = "sets_in_a_row"
+    BOTH_WIN_SET = "both_win_set"
+    EXACT_SCORELINE = "exact_scoreline"
+    TOTAL_POINTS = "total_points"
+    DISTANCE_COVERED = "distance_covered"
     OTHER = "other"
 
 
@@ -48,6 +57,12 @@ STRUCTURAL = frozenset(
         Family.LOPSIDED_SET,
         Family.SET_GAMES,
         Family.MATCH_DURATION,
+        # All three are deterministic functions of the set sequence, so they are
+        # read off the same simulation and stay mutually coherent with the
+        # deciding-set and straight-sets answers.
+        Family.SETS_IN_A_ROW,
+        Family.BOTH_WIN_SET,
+        Family.EXACT_SCORELINE,
     }
 )
 
@@ -60,7 +75,7 @@ COMPARISON = frozenset(
     }
 )
 
-THRESHOLD = frozenset({Family.UNFORCED_ERRORS})
+THRESHOLD = frozenset({Family.UNFORCED_ERRORS, Family.TOTAL_POINTS})
 
 #: The match-winner question. Every bookmaker on earth prices this one, the
 #: closing line has a Brier of about 0.203, and the predecessor event showed a

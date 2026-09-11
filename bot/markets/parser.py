@@ -38,6 +38,8 @@ class MarketSpec:
     set_number: int | None = None
     subject: str | None = None
     opponent: str | None = None
+    #: ``(sets_subject, sets_opponent)`` for an exact-scoreline question.
+    scoreline: tuple[int, int] | None = None
     confidence: float = 0.0
     notes: tuple[str, ...] = field(default_factory=tuple)
 
@@ -54,6 +56,7 @@ class MarketSpec:
             "set_number": self.set_number,
             "subject": self.subject,
             "opponent": self.opponent,
+            "scoreline": list(self.scoreline) if self.scoreline else None,
             "confidence": self.confidence,
             "notes": list(self.notes),
             "raw": self.raw,
@@ -70,6 +73,52 @@ _NUMBER = r"(\d+(?:\.\d+)?)"
 # duration question with a 6 in the tens place was silently routed to the
 # lopsided-set family and priced by the wrong model.
 _RULES: list[tuple[Family, re.Pattern[str], float]] = [
+    # Final-only wordings first: several of them contain words ("set", "win",
+    # "points") that the generic rules below would otherwise claim.
+    (
+        Family.SETS_IN_A_ROW,
+        re.compile(
+            r"\bsets?\s+in\s+a\s+row\b|\bconsecutive\s+sets?\b"
+            r"|\bback[\s-]?to[\s-]?back\s+sets?\b",
+            re.I,
+        ),
+        0.95,
+    ),
+    (
+        Family.BOTH_WIN_SET,
+        re.compile(
+            r"\bboth\s+players?\b.{0,40}\bat\s+least\s+one\s+set\b"
+            r"|\bboth\s+players?\b.{0,20}\bwin\b.{0,20}\bset\b",
+            re.I,
+        ),
+        0.95,
+    ),
+    (
+        Family.EXACT_SCORELINE,
+        # Anchored on "winning N:N" or "the match ends N:N" rather than a bare
+        # "N-N", which would otherwise steal "Will a set end 6-0, 6-1 or 6-2?"
+        # from the lopsided-set family.
+        re.compile(
+            r"\bwinning\s+\d+\s*[:\-]\s*\d+"
+            r"|\bmatch\b.{0,40}\bends?\s+\d+\s*[:\-]\s*\d+",
+            re.I,
+        ),
+        0.95,
+    ),
+    (
+        Family.DISTANCE_COVERED,
+        re.compile(
+            r"\bcover\b.{0,30}\b(?:feet|foot|met(?:er|re)s?|miles?|km|kilomet(?:er|re)s?)\b"
+            r"|\bdistance\s+covered\b",
+            re.I,
+        ),
+        0.95,
+    ),
+    (
+        Family.TOTAL_POINTS,
+        re.compile(r"\btotal\s+points?\b|\bpoints?\s+in\s+total\b", re.I),
+        0.95,
+    ),
     (
         Family.MATCH_DURATION,
         re.compile(r"\bminutes?\b|\bhours?\b|\blast longer\b|\bduration\b", re.I),
@@ -178,6 +227,7 @@ def parse_question(text: str, *, players: tuple[str, str] | None = None) -> Mark
     threshold, comparator = _extract_threshold(raw)
     set_number = _extract_set_number(raw)
     subject, opponent = _extract_players(raw, players)
+    scoreline = _extract_scoreline(raw) if family is Family.EXACT_SCORELINE else None
 
     # A head-to-head comparison carries no number, so _extract_threshold finds
     # no comparator and leaves the default "gt". "Will A record FEWER aces than
@@ -197,6 +247,14 @@ def parse_question(text: str, *, players: tuple[str, str] | None = None) -> Mark
     if family in {Family.SET_GAMES, Family.UNFORCED_ERRORS} and threshold is None:
         notes.append("threshold not found — verify wording")
         confidence = min(confidence, 0.4)
+    if family is Family.EXACT_SCORELINE and (scoreline is None or subject is None):
+        notes.append("scoreline or subject not identified")
+        confidence = min(confidence, 0.4)
+    if family in {Family.TOTAL_POINTS, Family.DISTANCE_COVERED} and (
+        threshold is None or subject is None
+    ):
+        notes.append("threshold or subject not identified")
+        confidence = min(confidence, 0.4)
 
     return MarketSpec(
         family=family,
@@ -206,9 +264,21 @@ def parse_question(text: str, *, players: tuple[str, str] | None = None) -> Mark
         set_number=set_number,
         subject=subject,
         opponent=opponent,
+        scoreline=scoreline,
         confidence=confidence,
         notes=tuple(notes),
     )
+
+
+def _extract_scoreline(text: str) -> tuple[int, int] | None:
+    """Pull "2:1" out of "will the match end with X winning 2:1"."""
+    match = re.search(r"\b(\d+)\s*[:\-]\s*(\d+)", text)
+    if not match:
+        return None
+    try:
+        return int(match.group(1)), int(match.group(2))
+    except (TypeError, ValueError):
+        return None
 
 
 def _classify(text: str) -> tuple[Family, float]:

@@ -141,6 +141,14 @@ class SimulatedMatch:
     p_first_set_10plus_games: float
     p_first_set_tiebreak: float
     p_straight_sets: float
+    #: Some player wins two consecutive sets.  In a best-of-three this is every
+    #: straight-sets win plus the three-set wins where the winner lost the
+    #: opener, so it is far above even money and nowhere near the 50 a defaulted
+    #: answer would give.
+    p_two_sets_in_a_row: float
+    #: ``p_scoreline[(sets_a, sets_b)]`` for every finished scoreline, so an
+    #: exact-result question is read off rather than approximated.
+    p_scoreline: dict[tuple[int, int], float]
     mean_total_games: float
     sd_total_games: float
     mean_sets: float
@@ -156,6 +164,7 @@ class SimulatedMatch:
             "p_first_set_10plus_games": round(self.p_first_set_10plus_games, 4),
             "p_first_set_tiebreak": round(self.p_first_set_tiebreak, 4),
             "p_straight_sets": round(self.p_straight_sets, 4),
+            "p_two_sets_in_a_row": round(self.p_two_sets_in_a_row, 4),
             "mean_total_games": round(self.mean_total_games, 2),
             "sd_total_games": round(self.sd_total_games, 2),
             "mean_sets": round(self.mean_sets, 3),
@@ -164,6 +173,10 @@ class SimulatedMatch:
     def probability_total_games_over(self, threshold: float) -> float:
         """``P(total games > threshold)`` straight from the simulated runs."""
         return float((self.total_games > threshold).mean())
+
+    def probability_scoreline(self, sets_a: int, sets_b: int) -> float:
+        """``P(the match ends exactly sets_a-sets_b)``."""
+        return self.p_scoreline.get((sets_a, sets_b), 0.0)
 
 
 class _SetSampler:
@@ -244,6 +257,9 @@ def simulate_match(
     first_long = np.zeros(cfg.n_sims, dtype=bool)
     first_tb = np.zeros(cfg.n_sims, dtype=bool)
     straight = np.zeros(cfg.n_sims, dtype=bool)
+    two_in_row = np.zeros(cfg.n_sims, dtype=bool)
+    final_sets_a = np.zeros(cfg.n_sims, dtype=int)
+    final_sets_b = np.zeros(cfg.n_sims, dtype=int)
     games = np.zeros(cfg.n_sims, dtype=int)
     sets_played = np.zeros(cfg.n_sims, dtype=int)
 
@@ -251,6 +267,7 @@ def simulate_match(
         sets_a = sets_b = 0
         serves_first = a_serves_first
         set_index = 0
+        previous_winner: bool | None = None
 
         while sets_a < sets_to_win and sets_b < sets_to_win:
             is_decider = sets_a == sets_to_win - 1 and sets_b == sets_to_win - 1
@@ -273,16 +290,27 @@ def simulate_match(
                 lopsided[i] = True
 
             games[i] += ga + gb
-            if ga > gb:
+            set_winner = ga > gb
+            if set_winner:
                 sets_a += 1
             else:
                 sets_b += 1
+            if previous_winner is not None and set_winner == previous_winner:
+                two_in_row[i] = True
+            previous_winner = set_winner
             serves_first = serves_first != ((ga + gb) % 2 == 1)
             set_index += 1
 
         wins[i] = sets_a == sets_to_win
         straight[i] = min(sets_a, sets_b) == 0
         sets_played[i] = sets_a + sets_b
+        final_sets_a[i] = sets_a
+        final_sets_b[i] = sets_b
+
+    scorelines: dict[tuple[int, int], float] = {}
+    for a, b in zip(final_sets_a.tolist(), final_sets_b.tolist(), strict=True):
+        scorelines[(a, b)] = scorelines.get((a, b), 0.0) + 1.0
+    scorelines = {k: v / cfg.n_sims for k, v in scorelines.items()}
 
     return SimulatedMatch(
         n_sims=cfg.n_sims,
@@ -295,6 +323,8 @@ def simulate_match(
         p_first_set_10plus_games=float(first_long.mean()),
         p_first_set_tiebreak=float(first_tb.mean()),
         p_straight_sets=float(straight.mean()),
+        p_two_sets_in_a_row=float(two_in_row.mean()),
+        p_scoreline=scorelines,
         mean_total_games=float(games.mean()),
         sd_total_games=float(games.std()),
         mean_sets=float(sets_played.mean()),

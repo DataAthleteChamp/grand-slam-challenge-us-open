@@ -19,7 +19,7 @@
         "shrunk 20% toward even money (no usable AUC)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-09T22:46:22.612836+00:00",
+      "predicted_at": "2026-09-11T13:58:52.213323+00:00",
       "probability": 0.18401011451229315,
       "question": "Will the match last longer than 150 minutes?",
       "rbp": null,
@@ -41,15 +41,15 @@
       "notes": [
         "exposure 72 service points from 22.2 games",
         "outcome coupling: P(win)=0.548, delta=+0.76",
-        "logit-sharpened at alpha=1.40"
+        "logit-sharpened at alpha=1.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-09T22:46:22.612836+00:00",
-      "probability": 0.21995966006159742,
+      "predicted_at": "2026-09-11T13:58:52.213323+00:00",
+      "probability": 0.19050309059384993,
       "question": "Will Iga Swiatek record more aces than Aryna Sabalenka?",
       "rbp": null,
       "settled_at": "",
-      "submission": 22
+      "submission": 19
     },
     {
       "base_rate": 0.4429,
@@ -67,7 +67,7 @@
         "exposure 72 service points from 22.2 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-09T22:46:22.612836+00:00",
+      "predicted_at": "2026-09-11T13:58:52.213323+00:00",
       "probability": 0.23857730864889667,
       "question": "Will Iga Swiatek record more double faults than Aryna Sabalenka?",
       "rbp": null,
@@ -89,15 +89,15 @@
       "notes": [
         "simulated win probability 0.644",
         "market consensus 0.548, weight 0.95",
-        "logit-sharpened at alpha=1.75"
+        "logit-sharpened at alpha=1.95"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-09T22:46:22.612836+00:00",
-      "probability": 0.5778393352326773,
+      "predicted_at": "2026-09-11T13:58:52.213323+00:00",
+      "probability": 0.5865655177887797,
       "question": "Will Iga Swiatek win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 58
+      "submission": 59
     },
     {
       "base_rate": 0.02463636363636364,
@@ -116,7 +116,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-09T22:46:22.612836+00:00",
+      "predicted_at": "2026-09-11T13:58:52.213323+00:00",
       "probability": 0.031771468181818176,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,

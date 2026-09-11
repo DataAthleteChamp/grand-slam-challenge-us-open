@@ -28,6 +28,8 @@ import math
 from dataclasses import dataclass, field, replace
 from typing import Any
 
+import numpy as np
+
 from .data.baserates import (
     ACE_VULNERABILITY_EXPONENT,
     ACE_VULNERABILITY_TOURS,
@@ -584,6 +586,18 @@ class Pricer:
             return self._price_comparison(spec, context, base, market_id, notes, ladders)
         if spec.family in THRESHOLD:
             return self._price_threshold(spec, context, base, market_id, notes)
+        if spec.family is Family.DISTANCE_COVERED:
+            # Recognised on purpose, and deliberately left at the base rate.
+            # Distance covered is not published by any source this entry can
+            # reach - not the official feed, not Flashscore, not any book - so
+            # there is no rate to forecast and no threshold history to calibrate
+            # against. Answering it from the base rate is the honest response;
+            # inventing a number from match length would be a guess wearing a
+            # model's clothes.
+            notes.append("distance covered is unmodellable: no public source; base rate")
+            return self._finalise(
+                spec, base, base, None, None, 0.0, market_id, notes, context, 0.2
+            )
 
         notes.append("no pricing route for this family")
         return self._finalise(spec, base, base, None, 0.0, 0.0, market_id, notes, context)
@@ -837,8 +851,67 @@ class Pricer:
         return probability, min(0.75, 0.35 + 0.25 * margin)
 
     def _price_threshold(self, spec, context, base, market_id, notes) -> PricedQuestion:
-        """Unforced-error count thresholds, e.g. 'more than 30 unforced errors'.
+        if spec.family is Family.TOTAL_POINTS:
+            return self._price_total_points(spec, context, base, market_id, notes)
+        return self._price_unforced(spec, context, base, market_id, notes)
 
+    def _price_total_points(self, spec, context, base, market_id, notes) -> PricedQuestion:
+        """'Will X win more than N total points?', a final-only question.
+
+        Unlike the count families this needs no new data at all.  The two
+        ingredients already exist: the simulator produces a distribution over
+        total games, and ``_matchup`` produces each player's service-point win
+        probability.  Points won is their product.
+
+        Both sources of variation matter and they are different in kind.  Match
+        length is strongly bimodal - a straight-sets win and a three-setter are
+        far apart in total points and there is little mass between them - so the
+        answer is taken run by run over the simulated games rather than from a
+        mean and a standard deviation, which would smear that gap into a
+        unimodal blob and push every answer toward even money.  Within a run,
+        the points themselves are close to binomial.
+        """
+        threshold = spec.threshold
+        subject, opponent = self._orient(spec, context)
+        if threshold is None or subject is None or opponent is None:
+            notes.append("no usable threshold or subject; deferring to the base rate")
+            return self._finalise(
+                spec, base, base, None, None, 0.0, market_id, notes, context, 0.3
+            )
+        if not (subject.has_ratings and opponent.has_ratings):
+            notes.append("one or both players unrated; deferring to the base rate")
+            return self._finalise(
+                spec, base, base, None, None, 0.0, market_id, notes, context, 0.3
+            )
+
+        simulation = self._simulate(context)
+        pa, pb = self._matchup(context)
+        # Orient: the share belongs to whoever the question names.
+        serve_subject, serve_opponent = (pa, pb) if subject is context.player_a else (pb, pa)
+        # Each player serves about half the points, winning serve_subject of
+        # their own and (1 - serve_opponent) of the other player's.
+        share = (serve_subject + (1.0 - serve_opponent)) / 2.0
+
+        games = simulation.total_games.astype(float)
+        points = games * POINTS_PER_GAME
+        expected = points * share
+        sd = np.sqrt(np.maximum(points * share * (1.0 - share), 1e-9))
+        # Continuity correction on an integer count, then average the per-run
+        # tail probabilities so the bimodal length distribution survives.
+        z = (float(threshold) + 0.5 - expected) / sd
+        model = float(np.mean(1.0 - _normal_cdf_array(z)))
+
+        notes.append(
+            f"total points: share {share:.3f} of {points.mean():.0f} expected points "
+            f"= {expected.mean():.1f} vs threshold {threshold:g} "
+            f"(simulated over {len(games)} runs, games sd {games.std():.1f})"
+        )
+        return self._finalise(
+            spec, model, base, model, None, 0.0, market_id, notes, context, 0.6
+        )
+
+    def _price_unforced(self, spec, context, base, market_id, notes) -> PricedQuestion:
+        """Unforced-error count thresholds, e.g. 'more than 30 unforced errors'.
         Historically this family answered the base rate outright, because the
         forced/unforced call is a subjective judgement with roughly three-or-four
         in ten inter-rater agreement - the tennis analogue of the foul markets
@@ -992,6 +1065,29 @@ class Pricer:
             return min(max(raw * scale, 0.002), 0.998)
         if spec.family is Family.DECIDING_SET:
             return simulation.p_deciding_set
+        if spec.family is Family.BOTH_WIN_SET:
+            # "Both players win at least one set" and "the match requires a
+            # deciding set" are the same event whenever the match is decided by
+            # winning a majority of sets: the loser wins at least one exactly
+            # when the winner fails to sweep.  Answering it from anything other
+            # than p_deciding_set would let the two answers contradict.
+            notes.append("identical event to a deciding set; read off the same run")
+            return simulation.p_deciding_set
+        if spec.family is Family.SETS_IN_A_ROW:
+            return simulation.p_two_sets_in_a_row
+        if spec.family is Family.EXACT_SCORELINE:
+            if spec.scoreline is None:
+                return base
+            subject, _ = self._orient(spec, context)
+            if subject is None:
+                notes.append("scoreline subject did not match either player")
+                return base
+            sets_subject, sets_opponent = spec.scoreline
+            # p_scoreline is indexed (sets_a, sets_b) in the context's own
+            # orientation, so flip it when the question names player B.
+            if subject is context.player_a:
+                return simulation.probability_scoreline(sets_subject, sets_opponent)
+            return simulation.probability_scoreline(sets_opponent, sets_subject)
         if spec.family is Family.LOPSIDED_SET:
             return simulation.p_any_lopsided_set
         if spec.family is Family.SET_GAMES:
@@ -1206,6 +1302,23 @@ class Pricer:
                 return self._duration_base(spec, context)
             if spec.family is Family.DECIDING_SET:
                 return rates.deciding_set
+            if spec.family is Family.BOTH_WIN_SET:
+                # Same event as a deciding set, so the same anchor.
+                return rates.deciding_set
+            if spec.family is Family.SETS_IN_A_ROW:
+                # Straight sets always contain two in a row, and a three-setter
+                # does whenever the winner lost the opener, which is close to
+                # half of them.  That puts the unconditional rate far above even
+                # money - the flat 50 an unparsed question would have given was
+                # wrong by about thirty points.
+                return min(1.0 - rates.deciding_set + 0.5 * rates.deciding_set, 0.98)
+            if spec.family is Family.EXACT_SCORELINE:
+                # One named player, one exact scoreline: roughly half the
+                # deciding-set mass for a 2-1, half the straight-sets mass for
+                # a 2-0.  Refined by the simulation whenever ratings exist.
+                if spec.scoreline and min(spec.scoreline) > 0:
+                    return 0.5 * rates.deciding_set
+                return 0.5 * (1.0 - rates.deciding_set)
             if spec.family is Family.LOPSIDED_SET:
                 return rates.lopsided_set
             if spec.family is Family.SET_GAMES:
@@ -1347,6 +1460,11 @@ def _as_rate(threshold: float | None) -> float | None:
 
 def _normal_cdf(z: float) -> float:
     return 0.5 * (1.0 + math.erf(z / math.sqrt(2.0)))
+
+
+def _normal_cdf_array(z: np.ndarray) -> np.ndarray:
+    """Vectorised standard normal CDF, for per-simulation-run tail probabilities."""
+    return np.fromiter((_normal_cdf(float(v)) for v in z), dtype=float, count=len(z))
 
 
 def _swap(context: MatchContext) -> MatchContext:
