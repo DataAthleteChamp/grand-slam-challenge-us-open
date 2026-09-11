@@ -1,0 +1,122 @@
+[
+ {
+  "match": "Alexander Zverev vs Karen Khachanov",
+  "start_time": 1789153200000,
+  "family": "aces",
+  "player": "Alexander Zverev",
+  "player_key": "zverev",
+  "p_more": 0.7443,
+  "p_tie": 0.0535,
+  "overround": 1.0992
+ },
+ {
+  "match": "Alexander Zverev vs Karen Khachanov",
+  "start_time": 1789153200000,
+  "family": "aces",
+  "player": "Karen Khachanov",
+  "player_key": "khachanov",
+  "p_more": 0.2022,
+  "p_tie": 0.0535,
+  "overround": 1.0992
+ },
+ {
+  "match": "Alexander Zverev vs Karen Khachanov",
+  "start_time": 1789153200000,
+  "family": "double_faults",
+  "player": "Alexander Zverev",
+  "player_key": "zverev",
+  "p_more": 0.4791,
+  "p_tie": 0.1143,
+  "overround": 1.0933
+ },
+ {
+  "match": "Alexander Zverev vs Karen Khachanov",
+  "start_time": 1789153200000,
+  "family": "double_faults",
+  "player": "Karen Khachanov",
+  "player_key": "khachanov",
+  "p_more": 0.4065,
+  "p_tie": 0.1143,
+  "overround": 1.0933
+ },
+ {
+  "match": "Frances Tiafoe vs Ben Shelton",
+  "start_time": 1789167600000,
+  "family": "aces",
+  "player": "Frances Tiafoe",
+  "player_key": "tiafoe",
+  "p_more": 0.0487,
+  "p_tie": 0.0441,
+  "overround": 1.0806
+ },
+ {
+  "match": "Frances Tiafoe vs Ben Shelton",
+  "start_time": 1789167600000,
+  "family": "aces",
+  "player": "Ben Shelton",
+  "player_key": "shelton",
+  "p_more": 0.9072,
+  "p_tie": 0.0441,
+  "overround": 1.0806
+ },
+ {
+  "match": "Frances Tiafoe vs Ben Shelton",
+  "start_time": 1789167600000,
+  "family": "double_faults",
+  "player": "Frances Tiafoe",
+  "player_key": "tiafoe",
+  "p_more": 0.4142,
+  "p_tie": 0.1519,
+  "overround": 1.0974
+ },
+ {
+  "match": "Frances Tiafoe vs Ben Shelton",
+  "start_time": 1789167600000,
+  "family": "double_faults",
+  "player": "Ben Shelton",
+  "player_key": "shelton",
+  "p_more": 0.4339,
+  "p_tie": 0.1519,
+  "overround": 1.0974
+ },
+ {
+  "match": "Aryna Sabalenka vs Elena Rybakina",
+  "start_time": 1789243200000,
+  "family": "aces",
+  "player": "Aryna Sabalenka",
+  "player_key": "sabalenka",
+  "p_more": 0.3043,
+  "p_tie": 0.087,
+  "overround": 1.0952
+ },
+ {
+  "match": "Aryna Sabalenka vs Elena Rybakina",
+  "start_time": 1789243200000,
+  "family": "aces",
+  "player": "Elena Rybakina",
+  "player_key": "rybakina",
+  "p_more": 0.6087,
+  "p_tie": 0.087,
+  "overround": 1.0952
+ },
+ {
+  "match": "Aryna Sabalenka vs Elena Rybakina",
+  "start_time": 1789243200000,
+  "family": "double_faults",
+  "player": "Aryna Sabalenka",
+  "player_key": "sabalenka",
+  "p_more": 0.4088,
+  "p_tie": 0.1314,
+  "overround": 1.0873
+ },
+ {
+  "match": "Aryna Sabalenka vs Elena Rybakina",
+  "start_time": 1789243200000,
+  "family": "double_faults",
+  "player": "Elena Rybakina",
+  "player_key": "rybakina",
+  "p_more": 0.4599,
+  "p_tie": 0.1314,
+  "overround": 1.0873
+ }
+]
