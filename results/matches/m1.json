@@ -19,7 +19,7 @@
         "shrunk 20% toward even money (no usable AUC)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-12T04:35:57.197975+00:00",
+      "predicted_at": "2026-09-12T20:20:44.060362+00:00",
       "probability": 0.6675452481456452,
       "question": "Will the match last longer than 150 minutes?",
       "rbp": null,
@@ -45,7 +45,7 @@
         "logit-sharpened at alpha=1.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-12T04:35:57.197975+00:00",
+      "predicted_at": "2026-09-12T20:20:44.060362+00:00",
       "probability": 0.45988167906984967,
       "question": "Will Jannik Sinner record more aces than Carlos Alcaraz?",
       "rbp": null,
@@ -68,7 +68,7 @@
         "exposure 121 service points from 38.8 games"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-12T04:35:57.197975+00:00",
+      "predicted_at": "2026-09-12T20:20:44.060362+00:00",
       "probability": 0.37508313266776844,
       "question": "Will Jannik Sinner record more double faults than Carlos Alcaraz?",
       "rbp": null,
@@ -93,7 +93,7 @@
         "logit-sharpened at alpha=1.95"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-12T04:35:57.197975+00:00",
+      "predicted_at": "2026-09-12T20:20:44.060362+00:00",
       "probability": 0.3047942556953824,
       "question": "Will Jannik Sinner win?",
       "rbp": null,
@@ -117,7 +117,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-12T04:35:57.197975+00:00",
+      "predicted_at": "2026-09-12T20:20:44.060362+00:00",
       "probability": 0.1372771930894309,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,

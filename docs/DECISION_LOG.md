@@ -923,3 +923,53 @@ replaced it and returns 57-58 books per match including Pinnacle itself and thre
 exchanges. Two research agents sent to scrape bookmakers directly returned
 nothing at all; the aggregator did it in one request. Quota is now exhausted, so
 the snapshot cache is what carries both finals.
+
+## 2026-09-12 — the women's decider ran low, and `closing_time` is not the lock time
+
+### A real bias, found one hour too late
+
+Going through the women's final question by question against Polymarket, its
+set-winner prices implied `P(deciding set)` near **0.49** while we were submitting
+**0.37**. That prompted a check of the family, which found a genuine and
+substantial bias — but only on one draw:
+
+| draw | n | ours | realised | skill | +0.10 shift |
+|---|---|---|---|---|---|
+| men's (best-of-five) | 24 | 0.247 | 0.292 | −2.9 | **−2.4** |
+| women's (best-of-three) | 30 | 0.331 | **0.467** | **−41.3** | **+51.2** |
+
+Pooling the draws hides this completely, and my first pass did exactly that: the
+"women-only" filter matched all 58 rows because the question carries no player
+name, so it silently did nothing. A best-of-five decider and a best-of-three
+decider are different events that happen to share a wording.
+
+Women-only, a split fitting the shift on earlier questions and scoring it on
+later ones is positive at all three train fractions (+26.6, +34.4, +29.6) with
+fitted shifts of 0.14, 0.07 and 0.10; the binomial on the bias gives p = 0.086.
+Shipped at **+0.08**, below the median fitted value, keyed on `("WTA", family)`
+and covering `BOTH_WIN_SET` too because in a best-of-three it is the same event.
+
+**It did not reach the women's final.** The market locked while the analysis was
+running, so the entry went out at 37 on both questions. Since the correction is
+WTA-only and no women's matches remain, it changes nothing this tournament. It is
+recorded for the next one.
+
+### The lesson that cost it: `closing_time` is not the lock time
+
+The markets API advertised `closing_time` of **2026-09-13T08:00Z** for a match
+starting 2026-09-12T19:30Z, and reported every market `open` 40 minutes after
+play began. They locked about an hour into the match, roughly eleven hours before
+the advertised close. Treating `closing_time` as the deadline is what turned a
+usable finding into a missed one.
+
+The existing rule — have a number in before the court opens — stands, and the
+corollary is now explicit: **once a match is under way, treat every question on
+it as already locked**, whatever the API says about when it closes.
+
+### Also checked, and clean
+
+Bovada stopped repricing at the first ball: ten snapshots spanning seven hours
+are identical to four decimal places, before and after the start. There is no
+live signal there. Kalshi carries the players only inside cross-category parlays
+with no bids, so it is not a usable source for this event. Polymarket is the one
+venue that prices these matches live and to the set.

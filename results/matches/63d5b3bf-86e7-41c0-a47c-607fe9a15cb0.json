@@ -1,5 +1,5 @@
 {
-  "closing_time": "2026-09-14T06:00:00.000Z",
+  "closing_time": "2026-09-14T04:59:00.000Z",
   "draw": "mens",
   "entries": [
     {
@@ -20,7 +20,7 @@
         "logit-sharpened at alpha=1.95"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-12T04:31:56.470574+00:00",
+      "predicted_at": "2026-09-12T20:29:21.493144+00:00",
       "probability": 0.3653158104266334,
       "question": "Will B. Shelton win?",
       "rbp": null,
@@ -45,7 +45,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-12T04:31:56.470574+00:00",
+      "predicted_at": "2026-09-12T20:29:21.493144+00:00",
       "probability": 0.29550600000000005,
       "question": "Will the match feature at least 2 tiebreaks?",
       "rbp": null,
@@ -63,19 +63,19 @@
       "market": null,
       "market_id": "8f0be97d-2ea2-4598-a0c5-652792c84c35",
       "market_weight": 0.0,
-      "model": 0.49661357522143634,
+      "model": 0.507805839378791,
       "notes": [
-        "total games: simulator 39.2, Pinnacle 43.0, used 41.5 at weight 0.60",
+        "total games: simulator 39.2, Pinnacle 43.5, used 41.8 at weight 0.60",
         "no usable market quote for this question",
         "shrunk 20% toward even money (no usable AUC)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-12T04:31:56.470574+00:00",
-      "probability": 0.4972908601771491,
+      "predicted_at": "2026-09-12T20:29:21.493144+00:00",
+      "probability": 0.5062446715030328,
       "question": "Will the match last longer than 185 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 50
+      "submission": 51
     },
     {
       "base_rate": 0.4784,
@@ -85,23 +85,24 @@
       "crowd_brier": null,
       "family": "aces_comparison",
       "lane": "scenario",
-      "market": null,
+      "market": 0.5438,
       "market_id": "5007bdf6-0422-4c9d-ba5b-fb0d1ef3dca4",
-      "market_weight": 0.0,
-      "model": 0.43806311587555263,
+      "market_weight": 0.85,
+      "model": 0.5279394673813328,
       "notes": [
         "ace vulnerability: Alexander Zverev 0.85, Ben Shelton 0.83",
         "exposure 127 service points from 40.5 games",
         "outcome coupling: P(win)=0.430, delta=+0.60",
+        "bovada aces line 0.544 blended at 85%",
         "logit-sharpened at alpha=1.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-12T04:31:56.470574+00:00",
-      "probability": 0.4016866130283259,
+      "predicted_at": "2026-09-12T20:29:21.493144+00:00",
+      "probability": 0.5446306603021857,
       "question": "Will B. Shelton record more aces than A. Zverev?",
       "rbp": null,
       "settled_at": "",
-      "submission": 38
+      "submission": 56
     },
     {
       "base_rate": 0.4496,
@@ -111,20 +112,21 @@
       "crowd_brier": null,
       "family": "double_faults_comparison",
       "lane": "scenario",
-      "market": null,
+      "market": 0.2799,
       "market_id": "35a76ab9-171a-4b69-84ed-647ba2bf4a18",
-      "market_weight": 0.0,
-      "model": 0.5325781276856759,
+      "market_weight": 0.85,
+      "model": 0.3178017191528514,
       "notes": [
-        "exposure 127 service points from 40.5 games"
+        "exposure 127 service points from 40.5 games",
+        "bovada double_faults line 0.280 blended at 85%"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-12T04:31:56.470574+00:00",
-      "probability": 0.5325781276856759,
+      "predicted_at": "2026-09-12T20:29:21.493144+00:00",
+      "probability": 0.3178017191528514,
       "question": "Will B. Shelton record more double faults than A. Zverev?",
       "rbp": null,
       "settled_at": "",
-      "submission": 54
+      "submission": 28
     },
     {
       "base_rate": 0.5,
@@ -143,7 +145,7 @@
         "base-rate pull 0.48 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-12T04:31:56.470574+00:00",
+      "predicted_at": "2026-09-12T20:29:21.493144+00:00",
       "probability": 0.471388846051459,
       "question": "Will B. Shelton commit more than 45 unforced errors?",
       "rbp": null,
@@ -169,7 +171,7 @@
         "shrunk 50% toward even money (no usable AUC)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-12T04:31:56.470574+00:00",
+      "predicted_at": "2026-09-12T20:29:21.493144+00:00",
       "probability": 0.5622170117766951,
       "question": "Will A. Zverev win more than 78% of points played on their first serve?",
       "rbp": null,
@@ -193,7 +195,7 @@
         "outcome coupling: P(win)=0.430, delta=+0.79"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-12T04:31:56.470574+00:00",
+      "predicted_at": "2026-09-12T20:29:21.493144+00:00",
       "probability": 0.46672533511883557,
       "question": "Will B. Shelton hit more winners than A. Zverev?",
       "rbp": null,
@@ -216,7 +218,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-12T04:31:56.470574+00:00",
+      "predicted_at": "2026-09-12T20:29:21.493144+00:00",
       "probability": 0.2425,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -240,7 +242,7 @@
         "shrunk 85% toward even money (no usable AUC)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-12T04:31:56.470574+00:00",
+      "predicted_at": "2026-09-12T20:29:21.493144+00:00",
       "probability": 0.48972499999999997,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -264,7 +266,7 @@
         "base-rate pull 0.48 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-12T04:31:56.470574+00:00",
+      "predicted_at": "2026-09-12T20:29:21.493144+00:00",
       "probability": 0.5407061209355264,
       "question": "Will A. Zverev commit more than 35 unforced errors?",
       "rbp": null,
@@ -290,7 +292,7 @@
         "shrunk 50% toward even money (no usable AUC)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-12T04:31:56.470574+00:00",
+      "predicted_at": "2026-09-12T20:29:21.493144+00:00",
       "probability": 0.5361198055379378,
       "question": "Will B. Shelton win more than 74% of points played on their first serve?",
       "rbp": null,
@@ -313,7 +315,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-12T04:31:56.470574+00:00",
+      "predicted_at": "2026-09-12T20:29:21.493144+00:00",
       "probability": 0.9595,
       "question": "Will any player win 2 sets in a row?",
       "rbp": null,
@@ -338,7 +340,7 @@
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-12T04:31:56.470574+00:00",
+      "predicted_at": "2026-09-12T20:29:21.493144+00:00",
       "probability": 0.621251,
       "question": "Will the final set played include a tiebreak?",
       "rbp": null,
@@ -362,7 +364,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-12T04:31:56.470574+00:00",
+      "predicted_at": "2026-09-12T20:29:21.493144+00:00",
       "probability": 0.5640000000000001,
       "question": "Will both players win at least one set?",
       "rbp": null,
@@ -385,7 +387,7 @@
         "total points: share 0.466 of 265 expected points = 123.8 vs threshold 162 (simulated over 4000 runs, games sd 10.2)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-12T04:31:56.470574+00:00",
+      "predicted_at": "2026-09-12T20:29:21.493144+00:00",
       "probability": 0.2572328809838389,
       "question": "Will B. Shelton win more than 162 total points?",
       "rbp": null,
@@ -408,7 +410,7 @@
         "total points: share 0.534 of 265 expected points = 141.6 vs threshold 167 (simulated over 4000 runs, games sd 10.2)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-12T04:31:56.470574+00:00",
+      "predicted_at": "2026-09-12T20:29:21.493144+00:00",
       "probability": 0.3361906435787012,
       "question": "Will A. Zverev win more than 167 total points?",
       "rbp": null,
@@ -431,7 +433,7 @@
         "distance covered is unmodellable: no public source; base rate"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-12T04:31:56.470574+00:00",
+      "predicted_at": "2026-09-12T20:29:21.493144+00:00",
       "probability": 0.5,
       "question": "Will B. Shelton cover more than 9,000 feet?",
       "rbp": null,
@@ -454,7 +456,7 @@
         "distance covered is unmodellable: no public source; base rate"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-12T04:31:56.470574+00:00",
+      "predicted_at": "2026-09-12T20:29:21.493144+00:00",
       "probability": 0.5,
       "question": "Will A. Zverev cover more than 10,300 feet?",
       "rbp": null,
@@ -477,7 +479,7 @@
         "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-12T04:31:56.470574+00:00",
+      "predicted_at": "2026-09-12T20:29:21.493144+00:00",
       "probability": 0.09675,
       "question": "Will the match end with B. Shelton winning 3:2?",
       "rbp": null,
@@ -488,7 +490,7 @@
   "match_id": "63d5b3bf-86e7-41c0-a47c-607fe9a15cb0",
   "match_name": "A. Zverev vs B. Shelton",
   "multiplier": 3,
-  "opening_time": "2026-09-13T18:00:00.000Z",
+  "opening_time": "2026-09-13T17:30:00.000Z",
   "player_a": "Alexander Zverev",
   "player_b": "Ben Shelton",
   "round_code": "R128"

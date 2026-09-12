@@ -383,6 +383,40 @@ EXTREMISE_ALPHA = {
     Family.ACES_COMPARISON: 1.60,
 }
 
+#: Additive correction applied per (tour, family), after everything else.
+#:
+#: The simulator's correlated form shocks make straight sets more likely, and on
+#: the women's draw they overdo it.  Across 30 settled women's questions we
+#: averaged 0.331 against a realised 0.467 - a 13.6 point bias, one-sided
+#: binomial p 0.086 - and the twelve worst deciding-set questions of the
+#: tournament are all YES results we priced low.
+#:
+#: Women only.  The same check on the men's draw (n=24) gives 0.247 against a
+#: realised 0.292 and a skill of -2.9, essentially calibrated: a +0.10 shift
+#: there is worth -2.4.  Pooling the two draws hides this completely, because a
+#: best-of-five decider and a best-of-three decider are different events that
+#: happen to share a question wording.
+#:
+#:     shift   women delta    men delta
+#:     +0.05   +33.1          +4.8
+#:     +0.10   +51.2          -2.4
+#:     +0.15   +54.3          -21.6
+#:
+#: A split fitting the shift on earlier questions and scoring it on later ones is
+#: positive at all three train fractions for the women (+26.6, +34.4, +29.6) with
+#: fitted shifts of 0.14, 0.07 and 0.10.  Set to 0.08, below the median fitted
+#: value and well below the 0.15 optimum, because no single cell is significant.
+#:
+#: Confirmed independently by the market on the day: Polymarket's set-winner
+#: prices for the women's final implied P(deciding set) near 0.49 against our
+#: 0.37, a gap of the same size and sign.
+#:
+#: BOTH_WIN_SET is included because in a best-of-three it is the same event.
+FAMILY_SHIFT_BY_TOUR: dict[tuple[str, Family], float] = {
+    ("WTA", Family.DECIDING_SET): 0.08,
+    ("WTA", Family.BOTH_WIN_SET): 0.08,
+}
+
 #: Weight given to a bookmaker's head-to-head count line over our own model.
 #:
 #: Bovada is the only public book found that prices "Most Aces" and "Most Double
@@ -1435,6 +1469,16 @@ class Pricer:
             odds = math.log(clamped / (1 - clamped))
             probability = 1.0 / (1.0 + math.exp(-alpha * odds))
             notes.append(f"logit-sharpened at alpha={alpha:.2f}")
+
+        # Measured calibration correction, applied per draw. See
+        # FAMILY_SHIFT_BY_TOUR: the women's deciding-set answer runs low.
+        tour_shift = FAMILY_SHIFT_BY_TOUR.get((context.tour, spec.family), 0.0)
+        if tour_shift:
+            probability = min(max(probability + tour_shift, 0.02), 0.98)
+            notes.append(
+                f"{context.tour} {spec.family.value} calibration shift {tour_shift:+.2f} "
+                "(measured 0.331 submitted against 0.467 realised)"
+            )
 
         # Experimental per-family shift, second bot only. See LANE_FAMILY_SHIFT:
         # these biases are not significant at eleven matches, so they are tested

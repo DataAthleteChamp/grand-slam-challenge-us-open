@@ -1542,3 +1542,32 @@ def test_both_win_a_set_exceeds_the_decider_in_a_best_of_five():
         # 3-1 lives in one and not the other, so the gap must be strictly positive.
         assert both > sim.p_deciding_set + 0.05, (both, sim.p_deciding_set)
         assert sim.p_straight_sets + sim.p_deciding_set < 1.0
+
+
+def test_the_deciding_set_shift_is_women_only():
+    """A best-of-five decider and a best-of-three decider are different events
+    that happen to share a question wording.
+
+    Across 30 settled women's questions we submitted 0.331 against a realised
+    0.467; the same check on 24 men's questions gives 0.247 against 0.292 and is
+    essentially calibrated, where a +0.10 shift is worth -2.4.  Pooling the draws
+    hides this, so the correction must stay keyed on the tour.
+    """
+    from bot.pricer import FAMILY_SHIFT_BY_TOUR
+
+    assert ("WTA", Family.DECIDING_SET) in FAMILY_SHIFT_BY_TOUR
+    assert ("ATP", Family.DECIDING_SET) not in FAMILY_SHIFT_BY_TOUR
+    assert ("ATP", Family.BOTH_WIN_SET) not in FAMILY_SHIFT_BY_TOUR
+    for (tour, family), shift in FAMILY_SHIFT_BY_TOUR.items():
+        assert tour == "WTA", f"{family} shift applies to {tour}, which was not measured"
+        assert 0.0 < shift <= 0.15, f"{family} shift {shift} outside the measured range"
+
+
+def test_the_women_s_decider_and_both_win_a_set_move_together():
+    """They are the same event in a best-of-three, so a correction to one that
+    does not reach the other would let the entry contradict itself."""
+    from bot.pricer import FAMILY_SHIFT_BY_TOUR
+
+    assert FAMILY_SHIFT_BY_TOUR[("WTA", Family.DECIDING_SET)] == pytest.approx(
+        FAMILY_SHIFT_BY_TOUR[("WTA", Family.BOTH_WIN_SET)]
+    )
