@@ -1,0 +1,82 @@
+[
+ {
+  "match": "Alexander Zverev vs Ben Shelton",
+  "start_time": 1789323600000,
+  "family": "aces",
+  "player": "Alexander Zverev",
+  "player_key": "zverev",
+  "p_more": 0.4028,
+  "p_tie": 0.0533,
+  "overround": 1.1033
+ },
+ {
+  "match": "Alexander Zverev vs Ben Shelton",
+  "start_time": 1789323600000,
+  "family": "aces",
+  "player": "Ben Shelton",
+  "player_key": "shelton",
+  "p_more": 0.5438,
+  "p_tie": 0.0533,
+  "overround": 1.1033
+ },
+ {
+  "match": "Alexander Zverev vs Ben Shelton",
+  "start_time": 1789323600000,
+  "family": "double_faults",
+  "player": "Alexander Zverev",
+  "player_key": "zverev",
+  "p_more": 0.6064,
+  "p_tie": 0.1137,
+  "overround": 1.0994
+ },
+ {
+  "match": "Alexander Zverev vs Ben Shelton",
+  "start_time": 1789323600000,
+  "family": "double_faults",
+  "player": "Ben Shelton",
+  "player_key": "shelton",
+  "p_more": 0.2799,
+  "p_tie": 0.1137,
+  "overround": 1.0994
+ },
+ {
+  "match": "Aryna Sabalenka vs Elena Rybakina",
+  "start_time": 1789244400000,
+  "family": "aces",
+  "player": "Aryna Sabalenka",
+  "player_key": "sabalenka",
+  "p_more": 0.332,
+  "p_tie": 0.087,
+  "overround": 1.0952
+ },
+ {
+  "match": "Aryna Sabalenka vs Elena Rybakina",
+  "start_time": 1789244400000,
+  "family": "aces",
+  "player": "Elena Rybakina",
+  "player_key": "rybakina",
+  "p_more": 0.581,
+  "p_tie": 0.087,
+  "overround": 1.0952
+ },
+ {
+  "match": "Aryna Sabalenka vs Elena Rybakina",
+  "start_time": 1789244400000,
+  "family": "double_faults",
+  "player": "Aryna Sabalenka",
+  "player_key": "sabalenka",
+  "p_more": 0.3597,
+  "p_tie": 0.1499,
+  "overround": 1.1121
+ },
+ {
+  "match": "Aryna Sabalenka vs Elena Rybakina",
+  "start_time": 1789244400000,
+  "family": "double_faults",
+  "player": "Elena Rybakina",
+  "player_key": "rybakina",
+  "p_more": 0.4905,
+  "p_tie": 0.1499,
+  "overround": 1.1121
+ }
+]
