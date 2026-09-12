@@ -315,7 +315,26 @@ FIRST_SERVE_MODEL_WEIGHT = 1.00
 SHRINK_TO_EVEN = {
     Family.LOPSIDED_SET: 0.85,
     Family.MATCH_DURATION: 0.20,
-    Family.FIRST_SERVE_COMPARISON: 0.15,
+    # Raised from 0.15 on 2026-09-11 after first serve became the worst family
+    # left (-142.8 over 58 questions).  The damage is concentrated, not spread:
+    # in the band where we submit 0.25-0.40 we say 0.331 and the realised rate is
+    # 0.625 over 16 questions, which is 77% of the family's entire loss and is
+    # itself significant (10 of 16 against a predicted 0.331, p about 0.02).
+    #
+    # The anchor stays at 0.50 deliberately.  The family's realised rate is
+    # 0.586, which looks like a better anchor until it is tested: 34 of 58 is
+    # only 1.3 standard errors from even money, p about 0.11, and a split that
+    # fits the anchor as well as the pull picks 0.552, 0.500 and 0.475 on three
+    # different windows and loses 24.8 held out on the third.  Moving an anchor
+    # on evidence that weak is how the earlier base-rate hedges went wrong.
+    #
+    # With the anchor fixed, one fitted parameter is stable: the split picks
+    # 0.70, 0.65 and 0.70, and scores +21.8, +26.7 and -0.4 on held-out
+    # questions.  The grid peaks at 0.60 for +70.1 and is never individually
+    # significant, so 0.50 sits below every fitted optimum.  Heavy shrinkage is
+    # also what the discrimination justifies: our AUC here is 0.608 against a
+    # crowd on 0.648.
+    Family.FIRST_SERVE_COMPARISON: 0.50,
 }
 
 #: Logit sharpening, p -> sigmoid(alpha * logit(p)).  Sharpening composes
@@ -645,8 +664,21 @@ class Pricer:
         default = 0.85 * LANE_MARKET_SCALE.get(self.lane, 1.0)
         weight = self.market_weights.get(spec.family, default) if market is not None else 0.0
         if market is not None:
-            notes.append(f"market consensus {market:.3f}, weight {weight:.2f}")
-            confidence = max(confidence, 0.85)
+            # A de-vigged consensus over dozens of books - including exchanges
+            # quoting at an overround of 1.001 - is a better forecast than
+            # anything downstream of it here, and every step that dilutes it
+            # costs points.  Replaying the 107 settled match-winner questions
+            # that had a quote: our live pipeline scored +16.1, the raw market
+            # +136.0, and the sharpened market +287.8.  A time split confirms it
+            # on held-out questions at three train fractions (+166.8, +145.6,
+            # +116.5).  So the market is taken whole, and the base-rate pull
+            # that would drag it back toward 0.50 is suppressed.
+            weight = 1.0
+            confidence = 1.0
+            notes.append(
+                f"market consensus {market:.3f} taken whole; "
+                "model and base-rate pull both suppressed"
+            )
         else:
             notes.append("no market quote; this is the family that most needs one")
 

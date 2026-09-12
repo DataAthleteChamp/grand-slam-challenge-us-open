@@ -1,50 +1,26 @@
-MANUAL NUMBERS - 40 questions across 3 matches
+MANUAL NUMBERS - 20 questions across 1 matches
 Sharpened x1.15 in log-odds on ACES ONLY.
 Everything else is left AT the bot number. Sharpening double faults cost
 0.41 RBP/question on the settled sample and duration 0.34, both significant;
 the winner number is already sharpened inside the bot, so doing it again here
 would compound. See SHARPEN_BY_TOKEN for the per-family measurements.
 
---- A. Zverev vs K. Khachanov   (starts 2026-09-11 19:00Z)
-     bot  40  ->  MANUAL  40   Will K. Khachanov hit more winners than A. Zverev?
-     bot  53  ->  MANUAL  53   Will A. Zverev win more than 77% of points played on their first serve?
-     bot  50  ->  MANUAL  50   Will either player win a set 6–2, 6–1 or 6–0?
-     bot  22  ->  MANUAL  22   Will K. Khachanov win?
-     bot  10  ->  MANUAL   7   Will K. Khachanov record more aces than A. Zverev?
-     bot  41  ->  MANUAL  41   Will K. Khachanov record more double faults than A. Zverev?
-     bot  60  ->  MANUAL  60   Will the match feature at least 1 tiebreak?
-     bot  52  ->  MANUAL  52   Will the match last longer than 170 minutes?
-     bot  25  ->  MANUAL  25   Will the match require a deciding set?
-     bot  54  ->  MANUAL  54   Will K. Khachanov commit more than 35 unforced errors?
-
---- F. Tiafoe vs B. Shelton   (starts 2026-09-11 23:00Z)
-     bot  75  ->  MANUAL  75   Will F. Tiafoe win more than 70% of points played on their first serve?
-     bot  49  ->  MANUAL  49   Will either player win a set 6–2, 6–1 or 6–0?
-     bot  59  ->  MANUAL  59   Will B. Shelton win?
-     bot  55  ->  MANUAL  55   Will B. Shelton hit more winners than F. Tiafoe?
-     bot  97  ->  MANUAL  96   Will B. Shelton record more aces than F. Tiafoe?
-     bot  45  ->  MANUAL  45   Will B. Shelton record more double faults than F. Tiafoe?
-     bot  33  ->  MANUAL  33   Will the match feature at least 2 tiebreak(s)?
-     bot  31  ->  MANUAL  31   Will the match last longer than 210 minutes?
-     bot  30  ->  MANUAL  30   Will the match require a deciding set?
-     bot  59  ->  MANUAL  59   Will B. Shelton commit more than 36 unforced errors?
-
---- A. Sabalenka vs E. Rybakina   (starts 2026-09-12 20:00Z)
+--- A. Sabalenka vs E. Rybakina   (starts 2026-09-12 19:30Z)
      bot  18  ->  MANUAL  18   Will the match end with E. Rybakina winning 2:1?
      bot  49  ->  MANUAL  49   Will E. Rybakina win more than 73 total points?
      bot  37  ->  MANUAL  37   Will both players win at least one set?
      bot  50  ->  MANUAL  50   Will either player win a set 6–2, 6–1 or 6–0?
-     bot  45  ->  MANUAL  45   Will E. Rybakina hit more winners than A. Sabalenka?
-     bot  49  ->  MANUAL  49   Will A. Sabalenka win more than 70% of points played on their first serve?
+     bot  44  ->  MANUAL  44   Will E. Rybakina hit more winners than A. Sabalenka?
+     bot  50  ->  MANUAL  50   Will A. Sabalenka win more than 70% of points played on their first serve?
      bot  81  ->  MANUAL  81   Will any player win 2 sets in a row?
      bot  48  ->  MANUAL  48   Will A. Sabalenka win more than 75 total points?
-     bot  39  ->  MANUAL  39   Will E. Rybakina win more than 72% of points played on their first serve?
-     bot  46  ->  MANUAL  46   Will E. Rybakina win?
-     bot  68  ->  MANUAL  70   Will E. Rybakina record more aces than A. Sabalenka?
-     bot  17  ->  MANUAL  17   Will E. Rybakina record more double faults than A. Sabalenka?
+     bot  43  ->  MANUAL  43   Will E. Rybakina win more than 72% of points played on their first serve?
+     bot  40  ->  MANUAL  40   Will E. Rybakina win?
+     bot  65  ->  MANUAL  67   Will E. Rybakina record more aces than A. Sabalenka?
+     bot  44  ->  MANUAL  44   Will E. Rybakina record more double faults than A. Sabalenka?
      bot  37  ->  MANUAL  37   Will the match feature at least 1 tiebreak?
      bot  37  ->  MANUAL  37   Will the final set played include a tiebreak?
-     bot  54  ->  MANUAL  54   Will the match last longer than 105 minutes?
+     bot  53  ->  MANUAL  53   Will the match last longer than 105 minutes?
      bot  47  ->  MANUAL  47   Will E. Rybakina commit more than 24 unforced errors?
      bot  50  ->  MANUAL  50   Will A. Sabalenka cover more than 5700 feet?
      bot  31  ->  MANUAL  31   Will A. Sabalenka commit more than 33 unforced errors?

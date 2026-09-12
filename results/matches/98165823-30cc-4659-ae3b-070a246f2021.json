@@ -5,27 +5,27 @@
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.7,
+      "confidence": 1.0,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": null,
+      "market": 0.18641473091541846,
       "market_id": "eb77e8ae-ee3e-490f-b61b-67d3f69061c1",
-      "market_weight": 0.0,
+      "market_weight": 1.0,
       "model": 0.31475,
       "notes": [
         "simulated win probability 0.315",
-        "no market quote; this is the family that most needs one",
+        "market consensus 0.186 taken whole; model and base-rate pull both suppressed",
         "logit-sharpened at alpha=1.95"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-11T14:09:45.741177+00:00",
-      "probability": 0.23153900249940537,
+      "predicted_at": "2026-09-11T19:14:09.434865+00:00",
+      "probability": 0.05349035610823501,
       "question": "Will K. Khachanov win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 18
+      "submission": 3
     },
     {
       "base_rate": 0.487,
@@ -41,10 +41,11 @@
       "model": 0.561598,
       "notes": [
         "tiebreak iid correction x0.91 (ATP)",
+        "no usable market quote for this question",
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-11T14:09:45.741177+00:00",
+      "predicted_at": "2026-09-11T19:14:09.434865+00:00",
       "probability": 0.521598,
       "question": "Will the match feature at least 1 tiebreak?",
       "rbp": null,
@@ -62,18 +63,18 @@
       "market": null,
       "market_id": "40f0fed2-9bb7-434b-98b8-072c8e001a5c",
       "market_weight": 0.0,
-      "model": 0.5176469531506436,
+      "model": 0.4969977596846198,
       "notes": [
-        "total games: simulator 37.7, Pinnacle 38.5, used 38.2 at weight 0.60",
+        "no usable market quote for this question",
         "shrunk 20% toward even money (no usable AUC)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-11T14:09:45.741177+00:00",
-      "probability": 0.5141175625205149,
+      "predicted_at": "2026-09-11T19:14:09.434865+00:00",
+      "probability": 0.4975982077476958,
       "question": "Will the match last longer than 170 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 52
+      "submission": 50
     },
     {
       "base_rate": 0.4784,
@@ -86,17 +87,17 @@
       "market": 0.2022,
       "market_id": "90302efa-6862-4ba8-8de8-137cd55e916f",
       "market_weight": 0.85,
-      "model": 0.20769679306001773,
+      "model": 0.20321940556892498,
       "notes": [
         "ace vulnerability: Alexander Zverev 0.85, Karen Khachanov 1.04",
         "exposure 122 service points from 39.1 games",
-        "outcome coupling: P(win)=0.315, delta=+0.60",
+        "outcome coupling: P(win)=0.186, delta=+0.60",
         "bovada aces line 0.202 blended at 85%",
         "logit-sharpened at alpha=1.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-11T14:09:45.741177+00:00",
-      "probability": 0.1050638810503105,
+      "predicted_at": "2026-09-11T19:14:09.434865+00:00",
+      "probability": 0.10100848935713509,
       "question": "Will K. Khachanov record more aces than A. Zverev?",
       "rbp": null,
       "settled_at": "",
@@ -110,21 +111,21 @@
       "crowd_brier": null,
       "family": "double_faults_comparison",
       "lane": "scenario",
-      "market": 0.412,
+      "market": 0.4065,
       "market_id": "a77e7138-f571-43de-8d73-6dc37fdd5d19",
       "market_weight": 0.85,
-      "model": 0.4110518662377322,
+      "model": 0.4063768662377322,
       "notes": [
         "exposure 122 service points from 39.1 games",
-        "bovada double_faults line 0.412 blended at 85%"
+        "bovada double_faults line 0.406 blended at 85%"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-11T14:09:45.741177+00:00",
-      "probability": 0.4110518662377322,
+      "predicted_at": "2026-09-11T19:14:09.434865+00:00",
+      "probability": 0.4063768662377322,
       "question": "Will K. Khachanov record more double faults than A. Zverev?",
       "rbp": null,
       "settled_at": "",
-      "submission": 39
+      "submission": 38
     },
     {
       "base_rate": 0.5,
@@ -143,7 +144,7 @@
         "base-rate pull 0.48 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-11T14:09:45.741177+00:00",
+      "predicted_at": "2026-09-11T19:14:09.434865+00:00",
       "probability": 0.5394944021673594,
       "question": "Will K. Khachanov commit more than 35 unforced errors?",
       "rbp": null,
@@ -169,7 +170,7 @@
         "shrunk 15% toward even money (no usable AUC)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-11T14:09:45.741177+00:00",
+      "predicted_at": "2026-09-11T19:14:09.434865+00:00",
       "probability": 0.5287547784868225,
       "question": "Will A. Zverev win more than 77% of points played on their first serve?",
       "rbp": null,
@@ -187,18 +188,18 @@
       "market": null,
       "market_id": "6a63daca-5e4d-405e-bf1c-d33073d22a2b",
       "market_weight": 0.0,
-      "model": 0.3853273592028108,
+      "model": 0.33786651155605235,
       "notes": [
         "exposure 122 service points from 39.1 games",
-        "outcome coupling: P(win)=0.315, delta=+0.79"
+        "outcome coupling: P(win)=0.186, delta=+0.79"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-11T14:09:45.741177+00:00",
-      "probability": 0.39977484731242435,
+      "predicted_at": "2026-09-11T19:14:09.434865+00:00",
+      "probability": 0.3588398662170952,
       "question": "Will K. Khachanov hit more winners than A. Zverev?",
       "rbp": null,
       "settled_at": "",
-      "submission": 38
+      "submission": 33
     },
     {
       "base_rate": 0.202,
@@ -212,9 +213,11 @@
       "market_id": "32e222cc-b17a-4e75-9f29-21d767c68303",
       "market_weight": 0.0,
       "model": 0.2455,
-      "notes": [],
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-09-11T14:09:45.741177+00:00",
+      "predicted_at": "2026-09-11T19:14:09.434865+00:00",
       "probability": 0.2455,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -234,10 +237,11 @@
       "market_weight": 0.0,
       "model": 0.5665,
       "notes": [
+        "no usable market quote for this question",
         "shrunk 85% toward even money (no usable AUC)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-11T14:09:45.741177+00:00",
+      "predicted_at": "2026-09-11T19:14:09.434865+00:00",
       "probability": 0.509975,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -248,7 +252,7 @@
   "match_id": "98165823-30cc-4659-ae3b-070a246f2021",
   "match_name": "A. Zverev vs K. Khachanov",
   "multiplier": 3,
-  "opening_time": "2026-09-11T19:00:00.000Z",
+  "opening_time": "2026-09-11T18:30:00.000Z",
   "player_a": "Alexander Zverev",
   "player_b": "Karen Khachanov",
   "round_code": "R128"

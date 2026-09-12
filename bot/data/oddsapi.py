@@ -48,7 +48,22 @@ US_OPEN_SPORTS = ("tennis_atp_us_open", "tennis_wta_us_open")
 
 #: Never spend the last of the quota; leave enough for the closing refresh of
 #: the final, which is the highest-multiplier round and the tie-breaker.
-QUOTA_RESERVE = 40
+#:
+#: Lowered from 40 to 16 on 2026-09-11, deliberately, because the round it was
+#: protecting has arrived.  Three matches remain in the tournament - both men's
+#: semi-finals and the women's final - and all three score at 3x.  A refresh
+#: costs markets x regions, so h2h+totals over two regions is 4 credits per
+#: sport, and 16 covers a closing refresh of every remaining match with room to
+#: spare.  Holding 40 back past this point would retire the quota unspent on the
+#: highest-value questions of the event, which is the opposite of what the
+#: reserve is for.
+#: Lowered again from 16 to 2 on 2026-09-12.  The women's final is the last
+#: match of the tournament, so there is no later round for the reserve to
+#: protect.  8 credits remain and a refresh costs 2 per sport at one region, so
+#: 2 held back still covers a closing look while leaving enough to price the
+#: last twenty questions of the event, all at 3x.  Retiring the quota unspent on
+#: them would be the exact failure the reserve exists to prevent.
+QUOTA_RESERVE = 2
 
 BUDGET_FILE = Path(__file__).resolve().parent.parent.parent / "data" / "odds_budget.json"
 

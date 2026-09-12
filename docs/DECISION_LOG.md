@@ -807,3 +807,69 @@ stole "Will a set end 6-0, 6-1 or 6-2?" from the lopsided-set family. A guard
 test that had been in the suite for weeks failed immediately. The rule now
 requires match-level context ("winning 2:1", "the match ends 2:1"), and that
 exact string is pinned in the new test.
+
+## 2026-09-12 — the market is the answer, and first serve was shrinking to the wrong place
+
+### Pinnacle's guest API is gone; The Odds API replaced it
+
+`guest.api.arcadia.pinnacle.com` now fails to connect at all (status 000, DNS
+level) — the free calibration benchmark recorded in LESSONS is dead. The Odds API
+still answers and is strictly better: one call returns **57-58 books per match**,
+including Pinnacle itself, all three Betfair exchanges, Smarkets and Matchbook.
+Two research agents sent to scrape betting sites directly returned **nothing**;
+the aggregator did the job in one request.
+
+### The reserve existed for this, so it was spent
+
+`QUOTA_RESERVE` was 40 against 40 remaining credits, so the bot had been refusing
+every odds call for days — the Zverev semi-final was priced from the model alone
+while a de-vigged 57-book consensus sat one request away. Lowered 40 → 16 → 2 as
+the rounds ran out. Holding quota back past the last match of the tournament is
+the precise failure the reserve is meant to prevent.
+
+### Match winner: take the market whole
+
+With quotes restored, the pipeline was blending the consensus 95/5 with our
+model, pulling it 5% toward 0.50, and only then sharpening. Replaying the **107
+settled match-winner questions that had a quote**:
+
+| submitted instead | skill |
+|---|---|
+| our live pipeline | +16.1 |
+| the raw de-vigged market | +136.0 |
+| the market sharpened at 1.95 | **+287.8** |
+
+A time split fitting alpha on earlier questions and scoring on later ones is
+positive at all three train fractions (**+166.8, +145.6, +116.5**), with fitted
+alphas of 1.50-1.80 against our live 1.95, which sits in the flat top of the
+curve. So when a quote exists the model weight and the base-rate pull are both
+switched off and only the sharpening survives.
+
+Why sharpening a market helps at all: the de-vigged consensus is itself
+favourite-longshot biased in this sample — it prices the 0.133 band at 0.133 and
+realises 0.000, and the 0.848 band at 0.848 and realises 0.957.
+
+**It worked immediately.** "Will K. Khachanov win?" went out at **6** against a
+crowd on 26 and settled NO: **+28.76 RBP**. The men's semi-final cohort scored
+**+318.5 RBP, +26.1 skill, 21 of 30 beating the crowd**.
+
+### First serve was shrinking toward the wrong number
+
+First serve is now the worst family left, −142.8 over 58 questions, and the
+damage is concentrated rather than spread: in the band where we submit 0.25-0.40
+we say 0.331 and the realised rate is **0.625 over 16 questions** — 77% of the
+family's entire loss, and significant on its own (10 of 16 against a predicted
+0.331, p about 0.02). Both losses in the latest cohort were this: Sabalenka at 28
+and Rybakina at 33, both YES, −17.03 and −16.80.
+
+The tempting fix was to move the anchor to the family's realised rate of 0.586.
+**Rejected**: 34 of 58 is only 1.3 standard errors from even money (p about
+0.11), and a split that fits the anchor as well as the pull picks 0.552, 0.500
+and 0.475 on three windows and loses 24.8 held out on the third. Moving an anchor
+on evidence that weak is how the earlier base-rate hedges went wrong.
+
+With the anchor held at 0.50, one fitted parameter is stable: the split picks
+0.70, 0.65, 0.70 and scores **+21.8, +26.7, −0.4** held out. `SHRINK_TO_EVEN`
+for first serve raised 0.15 → **0.50**, below every fitted optimum. Heavy
+shrinkage is what the discrimination justifies: AUC 0.608 against a crowd on
+0.648. The two final questions now go out at 50 and 43 rather than 28 and 33.

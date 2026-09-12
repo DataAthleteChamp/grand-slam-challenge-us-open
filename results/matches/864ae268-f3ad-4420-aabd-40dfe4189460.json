@@ -13,18 +13,18 @@
       "market": null,
       "market_id": "c373c489-6e12-4cc7-a891-e06799233cab",
       "market_weight": 0.0,
-      "model": 0.25764785766830745,
+      "model": 0.24220706020190808,
       "notes": [
-        "total games: simulator 39.6, Pinnacle 40.5, used 40.2 at weight 0.60",
+        "no usable market quote for this question",
         "shrunk 20% toward even money (no usable AUC)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-11T14:09:45.742371+00:00",
-      "probability": 0.306118286134646,
+      "predicted_at": "2026-09-11T19:14:09.436240+00:00",
+      "probability": 0.2937656481615265,
       "question": "Will the match last longer than 210 minutes?",
       "rbp": null,
       "settled_at": "",
-      "submission": 26
+      "submission": 25
     },
     {
       "base_rate": 0.4784,
@@ -37,17 +37,17 @@
       "market": 0.9072,
       "market_id": "0a78262b-6df2-4d86-8201-6b495db12049",
       "market_weight": 0.85,
-      "model": 0.899074821984609,
+      "model": 0.9028961224106695,
       "notes": [
         "ace vulnerability: Frances Tiafoe 1.36, Ben Shelton 0.83",
         "exposure 127 service points from 40.6 games",
-        "outcome coupling: P(win)=0.552, delta=+0.60",
+        "outcome coupling: P(win)=0.726, delta=+0.60",
         "bovada aces line 0.907 blended at 85%",
         "logit-sharpened at alpha=1.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-11T14:09:45.742371+00:00",
-      "probability": 0.9706643981657965,
+      "predicted_at": "2026-09-11T19:14:09.436240+00:00",
+      "probability": 0.9725544473790455,
       "question": "Will B. Shelton record more aces than F. Tiafoe?",
       "rbp": null,
       "settled_at": "",
@@ -61,21 +61,21 @@
       "crowd_brier": null,
       "family": "double_faults_comparison",
       "lane": "scenario",
-      "market": 0.4339,
+      "market": 0.4511,
       "market_id": "8316e0f6-d2de-46a1-b805-a9f45d32dab5",
       "market_weight": 0.85,
-      "model": 0.4503994524585413,
+      "model": 0.46501945245854126,
       "notes": [
         "exposure 127 service points from 40.6 games",
-        "bovada double_faults line 0.434 blended at 85%"
+        "bovada double_faults line 0.451 blended at 85%"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-11T14:09:45.742371+00:00",
-      "probability": 0.4503994524585413,
+      "predicted_at": "2026-09-11T19:14:09.436240+00:00",
+      "probability": 0.46501945245854126,
       "question": "Will B. Shelton record more double faults than F. Tiafoe?",
       "rbp": null,
       "settled_at": "",
-      "submission": 44
+      "submission": 46
     },
     {
       "base_rate": 0.5,
@@ -94,7 +94,7 @@
         "base-rate pull 0.48 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-11T14:09:45.742371+00:00",
+      "predicted_at": "2026-09-11T19:14:09.436240+00:00",
       "probability": 0.5936883621027853,
       "question": "Will B. Shelton commit more than 36 unforced errors?",
       "rbp": null,
@@ -120,7 +120,7 @@
         "shrunk 15% toward even money (no usable AUC)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-11T14:09:45.742371+00:00",
+      "predicted_at": "2026-09-11T19:14:09.436240+00:00",
       "probability": 0.7460070477445143,
       "question": "Will F. Tiafoe win more than 70% of points played on their first serve?",
       "rbp": null,
@@ -138,18 +138,18 @@
       "market": null,
       "market_id": "ea7b7052-af05-4103-a950-18e32861c132",
       "market_weight": 0.0,
-      "model": 0.571311759595418,
+      "model": 0.6354222052380942,
       "notes": [
         "exposure 127 service points from 40.6 games",
-        "outcome coupling: P(win)=0.552, delta=+0.79"
+        "outcome coupling: P(win)=0.726, delta=+0.79"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-11T14:09:45.742371+00:00",
-      "probability": 0.560186392651048,
+      "predicted_at": "2026-09-11T19:14:09.436240+00:00",
+      "probability": 0.6154816520178562,
       "question": "Will B. Shelton hit more winners than F. Tiafoe?",
       "rbp": null,
       "settled_at": "",
-      "submission": 58
+      "submission": 64
     },
     {
       "base_rate": 0.202,
@@ -163,9 +163,11 @@
       "market_id": "80d4acb6-3428-4d85-886b-248629d1a71d",
       "market_weight": 0.0,
       "model": 0.27175,
-      "notes": [],
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-09-11T14:09:45.742371+00:00",
+      "predicted_at": "2026-09-11T19:14:09.436240+00:00",
       "probability": 0.27175,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -185,10 +187,11 @@
       "market_weight": 0.0,
       "model": 0.477,
       "notes": [
+        "no usable market quote for this question",
         "shrunk 85% toward even money (no usable AUC)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-11T14:09:45.742371+00:00",
+      "predicted_at": "2026-09-11T19:14:09.436240+00:00",
       "probability": 0.49655,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -198,27 +201,27 @@
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.7,
+      "confidence": 1.0,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": null,
+      "market": 0.726075504828187,
       "market_id": "8cef274b-d5a3-4f84-bba2-46f7aafa88f6",
-      "market_weight": 0.0,
+      "market_weight": 1.0,
       "model": 0.55225,
       "notes": [
         "simulated win probability 0.552",
-        "no market quote; this is the family that most needs one",
+        "market consensus 0.726 taken whole; model and base-rate pull both suppressed",
         "logit-sharpened at alpha=1.95"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-11T14:09:45.742371+00:00",
-      "probability": 0.5814807409578837,
+      "predicted_at": "2026-09-11T19:14:09.436240+00:00",
+      "probability": 0.8699891621327078,
       "question": "Will B. Shelton win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 60
+      "submission": 91
     },
     {
       "base_rate": 0.13263821138211385,
@@ -234,10 +237,11 @@
       "model": 0.298959,
       "notes": [
         "tiebreak iid correction x0.91 (ATP)",
+        "no usable market quote for this question",
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-11T14:09:45.742371+00:00",
+      "predicted_at": "2026-09-11T19:14:09.436240+00:00",
       "probability": 0.258959,
       "question": "Will the match feature at least 2 tiebreak(s)?",
       "rbp": null,
@@ -248,7 +252,7 @@
   "match_id": "864ae268-f3ad-4420-aabd-40dfe4189460",
   "match_name": "F. Tiafoe vs B. Shelton",
   "multiplier": 3,
-  "opening_time": "2026-09-11T23:00:00.000Z",
+  "opening_time": "2026-09-11T22:30:00.000Z",
   "player_a": "Frances Tiafoe",
   "player_b": "Ben Shelton",
   "round_code": "R128"

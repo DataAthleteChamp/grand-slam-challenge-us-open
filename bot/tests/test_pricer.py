@@ -1490,3 +1490,39 @@ def test_distance_covered_is_recognised_but_deliberately_unmodelled():
     priced = pricer.price(spec, context, market_id="c")
     assert priced.submission == 50
     assert any("unmodellable" in note for note in priced.notes)
+
+
+def test_a_market_quote_is_taken_whole_for_the_match_winner():
+    """The de-vigged consensus is better than anything we do to it afterwards.
+
+    Replaying the 107 settled match-winner questions that had a quote, our live
+    pipeline scored +16.1 skill, the raw market +136.0 and the sharpened market
+    +287.8; a time split confirmed it on held-out questions at three train
+    fractions.  So when a quote exists the model weight and the base-rate pull
+    must both be off, leaving only the logit sharpening that corrects the
+    favourite-longshot bias.
+    """
+    import math
+
+    from bot.markets.parser import parse_question
+    from bot.pricer import EXTREMISE_ALPHA
+    from bot.roster import Roster
+
+    roster, pricer = Roster.load(), Pricer(lane="honest")
+    context = roster.context("A. Zverev", "K. Khachanov", tour="ATP")
+    if not (context.player_a.has_ratings and context.player_b.has_ratings):
+        pytest.skip("players missing from roster")
+
+    quote = 0.191
+    spec = parse_question("Will K. Khachanov win?", players=("A. Zverev", "K. Khachanov"))
+    priced = pricer.price(
+        spec, context, market_id="z", ladders={"match_winner": {context.player_b.name: quote}}
+    )
+
+    alpha = EXTREMISE_ALPHA[Family.MATCH_WINNER]
+    odds = math.log(quote / (1 - quote))
+    expected = 1.0 / (1.0 + math.exp(-alpha * odds))
+    # The submission is the sharpened quote itself, not a blend of it.
+    assert priced.submission == round(expected * 100)
+    assert priced.market_probability == pytest.approx(quote)
+    assert priced.market_weight == 1.0
