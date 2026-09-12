@@ -200,10 +200,14 @@ def test_lines_for_ignores_one_sided_quotes():
 def test_budget_reserves_credits_for_the_final():
     """The free tier is 500 requests for a fifteen-day tournament, so a runaway
     loop must not be able to strand the bot before the highest-multiplier round.
+
+    Written relative to QUOTA_RESERVE rather than against hardcoded counts: the
+    reserve is lowered deliberately as the rounds run out, and a test pinned to
+    one particular value fails for the wrong reason when that happens.
     """
     assert Budget(remaining=QUOTA_RESERVE + 10).spendable == 10
     assert Budget(remaining=QUOTA_RESERVE).spendable == 0
-    assert Budget(remaining=5).spendable == 0
+    assert Budget(remaining=max(QUOTA_RESERVE - 1, 0)).spendable == 0
 
 
 def test_budget_round_trips(tmp_path):

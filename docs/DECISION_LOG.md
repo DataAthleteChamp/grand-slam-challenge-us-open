@@ -873,3 +873,53 @@ With the anchor held at 0.50, one fitted parameter is stable: the split picks
 for first serve raised 0.15 → **0.50**, below every fitted optimum. Heavy
 shrinkage is what the discrimination justifies: AUC 0.608 against a crowd on
 0.648. The two final questions now go out at 50 and 43 rather than 28 and 33.
+
+## 2026-09-13 — two bugs found on the finals, and a quote that outlives its request
+
+### "Both players win at least one set" was wrong in a best-of-five
+
+Shipped on 2026-09-11 reading `p_deciding_set`, with a docstring claiming the two
+are the same event "whenever the match is decided by winning a majority of sets".
+That is false. The loser takes a set exactly when the winner fails to sweep, so
+the quantity is `1 - p_straight_sets`. In a best-of-three the only non-sweep is
+2-1 and the two coincide, which is why the women's final looked right and the
+test passed. In a best-of-five a **3-1 has both players winning a set and never
+reaches a decider**.
+
+The men's final went out at **25**, the same number as its deciding-set answer.
+Corrected it is **60** — a 35-point error on a 3x question. The women's final is
+unchanged at 37, still equal to its decider, as it should be. The test now
+asserts the two are equal only in a best-of-three and strictly apart in a
+best-of-five.
+
+### The orientation block was crying wolf on every final
+
+`check_comparison_complement` requires paired comparisons to sum to about one.
+Correct for aces, double faults and winners, and wrong for first serve, which
+despite its family name is not head to head in this event: it asks whether each
+player separately clears a threshold of their own ("Zverev more than 78% of
+first-serve points", "Shelton more than 74%"). Independent events against
+different lines are under no obligation to sum to anything, and the check fired
+BLOCK on every final, forcing a `--force` that would equally have waved through a
+genuine inversion. First serve is now exempt, with the reason recorded.
+
+### A market quote now outlives the request that fetched it
+
+The 500-request free tier runs out exactly when it matters most: both finals
+score at 3x and the quota hit zero the morning of the men's final, so the
+match-winner question was priced from the model alone at **19** while the sharp
+consensus said **0.4297**. Sharpened properly that is **37**.
+
+`MarketBook.fetch` now writes every successful pull to `data/markets/oddsapi/`
+and, when a call fails, falls back to the newest snapshot under 36 hours old.
+A day-old de-vigged consensus over 33 books is not a compromise: discarding it
+measured **271.7 skill points worse** across 107 settled questions. Two tests
+cover it, one that a fresh snapshot is used and one that a stale one is ignored.
+
+### Also
+
+Pinnacle's guest API is dead (connection fails at DNS level). The Odds API
+replaced it and returns 57-58 books per match including Pinnacle itself and three
+exchanges. Two research agents sent to scrape bookmakers directly returned
+nothing at all; the aggregator did it in one request. Quota is now exhausted, so
+the snapshot cache is what carries both finals.

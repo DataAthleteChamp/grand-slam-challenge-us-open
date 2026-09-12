@@ -5,27 +5,27 @@
     {
       "base_rate": 0.5,
       "brier": null,
-      "confidence": 0.7,
+      "confidence": 1.0,
       "crowd": null,
       "crowd_brier": null,
       "family": "match_winner",
       "lane": "scenario",
-      "market": null,
+      "market": 0.4462885379667464,
       "market_id": "f59aab44-1f99-4383-ae98-abdc2898bdf6",
-      "market_weight": 0.0,
+      "market_weight": 1.0,
       "model": 0.477,
       "notes": [
         "simulated win probability 0.477",
-        "no market quote; this is the family that most needs one",
+        "market consensus 0.446 taken whole; model and base-rate pull both suppressed",
         "logit-sharpened at alpha=1.95"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-12T01:59:12.701679+00:00",
-      "probability": 0.4639419393656618,
+      "predicted_at": "2026-09-12T04:31:56.469475+00:00",
+      "probability": 0.39637984319338443,
       "question": "Will E. Rybakina win?",
       "rbp": null,
       "settled_at": "",
-      "submission": 45
+      "submission": 37
     },
     {
       "base_rate": 0.271,
@@ -41,10 +41,11 @@
       "model": 0.33365474999999994,
       "notes": [
         "tiebreak iid correction x1.04 (WTA)",
+        "no usable market quote for this question",
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-12T01:59:12.701679+00:00",
+      "predicted_at": "2026-09-12T04:31:56.469475+00:00",
       "probability": 0.29365474999999996,
       "question": "Will the match feature at least 1 tiebreak?",
       "rbp": null,
@@ -62,14 +63,15 @@
       "market": null,
       "market_id": "f2885dde-fb9e-43c5-8e6b-3f7e7545ef98",
       "market_weight": 0.0,
-      "model": 0.5194584021076233,
+      "model": 0.5190463837146213,
       "notes": [
-        "total games: simulator 22.0, Pinnacle 25.1, used 23.9 at weight 0.60",
+        "total games: simulator 22.0, Pinnacle 25.1, used 23.8 at weight 0.60",
+        "no usable market quote for this question",
         "shrunk 20% toward even money (no usable AUC)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-12T01:59:12.701679+00:00",
-      "probability": 0.5155667216860986,
+      "predicted_at": "2026-09-12T04:31:56.469475+00:00",
+      "probability": 0.5152371069716971,
       "question": "Will the match last longer than 105 minutes?",
       "rbp": null,
       "settled_at": "",
@@ -86,16 +88,16 @@
       "market": 0.6087,
       "market_id": "12901166-08df-427f-b768-b14679b5bf85",
       "market_weight": 0.85,
-      "model": 0.5996611627794741,
+      "model": 0.5980110178007325,
       "notes": [
         "exposure 73 service points from 22.5 games",
-        "outcome coupling: P(win)=0.477, delta=+0.76",
+        "outcome coupling: P(win)=0.446, delta=+0.76",
         "bovada aces line 0.609 blended at 85%",
         "logit-sharpened at alpha=1.60"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-12T01:59:12.701679+00:00",
-      "probability": 0.656218058973708,
+      "predicted_at": "2026-09-12T04:31:56.469475+00:00",
+      "probability": 0.653734434802648,
       "question": "Will E. Rybakina record more aces than A. Sabalenka?",
       "rbp": null,
       "settled_at": "",
@@ -118,7 +120,7 @@
         "bovada double_faults line 0.460 blended at 85%"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-12T01:59:12.701679+00:00",
+      "predicted_at": "2026-09-12T04:31:56.469475+00:00",
       "probability": 0.4354155971826207,
       "question": "Will E. Rybakina record more double faults than A. Sabalenka?",
       "rbp": null,
@@ -142,7 +144,7 @@
         "base-rate pull 0.48 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-12T01:59:12.701679+00:00",
+      "predicted_at": "2026-09-12T04:31:56.469475+00:00",
       "probability": 0.46739290815756906,
       "question": "Will E. Rybakina commit more than 24 unforced errors?",
       "rbp": null,
@@ -168,7 +170,7 @@
         "shrunk 50% toward even money (no usable AUC)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-12T01:59:12.701679+00:00",
+      "predicted_at": "2026-09-12T04:31:56.469475+00:00",
       "probability": 0.49546339434399966,
       "question": "Will A. Sabalenka win more than 70% of points played on their first serve?",
       "rbp": null,
@@ -186,18 +188,18 @@
       "market": null,
       "market_id": "3c8d7e15-4416-45ee-8399-242c08ec8eb0",
       "market_weight": 0.0,
-      "model": 0.43954639413689,
+      "model": 0.4262825561023421,
       "notes": [
         "exposure 73 service points from 22.5 games",
-        "outcome coupling: P(win)=0.477, delta=+0.94"
+        "outcome coupling: P(win)=0.446, delta=+0.94"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-12T01:59:12.701679+00:00",
-      "probability": 0.44498501494306764,
+      "predicted_at": "2026-09-12T04:31:56.469475+00:00",
+      "probability": 0.4335449546382701,
       "question": "Will E. Rybakina hit more winners than A. Sabalenka?",
       "rbp": null,
       "settled_at": "",
-      "submission": 43
+      "submission": 42
     },
     {
       "base_rate": 0.366,
@@ -211,9 +213,11 @@
       "market_id": "d31061a1-bb27-458c-95a0-b16d6a40749d",
       "market_weight": 0.0,
       "model": 0.30725,
-      "notes": [],
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-09-12T01:59:12.701679+00:00",
+      "predicted_at": "2026-09-12T04:31:56.469475+00:00",
       "probability": 0.30725,
       "question": "Will the match require a deciding set?",
       "rbp": null,
@@ -233,10 +237,11 @@
       "market_weight": 0.0,
       "model": 0.5205,
       "notes": [
+        "no usable market quote for this question",
         "shrunk 85% toward even money (no usable AUC)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-12T01:59:12.701679+00:00",
+      "predicted_at": "2026-09-12T04:31:56.469475+00:00",
       "probability": 0.5030749999999999,
       "question": "Will either player win a set 6\u20132, 6\u20131 or 6\u20130?",
       "rbp": null,
@@ -260,7 +265,7 @@
         "base-rate pull 0.48 suppressed for unforced_errors"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-12T01:59:12.701679+00:00",
+      "predicted_at": "2026-09-12T04:31:56.469475+00:00",
       "probability": 0.31251929211730656,
       "question": "Will A. Sabalenka commit more than 33 unforced errors?",
       "rbp": null,
@@ -286,7 +291,7 @@
         "shrunk 50% toward even money (no usable AUC)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-12T01:59:12.701679+00:00",
+      "predicted_at": "2026-09-12T04:31:56.469475+00:00",
       "probability": 0.4349858693019749,
       "question": "Will E. Rybakina win more than 72% of points played on their first serve?",
       "rbp": null,
@@ -305,9 +310,11 @@
       "market_id": "df8c48c8-912f-4bb7-97ee-8e971a090f9e",
       "market_weight": 0.0,
       "model": 0.84825,
-      "notes": [],
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-09-12T01:59:12.701679+00:00",
+      "predicted_at": "2026-09-12T04:31:56.469475+00:00",
       "probability": 0.84825,
       "question": "Will any player win 2 sets in a row?",
       "rbp": null,
@@ -328,10 +335,11 @@
       "model": 0.33365474999999994,
       "notes": [
         "tiebreak iid correction x1.04 (WTA)",
+        "no usable market quote for this question",
         "scenario lane: experimental tiebreak shift -0.040"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-12T01:59:12.701679+00:00",
+      "predicted_at": "2026-09-12T04:31:56.469475+00:00",
       "probability": 0.29365474999999996,
       "question": "Will the final set played include a tiebreak?",
       "rbp": null,
@@ -351,10 +359,11 @@
       "market_weight": 0.0,
       "model": 0.30725,
       "notes": [
-        "identical event to a deciding set; read off the same run"
+        "complement of a straight-sets win; read off the same run",
+        "no usable market quote for this question"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-12T01:59:12.701679+00:00",
+      "predicted_at": "2026-09-12T04:31:56.469475+00:00",
       "probability": 0.30725,
       "question": "Will both players win at least one set?",
       "rbp": null,
@@ -377,7 +386,7 @@
         "total points: share 0.495 of 148 expected points = 73.0 vs threshold 73 (simulated over 4000 runs, games sd 6.0)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-12T01:59:12.701679+00:00",
+      "predicted_at": "2026-09-12T04:31:56.469475+00:00",
       "probability": 0.4366117319140365,
       "question": "Will E. Rybakina win more than 73 total points?",
       "rbp": null,
@@ -400,7 +409,7 @@
         "total points: share 0.505 of 148 expected points = 74.6 vs threshold 75 (simulated over 4000 runs, games sd 6.0)"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-12T01:59:12.701679+00:00",
+      "predicted_at": "2026-09-12T04:31:56.469475+00:00",
       "probability": 0.432152092329913,
       "question": "Will A. Sabalenka win more than 75 total points?",
       "rbp": null,
@@ -423,7 +432,7 @@
         "distance covered is unmodellable: no public source; base rate"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-12T01:59:12.701679+00:00",
+      "predicted_at": "2026-09-12T04:31:56.469475+00:00",
       "probability": 0.5,
       "question": "Will E. Rybakina cover more than 5400 feet?",
       "rbp": null,
@@ -446,7 +455,7 @@
         "distance covered is unmodellable: no public source; base rate"
       ],
       "outcome": null,
-      "predicted_at": "2026-09-12T01:59:12.701679+00:00",
+      "predicted_at": "2026-09-12T04:31:56.469475+00:00",
       "probability": 0.5,
       "question": "Will A. Sabalenka cover more than 5700 feet?",
       "rbp": null,
@@ -465,9 +474,11 @@
       "market_id": "b3f86091-390b-42f0-8267-014ce9aa12e0",
       "market_weight": 0.0,
       "model": 0.14825,
-      "notes": [],
+      "notes": [
+        "no usable market quote for this question"
+      ],
       "outcome": null,
-      "predicted_at": "2026-09-12T01:59:12.701679+00:00",
+      "predicted_at": "2026-09-12T04:31:56.469475+00:00",
       "probability": 0.14825,
       "question": "Will the match end with E. Rybakina winning 2:1?",
       "rbp": null,

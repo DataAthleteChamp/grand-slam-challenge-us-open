@@ -1098,13 +1098,15 @@ class Pricer:
         if spec.family is Family.DECIDING_SET:
             return simulation.p_deciding_set
         if spec.family is Family.BOTH_WIN_SET:
-            # "Both players win at least one set" and "the match requires a
-            # deciding set" are the same event whenever the match is decided by
-            # winning a majority of sets: the loser wins at least one exactly
-            # when the winner fails to sweep.  Answering it from anything other
-            # than p_deciding_set would let the two answers contradict.
-            notes.append("identical event to a deciding set; read off the same run")
-            return simulation.p_deciding_set
+            # The loser takes at least one set exactly when the winner fails to
+            # sweep, so this is the complement of straight sets - NOT the
+            # deciding-set probability.  The two coincide in a best-of-three,
+            # where the only non-sweep is 2-1, and diverge badly in a
+            # best-of-five, where 3-1 has both players winning a set without a
+            # deciding set ever being played.  Reading it off p_deciding_set sent
+            # 25 to the men's final when the answer was near 70.
+            notes.append("complement of a straight-sets win; read off the same run")
+            return 1.0 - simulation.p_straight_sets
         if spec.family is Family.SETS_IN_A_ROW:
             return simulation.p_two_sets_in_a_row
         if spec.family is Family.EXACT_SCORELINE:
@@ -1335,7 +1337,13 @@ class Pricer:
             if spec.family is Family.DECIDING_SET:
                 return rates.deciding_set
             if spec.family is Family.BOTH_WIN_SET:
-                # Same event as a deciding set, so the same anchor.
+                # Complement of a straight-sets win.  Equal to the deciding-set
+                # rate only in a best-of-three; in a best-of-five a 3-1 counts
+                # here and does not reach a decider.
+                if context.best_of >= 5:
+                    return min(1.0 - rates.straight_sets, 0.98) if hasattr(
+                        rates, "straight_sets"
+                    ) else 0.70
                 return rates.deciding_set
             if spec.family is Family.SETS_IN_A_ROW:
                 # Straight sets always contain two in a row, and a three-setter

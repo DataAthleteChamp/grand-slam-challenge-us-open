@@ -1444,9 +1444,14 @@ def test_simulated_set_sequence_obeys_its_identities():
         assert straight == pytest.approx(sim.p_straight_sets, abs=1e-9)
 
 
-def test_both_win_a_set_is_priced_identically_to_a_deciding_set():
-    """They are the same event.  Pricing them apart would let the entry submit
-    two contradictory answers about one match."""
+def test_both_win_a_set_equals_a_deciding_set_only_in_best_of_three():
+    """They coincide in a best-of-three and must NOT in a best-of-five.
+
+    The loser takes a set exactly when the winner fails to sweep, so this is the
+    complement of straight sets.  In a best-of-three the only non-sweep is 2-1,
+    so it equals the deciding-set rate; in a best-of-five a 3-1 counts here and
+    never reaches a decider.  Reading it off p_deciding_set sent 25 to the men's
+    final when the answer was near 70."""
     from bot.markets.parser import parse_question
     from bot.roster import Roster
 
@@ -1526,3 +1531,14 @@ def test_a_market_quote_is_taken_whole_for_the_match_winner():
     assert priced.submission == round(expected * 100)
     assert priced.market_probability == pytest.approx(quote)
     assert priced.market_weight == 1.0
+
+
+def test_both_win_a_set_exceeds_the_decider_in_a_best_of_five():
+    from bot.models.simulate import SimulationConfig, simulate_match
+
+    for pa, pb in ((0.66, 0.63), (0.70, 0.60)):
+        sim = simulate_match(pa, pb, best_of=5, config=SimulationConfig(n_sims=3000))
+        both = 1.0 - sim.p_straight_sets
+        # 3-1 lives in one and not the other, so the gap must be strictly positive.
+        assert both > sim.p_deciding_set + 0.05, (both, sim.p_deciding_set)
+        assert sim.p_straight_sets + sim.p_deciding_set < 1.0

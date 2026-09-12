@@ -1,4 +1,4 @@
-MANUAL NUMBERS - 20 questions across 1 matches
+MANUAL NUMBERS - 40 questions across 2 matches
 Sharpened x1.15 in log-odds on ACES ONLY.
 Everything else is left AT the bot number. Sharpening double faults cost
 0.41 RBP/question on the settled sample and duration 0.34, both significant;
@@ -26,3 +26,25 @@ would compound. See SHARPEN_BY_TOKEN for the per-family measurements.
      bot  31  ->  MANUAL  31   Will A. Sabalenka commit more than 33 unforced errors?
      bot  50  ->  MANUAL  50   Will E. Rybakina cover more than 5400 feet?
      bot  37  ->  MANUAL  37   Will the match require a deciding set?
+
+--- A. Zverev vs B. Shelton   (starts 2026-09-13 18:00Z)
+     bot  56  ->  MANUAL  56   Will A. Zverev win more than 78% of points played on their first serve?
+     bot  37  ->  MANUAL  37   Will A. Zverev win more than 167 total points?
+     bot  30  ->  MANUAL  30   Will B. Shelton win more than 162 total points?
+     bot  48  ->  MANUAL  48   Will either player win a set 6–2, 6–1 or 6–0?
+     bot   9  ->  MANUAL   9   Will the match end with B. Shelton winning 3:2?
+     bot  47  ->  MANUAL  47   Will B. Shelton hit more winners than A. Zverev?
+     bot  37  ->  MANUAL  37   Will B. Shelton win?
+     bot  60  ->  MANUAL  60   Will both players win at least one set?
+     bot  96  ->  MANUAL  96   Will any player win 2 sets in a row?
+     bot  54  ->  MANUAL  54   Will B. Shelton win more than 74% of points played on their first serve?
+     bot  40  ->  MANUAL  39   Will B. Shelton record more aces than A. Zverev?
+     bot  53  ->  MANUAL  53   Will B. Shelton record more double faults than A. Zverev?
+     bot  70  ->  MANUAL  70   Will the final set played include a tiebreak?
+     bot  36  ->  MANUAL  36   Will the match feature at least 2 tiebreaks?
+     bot  50  ->  MANUAL  50   Will the match last longer than 185 minutes?
+     bot  50  ->  MANUAL  50   Will A. Zverev cover more than 10,300 feet?
+     bot  25  ->  MANUAL  25   Will the match require a deciding set?
+     bot  50  ->  MANUAL  50   Will B. Shelton cover more than 9,000 feet?
+     bot  54  ->  MANUAL  54   Will A. Zverev commit more than 35 unforced errors?
+     bot  47  ->  MANUAL  47   Will B. Shelton commit more than 45 unforced errors?

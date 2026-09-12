@@ -549,8 +549,18 @@ def check_comparison_complement(
     roughly one minus the tie probability. A sum near 1.0 means the tie mass was
     dropped; a sum near 2.0 or 0.0 means one of them is inverted — the most
     expensive single error available on the highest-edge family.
+
+    First serve is deliberately exempt.  Despite the family name it is not a
+    head-to-head question in this event: it asks whether each player separately
+    clears a threshold of their own ("Zverev more than 78% of first-serve
+    points", "Shelton more than 74%").  Those are independent events about
+    different players against different lines and are under no obligation to sum
+    to anything, so the rule fired on every final and would have trained us to
+    pass --force past the genuine inversions it exists to catch.
     """
     if priced_a.family is not priced_b.family or priced_a.family not in COMPARISON:
+        return None
+    if priced_a.family is Family.FIRST_SERVE_COMPARISON:
         return None
     total = priced_a.probability + priced_b.probability
     if total > 1.05:

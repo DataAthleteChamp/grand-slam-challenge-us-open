@@ -19,7 +19,10 @@ own match name may carry diacritics its questions drop.
 
 from __future__ import annotations
 
+import json
+import time
 from dataclasses import dataclass, field
+from pathlib import Path
 
 from bot.data.names import strip_accents
 from bot.data.oddsapi import US_OPEN_SPORTS, OddsClient, OddsError, match_winner
@@ -30,6 +33,16 @@ MIN_BOOKS = 8
 #: Above this spread the books themselves disagree enough that the median is not
 #: a reliable summary, and we should lean on our own model instead.
 MAX_SPREAD = 0.12
+
+#: Raw Odds API responses, kept so a quote outlives the request that fetched it.
+SNAPSHOT_DIR = Path(__file__).resolve().parent.parent / "data" / "markets" / "oddsapi"
+
+#: How stale a cached snapshot may be before it is discarded.  Tennis
+#: match-winner lines move slowly outside of injury news, and the alternative is
+#: not a fresher quote but *no quote at all*, which measured 271.7 skill points
+#: worse across 107 settled questions.  A day-old consensus over dozens of books
+#: still beats our own model comfortably.
+MAX_SNAPSHOT_AGE_SECONDS = 36 * 3600
 
 
 def surname_key(name: str) -> str:
@@ -56,6 +69,7 @@ class MarketBook:
             client = client or OddsClient.from_env()
         except OddsError as exc:
             book.skipped.append(f"no odds client: {exc}")
+            book.absorb_snapshots()
             return book
 
         for sport in US_OPEN_SPORTS:
@@ -64,8 +78,48 @@ class MarketBook:
             except OddsError as exc:
                 book.skipped.append(f"{sport}: {exc}")
                 continue
+            book.save_snapshot(sport, events)
             book.absorb(events)
+
+        # The free quota runs out exactly when it matters most, at the end of the
+        # tournament when every remaining question scores at 3x.  A quote that
+        # was fetched hours ago is still a de-vigged consensus over dozens of
+        # books; throwing it away and pricing the final from the model alone is
+        # the expensive option, not the safe one.
+        if book.skipped:
+            book.absorb_snapshots()
         return book
+
+    def save_snapshot(self, sport: str, events: list[dict]) -> None:
+        """Persist a successful pull so the quote outlives its request."""
+        if not events:
+            return
+        try:
+            SNAPSHOT_DIR.mkdir(parents=True, exist_ok=True)
+            stamp = time.strftime("%Y%m%dT%H%M%SZ", time.gmtime())
+            path = SNAPSHOT_DIR / f"{sport}-{stamp}.json"
+            path.write_text(json.dumps(events), encoding="utf-8")
+        except OSError:
+            pass
+
+    def absorb_snapshots(self) -> None:
+        """Fill any gaps from the newest cached snapshot on disk."""
+        if not SNAPSHOT_DIR.exists():
+            return
+        now = time.time()
+        files = sorted(SNAPSHOT_DIR.glob("*.json"), key=lambda p: p.stat().st_mtime)
+        for path in files:
+            age = now - path.stat().st_mtime
+            if age > MAX_SNAPSHOT_AGE_SECONDS:
+                continue
+            try:
+                events = json.loads(path.read_text(encoding="utf-8"))
+            except (OSError, ValueError):
+                continue
+            if isinstance(events, list):
+                # Newest last, so later files overwrite earlier ones.
+                self.absorb(events)
+                self.skipped.append(f"used cached quotes from {path.name} ({age / 3600:.1f}h old)")
 
     def absorb(self, events: list[dict]) -> None:
         for event in events:
