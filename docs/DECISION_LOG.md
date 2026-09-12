@@ -973,3 +973,45 @@ are identical to four decimal places, before and after the start. There is no
 live signal there. Kalshi carries the players only inside cross-category parlays
 with no bids, so it is not a usable source for this event. Polymarket is the one
 venue that prices these matches live and to the set.
+
+## 2026-09-13 — the market reconciliation had never once run
+
+Scenario-testing the men's final turned up a contradiction: the reconciled
+simulation returned P(Zverev) = **0.757** while the market it was supposedly
+reconciled against said **0.570**.
+
+`_simulate` looked the quote up as `ladders.get(context.player_a.name)`, but the
+payload is nested — `{"match_winner": {name: probability}}` — which is what
+`_read_market` and `_price_outcome` both correctly expect. The top-level lookup
+therefore returned `None` every time, `target` stayed `None`, and the shift
+search never ran. **Not once, for the entire tournament.**
+
+Its own docstring describes the gain it was supposed to deliver: +2.57
+RBP/question on duration (CI [+0.46, +4.67]), +0.87 on tiebreak, +1.72 pooled
+(CI [+0.54, +2.98]), measured on 49 settled matches. All of it was dead, and the
+result was exactly the inconsistency the method exists to prevent: the
+match-winner answer came from the market while every structural question came
+from a simulation that disagreed with it by 19 points.
+
+Effect on the men's final, raw against reconciled:
+
+| quantity | raw | reconciled |
+|---|---|---|
+| P(Zverev wins) | 0.757 | **0.603** (market 0.570) |
+| deciding set | 0.252 | **0.293** |
+| any tiebreak | 0.781 | **0.816** |
+| two or more tiebreaks | 0.406 | **0.469** |
+| both win a set | 0.593 | **0.654** |
+| lopsided set | 0.359 | 0.324 |
+| mean total games | 41.2 | **42.8** |
+
+Every move is in the direction the market implies: a closer match runs longer,
+produces more tiebreaks and more deciders, and fewer lopsided sets. Submissions
+moved accordingly — both win a set 60 to 66, final-set tiebreak 70 to 73, two or
+more tiebreaks 36 to 41, deciding set 25 to 29, Shelton 3:2 from 9 to 13.
+
+Both payload shapes are now accepted, and two tests guard it: one asserts the
+reconciled run differs from the raw one **and moves toward the quote**, the other
+that a bare `{name: probability}` mapping still works. Asserting only that the
+arithmetic is right would not have caught this — the arithmetic was always right,
+it was never reached.

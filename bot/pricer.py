@@ -1048,7 +1048,19 @@ class Pricer:
         """
         target = None
         if ladders:
-            quote = ladders.get(context.player_a.name)
+            # The payload is nested as {"match_winner": {name: probability}},
+            # which is what _read_market and _price_outcome both expect.  This
+            # lookup read the top level instead, so it always found None and the
+            # reconciliation below never ran once: every structural question was
+            # priced from the raw simulation while the match-winner answer came
+            # from the market, which is precisely the inconsistency this method's
+            # docstring says it exists to prevent.  Both shapes are accepted now
+            # so a bare {name: probability} still works.
+            quote = ladders.get("match_winner")
+            if isinstance(quote, dict):
+                quote = quote.get(context.player_a.name)
+            else:
+                quote = ladders.get(context.player_a.name)
             if quote is not None and 0.02 < float(quote) < 0.98:
                 target = float(quote)
 

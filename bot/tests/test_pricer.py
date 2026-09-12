@@ -1571,3 +1571,44 @@ def test_the_women_s_decider_and_both_win_a_set_move_together():
     assert FAMILY_SHIFT_BY_TOUR[("WTA", Family.DECIDING_SET)] == pytest.approx(
         FAMILY_SHIFT_BY_TOUR[("WTA", Family.BOTH_WIN_SET)]
     )
+
+
+def test_the_simulation_is_actually_reconciled_to_the_market():
+    """Guard the lookup, not just the arithmetic.
+
+    The ladders payload is nested as {"match_winner": {name: probability}}.
+    _simulate read the top level instead, so the quote was never found, target
+    stayed None and the reconciliation never ran a single time - while the
+    match-winner answer came straight from that same market. The result was the
+    exact inconsistency the reconciliation exists to prevent: on the men's final
+    the raw simulation put Zverev at 0.757 against a market on 0.570, which drags
+    every deciding-set, tiebreak and duration answer with it.
+    """
+    from bot.roster import Roster
+
+    roster, pricer = Roster.load(), Pricer(lane="honest")
+    context = roster.context("A. Zverev", "B. Shelton", tour="ATP")
+    if not (context.player_a.has_ratings and context.player_b.has_ratings):
+        pytest.skip("players missing from roster")
+
+    raw = pricer._simulate(context)
+    ladders = {"match_winner": {context.player_a.name: 0.57, context.player_b.name: 0.43}}
+    reconciled = pricer._simulate(context, ladders)
+
+    assert reconciled.p_a_wins_match != raw.p_a_wins_match, "reconciliation did not run"
+    # It must move toward the quote, not merely differ from the raw run.
+    assert abs(reconciled.p_a_wins_match - 0.57) < abs(raw.p_a_wins_match - 0.57)
+
+
+def test_a_bare_ladder_mapping_still_reconciles():
+    """Both payload shapes are accepted, so a caller passing {name: p} works."""
+    from bot.roster import Roster
+
+    roster, pricer = Roster.load(), Pricer(lane="honest")
+    context = roster.context("A. Zverev", "B. Shelton", tour="ATP")
+    if not (context.player_a.has_ratings and context.player_b.has_ratings):
+        pytest.skip("players missing from roster")
+
+    raw = pricer._simulate(context)
+    bare = pricer._simulate(context, {context.player_a.name: 0.57})
+    assert abs(bare.p_a_wins_match - 0.57) < abs(raw.p_a_wins_match - 0.57)
