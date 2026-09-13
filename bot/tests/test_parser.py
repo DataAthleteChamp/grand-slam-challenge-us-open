@@ -46,6 +46,15 @@ def test_double_fault_beats_the_generic_fault_rule():
     assert spec.family is Family.DOUBLE_FAULTS_COMPARISON
 
 
+def test_thousands_separator_is_preserved_in_threshold():
+    spec = parse_question(
+        "Will A. Sabalenka cover more than 10,300 feet?",
+        players=("A. Sabalenka", "E. Rybakina"),
+    )
+    assert spec.family is Family.DISTANCE_COVERED
+    assert spec.threshold == 10_300
+
+
 def test_unforced_errors_beat_the_generic_winners_rule():
     spec = parse_question("Will Swiatek hit more unforced errors than winners?", players=PLAYERS)
     assert spec.family is Family.UNFORCED_ERRORS

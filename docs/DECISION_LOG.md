@@ -1106,6 +1106,42 @@ direction. The submitted conservative outputs remain Zverev 37 and Shelton 35.
 The complete source snapshot and every manual override are recorded in
 `data/markets/final-overrides-20260913.json`.
 
+## 2026-09-13 — post-lock code audit: two safe fixes, two model changes deferred
+
+The independent 20-question code audit returned after the final had locked. It
+found four additional issues. Only the two behavior-free correctness fixes were
+adopted immediately:
+
+1. Comma-separated thresholds parsed as their prefix: `9,000` became `9` and
+   `10,300` became `10`. `_NUMBER` now accepts thousands separators and strips
+   them before conversion. This was dormant because distance still uses an
+   explicit fallback/override, but it would silently corrupt any future distance
+   model.
+2. The API omitted `round` on both finals, so `normalise_round(None)` archived
+   them as `R128` and coverage expected five questions instead of twenty. When
+   the source round is absent, a twenty-question match is now inferred as `F`.
+
+Two genuine model-unit issues were **not adopted** without out-of-sample
+validation:
+
+- Unforced-error rates are per all match points, but the route uses a fixed 224
+  points instead of the final's 269-283-point forecast. Applying the obvious
+  dimensional fix moves Zverev/Shelton from 54/47 to roughly 67/62. Official
+  tournament rates point substantially lower, however, and this family has low
+  repeatability plus scorer disagreement. The sign of the implementation bug is
+  clear; the better probability is not.
+- Winner rates are measured per all points, while the comparison route applies
+  per-player service-point exposure and uses total-match counts instead of
+  charted-match counts. Correcting all units moves Shelton-more-winners from 47
+  to about 39, but no settled replay has established that the correction improves
+  Brier out of sample.
+
+The audit also found that the 900-run market-reconciliation search does not hit
+the 4,000-run final target exactly (0.603 versus a 0.570 market in the honest
+lane), and that final-set-tiebreak post-processing still uses an any-match
+tiebreak base/experimental shift. Both integer effects are small, neither has a
+validated replacement, and neither was changed after lock.
+
 ## 2026-09-13 — final audit: twelve market searches, official form, and two more dead routes
 
 The recurring coverage and Bovada schedules were stopped before this pass so an

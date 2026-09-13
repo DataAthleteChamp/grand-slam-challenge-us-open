@@ -153,6 +153,27 @@ def test_rounds_are_normalised(result):
     assert result.rounds["m2"] == "R128"
 
 
+def test_missing_round_is_inferred_as_final_from_twenty_questions(roster):
+    class FinalClient(FakeClient):
+        def list_markets(self, lobby_id, match_id=None):
+            return [
+                {
+                    "id": f"{match_id}-final-{i}",
+                    "question": "Will Alexander Zverev win?",
+                }
+                for i in range(20)
+            ]
+
+    match = {
+        "id": "final",
+        "title": "Alexander Zverev vs Ben Shelton",
+        "tour": "ATP",
+    }
+    result = collect(FinalClient([match]), roster, Pricer())
+    assert result.rounds["final"] == "F"
+    assert result.contexts["final"].round_code == "F"
+
+
 def test_real_players_resolve_to_ratings(result):
     """If this fails the bot still runs and prices everything at the tour
     average, which is the failure that looks most like success."""

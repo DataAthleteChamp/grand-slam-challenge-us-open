@@ -33,6 +33,7 @@ from typing import Any
 from bot.ledger import Entry, Ledger, MatchRecord
 from bot.marketbook import MarketBook
 from bot.markets.parser import Family, parse_question, reset_unparsed, unparsed_report
+from bot.markets.taxonomy import QUESTIONS_PER_MATCH
 from bot.pricer import MatchContext, PricedQuestion, Pricer
 from bot.roster import Roster, players_from_match
 from bot.sportspredict.api import SportsPredictClient, SportsPredictError
@@ -169,6 +170,19 @@ def collect(
         except SportsPredictError as exc:
             print(f"  ! {match_id}: markets unavailable ({exc})", file=sys.stderr)
             continue
+
+        # The API omitted `round` from both finals, so normalise_round(None)
+        # silently labelled them R128 and coverage expected only five questions.
+        # Twenty questions is unique to the final in this event and is already
+        # the published invariant in QUESTIONS_PER_MATCH, so infer F from the
+        # observed count when the source provides no round at all.
+        if (
+            not (match.get("round") or match.get("round_name"))
+            and len(markets) == QUESTIONS_PER_MATCH["F"]
+        ):
+            context = replace(context, round_code="F")
+            contexts[match_id] = context
+            rounds[match_id] = context.round_code
 
         # Named market_book, not market: the loop below binds `market` to each
         # market dict, and a shadowed name here would silently feed the previous

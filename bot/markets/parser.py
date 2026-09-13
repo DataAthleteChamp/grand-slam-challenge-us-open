@@ -63,7 +63,7 @@ class MarketSpec:
         }
 
 
-_NUMBER = r"(\d+(?:\.\d+)?)"
+_NUMBER = r"(\d[\d,]*(?:\.\d+)?)"
 
 # Ordered most-specific first; the first match wins.
 #
@@ -301,14 +301,14 @@ def _extract_threshold(text: str) -> tuple[float | None, str]:
         match = pattern.search(text)
         if match:
             try:
-                return float(match.group(1)), comparator
+                return float(match.group(1).replace(",", "")), comparator
             except (TypeError, ValueError):
                 continue
     # A bare number is a weak signal, but better than nothing for O/U style lines.
     bare = re.search(rf"\b{_NUMBER}\b", text)
     if bare:
         try:
-            return float(bare.group(1)), "gt"
+            return float(bare.group(1).replace(",", "")), "gt"
         except (TypeError, ValueError):
             return None, "gt"
     return None, "gt"
