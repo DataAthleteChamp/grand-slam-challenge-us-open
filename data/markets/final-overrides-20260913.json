@@ -1,6 +1,7 @@
 {
   "match": "Alexander Zverev vs Ben Shelton",
   "captured_at": "2026-09-13T17:55:00Z",
+  "near_lock_market_at": "2026-09-13T18:22:00Z",
   "sources": {
     "polymarket": "https://gamma-api.polymarket.com/events?slug=atp-zverev-shelton-2026-09-13",
     "kalshi_zverev": "https://api.elections.kalshi.com/trade-api/v2/markets/KXATPMATCH-26SEP13ZVESHE-ZVE",
@@ -23,6 +24,14 @@
     "p_ace_tie_bovada": 0.0542,
     "p_shelton_more_double_faults_bovada": 0.2844,
     "p_double_fault_tie_bovada": 0.1155
+  },
+  "near_lock_polymarket": {
+    "p_zverev_win": 0.575,
+    "p_shelton_win": 0.425,
+    "p_over_3_5_sets": 0.695,
+    "p_over_4_5_sets": 0.335,
+    "p_zverev_minus_1_5_sets": 0.415,
+    "p_zverev_minus_2_5_sets": 0.195
   },
   "derived_scorelines": {
     "zverev_3_0": 0.185,
@@ -68,6 +77,18 @@
       "question": "Will B. Shelton cover more than 9,000 feet?",
       "probability": 59,
       "reason": "Official feeds: 3/4 four-set hits and 1/1 five-set hit; combine with 0.370 four-set and 0.335 five-set market mass."
+    },
+    {
+      "market_id": "1010b41f-94a6-4556-bf45-8a4af73c5d46",
+      "question": "Will A. Zverev win more than 78% of points played on their first serve?",
+      "probability": 69,
+      "reason": "Official feeds: 5/5 H2H clears and 84.4% H2H aggregate; current tournament 3/6 and 78.8% aggregate."
+    },
+    {
+      "market_id": "7ca7279b-e7c3-4984-8db6-71b8fa04c38e",
+      "question": "Will B. Shelton win more than 74% of points played on their first serve?",
+      "probability": 49,
+      "reason": "Official feeds: 2/5 H2H clears and 74.1% H2H aggregate; current tournament 3/6 and 75.8% aggregate."
     }
   ]
 }

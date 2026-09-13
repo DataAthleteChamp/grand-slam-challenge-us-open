@@ -911,7 +911,7 @@ match-winner question was priced from the model alone at **19** while the sharp
 consensus said **0.4297**. Sharpened properly that is **37**.
 
 `MarketBook.fetch` now writes every successful pull to `data/markets/oddsapi/`
-and, when a call fails, falls back to the newest snapshot under 36 hours old.
+and, when a call fails, falls back to the newest snapshot under 72 hours old.
 A day-old de-vigged consensus over 33 books is not a compromise: discarding it
 measured **271.7 skill points worse** across 107 settled questions. Two tests
 cover it, one that a fresh snapshot is used and one that a stale one is ignored.
@@ -1015,6 +1015,96 @@ reconciled run differs from the raw one **and moves toward the quote**, the othe
 that a bare `{name: probability}` mapping still works. Asserting only that the
 arithmetic is right would not have caught this — the arithmetic was always right,
 it was never reached.
+
+## 2026-09-13 — final 20-question audit
+
+Twelve targeted web searches covered Polymarket, Kalshi, Betclic, STS, Fortuna,
+Betfair, Pinnacle, Bovada, Smarkets, Matchbook and major US books. Search answers
+that supplied only "typical" or estimated prices were discarded. The retained
+evidence came from direct Polymarket/Kalshi APIs, the recorded Bovada feed, the
+cached 33-book Odds API snapshot, and all twelve official US Open match feeds.
+
+### Liquid markets define the match shape
+
+Near lock, Polymarket quoted:
+
+- Zverev/Shelton match winner: 57.5%/42.5%;
+- over 3.5 sets: 69.5%;
+- over 4.5 sets: 33.5%;
+- Zverev -1.5 sets: 41.5%;
+- Zverev -2.5 sets: 19.5%.
+
+The pre-match values were within one point and had $645k, $37k and $4.4k
+volume in the first three markets. Kalshi independently quoted Shelton at
+42/43 cents with $1.9m volume. These prices imply an internally coherent
+scoreline distribution near Zverev 3-0 19.5%, 3-1 22.0%, 3-2 16.0%, and
+Shelton 3-0 11.0%, 3-1 14.0%, 3-2 17.5% near lock.
+
+The submitted overrides were intentionally set before that small final move:
+both players win a set 71, deciding set 34, Shelton 3-2 16, and Shelton wins 36.
+
+### Official form, not summaries
+
+Across the six official match feeds per finalist:
+
+| statistic | Zverev | Shelton |
+|---|---:|---:|
+| first-serve points won | 78.8% | 75.8% |
+| aces | 87 | 71 |
+| double faults | 36 | 22 |
+| winners | 268 | 244 |
+| unforced errors | 205 | 203 |
+| return points won | 38.6% | 37.3% |
+| distance | 48,135 ft | 53,863 ft |
+
+Zverev also leads the H2H 5-0, 10-1 in sets and 4-0 in tiebreaks. More
+importantly for the player threshold, he cleared 78% first-serve points in all
+five H2Hs (84.4% aggregate). Shelton cleared his 74% line in only 2/5 H2Hs
+(74.1% aggregate). The two first-serve submissions were therefore overridden
+from 56/54 to **Zverev 69, Shelton 49**. This uses matchup-specific evidence
+without changing the global low-AUC family calibration.
+
+Distance was also no longer unmodellable once the official feeds were located:
+Zverev cleared 10,300 ft only in both five-setters; Shelton cleared 9,000 ft in
+three of four four-setters and his five-setter. Combined with the liquid
+set-count distribution, the submitted values are **36 and 59**.
+
+### Bug: final-set tiebreak was really any-tiebreak
+
+Both wordings parse as `TIEBREAK`, and `_read_simulation` previously sent
+`p_any_tiebreak` for either whenever no numeric threshold was present. It sent
+73 to "Will the final set played include a tiebreak?" The simulator now retains
+the tiebreak state of the match-ending set and the corrected honest price is
+**34**. The scenario lane keeps its lower **21** hedge.
+
+### Bug: total points ignored market reconciliation
+
+The total-points route called `_simulate(context)` without ladders and used
+unshifted service-point shares, even after the structural route was repaired to
+reconcile with the winner market. It now uses the same market-consistent
+simulation and matchup shift. Reweighting its per-set-count tails from the
+simulation's 35.1%/35.8%/29.2% three/four/five-set mixture to Polymarket's
+29.5%/37.0%/33.5% raises the raw probabilities by 3.5-3.8 points, confirming the
+direction. The submitted conservative outputs remain Zverev 37 and Shelton 35.
+
+### What was deliberately not overridden
+
+- **Shelton more aces:** official tournament form favors Zverev, but direct H2H
+  favors Shelton 57-39 and the late Bovada quote moved from 54.4% to 59.8%.
+  Bovada is the one source already proven superior on aces, so its sharpened
+  **62** stands.
+- **Shelton more double faults:** both official tournament form and Bovada
+  oppose it; **32** already reflects that.
+- **Winners:** tournament form leans Zverev, but complete H2H winner data do not
+  exist and provider definitions conflict; **47** stays.
+- **Unforced errors:** official form leans below both thresholds, but scorer
+  subjectivity and low repeatability make a six-match hand adjustment unsafe;
+  the conservative 54/47 stays.
+- **Two or more tiebreaks, duration and lopsided set:** weaker public proxies
+  agree on direction but not enough to beat the tested model; 41/53/48 stay.
+
+The complete source snapshot and every manual override are recorded in
+`data/markets/final-overrides-20260913.json`.
 
 ## 2026-09-13 — final audit: twelve market searches, official form, and two more dead routes
 
