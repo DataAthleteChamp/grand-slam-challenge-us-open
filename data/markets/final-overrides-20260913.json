@@ -1,0 +1,73 @@
+{
+  "match": "Alexander Zverev vs Ben Shelton",
+  "captured_at": "2026-09-13T17:55:00Z",
+  "sources": {
+    "polymarket": "https://gamma-api.polymarket.com/events?slug=atp-zverev-shelton-2026-09-13",
+    "kalshi_zverev": "https://api.elections.kalshi.com/trade-api/v2/markets/KXATPMATCH-26SEP13ZVESHE-ZVE",
+    "kalshi_shelton": "https://api.elections.kalshi.com/trade-api/v2/markets/KXATPMATCH-26SEP13ZVESHE-SHE",
+    "zverev_match_feeds": "https://www.usopen.org/en_US/scores/feeds/2026/players/matches/atpz355_matches.json",
+    "shelton_match_feeds": "https://www.usopen.org/en_US/scores/feeds/2026/players/matches/atps0s1_matches.json",
+    "bovada_snapshot": "data/markets/bovada/bovada-20260913T165605Z.json"
+  },
+  "direct_markets": {
+    "p_zverev_win_polymarket": 0.585,
+    "p_shelton_win_polymarket": 0.415,
+    "p_zverev_win_kalshi_mid": 0.585,
+    "p_shelton_win_kalshi_mid": 0.425,
+    "p_over_3_5_sets": 0.705,
+    "p_over_4_5_sets": 0.335,
+    "p_zverev_minus_1_5_sets": 0.405,
+    "p_zverev_minus_2_5_sets": 0.185,
+    "p_over_40_5_games": 0.595,
+    "p_shelton_more_aces_bovada": 0.5981,
+    "p_ace_tie_bovada": 0.0542,
+    "p_shelton_more_double_faults_bovada": 0.2844,
+    "p_double_fault_tie_bovada": 0.1155
+  },
+  "derived_scorelines": {
+    "zverev_3_0": 0.185,
+    "zverev_3_1": 0.22,
+    "zverev_3_2": 0.18,
+    "shelton_3_0": 0.11,
+    "shelton_3_1": 0.15,
+    "shelton_3_2": 0.155
+  },
+  "submitted_overrides": [
+    {
+      "market_id": "2dc8426e-6a01-4b83-838d-8fb681d0bb57",
+      "question": "Will B. Shelton win?",
+      "probability": 36,
+      "reason": "Kalshi/Polymarket/books center near 0.425; apply validated alpha 1.95."
+    },
+    {
+      "market_id": "608c4e97-571e-4dea-b819-11b1200da0ef",
+      "question": "Will both players win at least one set?",
+      "probability": 71,
+      "reason": "Identical to over 3.5 sets, directly priced at 0.705."
+    },
+    {
+      "market_id": "35c07f60-7a78-4d86-b2af-0640b700ca9d",
+      "question": "Will the match require a deciding set?",
+      "probability": 34,
+      "reason": "Identical to over 4.5 sets, directly priced at 0.335."
+    },
+    {
+      "market_id": "6a1d9eed-b687-48a1-9bd5-a5ddb640cd25",
+      "question": "Will the match end with B. Shelton winning 3:2?",
+      "probability": 16,
+      "reason": "0.335 five-set mass minus 0.180 Zverev 3-2 mass equals 0.155."
+    },
+    {
+      "market_id": "2b31e063-660b-46c7-8074-344ad9f6f949",
+      "question": "Will A. Zverev cover more than 10,300 feet?",
+      "probability": 36,
+      "reason": "Official feeds: 2/2 five-set hits, 0/4 other hits; combine with 0.335 five-set market and a small long-four-set tail."
+    },
+    {
+      "market_id": "e9c8e8de-5288-4914-9a76-4d85cb146b82",
+      "question": "Will B. Shelton cover more than 9,000 feet?",
+      "probability": 59,
+      "reason": "Official feeds: 3/4 four-set hits and 1/1 five-set hit; combine with 0.370 four-set and 0.335 five-set market mass."
+    }
+  ]
+}

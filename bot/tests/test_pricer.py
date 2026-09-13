@@ -1248,6 +1248,35 @@ def test_tiebreak_correction_lowers_a_mens_tiebreak_price():
     assert priced.model_probability is not None
 
 
+def test_final_set_tiebreak_is_not_priced_as_any_tiebreak():
+    """The last set having a tiebreak is a strict subset of the match having one.
+
+    The final-only wording used to fall through the ordinary tiebreak route,
+    which sent the men's final's P(any tiebreak) of roughly 0.8 instead of the
+    probability that the match-ending set itself reaches a breaker.
+    """
+    from bot.roster import Roster
+
+    roster, pricer = Roster.load(), Pricer(lane="honest")
+    context = roster.context("A. Zverev", "B. Shelton", tour="ATP")
+    if not (context.player_a.has_ratings and context.player_b.has_ratings):
+        pytest.skip("players missing from roster")
+    players = (context.player_a.name, context.player_b.name)
+
+    final_set = pricer.price(
+        parse_question("Will the final set played include a tiebreak?", players=players),
+        context,
+        market_id="final-tb",
+    )
+    any_set = pricer.price(
+        parse_question("Will the match feature at least 1 tiebreak?", players=players),
+        context,
+        market_id="any-tb",
+    )
+    assert final_set.probability < any_set.probability
+    assert any("match-ending set" in note for note in final_set.notes)
+
+
 def test_simulation_is_reconciled_to_the_winner_market():
     """Structural questions must be priced from a match the market recognises.
 
@@ -1495,6 +1524,38 @@ def test_distance_covered_is_recognised_but_deliberately_unmodelled():
     priced = pricer.price(spec, context, market_id="c")
     assert priced.submission == 50
     assert any("unmodellable" in note for note in priced.notes)
+
+
+def test_total_points_uses_the_market_reconciled_match_shape():
+    """Player total points depend strongly on whether the match lasts 3, 4 or 5 sets.
+
+    The route used to call _simulate(context) without ladders even after every
+    structural question had been reconciled to the match-winner market.  That
+    left the final's total-points answers on the old, one-sided match shape.
+    """
+    from bot.markets.parser import parse_question
+    from bot.roster import Roster
+
+    roster, pricer = Roster.load(), Pricer(lane="honest")
+    context = roster.context("A. Zverev", "B. Shelton", tour="ATP")
+    if not (context.player_a.has_ratings and context.player_b.has_ratings):
+        pytest.skip("players missing from roster")
+    spec = parse_question(
+        "Will A. Zverev win more than 167 total points?",
+        players=(context.player_a.name, context.player_b.name),
+    )
+
+    raw = pricer.price(spec, context, market_id="raw-points")
+    ladders = {
+        "match_winner": {
+            context.player_a.name: 0.57,
+            context.player_b.name: 0.43,
+        }
+    }
+    reconciled = pricer.price(spec, context, market_id="reconciled-points", ladders=ladders)
+
+    assert reconciled.model_probability != raw.model_probability
+    assert any("market-reconciled runs" in note for note in reconciled.notes)
 
 
 def test_a_market_quote_is_taken_whole_for_the_match_winner():

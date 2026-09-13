@@ -638,7 +638,7 @@ class Pricer:
         if spec.family in COMPARISON:
             return self._price_comparison(spec, context, base, market_id, notes, ladders)
         if spec.family in THRESHOLD:
-            return self._price_threshold(spec, context, base, market_id, notes)
+            return self._price_threshold(spec, context, base, market_id, notes, ladders)
         if spec.family is Family.DISTANCE_COVERED:
             # Recognised on purpose, and deliberately left at the base rate.
             # Distance covered is not published by any source this entry can
@@ -916,12 +916,16 @@ class Pricer:
         margin = abs(expected - threshold) / sd
         return probability, min(0.75, 0.35 + 0.25 * margin)
 
-    def _price_threshold(self, spec, context, base, market_id, notes) -> PricedQuestion:
+    def _price_threshold(
+        self, spec, context, base, market_id, notes, ladders=None
+    ) -> PricedQuestion:
         if spec.family is Family.TOTAL_POINTS:
-            return self._price_total_points(spec, context, base, market_id, notes)
+            return self._price_total_points(spec, context, base, market_id, notes, ladders)
         return self._price_unforced(spec, context, base, market_id, notes)
 
-    def _price_total_points(self, spec, context, base, market_id, notes) -> PricedQuestion:
+    def _price_total_points(
+        self, spec, context, base, market_id, notes, ladders=None
+    ) -> PricedQuestion:
         """'Will X win more than N total points?', a final-only question.
 
         Unlike the count families this needs no new data at all.  The two
@@ -950,8 +954,14 @@ class Pricer:
                 spec, base, base, None, None, 0.0, market_id, notes, context, 0.3
             )
 
-        simulation = self._simulate(context)
-        pa, pb = self._matchup(context)
+        simulation = self._simulate(context, ladders)
+        target = None
+        if ladders:
+            winner_market = ladders.get("match_winner")
+            if isinstance(winner_market, dict):
+                target = winner_market.get(context.player_a.name)
+        shift = self._skill_shift_for(context, float(target)) if target is not None else 0.0
+        pa, pb = self._matchup(context, shift)
         # Orient: the share belongs to whoever the question names.
         serve_subject, serve_opponent = (pa, pb) if subject is context.player_a else (pb, pa)
         # Each player serves about half the points, winning serve_subject of
@@ -970,7 +980,8 @@ class Pricer:
         notes.append(
             f"total points: share {share:.3f} of {points.mean():.0f} expected points "
             f"= {expected.mean():.1f} vs threshold {threshold:g} "
-            f"(simulated over {len(games)} runs, games sd {games.std():.1f})"
+            f"(simulated over {len(games)} market-reconciled runs, "
+            f"games sd {games.std():.1f})"
         )
         return self._finalise(
             spec, model, base, model, None, 0.0, market_id, notes, context, 0.6
@@ -1133,6 +1144,18 @@ class Pricer:
     def _read_simulation(self, spec, simulation, base, notes, context) -> float:
         """Read one question off a simulated match."""
         if spec.family is Family.TIEBREAK:
+            # "Will the final set played include a tiebreak?" is not the same
+            # event as "will the match include a tiebreak".  The old route
+            # treated both as p_any_tiebreak, sending 73 to the men's final
+            # instead of the probability that the match-ending set itself goes
+            # to a breaker.
+            if "final set" in spec.raw.lower():
+                raw = simulation.p_final_set_tiebreak
+                notes.append("read from the tiebreak state of the match-ending set")
+                scale = tiebreak_sim_scale(context.tour)
+                if scale != 1.0:
+                    notes.append(f"tiebreak iid correction x{scale:.2f} ({context.tour})")
+                return min(max(raw * scale, 0.002), 0.998)
             # The question carries a count: 'at least 1' and 'at least 2' are
             # different questions and a third of them asked for two.
             wanted = int(spec.threshold) if spec.threshold else 1

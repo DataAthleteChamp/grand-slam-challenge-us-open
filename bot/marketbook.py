@@ -40,9 +40,12 @@ SNAPSHOT_DIR = Path(__file__).resolve().parent.parent / "data" / "markets" / "od
 #: How stale a cached snapshot may be before it is discarded.  Tennis
 #: match-winner lines move slowly outside of injury news, and the alternative is
 #: not a fresher quote but *no quote at all*, which measured 271.7 skill points
-#: worse across 107 settled questions.  A day-old consensus over dozens of books
-#: still beats our own model comfortably.
-MAX_SNAPSHOT_AGE_SECONDS = 36 * 3600
+#: worse across 107 settled questions.  The final's quota expired 37 hours after
+#: its last pull, while the directly checked Kalshi/Polymarket price was still
+#: within 1.5 points of that snapshot.  Seventy-two hours safely spans a Grand
+#: Slam final weekend; surname matching prevents an old opponent's line from
+#: attaching to the current match.
+MAX_SNAPSHOT_AGE_SECONDS = 72 * 3600
 
 
 def surname_key(name: str) -> str:

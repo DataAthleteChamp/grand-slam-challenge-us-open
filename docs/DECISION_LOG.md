@@ -1015,3 +1015,94 @@ reconciled run differs from the raw one **and moves toward the quote**, the othe
 that a bare `{name: probability}` mapping still works. Asserting only that the
 arithmetic is right would not have caught this — the arithmetic was always right,
 it was never reached.
+
+## 2026-09-13 — final audit: twelve market searches, official form, and two more dead routes
+
+The recurring coverage and Bovada schedules were stopped before this pass so an
+automatic rerun could not overwrite evidence-backed final overrides.
+
+### Source quality
+
+Twelve targeted searches covered Polymarket, Kalshi, Betclic, STS, Fortuna,
+Betfair, Pinnacle, Bovada, Smarkets, Matchbook and US books. Most public-search
+answers for regional books contained unsupported "typical" prices and were
+discarded. Only direct APIs, saved snapshots and official US Open feeds were
+used:
+
+- Polymarket: $645k match-winner volume, $37k over-3.5-sets volume, $4.4k
+  over-4.5-sets volume.
+- Kalshi: 42/43 cents for Shelton with $1.9m volume and a visible order book.
+- Bovada: explicit three-way ace and double-fault prices from the saved feed.
+- Official US Open complete-match JSON for all twelve matches played by the
+  finalists.
+
+The direct markets form a coherent scoreline distribution:
+
+| scoreline | probability |
+|---|---:|
+| Zverev 3-0 | 18.5% |
+| Zverev 3-1 | 22.0% |
+| Zverev 3-2 | 18.0% |
+| Shelton 3-0 | 11.0% |
+| Shelton 3-1 | 15.0% |
+| Shelton 3-2 | 15.5% |
+
+It follows directly that both players win a set is 70.5%, the deciding fifth set
+is 33.5%, and Shelton 3-2 is 15.5%. Those went out at **71, 34 and 16** rather
+than model estimates of 66, 29 and 13.
+
+### Official tournament form
+
+Across six matches each, Zverev led Shelton 87-71 in aces, 268-244 in winners,
+36-22 in double faults and 78.8%-75.8% in first-serve points won. Shelton covered
+more ground (53,862.6 vs 48,135.1 ft), but carried the heavier recent load:
+7:45 and 22,726 ft in the QF/SF against Zverev's 5:15 and 13,436 ft, with about
+4h44m less recovery. No acute injury was affirmatively reported; medical-timeout
+status is unavailable, not zero.
+
+The distance thresholds were no longer unmodellable once the official feeds
+were found:
+
+- Zverev exceeded 10,300 ft in both five-setters and none of four shorter
+  matches. Combined with 33.5% five-set probability and a small long-four-set
+  tail: **36%**.
+- Shelton exceeded 9,000 ft in three of four four-setters and his five-setter.
+  Combined with 37.0% four-set and 33.5% five-set mass: **59%**.
+
+### Bug: "final set tiebreak" was priced as "any tiebreak"
+
+The parser correctly classified both as `TIEBREAK`, but `_read_simulation`
+ignored the wording and used `p_any_tiebreak` whenever no count was present.
+That sent 73 to "will the final set played include a tiebreak?" The simulator now
+records whether the **match-ending set** went to a breaker and that question is
+34. A regression test asserts it is a strict subset of any-tiebreak.
+
+### Bug: total points ignored the reconciled match shape
+
+`_price_total_points` called `_simulate(context)` without ladders even after the
+structural block was fixed to use the market-consistent simulation. It also used
+the unshifted service-point shares. Both are now reconciled. The direct set-count
+market says 29.5%/37.0%/33.5% for three/four/five sets against the simulation's
+35.1%/35.8%/29.2%; reweighting the per-run total-points tails adds about 3.5-3.8
+points before the confidence pull, confirming the direction of the fix.
+
+### Final submitted state
+
+| question | probability | basis |
+|---|---:|---|
+| Shelton wins | 36 | Kalshi/Polymarket/books plus validated logit sharpening |
+| Both win a set | 71 | direct over-3.5-sets identity |
+| Deciding set | 34 | direct over-4.5-sets identity |
+| Shelton wins 3-2 | 16 | exact derivation from liquid score/handicap markets |
+| Shelton more aces | 62 | Bovada 59.8%, sharpened; ace market is validated |
+| Shelton more double faults | 32 | Bovada 28.4% plus model; kept conservative |
+| Match-ending set tiebreak | 34 | corrected simulation route |
+| Two or more tiebreaks | 41 | market-reconciled simulator; no direct liquid line |
+| Zverev >10,300 ft | 36 | official match distances plus set-count market |
+| Shelton >9,000 ft | 59 | official match distances plus set-count market |
+
+All other questions remained model-based because no direct market or sufficiently
+stable player-form correction justified an override. In particular, unforced
+errors stayed near even by design: official tournament form points lower for
+Shelton, but the scorer subjectivity and low repeatability make a six-match
+hand-lean less trustworthy than the deliberately conservative model.

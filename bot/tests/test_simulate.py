@@ -84,11 +84,13 @@ def test_every_question_comes_from_the_same_runs():
     result = simulate_match(0.66, 0.62, 5, config=FAST)
     assert result.p_straight_sets + result.p_deciding_set <= 1.0 + 1e-9
     assert result.p_first_set_tiebreak <= result.p_any_tiebreak + 1e-9
+    assert result.p_final_set_tiebreak <= result.p_any_tiebreak + 1e-9
 
 
 def test_total_games_distribution_is_returned_for_derived_questions():
     result = simulate_match(0.645, 0.645, 5, config=FAST)
     assert len(result.total_games) == FAST.n_sims
+    assert len(result.sets_played) == FAST.n_sims
     high = result.probability_total_games_over(60)
     low = result.probability_total_games_over(20)
     assert 0.0 <= high < low <= 1.0

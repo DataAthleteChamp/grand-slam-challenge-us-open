@@ -140,6 +140,7 @@ class SimulatedMatch:
     p_any_lopsided_set: float
     p_first_set_10plus_games: float
     p_first_set_tiebreak: float
+    p_final_set_tiebreak: float
     p_straight_sets: float
     #: Some player wins two consecutive sets.  In a best-of-three this is every
     #: straight-sets win plus the three-set wins where the winner lost the
@@ -153,6 +154,7 @@ class SimulatedMatch:
     sd_total_games: float
     mean_sets: float
     total_games: np.ndarray
+    sets_played: np.ndarray
     tiebreaks: np.ndarray
 
     def as_dict(self) -> dict[str, float]:
@@ -163,6 +165,7 @@ class SimulatedMatch:
             "p_any_lopsided_set": round(self.p_any_lopsided_set, 4),
             "p_first_set_10plus_games": round(self.p_first_set_10plus_games, 4),
             "p_first_set_tiebreak": round(self.p_first_set_tiebreak, 4),
+            "p_final_set_tiebreak": round(self.p_final_set_tiebreak, 4),
             "p_straight_sets": round(self.p_straight_sets, 4),
             "p_two_sets_in_a_row": round(self.p_two_sets_in_a_row, 4),
             "mean_total_games": round(self.mean_total_games, 2),
@@ -256,6 +259,7 @@ def simulate_match(
     lopsided = np.zeros(cfg.n_sims, dtype=bool)
     first_long = np.zeros(cfg.n_sims, dtype=bool)
     first_tb = np.zeros(cfg.n_sims, dtype=bool)
+    final_tb = np.zeros(cfg.n_sims, dtype=bool)
     straight = np.zeros(cfg.n_sims, dtype=bool)
     two_in_row = np.zeros(cfg.n_sims, dtype=bool)
     final_sets_a = np.zeros(cfg.n_sims, dtype=int)
@@ -284,6 +288,9 @@ def simulate_match(
             if set_index == 0:
                 first_long[i] = (ga + gb) >= 10
                 first_tb[i] = went_tb
+            # Overwritten on every set, leaving the tiebreak state of the set
+            # that actually ended the match.
+            final_tb[i] = went_tb
             if went_tb:
                 tiebreaks[i] += 1
             if min(ga, gb) in LOPSIDED_LOSER_GAMES and max(ga, gb) == 6:
@@ -322,6 +329,7 @@ def simulate_match(
         p_any_lopsided_set=float(lopsided.mean()),
         p_first_set_10plus_games=float(first_long.mean()),
         p_first_set_tiebreak=float(first_tb.mean()),
+        p_final_set_tiebreak=float(final_tb.mean()),
         p_straight_sets=float(straight.mean()),
         p_two_sets_in_a_row=float(two_in_row.mean()),
         p_scoreline=scorelines,
@@ -329,6 +337,7 @@ def simulate_match(
         sd_total_games=float(games.std()),
         mean_sets=float(sets_played.mean()),
         total_games=games,
+        sets_played=sets_played,
     )
 
 

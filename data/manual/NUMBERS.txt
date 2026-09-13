@@ -8,21 +8,21 @@ would compound. See SHARPEN_BY_TOKEN for the per-family measurements.
 --- A. Zverev vs B. Shelton   (starts 2026-09-13 17:30Z)
      bot  56  ->  MANUAL  56   Will A. Zverev win more than 78% of points played on their first serve?
      bot  37  ->  MANUAL  37   Will A. Zverev win more than 167 total points?
-     bot  30  ->  MANUAL  30   Will B. Shelton win more than 162 total points?
+     bot  35  ->  MANUAL  35   Will B. Shelton win more than 162 total points?
      bot  48  ->  MANUAL  48   Will either player win a set 6–2, 6–1 or 6–0?
-     bot  13  ->  MANUAL  13   Will the match end with B. Shelton winning 3:2?
+     bot  16  ->  MANUAL  16   Will the match end with B. Shelton winning 3:2?
      bot  47  ->  MANUAL  47   Will B. Shelton hit more winners than A. Zverev?
-     bot  37  ->  MANUAL  37   Will B. Shelton win?
-     bot  66  ->  MANUAL  66   Will both players win at least one set?
+     bot  36  ->  MANUAL  36   Will B. Shelton win?
+     bot  71  ->  MANUAL  71   Will both players win at least one set?
      bot  95  ->  MANUAL  95   Will any player win 2 sets in a row?
      bot  54  ->  MANUAL  54   Will B. Shelton win more than 74% of points played on their first serve?
-     bot  54  ->  MANUAL  55   Will B. Shelton record more aces than A. Zverev?
+     bot  62  ->  MANUAL  64   Will B. Shelton record more aces than A. Zverev?
      bot  32  ->  MANUAL  32   Will B. Shelton record more double faults than A. Zverev?
-     bot  73  ->  MANUAL  73   Will the final set played include a tiebreak?
+     bot  34  ->  MANUAL  34   Will the final set played include a tiebreak?
      bot  41  ->  MANUAL  41   Will the match feature at least 2 tiebreaks?
      bot  53  ->  MANUAL  53   Will the match last longer than 185 minutes?
-     bot  50  ->  MANUAL  50   Will A. Zverev cover more than 10,300 feet?
-     bot  29  ->  MANUAL  29   Will the match require a deciding set?
-     bot  50  ->  MANUAL  50   Will B. Shelton cover more than 9,000 feet?
+     bot  36  ->  MANUAL  36   Will A. Zverev cover more than 10,300 feet?
+     bot  34  ->  MANUAL  34   Will the match require a deciding set?
+     bot  59  ->  MANUAL  59   Will B. Shelton cover more than 9,000 feet?
      bot  54  ->  MANUAL  54   Will A. Zverev commit more than 35 unforced errors?
      bot  47  ->  MANUAL  47   Will B. Shelton commit more than 45 unforced errors?
