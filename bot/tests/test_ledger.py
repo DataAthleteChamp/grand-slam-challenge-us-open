@@ -16,12 +16,12 @@ from bot.evaluate import (
 from bot.ledger import Entry, Ledger, MatchRecord, family_report, render_report
 
 
-def _entry(market_id="m1", family="tiebreak", submission=40, probability=0.40, **kw):
+def _entry(market_id="m1", family="tiebreak", submission=None, probability=0.40, **kw):
     return Entry(
         market_id=market_id,
         question="Will the match feature at least 1 tiebreak(s)?",
         family=family,
-        submission=submission,
+        submission=round(probability * 100) if submission is None else submission,
         probability=probability,
         base_rate=0.49,
         **kw,
@@ -68,10 +68,21 @@ def test_rbp_needs_the_crowd_not_just_the_outcome():
     assert entry.rbp is None
 
 
+def test_brier_scores_the_submitted_integer_not_latent_probability():
+    entry = _entry(submission=70, probability=0.7349, outcome=1, crowd=0.5)
+    assert entry.brier == pytest.approx(0.09)
+
+
 def test_round_multiplier_scales_the_score():
     record = MatchRecord(match_id="x", multiplier=3)
     record.entries = [_entry(probability=0.9, outcome=1, crowd=0.5)]
     assert record.total_rbp == pytest.approx(72.0)
+
+
+def test_api_rbp_is_not_multiplied_again():
+    record = MatchRecord(match_id="x", multiplier=3)
+    record.entries = [_entry(outcome=1, crowd=0.5, api_rbp=24.5)]
+    assert record.total_rbp == pytest.approx(24.5)
 
 
 # ----------------------------------------------------------------- round trip
@@ -118,9 +129,7 @@ def test_saving_is_atomic(ledger, tmp_path):
 # ------------------------------------------------------------- re-pricing
 
 
-def test_repricing_before_close_does_not_wipe_settlement(ledger):
-    """Re-pricing a match before it closes is normal and must not destroy
-    outcomes already recorded."""
+def test_settled_prediction_cannot_be_rewritten(ledger):
     record = MatchRecord(match_id="abc")
     record = ledger.record_predictions(record, [_entry(probability=0.4)])
     ledger.save(record)
@@ -131,9 +140,26 @@ def test_repricing_before_close_does_not_wipe_settlement(ledger):
     ledger.save(record)
 
     updated = ledger.load("abc").entries[0]
-    assert updated.probability == pytest.approx(0.7)
+    assert updated.probability == pytest.approx(0.4)
     assert updated.outcome == 1
     assert updated.crowd == pytest.approx(0.5)
+
+
+def test_lanes_with_the_same_market_id_are_preserved(ledger):
+    record = MatchRecord(match_id="abc")
+    record = ledger.record_predictions(
+        record,
+        [
+            _entry(probability=0.4, lane="honest"),
+            _entry(probability=0.6, lane="scenario"),
+        ],
+    )
+    ledger.save(record)
+    entries = ledger.load("abc").entries
+    assert {(entry.lane, entry.market_id) for entry in entries} == {
+        ("honest", "m1"),
+        ("scenario", "m1"),
+    }
 
 
 def test_recording_stamps_the_prediction_time(ledger):
@@ -147,6 +173,34 @@ def test_settle_reports_how_many_it_touched(ledger):
     ledger.save(record)
     assert ledger.settle("abc", {"m1": 1, "m2": 0}, {"m1": 0.5, "m2": 0.5}) == 2
     assert ledger.settle("missing", {"m1": 1}, {}) == 0
+
+
+def test_settlement_records_official_scores_for_only_the_requested_lane(ledger):
+    record = MatchRecord(match_id="abc", multiplier=3)
+    record.entries = [
+        _entry(lane="honest"),
+        _entry(lane="scenario"),
+    ]
+    ledger.save(record)
+
+    assert (
+        ledger.settle(
+            "abc",
+            {"m1": 1},
+            {"m1": 0.5},
+            lane="honest",
+            api_brier={"m1": 0.36},
+            api_rbp={"m1": 12.34},
+        )
+        == 1
+    )
+    loaded = ledger.load("abc")
+    honest = next(entry for entry in loaded.entries if entry.lane == "honest")
+    scenario = next(entry for entry in loaded.entries if entry.lane == "scenario")
+    assert honest.brier == pytest.approx(0.36)
+    assert honest.rbp == pytest.approx(12.34)
+    assert honest.weighted_rbp(3) == pytest.approx(12.34)
+    assert scenario.is_settled is False
 
 
 # -------------------------------------------------------------- family report

@@ -1,0 +1,50 @@
+{
+  "captured_at": "2026-09-16T07:51:30.853889+00:00",
+  "entries": [
+    {
+      "category": "bots",
+      "category_rank": 12,
+      "category_total": 117,
+      "label": "Quant_Researcher",
+      "overall_rank": 20,
+      "overall_total": 271,
+      "role": "honest",
+      "score": 2768.4793881836713,
+      "settled_predictions": 1267,
+      "smart_rating": 93
+    },
+    {
+      "category": "bots",
+      "category_rank": 29,
+      "category_total": 117,
+      "label": "T-shirt Hunter",
+      "overall_rank": 39,
+      "overall_total": 271,
+      "role": "scenario",
+      "score": 1655.959388183672,
+      "settled_predictions": 1267,
+      "smart_rating": 85.9
+    },
+    {
+      "category": "players",
+      "category_rank": 12,
+      "category_total": 154,
+      "label": "manual",
+      "overall_rank": 43,
+      "overall_total": 271,
+      "role": "manual",
+      "score": 1392.6746089772685,
+      "settled_predictions": 660,
+      "smart_rating": 84.4
+    }
+  ],
+  "event_id": "0cf0efd1-7e12-4ca9-8068-89eb48466a37",
+  "lobby_id": "b1419bb4-6dff-4172-9a42-a206b0a24ad9",
+  "schema_version": 1,
+  "source": "https://api.sportspredict.com/api/probability/leaderboard",
+  "winner": {
+    "label": "ServeSim",
+    "rank": 1,
+    "score": 5062.83938818367
+  }
+}

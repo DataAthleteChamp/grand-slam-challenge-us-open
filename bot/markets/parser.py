@@ -22,7 +22,7 @@ import re
 from dataclasses import dataclass, field
 from typing import Any
 
-from bot.data.names import strip_accents
+from bot.data.names import normalise, strip_accents
 
 from .taxonomy import COMPARISON_STAT, Family
 
@@ -208,8 +208,17 @@ _UNPARSED: list[str] = []
 #: entry point protects every pattern rather than the one that happened to break,
 #: which matters because later rounds score at 2x and 3x and the platform is
 #: evidently willing to introduce new question types mid-event.
-_DASHES = str.maketrans({"\u2010": "-", "\u2011": "-", "\u2012": "-", "\u2013": "-",
-                         "\u2014": "-", "\u2015": "-", "\u2212": "-"})
+_DASHES = str.maketrans(
+    {
+        "\u2010": "-",
+        "\u2011": "-",
+        "\u2012": "-",
+        "\u2013": "-",
+        "\u2014": "-",
+        "\u2015": "-",
+        "\u2212": "-",
+    }
+)
 
 
 def normalise_dashes(text: str) -> str:
@@ -343,14 +352,25 @@ def _extract_players(text: str, players: tuple[str, str] | None) -> tuple[str | 
         return None, None
 
     folded = strip_accents(text).lower()
+    aliases = {
+        name: {
+            token
+            for index, token in enumerate(normalise(name).split())
+            if token and (len(token) >= 3 or index == len(normalise(name).split()) - 1)
+        }
+        for name in players
+        if name
+    }
+    shared = set.intersection(*aliases.values()) if len(aliases) == 2 else set()
     positions: dict[str, int] = {}
     for name in players:
-        surname = strip_accents(name.split()[-1]).lower() if name else ""
-        if not surname:
-            continue
-        found = re.search(rf"\b{re.escape(surname)}\b", folded)
+        found = [
+            match.start()
+            for alias in aliases.get(name, set()) - shared
+            if (match := re.search(rf"\b{re.escape(alias)}\b", folded))
+        ]
         if found:
-            positions[name] = found.start()
+            positions[name] = min(found)
 
     if not positions:
         return None, None

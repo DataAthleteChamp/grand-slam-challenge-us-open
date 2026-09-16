@@ -18,7 +18,6 @@ worth making exactly when it raises the skill term.
 from __future__ import annotations
 
 import argparse
-import json
 import sys
 from pathlib import Path
 
@@ -27,7 +26,7 @@ import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-RESULTS = Path(__file__).resolve().parent.parent / "data" / "results" / "settled-latest.json"
+RESULTS = Path(__file__).resolve().parent.parent / "data" / "history" / "final" / "settled.csv"
 
 #: Grid of shrink factors.  1.0 is the live model, 0.0 collapses onto the
 #: leave-one-out base rate, values above 1.0 extremise.
@@ -57,15 +56,15 @@ def classify(question: str) -> str:
     return "other"
 
 
-def load() -> pd.DataFrame:
-    rows = json.loads(RESULTS.read_text())
-    d = pd.DataFrame(rows)
-    d["p"] = d.probability_submitted / 100.0
-    d["c"] = d.crowd_value / 100.0
-    d["y"] = d.result_value / 100.0
-    d["skill"] = ((d.c - d.y) ** 2 - (d.p - d.y) ** 2) * 100
-    d["family"] = d.question.map(classify)
-    d["day"] = pd.to_datetime(d.created_date).dt.strftime("%m-%d")
+def load(path: Path = RESULTS, *, lane: str = "honest") -> pd.DataFrame:
+    d = pd.read_csv(path)
+    d = d[d["lane"].eq(lane)].copy()
+    d["p"] = d.submitted / 100.0
+    d["c"] = d.crowd
+    d["y"] = d.outcome
+    d["skill"] = d.multiplier * ((d.c - d.y) ** 2 - (d.p - d.y) ** 2) * 100
+    d["rbp"] = d.api_rbp
+    d["day"] = pd.to_datetime(d.prediction_created_at).dt.strftime("%m-%d")
     return d
 
 
@@ -87,8 +86,14 @@ def loo_base(y: np.ndarray) -> np.ndarray:
     return (total - y) / (n - 1)
 
 
-def skill_of(p: np.ndarray, c: np.ndarray, y: np.ndarray) -> np.ndarray:
-    return ((c - y) ** 2 - (p - y) ** 2) * 100
+def skill_of(
+    p: np.ndarray,
+    c: np.ndarray,
+    y: np.ndarray,
+    multiplier: np.ndarray | None = None,
+) -> np.ndarray:
+    weight = 1.0 if multiplier is None else multiplier
+    return weight * ((c - y) ** 2 - (p - y) ** 2) * 100
 
 
 def bootstrap_ci(delta: np.ndarray, draws: int = 5000, seed: int = 0) -> tuple[float, float]:
@@ -103,11 +108,12 @@ def shrink_grid(d: pd.DataFrame) -> pd.DataFrame:
     out = []
     for fam, x in d.groupby("family"):
         p, c, y = x.p.to_numpy(), x.c.to_numpy(), x.y.to_numpy()
+        multiplier = x.multiplier.to_numpy()
         base = loo_base(y)
-        current = skill_of(p, c, y)
+        current = skill_of(p, c, y, multiplier)
         for lam in LAMBDAS:
             cand = np.clip(base + lam * (p - base), 0.01, 0.99)
-            got = skill_of(cand, c, y)
+            got = skill_of(cand, c, y, multiplier)
             delta = got - current
             lo, hi = bootstrap_ci(delta)
             out.append(
@@ -128,7 +134,7 @@ def shrink_grid(d: pd.DataFrame) -> pd.DataFrame:
 def timesplit(d: pd.DataFrame, frac: float = 0.6) -> pd.DataFrame:
     """Pick lambda on the earlier questions, score it on the later ones."""
     out = []
-    for fam, x in d.sort_values("created_date").groupby("family"):
+    for fam, x in d.sort_values("prediction_created_at").groupby("family"):
         cut = int(len(x) * frac)
         if cut < 5 or len(x) - cut < 5:
             continue
@@ -137,12 +143,27 @@ def timesplit(d: pd.DataFrame, frac: float = 0.6) -> pd.DataFrame:
         best, best_lam = -1e18, 1.0
         for lam in LAMBDAS:
             cand = np.clip(base_tr + lam * (tr.p - base_tr), 0.01, 0.99)
-            s = skill_of(cand.to_numpy(), tr.c.to_numpy(), tr.y.to_numpy()).sum()
+            s = skill_of(
+                cand.to_numpy(),
+                tr.c.to_numpy(),
+                tr.y.to_numpy(),
+                tr.multiplier.to_numpy(),
+            ).sum()
             if s > best:
                 best, best_lam = s, lam
         cand = np.clip(base_tr + best_lam * (te.p - base_tr), 0.01, 0.99)
-        got = skill_of(cand.to_numpy(), te.c.to_numpy(), te.y.to_numpy()).sum()
-        cur = skill_of(te.p.to_numpy(), te.c.to_numpy(), te.y.to_numpy()).sum()
+        got = skill_of(
+            cand.to_numpy(),
+            te.c.to_numpy(),
+            te.y.to_numpy(),
+            te.multiplier.to_numpy(),
+        ).sum()
+        cur = skill_of(
+            te.p.to_numpy(),
+            te.c.to_numpy(),
+            te.y.to_numpy(),
+            te.multiplier.to_numpy(),
+        ).sum()
         out.append(
             {
                 "family": fam,
@@ -160,12 +181,14 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--grid", action="store_true", help="shrink grid with bootstrap CIs")
     parser.add_argument("--split", action="store_true", help="honest time-split check")
+    parser.add_argument("--lane", choices=("honest", "scenario"), default="honest")
+    parser.add_argument("--input", type=Path, default=RESULTS)
     args = parser.parse_args(argv)
 
-    d = load()
+    d = load(args.input, lane=args.lane)
     pd.set_option("display.width", 250)
 
-    print(f"settled {len(d)} questions   total RBP {d.rbp.sum():+.1f}")
+    print(f"{args.lane}: settled {len(d)} questions   total API RBP {d.rbp.sum():+.1f}")
     print(f"skill {d.skill.sum():+.1f} ({d.skill.mean():+.3f}/q)   ", end="")
     print(f"free {(d.rbp - d.skill).sum():+.1f}")
     print()

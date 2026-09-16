@@ -22,6 +22,7 @@ from __future__ import annotations
 import json
 import time
 from dataclasses import dataclass, field
+from datetime import UTC, datetime
 from pathlib import Path
 
 from bot.data.names import strip_accents
@@ -102,29 +103,36 @@ class MarketBook:
             stamp = time.strftime("%Y%m%dT%H%M%SZ", time.gmtime())
             path = SNAPSHOT_DIR / f"{sport}-{stamp}.json"
             path.write_text(json.dumps(events), encoding="utf-8")
-        except OSError:
-            pass
+        except OSError as exc:
+            self.skipped.append(f"could not save {sport} snapshot: {exc}")
 
-    def absorb_snapshots(self) -> None:
-        """Fill any gaps from the newest cached snapshot on disk."""
+    def absorb_snapshots(self, *, now: datetime | None = None) -> None:
+        """Fill missing quotes from recent snapshots without replacing live data."""
         if not SNAPSHOT_DIR.exists():
             return
-        now = time.time()
-        files = sorted(SNAPSHOT_DIR.glob("*.json"), key=lambda p: p.stat().st_mtime)
-        for path in files:
-            age = now - path.stat().st_mtime
-            if age > MAX_SNAPSHOT_AGE_SECONDS:
+        now = now or datetime.now(UTC)
+        snapshots = [
+            (captured, path)
+            for path in SNAPSHOT_DIR.glob("*.json")
+            if (captured := _snapshot_time(path)) is not None
+        ]
+        for captured, path in sorted(snapshots, reverse=True):
+            age = (now - captured).total_seconds()
+            if age < 0 or age > MAX_SNAPSHOT_AGE_SECONDS:
                 continue
             try:
                 events = json.loads(path.read_text(encoding="utf-8"))
             except (OSError, ValueError):
                 continue
             if isinstance(events, list):
-                # Newest last, so later files overwrite earlier ones.
-                self.absorb(events)
-                self.skipped.append(f"used cached quotes from {path.name} ({age / 3600:.1f}h old)")
+                before = len(self.quotes)
+                self.absorb(events, overwrite=False)
+                if len(self.quotes) > before:
+                    self.skipped.append(
+                        f"used cached quotes from {path.name} ({age / 3600:.1f}h old)"
+                    )
 
-    def absorb(self, events: list[dict]) -> None:
+    def absorb(self, events: list[dict], *, overwrite: bool = True) -> None:
         for event in events:
             agreed = match_winner(event)
             if len(agreed) != 2:
@@ -134,6 +142,8 @@ class MarketBook:
                 other = next(n for n in names if n != name)
                 consensus = agreed[name]
                 key = (surname_key(name), surname_key(other))
+                if not overwrite and key in self.quotes:
+                    continue
                 self.quotes[key] = consensus.probability
                 self.books[key] = consensus.n_books
                 self.spreads[key] = consensus.spread
@@ -176,3 +186,11 @@ class MarketBook:
 
     def __len__(self) -> int:
         return len(self.quotes)
+
+
+def _snapshot_time(path: Path) -> datetime | None:
+    stamp = path.stem.rsplit("-", 1)[-1]
+    try:
+        return datetime.strptime(stamp, "%Y%m%dT%H%M%SZ").replace(tzinfo=UTC)
+    except ValueError:
+        return None

@@ -1232,3 +1232,66 @@ stable player-form correction justified an override. In particular, unforced
 errors stayed near even by design: official tournament form points lower for
 Shelton, but the scorer subjectivity and low repeatability make a six-match
 hand-lean less trustworthy than the deliberately conservative model.
+
+## 2026-09-16 - Final archival closure
+
+The tournament ended with Quant_Researcher at **2,768.479 RBP, rank 20/271**
+(12/117 bots), T-shirt Hunter at **1,655.959, rank 39/271**, and the manual entry
+at **1,392.675, rank 43/271**. The final API exposes 1,267 settled questions over
+189 matches for each bot, rather than the advertised 1,280/190.
+
+### Canonical history
+
+The old tidy archive stopped at 1,075 rows per lane and was not repaired in
+place. `scripts/archive_final.py` now freezes both final API responses and
+builds `data/history/final/settled.csv` with 2,534 unique `(lane, market_id)`
+rows. It also:
+
+- infers every stage multiplier from exact cross-lane Brier/RBP differences;
+- reconstructs R128/R32/R16/QF/SF/F independently of the bad ledger labels;
+- preserves API RBP without multiplying it again;
+- separates consensus skill from the field-variance contribution;
+- records 28 deleted/replaced/void markets separately;
+- labels 2,489 exact run matches, 16 documented overrides and 29 unmatched
+  submissions;
+- preserves 40 known manual values but does not invent the missing 620;
+- writes SHA-256 checksums and supports a fully offline rebuild.
+
+### Post-event correctness fixes
+
+These change the archived code, not the historical server submissions:
+
+- ledger identity is lane plus market ID, and settled rows cannot be rewritten;
+- Brier uses the submitted integer rather than the latent pre-rounding value;
+- Linda Noskova can no longer collide with Ann Li through substring matching;
+- strict "fewer" comparisons price the reverse strict inequality and exclude
+  ties;
+- missing rounds stay unknown and block exact coverage validation;
+- count odds are keyed by both opponents and cached odds cannot overwrite live
+  quotes;
+- winner/unforced rates use total-point exposure and charted-match sample sizes;
+- the validated draw-level ace/double-fault blend is loaded by runtime;
+- final override manifests can be applied before validation and archiving;
+- dry runs no longer write the production ledger unless explicitly requested.
+
+### Points-per-game correction
+
+The fixed 6.6 points/game conversion was replaced by a chronological fit from
+official US Open point files. Fit years were 2019 and 2021-2023; 2024 was held
+out:
+
+| Tour | Fit n | Estimate | Bootstrap 95% CI | 2024 holdout |
+|---|---:|---:|---:|---:|
+| ATP | 505 | 6.329950 | [6.294335, 6.366002] | 6.375000 |
+| WTA | 504 | 6.630204 | [6.580434, 6.681425] | 6.634689 |
+
+The fitting code is checked in as `scripts/fit_points_per_game.py`. Historical
+submissions are never rewritten with these corrected values.
+
+### Final operating decision
+
+The repository remains private because it contains SportsPredict, bookmaker,
+Flashscore, tournament-feed and separately licensed CC BY-NC-SA data. The CLI is
+permanently read-only and rejects `--submit`. Any future tennis forecasting
+project starts from a new repository and new chronological validation rather
+than reopening this event-specific system.

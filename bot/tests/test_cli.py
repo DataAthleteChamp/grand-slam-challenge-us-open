@@ -13,7 +13,14 @@ from pathlib import Path
 
 import pytest
 
-from bot.cli import _parse_args, archive, collect, summarise
+from bot.cli import (
+    _parse_args,
+    apply_override_manifest,
+    archive,
+    build_count_book,
+    collect,
+    summarise,
+)
 from bot.markets.parser import Family
 from bot.pricer import Pricer
 from bot.roster import BEST_OF, Roster, normalise_round, players_from_match
@@ -153,7 +160,7 @@ def test_rounds_are_normalised(result):
     assert result.rounds["m2"] == "R128"
 
 
-def test_missing_round_is_inferred_as_final_from_twenty_questions(roster):
+def test_missing_round_stays_unknown_even_with_twenty_questions(roster):
     class FinalClient(FakeClient):
         def list_markets(self, lobby_id, match_id=None):
             return [
@@ -170,8 +177,8 @@ def test_missing_round_is_inferred_as_final_from_twenty_questions(roster):
         "tour": "ATP",
     }
     result = collect(FinalClient([match]), roster, Pricer())
-    assert result.rounds["final"] == "F"
-    assert result.contexts["final"].round_code == "F"
+    assert result.rounds["final"] == "UNKNOWN"
+    assert result.contexts["final"].round_code == "UNKNOWN"
 
 
 def test_real_players_resolve_to_ratings(result):
@@ -270,8 +277,8 @@ def test_player_extraction_handles_payload_shapes(match, expected):
         ("Round of 16", "R16"),
         ("R32", "R32"),
         ("First Round", "R128"),
-        (None, "R128"),
-        ("nonsense", "R128"),
+        (None, "UNKNOWN"),
+        ("nonsense", "UNKNOWN"),
     ],
 )
 def test_round_normalisation(value, expected):
@@ -302,6 +309,16 @@ def test_player_data_is_present():
     directory = Path("data/players")
     assert (directory / "atp_players.csv").exists()
     assert (directory / "wta_players.csv").exists()
+
+
+def test_runtime_loads_the_validated_draw_rate_overlay(roster):
+    import csv
+
+    with Path("data/players/us_open_2026_draw.csv").open() as handle:
+        row = next(row for row in csv.DictReader(handle) if row["canonical_name"] == "Iga Swiatek")
+    profile = roster.find("Iga Swiatek")
+    assert profile.ace_rate == pytest.approx(float(row["ace_rate"]))
+    assert profile.df_rate == pytest.approx(float(row["df_rate"]))
 
 
 # ------------------------------------------------- draw roster and overrides
@@ -358,44 +375,74 @@ def _run(argv, fake):
         return cli.run(argv)
 
 
-def test_submit_actually_writes(tmp_path):
-    """Regression, and the worst bug found in this project.
-
-    The submit path called only reconcile, which is READ-ONLY. It printed
-    'submitting 320 predictions...', sent nothing, and exited 0. The test suite
-    passed because the fake client's reconcile recorded the batch - a mock that
-    does what you wish the real method did turns a green suite into evidence of
-    nothing. Every question would have scored as unanswered.
-    """
+def test_completed_event_refuses_submission(tmp_path):
     fake = FakeClient(_matches())
     code = _run(["--submit", "--force", "--out", str(tmp_path)], fake)
-    assert fake.written is not None, "upsert_batch was never called"
-    assert len(fake.written["desired"]) == len(QUESTIONS) * 2
-    assert fake.stored, "nothing reached the server"
-    assert code == 0
-
-
-def test_submit_verifies_against_the_server_afterwards(tmp_path):
-    """A request that times out may still have succeeded, so the only
-    trustworthy check is reading the server's own copy back."""
-    fake = FakeClient(_matches())
-    _run(["--submit", "--force", "--out", str(tmp_path)], fake)
-    assert fake.reconciled is not None
-    assert fake.reconciled["desired"] == fake.written["desired"]
-
-
-def test_a_failed_write_is_reported_not_swallowed(tmp_path):
-    class DropsEverything(FakeClient):
-        def upsert_batch(self, lobby_id, desired, *, existing=None):
-            self.written = {"lobby_id": lobby_id, "desired": dict(desired)}
-            return {"created": 0, "updated": 0, "failed": len(desired), "errors": ["nope"]}
-
-    fake = DropsEverything(_matches())
-    assert _run(["--submit", "--force", "--out", str(tmp_path)], fake) == 1
+    assert fake.written is None
+    assert fake.reconciled is None
+    assert not fake.stored
+    assert code == 2
 
 
 def test_dry_run_writes_nothing(tmp_path):
     fake = FakeClient(_matches())
-    _run(["--out", str(tmp_path)], fake)
+    ledger_dir = tmp_path / "ledger"
+    _run(["--out", str(tmp_path), "--ledger-dir", str(ledger_dir)], fake)
     assert fake.written is None
     assert not fake.stored
+    assert not ledger_dir.exists()
+
+
+def test_override_manifest_changes_desired_state_before_archiving(roster, tmp_path):
+    local_result = collect(FakeClient(_matches()), roster, Pricer())
+    market_id = local_result.priced[0].market_id
+    path = tmp_path / "overrides.json"
+    path.write_text(
+        json.dumps(
+            {
+                "submitted_overrides": [
+                    {
+                        "market_id": market_id,
+                        "probability": 73,
+                        "reason": "verified direct market",
+                    }
+                ]
+            }
+        )
+    )
+    assert apply_override_manifest(local_result, path) == 1
+    overridden = next(
+        question for question in local_result.priced if question.market_id == market_id
+    )
+    assert overridden.submission == 73
+    assert overridden.probability == pytest.approx(0.73)
+    assert "manual override" in overridden.notes[-1]
+
+
+def test_count_quotes_are_keyed_by_both_players(tmp_path):
+    from datetime import UTC, datetime, timedelta
+
+    now = datetime.now(UTC)
+    start = int((now + timedelta(hours=1)).timestamp() * 1000)
+    records = [
+        {
+            "match": "A Player vs B Rival",
+            "start_time": start,
+            "family": "aces",
+            "player": "A Player",
+            "p_more": 0.60,
+        },
+        {
+            "match": "A Player vs C Challenger",
+            "start_time": start,
+            "family": "aces",
+            "player": "A Player",
+            "p_more": 0.40,
+        },
+    ]
+    stamp = now.strftime("%Y%m%dT%H%M%SZ")
+    (tmp_path / f"bovada-{stamp}.json").write_text(json.dumps(records))
+    book = build_count_book(tmp_path, now=now)
+    assert book[("aces", "player", "rival")] == pytest.approx(0.60)
+    assert book[("aces", "player", "challenger")] == pytest.approx(0.40)
+    assert len(book) == 2

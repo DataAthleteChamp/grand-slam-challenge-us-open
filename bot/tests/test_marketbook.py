@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+from datetime import UTC, datetime, timedelta
+
 import pytest
 
 from bot.marketbook import MAX_SPREAD, MIN_BOOKS, MarketBook, surname_key
@@ -224,7 +226,8 @@ def test_a_cached_snapshot_is_used_when_the_quota_is_exhausted(monkeypatch, tmp_
             for i in range(12)
         ],
     }
-    (tmp_path / "atp.json").write_text(json.dumps([event]), encoding="utf-8")
+    stamp = datetime.now(UTC).strftime("%Y%m%dT%H%M%SZ")
+    (tmp_path / f"atp-{stamp}.json").write_text(json.dumps([event]), encoding="utf-8")
     monkeypatch.setattr("bot.marketbook.SNAPSHOT_DIR", tmp_path)
     monkeypatch.setattr(
         "bot.marketbook.OddsClient.from_env",
@@ -241,16 +244,13 @@ def test_a_cached_snapshot_is_used_when_the_quota_is_exhausted(monkeypatch, tmp_
 def test_a_stale_snapshot_is_ignored(monkeypatch, tmp_path):
     """A quote from a previous round is about a different match entirely."""
     import json
-    import os
-    import time
 
     from bot.data.oddsapi import OddsError
     from bot.marketbook import MAX_SNAPSHOT_AGE_SECONDS
 
-    path = tmp_path / "atp.json"
+    captured = datetime.now(UTC) - timedelta(seconds=MAX_SNAPSHOT_AGE_SECONDS + 3600)
+    path = tmp_path / f"atp-{captured.strftime('%Y%m%dT%H%M%SZ')}.json"
     path.write_text(json.dumps([]), encoding="utf-8")
-    old = time.time() - MAX_SNAPSHOT_AGE_SECONDS - 3600
-    os.utime(path, (old, old))
     monkeypatch.setattr("bot.marketbook.SNAPSHOT_DIR", tmp_path)
     monkeypatch.setattr(
         "bot.marketbook.OddsClient.from_env",
@@ -259,3 +259,19 @@ def test_a_stale_snapshot_is_ignored(monkeypatch, tmp_path):
 
     market = MarketBook.fetch()
     assert not any("cached quotes" in note for note in market.skipped)
+
+
+def test_cached_quote_never_overwrites_a_live_quote(monkeypatch, tmp_path):
+    import json
+
+    cached = _event("A Player", "B Player", 1.20, 5.00)
+    live = _event("A Player", "B Player", 2.00, 2.00)
+    stamp = datetime.now(UTC).strftime("%Y%m%dT%H%M%SZ")
+    (tmp_path / f"atp-{stamp}.json").write_text(json.dumps([cached]), encoding="utf-8")
+    monkeypatch.setattr("bot.marketbook.SNAPSHOT_DIR", tmp_path)
+
+    market = MarketBook()
+    market.absorb([live])
+    before = market.probability("A Player", "B Player")
+    market.absorb_snapshots()
+    assert market.probability("A Player", "B Player") == before

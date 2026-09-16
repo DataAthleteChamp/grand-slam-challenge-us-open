@@ -1,8 +1,8 @@
-"""Sanity-check the models against the empirically measured base rates.
+"""Print an informational legacy-model/base-rate comparison.
 
-Run with ``make validate``.  This is not a unit test — it is a calibration report
-that shows how far the analytic model sits from what the data actually did, which
-is information we need before trusting any submission.
+Run with ``make model-report``. This is not a release gate and intentionally
+returns success after printing discrepancies. ``make validate`` checks the
+canonical final archive instead.
 """
 
 from __future__ import annotations

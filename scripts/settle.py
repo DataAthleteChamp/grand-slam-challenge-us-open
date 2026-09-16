@@ -100,11 +100,19 @@ def _as_probability(value: Any) -> float | None:
     return number if 0.0 <= number <= 1.0 else None
 
 
-def settle(client: SportsPredictClient, ledger: Ledger, lobby_id: str) -> dict[str, int]:
-    """Attach outcomes and crowd probabilities to every recorded prediction."""
+def settle(
+    client: SportsPredictClient,
+    ledger: Ledger,
+    lobby_id: str,
+    *,
+    lane: str,
+) -> dict[str, int]:
+    """Attach outcomes, crowd probabilities, and lane-specific API scores."""
     results = client.list_results(lobby_id)
     outcomes: dict[str, int] = {}
     crowd: dict[str, float] = {}
+    api_brier: dict[str, float] = {}
+    api_rbp: dict[str, float] = {}
     unrecognised = 0
 
     for row in results:
@@ -119,13 +127,24 @@ def settle(client: SportsPredictClient, ledger: Ledger, lobby_id: str) -> dict[s
         value = _as_probability(_first(row, _CROWD_KEYS))
         if value is not None:
             crowd[str(market_id)] = value
+        if row.get("brier_score") is not None:
+            api_brier[str(market_id)] = float(row["brier_score"])
+        if row.get("rbp") is not None:
+            api_rbp[str(market_id)] = float(row["rbp"])
 
     settled = 0
     for record in ledger.all_records():
-        mine = {e.market_id for e in record.entries}
+        mine = {e.market_id for e in record.entries if e.lane == lane}
         subset = {k: v for k, v in outcomes.items() if k in mine}
         if subset:
-            settled += ledger.settle(record.match_id, subset, crowd)
+            settled += ledger.settle(
+                record.match_id,
+                subset,
+                crowd,
+                lane=lane,
+                api_brier=api_brier,
+                api_rbp=api_rbp,
+            )
 
     return {
         "results_rows": len(results),
@@ -206,20 +225,26 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--lessons", action="store_true", help="rewrite docs/LESSONS.md")
     parser.add_argument("--offline", action="store_true", help="skip the API, report the ledger")
+    parser.add_argument("--lobby-id", help="read a completed lobby without active-event discovery")
+    parser.add_argument("--lane", choices=("honest", "scenario"), default="honest")
     args = parser.parse_args(argv)
 
     ledger = Ledger()
 
     if not args.offline:
         try:
-            config = Config.from_env()
+            config = Config.from_env(lane=args.lane)
         except ConfigError as exc:
             print(f"config error: {exc}", file=sys.stderr)
             return 2
         client = SportsPredictClient(config)
         try:
-            _, lobby = client.bootstrap()
-            summary = settle(client, ledger, str(lobby["id"]))
+            if args.lobby_id:
+                lobby_id = args.lobby_id
+            else:
+                _, lobby = client.bootstrap()
+                lobby_id = str(lobby["id"])
+            summary = settle(client, ledger, lobby_id, lane=args.lane)
         except SportsPredictError as exc:
             print(f"api error: {exc}", file=sys.stderr)
             return 2

@@ -444,16 +444,47 @@ def check_question_coverage(
     them.
     """
     findings = []
-    for match_id, priced in questions_by_match.items():
-        round_code = rounds_by_match.get(match_id, "R128")
-        expected = QUESTIONS_PER_MATCH.get(round_code, 5)
-        if len(priced) < expected:
+    for match_id in sorted(set(questions_by_match) | set(rounds_by_match)):
+        priced = questions_by_match.get(match_id, [])
+        round_code = rounds_by_match.get(match_id, "UNKNOWN")
+        expected = QUESTIONS_PER_MATCH.get(round_code)
+        if expected is None:
+            findings.append(
+                Finding(
+                    "question_coverage",
+                    Severity.BLOCK,
+                    f"match {match_id} has unknown round {round_code!r}; "
+                    "expected question count cannot be established independently",
+                    (match_id,),
+                )
+            )
+            continue
+        market_ids = [question.market_id for question in priced]
+        if any(not market_id for market_id in market_ids):
+            findings.append(
+                Finding(
+                    "question_coverage",
+                    Severity.BLOCK,
+                    f"match {match_id} ({round_code}) contains an empty market id",
+                    (match_id,),
+                )
+            )
+        if len(set(market_ids)) != len(market_ids):
+            findings.append(
+                Finding(
+                    "question_coverage",
+                    Severity.BLOCK,
+                    f"match {match_id} ({round_code}) contains duplicate market ids",
+                    (match_id,),
+                )
+            )
+        if len(priced) != expected:
             findings.append(
                 Finding(
                     "question_coverage",
                     Severity.BLOCK,
                     f"match {match_id} ({round_code}) produced {len(priced)} questions, "
-                    f"expected {expected}; some were dropped before pricing",
+                    f"expected exactly {expected}",
                     (match_id,),
                 )
             )

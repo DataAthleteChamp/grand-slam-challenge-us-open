@@ -108,6 +108,16 @@ def test_subject_is_the_player_named_first():
     assert spec.opponent == "A. Sabalenka"
 
 
+def test_shortened_compound_name_resolves_without_substring_matching():
+    players = ("D. Merida Aguilar", "Andrey Rublev")
+    spec = parse_question(
+        "Will D. Merida record more aces than A. Rublev?",
+        players=players,
+    )
+    assert spec.subject == "D. Merida Aguilar"
+    assert spec.opponent == "Andrey Rublev"
+
+
 def test_comparison_without_identifiable_subject_loses_confidence():
     spec = parse_question("Will one player serve more aces than the other?", players=PLAYERS)
     assert spec.subject is None

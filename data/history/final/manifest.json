@@ -1,0 +1,72 @@
+{
+  "artifacts": {
+    "honest-results.json": {
+      "bytes": 782309,
+      "sha256": "21a90b1427906123fd06d81981101f1d764a67faa932e2ba59957a4d6573e8ec"
+    },
+    "leaderboard-summary.json": {
+      "bytes": 1272,
+      "sha256": "fded365feb5455c76fa419803e6328bf3c798ae6d3d8751137b3a6e0202b1958"
+    },
+    "manual-known.csv": {
+      "bytes": 10567,
+      "sha256": "d8d66bb59add5022b48359e16db22fce1d3dae5449c1332b3b1050a21ba841cc"
+    },
+    "scenario-results.json": {
+      "bytes": 782373,
+      "sha256": "a9b5bac5eaf8ef0aaaa22f80c0a1c8060f2baa7f56db45c1b7252dd8ce8ae98f"
+    },
+    "settled.csv": {
+      "bytes": 1326986,
+      "sha256": "3bc57555cbfbc9e27bdd7e3197ea769d22b70c1d82e1a3d538bdd11d33a19b88"
+    },
+    "void-markets.csv": {
+      "bytes": 8204,
+      "sha256": "fbcf20bb48ac614b5138a64a32d9c6f720644069f4a303aae6333a3ad1531ef8"
+    }
+  },
+  "captured_at": "2026-09-16T07:51:30.853889+00:00",
+  "event": {
+    "advertised_markets": 1280,
+    "advertised_matches": 190,
+    "id": "0cf0efd1-7e12-4ca9-8068-89eb48466a37",
+    "lobby_id": "b1419bb4-6dff-4172-9a42-a206b0a24ad9"
+  },
+  "final_api": {
+    "api_rbp_sum": {
+      "honest": 2768.44,
+      "scenario": 1655.93
+    },
+    "rows": 2534,
+    "rows_by_multiplier_per_lane": {
+      "1": 635,
+      "2": 480,
+      "3": 152
+    },
+    "settled_markets_per_lane": 1267,
+    "settled_matches": 189
+  },
+  "manual_history": {
+    "authoritative_rows_available": 0,
+    "estimated_api_rbp_known_rows": 85.69,
+    "leaderboard_settled_predictions": 660,
+    "locally_recorded_values": 40,
+    "status": "incomplete_requires_authenticated_export"
+  },
+  "notes": [
+    "API rbp is already stage-weighted.",
+    "created_date is prediction creation time, not settlement time.",
+    "Run archives are model intentions, not submission receipts.",
+    "The final API omits multipliers; they are inferred from exact lane score differences."
+  ],
+  "run_archive": {
+    "deleted_or_void_markets": 28,
+    "observed_markets": 1295,
+    "provenance_rows": {
+      "documented_override": 16,
+      "exact_run_match": 2489,
+      "unmatched_submission": 29
+    }
+  },
+  "schema_version": 1
+}

@@ -63,14 +63,14 @@ _ROUND_ALIASES = {
 def normalise_round(value: str | None) -> str:
     """Map whatever the API calls a round onto our internal codes."""
     if not value:
-        return "R128"
+        return "UNKNOWN"
     text = str(value).strip().lower()
     if text in _ROUND_ALIASES:
         return _ROUND_ALIASES[text]
     upper = text.upper().replace(" ", "")
     if upper in {"F", "SF", "QF", "R16", "R32", "R64", "R128"}:
         return upper
-    return "R128"
+    return "UNKNOWN"
 
 
 @dataclass
@@ -97,6 +97,7 @@ class Roster:
             with path.open(newline="", encoding="utf-8") as handle:
                 for row in csv.DictReader(handle):
                     roster._add(row)
+        roster._apply_draw_rates(directory / "us_open_2026_draw.csv")
         # Ace vulnerability: how many aces this player concedes per return
         # point, relative to tour average. A different skill from winning
         # return points, and worth 10 points of R-squared on the men's draw.
@@ -116,6 +117,23 @@ class Roster:
         roster._ambiguous = ambiguous_keys(names)
         roster.overrides = load_overrides(directory / OVERRIDES_FILE.name)
         return roster
+
+    def _apply_draw_rates(self, path: Path) -> None:
+        """Overlay the validated event-specific ace/DF credibility blend."""
+        if not path.exists():
+            return
+        with path.open(newline="", encoding="utf-8") as handle:
+            for row in csv.DictReader(handle):
+                name = (row.get("canonical_name") or "").strip()
+                profile = self.profiles.get(name)
+                if profile is None:
+                    continue
+                ace_rate = _optional(row.get("ace_rate"))
+                df_rate = _optional(row.get("df_rate"))
+                if ace_rate is not None:
+                    profile.ace_rate = ace_rate
+                if df_rate is not None:
+                    profile.df_rate = df_rate
 
     def _resolve_ambiguous(self, name: str) -> str | None:
         """Break a genuine collision by career record.
@@ -150,6 +168,7 @@ class Roster:
             df_rate=_optional(row.get("df_rate")),
             winner_rate=_optional(row.get("winner_rate")),
             unforced_rate=_optional(row.get("unforced_rate")),
+            charted_matches=int(_number(row.get("charted_matches"), 0.0)),
             height=_optional(row.get("height")),
             pace_minutes=_number(row.get("pace_minutes"), 0.0),
             ace_vulnerability=_number(row.get("ace_vulnerability"), 1.0),

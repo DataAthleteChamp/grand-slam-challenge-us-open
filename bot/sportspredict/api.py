@@ -295,8 +295,9 @@ class SportsPredictClient:
                     time.sleep(retry_delay(attempt, exc.headers.get("Retry-After")))
                     continue
                 raise SportsPredictError(exc.code, last_message) from exc
-            except urllib.error.URLError as exc:
-                last_status, last_message = 0, str(exc.reason)
+            except (urllib.error.URLError, TimeoutError) as exc:
+                reason = getattr(exc, "reason", exc)
+                last_status, last_message = 0, str(reason)
                 if attempt < self.max_attempts - 1:
                     time.sleep(retry_delay(attempt))
                     continue

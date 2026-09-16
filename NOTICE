@@ -1,0 +1,20 @@
+Grand Slam Challenge 2026
+Copyright (c) 2026 Jakub Piotrowski
+
+The MIT License applies only to original code and original documentation.
+
+Some private data artifacts derive from the Tennis Abstract Match Charting
+Project and Jeff Sackmann-format archives distributed under Creative Commons
+Attribution-NonCommercial-ShareAlike 4.0 International:
+
+https://github.com/JeffSackmann/tennis_MatchChartingProject
+https://github.com/Aneeshers/tennis-sackmann-archive
+https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+Those sources are not relicensed under MIT. Attribution, NonCommercial, and
+ShareAlike conditions apply to covered data and adaptations.
+
+Other private artifacts contain or derive from SportsPredict, Flashscore,
+Bovada, The Odds API, Polymarket, Kalshi, TennisMyLife, and US Open/USTA
+services. Their inclusion is not a grant of redistribution rights. See
+DATA_LICENSE.md for the source-by-source policy.

@@ -49,6 +49,8 @@ class Entry:
     # Filled in at settlement.
     outcome: int | None = None
     crowd: float | None = None
+    api_brier_score: float | None = None
+    api_rbp: float | None = None
     settled_at: str = ""
 
     @property
@@ -59,7 +61,9 @@ class Entry:
     def brier(self) -> float | None:
         if self.outcome is None:
             return None
-        return (self.probability - self.outcome) ** 2
+        if self.api_brier_score is not None:
+            return self.api_brier_score
+        return (self.submission / 100.0 - self.outcome) ** 2
 
     @property
     def crowd_brier(self) -> float | None:
@@ -68,19 +72,26 @@ class Entry:
         return (self.crowd - self.outcome) ** 2
 
     @property
-    def rbp(self) -> float | None:
-        """Relative Brier Points, the competition's own unit.
+    def consensus_skill_rbp(self) -> float | None:
+        """Skill term against the mean crowd probability.
 
-        Positive means we beat the crowd. This is the only number that matters:
-        a brilliant forecast that matches the crowd scores zero.
+        This omits the field-variance term in SportsPredict's official score and
+        must not be presented as exact API RBP.
         """
         ours, theirs = self.brier, self.crowd_brier
         if ours is None or theirs is None:
             return None
         return (theirs - ours) * 100.0
 
+    @property
+    def rbp(self) -> float | None:
+        """Official API RBP when archived, otherwise the consensus skill term."""
+        return self.api_rbp if self.api_rbp is not None else self.consensus_skill_rbp
+
     def weighted_rbp(self, multiplier: int) -> float | None:
-        value = self.rbp
+        if self.api_rbp is not None:
+            return self.api_rbp
+        value = self.consensus_skill_rbp
         return None if value is None else value * multiplier
 
 
@@ -114,6 +125,7 @@ class MatchRecord:
                 **asdict(entry),
                 "brier": _round(entry.brier),
                 "crowd_brier": _round(entry.crowd_brier),
+                "consensus_skill_rbp": _round(entry.consensus_skill_rbp, 2),
                 "rbp": _round(entry.rbp, 2),
             }
             for entry in self.entries
@@ -164,35 +176,47 @@ class Ledger:
         return path
 
     def record_predictions(self, record: MatchRecord, entries: list[Entry]) -> MatchRecord:
-        """Add or update predictions, keeping any settlement already recorded.
+        """Add or update lane-specific predictions without rewriting settlement.
 
-        Re-pricing a match before close is normal and must not wipe outcomes, so
-        existing settlement fields survive an update of the same market.
+        Re-pricing before close replaces the desired value for the same lane.
+        Once settled, that lane/market pair is immutable.
         """
         stamp = datetime.now(UTC).isoformat()
-        existing = {e.market_id: e for e in record.entries}
+        existing = {(e.lane, e.market_id): e for e in record.entries}
         for entry in entries:
             entry.predicted_at = entry.predicted_at or stamp
-            previous = existing.get(entry.market_id)
+            key = (entry.lane, entry.market_id)
+            previous = existing.get(key)
             if previous is not None and previous.is_settled:
-                entry.outcome = previous.outcome
-                entry.crowd = previous.crowd
-                entry.settled_at = previous.settled_at
-            existing[entry.market_id] = entry
+                continue
+            existing[key] = entry
         record.entries = list(existing.values())
         return record
 
-    def settle(self, match_id: str, outcomes: dict[str, int], crowd: dict[str, float]) -> int:
-        """Attach outcomes and crowd probabilities.  Returns how many settled."""
+    def settle(
+        self,
+        match_id: str,
+        outcomes: dict[str, int],
+        crowd: dict[str, float],
+        *,
+        lane: str | None = None,
+        api_brier: dict[str, float] | None = None,
+        api_rbp: dict[str, float] | None = None,
+    ) -> int:
+        """Attach lane-specific outcomes and official API scores."""
         record = self.load(match_id)
         if record is None:
             return 0
+        api_brier = api_brier or {}
+        api_rbp = api_rbp or {}
         stamp = datetime.now(UTC).isoformat()
         n = 0
         for entry in record.entries:
-            if entry.market_id in outcomes:
+            if entry.market_id in outcomes and (lane is None or entry.lane == lane):
                 entry.outcome = int(outcomes[entry.market_id])
                 entry.crowd = crowd.get(entry.market_id)
+                entry.api_brier_score = api_brier.get(entry.market_id)
+                entry.api_rbp = api_rbp.get(entry.market_id)
                 entry.settled_at = stamp
                 n += 1
         if n:

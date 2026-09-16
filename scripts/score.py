@@ -34,15 +34,18 @@ from bot.sportspredict.config import Config, ConfigError  # noqa: E402
 LANES = ("honest", "scenario")
 
 
-def fetch(lane: str) -> list[dict]:
+def fetch(lane: str, *, lobby_id: str | None = None) -> list[dict]:
     """Settled predictions for one bot, or an empty list if it cannot be read."""
     try:
         client = SportsPredictClient(Config.from_env(lane=lane))
     except ConfigError:
         return []
     try:
-        _, lobby = client.bootstrap()
-        rows = client.list_results(str(lobby["id"]))
+        if lobby_id:
+            rows = client.list_results(lobby_id)
+        else:
+            _, lobby = client.bootstrap()
+            rows = client.list_results(str(lobby["id"]))
     except SportsPredictError as exc:
         print(f"  ! {lane}: {exc}", file=sys.stderr)
         return []
@@ -147,11 +150,12 @@ def best(rows: list[dict], k: int = 8) -> str:
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--detail", action="store_true", help="list best and worst questions")
+    parser.add_argument("--lobby-id", help="read a completed lobby without active-event discovery")
     args = parser.parse_args(argv)
 
     everything = {}
     for lane in LANES:
-        rows = fetch(lane)
+        rows = fetch(lane, lobby_id=args.lobby_id)
         everything[lane] = rows
         report = summarise(rows)
         print(render(report, f"BOT: {lane}"))

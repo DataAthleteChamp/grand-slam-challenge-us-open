@@ -4,11 +4,12 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "grand-slam-challenge"
-version = "0.1.0"
-description = "A quant forecasting system + live API bot for the SportsPredict Grand Slam Challenge 2026 (US Open)."
+version = "1.0.0"
+description = "Archived US Open 2026 probability-forecasting system and private research record."
 readme = "README.md"
 requires-python = ">=3.11"
-license = { text = "MIT" }
+license = "MIT"
+license-files = ["LICENSE", "NOTICE"]
 authors = [{ name = "Jakub Piotrowski" }]
 keywords = [
     "probability-forecasting",
@@ -22,11 +23,17 @@ dependencies = [
     "numpy>=1.24",
     "scipy>=1.10",
     "pandas>=2.0",
-    "PyYAML>=6.0",
+    "openpyxl>=3.1",
 ]
 
 [project.optional-dependencies]
-dev = ["pytest>=7.0", "pre-commit>=3.0", "ruff>=0.5"]
+dev = [
+    "build>=1.6",
+    "pre-commit>=4.6",
+    "pytest>=9.0",
+    "ruff>=0.16",
+    "setuptools>=84.0",
+]
 plots = ["matplotlib>=3.7"]
 
 [project.urls]

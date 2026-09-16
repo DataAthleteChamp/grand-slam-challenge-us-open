@@ -3,7 +3,7 @@
     PYTHONPATH=. .venv/bin/python scripts/analyse.py
     PYTHONPATH=. .venv/bin/python scripts/analyse.py --plots
 
-Reads ``data/history/settled.csv`` and asks the questions that change decisions:
+Reads ``data/history/final/settled.csv`` and asks the questions that change decisions:
 
 * Which families are we actually beating the crowd on, and by how much?
 * Is our error a *bias* (systematically high or low, fixable with a shift) or
@@ -34,7 +34,7 @@ import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-HISTORY = Path(__file__).resolve().parent.parent / "data" / "history" / "settled.csv"
+HISTORY = Path(__file__).resolve().parent.parent / "data" / "history" / "final" / "settled.csv"
 PLOTS = Path(__file__).resolve().parent.parent / "data" / "history" / "plots"
 
 
@@ -42,7 +42,19 @@ def load(path: Path = HISTORY) -> list[dict]:
     rows = []
     with path.open(newline="", encoding="utf-8") as handle:
         for row in csv.DictReader(handle):
-            for key in ("submitted", "crowd", "brier", "crowd_brier", "rbp", "base_rate", "model"):
+            row["submitted"] = float(row["submitted"]) / 100.0
+            row["crowd_brier"] = row["crowd_consensus_brier"]
+            row["rbp"] = row["api_rbp"]
+            row["settled_at"] = row["prediction_created_at"]
+            for key in (
+                "crowd",
+                "brier",
+                "crowd_brier",
+                "rbp",
+                "base_rate",
+                "model",
+                "multiplier",
+            ):
                 try:
                     row[key] = float(row[key])
                 except (TypeError, ValueError):
@@ -78,7 +90,8 @@ def crowd_variance(rows: list[dict]) -> np.ndarray:
     c = np.array([r["crowd"] for r in rows])
     y = np.array([r["outcome"] for r in rows], dtype=float)
     rbp = np.array([r["rbp"] for r in rows])
-    return rbp / 100.0 + (p - y) ** 2 - (c - y) ** 2
+    multiplier = np.array([r["multiplier"] for r in rows])
+    return rbp / 100.0 + multiplier * ((p - y) ** 2 - (c - y) ** 2)
 
 
 def wilson(successes: int, n: int) -> tuple[float, float]:
@@ -129,12 +142,13 @@ def by_family(rows: list[dict], lane: str = "honest") -> None:
         p = np.array([r["submitted"] for r in items])
         c = np.array([r["crowd"] for r in items])
         y = np.array([r["outcome"] for r in items], dtype=float)
+        multiplier = np.array([r["multiplier"] for r in items])
         point, lo, hi = bootstrap_diff(p, c, y)
         star = "*" if lo > 0 else ("!" if hi < 0 else " ")
         print(
             f"{family:26s} {len(items):3d} {sum(r['rbp'] for r in items):8.1f} "
             f"{100 * var[mask].sum():7.1f} "
-            f"{100 * ((c - y) ** 2 - (p - y) ** 2).sum():7.1f} "
+            f"{100 * (multiplier * ((c - y) ** 2 - (p - y) ** 2)).sum():7.1f} "
             f"{brier(p, y):7.4f} {brier(c, y):10.4f} "
             f"{point:+.4f} [{lo:+.4f},{hi:+.4f}]{star}"
         )
@@ -266,7 +280,9 @@ def counterfactuals(rows: list[dict], lane: str = "honest") -> None:
         skill = 0.0
         for r in sub:
             p = float(fn(r))
-            skill += ((r["crowd"] - r["outcome"]) ** 2 - (p - r["outcome"]) ** 2) * 100
+            skill += (
+                r["multiplier"] * ((r["crowd"] - r["outcome"]) ** 2 - (p - r["outcome"]) ** 2) * 100
+            )
         scored.append((label, free + skill, skill))
 
     for label, total, skill in sorted(scored, key=lambda kv: -kv[1])[:15]:

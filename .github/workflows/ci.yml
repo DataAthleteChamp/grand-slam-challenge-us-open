@@ -1,5 +1,8 @@
 name: CI
 
+permissions:
+  contents: read
+
 on:
   push:
     branches: [main]
@@ -19,13 +22,37 @@ jobs:
       - name: Install
         run: |
           python -m pip install --upgrade pip
-          python -m pip install -e ".[dev]"
+          python -m pip install -c requirements-lock.txt -e ".[dev]"
 
       - name: Lint
-        run: python -m ruff check bot
+        run: python -m ruff check bot scripts
 
       - name: Test
         run: python -m pytest bot/tests -q
 
-      - name: Validate models against measured base rates
-        run: python scripts/validate_models.py
+      - name: Validate final archive
+        run: python scripts/validate_archive.py
+
+      - name: Build package
+        run: python -m build
+
+      - name: Verify private archives are not packaged
+        run: |
+          python - <<'PY'
+          import glob
+          import zipfile
+
+          wheel = glob.glob("dist/*.whl")
+          assert len(wheel) == 1, wheel
+          with zipfile.ZipFile(wheel[0]) as archive:
+              leaked = [
+                  name
+                  for name in archive.namelist()
+                  if name.startswith(("data/", "runs/", "results/"))
+                  or name == "bot/.env"
+              ]
+          assert not leaked, leaked
+          PY
+
+      - name: Verify tests did not modify tracked artifacts
+        run: git diff --exit-code

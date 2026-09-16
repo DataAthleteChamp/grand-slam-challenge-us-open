@@ -1,4 +1,8 @@
-# Experiment backlog — ranked by expected points, not by novelty
+# Experiment backlog - archived
+
+> **Final status:** no further experiments are planned in this repository. This
+> file preserves the tournament-era backlog and rejected ideas. Final results are
+> in [`../RESULTS.md`](../RESULTS.md).
 
 Compiled from ~60 sources across four literature reviews (quantitative betting markets,
 cross-sport count modelling, tennis-specific modelling, forecasting theory) plus the

@@ -31,9 +31,8 @@ from pathlib import Path
 from typing import Any
 
 from bot.ledger import Entry, Ledger, MatchRecord
-from bot.marketbook import MarketBook
+from bot.marketbook import MarketBook, surname_key
 from bot.markets.parser import Family, parse_question, reset_unparsed, unparsed_report
-from bot.markets.taxonomy import QUESTIONS_PER_MATCH
 from bot.pricer import MatchContext, PricedQuestion, Pricer
 from bot.roster import Roster, players_from_match
 from bot.sportspredict.api import SportsPredictClient, SportsPredictError
@@ -41,6 +40,8 @@ from bot.sportspredict.config import Config, ConfigError
 from bot.validate import Severity, validate_batch
 
 RUNS_DIR = Path(__file__).resolve().parent.parent / "runs"
+MAX_COUNT_SNAPSHOT_AGE_SECONDS = 72 * 3600
+ARCHIVED_READ_ONLY = True
 
 
 @dataclass
@@ -64,24 +65,52 @@ class RunResult:
         return {q.market_id: q.submission for q in self.priced if q.market_id}
 
 
-def build_count_book() -> dict[tuple[str, str], float]:
-    """Bookmaker head-to-head ace / double-fault lines, newest snapshot wins.
+def build_count_book(
+    folder: Path | None = None,
+    *,
+    now: datetime | None = None,
+) -> dict[tuple[str, str, str], float]:
+    """Recent head-to-head ace/double-fault lines keyed by both players.
 
-    Reads whatever ``scripts/fetch_bovada.py`` has captured. Absent or stale
-    snapshots simply yield an empty book, which prices exactly as before.
+    A surname-only key can attach a player's quote against the wrong opponent.
+    Capture time and scheduled start are checked so an old tournament snapshot
+    cannot silently become a current price.
     """
-    folder = RUNS_DIR.parent / "data/markets/bovada"
+    folder = folder or RUNS_DIR.parent / "data/markets/bovada"
     files = sorted(folder.glob("bovada-*.json")) if folder.exists() else []
     if not files:
         return {}
+    captured_at = datetime.strptime(
+        files[-1].stem.removeprefix("bovada-"), "%Y%m%dT%H%M%SZ"
+    ).replace(tzinfo=UTC)
+    now = now or datetime.now(UTC)
+    if (now - captured_at).total_seconds() > MAX_COUNT_SNAPSHOT_AGE_SECONDS:
+        return {}
     try:
         records = json.loads(files[-1].read_text())
-    except Exception:  # noqa: BLE001 - a bad snapshot must not stop pricing
+    except (OSError, json.JSONDecodeError, TypeError) as exc:
+        print(f"  ! count snapshot unreadable ({exc})", file=sys.stderr)
         return {}
-    book: dict[tuple[str, str], float] = {}
+    book: dict[tuple[str, str, str], float] = {}
     for record in records:
-        key = (record.get("family"), record.get("player_key"))
-        if key[0] and key[1] and record.get("p_more") is not None:
+        match_players = str(record.get("match") or "").split(" vs ")
+        player_key = surname_key(str(record.get("player") or ""))
+        opponents = [
+            surname_key(name)
+            for name in match_players
+            if surname_key(name) and surname_key(name) != player_key
+        ]
+        start_ms = record.get("start_time")
+        if start_ms is not None:
+            start = datetime.fromtimestamp(float(start_ms) / 1000.0, UTC)
+            if captured_at >= start:
+                continue
+        key = (
+            str(record.get("family") or ""),
+            player_key,
+            opponents[0] if len(opponents) == 1 else "",
+        )
+        if all(key) and record.get("p_more") is not None:
             book[key] = float(record["p_more"])
     return book
 
@@ -170,19 +199,6 @@ def collect(
         except SportsPredictError as exc:
             print(f"  ! {match_id}: markets unavailable ({exc})", file=sys.stderr)
             continue
-
-        # The API omitted `round` from both finals, so normalise_round(None)
-        # silently labelled them R128 and coverage expected only five questions.
-        # Twenty questions is unique to the final in this event and is already
-        # the published invariant in QUESTIONS_PER_MATCH, so infer F from the
-        # observed count when the source provides no round at all.
-        if (
-            not (match.get("round") or match.get("round_name"))
-            and len(markets) == QUESTIONS_PER_MATCH["F"]
-        ):
-            context = replace(context, round_code="F")
-            contexts[match_id] = context
-            rounds[match_id] = context.round_code
 
         # Named market_book, not market: the loop below binds `market` to each
         # market dict, and a shadowed name here would silently feed the previous
@@ -305,6 +321,42 @@ def archive(result: RunResult, directory: Path) -> Path:
     return path
 
 
+def apply_override_manifest(result: RunResult, path: Path) -> int:
+    """Apply explicit, auditable market overrides before validation and archiving."""
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    overrides = {
+        str(row["market_id"]): row
+        for row in payload.get("submitted_overrides", [])
+        if row.get("market_id")
+    }
+    applied = 0
+
+    def override(question: PricedQuestion) -> PricedQuestion:
+        nonlocal applied
+        row = overrides.get(question.market_id)
+        if row is None or (row.get("lane") and row["lane"] != question.lane):
+            return question
+        probability = int(row["probability"])
+        if not 1 <= probability <= 99:
+            raise ValueError(f"override for {question.market_id} must be an integer in [1, 99]")
+        applied += 1
+        reason = str(row.get("reason") or "documented manual override")
+        return replace(
+            question,
+            probability=probability / 100.0,
+            submission=probability,
+            notes=(*question.notes, f"manual override: {reason}"),
+        )
+
+    result.priced = [override(question) for question in result.priced]
+    by_id = {question.market_id: question for question in result.priced}
+    result.by_match = {
+        match_id: [by_id[question.market_id] for question in questions]
+        for match_id, questions in result.by_match.items()
+    }
+    return applied
+
+
 def summarise(result: RunResult) -> str:
     """A short human read of what the run produced."""
     lines = [
@@ -349,6 +401,12 @@ def summarise(result: RunResult) -> str:
 
 def run(argv: Sequence[str] | None = None) -> int:
     args = _parse_args(argv)
+    if args.submit and ARCHIVED_READ_ONLY:
+        print(
+            "submission disabled: the 2026 Grand Slam Challenge is archived read-only",
+            file=sys.stderr,
+        )
+        return 2
     try:
         config = Config.from_env(lane=args.lane)
     except ConfigError as exc:
@@ -399,10 +457,21 @@ def run(argv: Sequence[str] | None = None) -> int:
         print(f"api error: {exc}", file=sys.stderr)
         return 2
 
+    if args.overrides:
+        try:
+            applied = apply_override_manifest(result, Path(args.overrides))
+        except (OSError, ValueError, TypeError, json.JSONDecodeError) as exc:
+            print(f"override error: {exc}", file=sys.stderr)
+            return 2
+        print(f"override {applied} documented values applied")
+
     path = archive(result, Path(args.out))
-    written = record_to_ledger(result, Ledger())
     print(summarise(result))
-    print(f"ledger   {written} predictions recorded before submission")
+    if args.record_ledger:
+        written = record_to_ledger(result, Ledger(args.ledger_dir))
+        print(f"ledger   {written} predictions recorded")
+    else:
+        print("ledger   skipped (pass --record-ledger to persist a dry-run forecast)")
     print(f"archived {path}")
     print(f"elapsed  {time.monotonic() - started:.1f}s")
 
@@ -477,7 +546,7 @@ def _parse_args(argv: Sequence[str] | None) -> argparse.Namespace:
     parser.add_argument(
         "--submit",
         action="store_true",
-        help="actually send predictions; without this the run is a dry run",
+        help="retired: the completed 2026 event is read-only",
     )
     parser.add_argument(
         "--force",
@@ -493,6 +562,21 @@ def _parse_args(argv: Sequence[str] | None) -> argparse.Namespace:
     parser.add_argument("--limit", type=int, default=None, help="only price the first N matches")
     parser.add_argument("--match", default="", help="only matches whose payload contains this text")
     parser.add_argument("--out", default=str(RUNS_DIR), help="directory for run archives")
+    parser.add_argument(
+        "--overrides",
+        default="",
+        help="optional JSON override manifest applied before validation and archiving",
+    )
+    parser.add_argument(
+        "--record-ledger",
+        action="store_true",
+        help="persist dry-run forecasts to a ledger; disabled by default",
+    )
+    parser.add_argument(
+        "--ledger-dir",
+        default=str(Ledger().directory),
+        help="ledger directory used with --record-ledger",
+    )
     parser.add_argument(
         "--diff-against-server",
         action="store_true",
@@ -512,4 +596,13 @@ def main() -> int:
         return 130
 
 
-__all__ = ["RunResult", "collect", "archive", "summarise", "run", "main", "Severity"]
+__all__ = [
+    "RunResult",
+    "collect",
+    "archive",
+    "apply_override_manifest",
+    "summarise",
+    "run",
+    "main",
+    "Severity",
+]

@@ -1,6 +1,10 @@
-"""Archive every settled question, permanently, in a form a model can consume.
+"""Archive settled questions during an event.
 
     PYTHONPATH=. .venv/bin/python scripts/archive_history.py
+
+For the completed 2026 event, use ``scripts/archive_final.py`` instead. It
+captures both lanes, reconstructs round weights independently, records void
+markets, and writes checksums.
 
 Run after each round.  Two artefacts are written:
 
@@ -9,7 +13,7 @@ Run after each round.  Two artefacts are written:
     and re-derivation is not: if a field turns out to matter later, it has to
     already be on disk.
 
-``data/history/settled.csv``
+``data/history/incremental-settled.csv``
     One tidy row per settled question per lane, joined to the match metadata and
     to our own pricing internals.  This is the file to analyse.
 
@@ -44,16 +48,16 @@ from bot.sportspredict.config import Config, ConfigError  # noqa: E402
 
 HISTORY = Path(__file__).resolve().parent.parent / "data" / "history"
 RAW = HISTORY / "raw"
-TIDY = HISTORY / "settled.csv"
+TIDY = HISTORY / "incremental-settled.csv"
 
 LANES = ("honest", "scenario")
 
 #: Manual website entries are scored under the user account rather than a bot
 #: API key, and the API exposes no user-level endpoint (/users/me returns 404).
 #: They therefore have to be recorded by hand in data/manual/entries.csv as
-#: ``market_id,submitted``.  Scoring them needs nothing further: the crowd value
-#: and outcome come from the settled results we already hold, and RBP is just
-#: ``(crowd_brier - our_brier) * 100``.
+#: ``market_id,submitted``. Crowd consensus and outcome recover only the
+#: controllable consensus-skill term. Exact API RBP also contains field variance
+#: and cannot be reconstructed for the manual account from these values alone.
 MANUAL_FILE = HISTORY.parent / "manual" / "entries.csv"
 
 
@@ -71,12 +75,7 @@ def load_manual() -> dict[str, int]:
 
 
 def manual_rows(results: list[dict], matches: list[dict], ledger: Ledger) -> list[dict]:
-    """Score the manual entry against the same settled outcomes.
-
-    The website cannot be read programmatically, but it does not need to be:
-    given the number that was entered, the outcome and crowd value already in
-    hand determine the score exactly.
-    """
+    """Estimate the manual entry's consensus-skill term for known values."""
     entered = load_manual()
     if not entered:
         return []
@@ -99,6 +98,7 @@ def manual_rows(results: list[dict], matches: list[dict], ledger: Ledger) -> lis
         # These describe the bot's reasoning, not the manual entry's.
         for field in ("base_rate", "model", "market", "market_weight", "confidence", "notes"):
             row[field] = ""
+        row["notes"] = "manual consensus-skill estimate; exact API RBP unavailable"
         rows.append(row)
     return rows
 
@@ -136,12 +136,18 @@ FIELDS = [
     "confidence",
     "notes",
     # provenance
+    "prediction_created_at",
     "settled_at",
     "archived_at",
 ]
 
 
-def collect(lane: str) -> tuple[list[dict], list[dict]]:
+def collect(
+    lane: str,
+    *,
+    event_id: str | None = None,
+    lobby_id: str | None = None,
+) -> tuple[list[dict], list[dict]]:
     """Return ``(settled results, matches)`` for one bot."""
     try:
         client = SportsPredictClient(Config.from_env(lane=lane))
@@ -149,9 +155,15 @@ def collect(lane: str) -> tuple[list[dict], list[dict]]:
         print(f"  ! {lane}: {exc}", file=sys.stderr)
         return [], []
     try:
-        event, lobby = client.bootstrap()
-        results = client.list_results(str(lobby["id"]))
-        matches = client.list_matches(event_id=str(event["id"]), lobby_id=str(lobby["id"]))
+        if bool(event_id) != bool(lobby_id):
+            raise ValueError("event_id and lobby_id must be supplied together")
+        if event_id and lobby_id:
+            results = client.list_results(lobby_id)
+            matches = client.list_matches(event_id=event_id, lobby_id=lobby_id)
+        else:
+            event, lobby = client.bootstrap()
+            results = client.list_results(str(lobby["id"]))
+            matches = client.list_matches(event_id=str(event["id"]), lobby_id=str(lobby["id"]))
     except SportsPredictError as exc:
         print(f"  ! {lane}: {exc}", file=sys.stderr)
         return [], []
@@ -172,6 +184,8 @@ def build_rows(lane: str, results: list[dict], matches: list[dict], ledger: Ledg
     internals: dict[str, dict] = {}
     for record in ledger.all_records():
         for entry in record.entries:
+            if entry.lane != lane:
+                continue
             internals[entry.market_id] = {
                 "match_name": record.match_name,
                 "multiplier": record.multiplier,
@@ -226,14 +240,16 @@ def build_rows(lane: str, results: list[dict], matches: list[dict], ledger: Ledg
                 "brier": result.get("brier_score"),
                 "crowd_brier": round((crowd - outcome) ** 2, 6),
                 "rbp": round(rbp, 3),
-                "weighted_rbp": round(rbp * multiplier, 3),
+                # API RBP already includes the stage multiplier.
+                "weighted_rbp": round(rbp, 3),
                 "base_rate": _round(mine.get("base_rate")),
                 "model": _round(mine.get("model")),
                 "market": _round(mine.get("market")),
                 "market_weight": _round(mine.get("market_weight"), 3),
                 "confidence": _round(mine.get("confidence"), 3),
                 "notes": mine.get("notes", ""),
-                "settled_at": result.get("created_date", ""),
+                "prediction_created_at": result.get("created_date", ""),
+                "settled_at": "",
                 "archived_at": stamp,
             }
         )
@@ -277,7 +293,11 @@ def merge(rows: list[dict], path: Path = TIDY) -> tuple[int, int]:
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--out", default=str(TIDY))
+    parser.add_argument("--event-id")
+    parser.add_argument("--lobby-id")
     args = parser.parse_args(argv)
+    if bool(args.event_id) != bool(args.lobby_id):
+        parser.error("--event-id and --lobby-id must be supplied together")
 
     ledger = Ledger()
     stamp = datetime.now(UTC).strftime("%Y%m%dT%H%M%SZ")
@@ -285,7 +305,11 @@ def main(argv: list[str] | None = None) -> int:
 
     all_rows: list[dict] = []
     for lane in LANES:
-        results, matches = collect(lane)
+        results, matches = collect(
+            lane,
+            event_id=args.event_id,
+            lobby_id=args.lobby_id,
+        )
         if not results:
             print(f"{lane}: nothing settled")
             continue
@@ -300,7 +324,11 @@ def main(argv: list[str] | None = None) -> int:
 
     # Score the manual entry from the same settled outcomes.
     if all_rows:
-        results, matches = collect(LANES[0])
+        results, matches = collect(
+            LANES[0],
+            event_id=args.event_id,
+            lobby_id=args.lobby_id,
+        )
         manual = manual_rows(results, matches, ledger)
         if manual:
             all_rows.extend(manual)

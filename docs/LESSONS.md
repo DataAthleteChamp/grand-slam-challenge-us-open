@@ -1,4 +1,20 @@
-# Lessons — US Open 2026
+# Lessons - US Open 2026 live log
+
+> **Archived:** this file preserves the evolving in-tournament analysis and
+> contains conclusions that were later superseded. Use [`../RESULTS.md`](../RESULTS.md)
+> for the final 1,267-question scorecard and
+> [`LIMITATIONS.md`](LIMITATIONS.md) for the post-event audit.
+
+## Final outcome
+
+Quant_Researcher finished 20/271 with 2,768.479 RBP. Its strongest families were
+tiebreak (+795.78) and aces (+718.93); its weakest were winners (-121.00) and
+lopsided sets (-55.27). The scenario lane finished 39/271 and demonstrated that
+small-sample family shifts increased variance without improving the final result.
+
+The final canonical record is `data/history/final/settled.csv`. The regeneration
+commands below describe the old incremental workflow and are retained only as
+historical context.
 
 Generated from settled results. Regenerate with:
 

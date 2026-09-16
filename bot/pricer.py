@@ -53,7 +53,7 @@ from .data.baserates import (
     tiebreak_count_base,
     tiebreak_sim_scale,
 )
-from .data.names import strip_accents
+from .data.names import match_key, strip_accents
 from .markets.parser import MarketSpec
 from .markets.taxonomy import COMPARISON, OUTCOME, STRUCTURAL, THRESHOLD, Family
 from .models.counts import binomial_comparison
@@ -479,9 +479,11 @@ COUNT_MARKET_WEIGHT_BY_CELL: dict[tuple[str, str], float] = {
     # tours rather than the one cell where our model was known to be worthless.
 }
 
+
 def count_market_weight(tour: str, stat: str) -> float:
     """Weight for a bookmaker count line, per tour and statistic."""
     return COUNT_MARKET_WEIGHT_BY_CELL.get((tour, stat), COUNT_MARKET_WEIGHT)
+
 
 #: Unforced-error count model, all measured on the OFFICIAL US Open point feed
 #: (data/raw/pointbypoint, 1,254 matches / 2,508 player-matches, 2019-2024) -
@@ -492,12 +494,9 @@ def count_market_weight(tour: str, stat: str) -> float:
 #: Charting Project, so the volunteer-charted rates in the roster are usable.
 UNFORCED_RESIDUAL_SD = {"ATP": 8.86, "WTA": 8.14}
 
-#: Our simulator's own sd of total games for a fixed matchup, i.e. the part of
-#: match length that is irreducible rather than forecastable.
-UNFORCED_GAMES_SD = {"ATP": 8.7, "WTA": 5.6}
-
-#: Points per game, for converting a games forecast into a points forecast.
-POINTS_PER_GAME = 6.6
+#: Points per game from official US Open point feeds, fit on 2019/2021-2023
+#: and checked against 2024. See ``scripts/fit_points_per_game.py``.
+POINTS_PER_GAME = {"ATP": 6.33, "WTA": 6.63}
 
 #: How much of the model to actually use. corr(points, errors) is 0.715 on the
 #: official feed so the length signal is real, but a player's own error rate has
@@ -507,7 +506,6 @@ POINTS_PER_GAME = 6.6
 #: it keeps the direction of a measured effect while bounding the damage if the
 #: subjectivity argument turns out to dominate after all.
 UNFORCED_MODEL_WEIGHT = 0.50
-
 
 
 @dataclass
@@ -522,6 +520,7 @@ class PlayerProfile:
     df_rate: float | None = None
     winner_rate: float | None = None
     unforced_rate: float | None = None
+    charted_matches: int = 0
     height: float | None = None
     pace_minutes: float = 0.0
     #: Aces conceded per return point, relative to tour average. 1.0 is average,
@@ -598,12 +597,12 @@ class Pricer:
         lane: str = "honest",
         sim_config: SimulationConfig | None = None,
         market_weights: dict[Family, float] | None = None,
-        count_book: dict[tuple[str, str], float] | None = None,
+        count_book: dict[tuple[str, str, str], float] | None = None,
     ) -> None:
         self.lane = lane
         self._sim_config_override = sim_config
         self.sim_config = sim_config or SimulationConfig(n_sims=4000)
-        # Bookmaker head-to-head count lines, keyed by (stat, player surname).
+        # Bookmaker head-to-head count lines, keyed by statistic and both players.
         # See COUNT_MARKET_WEIGHT and scripts/fetch_bovada.py.
         self.count_book = count_book or {}
         # Scaling the market weight by lane is what makes the second entry a
@@ -648,9 +647,7 @@ class Pricer:
             # inventing a number from match length would be a guess wearing a
             # model's clothes.
             notes.append("distance covered is unmodellable: no public source; base rate")
-            return self._finalise(
-                spec, base, base, None, None, 0.0, market_id, notes, context, 0.2
-            )
+            return self._finalise(spec, base, base, None, None, 0.0, market_id, notes, context, 0.2)
 
         notes.append("no pricing route for this family")
         return self._finalise(spec, base, base, None, 0.0, 0.0, market_id, notes, context)
@@ -808,6 +805,12 @@ class Pricer:
             notes.append("subject did not match either player")
             return self._finalise(spec, base, base, None, None, 0.0, market_id, notes, context, 0.2)
 
+        final_spec = spec
+        if spec.threshold is None and spec.comparator in _BELOW_COMPARATORS:
+            subject, opponent = opponent, subject
+            final_spec = replace(spec, comparator="gt")
+            notes.append("strict fewer comparison priced as opponent strictly greater")
+
         # "Will X win more than 65% of points on serve?" compares one player
         # against an absolute number, not against the other player. Pricing it
         # as a head-to-head would answer a different question, and because both
@@ -841,19 +844,26 @@ class Pricer:
         # Blend a bookmaker's head-to-head line where one exists. Only aces and
         # double faults are quoted anywhere; see COUNT_MARKET_WEIGHT for why the
         # weight is low and what still has to be measured.
-        quote = self.count_book.get((stat, _surname(subject.name)))
+        quote = self.count_book.get((stat, _surname(subject.name), _surname(opponent.name)))
         market = None
         weight = 0.0
         if quote is not None:
             market = float(quote)
             weight = count_market_weight(context.tour, stat)
             model = (1.0 - weight) * model + weight * market
-            notes.append(
-                f"bovada {stat} line {market:.3f} blended at {weight:.0%}"
-            )
+            notes.append(f"bovada {stat} line {market:.3f} blended at {weight:.0%}")
 
         return self._finalise(
-            spec, model, base, model, market, weight, market_id, notes, context, confidence
+            final_spec,
+            model,
+            base,
+            model,
+            market,
+            weight,
+            market_id,
+            notes,
+            context,
+            confidence,
         )
 
     def _serve_rate_threshold(self, spec, subject, opponent, context, base, notes):
@@ -921,7 +931,7 @@ class Pricer:
     ) -> PricedQuestion:
         if spec.family is Family.TOTAL_POINTS:
             return self._price_total_points(spec, context, base, market_id, notes, ladders)
-        return self._price_unforced(spec, context, base, market_id, notes)
+        return self._price_unforced(spec, context, base, market_id, notes, ladders)
 
     def _price_total_points(
         self, spec, context, base, market_id, notes, ladders=None
@@ -945,14 +955,10 @@ class Pricer:
         subject, opponent = self._orient(spec, context)
         if threshold is None or subject is None or opponent is None:
             notes.append("no usable threshold or subject; deferring to the base rate")
-            return self._finalise(
-                spec, base, base, None, None, 0.0, market_id, notes, context, 0.3
-            )
+            return self._finalise(spec, base, base, None, None, 0.0, market_id, notes, context, 0.3)
         if not (subject.has_ratings and opponent.has_ratings):
             notes.append("one or both players unrated; deferring to the base rate")
-            return self._finalise(
-                spec, base, base, None, None, 0.0, market_id, notes, context, 0.3
-            )
+            return self._finalise(spec, base, base, None, None, 0.0, market_id, notes, context, 0.3)
 
         simulation = self._simulate(context, ladders)
         target = None
@@ -969,7 +975,8 @@ class Pricer:
         share = (serve_subject + (1.0 - serve_opponent)) / 2.0
 
         games = simulation.total_games.astype(float)
-        points = games * POINTS_PER_GAME
+        points_per_game = POINTS_PER_GAME.get(context.tour, POINTS_PER_GAME["ATP"])
+        points = games * points_per_game
         expected = points * share
         sd = np.sqrt(np.maximum(points * share * (1.0 - share), 1e-9))
         # Continuity correction on an integer count, then average the per-run
@@ -983,11 +990,11 @@ class Pricer:
             f"(simulated over {len(games)} market-reconciled runs, "
             f"games sd {games.std():.1f})"
         )
-        return self._finalise(
-            spec, model, base, model, None, 0.0, market_id, notes, context, 0.6
-        )
+        return self._finalise(spec, model, base, model, None, 0.0, market_id, notes, context, 0.6)
 
-    def _price_unforced(self, spec, context, base, market_id, notes) -> PricedQuestion:
+    def _price_unforced(
+        self, spec, context, base, market_id, notes, ladders=None
+    ) -> PricedQuestion:
         """Unforced-error count thresholds, e.g. 'more than 30 unforced errors'.
         Historically this family answered the base rate outright, because the
         forced/unforced call is a subjective judgement with roughly three-or-four
@@ -1010,28 +1017,34 @@ class Pricer:
         """
         threshold = spec.threshold
         subject, _ = self._orient(spec, context)
-        points = context.expected_service_points * 2.0
         rate = getattr(subject, "unforced_rate", None) if subject is not None else None
 
-        if threshold is None or subject is None or not rate or points <= 0:
+        if threshold is None or subject is None or not rate:
             notes.append("no usable error rate or threshold; deferring to the base rate")
-            return self._finalise(
-                spec, base, base, base, None, 0.0, market_id, notes, context, 0.3
-            )
+            return self._finalise(spec, base, base, base, None, 0.0, market_id, notes, context, 0.3)
 
         tour = context.tour if context.tour in UNFORCED_RESIDUAL_SD else "ATP"
-        expected = rate * points
-        # Two sources of error: how many points the match runs to, and how many
-        # mistakes the player makes in them. Both measured on the official feed.
-        length_sd = rate * UNFORCED_GAMES_SD.get(tour, 8.0) * POINTS_PER_GAME
-        sd = math.sqrt(UNFORCED_RESIDUAL_SD[tour] ** 2 + length_sd**2)
-
-        # Continuity correction: "more than N" on an integer count.
-        model = 1.0 - _normal_cdf((float(threshold) + 0.5 - expected) / sd)
+        points_per_game = POINTS_PER_GAME[tour]
+        if context.player_a.has_ratings and context.player_b.has_ratings:
+            points = self._simulate(context, ladders).total_games.astype(float) * points_per_game
+        else:
+            points = np.array([context.expected_service_points * 2.0])
+        prior = count_stats("unforced_errors", tour)["mean_per_player"] / points.mean()
+        shrunk_rate = shrink(
+            rate,
+            subject.charted_matches,
+            prior,
+            CREDIBILITY_K["unforced_rate"],
+        ).estimate
+        expected = shrunk_rate * points
+        sd = UNFORCED_RESIDUAL_SD[tour]
+        z = (float(threshold) + 0.5 - expected) / sd
+        model = float(np.mean(1.0 - _normal_cdf_array(z)))
         probability = base + UNFORCED_MODEL_WEIGHT * (model - base)
         notes.append(
-            f"unforced: rate {rate:.4f} x {points:.0f} points = {expected:.1f} "
-            f"vs threshold {threshold}, sd {sd:.1f}, model {model:.3f} "
+            f"unforced: rate {shrunk_rate:.4f} from {subject.charted_matches} charted "
+            f"matches x {points.mean():.0f} expected total points = {expected.mean():.1f} "
+            f"vs threshold {threshold}, residual sd {sd:.1f}, model {model:.3f} "
             f"shrunk {UNFORCED_MODEL_WEIGHT:.0%} toward the base rate"
         )
         return self._finalise(
@@ -1259,14 +1272,17 @@ class Pricer:
         # "M. Cilic". Comparing raw strings silently fails to orient, and an
         # unoriented comparison falls back to the base rate - which looks like a
         # deliberate answer and is a forfeit.
-        subject_name = strip_accents(spec.subject or "").lower()
-        for candidate, other in (
-            (context.player_a, context.player_b),
-            (context.player_b, context.player_a),
-        ):
-            surname = strip_accents(candidate.name.split()[-1]).lower() if candidate.name else ""
-            if surname and surname in subject_name:
-                return candidate, other
+        subject_key = match_key(spec.subject or "")
+        matches = [
+            (candidate, other)
+            for candidate, other in (
+                (context.player_a, context.player_b),
+                (context.player_b, context.player_a),
+            )
+            if subject_key and match_key(candidate.name) == subject_key
+        ]
+        if len(matches) == 1:
+            return matches[0]
         return None, None
 
     def _count_comparison(
@@ -1296,11 +1312,22 @@ class Pricer:
         # came to 1.207 on one live match instead of 1.000, and the error was
         # largest exactly where the heights differ most, which is where the
         # model should be most confident.
-        k = CREDIBILITY_K.get("ace_rate" if stat == "aces" else "df_rate", 50.0)
-        prior_subject = self._count_prior(stat, subject, context, population)
-        prior_opponent = self._count_prior(stat, opponent, context, population)
-        shrunk_subject = shrink(rate_subject, subject.matches, prior_subject, k).estimate
-        shrunk_opponent = shrink(rate_opponent, opponent.matches, prior_opponent, k).estimate
+        points = context.expected_service_points
+        if expected_games is not None:
+            if stat == "winners":
+                points = round(expected_games * POINTS_PER_GAME[context.tour])
+            else:
+                points = service_points_for(expected_games, context.tour, context.best_of)
+        sample_subject = subject.charted_matches if stat == "winners" else subject.matches
+        sample_opponent = opponent.charted_matches if stat == "winners" else opponent.matches
+        stat_key = (
+            "winner_rate" if stat == "winners" else ("ace_rate" if stat == "aces" else "df_rate")
+        )
+        k = CREDIBILITY_K.get(stat_key, 50.0)
+        prior_subject = self._count_prior(stat, subject, context, population, points)
+        prior_opponent = self._count_prior(stat, opponent, context, population, points)
+        shrunk_subject = shrink(rate_subject, sample_subject, prior_subject, k).estimate
+        shrunk_opponent = shrink(rate_opponent, sample_opponent, prior_opponent, k).estimate
 
         # Scale each server's ace rate by how easily the OTHER player is aced.
         # Conceding aces is a different skill from winning return points - the
@@ -1322,10 +1349,9 @@ class Pricer:
         # 44-game marathon about 138. Pricing that 2.3-fold range as fixed is
         # what made the two counts look independent when they are not: raw ace
         # counts correlate +0.26, but only +0.02 once exposure is controlled.
-        points = context.expected_service_points
         if expected_games is not None:
-            points = service_points_for(expected_games, context.tour, context.best_of)
-            notes.append(f"exposure {points} service points from {expected_games:.1f} games")
+            unit = "total" if stat == "winners" else "service"
+            notes.append(f"exposure {points} {unit} points from {expected_games:.1f} games")
 
         # Beta-binomial rather than Skellam. A player's ace count varies about
         # 2.2 times more than binomial sampling allows, because their true rate
@@ -1341,7 +1367,7 @@ class Pricer:
         # double-fault model is beaten outright by its own base rate, so trusting
         # it uniformly would have cost points on a quarter of the count questions.
         measured_confidence = count_confidence(stat, context.tour)
-        confidence = measured_confidence if min(subject.matches, opponent.matches) >= 20 else 0.45
+        confidence = measured_confidence if min(sample_subject, sample_opponent) >= 20 else 0.45
 
         # Winning and out-acing share a cause the historical rate cannot see: on
         # a day when a player's serve is working they do both. Mixing over the
@@ -1354,7 +1380,14 @@ class Pricer:
 
         return model, confidence
 
-    def _count_prior(self, stat: str, player: PlayerProfile, context, population: float) -> float:
+    def _count_prior(
+        self,
+        stat: str,
+        player: PlayerProfile,
+        context,
+        population: float,
+        exposure: int,
+    ) -> float:
         """The rate a player with no record is assumed to have.
 
         Ace rate is predicted well by height, so each player gets their own
@@ -1365,6 +1398,8 @@ class Pricer:
         """
         if stat == "aces":
             return height_prior_ace_rate(player.height, context.tour)
+        if stat == "winners":
+            return population / max(exposure, 1)
         measured = COUNT_RATE_PRIOR.get((context.tour, stat))
         if measured is not None:
             return measured
@@ -1410,9 +1445,11 @@ class Pricer:
                 # rate only in a best-of-three; in a best-of-five a 3-1 counts
                 # here and does not reach a decider.
                 if context.best_of >= 5:
-                    return min(1.0 - rates.straight_sets, 0.98) if hasattr(
-                        rates, "straight_sets"
-                    ) else 0.70
+                    return (
+                        min(1.0 - rates.straight_sets, 0.98)
+                        if hasattr(rates, "straight_sets")
+                        else 0.70
+                    )
                 return rates.deciding_set
             if spec.family is Family.SETS_IN_A_ROW:
                 # Straight sets always contain two in a row, and a three-setter
@@ -1486,9 +1523,7 @@ class Pricer:
             spec.family is Family.FIRST_SERVE_COMPARISON and _is_rate_threshold(spec)
         ):
             if pull > 0.0:
-                notes.append(
-                    f"base-rate pull {pull:.2f} suppressed for {spec.family.value}"
-                )
+                notes.append(f"base-rate pull {pull:.2f} suppressed for {spec.family.value}")
             pull = 0.0
         probability = (1.0 - pull) * probability + pull * base
 

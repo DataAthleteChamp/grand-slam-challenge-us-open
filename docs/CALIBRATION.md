@@ -1,5 +1,10 @@
 # Calibration of all ten question families
 
+> **Archived tournament calibration.** These constants describe the model used
+> during the event, not an actively maintained production model. Post-event
+> correctness changes and remaining limitations are recorded in
+> [`LIMITATIONS.md`](LIMITATIONS.md).
+
 Validated against the **official US Open point feed** (`data/raw/pointbypoint`, 625 men's and
 622 women's completed matches, 2019–2024). That is the same source the questions settle on,
 on the right surface, in the right format, scored by the same statisticians — so it is

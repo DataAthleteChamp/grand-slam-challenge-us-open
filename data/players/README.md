@@ -1,5 +1,9 @@
 # Player data
 
+> **Private archived data.** The root MIT license does not cover these tables.
+> See [`../../DATA_LICENSE.md`](../../DATA_LICENSE.md) before any reuse or
+> redistribution.
+
 Derived aggregates built by `scripts/build_player_data.py`. Rebuild with:
 
 ```bash
@@ -7,9 +11,9 @@ python scripts/build_player_data.py            # both tours, 2021–2026, hard c
 python scripts/build_player_data.py --refresh  # re-download the raw cache
 ```
 
-Raw match files are cached under `data/raw/` and are **gitignored** — the source
-dataset is CC BY-NC-SA and is not ours to redistribute. Only our own derived
-analysis is committed here.
+Raw match files are cached under `data/raw/` and are gitignored. The derived
+tables combine sources with CC BY-NC-SA, restricted, or unresolved rights and
+therefore remain private.
 
 ## `{atp,wta}_players.csv`
 
@@ -20,7 +24,7 @@ One row per player, hard court, 2021–2026.
 | `matches`, `svpt` | sample sizes — **always** check these before trusting a rate |
 | `height`, `hand` | pooled from every row mentioning the player, then the reference file |
 | `ace_rate`, `df_rate` | raw observed rates per service point |
-| `ace_rate_prior` | height-derived prior (height explains ~83% of men's ace variance) |
+| `ace_rate_prior` | height-derived prior (about 48% of ATP and 29% of WTA variance explained) |
 | `ace_rate_shrunk` | credibility-weighted estimate — **this is what the models consume** |
 | `first_in_rate`, `first_won_rate`, `second_won_rate` | serve breakdown |
 | `spw`, `rpw` | raw service / return points won |
@@ -51,8 +55,12 @@ Rybakina, Świątek, Sabalenka, Osaka; return leaders Świątek, Kasatkina, Gauf
 Pegula. Note Djokovic tops *serve skill* on a modest 0.103 ace rate — the model
 correctly separates winning service points from hitting aces.
 
-Fitted baselines: **ATP 0.6441**, **WTA 0.5692** service points won, against
+Fitted baselines: **ATP 0.6321**, **WTA 0.5691** service points won, against
 literature values of 0.645 and ~0.585.
+
+`Roster.load()` overlays the validated event-specific ace/double-fault blend
+from `us_open_2026_draw.csv`; the base player tables remain the reproducible
+career aggregates.
 
 ## `{atp,wta}_head_to_head.csv`
 
@@ -106,7 +114,7 @@ Treat `unforced_rate` with suspicion. The forced/unforced boundary is a human
 judgement call, and shown ten identical points three separate coaching
 conferences agreed only three or four times out of ten. Counts are internally
 consistent within a match but not comparable across matches, courts or charters.
-This is why `DEFER_TO_BASE_RATE` pins that question family near its base rate
-instead of modelling it.
+The model therefore uses charted-match credibility shrinkage, match-length
+exposure, and a 50% pull toward the base rate.
 
 Coverage: 378 ATP and 377 WTA players matched to the main table.

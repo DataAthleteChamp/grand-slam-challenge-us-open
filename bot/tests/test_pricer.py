@@ -25,6 +25,7 @@ BIG_SERVER = PlayerProfile(
     df_rate=0.055,
     winner_rate=0.20,
     unforced_rate=0.19,
+    charted_matches=100,
     height=198,
 )
 RETURNER = PlayerProfile(
@@ -36,6 +37,7 @@ RETURNER = PlayerProfile(
     df_rate=0.030,
     winner_rate=0.21,
     unforced_rate=0.18,
+    charted_matches=100,
     height=183,
 )
 UNKNOWN = PlayerProfile(name="Qualifier Nobody")
@@ -313,6 +315,33 @@ def test_full_question_coverage_passes():
         {"match1": "R128"},  # R128 carries 5
     )
     assert findings == []
+
+
+def test_unknown_round_blocks_coverage():
+    from bot.validate import check_question_coverage
+
+    findings = check_question_coverage(
+        {"match1": [_q(f"m{i}", 50 + i) for i in range(20)]},
+        {"match1": "UNKNOWN"},
+    )
+    assert findings and findings[0].severity is Severity.BLOCK
+    assert "unknown round" in findings[0].message
+
+
+def test_extra_or_duplicate_questions_block_coverage():
+    from bot.validate import check_question_coverage
+
+    questions = [_q(f"m{i}", 50) for i in range(5)]
+    extra = check_question_coverage(
+        {"match1": [*questions, _q("m5", 50)]},
+        {"match1": "R128"},
+    )
+    duplicate = check_question_coverage(
+        {"match1": [*questions[:-1], _q("m0", 50)]},
+        {"match1": "R128"},
+    )
+    assert any("exactly 5" in finding.message for finding in extra)
+    assert any("duplicate" in finding.message for finding in duplicate)
 
 
 def test_orientation_cross_check_flags_a_reversed_answer():
@@ -804,8 +833,11 @@ def test_comparator_applies_to_tiebreak_questions():
 
 
 def test_comparator_applies_to_count_comparisons():
-    """'more aces than' and 'fewer aces than' returned an identical number:
-    the comparison families had no direction detection at all."""
+    """Strict fewer is the reverse comparison, not one minus P(more).
+
+    The complement includes ties and therefore answers ``not more``, which is a
+    different market for small integer counts.
+    """
     from bot.roster import Roster
 
     context = Roster.load().context("N. Djokovic", "M. Navone", tour="ATP")
@@ -821,8 +853,14 @@ def test_comparator_applies_to_count_comparisons():
         context,
         market_id="2",
     )
+    reverse = pricer.price(
+        parse_question("Will M. Navone record more aces than N. Djokovic?", players=players),
+        context,
+        market_id="3",
+    )
     assert more.submission != fewer.submission
-    assert more.submission + fewer.submission == pytest.approx(100, abs=2)
+    assert fewer.submission == pytest.approx(reverse.submission, abs=1)
+    assert more.submission + fewer.submission < 100
 
 
 @pytest.mark.parametrize(
@@ -862,6 +900,44 @@ def test_match_winner_still_orients_with_one_name():
         ("Will M. Čilić win?", "Marin Cilic"),
     ):
         assert parse_question(text, players=players).subject == expected
+
+
+def test_short_surname_does_not_match_the_start_of_another_players_name():
+    """Ann Li's surname must not match the ``Li`` at the start of Linda."""
+    ann = PlayerProfile(name="Ann Li", matches=50)
+    linda = PlayerProfile(name="Linda Noskova", matches=50)
+    context = MatchContext("WTA", 3, ann, linda)
+    spec = parse_question(
+        "Will Linda Noskova record more aces than Ann Li?",
+        players=(ann.name, linda.name),
+    )
+    subject, opponent = Pricer()._orient(spec, context)
+    assert subject is linda
+    assert opponent is ann
+
+
+def test_winner_counts_use_total_point_exposure_and_charted_sample_size():
+    priced = _price("Will Zverev hit more winners than Alcaraz?")
+    assert any("total points" in note for note in priced.notes)
+
+
+def test_winner_confidence_uses_charted_not_general_match_count():
+    from dataclasses import replace
+
+    context = _context(
+        replace(BIG_SERVER, charted_matches=2),
+        replace(RETURNER, charted_matches=3),
+    )
+    priced = _price(
+        "Will Alexander Zverev hit more winners than Carlos Alcaraz?",
+        context=context,
+    )
+    assert priced.confidence == pytest.approx(0.45)
+
+
+def test_unforced_counts_use_charted_rate_and_simulated_total_points():
+    priced = _price("Will Zverev make more than 30 unforced errors?")
+    assert any("charted matches" in note and "total points" in note for note in priced.notes)
 
 
 def test_ace_comparison_uses_each_players_own_height_prior():
@@ -1223,12 +1299,8 @@ def test_tiebreak_iid_correction_is_mens_only():
     # probability caused by TOUR_MATCH_SHARE. Dividing that compensation out
     # recovers the iid correction itself, which is still men's-only: 0.88 and 1.0.
     compensation_only = {"ATP": 1.0 / 0.9692, "WTA": 1.0 / 0.9642}
-    assert tiebreak_sim_scale("ATP") / compensation_only["ATP"] == pytest.approx(
-        0.88, abs=0.005
-    )
-    assert tiebreak_sim_scale("WTA") / compensation_only["WTA"] == pytest.approx(
-        1.0, abs=0.005
-    )
+    assert tiebreak_sim_scale("ATP") / compensation_only["ATP"] == pytest.approx(0.88, abs=0.005)
+    assert tiebreak_sim_scale("WTA") / compensation_only["WTA"] == pytest.approx(1.0, abs=0.005)
     assert tiebreak_sim_scale("UNKNOWN") == 1.0
 
 
