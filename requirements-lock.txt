@@ -1,8 +1,8 @@
 # Direct dependency constraints for the final archived environment.
 # Regenerate deliberately; do not update this file through an unconstrained CI install.
-numpy==2.5.2
-scipy==1.18.1
-pandas==3.0.5
+numpy==2.2.6
+scipy==1.16.3
+pandas==2.3.2
 openpyxl==3.1.5
 matplotlib==3.11.1
 build==1.6.1

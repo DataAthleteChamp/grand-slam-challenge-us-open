@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.1 - 2026-09-16
+
+- Constrained NumPy, SciPy, and pandas to final releases that provide CPython
+  3.11 Linux wheels, matching the supported runtime and CI environment.
+
 ## 1.0.0 - 2026-09-16
 
 Final archival release of the private 2026 Grand Slam Challenge project.

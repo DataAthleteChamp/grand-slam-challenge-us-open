@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "grand-slam-challenge"
-version = "1.0.0"
+version = "1.0.1"
 description = "Archived US Open 2026 probability-forecasting system and private research record."
 readme = "README.md"
 requires-python = ">=3.11"

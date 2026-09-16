@@ -6,7 +6,7 @@ authors:
   - family-names: "Piotrowski"
     given-names: "Jakub"
 repository-code: "https://github.com/DataAthleteChamp/grand-slam-challenge-us-open"
-version: "1.0.0"
+version: "1.0.1"
 date-released: "2026-09-16"
 license: MIT
 keywords:
